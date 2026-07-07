@@ -1,0 +1,68 @@
+{
+  "ok": true,
+  "engine": "v8_9_3_recommendation_performance_index",
+  "generatedAt": "2026-07-07T15:39:17.420Z",
+  "index": 62.7,
+  "grade": "متوسط",
+  "verdict": "متوسط",
+  "confidence": "provisional",
+  "summary": {
+    "evaluatedRecommendations": 28,
+    "success": 0,
+    "partial": 28,
+    "failed": 0,
+    "targetHits": 0,
+    "stopHits": 0,
+    "totalSignals": 28,
+    "open": 28,
+    "closed": 0,
+    "closedWinRatePct": null,
+    "weightedAccuracyPct": null,
+    "rawAccuracyPct": null,
+    "avgCurrentReturnPct": -0.03,
+    "actionableRows": 218
+  },
+  "components": [
+    {
+      "id": "weighted_accuracy",
+      "name": "الدقة المرجحة",
+      "value": 55,
+      "weight": 0.35,
+      "source": "recommendation-accuracy-latest"
+    },
+    {
+      "id": "closed_win_rate",
+      "name": "نجاح الإشارات المغلقة",
+      "value": 55,
+      "weight": 0.25,
+      "source": "outcome-tracker"
+    },
+    {
+      "id": "target_efficiency",
+      "name": "كفاءة ضرب الأهداف",
+      "value": 0,
+      "weight": 0.15,
+      "source": "target hits"
+    },
+    {
+      "id": "stop_protection",
+      "name": "حماية وقف الخسارة",
+      "value": 70,
+      "weight": 0.15,
+      "source": "stop hits"
+    },
+    {
+      "id": "return_score",
+      "name": "متوسط العائد بعد الإشارة",
+      "value": 49.8,
+      "weight": 0.1,
+      "source": "tracked returns"
+    }
+  ],
+  "interpretation": "المؤشر مبدئي لأن عدد الإشارات المغلقة قليل. لا يتم اعتبار الإشارات المفتوحة فاشلة قبل الوصول إلى هدف أو وقف أو انتهاء فترة المتابعة.",
+  "recommendations": [
+    "استمر في قياس الإشارات على أكثر من جلسة قبل الحكم النهائي.",
+    "نسبة الوقف لا تبدو مسيطرة على المؤشر الحالي.",
+    "انتظر مزيدًا من الإشارات المغلقة لثبات المؤشر."
+  ]
+}

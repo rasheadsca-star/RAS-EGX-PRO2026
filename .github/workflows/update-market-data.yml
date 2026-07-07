@@ -1,0 +1,219 @@
+name: Update EGX Market Data
+
+on:
+  workflow_dispatch:
+    inputs:
+      history_maintenance:
+        description: "Run heavy history recovery/backfill scripts. Keep false unless needed."
+        required: false
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+  schedule:
+    - cron: "15 7 * * 0-4"   # 10:15 Cairo
+    - cron: "15 9 * * 0-4"   # 12:15 Cairo
+    - cron: "15 11 * * 0-4"  # 14:15 Cairo
+    - cron: "45 12 * * 0-4"  # 15:45 Cairo post-session
+    - cron: "0 15 * * 0"     # weekly history maintenance window
+
+permissions:
+  contents: write
+
+concurrency:
+  group: egx-market-history-update
+  cancel-in-progress: true
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+
+    env:
+      HISTORY_MAINTENANCE: ${{ github.event.inputs.history_maintenance || 'false' }}
+      EGX_TRUSTED_COVERAGE_TARGET: '80'
+      EGX_COVERAGE_MAX_CYCLES: '5'
+      EGX_SOURCE_RETRIES: '3'
+      EGX_SOURCE_FETCH_TIMEOUT_MS: '45000'
+
+    steps:
+      - name: Checkout with history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Data Gateway market collection
+        run: node scripts/collect-market-gateway.js || echo "Data gateway failed; existing data preserved"
+
+      - name: Recover past sessions from Git snapshots using commit dates
+        if: ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.history_maintenance == 'true') || github.event.schedule == '0 15 * * 0' }}
+        run: node scripts/rebuild-history-from-git.js || echo "Git past recovery skipped"
+
+      - name: Optional uploaded historical backfill
+        if: ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.history_maintenance == 'true') || github.event.schedule == '0 15 * * 0' }}
+        run: node scripts/import-history-backfill.js || echo "No uploaded backfill file found"
+
+      - name: Opportunistic public historical discovery
+        if: ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.history_maintenance == 'true') || github.event.schedule == '0 15 * * 0' }}
+        run: node scripts/auto-public-history-backfill.js || echo "Public history discovery skipped"
+
+      - name: Auto rolling 50-session history and indicators
+        run: node scripts/build-history-50-engine.js || echo "History 50 engine skipped"
+
+      - name: Session memory status
+        run: node scripts/build-session-memory-status.js || echo "Session memory status skipped"
+
+      - name: Price freshness report
+        run: node scripts/build-price-freshness-report.js || echo "Price freshness skipped"
+
+      - name: Price reconciliation report
+        run: node scripts/build-price-reconciliation-report.js || echo "Price reconciliation skipped"
+
+      - name: Final opportunity ranking
+        run: node scripts/build-final-opportunity-ranking.js || echo "Final ranking skipped"
+
+
+      - name: V10 Trusted coverage recovery loop
+        run: node scripts/collect-mubasher-analysis-tools.js || echo "Trusted coverage recovery loop skipped"
+
+      - name: V10 Build source evidence matrix
+        run: node scripts/build-multi-source-intelligence.js || echo "Source evidence matrix skipped"
+
+      - name: V10 Apply coverage recovery to ranking
+        run: node scripts/apply-multisource-intelligence-to-ranking.js || echo "Coverage recovery apply skipped"
+
+      - name: Sector completion report
+        run: node scripts/build-sector-completion-report.js || echo "Sector completion skipped"
+
+      - name: Price source audit
+        run: node scripts/build-price-source-audit.js || echo "Price source audit skipped"
+
+      - name: V11.1 Price truth layer
+        run: node scripts/build-v111-price-truth-layer.js || echo "V11.1 price truth layer skipped"
+
+      - name: V11.1 History trust recovery
+        run: node scripts/build-v111-history-trust-recovery.js || echo "V11.1 history trust recovery skipped"
+
+      - name: V11.1 Liquidity gate
+        run: node scripts/build-v111-liquidity-gate.js || echo "V11.1 liquidity gate skipped"
+
+      - name: V11.1 Trade plan validator
+        run: node scripts/build-v111-trade-plan-validator.js || echo "V11.1 trade plan validator skipped"
+
+      - name: Unified decision board
+        run: node scripts/build-unified-decision-board.js || echo "Unified decision board skipped"
+
+      - name: Portfolio decision rules
+        run: node scripts/build-portfolio-decision-rules.js || echo "Portfolio decision rules skipped"
+
+      - name: Alert decision center
+        run: node scripts/build-alert-decision-center.js || echo "Alert decision center skipped"
+
+      - name: Data operations center
+        run: node scripts/build-data-operations-center.js || echo "Data operations center skipped"
+
+      - name: Workflow source verification
+        run: node scripts/build-workflow-source-verification.js || echo "Workflow source verification skipped"
+
+      - name: Snapshot evidence confidence layer
+        run: node scripts/build-snapshot-evidence.js || echo "Snapshot evidence skipped"
+
+      - name: Fetch trusted external news
+        run: node scripts/fetch-trusted-news.js || echo "Trusted external news collector skipped"
+
+      - name: News intelligence layer
+        run: node scripts/build-news-intelligence.js || echo "News intelligence skipped"
+
+      - name: Apply trusted news impact
+        run: node scripts/apply-news-impact-to-recommendations.js || echo "Trusted news impact skipped"
+
+      - name: Signal quality engine
+        run: node scripts/build-signal-quality-engine.js || echo "Signal quality engine skipped"
+
+      - name: Actionable watchlist engine
+        run: node scripts/build-actionable-watchlist.js || echo "Actionable watchlist skipped"
+
+      - name: Entry trigger engine
+        run: node scripts/build-entry-trigger-engine.js || echo "Entry trigger engine skipped"
+
+      - name: Recommendation outcome tracker
+        run: node scripts/build-recommendation-outcome-tracker.js || echo "Recommendation outcome tracker skipped"
+
+      - name: V11.1 Paper trading ledger
+        run: node scripts/build-v111-paper-trading-engine.js || echo "V11.1 paper trading skipped"
+
+      - name: V11.1 Practical readiness report
+        run: node scripts/build-v111-readiness-report.js || echo "V11.1 readiness skipped"
+
+      - name: V11 governor acceptance checks
+        run: node scripts/validate-v11-governor.js
+
+      - name: Build recommendation accuracy tracker
+        run: node scripts/build-recommendation-accuracy.js || echo "Recommendation accuracy tracker skipped"
+
+      - name: History integrity report
+        run: node scripts/build-history-integrity-report.js || echo "History integrity skipped"
+
+      - name: History backfill plan
+        run: node scripts/build-history-backfill-plan.js || echo "History backfill plan skipped"
+
+
+      - name: Smart alert rules
+        run: node scripts/build-smart-alert-rules.js || echo "Smart alert rules skipped"
+
+      - name: Daily decision brief
+        run: node scripts/build-daily-decision-brief.js || echo "Daily decision brief skipped"
+
+      - name: Confidence guard report
+        run: node scripts/build-confidence-guard-report.js || echo "Confidence guard skipped"
+
+      - name: Accuracy interpretation report
+        run: node scripts/build-accuracy-interpretation-report.js || echo "Accuracy interpretation skipped"
+
+      - name: App health status
+        run: node scripts/build-app-health.js || echo "App health skipped"
+
+      - name: Institutional score report
+        run: node scripts/build-institutional-score.js || echo "Institutional score skipped"
+
+      - name: Rebalancing candidates
+        run: node scripts/build-rebalancing-candidates.js || echo "Rebalancing candidates skipped"
+
+      - name: Watchlist pipeline candidates
+        run: node scripts/build-watchlist-pipeline-candidates.js || echo "Watchlist pipeline candidates skipped"
+
+      - name: Workflow budget status
+        run: node scripts/build-workflow-budget-status.js || echo "Workflow budget status skipped"
+
+      - name: Regression QA report
+        run: node scripts/build-regression-report.js || echo "Regression QA skipped"
+
+      - name: Recommendation performance index
+        run: node scripts/build-recommendation-performance-index.js || echo "Recommendation performance index skipped"
+
+      - name: Engines console report
+        run: node scripts/build-engines-console-report.js || echo "Engines console skipped"
+
+      - name: Executive home report
+        run: node scripts/build-executive-home-report.js || echo "Executive home skipped"
+
+
+      - name: Recommendation validation panel
+        run: node scripts/build-recommendation-validation-panel.js || echo "Recommendation validation panel skipped"
+
+      - name: Optional legacy intelligence reports
+        run: node scripts/build-v52-intelligence.js || echo "Legacy intelligence builder skipped"
+
+      - name: Commit generated data once
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add data/*.json
+          git diff --cached --quiet && echo "No generated data changes" || git commit -m "Update EGX generated data and reports"
+          git push || echo "Push skipped or failed"
