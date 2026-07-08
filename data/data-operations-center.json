@@ -1,13 +1,13 @@
 {
   "ok": true,
   "engine": "v8_9_1_data_operations_center_clear",
-  "generatedAt": "2026-07-08T10:38:42.713Z",
-  "score": 28,
-  "state": "bad",
+  "generatedAt": "2026-07-08T11:19:13.467Z",
+  "score": 74,
+  "state": "warn",
   "summary": {
-    "ok": 3,
-    "warn": 2,
-    "bad": 3,
+    "ok": 6,
+    "warn": 1,
+    "bad": 1,
     "total": 8
   },
   "checks": [
@@ -15,23 +15,23 @@
       "id": "fetcher",
       "name": "جلب البيانات",
       "state": "ok",
-      "value": "accepted 209 صف",
-      "message": "مصدر mubasher_symbol_pages_precise_enriched قبل 209 صف",
+      "value": "accepted 213 صف",
+      "message": "مصدر mubasher_symbol_pages_precise_enriched قبل 213 صف",
       "action": "متابعة بدون Reset"
     },
     {
       "id": "coverage",
       "name": "تغطية السوق",
-      "state": "warn",
-      "value": "93.3%",
-      "message": "تغطية مقبولة مع نقص محدود",
-      "action": "تشغيل Workflow لاحقًا عند الحاجة"
+      "state": "ok",
+      "value": "95.1%",
+      "message": "تغطية ممتازة",
+      "action": "متابعة"
     },
     {
       "id": "price",
       "name": "تدقيق الأسعار",
       "state": "ok",
-      "value": "0 تعارض / 4 قديم",
+      "value": "0 تعارض / 3 قديم",
       "message": "بعض الأسعار تحتاج تحقق لكن ليست فشلًا عامًا",
       "action": "راجع القائمة ولا تكرر Workflow بلا داعٍ"
     },
@@ -39,8 +39,8 @@
       "id": "history",
       "name": "ذاكرة 50 جلسة",
       "state": "warn",
-      "value": "0/224 مكتمل",
-      "message": "متوسط الجلسات 5.9 / 50 — التحليل الطويل غير مكتمل",
+      "value": "0/237 مكتمل",
+      "message": "متوسط الجلسات 6.6 / 50 — التحليل الطويل غير مكتمل",
       "action": "شغّل history_maintenance=true فقط عند الحاجة"
     },
     {
@@ -54,17 +54,17 @@
     {
       "id": "alerts",
       "name": "مركز التنبيهات",
-      "state": "bad",
-      "value": "عاجل 15 / مهم 1 / فرص 8 / مراقبة 4",
-      "message": "ابدأ بالتنبيهات العاجلة",
+      "state": "ok",
+      "value": "عاجل 0 / مهم 1 / فرص 8 / مراقبة 0",
+      "message": "تنبيهات مهمة بدون فشل حرج",
       "action": "افتح مركز التنبيهات"
     },
     {
       "id": "confidence_guard",
       "name": "حارس الثقة",
-      "state": "bad",
-      "value": "59%",
-      "message": "تاريخ 5.9/50 وتغطية 93.3%",
+      "state": "ok",
+      "value": "84%",
+      "message": "تاريخ 6.6/50 وتغطية 93.3%",
       "action": "راجع تفسير الثقة قبل الاعتماد على النتائج"
     },
     {
