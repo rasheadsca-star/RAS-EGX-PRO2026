@@ -70,9 +70,9 @@ jobs:
       - name: V11.3 Symbol resolver
         run: node scripts/build-v113-symbol-resolver.js || echo "V11.3 symbol resolver skipped"
 
-      - name: V11.3 Historical backfill recovery engine
+      - name: V11.4 Historical source adapter fix and backfill engine
         if: ${{ (github.event_name == 'workflow_dispatch' && github.event.inputs.history_maintenance == 'true') || github.event.schedule == '0 15 * * 0' }}
-        run: node scripts/build-v113-historical-backfill-engine.js || echo "V11.3 historical backfill recovery skipped"
+        run: node scripts/build-v114-history-adapter-fix.js || echo "V11.4 historical source adapter fix skipped"
 
       - name: Auto rolling 50-session history and indicators
         run: node scripts/build-history-50-engine.js || echo "History 50 engine skipped"
@@ -183,11 +183,11 @@ jobs:
       - name: History backfill plan
         run: node scripts/build-history-backfill-plan.js || echo "History backfill plan skipped"
 
-      - name: V11.3 Final history diagnostics refresh
+      - name: V11.4 Final history diagnostics refresh
         run: |
-          node scripts/build-v113-history-source-diagnostics.js || echo "V11.3 source diagnostics final refresh skipped"
-          node scripts/build-v113-history-integrity-v2.js || echo "V11.3 history integrity final refresh skipped"
-          node scripts/build-v113-readiness-accelerator.js || echo "V11.3 readiness final refresh skipped"
+          node scripts/build-v113-history-source-diagnostics.js || echo "V11.4 source diagnostics final refresh skipped"
+          node scripts/build-v113-history-integrity-v2.js || echo "V11.4 history integrity final refresh skipped"
+          node scripts/build-v113-readiness-accelerator.js || echo "V11.4 readiness final refresh skipped"
 
       - name: Smart alert rules
         run: node scripts/build-smart-alert-rules.js || echo "Smart alert rules skipped"
@@ -239,6 +239,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add data/*.json
+          git add data/*.json data/**/*.json
           git diff --cached --quiet && echo "No generated data changes" || git commit -m "Update EGX generated data and reports"
           git push || echo "Push skipped or failed"
