@@ -5328,22 +5328,26 @@ function renderRecommendationValidationPanel(){
         EGX.historicalSourceRegistry=await loadJson('data/historical-source-registry.json',{});
         EGX.symbolResolverReport=await loadJson('data/symbol-resolver-report.json',{});
         EGX.historyBackfillReport=await loadJson('data/history-backfill-report.json',{});
+        EGX.v114HistoryAdapterReport=await loadJson('data/v11-4-history-adapter-report.json',{});
         if(['historyRecovery','trustLift','dataQualityHub'].includes(EGX.screen)) render();
       }catch(e){console.warn('V11.3 history recovery files not loaded',e)}
     }
     function renderHistoryRecovery(){
       const r=EGX.v113ReadinessReport||EGX.readinessAcceleratorReport||{}, m=r.metrics||{}, h=EGX.historyIntegrityV2?.summary||{}, d=EGX.historySourceDiagnostics||{}, ds=d.summary||{}, bf=EGX.historyBackfillReport||{}, bsm=bf.summary||{}, sr=EGX.symbolResolverReport?.summary||{}, rows=Array.isArray(d.rows)?d.rows:[];
-      const topFailures=Object.entries(ds.commonFailures||{}).sort((a,b)=>b[1]-a[1]).slice(0,8);
+      const v114=EGX.v114HistoryAdapterReport||{};
+      const v114s=v114.summary||{};
+      const topFailures=(Array.isArray(v114.topFailures)&&v114.topFailures.length?v114.topFailures.map(x=>[x.reason,x.count]):Object.entries(ds.commonFailures||{})).sort((a,b)=>b[1]-a[1]).slice(0,8);
       const near=Array.isArray(r.topNearReady)?r.topNearReady:[];
-      return `${header('استرجاع التاريخ V11.3','محرك Backfill فعلي يحاول جمع آخر 50–120 جلسة من مصادر عامة/مرخصة فقط، مع تشخيص سبب فشل كل سهم — بدون CSV يدوي أو بيانات وهمية.')}${quickJump()}
+      return `${header('استرجاع التاريخ V11.4','إصلاح Adapter التاريخ: فحص 224 سهم، تشخيص سبب parsedSymbols=0، وحفظ عينات Debug للمصادر — بدون CSV يدوي أو بيانات وهمية.')}${quickJump()}
       <section class="v11-grid">
         ${card('تاريخ ≥20 جلسة',F(h.ready20||m.ready20||0),'حد أدنى للتوصية المشروطة','warn')}
         ${card('تاريخ 50 جلسة',F(h.ready50||m.ready50||0),'ثقة فنية كاملة','warn')}
         ${card('متوسط الجلسات',`${F(h.avgSessions||m.avgSessions||0,1)}/50`,'يتحسن مع كل Backfill','info')}
         ${card('رموز محلولة',F(sr.total||0),`غير مصنف ${F(sr.sectorUnknown||0)}`,'good')}
+        ${card('V11.4 Parsed',F(v114s.parsedSymbols||bsm.parsedSymbols||0),`Debug samples ${F(v114s.debugSamplesWritten||0)}`,(v114s.parsedSymbols||0)>0?'good':'warn')}
       </section>
       <div class="v11-main">
-        <div class="panel"><h3>حالة التسريع</h3>${note(r.conclusion||'لم يتم بناء تقرير V11.3 بعد.', r.readyForLiveExecution?'good':'warn')}<div class="v11-metrics"><div class="metric"><span>المرحلة</span><b>${E(r.phase||'PHASE_1_MONITORING')}</b></div><div class="metric"><span>فُحص في آخر Backfill</span><b>${F(bsm.scannedThisRun||0)}</b></div><div class="metric"><span>رموز تحسنت</span><b>${F(bsm.improvedSymbols||0)}</b></div><div class="metric"><span>جلسات مضافة</span><b>${F(bsm.sessionsAdded||0)}</b></div></div>${note('لتشغيل المحرك العميق الآن: Actions → Update EGX Market Data → Run workflow → history_maintenance = true.','info')}</div>
+        <div class="panel"><h3>حالة التسريع</h3>${note(v114.conclusion||r.conclusion||'لم يتم بناء تقرير V11.4 بعد.', (v114s.parsedSymbols||0)>0||r.readyForLiveExecution?'good':'warn')}<div class="v11-metrics"><div class="metric"><span>المرحلة</span><b>${E(r.phase||'PHASE_1_MONITORING')}</b></div><div class="metric"><span>فُحص في آخر Backfill</span><b>${F(bsm.scannedThisRun||0)}</b></div><div class="metric"><span>رموز تحسنت</span><b>${F(bsm.improvedSymbols||0)}</b></div><div class="metric"><span>جلسات مضافة</span><b>${F(bsm.sessionsAdded||0)}</b></div><div class="metric"><span>Parsed فعلي</span><b>${F(v114s.parsedSymbols||bsm.parsedSymbols||0)}</b></div><div class="metric"><span>عينات Debug</span><b>${F(v114s.debugSamplesWritten||0)}</b></div></div>${note('لتشغيل المحرك العميق الآن: Actions → Update EGX Market Data → Run workflow → history_maintenance = true. إذا ظل Parsed = 0 راجع v11-4-history-adapter-report.json و data/debug/history-fetch-samples.','info')}</div>
         <div class="panel"><h3>بوابات الجاهزية</h3>${(r.checks||[]).map(c=>`<div class="ministat"><span>${E(c.name)}</span><b class="${c.pass?'pos':'neg'}">${c.pass?'ناجح':'غير مكتمل'} — ${E(c.value)}</b></div>`).join('')||note('لا توجد فحوصات بعد.','warn')}</div>
       </div>
       <div class="v11-main" style="margin-top:12px">
@@ -5363,10 +5367,10 @@ function renderRecommendationValidationPanel(){
     side=function(){
       const html=previousSideV113();
       if(html.includes('data-screen="historyRecovery"')) return html;
-      return html.replace('data-screen="trustLift" class="', 'data-screen="historyRecovery" class="v11-primary-nav"><span>📈</span>استرجاع التاريخ<small>V11.3 Backfill</small></button><button data-screen="trustLift" class="');
+      return html.replace('data-screen="trustLift" class="', 'data-screen="historyRecovery" class="v11-primary-nav"><span>📈</span>استرجاع التاريخ<small>V11.4 Adapter</small></button><button data-screen="trustLift" class="');
     };
     setTimeout(loadV113,1900);
-  }catch(e){console.warn('V11.3 Historical Recovery UI skipped',e)}
+  }catch(e){console.warn('V11.4 Historical Recovery UI skipped',e)}
 })();
 
 init().catch(e=>{

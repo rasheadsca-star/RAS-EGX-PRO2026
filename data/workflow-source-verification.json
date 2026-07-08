@@ -1,20 +1,20 @@
 {
   "ok": false,
   "engine": "v9_8_7_workflow_source_verification",
-  "generatedAt": "2026-07-07T15:36:48.954Z",
-  "score": 56,
-  "state": "bad",
+  "generatedAt": "2026-07-08T21:03:51.292Z",
+  "score": 69,
+  "state": "warn",
   "realFetch": true,
   "fetchMode": "multi_source_gateway",
   "message": "Full gateway acceptance",
-  "marketRows": 209,
+  "marketRows": 215,
   "cacheRows": 221,
   "recommendationRows": 221,
-  "sourceAgeMinutes": 1.2,
+  "sourceAgeMinutes": 1.1,
   "summary": {
     "ok": 7,
-    "warn": 0,
-    "bad": 2,
+    "warn": 1,
+    "bad": 1,
     "total": 10
   },
   "checks": [
@@ -46,7 +46,7 @@
       "id": "market_rows",
       "name": "market.json rows",
       "state": "ok",
-      "value": "209",
+      "value": "215",
       "message": "market.json يحتوي صفوفًا",
       "action": "متابعة"
     },
@@ -70,23 +70,23 @@
       "id": "source_age",
       "name": "Source age",
       "state": "ok",
-      "value": "1.2 min",
+      "value": "1.1 min",
       "message": "المصدر حديث نسبيًا",
       "action": "متابعة"
     },
     {
       "id": "price_reconciliation",
       "name": "Price reconciliation",
-      "state": "bad",
-      "value": "173 conflict / 9 stale",
-      "message": "يوجد تعارض أسعار بعد الجلب",
-      "action": "افتح تدقيق الأسعار"
+      "state": "warn",
+      "value": "0 conflict / 3 stale",
+      "message": "بعض الأسعار قديمة بعد الجلب",
+      "action": "متابعة"
     },
     {
       "id": "history_memory",
       "name": "history.json memory",
       "state": "ok",
-      "value": "217",
+      "value": "244",
       "message": "ذاكرة الجلسات موجودة",
       "action": "راجع ذاكرة الجلسات"
     },
@@ -95,7 +95,7 @@
       "name": "Public source adapter",
       "state": "ok",
       "value": "mubasher_symbol_pages_precise_enriched",
-      "message": "تم قبول بوابة البيانات بعدد 209 صف",
+      "message": "تم قبول بوابة البيانات بعدد 215 صف",
       "action": "متابعة"
     }
   ],
