@@ -1,20 +1,20 @@
 {
   "ok": true,
   "engine": "v11_3_readiness_accelerator",
-  "generatedAt": "2026-07-08T05:11:54.991Z",
+  "generatedAt": "2026-07-08T20:19:31.378Z",
   "phase": "PHASE_1_MONITORING",
   "readyForLiveExecution": false,
   "metrics": {
     "total": 243,
-    "priceReliableCoveragePct": 92.37,
-    "priceConflicts": 0,
+    "priceReliableCoveragePct": 27.05,
+    "priceConflicts": 154,
     "ready20": 0,
     "ready50": 0,
     "ready120": 0,
-    "avgSessions": 5.47,
-    "liquidityExecutable": 162,
-    "liquidityConditional": 25,
-    "validPlans": 120,
+    "avgSessions": 6.37,
+    "liquidityExecutable": 158,
+    "liquidityConditional": 33,
+    "validPlans": 108,
     "sectorKnown": 163,
     "sectorUnknown": 80,
     "paperClosed": 0
@@ -22,8 +22,8 @@
   "checks": [
     {
       "name": "السعر الموثوق",
-      "pass": true,
-      "value": "92.37% / conflicts 0"
+      "pass": false,
+      "value": "27.05% / conflicts 154"
     },
     {
       "name": "تاريخ 20 جلسة",
@@ -38,12 +38,12 @@
     {
       "name": "السيولة",
       "pass": true,
-      "value": "187/243"
+      "value": "191/243"
     },
     {
       "name": "خطط التداول",
       "pass": true,
-      "value": "120/243"
+      "value": "108/243"
     },
     {
       "name": "القطاعات",
@@ -58,640 +58,16 @@
   ],
   "topNearReady": [
     {
-      "symbol": "ABUK",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "بتروكيماويات وكيماويات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "ACAMD",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "ADIB",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "بنوك وخدمات مالية مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "ALCN",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "نقل وخدمات لوجستية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "BTFH",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "خدمات مالية غير مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "CANA",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "بنوك وخدمات مالية مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "CCAP",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "استثمارات قابضة ومتنوعة",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "CICH",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "خدمات مالية غير مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "CIEB",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "بنوك وخدمات مالية مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "COMI",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "بنوك وخدمات مالية مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "DOMT",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "أغذية ومشروبات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "EFID",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "أغذية ومشروبات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "EGAL",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "معادن ومواد أساسية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "EGCH",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "بتروكيماويات وكيماويات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "EGTS",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "سياحة وترفيه",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    }
-  ],
-  "blockers": [
-    "محرك التاريخ لم يصل بعد إلى 20 جلسة لأي سهم؛ شغّل history_maintenance=true وراجع history-source-diagnostics.json.",
-    "لا توجد 50 جلسة كاملة؛ الثقة الفنية ستظل مخفضة ولن تظهر توصيات تنفيذية كاملة.",
-    "سجل Paper Trading لم يغلق 30 توصية بعد؛ لا يوجد إثبات أداء كافٍ.",
-    "يوجد 80 رموز غير مصنفة قطاعيًا؛ استكمال خريطة القطاعات يرفع جودة الفلترة."
-  ],
-  "sourceDiagnosticsSummary": {
-    "total": 243,
-    "ready20": 0,
-    "ready50": 0,
-    "ready120": 0,
-    "states": {
-      "MISSING_HISTORY": 25,
-      "INSUFFICIENT": 218
-    },
-    "commonFailures": {
-      "لم يتم فحص الرمز في هذا التشغيل بسبب حد الوقت/الميزانية؛ شغل history_maintenance=true": 25,
-      "تاريخ ضعيف جدًا (1/20): مراقبة فقط ولا تنفيذ": 1,
-      "تاريخ ضعيف جدًا (2/20): مراقبة فقط ولا تنفيذ": 2,
-      "تاريخ ضعيف جدًا (3/20): مراقبة فقط ولا تنفيذ": 5,
-      "تاريخ ضعيف جدًا (4/20): مراقبة فقط ولا تنفيذ": 4,
-      "تاريخ ضعيف جدًا (5/20): مراقبة فقط ولا تنفيذ": 2,
-      "تاريخ ضعيف جدًا (6/20): مراقبة فقط ولا تنفيذ": 144,
-      "تاريخ ضعيف جدًا (7/20): مراقبة فقط ولا تنفيذ": 60
-    }
-  },
-  "conclusion": "التطبيق ما زال في وضع مراقبة/استرجاع بيانات؛ أقوى مانع هو التاريخ وسجل الأداء.",
-  "rows": [
-    {
-      "symbol": "ABUK",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "بتروكيماويات وكيماويات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "ACAMD",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "ADIB",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "بنوك وخدمات مالية مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "ALCN",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "نقل وخدمات لوجستية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "BTFH",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "خدمات مالية غير مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "CANA",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "بنوك وخدمات مالية مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "CCAP",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "استثمارات قابضة ومتنوعة",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "CICH",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "خدمات مالية غير مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "CIEB",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "بنوك وخدمات مالية مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "COMI",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "بنوك وخدمات مالية مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "DOMT",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "أغذية ومشروبات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "EFID",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "أغذية ومشروبات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "EGAL",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "معادن ومواد أساسية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "EGCH",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "بتروكيماويات وكيماويات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "EGTS",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "سياحة وترفيه",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "ETEL",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "اتصالات وإعلام وتكنولوجيا",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
       "symbol": "EXPA",
       "readinessScore": 68,
       "phase": "WATCH_READY",
       "priceOk": true,
-      "historySessions": 7,
+      "historySessions": 8,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
       "planOk": true,
       "sector": "بنوك وخدمات مالية مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "FWRY",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "تكنولوجيا ومدفوعات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "HELI",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "HRHO",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "خدمات مالية غير مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "JUFO",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "أغذية ومشروبات",
       "sectorOk": true,
       "blockers": [
         "history_less_than_20",
@@ -703,7 +79,7 @@
       "readinessScore": 68,
       "phase": "WATCH_READY",
       "priceOk": true,
-      "historySessions": 7,
+      "historySessions": 8,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -716,322 +92,16 @@
       ]
     },
     {
-      "symbol": "MASR",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "MCQE",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "أسمنت ومواد بناء",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "MFPC",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "بتروكيماويات وكيماويات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "OCDI",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "OLFI",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "أغذية ومشروبات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "ORHD",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "PHDC",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "POUL",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "أغذية ومشروبات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "RMDA",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "رعاية صحية ودواء",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "SAUD",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "بنوك وخدمات مالية مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "SKPC",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "بتروكيماويات وكيماويات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "SWDY",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "صناعة وطاقة وبنية تحتية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "TMGH",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "AALR",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "ALUM",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "معادن ومواد أساسية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
       "symbol": "ARAB",
       "readinessScore": 68,
       "phase": "WATCH_READY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
       "planOk": true,
       "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "ATQA",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "معادن ومواد أساسية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "BONY",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "CERA",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "أسمنت ومواد بناء",
       "sectorOk": true,
       "blockers": [
         "history_less_than_20",
@@ -1043,7 +113,7 @@
       "readinessScore": 68,
       "phase": "WATCH_READY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -1060,7 +130,7 @@
       "readinessScore": 68,
       "phase": "WATCH_READY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -1073,16 +143,16 @@
       ]
     },
     {
-      "symbol": "DAPH",
+      "symbol": "DGTZ",
       "readinessScore": 68,
       "phase": "WATCH_READY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
       "planOk": true,
-      "sector": "عقارات وإنشاءات",
+      "sector": "اتصالات وإعلام وتكنولوجيا",
       "sectorOk": true,
       "blockers": [
         "history_less_than_20",
@@ -1094,7 +164,7 @@
       "readinessScore": 68,
       "phase": "WATCH_READY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -1107,305 +177,16 @@
       ]
     },
     {
-      "symbol": "EFIH",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "تكنولوجيا ومدفوعات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "EHDR",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "ELSH",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "EMFD",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "EPCO",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "أغذية ومشروبات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "ETRS",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "نقل وخدمات لوجستية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "FERC",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "بتروكيماويات وكيماويات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "GDWA",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "GIHD",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "IDRE",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "INFI",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "أغذية ومشروبات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "ISMQ",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "معادن ومواد أساسية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "KRDI",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "MAAL",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "MCRO",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "رعاية صحية ودواء",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
       "symbol": "MENA",
       "readinessScore": 68,
       "phase": "WATCH_READY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
       "planOk": true,
       "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "MEPA",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "رعاية صحية وأدوية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "MHOT",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "سياحة وترفيه",
       "sectorOk": true,
       "blockers": [
         "history_less_than_20",
@@ -1417,7 +198,7 @@
       "readinessScore": 68,
       "phase": "WATCH_READY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -1434,7 +215,7 @@
       "readinessScore": 68,
       "phase": "WATCH_READY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -1447,263 +228,8 @@
       ]
     },
     {
-      "symbol": "MTIE",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "تجارة وتوزيع",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "NARE",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "OFH",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "خدمات مالية غير مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "ORWE",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "صناعة وطاقة وبنية تحتية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "PRDC",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "QNBE",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "بنوك وخدمات مالية مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "RREI",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "SDTI",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "سياحة وترفيه",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "SEIG",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "خدمات مالية غير مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "SIPC",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "رعاية صحية وأدوية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "SPMD",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "رعاية صحية وأدوية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
       "symbol": "UBEE",
       "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "بنوك وخدمات مالية مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "UEGC",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "VALU",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "خدمات مالية غير مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "ZMID",
-      "readinessScore": 68,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50"
-      ]
-    },
-    {
-      "symbol": "ACGC",
-      "readinessScore": 60,
       "phase": "WATCH_READY",
       "priceOk": true,
       "historySessions": 7,
@@ -1711,12 +237,11 @@
       "historyReady50": false,
       "liquidityOk": true,
       "planOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
+      "sector": "بنوك وخدمات مالية مصرفية",
+      "sectorOk": true,
       "blockers": [
         "history_less_than_20",
-        "history_less_than_50",
-        "sector_unknown"
+        "history_less_than_50"
       ]
     },
     {
@@ -1724,43 +249,7 @@
       "readinessScore": 60,
       "phase": "WATCH_READY",
       "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "sector_unknown"
-      ]
-    },
-    {
-      "symbol": "IFAP",
-      "readinessScore": 60,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "sector_unknown"
-      ]
-    },
-    {
-      "symbol": "LCSW",
-      "readinessScore": 60,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 7,
+      "historySessions": 8,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -1778,7 +267,7 @@
       "readinessScore": 60,
       "phase": "WATCH_READY",
       "priceOk": true,
-      "historySessions": 7,
+      "historySessions": 8,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -1796,79 +285,7 @@
       "readinessScore": 60,
       "phase": "WATCH_READY",
       "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "sector_unknown"
-      ]
-    },
-    {
-      "symbol": "AFMC",
-      "readinessScore": 60,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "sector_unknown"
-      ]
-    },
-    {
-      "symbol": "AMIA",
-      "readinessScore": 60,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "sector_unknown"
-      ]
-    },
-    {
-      "symbol": "BINV",
-      "readinessScore": 60,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "sector_unknown"
-      ]
-    },
-    {
-      "symbol": "BIOC",
-      "readinessScore": 60,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -1886,7 +303,236 @@
       "readinessScore": 60,
       "phase": "WATCH_READY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "history_less_than_20",
+        "history_less_than_50",
+        "sector_unknown"
+      ]
+    }
+  ],
+  "blockers": [
+    "محرك التاريخ لم يصل بعد إلى 20 جلسة لأي سهم؛ شغّل history_maintenance=true وراجع history-source-diagnostics.json.",
+    "لا توجد 50 جلسة كاملة؛ الثقة الفنية ستظل مخفضة ولن تظهر توصيات تنفيذية كاملة.",
+    "سجل Paper Trading لم يغلق 30 توصية بعد؛ لا يوجد إثبات أداء كافٍ.",
+    "يوجد 80 رموز غير مصنفة قطاعيًا؛ استكمال خريطة القطاعات يرفع جودة الفلترة."
+  ],
+  "sourceDiagnosticsSummary": {
+    "total": 243,
+    "ready20": 0,
+    "ready50": 0,
+    "ready120": 0,
+    "states": {
+      "MISSING_HISTORY": 18,
+      "INSUFFICIENT": 225
+    },
+    "commonFailures": {
+      "المصدر رفض أو لم يجد صفحة تاريخية صالحة: http_404": 19,
+      "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج": 205,
+      "تاريخ ضعيف جدًا (8/20): مراقبة فقط ولا تنفيذ": 19
+    }
+  },
+  "conclusion": "التطبيق ما زال في وضع مراقبة/استرجاع بيانات؛ أقوى مانع هو التاريخ وسجل الأداء.",
+  "rows": [
+    {
+      "symbol": "EXPA",
+      "readinessScore": 68,
+      "phase": "WATCH_READY",
+      "priceOk": true,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "بنوك وخدمات مالية مصرفية",
+      "sectorOk": true,
+      "blockers": [
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "KABO",
+      "readinessScore": 68,
+      "phase": "WATCH_READY",
+      "priceOk": true,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "منسوجات وملابس",
+      "sectorOk": true,
+      "blockers": [
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "ARAB",
+      "readinessScore": 68,
+      "phase": "WATCH_READY",
+      "priceOk": true,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "COPR",
+      "readinessScore": 68,
+      "phase": "WATCH_READY",
+      "priceOk": true,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "CRST",
+      "readinessScore": 68,
+      "phase": "WATCH_READY",
+      "priceOk": true,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "DGTZ",
+      "readinessScore": 68,
+      "phase": "WATCH_READY",
+      "priceOk": true,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "اتصالات وإعلام وتكنولوجيا",
+      "sectorOk": true,
+      "blockers": [
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "DSCW",
+      "readinessScore": 68,
+      "phase": "WATCH_READY",
+      "priceOk": true,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "منسوجات وملابس",
+      "sectorOk": true,
+      "blockers": [
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "MENA",
+      "readinessScore": 68,
+      "phase": "WATCH_READY",
+      "priceOk": true,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "MPCI",
+      "readinessScore": 68,
+      "phase": "WATCH_READY",
+      "priceOk": true,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "رعاية صحية ودواء",
+      "sectorOk": true,
+      "blockers": [
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "MPRC",
+      "readinessScore": 68,
+      "phase": "WATCH_READY",
+      "priceOk": true,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "اتصالات وإعلام وتكنولوجيا",
+      "sectorOk": true,
+      "blockers": [
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "UBEE",
+      "readinessScore": 68,
+      "phase": "WATCH_READY",
+      "priceOk": true,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "بنوك وخدمات مالية مصرفية",
+      "sectorOk": true,
+      "blockers": [
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "AMER",
+      "readinessScore": 60,
+      "phase": "WATCH_READY",
+      "priceOk": true,
+      "historySessions": 8,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -1900,11 +546,11 @@
       ]
     },
     {
-      "symbol": "CEFM",
+      "symbol": "SPIN",
       "readinessScore": 60,
       "phase": "WATCH_READY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 8,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -1918,11 +564,11 @@
       ]
     },
     {
-      "symbol": "COSG",
+      "symbol": "ADPC",
       "readinessScore": 60,
       "phase": "WATCH_READY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -1936,29 +582,11 @@
       ]
     },
     {
-      "symbol": "EALR",
+      "symbol": "CAED",
       "readinessScore": 60,
       "phase": "WATCH_READY",
       "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "sector_unknown"
-      ]
-    },
-    {
-      "symbol": "EEII",
-      "readinessScore": 60,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -1976,7 +604,7 @@
       "readinessScore": 60,
       "phase": "WATCH_READY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -1994,43 +622,7 @@
       "readinessScore": 60,
       "phase": "WATCH_READY",
       "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "sector_unknown"
-      ]
-    },
-    {
-      "symbol": "GGCC",
-      "readinessScore": 60,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "sector_unknown"
-      ]
-    },
-    {
-      "symbol": "GGRN",
-      "readinessScore": 60,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -2048,133 +640,7 @@
       "readinessScore": 60,
       "phase": "WATCH_READY",
       "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "sector_unknown"
-      ]
-    },
-    {
-      "symbol": "MFSC",
-      "readinessScore": 60,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "sector_unknown"
-      ]
-    },
-    {
-      "symbol": "MOSC",
-      "readinessScore": 60,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "sector_unknown"
-      ]
-    },
-    {
-      "symbol": "NAPR",
-      "readinessScore": 60,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "sector_unknown"
-      ]
-    },
-    {
-      "symbol": "ODIN",
-      "readinessScore": 60,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "sector_unknown"
-      ]
-    },
-    {
-      "symbol": "PRMH",
-      "readinessScore": 60,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "sector_unknown"
-      ]
-    },
-    {
-      "symbol": "RACC",
-      "readinessScore": 60,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "sector_unknown"
-      ]
-    },
-    {
-      "symbol": "SCFM",
-      "readinessScore": 60,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -2192,7 +658,7 @@
       "readinessScore": 60,
       "phase": "WATCH_READY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -2206,101 +672,15 @@
       ]
     },
     {
-      "symbol": "WKOL",
-      "readinessScore": 60,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "sector_unknown"
-      ]
-    },
-    {
-      "symbol": "AMOC",
+      "symbol": "ALCN",
       "readinessScore": 51,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 7,
+      "historySessions": 8,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
-      "sector": "بتروكيماويات وكيماويات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "ARCC",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "أسمنت ومواد بناء",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "AXPH",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "رعاية صحية ودواء",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "CIRA",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "تعليم وخدمات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "CLHO",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "رعاية صحية ودواء",
+      "sector": "نقل وخدمات لوجستية",
       "sectorOk": true,
       "blockers": [
         "history_less_than_20",
@@ -2313,7 +693,7 @@
       "readinessScore": 51,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 7,
+      "historySessions": 8,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -2330,7 +710,7 @@
       "readinessScore": 51,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 7,
+      "historySessions": 8,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -2347,41 +727,7 @@
       "readinessScore": 51,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "بنوك وخدمات مالية مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "GBCO",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "سيارات وتجارة وتوزيع",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "HDBK",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 7,
+      "historySessions": 8,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -2398,7 +744,7 @@
       "readinessScore": 51,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 7,
+      "historySessions": 8,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -2411,28 +757,11 @@
       ]
     },
     {
-      "symbol": "ISPH",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "رعاية صحية ودواء",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
       "symbol": "MICH",
       "readinessScore": 51,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 7,
+      "historySessions": 8,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -2449,45 +778,11 @@
       "readinessScore": 51,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 7,
+      "historySessions": 8,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
       "sector": "رعاية صحية ودواء",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "ORAS",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "صناعة وطاقة وبنية تحتية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "RAYA",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "تجارة وتوزيع",
       "sectorOk": true,
       "blockers": [
         "history_less_than_20",
@@ -2500,113 +795,11 @@
       "readinessScore": 51,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 7,
+      "historySessions": 8,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
       "sector": "أغذية ومشروبات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "ADCI",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "رعاية صحية وأدوية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "AFDI",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "AIDC",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "AJWA",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "أغذية ومشروبات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "AMES",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "رعاية صحية وأدوية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "AREH",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "عقارات وإنشاءات",
       "sectorOk": true,
       "blockers": [
         "history_less_than_20",
@@ -2619,45 +812,11 @@
       "readinessScore": 51,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
       "sector": "خدمات مالية غير مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "ATLC",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "خدمات مالية غير مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "CCRS",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "عقارات وإنشاءات",
       "sectorOk": true,
       "blockers": [
         "history_less_than_20",
@@ -2670,7 +829,7 @@
       "readinessScore": 51,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -2683,45 +842,11 @@
       ]
     },
     {
-      "symbol": "CSAG",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "نقل وخدمات لوجستية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "ECAP",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "معادن ومواد أساسية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
       "symbol": "EFIC",
       "readinessScore": 51,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -2734,130 +859,11 @@
       ]
     },
     {
-      "symbol": "ELKA",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "GTWL",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "منسوجات وملابس",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "ICID",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
       "symbol": "ISMA",
       "readinessScore": 51,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "أغذية ومشروبات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "KORA",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "صناعة وطاقة وبنية تحتية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "LUTS",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "MBSC",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "أسمنت ومواد بناء",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "MPCO",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -2874,24 +880,7 @@
       "readinessScore": 51,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "OBRI",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -2908,7 +897,7 @@
       "readinessScore": 51,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -2925,7 +914,7 @@
       "readinessScore": 51,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -2942,7 +931,7 @@
       "readinessScore": 51,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -2959,7 +948,7 @@
       "readinessScore": 51,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -2972,15 +961,15 @@
       ]
     },
     {
-      "symbol": "ROTO",
+      "symbol": "QNBE",
       "readinessScore": 51,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
-      "sector": "سياحة وترفيه",
+      "sector": "بنوك وخدمات مالية مصرفية",
       "sectorOk": true,
       "blockers": [
         "history_less_than_20",
@@ -2993,45 +982,11 @@
       "readinessScore": 51,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
       "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "SCEM",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "أسمنت ومواد بناء",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "SCTS",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "اتصالات وإعلام وتكنولوجيا",
       "sectorOk": true,
       "blockers": [
         "history_less_than_20",
@@ -3044,45 +999,11 @@
       "readinessScore": 51,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
       "sector": "أغذية ومشروبات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "SVCE",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "أسمنت ومواد بناء",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "TALM",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "تعليم وخدمات",
       "sectorOk": true,
       "blockers": [
         "history_less_than_20",
@@ -3095,7 +1016,7 @@
       "readinessScore": 51,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -3108,129 +1029,655 @@
       ]
     },
     {
-      "symbol": "TYCN",
-      "readinessScore": 51,
+      "symbol": "WCDF",
+      "readinessScore": 50,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "خدمات مالية غير مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "UNIT",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "ADRI",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 4,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "AIFI",
-      "readinessScore": 51,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 4,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
+      "liquidityOk": false,
+      "planOk": true,
       "sector": "أغذية ومشروبات",
       "sectorOk": true,
       "blockers": [
         "history_less_than_20",
         "history_less_than_50",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "DGTZ",
-      "readinessScore": 50,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": false,
-      "planOk": true,
-      "sector": "اتصالات وإعلام وتكنولوجيا",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
         "liquidity_not_ready"
       ]
     },
     {
-      "symbol": "FAITA",
-      "readinessScore": 50,
+      "symbol": "ABUK",
+      "readinessScore": 43,
       "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
+      "priceOk": false,
+      "historySessions": 8,
       "historyReady20": false,
       "historyReady50": false,
-      "liquidityOk": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "بتروكيماويات وكيماويات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "ACAMD",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "ADIB",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
       "planOk": true,
       "sector": "بنوك وخدمات مالية مصرفية",
       "sectorOk": true,
       "blockers": [
+        "price_not_verified",
         "history_less_than_20",
-        "history_less_than_50",
-        "liquidity_not_ready"
+        "history_less_than_50"
       ]
     },
     {
-      "symbol": "MIPH",
-      "readinessScore": 50,
+      "symbol": "AMOC",
+      "readinessScore": 43,
       "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
+      "priceOk": false,
+      "historySessions": 8,
       "historyReady20": false,
       "historyReady50": false,
-      "liquidityOk": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "بتروكيماويات وكيماويات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "BTFH",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "خدمات مالية غير مصرفية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "CANA",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "بنوك وخدمات مالية مصرفية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "CCAP",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "استثمارات قابضة ومتنوعة",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "CIEB",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "بنوك وخدمات مالية مصرفية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "COMI",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "بنوك وخدمات مالية مصرفية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "DOMT",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "أغذية ومشروبات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "EFID",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "أغذية ومشروبات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "EGAL",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "معادن ومواد أساسية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "EGCH",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "بتروكيماويات وكيماويات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "EGTS",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "سياحة وترفيه",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "FWRY",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "تكنولوجيا ومدفوعات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "HELI",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "HRHO",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "خدمات مالية غير مصرفية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "JUFO",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "أغذية ومشروبات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "MASR",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "MCQE",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "أسمنت ومواد بناء",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "MFPC",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "بتروكيماويات وكيماويات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "OCDI",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "OLFI",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "أغذية ومشروبات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "POUL",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "أغذية ومشروبات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "RMDA",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
       "planOk": true,
       "sector": "رعاية صحية ودواء",
       "sectorOk": true,
       "blockers": [
+        "price_not_verified",
         "history_less_than_20",
-        "history_less_than_50",
-        "liquidity_not_ready"
+        "history_less_than_50"
       ]
     },
     {
-      "symbol": "EASB",
+      "symbol": "SKPC",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "بتروكيماويات وكيماويات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "SWDY",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "صناعة وطاقة وبنية تحتية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "TMGH",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "AALR",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "ALUM",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "معادن ومواد أساسية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "AMES",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "رعاية صحية وأدوية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "BONY",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "CERA",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "أسمنت ومواد بناء",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "DAPH",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "EFIH",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "تكنولوجيا ومدفوعات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "EGAS",
       "readinessScore": 43,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
@@ -3248,147 +1695,201 @@
       ]
     },
     {
-      "symbol": "ACAP",
+      "symbol": "EHDR",
       "readinessScore": 43,
       "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
+      "priceOk": false,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
       "blockers": [
+        "price_not_verified",
         "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid",
-        "sector_unknown"
+        "history_less_than_50"
       ]
     },
     {
-      "symbol": "AIHC",
+      "symbol": "ELSH",
       "readinessScore": 43,
       "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
+      "priceOk": false,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
       "blockers": [
+        "price_not_verified",
         "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid",
-        "sector_unknown"
+        "history_less_than_50"
       ]
     },
     {
-      "symbol": "ARVA",
+      "symbol": "EPCO",
       "readinessScore": 43,
       "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
+      "priceOk": false,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
+      "planOk": true,
+      "sector": "أغذية ومشروبات",
+      "sectorOk": true,
       "blockers": [
+        "price_not_verified",
         "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid",
-        "sector_unknown"
+        "history_less_than_50"
       ]
     },
     {
-      "symbol": "ASCM",
+      "symbol": "ETRS",
       "readinessScore": 43,
       "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
+      "priceOk": false,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
+      "planOk": true,
+      "sector": "نقل وخدمات لوجستية",
+      "sectorOk": true,
       "blockers": [
+        "price_not_verified",
         "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid",
-        "sector_unknown"
+        "history_less_than_50"
       ]
     },
     {
-      "symbol": "EBSC",
+      "symbol": "FERC",
       "readinessScore": 43,
       "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
+      "priceOk": false,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
+      "planOk": true,
+      "sector": "بتروكيماويات وكيماويات",
+      "sectorOk": true,
       "blockers": [
+        "price_not_verified",
         "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid",
-        "sector_unknown"
+        "history_less_than_50"
       ]
     },
     {
-      "symbol": "EGAS",
+      "symbol": "GDWA",
       "readinessScore": 43,
       "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
+      "priceOk": false,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
       "blockers": [
+        "price_not_verified",
         "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid",
-        "sector_unknown"
+        "history_less_than_50"
       ]
     },
     {
-      "symbol": "GPIM",
+      "symbol": "GIHD",
       "readinessScore": 43,
       "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
+      "priceOk": false,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
       "blockers": [
+        "price_not_verified",
         "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid",
-        "sector_unknown"
+        "history_less_than_50"
       ]
     },
     {
-      "symbol": "GRCA",
+      "symbol": "IDRE",
       "readinessScore": 43,
       "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
+      "priceOk": false,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
       "blockers": [
+        "price_not_verified",
         "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid",
-        "sector_unknown"
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "INFI",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "أغذية ومشروبات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "ISMQ",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "معادن ومواد أساسية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "KRDI",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
       ]
     },
     {
@@ -3396,7 +1897,7 @@
       "readinessScore": 43,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -3414,7 +1915,7 @@
       "readinessScore": 43,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -3425,6 +1926,42 @@
         "history_less_than_50",
         "trade_plan_invalid",
         "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "MAAL",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "MCRO",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "رعاية صحية ودواء",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
       ]
     },
     {
@@ -3432,7 +1969,7 @@
       "readinessScore": 43,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
@@ -3446,183 +1983,219 @@
       ]
     },
     {
-      "symbol": "MILS",
+      "symbol": "MEPA",
       "readinessScore": 43,
       "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
+      "priceOk": false,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
+      "planOk": true,
+      "sector": "رعاية صحية وأدوية",
+      "sectorOk": true,
       "blockers": [
+        "price_not_verified",
         "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid",
-        "sector_unknown"
+        "history_less_than_50"
       ]
     },
     {
-      "symbol": "MOED",
+      "symbol": "MIPH",
       "readinessScore": 43,
       "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
+      "priceOk": false,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
+      "planOk": true,
+      "sector": "رعاية صحية ودواء",
+      "sectorOk": true,
       "blockers": [
+        "price_not_verified",
         "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid",
-        "sector_unknown"
+        "history_less_than_50"
       ]
     },
     {
-      "symbol": "NCCW",
+      "symbol": "MTIE",
       "readinessScore": 43,
       "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
+      "priceOk": false,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
+      "planOk": true,
+      "sector": "تجارة وتوزيع",
+      "sectorOk": true,
       "blockers": [
+        "price_not_verified",
         "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid",
-        "sector_unknown"
+        "history_less_than_50"
       ]
     },
     {
-      "symbol": "NINH",
+      "symbol": "NARE",
       "readinessScore": 43,
       "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
+      "priceOk": false,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
       "blockers": [
+        "price_not_verified",
         "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid",
-        "sector_unknown"
+        "history_less_than_50"
       ]
     },
     {
-      "symbol": "OIH",
+      "symbol": "OFH",
       "readinessScore": 43,
       "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
+      "priceOk": false,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
+      "planOk": true,
+      "sector": "خدمات مالية غير مصرفية",
+      "sectorOk": true,
       "blockers": [
+        "price_not_verified",
         "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid",
-        "sector_unknown"
+        "history_less_than_50"
       ]
     },
     {
-      "symbol": "RUBX",
+      "symbol": "PRDC",
       "readinessScore": 43,
       "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
+      "priceOk": false,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
       "blockers": [
+        "price_not_verified",
         "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid",
-        "sector_unknown"
+        "history_less_than_50"
       ]
     },
     {
-      "symbol": "TAQA",
+      "symbol": "RREI",
       "readinessScore": 43,
       "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
+      "priceOk": false,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
       "blockers": [
+        "price_not_verified",
         "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid",
-        "sector_unknown"
+        "history_less_than_50"
       ]
     },
     {
-      "symbol": "UNIP",
+      "symbol": "SIPC",
       "readinessScore": 43,
       "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
+      "priceOk": false,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
+      "planOk": true,
+      "sector": "رعاية صحية وأدوية",
+      "sectorOk": true,
       "blockers": [
+        "price_not_verified",
         "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid",
-        "sector_unknown"
+        "history_less_than_50"
       ]
     },
     {
-      "symbol": "ZEOT",
+      "symbol": "SPMD",
       "readinessScore": 43,
       "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
+      "priceOk": false,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
+      "planOk": true,
+      "sector": "رعاية صحية وأدوية",
+      "sectorOk": true,
       "blockers": [
+        "price_not_verified",
         "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid",
-        "sector_unknown"
+        "history_less_than_50"
       ]
     },
     {
-      "symbol": "DTPP",
+      "symbol": "UEGC",
       "readinessScore": 43,
       "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 5,
+      "priceOk": false,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
       "blockers": [
+        "price_not_verified",
         "history_less_than_20",
-        "history_less_than_50",
-        "trade_plan_invalid",
-        "sector_unknown"
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "UNIT",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
+      ]
+    },
+    {
+      "symbol": "ZMID",
+      "readinessScore": 43,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50"
       ]
     },
     {
@@ -3630,7 +2203,7 @@
       "readinessScore": 42,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": false,
@@ -3649,26 +2222,7 @@
       "readinessScore": 42,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": false,
-      "planOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "liquidity_not_ready",
-        "sector_unknown"
-      ]
-    },
-    {
-      "symbol": "EPPK",
-      "readinessScore": 42,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": false,
@@ -3687,26 +2241,7 @@
       "readinessScore": 42,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": false,
-      "planOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "liquidity_not_ready",
-        "sector_unknown"
-      ]
-    },
-    {
-      "symbol": "UEFM",
-      "readinessScore": 42,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": false,
@@ -3725,26 +2260,7 @@
       "readinessScore": 42,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": false,
-      "planOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "liquidity_not_ready",
-        "sector_unknown"
-      ]
-    },
-    {
-      "symbol": "RAKT",
-      "readinessScore": 42,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 2,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": false,
@@ -3763,7 +2279,7 @@
       "readinessScore": 42,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 1,
+      "historySessions": 2,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": false,
@@ -3778,11 +2294,391 @@
       ]
     },
     {
+      "symbol": "ACGC",
+      "readinessScore": 35,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "IFAP",
+      "readinessScore": 35,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "LCSW",
+      "readinessScore": 35,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "AFMC",
+      "readinessScore": 35,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "AMIA",
+      "readinessScore": 35,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "BINV",
+      "readinessScore": 35,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "BIOC",
+      "readinessScore": 35,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "COSG",
+      "readinessScore": 35,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "EALR",
+      "readinessScore": 35,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "EEII",
+      "readinessScore": 35,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "GGCC",
+      "readinessScore": 35,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "GGRN",
+      "readinessScore": 35,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "MFSC",
+      "readinessScore": 35,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "MOSC",
+      "readinessScore": 35,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "NAPR",
+      "readinessScore": 35,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "ODIN",
+      "readinessScore": 35,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "PRMH",
+      "readinessScore": 35,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "RACC",
+      "readinessScore": 35,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "SCFM",
+      "readinessScore": 35,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "WKOL",
+      "readinessScore": 35,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "planOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "sector_unknown"
+      ]
+    },
+    {
       "symbol": "EGBE",
       "readinessScore": 33,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 7,
+      "historySessions": 8,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": false,
@@ -3796,47 +2692,11 @@
       ]
     },
     {
-      "symbol": "ELWA",
-      "readinessScore": 33,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 7,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": false,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "liquidity_not_ready",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "GMCI",
-      "readinessScore": 33,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": false,
-      "sector": "خدمات مالية غير مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "liquidity_not_ready",
-        "trade_plan_invalid"
-      ]
-    },
-    {
       "symbol": "GTEX",
       "readinessScore": 33,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": false,
@@ -3850,47 +2710,11 @@
       ]
     },
     {
-      "symbol": "NEDA",
-      "readinessScore": 33,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": false,
-      "sector": "عقارات وإنشاءات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "liquidity_not_ready",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "PHTV",
-      "readinessScore": 33,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": false,
-      "sector": "سياحة وترفيه",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "liquidity_not_ready",
-        "trade_plan_invalid"
-      ]
-    },
-    {
       "symbol": "SEIGA",
       "readinessScore": 33,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": false,
@@ -3904,25 +2728,7 @@
       ]
     },
     {
-      "symbol": "WCDF",
-      "readinessScore": 33,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 6,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": false,
-      "sector": "أغذية ومشروبات",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "liquidity_not_ready",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "ESRS",
+      "symbol": "MMAT",
       "readinessScore": 33,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
@@ -3930,7 +2736,7 @@
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": false,
-      "sector": "معادن ومواد أساسية",
+      "sector": "عقارات وإنشاءات",
       "sectorOk": true,
       "blockers": [
         "history_less_than_20",
@@ -3949,24 +2755,6 @@
       "historyReady50": false,
       "liquidityOk": false,
       "sector": "صناعة وطاقة وبنية تحتية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "liquidity_not_ready",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "MMAT",
-      "readinessScore": 33,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 3,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": false,
-      "sector": "عقارات وإنشاءات",
       "sectorOk": true,
       "blockers": [
         "history_less_than_20",
@@ -4012,11 +2800,875 @@
       ]
     },
     {
+      "symbol": "SAIB",
+      "readinessScore": 33,
+      "phase": "DATA_RECOVERY",
+      "priceOk": true,
+      "historySessions": 1,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": false,
+      "sector": "بنوك وخدمات مالية مصرفية",
+      "sectorOk": true,
+      "blockers": [
+        "history_less_than_20",
+        "history_less_than_50",
+        "liquidity_not_ready",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "ARCC",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "أسمنت ومواد بناء",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "AXPH",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "رعاية صحية ودواء",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "CICH",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "خدمات مالية غير مصرفية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "CIRA",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "تعليم وخدمات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "CLHO",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "رعاية صحية ودواء",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "ETEL",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "اتصالات وإعلام وتكنولوجيا",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "GBCO",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "سيارات وتجارة وتوزيع",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "HDBK",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "بنوك وخدمات مالية مصرفية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "ISPH",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "رعاية صحية ودواء",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "ORAS",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "صناعة وطاقة وبنية تحتية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "ORHD",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "PHDC",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "RAYA",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "تجارة وتوزيع",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "SAUD",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "بنوك وخدمات مالية مصرفية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "ADCI",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "رعاية صحية وأدوية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "AFDI",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "AIDC",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "AJWA",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "أغذية ومشروبات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "AREH",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "ATLC",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "خدمات مالية غير مصرفية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "ATQA",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "معادن ومواد أساسية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "CCRS",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "CSAG",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "نقل وخدمات لوجستية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "ECAP",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "معادن ومواد أساسية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "ELKA",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "EMFD",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "GTWL",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "منسوجات وملابس",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "ICID",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "KORA",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "صناعة وطاقة وبنية تحتية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "LUTS",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "MBSC",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "أسمنت ومواد بناء",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "MHOT",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "سياحة وترفيه",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "MPCO",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "أغذية ومشروبات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "OBRI",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "ORWE",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "صناعة وطاقة وبنية تحتية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "PHTV",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "سياحة وترفيه",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "ROTO",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "سياحة وترفيه",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "SCEM",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "أسمنت ومواد بناء",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "SCTS",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "اتصالات وإعلام وتكنولوجيا",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "SDTI",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "سياحة وترفيه",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "SEIG",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "خدمات مالية غير مصرفية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "SVCE",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "أسمنت ومواد بناء",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "TALM",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "تعليم وخدمات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "TYCN",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "خدمات مالية غير مصرفية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "VALU",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "خدمات مالية غير مصرفية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "ADRI",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 5,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "AIFI",
+      "readinessScore": 26,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 5,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "أغذية ومشروبات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
       "symbol": "DCCC",
       "readinessScore": 25,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": false,
@@ -4031,11 +3683,30 @@
       ]
     },
     {
+      "symbol": "FAITA",
+      "readinessScore": 25,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": false,
+      "planOk": true,
+      "sector": "بنوك وخدمات مالية مصرفية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "liquidity_not_ready"
+      ]
+    },
+    {
       "symbol": "MOIL",
       "readinessScore": 25,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": false,
@@ -4054,7 +3725,7 @@
       "readinessScore": 25,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 6,
+      "historySessions": 7,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": false,
@@ -4073,7 +3744,7 @@
       "readinessScore": 25,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 5,
+      "historySessions": 6,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": false,
@@ -4092,26 +3763,7 @@
       "readinessScore": 25,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
-      "historySessions": 4,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": false,
-      "sector": "غير مصنف",
-      "sectorOk": false,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "liquidity_not_ready",
-        "trade_plan_invalid",
-        "sector_unknown"
-      ]
-    },
-    {
-      "symbol": "ELNA",
-      "readinessScore": 25,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 3,
+      "historySessions": 5,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": false,
@@ -4130,6 +3782,25 @@
       "readinessScore": 25,
       "phase": "DATA_RECOVERY",
       "priceOk": true,
+      "historySessions": 4,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": false,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "history_less_than_20",
+        "history_less_than_50",
+        "liquidity_not_ready",
+        "trade_plan_invalid",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "RAKT",
+      "readinessScore": 25,
+      "phase": "DATA_RECOVERY",
+      "priceOk": true,
       "historySessions": 3,
       "historyReady20": false,
       "historyReady50": false,
@@ -4142,6 +3813,483 @@
         "liquidity_not_ready",
         "trade_plan_invalid",
         "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "EASB",
+      "readinessScore": 18,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "ACAP",
+      "readinessScore": 18,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "AIHC",
+      "readinessScore": 18,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "ARVA",
+      "readinessScore": 18,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "ASCM",
+      "readinessScore": 18,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "CEFM",
+      "readinessScore": 18,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "EBSC",
+      "readinessScore": 18,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "GPIM",
+      "readinessScore": 18,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "GRCA",
+      "readinessScore": 18,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "MILS",
+      "readinessScore": 18,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "MOED",
+      "readinessScore": 18,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "NCCW",
+      "readinessScore": 18,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "NINH",
+      "readinessScore": 18,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "OIH",
+      "readinessScore": 18,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "RUBX",
+      "readinessScore": 18,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "TAQA",
+      "readinessScore": 18,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "UNIP",
+      "readinessScore": 18,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "ZEOT",
+      "readinessScore": 18,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "DTPP",
+      "readinessScore": 18,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 6,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "UEFM",
+      "readinessScore": 17,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": false,
+      "planOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "liquidity_not_ready",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "ELNA",
+      "readinessScore": 17,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 4,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": false,
+      "planOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "liquidity_not_ready",
+        "sector_unknown"
+      ]
+    },
+    {
+      "symbol": "ELWA",
+      "readinessScore": 8,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 8,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": false,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "liquidity_not_ready",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "GMCI",
+      "readinessScore": 8,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": false,
+      "sector": "خدمات مالية غير مصرفية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "liquidity_not_ready",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "NEDA",
+      "readinessScore": 8,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": false,
+      "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "liquidity_not_ready",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "ESRS",
+      "readinessScore": 8,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 5,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": false,
+      "sector": "معادن ومواد أساسية",
+      "sectorOk": true,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "liquidity_not_ready",
+        "trade_plan_invalid"
       ]
     },
     {
@@ -4297,25 +4445,6 @@
       ]
     },
     {
-      "symbol": "SAIB",
-      "readinessScore": 8,
-      "phase": "DATA_RECOVERY",
-      "priceOk": false,
-      "historySessions": 0,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": false,
-      "sector": "بنوك وخدمات مالية مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "price_not_verified",
-        "history_less_than_20",
-        "history_less_than_50",
-        "liquidity_not_ready",
-        "trade_plan_invalid"
-      ]
-    },
-    {
       "symbol": "SPHT",
       "readinessScore": 8,
       "phase": "DATA_RECOVERY",
@@ -4354,11 +4483,31 @@
       ]
     },
     {
+      "symbol": "EPPK",
+      "readinessScore": 0,
+      "phase": "DATA_RECOVERY",
+      "priceOk": false,
+      "historySessions": 7,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": false,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "price_not_verified",
+        "history_less_than_20",
+        "history_less_than_50",
+        "liquidity_not_ready",
+        "trade_plan_invalid",
+        "sector_unknown"
+      ]
+    },
+    {
       "symbol": "ACTF",
       "readinessScore": 0,
       "phase": "DATA_RECOVERY",
       "priceOk": false,
-      "historySessions": 0,
+      "historySessions": 1,
       "historyReady20": false,
       "historyReady50": false,
       "liquidityOk": false,

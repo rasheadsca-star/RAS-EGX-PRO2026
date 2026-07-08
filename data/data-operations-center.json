@@ -1,13 +1,13 @@
 {
   "ok": true,
   "engine": "v8_9_1_data_operations_center_clear",
-  "generatedAt": "2026-07-07T15:36:48.897Z",
-  "score": 8,
+  "generatedAt": "2026-07-08T20:17:41.637Z",
+  "score": 34,
   "state": "bad",
   "summary": {
-    "ok": 2,
-    "warn": 2,
-    "bad": 4,
+    "ok": 4,
+    "warn": 1,
+    "bad": 3,
     "total": 8
   },
   "checks": [
@@ -15,25 +15,25 @@
       "id": "fetcher",
       "name": "جلب البيانات",
       "state": "ok",
-      "value": "accepted 209 صف",
-      "message": "مصدر mubasher_symbol_pages_precise_enriched قبل 209 صف",
+      "value": "accepted 213 صف",
+      "message": "مصدر mubasher_symbol_pages_precise_enriched قبل 213 صف",
       "action": "متابعة بدون Reset"
     },
     {
       "id": "coverage",
       "name": "تغطية السوق",
-      "state": "warn",
-      "value": "93.3%",
-      "message": "تغطية مقبولة مع نقص محدود",
-      "action": "تشغيل Workflow لاحقًا عند الحاجة"
+      "state": "ok",
+      "value": "95.1%",
+      "message": "تغطية ممتازة",
+      "action": "متابعة"
     },
     {
       "id": "price",
       "name": "تدقيق الأسعار",
-      "state": "bad",
-      "value": "173 تعارض / 9 قديم",
-      "message": "يوجد تعارض أسعار مؤثر",
-      "action": "افتح تدقيق الأسعار"
+      "state": "ok",
+      "value": "0 تعارض / 3 قديم",
+      "message": "بعض الأسعار تحتاج تحقق لكن ليست فشلًا عامًا",
+      "action": "راجع القائمة ولا تكرر Workflow بلا داعٍ"
     },
     {
       "id": "history",
@@ -55,7 +55,7 @@
       "id": "alerts",
       "name": "مركز التنبيهات",
       "state": "bad",
-      "value": "عاجل 20 / مهم 1 / فرص 8 / مراقبة 11",
+      "value": "عاجل 15 / مهم 1 / فرص 8 / مراقبة 4",
       "message": "ابدأ بالتنبيهات العاجلة",
       "action": "افتح مركز التنبيهات"
     },
@@ -64,7 +64,7 @@
       "name": "حارس الثقة",
       "state": "bad",
       "value": "59%",
-      "message": "تاريخ 5.9/50 وتغطية 93.8%",
+      "message": "تاريخ 5.9/50 وتغطية 93.3%",
       "action": "راجع تفسير الثقة قبل الاعتماد على النتائج"
     },
     {
