@@ -1,20 +1,20 @@
 {
   "ok": true,
   "engine": "v11_3_history_source_diagnostics",
-  "generatedAt": "2026-07-08T20:19:31.262Z",
+  "generatedAt": "2026-07-08T21:05:45.740Z",
   "summary": {
     "total": 243,
     "ready20": 0,
     "ready50": 0,
     "ready120": 0,
     "states": {
-      "MISSING_HISTORY": 18,
-      "INSUFFICIENT": 225
+      "MISSING_HISTORY": 16,
+      "INSUFFICIENT": 227
     },
     "commonFailures": {
       "المصدر رفض أو لم يجد صفحة تاريخية صالحة: http_404": 19,
       "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج": 205,
-      "تاريخ ضعيف جدًا (8/20): مراقبة فقط ولا تنفيذ": 19
+      "تاريخ ضعيف جدًا (9/20): مراقبة فقط ولا تنفيذ": 19
     }
   },
   "rows": [
@@ -419,57 +419,6 @@
       ]
     },
     {
-      "symbol": "IRAX",
-      "sessions": 0,
-      "state": "MISSING_HISTORY",
-      "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
-      "resolverConfidence": 70,
-      "sector": "معادن ومواد أساسية",
-      "lastAttempt": "parsed_no_ohlcv",
-      "attempts": [
-        {
-          "source": "egx_official_public_pages",
-          "url": "https://www.egx.com.eg/en/Stock_Trading.aspx?code=IRAX",
-          "ok": false,
-          "reason": "TypeError"
-        },
-        {
-          "source": "egx_official_public_pages",
-          "url": "https://www.egx.com.eg/en/Trading.aspx?code=IRAX",
-          "ok": false,
-          "reason": "TypeError"
-        },
-        {
-          "source": "egx_official_public_pages",
-          "url": "https://www.egx.com.eg/en/ListedStocks.aspx",
-          "ok": false,
-          "reason": "TypeError"
-        },
-        {
-          "source": "mubasher_public_stock_pages",
-          "url": "https://english.mubasher.info/markets/EGX/stocks/IRAX/historical-data",
-          "ok": false,
-          "status": 404,
-          "reason": "http_404"
-        },
-        {
-          "source": "mubasher_public_stock_pages",
-          "url": "https://english.mubasher.info/markets/EGX/stocks/IRAX/historical-prices",
-          "ok": false,
-          "status": 404,
-          "reason": "http_404"
-        },
-        {
-          "source": "mubasher_public_stock_pages",
-          "url": "https://english.mubasher.info/markets/EGX/stocks/IRAX/",
-          "ok": true,
-          "status": 200,
-          "rows": 0,
-          "reason": "parsed_no_ohlcv"
-        }
-      ]
-    },
-    {
       "symbol": "MNHD",
       "sessions": 0,
       "state": "MISSING_HISTORY",
@@ -870,63 +819,12 @@
       ]
     },
     {
-      "symbol": "TORA",
-      "sessions": 0,
-      "state": "MISSING_HISTORY",
-      "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
-      "resolverConfidence": 70,
-      "sector": "أسمنت ومواد بناء",
-      "lastAttempt": "parsed_no_ohlcv",
-      "attempts": [
-        {
-          "source": "egx_official_public_pages",
-          "url": "https://www.egx.com.eg/en/Stock_Trading.aspx?code=TORA",
-          "ok": false,
-          "reason": "TypeError"
-        },
-        {
-          "source": "egx_official_public_pages",
-          "url": "https://www.egx.com.eg/en/Trading.aspx?code=TORA",
-          "ok": false,
-          "reason": "TypeError"
-        },
-        {
-          "source": "egx_official_public_pages",
-          "url": "https://www.egx.com.eg/en/ListedStocks.aspx",
-          "ok": false,
-          "reason": "TypeError"
-        },
-        {
-          "source": "mubasher_public_stock_pages",
-          "url": "https://english.mubasher.info/markets/EGX/stocks/TORA/historical-data",
-          "ok": false,
-          "status": 404,
-          "reason": "http_404"
-        },
-        {
-          "source": "mubasher_public_stock_pages",
-          "url": "https://english.mubasher.info/markets/EGX/stocks/TORA/historical-prices",
-          "ok": false,
-          "status": 404,
-          "reason": "http_404"
-        },
-        {
-          "source": "mubasher_public_stock_pages",
-          "url": "https://english.mubasher.info/markets/EGX/stocks/TORA/",
-          "ok": true,
-          "status": 200,
-          "rows": 0,
-          "reason": "parsed_no_ohlcv"
-        }
-      ]
-    },
-    {
       "symbol": "ACTF",
       "sessions": 1,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
-      "sector": "غير مصنف",
+      "sector": "خدمات مالية غير مصرفية",
       "lastAttempt": "parsed_no_ohlcv",
       "attempts": [
         {
@@ -1066,6 +964,57 @@
         {
           "source": "mubasher_public_stock_pages",
           "url": "https://english.mubasher.info/markets/EGX/stocks/ICLE/",
+          "ok": true,
+          "status": 200,
+          "rows": 0,
+          "reason": "parsed_no_ohlcv"
+        }
+      ]
+    },
+    {
+      "symbol": "IRAX",
+      "sessions": 1,
+      "state": "INSUFFICIENT",
+      "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
+      "resolverConfidence": 75,
+      "sector": "معادن ومواد أساسية",
+      "lastAttempt": "parsed_no_ohlcv",
+      "attempts": [
+        {
+          "source": "egx_official_public_pages",
+          "url": "https://www.egx.com.eg/en/Stock_Trading.aspx?code=IRAX",
+          "ok": false,
+          "reason": "TypeError"
+        },
+        {
+          "source": "egx_official_public_pages",
+          "url": "https://www.egx.com.eg/en/Trading.aspx?code=IRAX",
+          "ok": false,
+          "reason": "TypeError"
+        },
+        {
+          "source": "egx_official_public_pages",
+          "url": "https://www.egx.com.eg/en/ListedStocks.aspx",
+          "ok": false,
+          "reason": "TypeError"
+        },
+        {
+          "source": "mubasher_public_stock_pages",
+          "url": "https://english.mubasher.info/markets/EGX/stocks/IRAX/historical-data",
+          "ok": false,
+          "status": 404,
+          "reason": "http_404"
+        },
+        {
+          "source": "mubasher_public_stock_pages",
+          "url": "https://english.mubasher.info/markets/EGX/stocks/IRAX/historical-prices",
+          "ok": false,
+          "status": 404,
+          "reason": "http_404"
+        },
+        {
+          "source": "mubasher_public_stock_pages",
+          "url": "https://english.mubasher.info/markets/EGX/stocks/IRAX/",
           "ok": true,
           "status": 200,
           "rows": 0,
@@ -1219,6 +1168,57 @@
         {
           "source": "mubasher_public_stock_pages",
           "url": "https://english.mubasher.info/markets/EGX/stocks/SPHT/",
+          "ok": true,
+          "status": 200,
+          "rows": 0,
+          "reason": "parsed_no_ohlcv"
+        }
+      ]
+    },
+    {
+      "symbol": "TORA",
+      "sessions": 1,
+      "state": "INSUFFICIENT",
+      "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
+      "resolverConfidence": 75,
+      "sector": "أسمنت ومواد بناء",
+      "lastAttempt": "parsed_no_ohlcv",
+      "attempts": [
+        {
+          "source": "egx_official_public_pages",
+          "url": "https://www.egx.com.eg/en/Stock_Trading.aspx?code=TORA",
+          "ok": false,
+          "reason": "TypeError"
+        },
+        {
+          "source": "egx_official_public_pages",
+          "url": "https://www.egx.com.eg/en/Trading.aspx?code=TORA",
+          "ok": false,
+          "reason": "TypeError"
+        },
+        {
+          "source": "egx_official_public_pages",
+          "url": "https://www.egx.com.eg/en/ListedStocks.aspx",
+          "ok": false,
+          "reason": "TypeError"
+        },
+        {
+          "source": "mubasher_public_stock_pages",
+          "url": "https://english.mubasher.info/markets/EGX/stocks/TORA/historical-data",
+          "ok": false,
+          "status": 404,
+          "reason": "http_404"
+        },
+        {
+          "source": "mubasher_public_stock_pages",
+          "url": "https://english.mubasher.info/markets/EGX/stocks/TORA/historical-prices",
+          "ok": false,
+          "status": 404,
+          "reason": "http_404"
+        },
+        {
+          "source": "mubasher_public_stock_pages",
+          "url": "https://english.mubasher.info/markets/EGX/stocks/TORA/",
           "ok": true,
           "status": 200,
           "rows": 0,
@@ -1891,7 +1891,7 @@
     },
     {
       "symbol": "AALR",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -1942,7 +1942,7 @@
     },
     {
       "symbol": "ACAP",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -1993,7 +1993,7 @@
     },
     {
       "symbol": "ADCI",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -2044,7 +2044,7 @@
     },
     {
       "symbol": "ADPC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -2095,7 +2095,7 @@
     },
     {
       "symbol": "AFDI",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -2146,7 +2146,7 @@
     },
     {
       "symbol": "AFMC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -2197,7 +2197,7 @@
     },
     {
       "symbol": "AIDC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -2248,7 +2248,7 @@
     },
     {
       "symbol": "AIHC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصدر رفض أو لم يجد صفحة تاريخية صالحة: http_404",
       "resolverConfidence": 90,
@@ -2299,7 +2299,7 @@
     },
     {
       "symbol": "AJWA",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -2350,7 +2350,7 @@
     },
     {
       "symbol": "ALUM",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -2401,7 +2401,7 @@
     },
     {
       "symbol": "AMES",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -2452,7 +2452,7 @@
     },
     {
       "symbol": "AMIA",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -2503,7 +2503,7 @@
     },
     {
       "symbol": "APSW",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -2554,7 +2554,7 @@
     },
     {
       "symbol": "ARAB",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -2605,7 +2605,7 @@
     },
     {
       "symbol": "AREH",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -2656,7 +2656,7 @@
     },
     {
       "symbol": "ARVA",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -2707,7 +2707,7 @@
     },
     {
       "symbol": "ASCM",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -2758,7 +2758,7 @@
     },
     {
       "symbol": "ASPI",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -2809,7 +2809,7 @@
     },
     {
       "symbol": "ATLC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -2860,7 +2860,7 @@
     },
     {
       "symbol": "ATQA",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -2911,7 +2911,7 @@
     },
     {
       "symbol": "BINV",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -2962,7 +2962,7 @@
     },
     {
       "symbol": "BIOC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -3013,7 +3013,7 @@
     },
     {
       "symbol": "BONY",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -3064,7 +3064,7 @@
     },
     {
       "symbol": "CAED",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -3115,7 +3115,7 @@
     },
     {
       "symbol": "CCRS",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -3166,7 +3166,7 @@
     },
     {
       "symbol": "CEFM",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -3217,7 +3217,7 @@
     },
     {
       "symbol": "CERA",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -3268,7 +3268,7 @@
     },
     {
       "symbol": "COPR",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -3319,7 +3319,7 @@
     },
     {
       "symbol": "COSG",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -3370,7 +3370,7 @@
     },
     {
       "symbol": "CPCI",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -3421,7 +3421,7 @@
     },
     {
       "symbol": "CPME",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -3472,7 +3472,7 @@
     },
     {
       "symbol": "CRST",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -3523,7 +3523,7 @@
     },
     {
       "symbol": "CSAG",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -3574,7 +3574,7 @@
     },
     {
       "symbol": "DAPH",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -3625,7 +3625,7 @@
     },
     {
       "symbol": "DCCC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -3676,7 +3676,7 @@
     },
     {
       "symbol": "DEIN",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -3727,7 +3727,7 @@
     },
     {
       "symbol": "DGTZ",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -3778,7 +3778,7 @@
     },
     {
       "symbol": "DSCW",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -3829,7 +3829,7 @@
     },
     {
       "symbol": "DTPP",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -3880,7 +3880,7 @@
     },
     {
       "symbol": "EALR",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -3931,7 +3931,7 @@
     },
     {
       "symbol": "EBSC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -3982,7 +3982,7 @@
     },
     {
       "symbol": "ECAP",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -4033,7 +4033,7 @@
     },
     {
       "symbol": "EEII",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -4084,7 +4084,7 @@
     },
     {
       "symbol": "EFIC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -4135,7 +4135,7 @@
     },
     {
       "symbol": "EFIH",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -4186,7 +4186,7 @@
     },
     {
       "symbol": "EGAS",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -4237,7 +4237,7 @@
     },
     {
       "symbol": "EHDR",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -4288,7 +4288,7 @@
     },
     {
       "symbol": "ELEC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -4339,7 +4339,7 @@
     },
     {
       "symbol": "ELKA",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -4390,7 +4390,7 @@
     },
     {
       "symbol": "ELSH",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -4441,7 +4441,7 @@
     },
     {
       "symbol": "EMFD",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -4492,7 +4492,7 @@
     },
     {
       "symbol": "ENGC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -4543,7 +4543,7 @@
     },
     {
       "symbol": "EPCO",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -4594,7 +4594,7 @@
     },
     {
       "symbol": "EPPK",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -4645,7 +4645,7 @@
     },
     {
       "symbol": "ETRS",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -4696,7 +4696,7 @@
     },
     {
       "symbol": "FAITA",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -4747,7 +4747,7 @@
     },
     {
       "symbol": "FERC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -4798,7 +4798,7 @@
     },
     {
       "symbol": "GDWA",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -4849,7 +4849,7 @@
     },
     {
       "symbol": "GGCC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -4900,7 +4900,7 @@
     },
     {
       "symbol": "GGRN",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -4951,7 +4951,7 @@
     },
     {
       "symbol": "GIHD",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -5002,7 +5002,7 @@
     },
     {
       "symbol": "GMCI",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -5053,7 +5053,7 @@
     },
     {
       "symbol": "GPIM",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -5104,7 +5104,7 @@
     },
     {
       "symbol": "GRCA",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -5155,7 +5155,7 @@
     },
     {
       "symbol": "GSSC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -5206,7 +5206,7 @@
     },
     {
       "symbol": "GTEX",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -5257,7 +5257,7 @@
     },
     {
       "symbol": "GTWL",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -5308,7 +5308,7 @@
     },
     {
       "symbol": "ICID",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -5359,7 +5359,7 @@
     },
     {
       "symbol": "IDRE",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -5410,7 +5410,7 @@
     },
     {
       "symbol": "INFI",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -5461,7 +5461,7 @@
     },
     {
       "symbol": "ISMA",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -5512,7 +5512,7 @@
     },
     {
       "symbol": "ISMQ",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -5563,7 +5563,7 @@
     },
     {
       "symbol": "KORA",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -5614,7 +5614,7 @@
     },
     {
       "symbol": "KRDI",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -5665,7 +5665,7 @@
     },
     {
       "symbol": "KWIN",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -5716,7 +5716,7 @@
     },
     {
       "symbol": "KZPC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -5767,7 +5767,7 @@
     },
     {
       "symbol": "LUTS",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -5818,7 +5818,7 @@
     },
     {
       "symbol": "MAAL",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -5869,7 +5869,7 @@
     },
     {
       "symbol": "MBSC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -5920,7 +5920,7 @@
     },
     {
       "symbol": "MCRO",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -5971,7 +5971,7 @@
     },
     {
       "symbol": "MEGM",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -6022,7 +6022,7 @@
     },
     {
       "symbol": "MENA",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -6073,7 +6073,7 @@
     },
     {
       "symbol": "MEPA",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -6124,7 +6124,7 @@
     },
     {
       "symbol": "MFSC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -6175,7 +6175,7 @@
     },
     {
       "symbol": "MHOT",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -6226,7 +6226,7 @@
     },
     {
       "symbol": "MILS",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -6277,7 +6277,7 @@
     },
     {
       "symbol": "MIPH",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -6328,7 +6328,7 @@
     },
     {
       "symbol": "MOED",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -6379,7 +6379,7 @@
     },
     {
       "symbol": "MOIL",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -6430,7 +6430,7 @@
     },
     {
       "symbol": "MOIN",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -6481,7 +6481,7 @@
     },
     {
       "symbol": "MOSC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -6532,7 +6532,7 @@
     },
     {
       "symbol": "MPCI",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -6583,7 +6583,7 @@
     },
     {
       "symbol": "MPCO",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -6634,7 +6634,7 @@
     },
     {
       "symbol": "MPRC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -6685,7 +6685,7 @@
     },
     {
       "symbol": "MTIE",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -6736,7 +6736,7 @@
     },
     {
       "symbol": "NAPR",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصدر رفض أو لم يجد صفحة تاريخية صالحة: http_404",
       "resolverConfidence": 90,
@@ -6787,7 +6787,7 @@
     },
     {
       "symbol": "NARE",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -6838,7 +6838,7 @@
     },
     {
       "symbol": "NCCW",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -6889,7 +6889,7 @@
     },
     {
       "symbol": "NEDA",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -6940,7 +6940,7 @@
     },
     {
       "symbol": "NHPS",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -6991,7 +6991,7 @@
     },
     {
       "symbol": "NINH",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -7042,7 +7042,7 @@
     },
     {
       "symbol": "OBRI",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -7093,7 +7093,7 @@
     },
     {
       "symbol": "OCPH",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -7144,7 +7144,7 @@
     },
     {
       "symbol": "ODIN",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -7195,7 +7195,7 @@
     },
     {
       "symbol": "OFH",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -7246,7 +7246,7 @@
     },
     {
       "symbol": "OIH",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -7297,7 +7297,7 @@
     },
     {
       "symbol": "ORWE",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -7348,7 +7348,7 @@
     },
     {
       "symbol": "PHAR",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -7399,7 +7399,7 @@
     },
     {
       "symbol": "PHGC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصدر رفض أو لم يجد صفحة تاريخية صالحة: http_404",
       "resolverConfidence": 90,
@@ -7450,7 +7450,7 @@
     },
     {
       "symbol": "PHTV",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -7501,7 +7501,7 @@
     },
     {
       "symbol": "PRCL",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -7552,7 +7552,7 @@
     },
     {
       "symbol": "PRDC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -7603,7 +7603,7 @@
     },
     {
       "symbol": "PRMH",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -7654,7 +7654,7 @@
     },
     {
       "symbol": "QNBE",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -7705,7 +7705,7 @@
     },
     {
       "symbol": "RACC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -7756,7 +7756,7 @@
     },
     {
       "symbol": "ROTO",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -7807,7 +7807,7 @@
     },
     {
       "symbol": "RREI",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -7858,7 +7858,7 @@
     },
     {
       "symbol": "RTVC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -7909,7 +7909,7 @@
     },
     {
       "symbol": "RUBX",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -7960,7 +7960,7 @@
     },
     {
       "symbol": "SCEM",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -8011,7 +8011,7 @@
     },
     {
       "symbol": "SCFM",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -8062,7 +8062,7 @@
     },
     {
       "symbol": "SCTS",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -8113,7 +8113,7 @@
     },
     {
       "symbol": "SDTI",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -8164,7 +8164,7 @@
     },
     {
       "symbol": "SEIG",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -8215,7 +8215,7 @@
     },
     {
       "symbol": "SEIGA",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -8266,7 +8266,7 @@
     },
     {
       "symbol": "SIPC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -8317,7 +8317,7 @@
     },
     {
       "symbol": "SMFR",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -8368,7 +8368,7 @@
     },
     {
       "symbol": "SNFC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -8419,7 +8419,7 @@
     },
     {
       "symbol": "SPMD",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -8470,7 +8470,7 @@
     },
     {
       "symbol": "SVCE",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -8521,7 +8521,7 @@
     },
     {
       "symbol": "TALM",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -8572,7 +8572,7 @@
     },
     {
       "symbol": "TANM",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -8623,7 +8623,7 @@
     },
     {
       "symbol": "TAQA",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -8674,7 +8674,7 @@
     },
     {
       "symbol": "TYCN",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -8725,7 +8725,7 @@
     },
     {
       "symbol": "UBEE",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -8776,7 +8776,7 @@
     },
     {
       "symbol": "UEFM",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -8827,7 +8827,7 @@
     },
     {
       "symbol": "UEGC",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -8878,7 +8878,7 @@
     },
     {
       "symbol": "UNIP",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -8929,7 +8929,7 @@
     },
     {
       "symbol": "UNIT",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -8980,7 +8980,7 @@
     },
     {
       "symbol": "VALU",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9031,7 +9031,7 @@
     },
     {
       "symbol": "VLMR",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9082,7 +9082,7 @@
     },
     {
       "symbol": "VLMRA",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9133,11 +9133,11 @@
     },
     {
       "symbol": "WCDF",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
-      "sector": "أغذية ومشروبات",
+      "sector": "غير مصنف",
       "lastAttempt": "parsed_no_ohlcv",
       "attempts": [
         {
@@ -9184,7 +9184,7 @@
     },
     {
       "symbol": "WKOL",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9235,7 +9235,7 @@
     },
     {
       "symbol": "ZEOT",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9286,7 +9286,7 @@
     },
     {
       "symbol": "ZMID",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9337,7 +9337,7 @@
     },
     {
       "symbol": "ABUK",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9388,7 +9388,7 @@
     },
     {
       "symbol": "ACAMD",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9439,7 +9439,7 @@
     },
     {
       "symbol": "ACGC",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9490,7 +9490,7 @@
     },
     {
       "symbol": "ADIB",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9541,7 +9541,7 @@
     },
     {
       "symbol": "ALCN",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9592,7 +9592,7 @@
     },
     {
       "symbol": "AMER",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9643,7 +9643,7 @@
     },
     {
       "symbol": "AMOC",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9694,7 +9694,7 @@
     },
     {
       "symbol": "ARCC",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9745,7 +9745,7 @@
     },
     {
       "symbol": "AXPH",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9796,7 +9796,7 @@
     },
     {
       "symbol": "BTFH",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9847,7 +9847,7 @@
     },
     {
       "symbol": "CANA",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9898,7 +9898,7 @@
     },
     {
       "symbol": "CCAP",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9949,7 +9949,7 @@
     },
     {
       "symbol": "CICH",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10000,7 +10000,7 @@
     },
     {
       "symbol": "CIEB",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10051,7 +10051,7 @@
     },
     {
       "symbol": "CIRA",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10102,7 +10102,7 @@
     },
     {
       "symbol": "CLHO",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10153,7 +10153,7 @@
     },
     {
       "symbol": "CNFN",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10204,7 +10204,7 @@
     },
     {
       "symbol": "COMI",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10255,7 +10255,7 @@
     },
     {
       "symbol": "DOMT",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10306,7 +10306,7 @@
     },
     {
       "symbol": "EASB",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10357,7 +10357,7 @@
     },
     {
       "symbol": "EAST",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10408,7 +10408,7 @@
     },
     {
       "symbol": "EFID",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10459,7 +10459,7 @@
     },
     {
       "symbol": "EGAL",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10510,7 +10510,7 @@
     },
     {
       "symbol": "EGBE",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10561,7 +10561,7 @@
     },
     {
       "symbol": "EGCH",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10612,7 +10612,7 @@
     },
     {
       "symbol": "EGTS",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10663,7 +10663,7 @@
     },
     {
       "symbol": "ELWA",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10714,7 +10714,7 @@
     },
     {
       "symbol": "ETEL",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10765,7 +10765,7 @@
     },
     {
       "symbol": "EXPA",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10816,7 +10816,7 @@
     },
     {
       "symbol": "FAIT",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10867,7 +10867,7 @@
     },
     {
       "symbol": "FWRY",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10918,7 +10918,7 @@
     },
     {
       "symbol": "GBCO",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10969,7 +10969,7 @@
     },
     {
       "symbol": "HDBK",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -11020,7 +11020,7 @@
     },
     {
       "symbol": "HELI",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -11071,7 +11071,7 @@
     },
     {
       "symbol": "HRHO",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -11122,7 +11122,7 @@
     },
     {
       "symbol": "IFAP",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -11173,7 +11173,7 @@
     },
     {
       "symbol": "IRON",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -11224,7 +11224,7 @@
     },
     {
       "symbol": "ISPH",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -11275,7 +11275,7 @@
     },
     {
       "symbol": "JUFO",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -11326,7 +11326,7 @@
     },
     {
       "symbol": "KABO",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -11377,7 +11377,7 @@
     },
     {
       "symbol": "LCSW",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -11428,9 +11428,9 @@
     },
     {
       "symbol": "MASR",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
-      "reason": "تاريخ ضعيف جدًا (8/20): مراقبة فقط ولا تنفيذ",
+      "reason": "تاريخ ضعيف جدًا (9/20): مراقبة فقط ولا تنفيذ",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
       "lastAttempt": null,
@@ -11438,9 +11438,9 @@
     },
     {
       "symbol": "MCQE",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
-      "reason": "تاريخ ضعيف جدًا (8/20): مراقبة فقط ولا تنفيذ",
+      "reason": "تاريخ ضعيف جدًا (9/20): مراقبة فقط ولا تنفيذ",
       "resolverConfidence": 90,
       "sector": "أسمنت ومواد بناء",
       "lastAttempt": null,
@@ -11448,9 +11448,9 @@
     },
     {
       "symbol": "MFPC",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
-      "reason": "تاريخ ضعيف جدًا (8/20): مراقبة فقط ولا تنفيذ",
+      "reason": "تاريخ ضعيف جدًا (9/20): مراقبة فقط ولا تنفيذ",
       "resolverConfidence": 90,
       "sector": "بتروكيماويات وكيماويات",
       "lastAttempt": null,
@@ -11458,9 +11458,9 @@
     },
     {
       "symbol": "MICH",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
-      "reason": "تاريخ ضعيف جدًا (8/20): مراقبة فقط ولا تنفيذ",
+      "reason": "تاريخ ضعيف جدًا (9/20): مراقبة فقط ولا تنفيذ",
       "resolverConfidence": 90,
       "sector": "بتروكيماويات وكيماويات",
       "lastAttempt": null,
@@ -11468,9 +11468,9 @@
     },
     {
       "symbol": "NIPH",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
-      "reason": "تاريخ ضعيف جدًا (8/20): مراقبة فقط ولا تنفيذ",
+      "reason": "تاريخ ضعيف جدًا (9/20): مراقبة فقط ولا تنفيذ",
       "resolverConfidence": 90,
       "sector": "رعاية صحية ودواء",
       "lastAttempt": null,
@@ -11478,9 +11478,9 @@
     },
     {
       "symbol": "OCDI",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
-      "reason": "تاريخ ضعيف جدًا (8/20): مراقبة فقط ولا تنفيذ",
+      "reason": "تاريخ ضعيف جدًا (9/20): مراقبة فقط ولا تنفيذ",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
       "lastAttempt": null,
@@ -11488,9 +11488,9 @@
     },
     {
       "symbol": "OLFI",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
-      "reason": "تاريخ ضعيف جدًا (8/20): مراقبة فقط ولا تنفيذ",
+      "reason": "تاريخ ضعيف جدًا (9/20): مراقبة فقط ولا تنفيذ",
       "resolverConfidence": 90,
       "sector": "أغذية ومشروبات",
       "lastAttempt": null,
@@ -11498,9 +11498,9 @@
     },
     {
       "symbol": "ORAS",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
-      "reason": "تاريخ ضعيف جدًا (8/20): مراقبة فقط ولا تنفيذ",
+      "reason": "تاريخ ضعيف جدًا (9/20): مراقبة فقط ولا تنفيذ",
       "resolverConfidence": 90,
       "sector": "صناعة وطاقة وبنية تحتية",
       "lastAttempt": null,
@@ -11508,9 +11508,9 @@
     },
     {
       "symbol": "ORHD",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
-      "reason": "تاريخ ضعيف جدًا (8/20): مراقبة فقط ولا تنفيذ",
+      "reason": "تاريخ ضعيف جدًا (9/20): مراقبة فقط ولا تنفيذ",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
       "lastAttempt": null,
@@ -11518,9 +11518,9 @@
     },
     {
       "symbol": "PHDC",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
-      "reason": "تاريخ ضعيف جدًا (8/20): مراقبة فقط ولا تنفيذ",
+      "reason": "تاريخ ضعيف جدًا (9/20): مراقبة فقط ولا تنفيذ",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
       "lastAttempt": null,
@@ -11528,9 +11528,9 @@
     },
     {
       "symbol": "POUL",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
-      "reason": "تاريخ ضعيف جدًا (8/20): مراقبة فقط ولا تنفيذ",
+      "reason": "تاريخ ضعيف جدًا (9/20): مراقبة فقط ولا تنفيذ",
       "resolverConfidence": 90,
       "sector": "أغذية ومشروبات",
       "lastAttempt": null,
@@ -11538,9 +11538,9 @@
     },
     {
       "symbol": "RAYA",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
-      "reason": "تاريخ ضعيف جدًا (8/20): مراقبة فقط ولا تنفيذ",
+      "reason": "تاريخ ضعيف جدًا (9/20): مراقبة فقط ولا تنفيذ",
       "resolverConfidence": 90,
       "sector": "تجارة وتوزيع",
       "lastAttempt": null,
@@ -11548,9 +11548,9 @@
     },
     {
       "symbol": "RMDA",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
-      "reason": "تاريخ ضعيف جدًا (8/20): مراقبة فقط ولا تنفيذ",
+      "reason": "تاريخ ضعيف جدًا (9/20): مراقبة فقط ولا تنفيذ",
       "resolverConfidence": 90,
       "sector": "رعاية صحية ودواء",
       "lastAttempt": null,
@@ -11558,9 +11558,9 @@
     },
     {
       "symbol": "SAUD",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
-      "reason": "تاريخ ضعيف جدًا (8/20): مراقبة فقط ولا تنفيذ",
+      "reason": "تاريخ ضعيف جدًا (9/20): مراقبة فقط ولا تنفيذ",
       "resolverConfidence": 90,
       "sector": "بنوك وخدمات مالية مصرفية",
       "lastAttempt": null,
@@ -11568,9 +11568,9 @@
     },
     {
       "symbol": "SKPC",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
-      "reason": "تاريخ ضعيف جدًا (8/20): مراقبة فقط ولا تنفيذ",
+      "reason": "تاريخ ضعيف جدًا (9/20): مراقبة فقط ولا تنفيذ",
       "resolverConfidence": 90,
       "sector": "بتروكيماويات وكيماويات",
       "lastAttempt": null,
@@ -11578,9 +11578,9 @@
     },
     {
       "symbol": "SPIN",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
-      "reason": "تاريخ ضعيف جدًا (8/20): مراقبة فقط ولا تنفيذ",
+      "reason": "تاريخ ضعيف جدًا (9/20): مراقبة فقط ولا تنفيذ",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
       "lastAttempt": null,
@@ -11588,9 +11588,9 @@
     },
     {
       "symbol": "SUGR",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
-      "reason": "تاريخ ضعيف جدًا (8/20): مراقبة فقط ولا تنفيذ",
+      "reason": "تاريخ ضعيف جدًا (9/20): مراقبة فقط ولا تنفيذ",
       "resolverConfidence": 90,
       "sector": "أغذية ومشروبات",
       "lastAttempt": null,
@@ -11598,9 +11598,9 @@
     },
     {
       "symbol": "SWDY",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
-      "reason": "تاريخ ضعيف جدًا (8/20): مراقبة فقط ولا تنفيذ",
+      "reason": "تاريخ ضعيف جدًا (9/20): مراقبة فقط ولا تنفيذ",
       "resolverConfidence": 90,
       "sector": "صناعة وطاقة وبنية تحتية",
       "lastAttempt": null,
@@ -11608,9 +11608,9 @@
     },
     {
       "symbol": "TMGH",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
-      "reason": "تاريخ ضعيف جدًا (8/20): مراقبة فقط ولا تنفيذ",
+      "reason": "تاريخ ضعيف جدًا (9/20): مراقبة فقط ولا تنفيذ",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
       "lastAttempt": null,
