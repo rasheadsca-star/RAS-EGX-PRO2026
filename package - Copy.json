@@ -1,0 +1,12 @@
+{
+  "name": "egx-pro-hub-web-auto-mubasher-safe",
+  "version": "1.0.1",
+  "type": "commonjs",
+  "scripts": {
+    "fetch": "node scripts/fetch-market-data.js",
+    "v11.1:trust-lift": "node scripts/build-v111-price-truth-layer.js && node scripts/build-v111-history-trust-recovery.js && node scripts/build-v111-liquidity-gate.js && node scripts/build-v111-trade-plan-validator.js && node scripts/build-unified-decision-board.js && node scripts/build-v111-paper-trading-engine.js && node scripts/build-v111-readiness-report.js && node scripts/validate-v11-governor.js"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}

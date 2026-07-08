@@ -1,0 +1,87 @@
+{
+  "ok": true,
+  "engine": "v11_3_historical_source_registry",
+  "generatedAt": "2026-07-08T05:10:52.395Z",
+  "dataMode": "public_or_licensed_api_only_no_manual_csv",
+  "policy": {
+    "noFakeHistory": true,
+    "noManualCsv": true,
+    "acceptedRowsMustPassOHLCVValidation": true,
+    "sourcePriority": "official_or_public_exchange_pages_first_then_public_market_pages_then_optional_licensed_api"
+  },
+  "sources": [
+    {
+      "id": "egx_official_public_pages",
+      "name": "EGX official public pages",
+      "priority": 100,
+      "type": "official_public_html_or_export_when_available",
+      "enabled": true,
+      "requiresApiKey": false,
+      "role": "official_reference_and_index_context",
+      "templates": [
+        "https://www.egx.com.eg/en/Stock_Trading.aspx?code={symbol}",
+        "https://www.egx.com.eg/en/Trading.aspx?code={symbol}",
+        "https://www.egx.com.eg/en/ListedStocks.aspx"
+      ],
+      "limitations": [
+        "Public pages may not expose full per-stock OHLCV tables for every symbol."
+      ]
+    },
+    {
+      "id": "mubasher_public_stock_pages",
+      "name": "Mubasher public EGX stock pages",
+      "priority": 90,
+      "type": "public_delayed_html",
+      "enabled": true,
+      "requiresApiKey": false,
+      "role": "price_current_history_discovery_when_table_or_embedded_json_exists",
+      "templates": [
+        "https://english.mubasher.info/markets/EGX/stocks/{symbol}/historical-data",
+        "https://english.mubasher.info/markets/EGX/stocks/{symbol}/historical-prices",
+        "https://english.mubasher.info/markets/EGX/stocks/{symbol}/",
+        "https://www.mubasher.info/markets/EGX/stocks/{symbol}/historical-data",
+        "https://www.mubasher.info/markets/EGX/stocks/{symbol}/historical-prices",
+        "https://www.mubasher.info/markets/EGX/stocks/{symbol}/"
+      ],
+      "limitations": [
+        "Data is public/delayed during market session and HTML structure can change."
+      ]
+    },
+    {
+      "id": "tradingview_public_symbol_pages",
+      "name": "TradingView public symbol pages",
+      "priority": 40,
+      "type": "public_reference_html",
+      "enabled": true,
+      "requiresApiKey": false,
+      "role": "symbol_resolution_and_public_reference_only",
+      "templates": [
+        "https://www.tradingview.com/symbols/EGX-{symbol}/"
+      ],
+      "limitations": [
+        "Not treated as primary historical OHLCV source unless extractable table/structured rows are found."
+      ]
+    },
+    {
+      "id": "optional_licensed_eod_provider",
+      "name": "Optional licensed end-of-day provider",
+      "priority": 95,
+      "type": "licensed_api_placeholder",
+      "enabled": false,
+      "requiresApiKey": true,
+      "role": "future_production_eod_history",
+      "templates": [],
+      "limitations": [
+        "Not active unless EGX_HISTORY_API_URL and EGX_HISTORY_API_KEY are configured in GitHub secrets."
+      ]
+    }
+  ],
+  "acceptanceRules": {
+    "minExecutableSessions": 20,
+    "fullTechnicalSessions": 50,
+    "preferredSessions": 120,
+    "duplicateDatesRejected": true,
+    "invalidOHLCVRowsRejected": true
+  },
+  "note": "V11.3 accelerates readiness by automated public/optional licensed backfill only. Manual CSV and broker-screen data are intentionally excluded."
+}

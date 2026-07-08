@@ -1,0 +1,58 @@
+{
+  "ok": true,
+  "engine": "v9_0_accuracy_interpretation",
+  "generatedAt": "2026-07-07T15:39:17.081Z",
+  "summary": {
+    "evaluatedRecommendations": 206,
+    "sampleStatus": "useful",
+    "note": "Read strict daily accuracy separately from weighted accuracy."
+  },
+  "segments": {
+    "daily": {
+      "accuracyPct": 1.9417475728155338,
+      "weightedAccuracyPct": 50.970873786407765,
+      "evaluatedRecommendations": 206
+    },
+    "after3Sessions": {
+      "accuracyPct": null,
+      "weightedAccuracyPct": null,
+      "evaluatedRecommendations": null
+    },
+    "after5Sessions": {
+      "accuracyPct": null,
+      "weightedAccuracyPct": null,
+      "evaluatedRecommendations": null
+    },
+    "after10Sessions": {
+      "accuracyPct": null,
+      "weightedAccuracyPct": null,
+      "evaluatedRecommendations": null
+    }
+  },
+  "targetHit": {
+    "targetHitRatePct": null,
+    "targetHits": 0,
+    "total": 0
+  },
+  "stopHit": {
+    "stopHitRatePct": null,
+    "stopHits": 0,
+    "total": 0
+  },
+  "returns": {
+    "avgReturnPct": null
+  },
+  "lifetime": {
+    "overallWeightedAccuracyPct": 50.970873786407765,
+    "measuredRecommendations": null
+  },
+  "rows": [],
+  "definitions": {
+    "strictDaily": "Short-horizon direction correctness. Can be very low during warm-up.",
+    "weightedAccuracy": "Broader score; may credit partial progress, target approach, and avoiding stops.",
+    "after3_5_10": "Recommendation performance after enough sessions, more meaningful than same-day.",
+    "targetHitRate": "Share of measured recommendations reaching target.",
+    "stopHitRate": "Share of measured recommendations hitting stop; lower is better.",
+    "avgReturn": "Average actual return after recommendation."
+  }
+}

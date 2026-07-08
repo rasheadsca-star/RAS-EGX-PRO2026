@@ -1,0 +1,25 @@
+{
+  "ok": true,
+  "engine": "v11_2_price_truth_ui_hotfix",
+  "generatedAt": "2026-07-07T22:36:29Z",
+  "purpose": "Fix UI and legacy reports so stale cache/recommendation snapshots do not appear as live price conflicts after V11.1.",
+  "changes": [
+    "Patched index.html data quality card to use nullish fallback, so real zero price conflicts stays zero.",
+    "Patched price reconciliation to ignore stale cache/recommendation/history snapshots as conflict sources.",
+    "Synced price-source-audit with Price Truth Layer as a price-only audit.",
+    "Reordered workflow so price audit follows Price Truth Layer.",
+    "No manual CSV or non-public data was added."
+  ],
+  "metrics": {
+    "priceTruthReliableCoveragePct": 92.37,
+    "priceTruthConflicts": 0,
+    "legacyReconciliationConflictsAfterPatch": 0,
+    "sourceAuditConflictsAfterPatch": 0,
+    "history20Ready": 0,
+    "history50Ready": 0,
+    "executionAllowed": 0,
+    "watch": 102,
+    "blocked": 122
+  },
+  "conclusion": "تم حل رقم تعارض الأسعار المضلل. استمرار عدم ظهور BUY سببه الحقيقي الآن هو نقص التاريخ الكافي وخطط/مخاطر بعض الأسهم، وليس تعارض السعر."
+}

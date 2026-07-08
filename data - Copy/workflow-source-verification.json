@@ -1,0 +1,103 @@
+{
+  "ok": false,
+  "engine": "v9_8_7_workflow_source_verification",
+  "generatedAt": "2026-07-07T15:36:48.954Z",
+  "score": 56,
+  "state": "bad",
+  "realFetch": true,
+  "fetchMode": "multi_source_gateway",
+  "message": "Full gateway acceptance",
+  "marketRows": 209,
+  "cacheRows": 221,
+  "recommendationRows": 221,
+  "sourceAgeMinutes": 1.2,
+  "summary": {
+    "ok": 7,
+    "warn": 0,
+    "bad": 2,
+    "total": 10
+  },
+  "checks": [
+    {
+      "id": "fetch_script",
+      "name": "fetch-market-data.js",
+      "state": "ok",
+      "value": "exists",
+      "message": "سكريبت الجلب موجود",
+      "action": "ارفع scripts/fetch-market-data.js"
+    },
+    {
+      "id": "workflow_reference",
+      "name": "Workflow fetch step",
+      "state": "bad",
+      "value": "missing",
+      "message": "هل الـ Workflow يشغّل سكريبت الجلب؟",
+      "action": "عدّل workflow"
+    },
+    {
+      "id": "external_fetch",
+      "name": "External public source",
+      "state": "ok",
+      "value": "multi_source_gateway",
+      "message": "تم الجلب من مصدر خارجي/عام مضبوط",
+      "action": "متابعة"
+    },
+    {
+      "id": "market_rows",
+      "name": "market.json rows",
+      "state": "ok",
+      "value": "209",
+      "message": "market.json يحتوي صفوفًا",
+      "action": "متابعة"
+    },
+    {
+      "id": "cache_rows",
+      "name": "full-market-cache rows",
+      "state": "ok",
+      "value": "221",
+      "message": "الكاش موجود",
+      "action": "متابعة"
+    },
+    {
+      "id": "recommendations_rows",
+      "name": "recommendations rows",
+      "state": "ok",
+      "value": "221",
+      "message": "التوصيات موجودة",
+      "action": "متابعة"
+    },
+    {
+      "id": "source_age",
+      "name": "Source age",
+      "state": "ok",
+      "value": "1.2 min",
+      "message": "المصدر حديث نسبيًا",
+      "action": "متابعة"
+    },
+    {
+      "id": "price_reconciliation",
+      "name": "Price reconciliation",
+      "state": "bad",
+      "value": "173 conflict / 9 stale",
+      "message": "يوجد تعارض أسعار بعد الجلب",
+      "action": "افتح تدقيق الأسعار"
+    },
+    {
+      "id": "history_memory",
+      "name": "history.json memory",
+      "state": "ok",
+      "value": "217",
+      "message": "ذاكرة الجلسات موجودة",
+      "action": "راجع ذاكرة الجلسات"
+    },
+    {
+      "id": "public_adapter",
+      "name": "Public source adapter",
+      "state": "ok",
+      "value": "mubasher_symbol_pages_precise_enriched",
+      "message": "تم قبول بوابة البيانات بعدد 209 صف",
+      "action": "متابعة"
+    }
+  ],
+  "note": "This report verifies data pipeline mechanics. It does not certify tick-by-tick live prices."
+}
