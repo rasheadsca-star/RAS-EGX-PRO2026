@@ -239,6 +239,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add data/*.json data/**/*.json
+          git add -A data || true
           git diff --cached --quiet && echo "No generated data changes" || git commit -m "Update EGX generated data and reports"
           git push || echo "Push skipped or failed"
