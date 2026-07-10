@@ -1,0 +1,67 @@
+name: Emergency Restore V11.5
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: emergency-restore-v11-5
+  cancel-in-progress: false
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout main with full history
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Restore stable application and remove V12 patch
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          STABLE_COMMIT="933ac1310494292b96bdf756bd189826742c7b9f"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git fetch origin main --prune
+          git checkout "$STABLE_COMMIT" -- index.html service-worker.js
+
+          rm -f .github/workflows/unified-goal-v12.yml
+          rm -f scripts/unified-goal-v12-build.js
+          rm -f assets/js/unified-goal-v12.js
+          rm -f assets/js/unified-goal-v12.css
+          rm -f assets/css/unified-goal-v12.css
+          rm -f data/unified-goal-v12.json
+          rm -f data/v12-paper-ledger.json
+          rm -f goal-v12.html
+          rm -f PACKAGE_MANIFEST.txt
+          rm -f README_UPLOAD_V12_AR.md
+
+          git add -A
+
+          if git diff --cached --quiet; then
+            echo "No rollback changes were needed."
+            exit 0
+          fi
+
+          git commit -m "Emergency restore stable V11.5 application"
+          git push origin HEAD:main
+
+      - name: Verify restored files
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f index.html
+          test -f service-worker.js
+          test ! -f .github/workflows/unified-goal-v12.yml
+          test ! -f assets/js/unified-goal-v12.js
+          echo "Stable V11.5 restore committed successfully."
