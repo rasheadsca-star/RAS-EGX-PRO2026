@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <title>EGX Pro — V13.1 سلامة التاريخ وأهلية القرار</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #06111f;
+      --panel: #0d2136;
+      --panel2: #102a44;
+      --line: #2c5273;
+      --text: #f4f8fc;
+      --muted: #9db2c7;
+      --good: #33d17a;
+      --warn: #f5c451;
+      --bad: #ff6b6b;
+      --info: #45b7e8;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: Tahoma, Arial, sans-serif; }
+    .wrap { width: min(1240px, calc(100% - 24px)); margin: 18px auto 40px; }
+    header, section { background: var(--panel); border: 1px solid var(--line); border-radius: 18px; }
+    header { padding: 20px; display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+    h1 { margin: 0 0 8px; font-size: clamp(21px, 3vw, 30px); }
+    h2 { margin: 0 0 15px; font-size: 20px; }
+    p { color: var(--muted); line-height: 1.8; margin: 0; }
+    .buttons { display: flex; gap: 8px; flex-wrap: wrap; }
+    button, a.btn { border: 1px solid #5480a8; background: #102b46; color: white; border-radius: 10px; padding: 10px 13px; text-decoration: none; font: inherit; cursor: pointer; }
+    .notice { margin: 12px 0; padding: 13px 16px; border: 1px solid #80631c; background: #3b2a03; border-radius: 13px; color: #ffe39b; line-height: 1.8; }
+    section { margin-top: 12px; padding: 16px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 10px; }
+    .card { background: var(--panel2); border: 1px solid var(--line); border-radius: 13px; padding: 14px; min-height: 103px; }
+    .card .label { color: var(--muted); font-size: 13px; }
+    .card .value { margin-top: 8px; font-size: 29px; font-weight: 800; }
+    .card .sub { margin-top: 5px; color: var(--muted); font-size: 12px; }
+    .good { color: var(--good); }
+    .warn { color: var(--warn); }
+    .bad { color: var(--bad); }
+    .info { color: var(--info); }
+    .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+    .filters input, .filters select { background: #071a2c; border: 1px solid var(--line); color: white; border-radius: 9px; padding: 10px; font: inherit; }
+    .filters input { min-width: 220px; flex: 1; }
+    .table-wrap { overflow: auto; border: 1px solid var(--line); border-radius: 12px; }
+    table { width: 100%; border-collapse: collapse; min-width: 960px; }
+    th, td { padding: 10px 9px; border-bottom: 1px solid #244660; text-align: right; vertical-align: top; font-size: 13px; }
+    th { position: sticky; top: 0; background: #0e2841; z-index: 1; }
+    tr:hover td { background: #102943; }
+    .pill { display: inline-block; border-radius: 999px; padding: 5px 8px; font-size: 12px; border: 1px solid currentColor; white-space: nowrap; }
+    .pill.good { background: rgba(51,209,122,.1); }
+    .pill.warn { background: rgba(245,196,81,.1); }
+    .pill.bad { background: rgba(255,107,107,.1); }
+    .pill.info { background: rgba(69,183,232,.1); }
+    .reason { color: var(--muted); max-width: 360px; white-space: normal; }
+    .empty { padding: 24px; text-align: center; color: var(--muted); }
+    .error { display: none; margin-top: 12px; color: #ffd4d4; background: #451515; border: 1px solid #8f3d3d; border-radius: 12px; padding: 13px; line-height: 1.7; }
+    footer { text-align: center; color: var(--muted); margin-top: 15px; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div>
+        <h1>EGX Pro — V13.1 سلامة التاريخ وأهلية القرار</h1>
+        <p>فصل اكتمال 100 جلسة عدديًا عن صلاحية السهم للاستخدام اليومي، مع حجر البيانات القديمة أو التي تحتاج مراجعة.</p>
+      </div>
+      <div class="buttons">
+        <button id="refresh" type="button">تحديث</button>
+        <a class="btn" href="./history-100.html">لوحة التاريخ</a>
+        <a class="btn" href="../">التطبيق المستقر</a>
+      </div>
+    </header>
+
+    <div class="notice">
+      هذه الصفحة تقيس أهلية بيانات التاريخ فقط، وليست توصية شراء. اكتمال 100 جلسة لا يكفي وحده إذا كان التاريخ قديمًا أو الدمج يحتاج مراجعة.
+    </div>
+
+    <div id="error" class="error"></div>
+
+    <section>
+      <h2>الملخص الآمن</h2>
+      <div class="grid" id="summary"></div>
+    </section>
+
+    <section>
+      <h2>الحالات المعروفة</h2>
+      <div class="grid" id="known"></div>
+    </section>
+
+    <section>
+      <h2>تفاصيل أهلية الأسهم</h2>
+      <div class="filters">
+        <input id="search" type="search" placeholder="بحث بالرمز أو اسم الشركة">
+        <select id="status"><option value="">كل الحالات</option></select>
+        <select id="eligible">
+          <option value="">كل الأهلية</option>
+          <option value="decision">مؤهل تاريخيًا للقرار</option>
+          <option value="paper">مؤهل للتداول الورقي</option>
+          <option value="review">يحتاج مراجعة</option>
+        </select>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>السهم</th><th>الحالة</th><th>الجلسات</th><th>آخر جلسة</th><th>التأخر</th><th>الثقة</th><th>القرار</th><th>ورقي</th><th>السبب</th>
+            </tr>
+          </thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer id="footer">جارٍ تحميل نتائج V13.1…</footer>
+  </main>
+
+  <script>
+    const DATA_URL = '../data/history-eligibility.json';
+    const SAFETY_URL = '../data/history-safety-report.json';
+    let eligibility = null;
+    let safety = null;
+
+    const $ = (id) => document.getElementById(id);
+    const fmt = (value) => new Intl.NumberFormat('ar-EG').format(Number(value || 0));
+    const pct = (value) => `${Number(value || 0).toFixed(2)}%`;
+    const boolPill = (value) => value ? '<span class="pill good">نعم</span>' : '<span class="pill bad">لا</span>';
+
+    function statusClass(status) {
+      if (status === 'complete_recent') return 'good';
+      if (['partial_recent'].includes(status)) return 'info';
+      if (['complete_but_under_review','manual_adjustment_review','complete_but_stale','partial_and_stale'].includes(status)) return 'warn';
+      return 'bad';
+    }
+
+    function card(label, value, sub = '', cls = '') {
+      return `<article class="card"><div class="label">${label}</div><div class="value ${cls}">${value}</div><div class="sub">${sub}</div></article>`;
+    }
+
+    function renderSummary() {
+      const counts = eligibility.counts || {};
+      const coverage = safety.coverage || {};
+      $('summary').innerHTML = [
+        card('الأسهم النشطة', fmt(counts.activeSymbols), 'المقام بعد استبعاد المشطوب'),
+        card('مكتمل 100 عدديًا', fmt(coverage.numericComplete100), pct(coverage.numericComplete100Pct), 'info'),
+        card('مؤهل تاريخيًا للقرار', fmt(counts.decisionEligible), pct(coverage.decisionSafeComplete100Pct), 'good'),
+        card('مؤهل للتداول الورقي', fmt(counts.paperTradingEligible), 'يشمل الجزئي الحديث', 'info'),
+        card('ثقة عالية مستقلة', fmt(counts.highConfidenceEligible), 'تحتاج مصدرًا مستقلًا وثقة ≥90%', counts.highConfidenceEligible ? 'good' : 'warn'),
+        card('قائمة المراجعة', fmt(counts.reviewQueue), 'غير مؤهلة للقرار حتى حل السبب', 'warn'),
+      ].join('');
+    }
+
+    function renderKnown() {
+      const known = safety.knownCases || {};
+      const order = ['SAIB','GPPL','NDRL','SPHT','EGSA','FAITA','ESRS'];
+      $('known').innerHTML = order.map((ticker) => {
+        const item = known[ticker];
+        if (!item) return card(ticker, 'غير موجود', 'لم يظهر في الخريطة', 'bad');
+        return card(
+          ticker,
+          item.statusLabelAr || item.status,
+          `${fmt(item.sessions)} جلسة — آخر جلسة ${item.lastSession || 'غير متاح'}`,
+          statusClass(item.status)
+        );
+      }).join('');
+    }
+
+    function populateStatuses() {
+      const statuses = [...new Set((eligibility.items || []).map((item) => item.status))].sort();
+      $('status').innerHTML = '<option value="">كل الحالات</option>' + statuses.map((status) => {
+        const label = eligibility.items.find((item) => item.status === status)?.statusLabelAr || status;
+        return `<option value="${status}">${label}</option>`;
+      }).join('');
+    }
+
+    function renderRows() {
+      const q = $('search').value.trim().toLowerCase();
+      const status = $('status').value;
+      const eligible = $('eligible').value;
+      const items = (eligibility.items || []).filter((item) => {
+        const text = `${item.ticker} ${item.companyNameAr || ''} ${item.companyNameEn || ''}`.toLowerCase();
+        if (q && !text.includes(q)) return false;
+        if (status && item.status !== status) return false;
+        if (eligible === 'decision' && !item.decisionEligible) return false;
+        if (eligible === 'paper' && !item.paperTradingEligible) return false;
+        if (eligible === 'review' && item.decisionEligible) return false;
+        return true;
+      });
+
+      $('rows').innerHTML = items.length ? items.map((item) => `
+        <tr>
+          <td><strong>${item.ticker}</strong><br><span class="reason">${item.companyNameAr || item.companyNameEn || ''}</span></td>
+          <td><span class="pill ${statusClass(item.status)}">${item.statusLabelAr || item.status}</span></td>
+          <td>${fmt(item.sessions)}</td>
+          <td>${item.lastSession || '—'}</td>
+          <td>${item.marketLagCalendarDays == null ? '—' : `${fmt(item.marketLagCalendarDays)} يوم`}</td>
+          <td>${pct(item.confidence)}</td>
+          <td>${boolPill(item.decisionEligible)}</td>
+          <td>${boolPill(item.paperTradingEligible)}</td>
+          <td class="reason">${(item.reasons || []).join('، ') || 'لا توجد موانع'}</td>
+        </tr>`).join('') : '<tr><td class="empty" colspan="9">لا توجد نتائج مطابقة.</td></tr>';
+    }
+
+    async function load() {
+      $('error').style.display = 'none';
+      try {
+        const stamp = Date.now();
+        const [eRes, sRes] = await Promise.all([
+          fetch(`${DATA_URL}?v=${stamp}`, { cache: 'no-store' }),
+          fetch(`${SAFETY_URL}?v=${stamp}`, { cache: 'no-store' }),
+        ]);
+        if (!eRes.ok) throw new Error(`تعذر تحميل history-eligibility.json — HTTP ${eRes.status}`);
+        if (!sRes.ok) throw new Error(`تعذر تحميل history-safety-report.json — HTTP ${sRes.status}`);
+        eligibility = await eRes.json();
+        safety = await sRes.json();
+        renderSummary();
+        renderKnown();
+        populateStatuses();
+        renderRows();
+        $('footer').textContent = `تم التوليد: ${eligibility.generatedAt || 'غير متاح'} — أحدث جلسة سوق: ${eligibility.latestMarketSession || 'غير متاح'}`;
+      } catch (error) {
+        $('error').style.display = 'block';
+        $('error').textContent = `${error.message}. شغّل GitHub Action: EGX History Safety & Eligibility Rebuild — V13.1`;
+        $('footer').textContent = 'لم تُحمّل بيانات V13.1.';
+      }
+    }
+
+    $('refresh').addEventListener('click', load);
+    $('search').addEventListener('input', renderRows);
+    $('status').addEventListener('change', renderRows);
+    $('eligible').addEventListener('change', renderRows);
+    load();
+  </script>
+</body>
+</html>
