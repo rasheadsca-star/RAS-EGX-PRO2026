@@ -1,0 +1,98 @@
+name: Restore Deleted Scripts Folder
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: restore-scripts-folder
+  cancel-in-progress: false
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout full repository history
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Find latest commit containing scripts
+        id: find
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          RESTORE_COMMIT=""
+
+          # Walk backwards from current main and select the newest commit
+          # whose tree still contains the scripts directory.
+          while IFS= read -r commit; do
+            if git cat-file -e "${commit}:scripts" 2>/dev/null; then
+              RESTORE_COMMIT="$commit"
+              break
+            fi
+          done < <(git rev-list HEAD)
+
+          if [ -z "$RESTORE_COMMIT" ]; then
+            echo "ERROR: No previous commit containing scripts was found."
+            exit 1
+          fi
+
+          echo "restore_commit=$RESTORE_COMMIT" >> "$GITHUB_OUTPUT"
+          echo "Restoring scripts from commit: $RESTORE_COMMIT"
+
+      - name: Restore scripts directory only
+        shell: bash
+        env:
+          RESTORE_COMMIT: ${{ steps.find.outputs.restore_commit }}
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git checkout "$RESTORE_COMMIT" -- scripts
+
+          mapfile -t changed < <(
+            {
+              git diff --name-only
+              git diff --cached --name-only
+              git ls-files --others --exclude-standard
+            } | sed '/^$/d' | sort -u
+          )
+
+          if [ "${#changed[@]}" -eq 0 ]; then
+            echo "The scripts directory already exists; no restoration was needed."
+            exit 0
+          fi
+
+          echo "Files to restore:"
+          printf '%s\n' "${changed[@]}"
+
+          for file in "${changed[@]}"; do
+            case "$file" in
+              scripts/*) ;;
+              *)
+                echo "SAFETY STOP: unexpected change outside scripts: $file"
+                exit 1
+                ;;
+            esac
+          done
+
+          git add scripts
+          git commit -m "Restore accidentally deleted scripts folder"
+          git push origin HEAD:main
+
+      - name: Verify restoration
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -d scripts
+          test -n "$(find scripts -type f -print -quit)"
+          echo "scripts directory restored successfully."
