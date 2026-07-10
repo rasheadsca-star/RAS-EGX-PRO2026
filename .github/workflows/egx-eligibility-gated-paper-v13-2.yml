@@ -1,0 +1,142 @@
+name: EGX Eligibility-Gated Decision & Paper Trading — V13.2
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Run mode"
+        required: true
+        default: "update"
+        type: choice
+        options:
+          - update
+          - check_only
+  schedule:
+    - cron: "30 17 * * 0-4"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: egx-eligibility-gated-paper-v13-2
+  cancel-in-progress: false
+
+jobs:
+  build-paper-decision:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Validate V13.2 package and V13.1 eligibility
+        shell: bash
+        run: |
+          set -euo pipefail
+          required=(
+            scripts/decision/v13-2-eligibility-gated-paper.cjs
+            scripts/decision/v13-2-acceptance.cjs
+            data/v13-2-decision-paper-policy.json
+            data/history-eligibility.json
+            data/decision-eligible-symbols.json
+            data/history-review-queue.json
+            data/history-summary.json
+            preview-v12/decision-paper-v13-2.html
+          )
+          for file in "${required[@]}"; do
+            test -f "$file" || { echo "Missing required file: $file"; exit 1; }
+          done
+          test -d data/history || { echo "Missing data/history directory"; exit 1; }
+          node --check scripts/decision/v13-2-eligibility-gated-paper.cjs
+          node --check scripts/decision/v13-2-acceptance.cjs
+
+      - name: Build eligibility-gated decision and update paper ledger
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/decision/v13-2-eligibility-gated-paper.cjs
+
+      - name: Run V13.2 acceptance tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/decision/v13-2-acceptance.cjs
+
+      - name: Enforce strict preview-only write isolation
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t changed < <(
+            {
+              git diff --name-only
+              git diff --cached --name-only
+              git ls-files --others --exclude-standard
+            } | sed '/^$/d' | sort -u
+          )
+
+          echo "Changed files:"
+          if [ "${#changed[@]}" -eq 0 ]; then
+            echo "none"
+          else
+            printf '%s\n' "${changed[@]}"
+          fi
+
+          for file in "${changed[@]}"; do
+            case "$file" in
+              preview-v12/data/v13-2-decision.json|\
+              preview-v12/data/v13-2-paper-ledger.json|\
+              preview-v12/data/v13-2-paper-metrics.json)
+                ;;
+              *)
+                echo "SAFETY STOP: forbidden changed path: $file"
+                exit 1
+                ;;
+            esac
+          done
+
+      - name: Commit V13.2 paper outputs
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.mode == 'update' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            preview-v12/data/v13-2-decision.json \
+            preview-v12/data/v13-2-paper-ledger.json \
+            preview-v12/data/v13-2-paper-metrics.json
+          if git diff --cached --quiet; then
+            echo "No V13.2 output changes to commit."
+          else
+            git commit -m "V13.2 update eligibility-gated paper decision"
+            git push origin HEAD:main
+          fi
+
+      - name: Configure GitHub Pages
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.mode == 'update' }}
+        uses: actions/configure-pages@v5
+
+      - name: Upload repository for Pages
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.mode == 'update' }}
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy V13.2 preview
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.mode == 'update' }}
+        id: deployment
+        uses: actions/deploy-pages@v4
