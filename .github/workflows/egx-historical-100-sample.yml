@@ -1,29 +1,41 @@
-name: EGX Historical 100 Sessions — Sample
+name: EGX Historical 100 Sessions — Full Market Batches
 
 on:
   workflow_dispatch:
     inputs:
       mode:
-        description: "sample = 10 shares; full_backfill = all mapped; incremental = short update; repair_symbol = one ticker"
+        description: "build_map_only, sample, batch_backfill, incremental_batch, retry_failed, repair_symbol"
         required: true
         type: choice
-        default: sample
+        default: batch_backfill
         options:
+          - build_map_only
           - sample
-          - full_backfill
-          - incremental
+          - batch_backfill
+          - incremental_batch
+          - retry_failed
           - repair_symbol
+      batch_number:
+        description: "1-based batch number for batch_backfill/incremental_batch"
+        required: true
+        default: "1"
+        type: string
+      batch_size:
+        description: "Symbols per batch (recommended 20; maximum 25)"
+        required: true
+        default: "20"
+        type: string
       ticker:
         description: "Ticker only when mode=repair_symbol, e.g. COMI"
         required: false
         type: string
       min_success:
-        description: "Minimum valid sample files required by acceptance tests"
+        description: "Minimum valid files required in selected batch; use 1 to keep valid partial results"
         required: true
-        default: "6"
+        default: "1"
         type: string
   schedule:
-    # Sunday–Thursday after EGX close. 15:30 UTC is 17:30/18:30 Cairo depending on DST.
+    # Sunday–Thursday after EGX close. Each run updates the next rotating batch.
     - cron: "30 15 * * 0-4"
 
 permissions:
@@ -38,7 +50,7 @@ concurrency:
 jobs:
   history:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 40
 
     steps:
       - name: Checkout main with history
@@ -52,17 +64,21 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Resolve run mode
+      - name: Resolve run configuration
         id: run-config
         shell: bash
         run: |
           set -euo pipefail
           if [ "${{ github.event_name }}" = "schedule" ]; then
-            echo "mode=incremental" >> "$GITHUB_OUTPUT"
+            echo "mode=incremental_auto" >> "$GITHUB_OUTPUT"
+            echo "batch_number=1" >> "$GITHUB_OUTPUT"
+            echo "batch_size=20" >> "$GITHUB_OUTPUT"
             echo "ticker=" >> "$GITHUB_OUTPUT"
-            echo "min_success=6" >> "$GITHUB_OUTPUT"
+            echo "min_success=1" >> "$GITHUB_OUTPUT"
           else
             echo "mode=${{ inputs.mode }}" >> "$GITHUB_OUTPUT"
+            echo "batch_number=${{ inputs.batch_number }}" >> "$GITHUB_OUTPUT"
+            echo "batch_size=${{ inputs.batch_size }}" >> "$GITHUB_OUTPUT"
             echo "ticker=${{ inputs.ticker }}" >> "$GITHUB_OUTPUT"
             if [ "${{ inputs.mode }}" = "repair_symbol" ]; then
               echo "min_success=1" >> "$GITHUB_OUTPUT"
@@ -75,28 +91,76 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          test -f data/symbol-map.json
-          test -f scripts/history/historical-100-runner.cjs
-          test -f scripts/history/acceptance-tests.cjs
-          test -f data/history-verification-overrides.json
-          test -f preview-v12/history-100.html
-          echo "V11/V11.5 files will not be edited. Output scope is data/history and history audit files only."
+          required=(
+            scripts/history/full-market-universe-builder.cjs
+            scripts/history/historical-100-runner.cjs
+            scripts/history/acceptance-tests.cjs
+            scripts/history/history-summary-builder.cjs
+            scripts/history/adapters/yahoo-history-adapter.cjs
+            data/symbol-map.json
+            data/history-verification-overrides.json
+            preview-v12/history-100.html
+          )
+          for file in "${required[@]}"; do
+            test -f "$file" || { echo "Missing required file: $file"; exit 1; }
+          done
+          echo "Stable V11/V11.5 files are outside the write allow-list."
 
-      - name: Fetch and validate historical sessions
+      - name: Build and expand full-market symbol map
+        env:
+          HISTORY_UNIVERSE_MAX: "300"
+        run: node scripts/history/full-market-universe-builder.cjs
+
+      - name: Fetch and validate selected historical batch
+        if: steps.run-config.outputs.mode != 'build_map_only'
         env:
           HISTORY_MODE: ${{ steps.run-config.outputs.mode }}
           HISTORY_TICKER: ${{ steps.run-config.outputs.ticker }}
-          HISTORY_BATCH_SIZE: "3"
+          HISTORY_BATCH_NUMBER: ${{ steps.run-config.outputs.batch_number }}
+          HISTORY_BATCH_SIZE: ${{ steps.run-config.outputs.batch_size }}
+          HISTORY_REQUEST_CONCURRENCY: "3"
           HISTORY_BATCH_DELAY_MS: "1800"
           HISTORY_SYMBOL_DELAY_MS: "550"
         run: node scripts/history/historical-100-runner.cjs
 
       - name: Run acceptance tests
+        if: steps.run-config.outputs.mode != 'build_map_only'
         env:
           HISTORY_MODE: ${{ steps.run-config.outputs.mode }}
           HISTORY_TICKER: ${{ steps.run-config.outputs.ticker }}
           HISTORY_MIN_SUCCESS: ${{ steps.run-config.outputs.min_success }}
         run: node scripts/history/acceptance-tests.cjs
+
+      - name: Build map-only summary
+        if: steps.run-config.outputs.mode == 'build_map_only'
+        shell: bash
+        run: |
+          set -euo pipefail
+          node - <<'NODE'
+          const path = require('path');
+          const { readJson, writeJsonAtomic, nowIso } = require('./scripts/history/lib/utils.cjs');
+          const { buildSummary, buildSessionCalendar } = require('./scripts/history/history-summary-builder.cjs');
+          const root = process.cwd();
+          const raw = readJson(path.join(root, 'data/symbol-map.json'), {});
+          const entries = (Array.isArray(raw) ? raw : Object.values(raw)).filter((entry) => entry.active !== false);
+          const summary = buildSummary(root, entries, {
+            yahoo: { status: 'configured', role: 'historical backfill' },
+            egx: { status: 'manual_or_future_adapter', role: 'official verification' },
+            mubasher: { status: 'existing_cache_when_available', role: 'latest-session cross-check' },
+            investing: { status: 'manual_fallback', role: 'fallback/manual verification' },
+          });
+          buildSessionCalendar(root, summary);
+          const batchSize = 20;
+          writeJsonAtomic(path.join(root, 'data/history-batch-state.json'), {
+            schemaVersion: '12.3.0', generatedAt: nowIso(), totalSymbols: entries.length,
+            batchSize, totalBatches: Math.max(1, Math.ceil(entries.length / batchSize)),
+            lastMode: 'build_map_only', lastBatchNumber: null, nextIncrementalBatch: 1,
+          });
+          writeJsonAtomic(path.join(root, 'data/history-last-run.json'), {
+            schemaVersion: '12.3.0', generatedAt: nowIso(), mode: 'build_map_only',
+            selectedTickers: [], coverageAfterRun: summary.coverage,
+          });
+          NODE
 
       - name: Enforce strict write isolation
         shell: bash
@@ -119,7 +183,7 @@ jobs:
 
           for file in "${changed[@]}"; do
             case "$file" in
-              data/history/*.json|data/history-summary.json|data/source-audit.json|data/history-errors.json|data/session-calendar.json|data/corporate-actions.json)
+              data/symbol-map.json|data/history-universe-report.json|data/history/*.json|data/history-summary.json|data/source-audit.json|data/history-errors.json|data/session-calendar.json|data/corporate-actions.json|data/history-batch-state.json|data/history-last-run.json)
                 ;;
               *)
                 echo "SAFETY STOP: historical workflow attempted to change forbidden path: $file"
@@ -131,7 +195,7 @@ jobs:
           test -z "$(git diff --name-only -- index.html service-worker.js assets config preview-v12/index.html)"
           echo "Isolation passed. Stable application files were not touched."
 
-      - name: Commit valid history outputs only
+      - name: Commit valid full-market history outputs only
         id: commit
         shell: bash
         run: |
@@ -139,8 +203,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add data/history data/history-summary.json data/source-audit.json \
-            data/history-errors.json data/session-calendar.json data/corporate-actions.json
+          git add data/symbol-map.json data/history-universe-report.json data/history \
+            data/history-summary.json data/source-audit.json data/history-errors.json \
+            data/session-calendar.json data/corporate-actions.json \
+            data/history-batch-state.json data/history-last-run.json
 
           if git diff --cached --quiet; then
             echo "No valid history changes to commit."
@@ -148,7 +214,7 @@ jobs:
             exit 0
           fi
 
-          git commit -m "V12.2 update validated EGX historical sample"
+          git commit -m "V12.3 update EGX historical full-market batch"
           git pull --rebase origin main
           git push origin HEAD:main
           echo "committed=true" >> "$GITHUB_OUTPUT"
@@ -157,14 +223,16 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: v12-2-history-diagnostics-${{ github.run_number }}
+          name: v12-3-full-market-diagnostics-${{ github.run_number }}
           if-no-files-found: ignore
           retention-days: 14
           path: |
             data/history-summary.json
             data/history-errors.json
             data/source-audit.json
-            data/corporate-actions.json
+            data/history-universe-report.json
+            data/history-batch-state.json
+            data/history-last-run.json
 
   deploy:
     needs: history
@@ -190,6 +258,6 @@ jobs:
         with:
           path: "."
 
-      - name: Deploy V12.2 history preview
+      - name: Deploy V12.3 full-market history preview
         id: deployment
         uses: actions/deploy-pages@v4
