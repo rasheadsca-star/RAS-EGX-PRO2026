@@ -1,0 +1,136 @@
+name: EGX Adaptive Calibration & Paper Tracker — V13.5
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Run mode"
+        required: true
+        default: "update"
+        type: choice
+        options:
+          - update
+          - check_only
+  schedule:
+    # Sunday through Thursday. GitHub cron uses UTC.
+    # Runs after the V13.4 quant workflow.
+    - cron: "50 14 * * 0-4"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: egx-adaptive-paper-v13-5
+  cancel-in-progress: false
+
+jobs:
+  adaptive-paper:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Validate V13.4 and V13.5 files
+        shell: bash
+        run: |
+          set -euo pipefail
+          required=(
+            scripts/quant/v13-4-quant-engine.cjs
+            scripts/quant/v13-4-acceptance.cjs
+            data/v13-4-quant-policy.json
+            scripts/quant/v13-5-adaptive-paper-tracker.cjs
+            scripts/quant/v13-5-acceptance.cjs
+            data/v13-5-adaptive-policy.json
+            preview-v13/adaptive-recommendations.html
+            preview-v13/paper-tracker.html
+            data/symbol-map.json
+            data/history-summary.json
+          )
+          for file in "${required[@]}"; do
+            test -f "$file" || { echo "Missing required file: $file"; exit 1; }
+          done
+          test -d data/history || { echo "Missing data/history"; exit 1; }
+          count="$(find data/history -maxdepth 1 -name '*.json' | wc -l)"
+          test "$count" -gt 0 || { echo "No historical symbol files found"; exit 1; }
+          node --check scripts/quant/v13-4-quant-engine.cjs
+          node --check scripts/quant/v13-4-acceptance.cjs
+          node --check scripts/quant/v13-5-adaptive-paper-tracker.cjs
+          node --check scripts/quant/v13-5-acceptance.cjs
+
+      - name: Refresh V13.4 research and recommendations
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/quant/v13-4-quant-engine.cjs
+          node scripts/quant/v13-4-acceptance.cjs
+
+      - name: Run adaptive calibration and immutable paper tracker
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/quant/v13-5-adaptive-paper-tracker.cjs
+          node scripts/quant/v13-5-acceptance.cjs
+
+      - name: Enforce generated-output isolation
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t changed < <(
+            {
+              git diff --name-only
+              git diff --cached --name-only
+              git ls-files --others --exclude-standard
+            } | sed '/^$/d' | sort -u
+          )
+          if [ "${#changed[@]}" -gt 0 ]; then printf '%s\n' "${changed[@]}"; fi
+          for file in "${changed[@]}"; do
+            case "$file" in
+              data/quant/*) ;;
+              *) echo "SAFETY STOP: unexpected generated path: $file"; exit 1 ;;
+            esac
+          done
+
+      - name: Commit V13.4 and V13.5 outputs
+        if: ${{ github.event_name == 'schedule' || inputs.mode == 'update' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/quant
+          if git diff --cached --quiet; then
+            echo "No quant or paper-tracker changes to commit."
+          else
+            git commit -m "V13.5 adaptive calibration and paper recommendation tracking"
+            git push origin HEAD:main
+          fi
+
+      - name: Configure GitHub Pages
+        if: ${{ github.event_name == 'schedule' || inputs.mode == 'update' }}
+        uses: actions/configure-pages@v5
+
+      - name: Upload repository for Pages
+        if: ${{ github.event_name == 'schedule' || inputs.mode == 'update' }}
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy V13.5 pages
+        if: ${{ github.event_name == 'schedule' || inputs.mode == 'update' }}
+        id: deployment
+        uses: actions/deploy-pages@v4
