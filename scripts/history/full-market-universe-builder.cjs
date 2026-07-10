@@ -34,6 +34,8 @@ const RESERVED = new Set([
   'UNKNOWN', 'NA', 'NULL', 'NONE', 'USD', 'EGP', 'EUR', 'GBP', 'GOOD', 'TEST',
   'ALIASES', 'ALIAS', 'MAPPING', 'MAPPINGS', 'DEFAULT', 'DEFAULTS', 'CONFIG', 'SETTINGS',
   'METADATA', 'VERSION', 'SCHEMA', 'ERRORS', 'WARNINGS', 'SOURCE', 'SOURCES',
+  'WAIT', 'WATCH', 'STRONG', 'BUY', 'SELL', 'HOLD', 'ENTER', 'EXIT',
+  'MONITOR', 'MONITORING', 'RECOMMENDATION', 'RECOMMENDATIONS', 'OPPORTUNITY', 'OPPORTUNITIES',
 ]);
 
 
@@ -104,6 +106,10 @@ function collectFromObject(root, sourceFile, output) {
     if (!ticker) return;
     const companyNameAr = firstValue(object || {}, AR_NAME_PATHS);
     const companyNameEn = firstValue(object || {}, EN_NAME_PATHS);
+    const explicitTicker = firstValue(object || {}, TICKER_PATHS);
+    const hasMarketEvidence = ['price','close','lastPrice','currentPrice','volume','open','high','low']
+      .some((key) => object && typeof object === 'object' && object[key] !== undefined && object[key] !== null);
+    if (hint === 'object_key' && !companyNameAr && !companyNameEn && !explicitTicker && !hasMarketEvidence) return;
     const current = output.get(ticker) || {
       ticker,
       companyNameAr: null,
@@ -202,7 +208,7 @@ function main() {
 
   writeJsonAtomic(MAP_PATH, output);
   writeJsonAtomic(REPORT_PATH, {
-    schemaVersion: '12.3.0',
+    schemaVersion: '12.5.0',
     generatedAt: nowIso(),
     existingSymbolsBefore: existingMap.size,
     discoveredSymbols: discovered.size,

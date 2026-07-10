@@ -78,6 +78,20 @@ function selectEntries(entries) {
     const resolved = new Set((repairReport.resolvedTickers || []).map(safeTicker).filter(Boolean));
     selected = entries.filter((entry) => resolved.has(entry.ticker));
     batchNumber = Number(repairReport.batchNumber || EXPLICIT_BATCH_NUMBER || 1);
+  } else if (MODE === 'retry_identity') {
+    const identityEntries = entries.filter((entry) => {
+      const document = readHistory(REPO_ROOT, entry.ticker);
+      return entry.identityReviewStatus === 'eligible_for_guarded_salvage'
+        && entry.identityPolicy === 'guarded_local_crosscheck'
+        && (!document || !document.symbolVerified || (document.sessions || []).length < 20);
+    });
+    const identityBatches = Math.max(1, Math.ceil(identityEntries.length / BATCH_SIZE));
+    if (EXPLICIT_BATCH_NUMBER > identityBatches && identityEntries.length) {
+      throw new Error(`Identity salvage batch ${EXPLICIT_BATCH_NUMBER} exceeds ${identityBatches} batches.`);
+    }
+    const start = (EXPLICIT_BATCH_NUMBER - 1) * BATCH_SIZE;
+    selected = identityEntries.slice(start, start + BATCH_SIZE);
+    batchNumber = EXPLICIT_BATCH_NUMBER;
   } else if (MODE === 'retry_failed') {
     const failedEntries = entries.filter((entry) => {
       const document = readHistory(REPO_ROOT, entry.ticker);
@@ -226,7 +240,7 @@ async function processSymbol(entry, localReference, approvedRecords) {
       ...merged.sessions.flatMap((session) => session.verifiedBy || []),
     ]);
     const document = {
-      schemaVersion: '12.3.0',
+      schemaVersion: '12.5.0',
       ticker: entry.ticker,
       companyNameAr: entry.companyNameAr || null,
       companyNameEn: entry.companyNameEn || null,
@@ -245,10 +259,13 @@ async function processSymbol(entry, localReference, approvedRecords) {
       officiallyVerifiedLatestSession: Boolean(merged.sessions.at(-1).officialVerified),
       symbolVerified: Boolean(fetched.identity?.verified),
       symbolVerification: fetched.identity,
+      identityVerificationPolicy: fetched.identity?.policy || 'standard_identity',
+      guardedIdentitySalvage: Boolean(fetched.identity?.guardedVerified),
       averageConfidence: averageConfidence(merged.sessions),
       staleData: false,
       updateFailed: false,
       warnings: unique([
+        ...(fetched.identity?.guardedVerified ? ['guarded_identity_salvage_not_high_confidence'] : []),
         ...(verification && !verification.matched ? [`latest_close_conflict:${verification.differencePct}%`] : []),
         ...merged.corporateActions.map(() => 'corporate_action_review_required'),
       ]),
@@ -284,7 +301,7 @@ function updateState(allEntries, selection, results, skipped) {
     ? (selection.batchNumber >= selection.totalBatches ? 1 : selection.batchNumber + 1)
     : Number(selection.state.nextIncrementalBatch || 1);
   const state = {
-    schemaVersion: '12.3.0',
+    schemaVersion: '12.5.0',
     generatedAt: nowIso(),
     totalSymbols: allEntries.length,
     batchSize: BATCH_SIZE,
@@ -312,7 +329,7 @@ async function main() {
   const entriesToFetch = selection.selected.filter((entry) => !shouldSkipComplete(entry));
   const results = [];
 
-  console.log(`V12.3 Historical 100: mode=${MODE}, universe=${allEntries.length}, selected=${selection.selected.length}, fetch=${entriesToFetch.length}, skippedComplete=${skipped.length}, batch=${selection.batchNumber || '-'} / ${selection.totalBatches}`);
+  console.log(`V12.5 Historical 100: mode=${MODE}, universe=${allEntries.length}, selected=${selection.selected.length}, fetch=${entriesToFetch.length}, skippedComplete=${skipped.length}, batch=${selection.batchNumber || '-'} / ${selection.totalBatches}`);
 
   for (let offset = 0; offset < entriesToFetch.length; offset += REQUEST_BATCH_SIZE) {
     const batch = entriesToFetch.slice(offset, offset + REQUEST_BATCH_SIZE);
@@ -330,14 +347,14 @@ async function main() {
   const oldAudit = readJson(path.join(DATA_DIR, 'source-audit.json'), { operations: [] });
   const operations = [...(oldAudit.operations || []), ...results.map((result) => result.audit)].slice(-2500);
   writeJsonAtomic(path.join(DATA_DIR, 'source-audit.json'), {
-    schemaVersion: '12.3.0',
+    schemaVersion: '12.5.0',
     generatedAt: nowIso(),
     mode: MODE,
     operations,
   });
 
   writeJsonAtomic(path.join(DATA_DIR, 'history-errors.json'), {
-    schemaVersion: '12.3.0',
+    schemaVersion: '12.5.0',
     generatedAt: nowIso(),
     mode: MODE,
     failures: results.filter((result) => !result.ok).map((result) => ({ ticker: result.ticker, error: result.error })),
@@ -350,7 +367,7 @@ async function main() {
     actionsByKey.set(`${item.ticker}:${item.date}`, item);
   }
   writeJsonAtomic(path.join(DATA_DIR, 'corporate-actions.json'), {
-    schemaVersion: '12.3.0',
+    schemaVersion: '12.5.0',
     generatedAt: nowIso(),
     candidates: [...actionsByKey.values()].sort((a, b) => `${a.ticker}:${a.date}`.localeCompare(`${b.ticker}:${b.date}`)),
   });
@@ -365,7 +382,7 @@ async function main() {
   const state = updateState(allEntries, selection, results, skipped);
 
   const lastRun = {
-    schemaVersion: '12.3.0',
+    schemaVersion: '12.5.0',
     generatedAt: nowIso(),
     mode: MODE,
     batchNumber: selection.batchNumber,
