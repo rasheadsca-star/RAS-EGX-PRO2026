@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <title>V12.9 — استكمال فجوات التاريخ</title>
+  <style>
+    :root{color-scheme:dark;--bg:#07111f;--card:#0d1e33;--line:#294866;--text:#f4f8fc;--muted:#9fb3c8;--ok:#22c55e;--bad:#ef4444;--warn:#f59e0b;--cyan:#22d3ee}
+    *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif}.wrap{max-width:1180px;margin:auto;padding:24px}.hero,.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px;margin-bottom:14px}.hero h1{margin:0 0 8px;font-size:25px}.muted{color:var(--muted);line-height:1.8}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.btn{color:#fff;text-decoration:none;border:1px solid #497297;border-radius:10px;padding:9px 13px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}.metric{background:#081729;border:1px solid var(--line);border-radius:12px;padding:14px}.metric b{display:block;font-size:25px;margin-top:8px}.ok{color:var(--ok)}.bad{color:var(--bad)}.warn{color:var(--warn)}table{width:100%;border-collapse:collapse;font-size:13px}th,td{padding:10px;border-bottom:1px solid #243e59;text-align:right}th{color:#c9d8e7}.pill{display:inline-block;padding:4px 8px;border-radius:999px;background:#17314b}.status-improved{color:var(--ok)}.status-failed{color:var(--bad)}.status-diagnosed_ready{color:var(--cyan)}.error{white-space:normal;max-width:480px;color:#fca5a5}.note{border-color:#7c5a16;background:#332408} @media(max-width:700px){.wrap{padding:10px}table{display:block;overflow:auto}}
+  </style>
+</head>
+<body><main class="wrap">
+  <section class="hero"><h1>EGX Pro — V12.9 استكمال فجوات التاريخ تلقائيًا</h1><div class="muted">مصدر احتياطي عام غير رسمي: تحقق هوية رمز EGX + تطابق جلسات تاريخية قبل أي كتابة. لا يمنح ثقة 100%.</div><div class="actions"><a class="btn" href="./history-100.html">لوحة التاريخ</a><a class="btn" href="../">التطبيق المستقر</a><button class="btn" onclick="location.reload()">تحديث</button></div></section>
+  <section class="card note"><b>قاعدة الثقة:</b> بيانات Starta/TradingView تستخدم فقط لإكمال الفجوة بثقة محدودة، ولا تعتبر تحققًا رسميًا من EGX.</section>
+  <section id="metrics" class="grid"></section>
+  <section class="card"><h2>النتائج حسب السهم</h2><div style="overflow:auto"><table><thead><tr><th>السهم</th><th>الحالة</th><th>قبل</th><th>بعد</th><th>جلسات مضافة</th><th>آخر جلسة</th><th>التداخل</th><th>التفاصيل</th></tr></thead><tbody id="rows"></tbody></table></div></section>
+  <section class="card"><h2>حالة التغطية</h2><pre id="coverage" class="muted"></pre></section>
+</main>
+<script>
+(async()=>{const v=Date.now();const [r,s]=await Promise.all([fetch('../data/history-starta-gap-report.json?v='+v).then(x=>x.ok?x.json():null),fetch('../data/history-summary.json?v='+v).then(x=>x.ok?x.json():null)]);if(!r){document.getElementById('rows').innerHTML='<tr><td colspan="8">لم يُشغّل V12.9 بعد.</td></tr>';return}const c=r.counts||{};const metrics=[['الوضع',r.mode||'-',''],['المختارة',c.selected||0,''],['تم تحسينها',c.improved||0,'ok'],['جاهزة بالتشخيص',c.diagnosedReady||0,''],['فشل',c.failed||0,'bad'],['جلسات مضافة',c.appendedSessions||0,'ok'],['أصبحت 100 جلسة',c.becameComplete100||0,'ok'],['حديثة بما يكفي',c.recentEnough||0,'warn']];document.getElementById('metrics').innerHTML=metrics.map(x=>`<div class="metric"><span class="muted">${x[0]}</span><b class="${x[2]}">${x[1]}</b></div>`).join('');document.getElementById('rows').innerHTML=(r.results||[]).map(x=>`<tr><td><b>${x.ticker}</b></td><td class="status-${x.status}">${x.status}</td><td>${x.beforeSessions??'-'}</td><td>${x.afterSessions??'-'}</td><td>${x.appendedSessions??0}</td><td>${x.lastSession||'-'}</td><td>${x.overlap?`${x.overlap.matches}/${x.overlap.overlapCount} (${Math.round((x.overlap.ratio||0)*100)}%)`:'-'}</td><td class="error">${x.error||((x.warnings||[]).join('، ')||'نجاح')}</td></tr>`).join('');document.getElementById('coverage').textContent=JSON.stringify({before:r.coverageBefore,after:r.coverageAfter,summary:r.summaryAfter,current:s?.coverage},null,2)})().catch(e=>{document.getElementById('rows').innerHTML=`<tr><td colspan="8">${e.message}</td></tr>`});
+</script></body></html>
