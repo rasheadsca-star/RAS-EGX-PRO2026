@@ -1,80 +1,32 @@
 {
-  "schemaVersion": "12.3.0",
-  "generatedAt": "2026-07-10T07:08:30.630Z",
-  "mode": "batch_backfill",
-  "batchNumber": 3,
-  "batchSize": 20,
-  "totalBatches": 13,
-  "selectedTickers": [
-    "CAED",
-    "CANA",
-    "CCAP",
-    "CCRS",
-    "CEFM",
-    "CERA",
+  "schemaVersion": "12.5.0",
+  "generatedAt": "2026-07-10T07:25:14.697Z",
+  "mode": "cleanup_and_classify",
+  "selectedTickers": [],
+  "deactivatedTickers": [
+    "STRONG",
+    "WAIT",
+    "WATCH"
+  ],
+  "guardedSalvageTickers": [
     "CFGH",
-    "CICH",
-    "CIEB",
-    "CIRA",
-    "CLHO",
-    "CNFN",
-    "COMI",
-    "COPR",
-    "COSG",
-    "CPCI",
-    "CPME",
-    "CRST",
-    "CSAG",
-    "DAPH"
+    "EGBE",
+    "EGSA",
+    "FAITA",
+    "MOIL",
+    "NAHO",
+    "SAIB",
+    "TRTO"
   ],
-  "fetchedTickers": [
-    "CFGH",
-    "CPME",
-    "CRST"
-  ],
-  "skippedCompleteTickers": [
-    "CAED",
-    "CANA",
-    "CCAP",
-    "CCRS",
-    "CEFM",
-    "CERA",
-    "CICH",
-    "CIEB",
-    "CIRA",
-    "CLHO",
-    "CNFN",
-    "COMI",
-    "COPR",
-    "COSG",
-    "CPCI",
-    "CSAG",
-    "DAPH"
-  ],
-  "succeededTickers": [],
-  "failed": [
-    {
-      "ticker": "CFGH",
-      "error": "Yahoo history failed for CFGH: CFGH.CA: identity score 65"
-    },
-    {
-      "ticker": "CPME",
-      "error": "Yahoo history failed for CPME: CPME.CA: All HTTP attempts failed. https://query1.finance.yahoo.com/v8/finance/chart/CPME.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/CPME.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/CPME.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/CPME.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/CPME.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 3: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/CPME.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/CPME.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/CPME.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/CPME.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/CPME.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/CPME.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 3: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/CPME.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true"
-    },
-    {
-      "ticker": "CRST",
-      "error": "Yahoo history failed for CRST: CRST.CA: All HTTP attempts failed. https://query1.finance.yahoo.com/v8/finance/chart/CRST.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/CRST.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/CRST.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/CRST.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/CRST.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 3: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/CRST.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/CRST.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/CRST.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/CRST.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/CRST.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/CRST.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 3: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/CRST.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true"
-    }
-  ],
+  "fallbackQueueCount": 47,
   "coverageAfterRun": {
     "basis": "all_active_mapped_symbols",
-    "denominator": 246,
+    "denominator": 243,
     "sessions20Count": 188,
-    "sessions20Pct": 76.42,
+    "sessions20Pct": 77.37,
     "sessions50Count": 188,
-    "sessions50Pct": 76.42,
+    "sessions50Pct": 77.37,
     "sessions100Count": 187,
-    "sessions100Pct": 76.02
-  },
-  "nextIncrementalBatch": 4
+    "sessions100Pct": 76.95
+  }
 }

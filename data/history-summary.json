@@ -1,9 +1,9 @@
 {
   "schemaVersion": "12.3.0",
-  "generatedAt": "2026-07-10T07:08:30.520Z",
+  "generatedAt": "2026-07-10T07:25:14.585Z",
   "targetSessions": 100,
-  "symbolsTotal": 246,
-  "symbolsMapped": 246,
+  "symbolsTotal": 243,
+  "symbolsMapped": 243,
   "symbolsRuntimeVerified": 188,
   "symbolsComplete100": 187,
   "symbolsComplete50": 1,
@@ -11,7 +11,7 @@
   "symbolsLimited5": 0,
   "symbolsBelow5": 0,
   "symbolsPending": 0,
-  "symbolsFailed": 58,
+  "symbolsFailed": 55,
   "symbolsStale": 0,
   "officiallyVerifiedSymbols": 0,
   "crossVerifiedSymbols": 11,
@@ -20,13 +20,13 @@
   "latestMarketSession": "2026-07-09",
   "coverage": {
     "basis": "all_active_mapped_symbols",
-    "denominator": 246,
+    "denominator": 243,
     "sessions20Count": 188,
-    "sessions20Pct": 76.42,
+    "sessions20Pct": 77.37,
     "sessions50Count": 188,
-    "sessions50Pct": 76.42,
+    "sessions50Pct": 77.37,
     "sessions100Count": 187,
-    "sessions100Pct": 76.02
+    "sessions100Pct": 76.95
   },
   "runtimeVerifiedCoverage": {
     "basis": "runtime_verified_symbols_only",
@@ -40,20 +40,20 @@
   },
   "sources": {
     "egx": {
-      "status": "manual_or_future_adapter",
-      "role": "official verification"
+      "status": "manual_or_approved_import",
+      "role": "official verification and fallback"
     },
     "yahoo": {
-      "status": "available",
+      "status": "available_with_guarded_identity_policy",
       "role": "historical backfill"
     },
     "mubasher": {
-      "status": "existing_cache_available",
-      "role": "latest-session cross-check"
+      "status": "existing_cache_or_approved_import",
+      "role": "latest-session cross-check and fallback"
     },
     "investing": {
-      "status": "manual_fallback",
-      "role": "fallback/manual verification"
+      "status": "approved_import",
+      "role": "historical fallback"
     }
   },
   "symbols": [
@@ -254,7 +254,7 @@
     {
       "ticker": "ADRI",
       "companyNameAr": null,
-      "companyNameEn": "0,100],[320,100],[320,480]] End AdSlot 1 --> --> --> --> --> --> --> --> Arab for Development and Real Estate Investment",
+      "companyNameEn": "0,100], 1 Arab for Development and Real Estate Investment",
       "symbolVerified": true,
       "availableSessions": 100,
       "firstSession": "2026-01-14",
@@ -340,7 +340,7 @@
     {
       "ticker": "AIFI",
       "companyNameAr": null,
-      "companyNameEn": "50],[300,100],[320,100],[320,480]] End AdSlot 1 --> --> --> --> --> --> --> --> Atlas For Investment and Food Industries",
+      "companyNameEn": "50], 1 Atlas For Investment and Food Industries",
       "symbolVerified": true,
       "availableSessions": 100,
       "firstSession": "2026-01-26",
@@ -2122,7 +2122,7 @@
     {
       "ticker": "ESRS",
       "companyNameAr": null,
-      "companyNameEn": "' ### Size: [[320,50],[300,50],[300,100],[320,100],[320,480]] End AdSlot 1 --> --> --> --> --> --> --> --> Ezz Steel SAE",
+      "companyNameEn": "' ### Size: 1 Ezz Steel SAE",
       "symbolVerified": false,
       "availableSessions": 0,
       "firstSession": null,
@@ -2787,7 +2787,7 @@
     {
       "ticker": "IRAX",
       "companyNameAr": null,
-      "companyNameEn": ",[300,50],[300,100],[320,100],[320,480]] End AdSlot 1 --> --> --> --> --> --> --> --> Al Ezz Dekheila Steel - Alexandria",
+      "companyNameEn": ", 1 Al Ezz Dekheila Steel - Alexandria",
       "symbolVerified": false,
       "availableSessions": 0,
       "firstSession": null,
@@ -4838,26 +4838,6 @@
       "sourceFile": "data/history/SPMD.json"
     },
     {
-      "ticker": "STRONG",
-      "companyNameAr": null,
-      "companyNameEn": null,
-      "symbolVerified": false,
-      "availableSessions": 0,
-      "firstSession": null,
-      "lastSession": null,
-      "historyStatus": "historical_insufficient",
-      "processingStatus": "failed",
-      "primarySource": null,
-      "verificationSources": [],
-      "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 0,
-      "staleData": false,
-      "updateFailed": false,
-      "lastUpdateError": "Yahoo history failed for STRONG: STRONG.CA: All HTTP attempts failed. https://query1.finance.yahoo.com/v8/finance/chart/STRONG.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/STRONG.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/STRONG.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/STRONG.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/STRONG.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 3: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/STRONG.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/STRONG.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/STRONG.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/STRONG.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/STRONG.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/STRONG.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 3: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/STRONG.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true",
-      "warnings": [],
-      "sourceFile": null
-    },
-    {
       "ticker": "SUGR",
       "companyNameAr": "الدلتا للسكر",
       "companyNameEn": "Delta Sugar Company",
@@ -5010,7 +4990,7 @@
     {
       "ticker": "TORA",
       "companyNameAr": null,
-      "companyNameEn": "e: [[320,50],[300,50],[300,100],[320,100],[320,480]] End AdSlot 1 --> --> --> --> --> --> --> --> Tourah Portland Cement",
+      "companyNameEn": "e: 1 Tourah Portland Cement",
       "symbolVerified": false,
       "availableSessions": 0,
       "firstSession": null,
@@ -5232,46 +5212,6 @@
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": "Yahoo history failed for VLMRA: VLMRA.CA: All HTTP attempts failed. https://query1.finance.yahoo.com/v8/finance/chart/VLMRA.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/VLMRA.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/VLMRA.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/VLMRA.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/VLMRA.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 3: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/VLMRA.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/VLMRA.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/VLMRA.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/VLMRA.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/VLMRA.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/VLMRA.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 3: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/VLMRA.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true",
-      "warnings": [],
-      "sourceFile": null
-    },
-    {
-      "ticker": "WAIT",
-      "companyNameAr": null,
-      "companyNameEn": null,
-      "symbolVerified": false,
-      "availableSessions": 0,
-      "firstSession": null,
-      "lastSession": null,
-      "historyStatus": "historical_insufficient",
-      "processingStatus": "failed",
-      "primarySource": null,
-      "verificationSources": [],
-      "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 0,
-      "staleData": false,
-      "updateFailed": false,
-      "lastUpdateError": "Yahoo history failed for WAIT: WAIT.CA: All HTTP attempts failed. https://query1.finance.yahoo.com/v8/finance/chart/WAIT.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/WAIT.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/WAIT.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/WAIT.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/WAIT.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 3: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/WAIT.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/WAIT.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/WAIT.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/WAIT.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/WAIT.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/WAIT.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 3: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/WAIT.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true",
-      "warnings": [],
-      "sourceFile": null
-    },
-    {
-      "ticker": "WATCH",
-      "companyNameAr": null,
-      "companyNameEn": null,
-      "symbolVerified": false,
-      "availableSessions": 0,
-      "firstSession": null,
-      "lastSession": null,
-      "historyStatus": "historical_insufficient",
-      "processingStatus": "failed",
-      "primarySource": null,
-      "verificationSources": [],
-      "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 0,
-      "staleData": false,
-      "updateFailed": false,
-      "lastUpdateError": "Yahoo history failed for WATCH: WATCH.CA: All HTTP attempts failed. https://query1.finance.yahoo.com/v8/finance/chart/WATCH.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/WATCH.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/WATCH.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/WATCH.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/WATCH.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 3: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/WATCH.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/WATCH.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/WATCH.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/WATCH.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/WATCH.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/WATCH.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true attempt 3: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/WATCH.CA?range=1y&interval=1d&events=history&includeAdjustedClose=true",
       "warnings": [],
       "sourceFile": null
     },
