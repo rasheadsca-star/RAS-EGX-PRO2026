@@ -1,0 +1,176 @@
+name: Fix V12.2 History File Layout
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fix-v12-2-history-layout
+  cancel-in-progress: false
+
+jobs:
+  fix-layout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Move V12.2 files to their correct paths
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          mkdir -p scripts/history/adapters scripts/history/lib
+
+          move_known_file() {
+            local filename="$1"
+            local target="$2"
+            local target_dir
+            target_dir="$(dirname "$target")"
+            mkdir -p "$target_dir"
+
+            mapfile -t matches < <(
+              find scripts -type f -name "$filename" -print | sort
+            )
+
+            if [ "${#matches[@]}" -eq 0 ]; then
+              echo "MISSING: $filename"
+              return 1
+            fi
+
+            local selected=""
+            if [ -f "$target" ]; then
+              selected="$target"
+            else
+              selected="${matches[0]}"
+              mv "$selected" "$target"
+              echo "MOVED: $selected -> $target"
+              selected="$target"
+            fi
+
+            # Remove only byte-identical duplicates. Stop if a duplicate differs.
+            for candidate in "${matches[@]}"; do
+              [ "$candidate" = "$target" ] && continue
+              [ -f "$candidate" ] || continue
+
+              if cmp -s "$target" "$candidate"; then
+                rm -f "$candidate"
+                echo "REMOVED IDENTICAL DUPLICATE: $candidate"
+              else
+                echo "SAFETY STOP: conflicting copies found:"
+                echo "  correct target: $target"
+                echo "  different copy: $candidate"
+                exit 1
+              fi
+            done
+          }
+
+          move_known_file "historical-100-runner.cjs" \
+            "scripts/history/historical-100-runner.cjs"
+          move_known_file "acceptance-tests.cjs" \
+            "scripts/history/acceptance-tests.cjs"
+          move_known_file "history-validator.cjs" \
+            "scripts/history/history-validator.cjs"
+          move_known_file "history-storage.cjs" \
+            "scripts/history/history-storage.cjs"
+          move_known_file "history-summary-builder.cjs" \
+            "scripts/history/history-summary-builder.cjs"
+
+          move_known_file "yahoo-history-adapter.cjs" \
+            "scripts/history/adapters/yahoo-history-adapter.cjs"
+          move_known_file "local-verification-adapter.cjs" \
+            "scripts/history/adapters/local-verification-adapter.cjs"
+          move_known_file "approved-verification-adapter.cjs" \
+            "scripts/history/adapters/approved-verification-adapter.cjs"
+
+          move_known_file "http-client.cjs" \
+            "scripts/history/lib/http-client.cjs"
+          move_known_file "utils.cjs" \
+            "scripts/history/lib/utils.cjs"
+
+          # Remove empty misplaced directories only; never delete non-empty legacy folders.
+          find scripts -depth -type d -empty -delete || true
+
+      - name: Validate final layout
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          required=(
+            scripts/history/historical-100-runner.cjs
+            scripts/history/acceptance-tests.cjs
+            scripts/history/history-validator.cjs
+            scripts/history/history-storage.cjs
+            scripts/history/history-summary-builder.cjs
+            scripts/history/adapters/yahoo-history-adapter.cjs
+            scripts/history/adapters/local-verification-adapter.cjs
+            scripts/history/adapters/approved-verification-adapter.cjs
+            scripts/history/lib/http-client.cjs
+            scripts/history/lib/utils.cjs
+          )
+
+          for file in "${required[@]}"; do
+            test -f "$file" || {
+              echo "Required file is missing: $file"
+              exit 1
+            }
+            node --check "$file"
+          done
+
+          echo "V12.2 history layout is valid."
+
+      - name: Enforce scripts-only changes
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          mapfile -t changed < <(
+            {
+              git diff --name-only
+              git diff --cached --name-only
+              git ls-files --others --exclude-standard
+            } | sed '/^$/d' | sort -u
+          )
+
+          echo "Changed files:"
+          printf '%s\n' "${changed[@]:-none}"
+
+          for file in "${changed[@]}"; do
+            case "$file" in
+              scripts/*) ;;
+              *)
+                echo "SAFETY STOP: unexpected change outside scripts: $file"
+                exit 1
+                ;;
+            esac
+          done
+
+      - name: Commit corrected layout
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git add -A scripts
+
+          if git diff --cached --quiet; then
+            echo "No changes required; layout was already correct."
+            exit 0
+          fi
+
+          git commit -m "Fix V12.2 historical engine file layout"
+          git push origin HEAD:main
+
+      - name: Show final structure
+        shell: bash
+        run: |
+          find scripts/history -maxdepth 3 -type f | sort
