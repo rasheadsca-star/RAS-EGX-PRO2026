@@ -73,12 +73,23 @@ function selectEntries(entries) {
     selected = entries.filter((entry) => entry.sample).slice(0, 10);
     if (!selected.length) selected = entries.slice(0, 10);
     batchNumber = null;
+  } else if (MODE === 'retry_resolved') {
+    const repairReport = readJson(path.join(DATA_DIR, 'history-symbol-repair-report.json'), {});
+    const resolved = new Set((repairReport.resolvedTickers || []).map(safeTicker).filter(Boolean));
+    selected = entries.filter((entry) => resolved.has(entry.ticker));
+    batchNumber = Number(repairReport.batchNumber || EXPLICIT_BATCH_NUMBER || 1);
   } else if (MODE === 'retry_failed') {
-    selected = entries.filter((entry) => {
+    const failedEntries = entries.filter((entry) => {
       const document = readHistory(REPO_ROOT, entry.ticker);
       return !document || document.updateFailed || !document.symbolVerified || (document.sessions || []).length < 20;
-    }).slice(0, BATCH_SIZE);
-    batchNumber = null;
+    });
+    const failedBatches = Math.max(1, Math.ceil(failedEntries.length / BATCH_SIZE));
+    if (EXPLICIT_BATCH_NUMBER > failedBatches) {
+      throw new Error(`Retry batch ${EXPLICIT_BATCH_NUMBER} exceeds ${failedBatches} failed-symbol batches.`);
+    }
+    const start = (EXPLICIT_BATCH_NUMBER - 1) * BATCH_SIZE;
+    selected = failedEntries.slice(start, start + BATCH_SIZE);
+    batchNumber = EXPLICIT_BATCH_NUMBER;
   } else if (MODE === 'incremental_auto' || MODE === 'incremental') {
     batchNumber = Math.max(1, Math.min(totalBatches, Number(state.nextIncrementalBatch || 1)));
     const start = (batchNumber - 1) * BATCH_SIZE;
