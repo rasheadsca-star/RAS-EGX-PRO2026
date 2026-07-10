@@ -1,0 +1,88 @@
+name: EGX Portfolio Risk & Decision Journal — V13.8
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Sunday through Thursday after V13.7.
+    - cron: "20 15 * * 0-4"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: egx-portfolio-risk-v13-8
+  cancel-in-progress: false
+
+jobs:
+  build-risk-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Validate V13.7 and V13.8 files
+        shell: bash
+        run: |
+          set -euo pipefail
+          required=(
+            data/quant/stock-intelligence-index.json
+            data/v13-8-risk-policy.json
+            scripts/quant/v13-8-portfolio-risk.cjs
+            scripts/quant/v13-8-acceptance.cjs
+            preview-v13/app/index.html
+            preview-v13/app/risk-allocation.html
+            preview-v13/app/decision-journal.html
+          )
+          for file in "${required[@]}"; do
+            test -f "$file" || { echo "Missing required file: $file"; exit 1; }
+          done
+          test -d data/history || { echo "Missing data/history"; exit 1; }
+          node --check scripts/quant/v13-8-portfolio-risk.cjs
+          node --check scripts/quant/v13-8-acceptance.cjs
+
+      - name: Build V13.8 portfolio risk universe
+        run: |
+          node scripts/quant/v13-8-portfolio-risk.cjs
+          node scripts/quant/v13-8-acceptance.cjs
+
+      - name: Commit V13.8 output
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/quant/portfolio-risk-universe.json
+          if git diff --cached --quiet; then
+            echo "No V13.8 output changes."
+          else
+            git commit -m "Update V13.8 portfolio risk universe"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload repository for Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy V13.8
+        id: deployment
+        uses: actions/deploy-pages@v4
