@@ -1,0 +1,242 @@
+name: EGX Historical Seed XLSX Import — V12.6
+
+on:
+  workflow_dispatch:
+    inputs:
+      min_success:
+        description: "Minimum imported or improved symbols required"
+        required: true
+        default: "1"
+        type: string
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: egx-historical-update
+  cancel-in-progress: false
+
+jobs:
+  import-seed:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install XLSX reader
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install --disable-pip-version-check --no-input "openpyxl==3.1.5"
+
+      - name: Validate V12.6 package and stable-app isolation
+        shell: bash
+        run: |
+          set -euo pipefail
+          required=(
+            scripts/history/xlsx-seed-importer.py
+            scripts/history/acceptance-tests.cjs
+            scripts/history/history-summary-builder.cjs
+            scripts/history/history-validator.cjs
+            scripts/history/lib/utils.cjs
+            data/history-seed-import-config.json
+            data/imports/EGX_Historical_100_Sessions_Seed.xlsx
+            data/symbol-map.json
+            preview-v12/history-100.html
+          )
+          for file in "${required[@]}"; do
+            test -f "$file" || { echo "Missing required file: $file"; exit 1; }
+          done
+          python -m py_compile scripts/history/xlsx-seed-importer.py
+          node --check scripts/history/acceptance-tests.cjs
+          node --check scripts/history/history-summary-builder.cjs
+          echo "V11/V11.5 stable application files are outside the write allow-list."
+
+      - name: Import reviewed historical XLSX seed
+        id: import
+        shell: bash
+        run: |
+          set -euo pipefail
+          python scripts/history/xlsx-seed-importer.py | tee /tmp/v12-6-seed-import.log
+          imported_count=$(python - <<'PY'
+          import json
+          with open('data/history-seed-import-report.json', encoding='utf-8') as f:
+              r=json.load(f)
+          print(int(r.get('counts',{}).get('importedOrImproved',0)))
+          PY
+          )
+          echo "imported_count=$imported_count" >> "$GITHUB_OUTPUT"
+          echo "Imported or improved symbols: $imported_count"
+          if [ "$imported_count" -lt "${{ inputs.min_success }}" ]; then
+            echo "Only $imported_count symbols were imported or improved; minimum required is ${{ inputs.min_success }}"
+            exit 1
+          fi
+
+      - name: Rebuild historical coverage from stored files
+        shell: bash
+        run: |
+          set -euo pipefail
+          node - <<'NODE'
+          const path = require('path');
+          const { readJson, writeJsonAtomic, nowIso } = require('./scripts/history/lib/utils.cjs');
+          const { buildSummary, buildSessionCalendar } = require('./scripts/history/history-summary-builder.cjs');
+          const root = process.cwd();
+          const raw = readJson(path.join(root, 'data/symbol-map.json'), {});
+          const entries = (Array.isArray(raw) ? raw : Object.values(raw)).filter((entry) => entry.active !== false);
+          const summary = buildSummary(root, entries, {
+            egx: { status: 'manual_or_approved_import', role: 'official verification' },
+            yahoo: { status: 'live_and_historical_seed', role: 'historical backfill' },
+            mubasher: { status: 'existing_cache_or_approved_import', role: 'cross-check/fallback' },
+            investing: { status: 'approved_import', role: 'fallback' },
+            kaggle_yahoo_seed: { status: 'imported_single_source_seed', role: 'historical gap fallback' },
+          });
+          buildSessionCalendar(root, summary);
+          const reportPath = path.join(root, 'data/history-seed-import-report.json');
+          const report = readJson(reportPath, {});
+          report.coverageAfterImport = summary.coverage;
+          report.summaryAfterImport = {
+            symbolsComplete100: summary.symbolsComplete100,
+            sessions50Count: summary.coverage.sessions50Count,
+            sessions20Count: summary.coverage.sessions20Count,
+            symbolsFailed: summary.symbolsFailed,
+            averageConfidence: summary.averageConfidence,
+            latestMarketSession: summary.latestMarketSession,
+          };
+          writeJsonAtomic(reportPath, report);
+          const lastRunPath = path.join(root, 'data/history-last-run.json');
+          const lastRun = readJson(lastRunPath, {});
+          lastRun.coverageAfterRun = summary.coverage;
+          lastRun.generatedAt = nowIso();
+          writeJsonAtomic(lastRunPath, lastRun);
+          NODE
+
+      - name: Run acceptance tests
+        env:
+          HISTORY_MODE: import_seed_xlsx
+          HISTORY_MIN_SUCCESS: "1"
+        run: node scripts/history/acceptance-tests.cjs
+
+      - name: Enforce strict write isolation
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t changed < <(
+            {
+              git diff --name-only
+              git diff --cached --name-only
+              git ls-files --others --exclude-standard
+            } | sed '/^$/d' | sort -u
+          )
+
+          echo "Changed files:"
+          if [ "${#changed[@]}" -eq 0 ]; then echo "none"; else printf '%s\n' "${changed[@]}"; fi
+
+          for file in "${changed[@]}"; do
+            case "$file" in
+              data/symbol-map.json|data/history/*.json|data/history-summary.json|data/source-audit.json|data/session-calendar.json|data/history-batch-state.json|data/history-last-run.json|data/history-seed-import-report.json|data/history-seed-quarantine.json|data/history-fallback-queue.json)
+                ;;
+              *)
+                echo "SAFETY STOP: forbidden changed path: $file"
+                exit 1
+                ;;
+            esac
+          done
+
+          test -z "$(git diff --name-only -- index.html service-worker.js assets config preview-v12/index.html)"
+          echo "Isolation passed. Stable application files were not touched."
+
+      - name: Commit valid V12.6 seed outputs only
+        id: commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          allowed=(
+            data/symbol-map.json
+            data/history
+            data/history-summary.json
+            data/source-audit.json
+            data/session-calendar.json
+            data/history-batch-state.json
+            data/history-last-run.json
+            data/history-seed-import-report.json
+            data/history-seed-quarantine.json
+            data/history-fallback-queue.json
+          )
+          for item in "${allowed[@]}"; do
+            if [ -e "$item" ] || git ls-files --error-unmatch "$item" >/dev/null 2>&1; then
+              git add -A -- "$item"
+            fi
+          done
+
+          if git diff --cached --quiet; then
+            echo "No valid V12.6 changes to commit."
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          git commit -m "V12.6 import reviewed historical XLSX seed"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Upload V12.6 diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v12-6-seed-import-${{ github.run_number }}
+          if-no-files-found: ignore
+          retention-days: 14
+          path: |
+            data/history-seed-import-report.json
+            data/history-seed-quarantine.json
+            data/history-summary.json
+            data/history-last-run.json
+            data/history-fallback-queue.json
+
+  deploy:
+    needs: import-seed
+    if: success()
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload current repository to Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy V12.6 history preview
+        id: deployment
+        uses: actions/deploy-pages@v4
