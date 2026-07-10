@@ -1,0 +1,866 @@
+{
+  "schemaVersion": "13.0.0",
+  "startedAt": "2026-07-10T10:57:04.272Z",
+  "completedAt": "2026-07-10T10:57:20.785Z",
+  "mode": "safe_apply",
+  "latestMarketSession": "2026-07-09",
+  "source": {
+    "name": "Starta Markets public EGX OHLC API",
+    "role": "targeted sparse repair and adjustment diagnostics",
+    "officialEgxVerified": false,
+    "confidenceCap": 70
+  },
+  "delistedInstrument": {
+    "ticker": "ESRS",
+    "delistedAt": "2025-03-12",
+    "sourceUrl": "https://www.egx.com.eg/en/NewsDetails.aspx?NewsID=267067",
+    "denominatorBefore": 243
+  },
+  "counts": {
+    "selected": 7,
+    "improved": 2,
+    "manualApprovalRequired": 2,
+    "inactiveDelisted": 1,
+    "failed": 2,
+    "appendedSessions": 12,
+    "becameComplete100": 1
+  },
+  "coverageBefore": {
+    "basis": "all_active_mapped_symbols",
+    "denominator": 243,
+    "sessions20Count": 199,
+    "sessions20Pct": 81.89,
+    "sessions50Count": 199,
+    "sessions50Pct": 81.89,
+    "sessions100Count": 192,
+    "sessions100Pct": 79.01
+  },
+  "coverageAfter": {
+    "basis": "all_active_mapped_symbols",
+    "denominator": 242,
+    "sessions20Count": 198,
+    "sessions20Pct": 81.82,
+    "sessions50Count": 198,
+    "sessions50Pct": 81.82,
+    "sessions100Count": 193,
+    "sessions100Pct": 79.75
+  },
+  "summaryAfter": {
+    "symbolsTotal": 242,
+    "symbolsComplete100": 193,
+    "symbolsComplete50": 5,
+    "symbolsFailed": 44,
+    "averageConfidence": 74.44,
+    "latestMarketSession": "2026-07-09"
+  },
+  "results": [
+    {
+      "ticker": "EGSA",
+      "startedAt": "2026-07-10T10:57:04.278Z",
+      "completedAt": "2026-07-10T10:57:07.862Z",
+      "status": "manual_approval_required",
+      "action": "stable_adjustment_factor_detected_no_write",
+      "beforeSessions": 64,
+      "afterSessions": 64,
+      "previousLastSession": "2026-02-04",
+      "lastSession": "2026-02-04",
+      "appendedSessions": 0,
+      "adjustment": {
+        "observations": 55,
+        "factor": 1.07737981,
+        "maxDeviationPct": 0.000854,
+        "medianDeviationPct": 0.000278,
+        "stable": true,
+        "requiresManualApproval": true,
+        "samples": [
+          {
+            "date": "2026-01-11",
+            "existingClose": 6.739999771118164,
+            "incomingClose": 6.2559,
+            "factor": 1.07738291
+          },
+          {
+            "date": "2026-01-19",
+            "existingClose": 6.75,
+            "incomingClose": 6.2652,
+            "factor": 1.07737981
+          },
+          {
+            "date": "2026-01-20",
+            "existingClose": 6.75,
+            "incomingClose": 6.2652,
+            "factor": 1.07737981
+          },
+          {
+            "date": "2026-01-21",
+            "existingClose": 6.75,
+            "incomingClose": 6.2652,
+            "factor": 1.07737981
+          },
+          {
+            "date": "2026-01-22",
+            "existingClose": 6.75,
+            "incomingClose": 6.2652,
+            "factor": 1.07737981
+          },
+          {
+            "date": "2026-01-25",
+            "existingClose": 6.739999771118164,
+            "incomingClose": 6.2559,
+            "factor": 1.07738291
+          },
+          {
+            "date": "2026-01-27",
+            "existingClose": 6.739999771118164,
+            "incomingClose": 6.2559,
+            "factor": 1.07738291
+          },
+          {
+            "date": "2026-01-28",
+            "existingClose": 6.78000020980835,
+            "incomingClose": 6.293,
+            "factor": 1.07738761
+          },
+          {
+            "date": "2026-02-01",
+            "existingClose": 6.75,
+            "incomingClose": 6.2652,
+            "factor": 1.07737981
+          },
+          {
+            "date": "2026-02-02",
+            "existingClose": 6.75,
+            "incomingClose": 6.2652,
+            "factor": 1.07737981
+          },
+          {
+            "date": "2026-02-03",
+            "existingClose": 6.75,
+            "incomingClose": 6.2652,
+            "factor": 1.07737981
+          },
+          {
+            "date": "2026-02-04",
+            "existingClose": 6.75,
+            "incomingClose": 6.2652,
+            "factor": 1.07737981
+          }
+        ]
+      },
+      "approval": {
+        "ticker": "EGSA",
+        "approved": false,
+        "factor": null,
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "sourceUrls": [],
+        "reviewNotes": ""
+      },
+      "sourceUrl": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGSA?period=5y&limit=2000",
+      "warnings": [
+        "no_history_changed",
+        "corporate_action_or_adjusted_close_review_required"
+      ],
+      "error": null,
+      "proposedNewSessions": 95
+    },
+    {
+      "ticker": "FAITA",
+      "startedAt": "2026-07-10T10:57:08.761Z",
+      "completedAt": "2026-07-10T10:57:11.102Z",
+      "status": "manual_approval_required",
+      "action": "stable_adjustment_factor_detected_no_write",
+      "beforeSessions": 76,
+      "afterSessions": 76,
+      "previousLastSession": "2026-02-04",
+      "lastSession": "2026-02-04",
+      "appendedSessions": 0,
+      "adjustment": {
+        "observations": 76,
+        "factor": 1.04122845,
+        "maxDeviationPct": 0.005982,
+        "medianDeviationPct": 0.002537,
+        "stable": true,
+        "requiresManualApproval": true,
+        "samples": [
+          {
+            "date": "2026-01-06",
+            "existingClose": 0.9850000143051147,
+            "incomingClose": 0.946,
+            "factor": 1.04122623
+          },
+          {
+            "date": "2026-01-08",
+            "existingClose": 0.984000027179718,
+            "incomingClose": 0.945,
+            "factor": 1.04126987
+          },
+          {
+            "date": "2026-01-11",
+            "existingClose": 0.984000027179718,
+            "incomingClose": 0.945,
+            "factor": 1.04126987
+          },
+          {
+            "date": "2026-01-13",
+            "existingClose": 0.9900000095367432,
+            "incomingClose": 0.9508,
+            "factor": 1.04122845
+          },
+          {
+            "date": "2026-01-15",
+            "existingClose": 0.9869999885559082,
+            "incomingClose": 0.9479,
+            "factor": 1.04124906
+          },
+          {
+            "date": "2026-01-20",
+            "existingClose": 0.9879999756813049,
+            "incomingClose": 0.9489,
+            "factor": 1.04120558
+          },
+          {
+            "date": "2026-01-21",
+            "existingClose": 0.9879999756813049,
+            "incomingClose": 0.9489,
+            "factor": 1.04120558
+          },
+          {
+            "date": "2026-01-22",
+            "existingClose": 0.9869999885559082,
+            "incomingClose": 0.9479,
+            "factor": 1.04124906
+          },
+          {
+            "date": "2026-01-28",
+            "existingClose": 0.9850000143051147,
+            "incomingClose": 0.946,
+            "factor": 1.04122623
+          },
+          {
+            "date": "2026-02-02",
+            "existingClose": 0.9890000224113464,
+            "incomingClose": 0.9498,
+            "factor": 1.04127187
+          },
+          {
+            "date": "2026-02-03",
+            "existingClose": 0.9890000224113464,
+            "incomingClose": 0.9498,
+            "factor": 1.04127187
+          },
+          {
+            "date": "2026-02-04",
+            "existingClose": 0.9890000224113464,
+            "incomingClose": 0.9498,
+            "factor": 1.04127187
+          }
+        ]
+      },
+      "approval": {
+        "ticker": "FAITA",
+        "approved": false,
+        "factor": null,
+        "reviewedBy": null,
+        "reviewedAt": null,
+        "sourceUrls": [],
+        "reviewNotes": ""
+      },
+      "sourceUrl": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/FAITA?period=5y&limit=2000",
+      "warnings": [
+        "no_history_changed",
+        "corporate_action_or_adjusted_close_review_required"
+      ],
+      "error": null,
+      "proposedNewSessions": 99
+    },
+    {
+      "ticker": "GPPL",
+      "startedAt": "2026-07-10T10:57:12.003Z",
+      "completedAt": "2026-07-10T10:57:13.672Z",
+      "status": "improved",
+      "action": "sparse_extended_overlap_repair",
+      "beforeSessions": 87,
+      "afterSessions": 95,
+      "previousLastSession": "2026-02-03",
+      "lastSession": "2026-07-09",
+      "rowsReceived": 583,
+      "appendedSessions": 8,
+      "becameComplete100": false,
+      "recentEnough": true,
+      "evidence": {
+        "accepted": true,
+        "method": "sparse_exact_overlap_with_isin",
+        "exact": {
+          "overlapCount": 2,
+          "matches": 2,
+          "ratio": 1,
+          "samples": [
+            {
+              "date": "2025-09-14",
+              "existingClose": 1.2400000095367432,
+              "incomingClose": 1.24,
+              "differencePct": 0,
+              "matched": true
+            },
+            {
+              "date": "2025-09-15",
+              "existingClose": 1.4199999570846558,
+              "incomingClose": 1.42,
+              "differencePct": 0,
+              "matched": true
+            }
+          ]
+        },
+        "shifted": {
+          "offsetDays": 1,
+          "overlapCount": 11,
+          "matches": 10,
+          "ratio": 0.9091,
+          "samples": [
+            {
+              "existingDate": "2025-09-14",
+              "incomingDate": "2025-09-15",
+              "offsetDays": 1,
+              "existingClose": 1.2400000095367432,
+              "incomingClose": 1.42,
+              "differencePct": 14.5161,
+              "matched": false
+            },
+            {
+              "existingDate": "2025-09-15",
+              "incomingDate": "2025-09-16",
+              "offsetDays": 1,
+              "existingClose": 1.4199999570846558,
+              "incomingClose": 1.42,
+              "differencePct": 0,
+              "matched": true
+            },
+            {
+              "existingDate": "2025-09-21",
+              "incomingDate": "2025-09-22",
+              "offsetDays": 1,
+              "existingClose": 1.4199999570846558,
+              "incomingClose": 1.42,
+              "differencePct": 0,
+              "matched": true
+            },
+            {
+              "existingDate": "2025-10-05",
+              "incomingDate": "2025-10-06",
+              "offsetDays": 1,
+              "existingClose": 1.4199999570846558,
+              "incomingClose": 1.42,
+              "differencePct": 0,
+              "matched": true
+            },
+            {
+              "existingDate": "2025-10-07",
+              "incomingDate": "2025-10-08",
+              "offsetDays": 1,
+              "existingClose": 1.4199999570846558,
+              "incomingClose": 1.42,
+              "differencePct": 0,
+              "matched": true
+            },
+            {
+              "existingDate": "2025-10-26",
+              "incomingDate": "2025-10-27",
+              "offsetDays": 1,
+              "existingClose": 1.4199999570846558,
+              "incomingClose": 1.42,
+              "differencePct": 0,
+              "matched": true
+            },
+            {
+              "existingDate": "2025-10-28",
+              "incomingDate": "2025-10-29",
+              "offsetDays": 1,
+              "existingClose": 1.4199999570846558,
+              "incomingClose": 1.42,
+              "differencePct": 0,
+              "matched": true
+            },
+            {
+              "existingDate": "2026-01-05",
+              "incomingDate": "2026-01-06",
+              "offsetDays": 1,
+              "existingClose": 1.4199999570846558,
+              "incomingClose": 1.4,
+              "differencePct": 1.4084,
+              "matched": true
+            },
+            {
+              "existingDate": "2026-01-11",
+              "incomingDate": "2026-01-12",
+              "offsetDays": 1,
+              "existingClose": 1.399999976158142,
+              "incomingClose": 1.4,
+              "differencePct": 0,
+              "matched": true
+            },
+            {
+              "existingDate": "2026-01-20",
+              "incomingDate": "2026-01-21",
+              "offsetDays": 1,
+              "existingClose": 1.399999976158142,
+              "incomingClose": 1.4,
+              "differencePct": 0,
+              "matched": true
+            },
+            {
+              "existingDate": "2026-02-03",
+              "incomingDate": "2026-02-04",
+              "offsetDays": 1,
+              "existingClose": 1.399999976158142,
+              "incomingClose": 1.4,
+              "differencePct": 0,
+              "matched": true
+            }
+          ]
+        },
+        "bridge": {
+          "accepted": true,
+          "strongIdentity": true,
+          "newSessions": 8,
+          "gapDays": 1,
+          "closeDifferencePct": 0,
+          "firstNewDate": "2026-02-04",
+          "firstNewClose": 1.4,
+          "lastNewDate": "2026-07-09",
+          "existingLastDate": "2026-02-03",
+          "existingLastClose": 1.399999976158142
+        }
+      },
+      "identity": {
+        "verified": true,
+        "exactSymbol": true,
+        "egxMarket": true,
+        "nameAccepted": true,
+        "exactIsin": true,
+        "isinAccepted": true,
+        "nameSimilarity": 1,
+        "identity": {
+          "symbol": "GPPL",
+          "marketCode": "EGX",
+          "nameEn": "Golden Pyramids Plaza",
+          "nameAr": "جولدن بيراميدز بلازا",
+          "isin": "EGS70342C018",
+          "currency": "USD",
+          "lastPrice": 1.33,
+          "raw": {
+            "symbol": "GPPL",
+            "name_ar": "جولدن بيراميدز بلازا",
+            "name_en": "Golden Pyramids Plaza",
+            "market_code": "EGX",
+            "sector_name": "Finance",
+            "currency": "USD",
+            "last_price": 1.33,
+            "change": -0.07,
+            "change_percent": -5,
+            "volume": 96,
+            "last_updated": "2026-07-09T17:26:18.347347+00:00",
+            "open_price": null,
+            "pe_ratio": null,
+            "pb_ratio": null,
+            "dividend_yield": 0,
+            "beta": 0.075,
+            "high_52w": 1.48,
+            "low_52w": 0.888,
+            "target_price": null,
+            "market_cap": 40922464413,
+            "high": null,
+            "low": null,
+            "prev_close": null,
+            "revenue": 4793023240,
+            "net_income": 2217166960,
+            "industry": "Miscellaneous Amusement And Recreation",
+            "logo_url": "https://s3-symbol-logo.tradingview.com/golden-pyramids-plaza.svg",
+            "isin": "EGS70342C018",
+            "recommend_all": null,
+            "source": "tradingview",
+            "updated_at": "2026-07-09T17:26:21.032349+00:00",
+            "forward_pe": null,
+            "float_shares_percent": 17.3482,
+            "float_shares": 100201641.862,
+            "shareholders_count": null
+          }
+        },
+        "warnings": []
+      },
+      "sourceUrl": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/GPPL?period=5y&limit=2000",
+      "warnings": [
+        "historical_seed_not_officially_verified",
+        "historical_seed_rows_quarantined:13",
+        "v13_targeted_sparse_repair_applied",
+        "v13_evidence_method:sparse_exact_overlap_with_isin",
+        "non_official_public_database_fallback",
+        "not_independently_verified_by_egx"
+      ],
+      "error": null
+    },
+    {
+      "ticker": "NDRL",
+      "startedAt": "2026-07-10T10:57:14.573Z",
+      "completedAt": "2026-07-10T10:57:15.371Z",
+      "status": "failed",
+      "action": "sparse_extended_overlap_repair",
+      "beforeSessions": 100,
+      "afterSessions": 100,
+      "previousLastSession": "2026-02-04",
+      "lastSession": "2026-02-04",
+      "rowsReceived": 34,
+      "appendedSessions": 0,
+      "becameComplete100": false,
+      "recentEnough": false,
+      "evidence": {
+        "accepted": false,
+        "method": null,
+        "exact": {
+          "overlapCount": 0,
+          "matches": 0,
+          "ratio": 0,
+          "samples": []
+        },
+        "shifted": {
+          "offsetDays": null,
+          "overlapCount": 0,
+          "matches": 0,
+          "ratio": 0,
+          "samples": []
+        },
+        "bridge": {
+          "accepted": false,
+          "strongIdentity": true,
+          "newSessions": 0,
+          "gapDays": null,
+          "closeDifferencePct": null,
+          "firstNewDate": null,
+          "firstNewClose": null,
+          "lastNewDate": null,
+          "existingLastDate": "2026-02-04",
+          "existingLastClose": 4.690000057220459
+        }
+      },
+      "identity": {
+        "verified": true,
+        "exactSymbol": true,
+        "egxMarket": true,
+        "nameAccepted": true,
+        "exactIsin": true,
+        "isinAccepted": true,
+        "nameSimilarity": 1,
+        "identity": {
+          "symbol": "NDRL",
+          "marketCode": "EGX",
+          "nameEn": "National Drilling Co.",
+          "nameAr": "الحفر الوطنية",
+          "isin": "EGS735N2C012",
+          "currency": "USD",
+          "lastPrice": 4.69,
+          "raw": {
+            "symbol": "NDRL",
+            "name_ar": "الحفر الوطنية",
+            "name_en": "National Drilling Co.",
+            "market_code": "EGX",
+            "sector_name": "Industrial Services",
+            "currency": "USD",
+            "last_price": 4.69,
+            "change": 0,
+            "change_percent": 0,
+            "volume": 0,
+            "last_updated": "2026-07-09T17:26:17.782634+00:00",
+            "open_price": null,
+            "pe_ratio": null,
+            "pb_ratio": null,
+            "dividend_yield": 0,
+            "beta": -0.3644,
+            "high_52w": 5.62,
+            "low_52w": 4.69,
+            "target_price": null,
+            "market_cap": 1422064714,
+            "high": null,
+            "low": null,
+            "prev_close": null,
+            "revenue": 1186106232,
+            "net_income": 369167060,
+            "industry": "Drilling Oil and Gas Wells",
+            "logo_url": "https://s3-symbol-logo.tradingview.com/national-drilling.svg",
+            "isin": "EGS735N2C012",
+            "recommend_all": null,
+            "source": "tradingview",
+            "updated_at": "2026-07-09T17:26:21.032349+00:00",
+            "forward_pe": null,
+            "float_shares_percent": 0.999999999999996,
+            "float_shares": 49999.9999999998,
+            "shareholders_count": null
+          }
+        },
+        "warnings": []
+      },
+      "sourceUrl": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/NDRL?period=5y&limit=2000",
+      "warnings": [
+        "existing_history_preserved_unchanged"
+      ],
+      "error": "targeted_evidence_failed:{\"exact\":{\"overlapCount\":0,\"matches\":0,\"ratio\":0,\"samples\":[]},\"shifted\":{\"offsetDays\":null,\"overlapCount\":0,\"matches\":0,\"ratio\":0,\"samples\":[]},\"bridge\":{\"accepted\":false,\"strongIdentity\":true,\"newSessions\":0,\"gapDays\":null,\"closeDifferencePct\":null,\"firstNewDate\":null,\"firstNewClose\":null,\"lastNewDate\":null,\"existingLastDate\":\"2026-02-04\",\"existingLastClose\":4.690000057220459}}",
+      "details": null
+    },
+    {
+      "ticker": "SAIB",
+      "startedAt": "2026-07-10T10:57:16.270Z",
+      "completedAt": "2026-07-10T10:57:17.927Z",
+      "status": "improved",
+      "action": "sparse_extended_overlap_repair",
+      "beforeSessions": 97,
+      "afterSessions": 100,
+      "previousLastSession": "2026-02-04",
+      "lastSession": "2026-07-06",
+      "rowsReceived": 528,
+      "appendedSessions": 4,
+      "becameComplete100": true,
+      "recentEnough": true,
+      "evidence": {
+        "accepted": true,
+        "method": "exact_isin_contiguous_bridge",
+        "exact": {
+          "overlapCount": 0,
+          "matches": 0,
+          "ratio": 0,
+          "samples": []
+        },
+        "shifted": {
+          "offsetDays": null,
+          "overlapCount": 0,
+          "matches": 0,
+          "ratio": 0,
+          "samples": []
+        },
+        "bridge": {
+          "accepted": true,
+          "strongIdentity": true,
+          "newSessions": 4,
+          "gapDays": 5,
+          "closeDifferencePct": 14.218,
+          "firstNewDate": "2026-02-09",
+          "firstNewClose": 1.81,
+          "lastNewDate": "2026-07-06",
+          "existingLastDate": "2026-02-04",
+          "existingLastClose": 2.109999895095825
+        }
+      },
+      "identity": {
+        "verified": true,
+        "exactSymbol": true,
+        "egxMarket": true,
+        "nameAccepted": true,
+        "exactIsin": true,
+        "isinAccepted": true,
+        "nameSimilarity": 1,
+        "identity": {
+          "symbol": "SAIB",
+          "marketCode": "EGX",
+          "nameEn": "Societe Arabe Internationale de Banque",
+          "nameAr": "بنك الشركة المصرفية العربية الدولية",
+          "isin": "EGS60142C014",
+          "currency": "USD",
+          "lastPrice": 2.11,
+          "raw": {
+            "symbol": "SAIB",
+            "name_ar": "بنك الشركة المصرفية العربية الدولية",
+            "name_en": "Societe Arabe Internationale de Banque",
+            "market_code": "EGX",
+            "sector_name": "Finance",
+            "currency": "USD",
+            "last_price": 2.11,
+            "change": 0,
+            "change_percent": 0,
+            "volume": 0,
+            "last_updated": "2026-07-09T17:26:16.616402+00:00",
+            "open_price": null,
+            "pe_ratio": 2.32,
+            "pb_ratio": 0.1727,
+            "dividend_yield": 14.218,
+            "beta": 0.0568,
+            "high_52w": 2.53,
+            "low_52w": 2.11,
+            "target_price": null,
+            "market_cap": 3534730383,
+            "high": null,
+            "low": null,
+            "prev_close": null,
+            "revenue": 6862758947,
+            "net_income": 1173962202,
+            "industry": "Commercial Banks",
+            "logo_url": "https://s3-symbol-logo.tradingview.com/societe-arabe-internationale-de-banque-saib.svg",
+            "isin": "EGS60142C014",
+            "recommend_all": null,
+            "source": "tradingview",
+            "updated_at": "2026-07-09T17:26:21.032349+00:00",
+            "forward_pe": null,
+            "float_shares_percent": 32.2694,
+            "float_shares": 10681978.135,
+            "shareholders_count": null
+          }
+        },
+        "warnings": []
+      },
+      "sourceUrl": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/SAIB?period=5y&limit=2000",
+      "warnings": [
+        "historical_seed_not_officially_verified",
+        "historical_seed_rows_quarantined:3",
+        "v13_targeted_sparse_repair_applied",
+        "v13_evidence_method:exact_isin_contiguous_bridge",
+        "non_official_public_database_fallback",
+        "not_independently_verified_by_egx"
+      ],
+      "error": null
+    },
+    {
+      "ticker": "SPHT",
+      "startedAt": "2026-07-10T10:57:18.827Z",
+      "completedAt": "2026-07-10T10:57:19.635Z",
+      "status": "failed",
+      "action": "sparse_extended_overlap_repair",
+      "beforeSessions": 96,
+      "afterSessions": 96,
+      "previousLastSession": "2026-02-04",
+      "lastSession": "2026-02-04",
+      "rowsReceived": 47,
+      "appendedSessions": 0,
+      "becameComplete100": false,
+      "recentEnough": false,
+      "evidence": {
+        "accepted": false,
+        "method": null,
+        "exact": {
+          "overlapCount": 0,
+          "matches": 0,
+          "ratio": 0,
+          "samples": []
+        },
+        "shifted": {
+          "offsetDays": -1,
+          "overlapCount": 2,
+          "matches": 2,
+          "ratio": 1,
+          "samples": [
+            {
+              "existingDate": "2025-09-23",
+              "incomingDate": "2025-09-22",
+              "offsetDays": -1,
+              "existingClose": 1.9052300453186035,
+              "incomingClose": 1.9052,
+              "differencePct": 0.0016,
+              "matched": true
+            },
+            {
+              "existingDate": "2025-12-11",
+              "incomingDate": "2025-12-10",
+              "offsetDays": -1,
+              "existingClose": 1.909999966621399,
+              "incomingClose": 1.91,
+              "differencePct": 0,
+              "matched": true
+            }
+          ]
+        },
+        "bridge": {
+          "accepted": false,
+          "strongIdentity": true,
+          "newSessions": 2,
+          "gapDays": 75,
+          "closeDifferencePct": 0,
+          "firstNewDate": "2026-04-20",
+          "firstNewClose": 1.91,
+          "lastNewDate": "2026-04-29",
+          "existingLastDate": "2026-02-04",
+          "existingLastClose": 1.909999966621399
+        }
+      },
+      "identity": {
+        "verified": true,
+        "exactSymbol": true,
+        "egxMarket": true,
+        "nameAccepted": true,
+        "exactIsin": true,
+        "isinAccepted": true,
+        "nameSimilarity": 1,
+        "identity": {
+          "symbol": "SPHT",
+          "marketCode": "EGX",
+          "nameEn": "El Shams Pyramids Co. for Hotels & Touristic Projects SAE",
+          "nameAr": "الشمس بيراميدز",
+          "isin": "EGS70H02C014",
+          "currency": "USD",
+          "lastPrice": 1.91,
+          "raw": {
+            "symbol": "SPHT",
+            "name_ar": "الشمس بيراميدز",
+            "name_en": "El Shams Pyramids Co. for Hotels & Touristic Projects SAE",
+            "market_code": "EGX",
+            "sector_name": "Consumer Services",
+            "currency": "USD",
+            "last_price": 1.91,
+            "change": 0,
+            "change_percent": 0,
+            "volume": 0,
+            "last_updated": "2026-07-09T17:26:20.830759+00:00",
+            "open_price": null,
+            "pe_ratio": null,
+            "pb_ratio": null,
+            "dividend_yield": 0,
+            "beta": 0.0251,
+            "high_52w": 1.91,
+            "low_52w": 1.4017,
+            "target_price": null,
+            "market_cap": 8090193652,
+            "high": null,
+            "low": null,
+            "prev_close": null,
+            "revenue": -6729203,
+            "net_income": -427106113,
+            "industry": "Hotels and Motels",
+            "logo_url": "https://s3-symbol-logo.tradingview.com/el-shams-pyramids-for-hotelsand-touristic-projects.svg",
+            "isin": "EGS70H02C014",
+            "recommend_all": null,
+            "source": "tradingview",
+            "updated_at": "2026-07-09T17:26:21.032349+00:00",
+            "forward_pe": null,
+            "float_shares_percent": 17.0562,
+            "float_shares": 14350745.556,
+            "shareholders_count": null
+          }
+        },
+        "warnings": []
+      },
+      "sourceUrl": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/SPHT?period=5y&limit=2000",
+      "warnings": [
+        "existing_history_preserved_unchanged"
+      ],
+      "error": "targeted_evidence_failed:{\"exact\":{\"overlapCount\":0,\"matches\":0,\"ratio\":0,\"samples\":[]},\"shifted\":{\"offsetDays\":-1,\"overlapCount\":2,\"matches\":2,\"ratio\":1,\"samples\":[{\"existingDate\":\"2025-09-23\",\"incomingDate\":\"2025-09-22\",\"offsetDays\":-1,\"existingClose\":1.9052300453186035,\"incomingClose\":1.9052,\"differencePct\":0.0016,\"matched\":true},{\"existingDate\":\"2025-12-11\",\"incomingDate\":\"2025-12-10\",\"offsetDays\":-1,\"existingClose\":1.909999966621399,\"incomingClose\":1.91,\"differencePct\":0,\"matched\":true}]},\"bridge\":{\"accepted\":false,\"strongIdentity\":true,\"newSessions\":2,\"gapDays\":75,\"closeDifferencePct\":0,\"firstNewDate\":\"2026-04-20\",\"firstNewClose\":1.91,\"lastNewDate\":\"2026-04-29\",\"existingLastDate\":\"2026-02-04\",\"existingLastClose\":1.909999966621399}}",
+      "details": null
+    },
+    {
+      "ticker": "ESRS",
+      "startedAt": "2026-07-10T10:57:20.535Z",
+      "completedAt": "2026-07-10T10:57:20.537Z",
+      "status": "inactive_delisted",
+      "action": "removed_from_active_universe",
+      "beforeActive": true,
+      "afterActive": false,
+      "source": "egx_official",
+      "sourceUrl": "https://www.egx.com.eg/en/NewsDetails.aspx?NewsID=267067",
+      "warnings": [
+        "historical_file_preserved_for_audit",
+        "excluded_from_trading_decision_and_coverage_denominator"
+      ],
+      "error": null
+    }
+  ],
+  "warnings": [
+    "Sparse repairs require exact EGX identity and ISIN plus overlap, shifted overlap, or a conservative contiguous bridge.",
+    "EGSA and FAITA are never adjusted automatically; a stable factor is only reported until explicit reviewed approval is supplied.",
+    "ESRS is excluded from the active universe based on official EGX final delisting while its historical file is preserved for audit.",
+    "This source is not the official EGX and cannot receive 100% confidence."
+  ]
+}

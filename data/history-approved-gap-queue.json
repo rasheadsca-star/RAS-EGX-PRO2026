@@ -1,6 +1,6 @@
 {
   "schemaVersion": "12.8.0",
-  "generatedAt": "2026-07-10T10:15:20.438Z",
+  "generatedAt": "2026-07-10T10:57:20.785Z",
   "targetLatestMarketSession": "2026-07-09",
   "acceptedSources": [
     "egx_official",
@@ -52,7 +52,11 @@
       "startaGapStatus": "failed",
       "startaAppendedSessions": 0,
       "startaLastAttemptAt": "2026-07-10T10:14:56.067Z",
-      "startaLastError": "overlap_validation_failed:0/55;ratio=0"
+      "startaLastError": "overlap_validation_failed:0/55;ratio=0",
+      "v13Status": "manual_approval_required",
+      "v13Method": "stable_adjustment_factor_detected_no_write",
+      "v13LastAttemptAt": "2026-07-10T10:57:07.862Z",
+      "v13LastError": null
     },
     {
       "ticker": "FAITA",
@@ -74,7 +78,11 @@
       "startaGapStatus": "failed",
       "startaAppendedSessions": 0,
       "startaLastAttemptAt": "2026-07-10T10:15:09.128Z",
-      "startaLastError": "overlap_validation_failed:0/76;ratio=0"
+      "startaLastError": "overlap_validation_failed:0/76;ratio=0",
+      "v13Status": "manual_approval_required",
+      "v13Method": "stable_adjustment_factor_detected_no_write",
+      "v13LastAttemptAt": "2026-07-10T10:57:11.102Z",
+      "v13LastError": null
     },
     {
       "ticker": "GPPL",
@@ -86,7 +94,7 @@
       "requiredAfterDate": "2026-02-03",
       "targetLatestMarketSession": "2026-07-09",
       "reason": "identity_evidence_failed",
-      "approvedImportStatus": "waiting_for_reviewed_data",
+      "approvedImportStatus": "completed_by_v13_targeted_repair",
       "acceptedSources": [
         "egx_official",
         "mubasher",
@@ -96,7 +104,11 @@
       "startaGapStatus": "failed",
       "startaAppendedSessions": 0,
       "startaLastAttemptAt": "2026-07-10T10:15:10.772Z",
-      "startaLastError": "overlap_validation_failed:2/2;ratio=1"
+      "startaLastError": "overlap_validation_failed:2/2;ratio=1",
+      "v13Status": "improved",
+      "v13Method": "sparse_exact_overlap_with_isin",
+      "v13LastAttemptAt": "2026-07-10T10:57:13.672Z",
+      "v13LastError": null
     },
     {
       "ticker": "MOIL",
@@ -162,7 +174,11 @@
       "startaGapStatus": "failed",
       "startaAppendedSessions": 0,
       "startaLastAttemptAt": "2026-07-10T10:15:15.505Z",
-      "startaLastError": "overlap_validation_failed:0/0;ratio=0"
+      "startaLastError": "overlap_validation_failed:0/0;ratio=0",
+      "v13Status": "failed",
+      "v13Method": "sparse_extended_overlap_repair",
+      "v13LastAttemptAt": "2026-07-10T10:57:15.371Z",
+      "v13LastError": "targeted_evidence_failed:{\"exact\":{\"overlapCount\":0,\"matches\":0,\"ratio\":0,\"samples\":[]},\"shifted\":{\"offsetDays\":null,\"overlapCount\":0,\"matches\":0,\"ratio\":0,\"samples\":[]},\"bridge\":{\"accepted\":false,\"strongIdentity\":true,\"newSessions\":0,\"gapDays\":null,\"closeDifferencePct\":null,\"firstNewDate\":null,\"firstNewClose\":null,\"lastNewDate\":null,\"existingLastDate\":\"2026-02-04\",\"existingLastClose\":4.690000057220459}}"
     },
     {
       "ticker": "SAIB",
@@ -174,7 +190,7 @@
       "requiredAfterDate": "2026-02-04",
       "targetLatestMarketSession": "2026-07-09",
       "reason": "identity_evidence_failed",
-      "approvedImportStatus": "waiting_for_reviewed_data",
+      "approvedImportStatus": "completed_by_v13_targeted_repair",
       "acceptedSources": [
         "egx_official",
         "mubasher",
@@ -184,7 +200,11 @@
       "startaGapStatus": "failed",
       "startaAppendedSessions": 0,
       "startaLastAttemptAt": "2026-07-10T10:15:17.151Z",
-      "startaLastError": "overlap_validation_failed:0/0;ratio=0"
+      "startaLastError": "overlap_validation_failed:0/0;ratio=0",
+      "v13Status": "improved",
+      "v13Method": "exact_isin_contiguous_bridge",
+      "v13LastAttemptAt": "2026-07-10T10:57:17.927Z",
+      "v13LastError": null
     },
     {
       "ticker": "SPHT",
@@ -206,7 +226,11 @@
       "startaGapStatus": "failed",
       "startaAppendedSessions": 0,
       "startaLastAttemptAt": "2026-07-10T10:15:18.502Z",
-      "startaLastError": "overlap_validation_failed:0/0;ratio=0"
+      "startaLastError": "overlap_validation_failed:0/0;ratio=0",
+      "v13Status": "failed",
+      "v13Method": "sparse_extended_overlap_repair",
+      "v13LastAttemptAt": "2026-07-10T10:57:19.635Z",
+      "v13LastError": "targeted_evidence_failed:{\"exact\":{\"overlapCount\":0,\"matches\":0,\"ratio\":0,\"samples\":[]},\"shifted\":{\"offsetDays\":-1,\"overlapCount\":2,\"matches\":2,\"ratio\":1,\"samples\":[{\"existingDate\":\"2025-09-23\",\"incomingDate\":\"2025-09-22\",\"offsetDays\":-1,\"existingClose\":1.9052300453186035,\"incomingClose\":1.9052,\"differencePct\":0.0016,\"matched\":true},{\"existingDate\":\"2025-12-11\",\"incomingDate\":\"2025-12-10\",\"offsetDays\":-1,\"existingClose\":1.909999966621399,\"incomingClose\":1.91,\"differencePct\":0,\"matched\":true}]},\"bridge\":{\"accepted\":false,\"strongIdentity\":true,\"newSessions\":2,\"gapDays\":75,\"closeDifferencePct\":0,\"firstNewDate\":\"2026-04-20\",\"firstNewClose\":1.91,\"lastNewDate\":\"2026-04-29\",\"existingLastDate\":\"2026-02-04\",\"existingLastClose\":1.909999966621399}}"
     },
     {
       "ticker": "TRTO",

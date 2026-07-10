@@ -1,41 +1,30 @@
 {
-  "schemaVersion": "12.9.0",
-  "generatedAt": "2026-07-10T10:15:20.438Z",
-  "mode": "starta_ohlc_gap_auto_completion",
+  "schemaVersion": "13.0.0",
+  "generatedAt": "2026-07-10T10:57:20.785Z",
+  "mode": "v13_targeted_seven_repair",
   "succeededTickers": [
-    "EGBE",
-    "MOIL",
-    "NAHO",
-    "TRTO"
+    "GPPL",
+    "SAIB",
+    "ESRS"
   ],
-  "failed": [
+  "pendingApproval": [
     {
       "ticker": "EGSA",
-      "error": "overlap_validation_failed:0/55;ratio=0"
-    },
-    {
-      "ticker": "ESRS",
-      "error": "https://starta.46-224-223-172.sslip.io/api/v1/egx/stock/ESRS: HTTP 404 | https://startamarkets.com/api/v1/egx/stock/ESRS: HTTP 404"
+      "factor": 1.07737981
     },
     {
       "ticker": "FAITA",
-      "error": "overlap_validation_failed:0/76;ratio=0"
-    },
-    {
-      "ticker": "GPPL",
-      "error": "overlap_validation_failed:2/2;ratio=1"
-    },
+      "factor": 1.04122845
+    }
+  ],
+  "failed": [
     {
       "ticker": "NDRL",
-      "error": "overlap_validation_failed:0/0;ratio=0"
-    },
-    {
-      "ticker": "SAIB",
-      "error": "overlap_validation_failed:0/0;ratio=0"
+      "error": "targeted_evidence_failed:{\"exact\":{\"overlapCount\":0,\"matches\":0,\"ratio\":0,\"samples\":[]},\"shifted\":{\"offsetDays\":null,\"overlapCount\":0,\"matches\":0,\"ratio\":0,\"samples\":[]},\"bridge\":{\"accepted\":false,\"strongIdentity\":true,\"newSessions\":0,\"gapDays\":null,\"closeDifferencePct\":null,\"firstNewDate\":null,\"firstNewClose\":null,\"lastNewDate\":null,\"existingLastDate\":\"2026-02-04\",\"existingLastClose\":4.690000057220459}}"
     },
     {
       "ticker": "SPHT",
-      "error": "overlap_validation_failed:0/0;ratio=0"
+      "error": "targeted_evidence_failed:{\"exact\":{\"overlapCount\":0,\"matches\":0,\"ratio\":0,\"samples\":[]},\"shifted\":{\"offsetDays\":-1,\"overlapCount\":2,\"matches\":2,\"ratio\":1,\"samples\":[{\"existingDate\":\"2025-09-23\",\"incomingDate\":\"2025-09-22\",\"offsetDays\":-1,\"existingClose\":1.9052300453186035,\"incomingClose\":1.9052,\"differencePct\":0.0016,\"matched\":true},{\"existingDate\":\"2025-12-11\",\"incomingDate\":\"2025-12-10\",\"offsetDays\":-1,\"existingClose\":1.909999966621399,\"incomingClose\":1.91,\"differencePct\":0,\"matched\":true}]},\"bridge\":{\"accepted\":false,\"strongIdentity\":true,\"newSessions\":2,\"gapDays\":75,\"closeDifferencePct\":0,\"firstNewDate\":\"2026-04-20\",\"firstNewClose\":1.91,\"lastNewDate\":\"2026-04-29\",\"existingLastDate\":\"2026-02-04\",\"existingLastClose\":1.909999966621399}}"
     }
   ]
 }
