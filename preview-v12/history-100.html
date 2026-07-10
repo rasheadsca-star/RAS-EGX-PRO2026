@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <title>EGX Pro — V12.7 استكمال فجوة القاعدة التاريخية</title>
+  <title>EGX Pro — V12.8 تشخيص الفجوة والاستيراد المعتمد</title>
   <style>
     :root{--bg:#06111f;--panel:#0b1c31;--panel2:#0d223b;--line:#254664;--text:#f5f8fc;--muted:#9eb3c9;--cyan:#22d3ee;--green:#22c55e;--amber:#f59e0b;--red:#ef4444;--blue:#38bdf8}
     *{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#06111f,#071827);color:var(--text);font-family:Tahoma,Arial,sans-serif;min-height:100vh}
@@ -20,11 +20,11 @@
 <body>
   <div class="wrap">
     <header class="top">
-      <div><h1>EGX Pro — قاعدة 100 جلسة V12.7 واستكمال الفجوة</h1><div class="sub">استكمال الفترة التالية لقاعدة XLSX بعد التحقق من تطابق الرمز والسوق واستمرارية سعر الإغلاق على جلسات متداخلة، دون استبدال جلسات القاعدة القديمة.</div></div>
+      <div><h1>EGX Pro — قاعدة 100 جلسة V12.8 وتشخيص الفجوة</h1><div class="sub">تشخيص أسباب فشل Yahoo بصورة قابلة للتدقيق، ثم استيراد جلسات فجوة مراجعة من EGX أو مباشر أو Investing أو ملف CSV معتمد، دون استبدال التاريخ السليم.</div></div>
       <div class="actions"><button class="btn" id="refresh">تحديث البيانات</button><a class="btn" href="./">V12 Preview</a><a class="btn" href="../">التطبيق المستقر</a></div>
     </header>
 
-    <div class="notice">الثقة 100% لا تُمنح إلا عند التحقق من EGX الرسمي. استكمال V12.7 يستخدم Yahoo من نفس عائلة مصدر ملف XLSX؛ لذلك يثبت استمرارية السلسلة فقط ولا يُعد تحققًا مستقلًا، وتظل الثقة محدودة حتى المطابقة بمصدر ثانٍ.</div>
+    <div class="notice">الثقة 100% لا تُمنح إلا عند التحقق من EGX الرسمي. تشخيص Yahoo في V12.8 لا يكتب داخل ملفات التاريخ. لا تُدمج أي جلسة إلا بعد اعتماد الهوية والمصدر يدويًا، واجتياز OHLCV، ووجود رابط أو مرجع للملف المستخدم.</div>
 
     <section class="grid" id="cards"></section>
 
@@ -60,7 +60,7 @@
 <script>
 (() => {
   const q = (id) => document.getElementById(id);
-  let summary = null, batch = null, lastRun = null, universe = null, cleanup = null, fallback = null, seedReport = null, gapReport = null, activeFilter = 'all';
+  let summary = null, batch = null, lastRun = null, universe = null, cleanup = null, fallback = null, seedReport = null, gapReport = null, diagnostics = null, approvedImport = null, approvedQueue = null, activeFilter = 'all';
   const n = (v) => Number(v || 0);
   const pct = (v) => `${n(v).toLocaleString('ar-EG',{maximumFractionDigits:2})}%`;
   const num = (v) => n(v).toLocaleString('ar-EG');
@@ -94,6 +94,14 @@
       ['تحسنت في V12.7', gapReport?.counts?.improved ?? '—', 'أضيفت لها جلسات أحدث بعد تحقق الاستمرارية'],
       ['اكتملت وحديثة', gapReport?.counts?.completed100Current ?? '—', '100 جلسة مع حداثة مقبولة'],
       ['جلسات مضافة', gapReport?.counts?.appendedSessions ?? '—', 'جلسات جديدة دون استبدال التاريخ السابق'],
+      ['شُخّصت في V12.8', diagnostics?.counts?.total ?? '—', 'رموز تم تصنيف سبب تعذر تحديثها'],
+      ['تحتاج استيرادًا معتمدًا', diagnostics?.counts?.approvedImportRequired ?? approvedQueue?.total ?? '—', 'لا يسمح بدمجها تلقائيًا من Yahoo'],
+      ['Yahoo 404', diagnostics?.counts?.yahoo404 ?? '—', 'لا توجد تغطية بالرمز المجرب'],
+      ['فشل إثبات الهوية', diagnostics?.counts?.identityEvidenceFailed ?? '—', 'استجابة موجودة لكن هوية الورقة غير مؤكدة'],
+      ['لا توجد جلسات متداخلة', diagnostics?.counts?.noOverlap ?? '—', 'تعذر إثبات استمرارية السلسلة'],
+      ['استيراد معتمد ناجح', approvedImport?.counts?.importedTickers ?? '—', 'أسهم أضيفت لها جلسات مراجعة'],
+      ['صفوف معتمدة مضافة', approvedImport?.counts?.rowsAccepted ?? '—', 'جلسات أحدث اجتازت التحقق'],
+      ['أصبحت 100 جلسة', approvedImport?.counts?.becameComplete100 ?? '—', 'اكتمالات جديدة بعد الاستيراد'],
     ];
     q('cards').innerHTML = cards.map(([label,value,small]) => `<div class="card"><div class="label">${safe(label)}</div><div class="value">${typeof value==='number'?num(value):safe(value)}</div><div class="small">${safe(small)}</div></div>`).join('');
   }
@@ -117,6 +125,11 @@
       ['فشل استكمال الفجوة', gapReport?.counts?.failed ?? '—'],
       ['بدون جلسات جديدة', gapReport?.counts?.noNewSessions ?? '—'],
       ['هدف أحدث جلسة سوق', gapReport?.latestMarketSession ?? '—'],
+      ['آخر تشخيص V12.8', diagnostics?.completedAt ?? '—'],
+      ['هوية غير مؤكدة', diagnostics?.counts?.identityEvidenceFailed ?? '—'],
+      ['استيراد معتمد مطلوب', diagnostics?.counts?.approvedImportRequired ?? approvedQueue?.total ?? '—'],
+      ['آخر استيراد معتمد', approvedImport?.completedAt ?? '—'],
+      ['صفوف محجورة V12.8', approvedImport?.counts?.rowsQuarantined ?? '—'],
     ];
     q('batchMeta').innerHTML = items.map(([label,value]) => `<div class="meta"><span class="label">${safe(label)}</span><b>${typeof value==='number'?num(value):safe(value)}</b></div>`).join('');
     const p = n(summary.coverage?.sessions100Pct);
@@ -154,7 +167,7 @@
   async function refresh(){
     q('refresh').disabled = true; q('refresh').textContent = 'جارٍ التحديث…';
     try{
-      [summary,batch,lastRun,universe,cleanup,fallback,seedReport,gapReport] = await Promise.all([
+      [summary,batch,lastRun,universe,cleanup,fallback,seedReport,gapReport,diagnostics,approvedImport,approvedQueue] = await Promise.all([
         load('history-summary.json'),
         load('history-batch-state.json',true),
         load('history-last-run.json',true),
@@ -162,7 +175,10 @@
         load('history-universe-cleanup-report.json',true),
         load('history-fallback-queue.json',true),
         load('history-seed-import-report.json',true),
-        load('history-gap-completion-report.json',true)
+        load('history-gap-completion-report.json',true),
+        load('history-gap-diagnostics-report.json',true),
+        load('history-approved-gap-import-report.json',true),
+        load('history-approved-gap-queue.json',true)
       ]);
       renderCards(); renderBatch(); renderRows();
     }catch(error){
