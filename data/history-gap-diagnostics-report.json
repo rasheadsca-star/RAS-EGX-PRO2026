@@ -1,7 +1,7 @@
 {
   "schemaVersion": "12.8.0",
-  "startedAt": "2026-07-10T09:32:11.901Z",
-  "completedAt": "2026-07-10T09:32:27.036Z",
+  "startedAt": "2026-07-10T09:43:28.429Z",
+  "completedAt": "2026-07-10T09:43:41.244Z",
   "mode": "gap_diagnostics",
   "latestMarketSession": "2026-07-09",
   "liveYahooDiagnostics": true,
@@ -9,11 +9,11 @@
     "total": 11,
     "staleComplete100": 0,
     "identityEvidenceFailed": 10,
-    "noOverlap": 1,
+    "noOverlap": 0,
     "yahoo404": 0,
     "yahooRateLimited": 0,
-    "continuityPossibleManualReview": 0,
-    "approvedImportRequired": 11
+    "continuityPossibleManualReview": 1,
+    "approvedImportRequired": 10
   },
   "results": [
     {
@@ -35,7 +35,7 @@
         {
           "candidate": "EGBE.CA",
           "status": "response_received",
-          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EGBE.CA?period1=1762387200&period2=1783848731&interval=1d&events=history&includeAdjustedClose=true",
+          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EGBE.CA?period1=1762387200&period2=1783849408&interval=1d&events=history&includeAdjustedClose=true",
           "rowsReceived": 168,
           "firstDate": "2025-11-06",
           "lastDate": "2026-07-09",
@@ -144,7 +144,7 @@
         {
           "candidate": "EGS60182C010.CA",
           "status": "response_received",
-          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EGS60182C010.CA?period1=1762387200&period2=1783848732&interval=1d&events=history&includeAdjustedClose=true",
+          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EGS60182C010.CA?period1=1762387200&period2=1783849408&interval=1d&events=history&includeAdjustedClose=true",
           "rowsReceived": 1,
           "firstDate": "2026-07-09",
           "lastDate": "2026-07-09",
@@ -200,7 +200,7 @@
         {
           "candidate": "EGSA.CA",
           "status": "response_received",
-          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EGSA.CA?period1=1762387200&period2=1783848733&interval=1d&events=history&includeAdjustedClose=true",
+          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EGSA.CA?period1=1762387200&period2=1783849409&interval=1d&events=history&includeAdjustedClose=true",
           "rowsReceived": 167,
           "firstDate": "2025-11-06",
           "lastDate": "2026-07-09",
@@ -309,7 +309,7 @@
         {
           "candidate": "EGS48022C015.CA",
           "status": "response_received",
-          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EGS48022C015.CA?period1=1762387200&period2=1783848733&interval=1d&events=history&includeAdjustedClose=true",
+          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EGS48022C015.CA?period1=1762387200&period2=1783849409&interval=1d&events=history&includeAdjustedClose=true",
           "rowsReceived": 1,
           "firstDate": "2026-07-09",
           "lastDate": "2026-07-09",
@@ -352,8 +352,8 @@
       "companyNameEn": "' ### Size: 1 Ezz Steel SAE",
       "isin": "EGS3C251C013",
       "status": "diagnosed",
-      "classification": "no_overlap",
-      "needsApprovedImport": true,
+      "classification": "yahoo_continuity_possible_manual_review",
+      "needsApprovedImport": false,
       "beforeSessions": 74,
       "firstSession": "2024-10-23",
       "lastSession": "2025-03-13",
@@ -365,10 +365,10 @@
         {
           "candidate": "ESRS.CA",
           "status": "response_received",
-          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/ESRS.CA?period1=1734048000&period2=1783848734&interval=1d&events=history&includeAdjustedClose=true",
-          "rowsReceived": 0,
-          "firstDate": null,
-          "lastDate": null,
+          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/ESRS.CA?period1=1734048000&period2=1783849409&interval=1d&events=history&includeAdjustedClose=true",
+          "rowsReceived": 63,
+          "firstDate": "2024-12-15",
+          "lastDate": "2025-03-13",
           "identity": {
             "exactSymbol": true,
             "cairoSuffix": true,
@@ -392,19 +392,90 @@
             "instrumentType": "MUTUALFUND"
           },
           "overlap": {
-            "overlapRows": 0,
-            "matches": 0,
+            "overlapRows": 10,
+            "matches": 10,
             "mismatches": 0,
-            "matchRatio": 0,
-            "verified": false,
-            "checks": []
+            "matchRatio": 100,
+            "verified": true,
+            "checks": [
+              {
+                "date": "2025-03-13",
+                "existingClose": 133.89999389648438,
+                "fetchedClose": 133.899994,
+                "differencePct": 0,
+                "matched": true
+              },
+              {
+                "date": "2025-03-11",
+                "existingClose": 133.89999389648438,
+                "fetchedClose": 133.899994,
+                "differencePct": 0,
+                "matched": true
+              },
+              {
+                "date": "2025-03-06",
+                "existingClose": 138.44000244140625,
+                "fetchedClose": 138.440002,
+                "differencePct": 0,
+                "matched": true
+              },
+              {
+                "date": "2025-03-03",
+                "existingClose": 137.16000366210938,
+                "fetchedClose": 137.160004,
+                "differencePct": 0,
+                "matched": true
+              },
+              {
+                "date": "2025-03-02",
+                "existingClose": 137.1300048828125,
+                "fetchedClose": 137.130005,
+                "differencePct": 0,
+                "matched": true
+              },
+              {
+                "date": "2025-02-27",
+                "existingClose": 137.0800018310547,
+                "fetchedClose": 137.080002,
+                "differencePct": 0,
+                "matched": true
+              },
+              {
+                "date": "2025-02-26",
+                "existingClose": 136.6199951171875,
+                "fetchedClose": 136.619995,
+                "differencePct": 0,
+                "matched": true
+              },
+              {
+                "date": "2025-02-24",
+                "existingClose": 136.5,
+                "fetchedClose": 136.5,
+                "differencePct": 0,
+                "matched": true
+              },
+              {
+                "date": "2025-02-19",
+                "existingClose": 135,
+                "fetchedClose": 135,
+                "differencePct": 0,
+                "matched": true
+              },
+              {
+                "date": "2025-02-18",
+                "existingClose": 135.25,
+                "fetchedClose": 135.25,
+                "differencePct": 0,
+                "matched": true
+              }
+            ]
           }
         },
         {
           "candidate": "EGS3C251C013.CA",
           "status": "request_failed",
           "failureClass": "yahoo_http_404",
-          "error": "All HTTP attempts failed. https://query1.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1734048000&period2=1783848734&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1734048000&period2=1783848734&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1734048000&period2=1783848734&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1734048000&period2=1783848734&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1734048000&period2=1783848734&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1734048000&period2=1783848734&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1734048000&period2=1783848734&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1734048000&period2=1783848734&interval=1d&events=history&includeAdjustedClose=true"
+          "error": "All HTTP attempts failed. https://query1.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1734048000&period2=1783849409&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1734048000&period2=1783849409&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1734048000&period2=1783849409&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1734048000&period2=1783849409&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1734048000&period2=1783849409&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1734048000&period2=1783849409&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1734048000&period2=1783849409&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1734048000&period2=1783849409&interval=1d&events=history&includeAdjustedClose=true"
         }
       ]
     },
@@ -427,7 +498,7 @@
         {
           "candidate": "FAITA.CA",
           "status": "response_received",
-          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/FAITA.CA?period1=1762387200&period2=1783848736&interval=1d&events=history&includeAdjustedClose=true",
+          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/FAITA.CA?period1=1762387200&period2=1783849412&interval=1d&events=history&includeAdjustedClose=true",
           "rowsReceived": 166,
           "firstDate": "2025-11-06",
           "lastDate": "2026-07-09",
@@ -536,7 +607,7 @@
         {
           "candidate": "EGS60322C012.CA",
           "status": "response_received",
-          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EGS60322C012.CA?period1=1762387200&period2=1783848737&interval=1d&events=history&includeAdjustedClose=true",
+          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EGS60322C012.CA?period1=1762387200&period2=1783849412&interval=1d&events=history&includeAdjustedClose=true",
           "rowsReceived": 1,
           "firstDate": "2026-07-09",
           "lastDate": "2026-07-09",
@@ -592,7 +663,7 @@
         {
           "candidate": "GPPL.CA",
           "status": "response_received",
-          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/GPPL.CA?period1=1762300800&period2=1783848737&interval=1d&events=history&includeAdjustedClose=true",
+          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/GPPL.CA?period1=1762300800&period2=1783849413&interval=1d&events=history&includeAdjustedClose=true",
           "rowsReceived": 169,
           "firstDate": "2025-11-05",
           "lastDate": "2026-07-09",
@@ -701,7 +772,7 @@
         {
           "candidate": "EGS70342C018.CA",
           "status": "response_received",
-          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EGS70342C018.CA?period1=1762300800&period2=1783848737&interval=1d&events=history&includeAdjustedClose=true",
+          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EGS70342C018.CA?period1=1762300800&period2=1783849413&interval=1d&events=history&includeAdjustedClose=true",
           "rowsReceived": 1,
           "firstDate": "2026-07-09",
           "lastDate": "2026-07-09",
@@ -757,7 +828,7 @@
         {
           "candidate": "MOIL.CA",
           "status": "response_received",
-          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/MOIL.CA?period1=1762300800&period2=1783848738&interval=1d&events=history&includeAdjustedClose=true",
+          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/MOIL.CA?period1=1762300800&period2=1783849413&interval=1d&events=history&includeAdjustedClose=true",
           "rowsReceived": 167,
           "firstDate": "2025-11-05",
           "lastDate": "2026-07-09",
@@ -866,7 +937,7 @@
         {
           "candidate": "EGS44012C010.CA",
           "status": "response_received",
-          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EGS44012C010.CA?period1=1762300800&period2=1783848738&interval=1d&events=history&includeAdjustedClose=true",
+          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EGS44012C010.CA?period1=1762300800&period2=1783849413&interval=1d&events=history&includeAdjustedClose=true",
           "rowsReceived": 1,
           "firstDate": "2026-07-09",
           "lastDate": "2026-07-09",
@@ -922,7 +993,7 @@
         {
           "candidate": "NAHO.CA",
           "status": "response_received",
-          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/NAHO.CA?period1=1762300800&period2=1783848739&interval=1d&events=history&includeAdjustedClose=true",
+          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/NAHO.CA?period1=1762300800&period2=1783849414&interval=1d&events=history&includeAdjustedClose=true",
           "rowsReceived": 167,
           "firstDate": "2025-11-05",
           "lastDate": "2026-07-09",
@@ -1031,7 +1102,7 @@
         {
           "candidate": "EGS69182C011.CA",
           "status": "response_received",
-          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EGS69182C011.CA?period1=1762300800&period2=1783848739&interval=1d&events=history&includeAdjustedClose=true",
+          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EGS69182C011.CA?period1=1762300800&period2=1783849414&interval=1d&events=history&includeAdjustedClose=true",
           "rowsReceived": 1,
           "firstDate": "2026-07-09",
           "lastDate": "2026-07-09",
@@ -1087,7 +1158,7 @@
         {
           "candidate": "NDRL.CA",
           "status": "response_received",
-          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/NDRL.CA?period1=1762387200&period2=1783848740&interval=1d&events=history&includeAdjustedClose=true",
+          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/NDRL.CA?period1=1762387200&period2=1783849414&interval=1d&events=history&includeAdjustedClose=true",
           "rowsReceived": 168,
           "firstDate": "2025-11-06",
           "lastDate": "2026-07-09",
@@ -1197,7 +1268,7 @@
           "candidate": "EGS735N2C012.CA",
           "status": "request_failed",
           "failureClass": "yahoo_http_404",
-          "error": "All HTTP attempts failed. https://query1.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1762387200&period2=1783848740&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1762387200&period2=1783848740&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1762387200&period2=1783848740&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1762387200&period2=1783848740&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1762387200&period2=1783848740&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1762387200&period2=1783848740&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1762387200&period2=1783848740&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1762387200&period2=1783848740&interval=1d&events=history&includeAdjustedClose=true"
+          "error": "All HTTP attempts failed. https://query1.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1762387200&period2=1783849414&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1762387200&period2=1783849414&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1762387200&period2=1783849414&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1762387200&period2=1783849414&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1762387200&period2=1783849414&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1762387200&period2=1783849414&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1762387200&period2=1783849414&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1762387200&period2=1783849414&interval=1d&events=history&includeAdjustedClose=true"
         }
       ]
     },
@@ -1220,7 +1291,7 @@
         {
           "candidate": "SAIB.CA",
           "status": "response_received",
-          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/SAIB.CA?period1=1762387200&period2=1783848742&interval=1d&events=history&includeAdjustedClose=true",
+          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/SAIB.CA?period1=1762387200&period2=1783849417&interval=1d&events=history&includeAdjustedClose=true",
           "rowsReceived": 168,
           "firstDate": "2025-11-06",
           "lastDate": "2026-07-09",
@@ -1329,7 +1400,7 @@
         {
           "candidate": "EGS60142C014.CA",
           "status": "response_received",
-          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EGS60142C014.CA?period1=1762387200&period2=1783848743&interval=1d&events=history&includeAdjustedClose=true",
+          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EGS60142C014.CA?period1=1762387200&period2=1783849417&interval=1d&events=history&includeAdjustedClose=true",
           "rowsReceived": 1,
           "firstDate": "2026-07-06",
           "lastDate": "2026-07-06",
@@ -1385,7 +1456,7 @@
         {
           "candidate": "SPHT.CA",
           "status": "response_received",
-          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/SPHT.CA?period1=1762387200&period2=1783848743&interval=1d&events=history&includeAdjustedClose=true",
+          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/SPHT.CA?period1=1762387200&period2=1783849418&interval=1d&events=history&includeAdjustedClose=true",
           "rowsReceived": 168,
           "firstDate": "2025-11-06",
           "lastDate": "2026-07-09",
@@ -1495,7 +1566,7 @@
           "candidate": "EGS70H02C014.CA",
           "status": "request_failed",
           "failureClass": "yahoo_http_404",
-          "error": "All HTTP attempts failed. https://query1.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1762387200&period2=1783848743&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1762387200&period2=1783848743&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1762387200&period2=1783848743&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1762387200&period2=1783848743&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1762387200&period2=1783848743&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1762387200&period2=1783848743&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1762387200&period2=1783848743&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1762387200&period2=1783848743&interval=1d&events=history&includeAdjustedClose=true"
+          "error": "All HTTP attempts failed. https://query1.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1762387200&period2=1783849418&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1762387200&period2=1783849418&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1762387200&period2=1783849418&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1762387200&period2=1783849418&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1762387200&period2=1783849418&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1762387200&period2=1783849418&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1762387200&period2=1783849418&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1762387200&period2=1783849418&interval=1d&events=history&includeAdjustedClose=true"
         }
       ]
     },
@@ -1518,7 +1589,7 @@
         {
           "candidate": "TRTO.CA",
           "status": "response_received",
-          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/TRTO.CA?period1=1762300800&period2=1783848746&interval=1d&events=history&includeAdjustedClose=true",
+          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/TRTO.CA?period1=1762300800&period2=1783849420&interval=1d&events=history&includeAdjustedClose=true",
           "rowsReceived": 167,
           "firstDate": "2025-11-05",
           "lastDate": "2026-07-09",
@@ -1627,7 +1698,7 @@
         {
           "candidate": "EGS79072C012.CA",
           "status": "response_received",
-          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EGS79072C012.CA?period1=1762300800&period2=1783848746&interval=1d&events=history&includeAdjustedClose=true",
+          "sourceUrl": "https://query1.finance.yahoo.com/v8/finance/chart/EGS79072C012.CA?period1=1762300800&period2=1783849420&interval=1d&events=history&includeAdjustedClose=true",
           "rowsReceived": 1,
           "firstDate": "2026-07-07",
           "lastDate": "2026-07-07",
