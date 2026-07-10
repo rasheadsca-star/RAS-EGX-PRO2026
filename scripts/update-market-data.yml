@@ -1,0 +1,64 @@
+name: Update EGX Market Data
+
+on:
+  workflow_dispatch:
+  schedule:
+    # EGX trading days are typically Sun-Thu. Times are UTC.
+    # Mid-session refresh updates the same session date; final run after close keeps the closing snapshot.
+    - cron: "15 8 * * 0-4"
+    - cron: "45 12 * * 0-4"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: egx-market-history-update
+  cancel-in-progress: false
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+
+    steps:
+      - name: Checkout with history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Fetch public market snapshot
+        run: node scripts/fetch-market-data.js
+
+      - name: Recover past sessions from Git snapshots using commit dates
+        run: node scripts/rebuild-history-from-git.js || echo "Git past recovery skipped"
+
+      - name: Optional uploaded historical backfill
+        run: node scripts/import-history-backfill.js || echo "No uploaded backfill file found"
+
+      - name: Opportunistic public historical discovery
+        run: node scripts/auto-public-history-backfill.js || echo "Public history discovery skipped"
+
+      - name: Auto rolling 50-session history and indicators
+        run: node scripts/build-history-50-engine.js
+
+      - name: Snapshot evidence confidence layer
+        run: node scripts/build-snapshot-evidence.js || echo "Snapshot evidence skipped"
+
+      - name: News intelligence layer
+        run: node scripts/build-news-intelligence.js || echo "News intelligence skipped"
+
+      - name: Optional intelligence reports
+        run: node scripts/build-v52-intelligence.js || echo "V5.2 intelligence builder skipped"
+
+      - name: Commit generated data
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add data/*.json
+          git diff --cached --quiet && echo "No data changes" || git commit -m "Recover Git-date history and update EGX rolling 50-session history"
+          git push || echo "Push skipped or failed"
