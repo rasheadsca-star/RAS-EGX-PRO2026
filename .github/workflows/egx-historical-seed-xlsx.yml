@@ -64,7 +64,13 @@ jobs:
           for file in "${required[@]}"; do
             test -f "$file" || { echo "Missing required file: $file"; exit 1; }
           done
-          python -m py_compile scripts/history/xlsx-seed-importer.py
+          python - <<'PYCODE'
+          import ast
+          from pathlib import Path
+          source = Path('scripts/history/xlsx-seed-importer.py').read_text(encoding='utf-8')
+          ast.parse(source, filename='scripts/history/xlsx-seed-importer.py')
+          print('Python syntax validation passed without creating bytecode.')
+          PYCODE
           node --check scripts/history/acceptance-tests.cjs
           node --check scripts/history/history-summary-builder.cjs
           echo "V11/V11.5 stable application files are outside the write allow-list."
@@ -74,7 +80,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          python scripts/history/xlsx-seed-importer.py | tee /tmp/v12-6-seed-import.log
+          python -B scripts/history/xlsx-seed-importer.py | tee /tmp/v12-6-seed-import.log
           imported_count=$(python - <<'PY'
           import json
           with open('data/history-seed-import-report.json', encoding='utf-8') as f:
@@ -137,6 +143,12 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+
+          # Python may create harmless bytecode caches while importing local modules.
+          # Remove them before evaluating the strict output allow-list.
+          find scripts/history -type d -name '__pycache__' -prune -exec rm -rf {} + 2>/dev/null || true
+          find scripts/history -type f -name '*.pyc' -delete 2>/dev/null || true
+
           mapfile -t changed < <(
             {
               git diff --name-only
