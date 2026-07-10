@@ -1,0 +1,1190 @@
+{
+  "schemaVersion": "13.1.0",
+  "generatedAt": "2026-07-10T11:23:22.910Z",
+  "latestMarketSession": "2026-07-09",
+  "total": 51,
+  "items": [
+    {
+      "ticker": "EGSA",
+      "status": "manual_adjustment_review",
+      "statusLabelAr": "مراجعة تعديل مطلوبة",
+      "priority": 1,
+      "sessions": 64,
+      "lastSession": "2026-02-04",
+      "marketLagCalendarDays": 155,
+      "confidence": 65,
+      "reasons": [
+        "history_stale:155_calendar_days",
+        "sessions_below_decision_minimum:64",
+        "corporate_action_or_adjusted_close_review_required"
+      ],
+      "requiredAction": "official_or_independent_adjustment_review",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": {
+          "factor": 1.07737981,
+          "observations": 55,
+          "maxDeviationPct": 0.000854,
+          "sourceUrl": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/EGSA?period=5y&limit=2000",
+          "reason": "corporate_action_or_adjusted_close_review_required"
+        },
+        "targetedStatus": "manual_approval_required",
+        "targetedAction": "stable_adjustment_factor_detected_no_write",
+        "startaStatus": "failed"
+      }
+    },
+    {
+      "ticker": "FAITA",
+      "status": "manual_adjustment_review",
+      "statusLabelAr": "مراجعة تعديل مطلوبة",
+      "priority": 1,
+      "sessions": 76,
+      "lastSession": "2026-02-04",
+      "marketLagCalendarDays": 155,
+      "confidence": 65,
+      "reasons": [
+        "history_stale:155_calendar_days",
+        "sessions_below_decision_minimum:76",
+        "corporate_action_or_adjusted_close_review_required"
+      ],
+      "requiredAction": "official_or_independent_adjustment_review",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": {
+          "factor": 1.04122845,
+          "observations": 76,
+          "maxDeviationPct": 0.005982,
+          "sourceUrl": "https://starta.46-224-223-172.sslip.io/api/v1/egx/ohlc/FAITA?period=5y&limit=2000",
+          "reason": "corporate_action_or_adjusted_close_review_required"
+        },
+        "targetedStatus": "manual_approval_required",
+        "targetedAction": "stable_adjustment_factor_detected_no_write",
+        "startaStatus": "failed"
+      }
+    },
+    {
+      "ticker": "SAIB",
+      "status": "complete_but_under_review",
+      "statusLabelAr": "مكتمل تحت المراجعة",
+      "priority": 1,
+      "sessions": 100,
+      "lastSession": "2026-07-06",
+      "marketLagCalendarDays": 3,
+      "confidence": 65.2,
+      "reasons": [
+        "no_overlap_bridge_exceeds_safety_limit:14.218%"
+      ],
+      "requiredAction": "independent_source_or_corporate_action_review",
+      "evidence": {
+        "riskyBridge": {
+          "method": "exact_isin_contiguous_bridge",
+          "overlapCount": 0,
+          "closeDifferencePct": 14.218,
+          "thresholdPct": 2,
+          "reason": "no_overlap_bridge_exceeds_safety_limit"
+        },
+        "manualAdjustment": null,
+        "targetedStatus": "improved",
+        "targetedAction": "sparse_extended_overlap_repair",
+        "startaStatus": "failed"
+      }
+    },
+    {
+      "ticker": "NDRL",
+      "status": "complete_but_stale",
+      "statusLabelAr": "مكتمل لكنه قديم",
+      "priority": 2,
+      "sessions": 100,
+      "lastSession": "2026-02-04",
+      "marketLagCalendarDays": 155,
+      "confidence": 65,
+      "reasons": [
+        "history_stale:155_calendar_days"
+      ],
+      "requiredAction": "recent_session_refresh",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": "failed",
+        "targetedAction": "sparse_extended_overlap_repair",
+        "startaStatus": "failed"
+      }
+    },
+    {
+      "ticker": "SPHT",
+      "status": "partial_and_stale",
+      "statusLabelAr": "جزئي وقديم",
+      "priority": 2,
+      "sessions": 96,
+      "lastSession": "2026-02-04",
+      "marketLagCalendarDays": 155,
+      "confidence": 65,
+      "reasons": [
+        "history_stale:155_calendar_days",
+        "sessions_below_decision_minimum:96"
+      ],
+      "requiredAction": "recent_gap_completion_with_verified_identity",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": "failed",
+        "targetedAction": "sparse_extended_overlap_repair",
+        "startaStatus": "failed"
+      }
+    },
+    {
+      "ticker": "EOSB",
+      "status": "partial_recent",
+      "statusLabelAr": "جزئي حديث",
+      "priority": 3,
+      "sessions": 98,
+      "lastSession": "2026-06-22",
+      "marketLagCalendarDays": 17,
+      "confidence": 75,
+      "reasons": [
+        "sessions_below_decision_minimum:98"
+      ],
+      "requiredAction": "continue_collection_until_100_sessions",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "GPPL",
+      "status": "partial_recent",
+      "statusLabelAr": "جزئي حديث",
+      "priority": 3,
+      "sessions": 95,
+      "lastSession": "2026-07-09",
+      "marketLagCalendarDays": 0,
+      "confidence": 65.42,
+      "reasons": [
+        "sessions_below_decision_minimum:95"
+      ],
+      "requiredAction": "continue_collection_until_100_sessions",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": "improved",
+        "targetedAction": "sparse_extended_overlap_repair",
+        "startaStatus": "failed"
+      }
+    },
+    {
+      "ticker": "ACAP",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "ACTF",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "AIDC",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "AIHC",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "ALRA",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "ASCOM",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "BLOCKS",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "BONY",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "BUCKETS",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "CFGH",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "CPME",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "CRST",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "DGTZ",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "DOMTY",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "EGYFERT",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "FOLLOW",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "GGRN",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "GOUR",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "GPIM",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "GTEX",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "ICON",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "IRAX",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "KORA",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "KRDI",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "NAPR",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "NARE",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "NOSCO",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "PHGC",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "PLC",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "POCO",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "QNBE",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "RISK",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "RULES",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "SAE",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "SCCD",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "SODIC",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "TANM",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "TAQA",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "TORA",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "TYCN",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "UBEE",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "VALU",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "VLMR",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    },
+    {
+      "ticker": "VLMRA",
+      "status": "missing_history",
+      "statusLabelAr": "ملف التاريخ غير موجود",
+      "priority": 5,
+      "sessions": 0,
+      "lastSession": null,
+      "marketLagCalendarDays": null,
+      "confidence": 0,
+      "reasons": [
+        "symbol_not_verified",
+        "sessions_below_decision_minimum:0",
+        "confidence_below_decision_minimum:0"
+      ],
+      "requiredAction": "build_history_file",
+      "evidence": {
+        "riskyBridge": null,
+        "manualAdjustment": null,
+        "targetedStatus": null,
+        "targetedAction": null,
+        "startaStatus": null
+      }
+    }
+  ]
+}
