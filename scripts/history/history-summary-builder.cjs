@@ -1,6 +1,5 @@
 'use strict';
 
-const fs = require('fs');
 const path = require('path');
 const { nowIso, readJson, round, writeJsonAtomic } = require('./lib/utils.cjs');
 
@@ -12,70 +11,108 @@ function historyStatus(count) {
   return 'historical_insufficient';
 }
 
+function latestAuditByTicker(repoRoot) {
+  const audit = readJson(path.join(repoRoot, 'data', 'source-audit.json'), { operations: [] });
+  const map = new Map();
+  for (const operation of audit.operations || []) {
+    if (!operation?.ticker) continue;
+    map.set(operation.ticker, operation);
+  }
+  return map;
+}
+
 function buildSummary(repoRoot, mapEntries, sourceStatuses = {}) {
+  const audits = latestAuditByTicker(repoRoot);
   const details = [];
+
   for (const entry of mapEntries) {
     const file = path.join(repoRoot, 'data', 'history', `${entry.ticker}.json`);
     const document = readJson(file, null);
     const count = Array.isArray(document?.sessions) ? document.sessions.length : 0;
+    const latestAudit = audits.get(entry.ticker) || null;
+    const sourceFile = document ? `data/history/${entry.ticker}.json` : null;
+    const symbolVerified = Boolean(document?.symbolVerified);
+    const hasValidHistory = Boolean(sourceFile && symbolVerified && count > 0);
+    let processingStatus = 'pending';
+    if (document?.staleData || document?.updateFailed) processingStatus = 'stale';
+    else if (hasValidHistory && count >= 100) processingStatus = 'complete';
+    else if (hasValidHistory) processingStatus = 'partial';
+    else if (latestAudit?.errors?.length) processingStatus = 'failed';
+
     details.push({
       ticker: entry.ticker,
       companyNameAr: entry.companyNameAr || null,
       companyNameEn: entry.companyNameEn || null,
-      symbolVerified: Boolean(document?.symbolVerified),
+      symbolVerified,
       availableSessions: count,
       firstSession: document?.firstSession || document?.sessions?.[0]?.date || null,
       lastSession: document?.lastSession || document?.sessions?.at(-1)?.date || null,
       historyStatus: document?.historyStatus || historyStatus(count),
+      processingStatus,
       primarySource: document?.primarySource || null,
       verificationSources: document?.verificationSources || [],
       officiallyVerifiedLatestSession: Boolean(document?.officiallyVerifiedLatestSession),
       averageConfidence: Number(document?.averageConfidence || 0),
       staleData: Boolean(document?.staleData),
       updateFailed: Boolean(document?.updateFailed),
+      lastUpdateError: document?.lastUpdateError || latestAudit?.errors?.at(-1) || null,
       warnings: document?.warnings || [],
-      sourceFile: document ? `data/history/${entry.ticker}.json` : null,
+      sourceFile,
     });
   }
 
-  const eligible = details.filter((item) => item.symbolVerified);
-  const denominator = eligible.length || details.length || 1;
-  const countAtLeast = (number) => eligible.filter((item) => item.availableSessions >= number).length;
-  const confidenceValues = eligible.map((item) => item.averageConfidence).filter((value) => Number.isFinite(value) && value > 0);
-  const latestMarketSession = details.map((item) => item.lastSession).filter(Boolean).sort().at(-1) || null;
+  const mappedDenominator = details.length || 1;
+  const validDetails = details.filter((item) => item.sourceFile && item.symbolVerified && item.availableSessions > 0);
+  const runtimeVerifiedDenominator = validDetails.length || 1;
+  const countAtLeast = (number) => validDetails.filter((item) => item.availableSessions >= number).length;
+  const confidenceValues = validDetails.map((item) => item.averageConfidence).filter((value) => Number.isFinite(value) && value > 0);
+  const latestMarketSession = validDetails.map((item) => item.lastSession).filter(Boolean).sort().at(-1) || null;
 
   const summary = {
-    schemaVersion: '12.2.0',
+    schemaVersion: '12.3.0',
     generatedAt: nowIso(),
     targetSessions: 100,
     symbolsTotal: details.length,
     symbolsMapped: mapEntries.filter((entry) => entry.yahooSymbol || entry.reutersCode || entry.yahooAlternative).length,
-    symbolsRuntimeVerified: eligible.length,
+    symbolsRuntimeVerified: validDetails.length,
     symbolsComplete100: countAtLeast(100),
-    symbolsComplete50: eligible.filter((item) => item.availableSessions >= 50 && item.availableSessions < 100).length,
-    symbolsLimited20: eligible.filter((item) => item.availableSessions >= 20 && item.availableSessions < 50).length,
-    symbolsLimited5: eligible.filter((item) => item.availableSessions >= 5 && item.availableSessions < 20).length,
-    symbolsBelow5: eligible.filter((item) => item.availableSessions < 5).length,
-    symbolsFailed: details.filter((item) => item.updateFailed || !item.sourceFile).length,
+    symbolsComplete50: validDetails.filter((item) => item.availableSessions >= 50 && item.availableSessions < 100).length,
+    symbolsLimited20: validDetails.filter((item) => item.availableSessions >= 20 && item.availableSessions < 50).length,
+    symbolsLimited5: validDetails.filter((item) => item.availableSessions >= 5 && item.availableSessions < 20).length,
+    symbolsBelow5: validDetails.filter((item) => item.availableSessions < 5).length,
+    symbolsPending: details.filter((item) => item.processingStatus === 'pending').length,
+    symbolsFailed: details.filter((item) => item.processingStatus === 'failed').length,
+    symbolsStale: details.filter((item) => item.processingStatus === 'stale').length,
     officiallyVerifiedSymbols: details.filter((item) => item.officiallyVerifiedLatestSession).length,
     crossVerifiedSymbols: details.filter((item) => item.verificationSources.some((source) => /^(egx_|mubasher_|investing_)/.test(String(source)))).length,
-    singleSourceSymbols: details.filter((item) => item.sourceFile && !item.verificationSources.some((source) => /^(egx_|mubasher_|investing_)/.test(String(source)))).length,
+    singleSourceSymbols: validDetails.filter((item) => !item.verificationSources.some((source) => /^(egx_|mubasher_|investing_)/.test(String(source)))).length,
     averageConfidence: confidenceValues.length ? round(confidenceValues.reduce((sum, value) => sum + value, 0) / confidenceValues.length, 2) : 0,
     latestMarketSession,
     coverage: {
-      denominator: eligible.length,
+      basis: 'all_active_mapped_symbols',
+      denominator: details.length,
       sessions20Count: countAtLeast(20),
-      sessions20Pct: round(countAtLeast(20) / denominator * 100, 2),
+      sessions20Pct: round(countAtLeast(20) / mappedDenominator * 100, 2),
       sessions50Count: countAtLeast(50),
-      sessions50Pct: round(countAtLeast(50) / denominator * 100, 2),
+      sessions50Pct: round(countAtLeast(50) / mappedDenominator * 100, 2),
       sessions100Count: countAtLeast(100),
-      sessions100Pct: round(countAtLeast(100) / denominator * 100, 2),
+      sessions100Pct: round(countAtLeast(100) / mappedDenominator * 100, 2),
+    },
+    runtimeVerifiedCoverage: {
+      basis: 'runtime_verified_symbols_only',
+      denominator: validDetails.length,
+      sessions20Count: countAtLeast(20),
+      sessions20Pct: round(countAtLeast(20) / runtimeVerifiedDenominator * 100, 2),
+      sessions50Count: countAtLeast(50),
+      sessions50Pct: round(countAtLeast(50) / runtimeVerifiedDenominator * 100, 2),
+      sessions100Count: countAtLeast(100),
+      sessions100Pct: round(countAtLeast(100) / runtimeVerifiedDenominator * 100, 2),
     },
     sources: {
-      egx: sourceStatuses.egx || { status: 'not_automated_in_sample', role: 'official verification' },
+      egx: sourceStatuses.egx || { status: 'not_automated', role: 'official verification' },
       yahoo: sourceStatuses.yahoo || { status: 'configured', role: 'historical backfill' },
       mubasher: sourceStatuses.mubasher || { status: 'existing_cache_when_available', role: 'latest-session cross-check' },
-      investing: sourceStatuses.investing || { status: 'not_automated_in_sample', role: 'fallback/manual verification' },
+      investing: sourceStatuses.investing || { status: 'manual_fallback', role: 'fallback/manual verification' },
     },
     symbols: details,
   };
@@ -92,7 +129,7 @@ function buildSessionCalendar(repoRoot, summary) {
     for (const session of document?.sessions || []) allDates.add(session.date);
   }
   const calendar = {
-    schemaVersion: '12.2.0',
+    schemaVersion: '12.3.0',
     generatedAt: nowIso(),
     exchange: 'EGX',
     timezone: 'Africa/Cairo',
