@@ -36,26 +36,65 @@ function loadFixture(symbol) {
 function identityCheck(meta, requestedSymbol, mapEntry, localReference) {
   const warnings = [];
   let score = 0;
-  const exchangeText = String(meta.exchangeName || meta.fullExchangeName || '').toLowerCase();
+
+  // Yahoo commonly reports Egyptian listings with exchangeName="CAI"
+  // and fullExchangeName="Egypt". The previous implementation used
+  // exchangeName OR fullExchangeName, so "CAI" hid the stronger
+  // fullExchangeName evidence and every correct EGX symbol scored too low.
+  const exchangeEvidence = [
+    meta.exchangeName,
+    meta.fullExchangeName,
+    meta.exchangeTimezoneName,
+    meta.timezone,
+  ]
+    .filter(Boolean)
+    .map((value) => String(value).trim())
+    .filter(Boolean);
+
+  const exchangeText = exchangeEvidence.join(' ').toLowerCase();
   const currency = String(meta.currency || '').toUpperCase();
   const returnedSymbol = String(meta.symbol || '').toUpperCase();
+  const expectedSymbol = String(requestedSymbol || '').toUpperCase();
+  const expectedCurrency = String(mapEntry.currency || 'EGP').toUpperCase();
 
-  if (returnedSymbol === String(requestedSymbol).toUpperCase()) score += 35;
-  else warnings.push(`returned_symbol_mismatch:${returnedSymbol || 'missing'}`);
+  if (returnedSymbol === expectedSymbol) {
+    score += 35;
+  } else {
+    warnings.push(`returned_symbol_mismatch:${returnedSymbol || 'missing'}`);
+  }
 
-  if (currency === String(mapEntry.currency || 'EGP').toUpperCase()) score += 25;
-  else warnings.push(`currency_mismatch:${currency || 'missing'}`);
+  if (currency === expectedCurrency) {
+    score += 25;
+  } else {
+    warnings.push(`currency_mismatch:${currency || 'missing'}`);
+  }
 
-  if (/cairo|egypt|egx/.test(exchangeText)) score += 30;
-  else warnings.push(`exchange_not_confirmed:${exchangeText || 'missing'}`);
+  const cairoExchangeConfirmed =
+    /(^|[^a-z])(cai|cairo|egypt|egx)([^a-z]|$)/i.test(exchangeText) ||
+    (
+      expectedSymbol.endsWith('.CA') &&
+      String(mapEntry.exchange || '').toUpperCase() === 'EGX' &&
+      /egypt/i.test(String(meta.fullExchangeName || ''))
+    );
+
+  if (cairoExchangeConfirmed) {
+    score += 30;
+  } else {
+    warnings.push(`exchange_not_confirmed:${exchangeText || 'missing'}`);
+  }
 
   const regularMarketPrice = toNumber(meta.regularMarketPrice);
   if (localReference?.close && regularMarketPrice) {
     const differencePct = Math.abs(regularMarketPrice - localReference.close) / localReference.close * 100;
-    if (differencePct <= 25) score += 10;
-    else warnings.push(`latest_price_far_from_local_reference:${round(differencePct, 3)}%`);
+    if (differencePct <= 25) {
+      score += 10;
+    } else {
+      warnings.push(`latest_price_far_from_local_reference:${round(differencePct, 3)}%`);
+    }
   } else if (meta.shortName || meta.longName) {
     score += 10;
+  } else {
+    warnings.push('company_name_missing');
   }
 
   return {
@@ -65,7 +104,9 @@ function identityCheck(meta, requestedSymbol, mapEntry, localReference) {
     evidence: {
       requestedSymbol,
       returnedSymbol: meta.symbol || null,
-      exchangeName: meta.exchangeName || meta.fullExchangeName || null,
+      exchangeName: meta.exchangeName || null,
+      fullExchangeName: meta.fullExchangeName || null,
+      exchangeEvidence,
       currency: meta.currency || null,
       shortName: meta.shortName || null,
       longName: meta.longName || null,
