@@ -1,0 +1,182 @@
+name: EGX Targeted Seven-Symbol Repair — V13.0
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Run mode"
+        required: true
+        default: "safe_apply"
+        type: choice
+        options:
+          - diagnose
+          - safe_apply
+          - apply_approved_adjustments
+      ticker:
+        description: "Optional single ticker; leave blank for all seven"
+        required: false
+        default: ""
+        type: string
+      min_improved:
+        description: "Minimum improved tickers required; use 0 for safe diagnostic completion"
+        required: true
+        default: "0"
+        type: string
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: egx-targeted-seven-repair-v13
+  cancel-in-progress: false
+
+jobs:
+  targeted-repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout current main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Validate V13.0 package and stable-app isolation
+        shell: bash
+        run: |
+          set -euo pipefail
+          required=(
+            .github/workflows/egx-targeted-seven-repair-v13.yml
+            scripts/history/targeted-seven-repair.cjs
+            scripts/history/targeted-seven-acceptance.cjs
+            scripts/history/adapters/starta-targeted-adapter.cjs
+            scripts/history/history-validator.cjs
+            scripts/history/history-storage.cjs
+            scripts/history/history-summary-builder.cjs
+            scripts/history/lib/utils.cjs
+            data/history-targeted-seven-config.json
+            data/history-adjustment-approval.json
+            data/symbol-map.json
+            data/history-summary.json
+            preview-v12/targeted-seven.html
+          )
+          for file in "${required[@]}"; do
+            test -f "$file" || { echo "Missing required file: $file"; exit 1; }
+          done
+          node --check scripts/history/targeted-seven-repair.cjs
+          node --check scripts/history/targeted-seven-acceptance.cjs
+          node --check scripts/history/adapters/starta-targeted-adapter.cjs
+          BEFORE_INDEX="$(sha256sum index.html 2>/dev/null | awk '{print $1}' || true)"
+          BEFORE_SW="$(sha256sum service-worker.js 2>/dev/null | awk '{print $1}' || true)"
+          echo "BEFORE_INDEX=$BEFORE_INDEX" >> "$GITHUB_ENV"
+          echo "BEFORE_SW=$BEFORE_SW" >> "$GITHUB_ENV"
+
+      - name: Diagnose and repair targeted symbols
+        env:
+          TARGETED_REPAIR_MODE: ${{ inputs.mode }}
+          TARGETED_REPAIR_TICKER: ${{ inputs.ticker }}
+        run: node scripts/history/targeted-seven-repair.cjs
+
+      - name: Run V13.0 acceptance tests
+        env:
+          TARGETED_REPAIR_MODE: ${{ inputs.mode }}
+          TARGETED_REPAIR_MIN_IMPROVED: ${{ inputs.min_improved }}
+          TARGETED_REPAIR_TICKER: ${{ inputs.ticker }}
+        run: node scripts/history/targeted-seven-acceptance.cjs
+
+      - name: Enforce strict write isolation
+        shell: bash
+        run: |
+          set -euo pipefail
+          AFTER_INDEX="$(sha256sum index.html 2>/dev/null | awk '{print $1}' || true)"
+          AFTER_SW="$(sha256sum service-worker.js 2>/dev/null | awk '{print $1}' || true)"
+          test "$BEFORE_INDEX" = "$AFTER_INDEX" || { echo "SAFETY STOP: index.html changed"; exit 1; }
+          test "$BEFORE_SW" = "$AFTER_SW" || { echo "SAFETY STOP: service-worker.js changed"; exit 1; }
+
+          mapfile -t changed < <(
+            {
+              git diff --name-only
+              git diff --cached --name-only
+              git ls-files --others --exclude-standard
+            } | sed '/^$/d' | sort -u
+          )
+          printf 'Changed files:\n'
+          printf '%s\n' "${changed[@]:-none}"
+          for file in "${changed[@]}"; do
+            case "$file" in
+              data/history/*.json|data/history-summary.json|data/session-calendar.json|data/source-audit.json|data/history-last-run.json|data/history-approved-gap-queue.json|data/history-targeted-seven-report.json|data/history-targeted-seven-quarantine.json|data/symbol-map.json)
+                ;;
+              *)
+                echo "SAFETY STOP: forbidden changed path: $file"
+                exit 1
+                ;;
+            esac
+          done
+
+      - name: Commit valid V13.0 outputs
+        if: ${{ inputs.mode != 'diagnose' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/history/*.json data/history-summary.json data/session-calendar.json data/source-audit.json data/history-last-run.json data/history-approved-gap-queue.json data/history-targeted-seven-report.json data/history-targeted-seven-quarantine.json data/symbol-map.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No valid V13.0 data changes to commit."
+            exit 0
+          fi
+          git commit -m "V13.0 targeted repair, adjustment review and ESRS delisting cleanup"
+          git push origin HEAD:main
+
+      - name: Commit V13.0 diagnostic report
+        if: ${{ inputs.mode == 'diagnose' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/history-targeted-seven-report.json data/history-targeted-seven-quarantine.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "V13.0 diagnose targeted seven-symbol repair"
+          git push origin HEAD:main
+
+      - name: Upload V13.0 diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v13-targeted-seven-diagnostics
+          path: |
+            data/history-targeted-seven-report.json
+            data/history-targeted-seven-quarantine.json
+          if-no-files-found: warn
+
+  deploy:
+    needs: targeted-repair
+    if: ${{ success() }}
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload current repository
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+      - name: Deploy Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
