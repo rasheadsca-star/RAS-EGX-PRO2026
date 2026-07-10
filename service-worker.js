@@ -12,8 +12,3 @@ self.addEventListener('fetch',event=>{
   }
   event.respondWith(fetch(req).catch(()=>caches.match(req)));
 });
-
-/* UNIFIED_GOAL_V12_SW_START */
-self.addEventListener('install', () => self.skipWaiting());
-self.addEventListener('activate', event => event.waitUntil(self.clients.claim()));
-/* UNIFIED_GOAL_V12_SW_END */
