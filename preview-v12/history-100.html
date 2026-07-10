@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <title>EGX Pro — V12.3 قاعدة 100 جلسة للسوق الكامل</title>
+  <title>EGX Pro — V12.5 تنظيف السوق ومسارات المصادر البديلة</title>
   <style>
     :root{--bg:#06111f;--panel:#0b1c31;--panel2:#0d223b;--line:#254664;--text:#f5f8fc;--muted:#9eb3c9;--cyan:#22d3ee;--green:#22c55e;--amber:#f59e0b;--red:#ef4444;--blue:#38bdf8}
     *{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#06111f,#071827);color:var(--text);font-family:Tahoma,Arial,sans-serif;min-height:100vh}
@@ -20,7 +20,7 @@
 <body>
   <div class="wrap">
     <header class="top">
-      <div><h1>EGX Pro — قاعدة 100 جلسة للسوق الكامل V12.3</h1><div class="sub">توسيع آمن على دفعات، تاريخ OHLCV فعلي، تحقق هوية الرمز وقت التشغيل، وعدم استبدال أي ملف صالح بملف فارغ.</div></div>
+      <div><h1>EGX Pro — قاعدة 100 جلسة V12.5 وتنظيف السوق</h1><div class="sub">تنظيف المقام الحقيقي للسوق، إنقاذ الهوية بشروط محافظة، وتصنيف الرموز التي تحتاج EGX أو مباشر أو Investing أو استيرادًا معتمدًا.</div></div>
       <div class="actions"><button class="btn" id="refresh">تحديث البيانات</button><a class="btn" href="./">V12 Preview</a><a class="btn" href="../">التطبيق المستقر</a></div>
     </header>
 
@@ -60,7 +60,7 @@
 <script>
 (() => {
   const q = (id) => document.getElementById(id);
-  let summary = null, batch = null, lastRun = null, universe = null, activeFilter = 'all';
+  let summary = null, batch = null, lastRun = null, universe = null, cleanup = null, fallback = null, activeFilter = 'all';
   const n = (v) => Number(v || 0);
   const pct = (v) => `${n(v).toLocaleString('ar-EG',{maximumFractionDigits:2})}%`;
   const num = (v) => n(v).toLocaleString('ar-EG');
@@ -102,6 +102,9 @@
       ['آخر فشل', batch?.lastFailedCount ?? lastRun?.failed?.length ?? '—'],
       ['تم تخطيه لأنه مكتمل', batch?.lastSkippedCompleteCount ?? lastRun?.skippedCompleteTickers?.length ?? '—'],
       ['رموز أضيفت للخريطة', universe?.newSymbolsAdded ?? '—'],
+      ['مفاتيح غير مالية مستبعدة', cleanup?.deactivatedCount ?? '—'],
+      ['مؤهلة لإنقاذ الهوية', cleanup?.counts?.eligible_guarded_salvage ?? '—'],
+      ['قائمة المصادر البديلة', fallback?.total ?? '—'],
     ];
     q('batchMeta').innerHTML = items.map(([label,value]) => `<div class="meta"><span class="label">${safe(label)}</span><b>${typeof value==='number'?num(value):safe(value)}</b></div>`).join('');
     const p = n(summary.coverage?.sessions100Pct);
@@ -139,8 +142,13 @@
   async function refresh(){
     q('refresh').disabled = true; q('refresh').textContent = 'جارٍ التحديث…';
     try{
-      [summary,batch,lastRun,universe] = await Promise.all([
-        load('history-summary.json'), load('history-batch-state.json',true), load('history-last-run.json',true), load('history-universe-report.json',true)
+      [summary,batch,lastRun,universe,cleanup,fallback] = await Promise.all([
+        load('history-summary.json'),
+        load('history-batch-state.json',true),
+        load('history-last-run.json',true),
+        load('history-universe-report.json',true),
+        load('history-universe-cleanup-report.json',true),
+        load('history-fallback-queue.json',true)
       ]);
       renderCards(); renderBatch(); renderRows();
     }catch(error){
