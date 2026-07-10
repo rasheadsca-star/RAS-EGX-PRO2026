@@ -1,0 +1,117 @@
+{
+  "schemaVersion": "13.0.0",
+  "targetSessions": 100,
+  "sourceConfidence": 70,
+  "requestTimeoutMs": 25000,
+  "retryCount": 3,
+  "retryBaseDelayMs": 1200,
+  "delayBetweenTickersMs": 900,
+  "apiBases": [
+    "https://starta.46-224-223-172.sslip.io/api/v1",
+    "https://startamarkets.com/api/v1"
+  ],
+  "periodCandidates": [
+    "5y",
+    "3y",
+    "2y",
+    "1y"
+  ],
+  "maximumRowsPerRequest": 2000,
+  "minimumIdentityNameSimilarity": 0.34,
+  "closeTolerancePct": 1.5,
+  "minimumOverlapMatches": 3,
+  "minimumSparseExactMatches": 2,
+  "minimumOverlapRatio": 0.75,
+  "allowedDateOffsets": [
+    -2,
+    -1,
+    1,
+    2
+  ],
+  "minimumBridgeNewSessions": 3,
+  "maxBridgeCalendarDays": 240,
+  "bridgeCloseTolerancePct": 15,
+  "minimumNewSessions": 1,
+  "maxMarketLagCalendarDays": 21,
+  "minimumAdjustmentObservations": 10,
+  "maximumAdjustmentFactorDeviationPct": 0.25,
+  "approvedFactorMaximumDifferencePct": 0.5,
+  "targets": [
+    {
+      "ticker": "EGSA",
+      "isin": "EGS48022C015",
+      "companyNameEn": "The Egyptian Satellite Company Nilesat",
+      "companyNameAr": "نايل سات",
+      "strategy": "stable_adjustment_review"
+    },
+    {
+      "ticker": "FAITA",
+      "isin": "EGS60322C012",
+      "companyNameEn": "Faisal Islamic Bank of Egypt",
+      "companyNameAr": "بنك فيصل الإسلامي المصري",
+      "strategy": "stable_adjustment_review"
+    },
+    {
+      "ticker": "GPPL",
+      "isin": "EGS70342C018",
+      "companyNameEn": "Golden Pyramids Plaza",
+      "companyNameAr": "جولدن بيراميدز بلازا",
+      "strategy": "sparse_extended_overlap",
+      "periodCandidates": [
+        "5y",
+        "3y",
+        "2y",
+        "1y"
+      ]
+    },
+    {
+      "ticker": "NDRL",
+      "isin": "EGS735N2C012",
+      "companyNameEn": "National Drilling Company",
+      "companyNameAr": "الحفر الوطنية",
+      "strategy": "sparse_extended_overlap",
+      "periodCandidates": [
+        "5y",
+        "3y",
+        "2y",
+        "1y"
+      ]
+    },
+    {
+      "ticker": "SAIB",
+      "isin": "EGS60142C014",
+      "companyNameEn": "Societe Arabe Internationale de Banque",
+      "companyNameAr": "بنك الشركة المصرفية العربية الدولية",
+      "strategy": "sparse_extended_overlap",
+      "periodCandidates": [
+        "5y",
+        "3y",
+        "2y",
+        "1y"
+      ]
+    },
+    {
+      "ticker": "SPHT",
+      "isin": "EGS70H02C014",
+      "companyNameEn": "El Shams Pyramids Co. for Hotels & Touristic Projects SAE",
+      "companyNameAr": "الشمس بيراميدز",
+      "strategy": "sparse_extended_overlap",
+      "periodCandidates": [
+        "5y",
+        "3y",
+        "2y",
+        "1y"
+      ]
+    },
+    {
+      "ticker": "ESRS",
+      "isin": "EGS3C251C013",
+      "companyNameEn": "Ezz Steel",
+      "companyNameAr": "حديد عز",
+      "strategy": "official_delisting_cleanup",
+      "delistedAt": "2025-03-12",
+      "delistingSource": "egx_official",
+      "delistingSourceUrl": "https://www.egx.com.eg/en/NewsDetails.aspx?NewsID=267067"
+    }
+  ]
+}
