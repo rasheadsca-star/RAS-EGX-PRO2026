@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-  <title>EGX Pro — V12.6 استيراد قاعدة XLSX التاريخية</title>
+  <title>EGX Pro — V12.7 استكمال فجوة القاعدة التاريخية</title>
   <style>
     :root{--bg:#06111f;--panel:#0b1c31;--panel2:#0d223b;--line:#254664;--text:#f5f8fc;--muted:#9eb3c9;--cyan:#22d3ee;--green:#22c55e;--amber:#f59e0b;--red:#ef4444;--blue:#38bdf8}
     *{box-sizing:border-box} body{margin:0;background:linear-gradient(180deg,#06111f,#071827);color:var(--text);font-family:Tahoma,Arial,sans-serif;min-height:100vh}
@@ -20,11 +20,11 @@
 <body>
   <div class="wrap">
     <header class="top">
-      <div><h1>EGX Pro — قاعدة 100 جلسة V12.6 واستيراد XLSX</h1><div class="sub">استيراد قاعدة تاريخية XLSX بعد فحص OHLCV، حجر الصفوف غير الصالحة، والحفاظ على الملفات الحية الأحدث دون استبدالها.</div></div>
+      <div><h1>EGX Pro — قاعدة 100 جلسة V12.7 واستكمال الفجوة</h1><div class="sub">استكمال الفترة التالية لقاعدة XLSX بعد التحقق من تطابق الرمز والسوق واستمرارية سعر الإغلاق على جلسات متداخلة، دون استبدال جلسات القاعدة القديمة.</div></div>
       <div class="actions"><button class="btn" id="refresh">تحديث البيانات</button><a class="btn" href="./">V12 Preview</a><a class="btn" href="../">التطبيق المستقر</a></div>
     </header>
 
-    <div class="notice">الثقة 100% لا تُمنح إلا عند التحقق من EGX الرسمي. بيانات Yahoo تُستخدم للتجميع التاريخي، وتظل ثقتها الأساسية 75% حتى المطابقة بمصدر ثانٍ.</div>
+    <div class="notice">الثقة 100% لا تُمنح إلا عند التحقق من EGX الرسمي. استكمال V12.7 يستخدم Yahoo من نفس عائلة مصدر ملف XLSX؛ لذلك يثبت استمرارية السلسلة فقط ولا يُعد تحققًا مستقلًا، وتظل الثقة محدودة حتى المطابقة بمصدر ثانٍ.</div>
 
     <section class="grid" id="cards"></section>
 
@@ -60,7 +60,7 @@
 <script>
 (() => {
   const q = (id) => document.getElementById(id);
-  let summary = null, batch = null, lastRun = null, universe = null, cleanup = null, fallback = null, seedReport = null, activeFilter = 'all';
+  let summary = null, batch = null, lastRun = null, universe = null, cleanup = null, fallback = null, seedReport = null, gapReport = null, activeFilter = 'all';
   const n = (v) => Number(v || 0);
   const pct = (v) => `${n(v).toLocaleString('ar-EG',{maximumFractionDigits:2})}%`;
   const num = (v) => n(v).toLocaleString('ar-EG');
@@ -90,6 +90,10 @@
       ['مصدر واحد', summary.singleSourceSymbols, 'صالح للتحليل مع ثقة محدودة'],
       ['استيراد XLSX', seedReport?.counts?.importedOrImproved ?? '—', 'ملفات جديدة أو محسنة من القاعدة التأسيسية'],
       ['صفوف محجورة', seedReport?.rowsQuarantined ?? '—', 'رُفضت دون تقدير أو إصلاح صناعي'],
+      ['مرشحو استكمال الفجوة', gapReport?.counts?.candidates ?? '—', 'الأسهم المستوردة من V12.6 التي ما زالت تحتاج تحديثًا'],
+      ['تحسنت في V12.7', gapReport?.counts?.improved ?? '—', 'أضيفت لها جلسات أحدث بعد تحقق الاستمرارية'],
+      ['اكتملت وحديثة', gapReport?.counts?.completed100Current ?? '—', '100 جلسة مع حداثة مقبولة'],
+      ['جلسات مضافة', gapReport?.counts?.appendedSessions ?? '—', 'جلسات جديدة دون استبدال التاريخ السابق'],
     ];
     q('cards').innerHTML = cards.map(([label,value,small]) => `<div class="card"><div class="label">${safe(label)}</div><div class="value">${typeof value==='number'?num(value):safe(value)}</div><div class="small">${safe(small)}</div></div>`).join('');
   }
@@ -109,6 +113,10 @@
       ['قائمة المصادر البديلة', fallback?.total ?? '—'],
       ['أحدث جلسة في ملف XLSX', seedReport?.source?.latestSession ?? '—'],
       ['رموز رفضها الاستيراد', seedReport?.counts?.rejectedSymbols ?? '—'],
+      ['آخر تشغيل V12.7', gapReport?.completedAt ?? '—'],
+      ['فشل استكمال الفجوة', gapReport?.counts?.failed ?? '—'],
+      ['بدون جلسات جديدة', gapReport?.counts?.noNewSessions ?? '—'],
+      ['هدف أحدث جلسة سوق', gapReport?.latestMarketSession ?? '—'],
     ];
     q('batchMeta').innerHTML = items.map(([label,value]) => `<div class="meta"><span class="label">${safe(label)}</span><b>${typeof value==='number'?num(value):safe(value)}</b></div>`).join('');
     const p = n(summary.coverage?.sessions100Pct);
@@ -146,14 +154,15 @@
   async function refresh(){
     q('refresh').disabled = true; q('refresh').textContent = 'جارٍ التحديث…';
     try{
-      [summary,batch,lastRun,universe,cleanup,fallback,seedReport] = await Promise.all([
+      [summary,batch,lastRun,universe,cleanup,fallback,seedReport,gapReport] = await Promise.all([
         load('history-summary.json'),
         load('history-batch-state.json',true),
         load('history-last-run.json',true),
         load('history-universe-report.json',true),
         load('history-universe-cleanup-report.json',true),
         load('history-fallback-queue.json',true),
-        load('history-seed-import-report.json',true)
+        load('history-seed-import-report.json',true),
+        load('history-gap-completion-report.json',true)
       ]);
       renderCards(); renderBatch(); renderRows();
     }catch(error){
