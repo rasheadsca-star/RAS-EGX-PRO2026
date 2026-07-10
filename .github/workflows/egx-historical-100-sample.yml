@@ -1,0 +1,195 @@
+name: EGX Historical 100 Sessions — Sample
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "sample = 10 shares; full_backfill = all mapped; incremental = short update; repair_symbol = one ticker"
+        required: true
+        type: choice
+        default: sample
+        options:
+          - sample
+          - full_backfill
+          - incremental
+          - repair_symbol
+      ticker:
+        description: "Ticker only when mode=repair_symbol, e.g. COMI"
+        required: false
+        type: string
+      min_success:
+        description: "Minimum valid sample files required by acceptance tests"
+        required: true
+        default: "6"
+        type: string
+  schedule:
+    # Sunday–Thursday after EGX close. 15:30 UTC is 17:30/18:30 Cairo depending on DST.
+    - cron: "30 15 * * 0-4"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: egx-historical-update
+  cancel-in-progress: false
+
+jobs:
+  history:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+
+    steps:
+      - name: Checkout main with history
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Resolve run mode
+        id: run-config
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            echo "mode=incremental" >> "$GITHUB_OUTPUT"
+            echo "ticker=" >> "$GITHUB_OUTPUT"
+            echo "min_success=6" >> "$GITHUB_OUTPUT"
+          else
+            echo "mode=${{ inputs.mode }}" >> "$GITHUB_OUTPUT"
+            echo "ticker=${{ inputs.ticker }}" >> "$GITHUB_OUTPUT"
+            if [ "${{ inputs.mode }}" = "repair_symbol" ]; then
+              echo "min_success=1" >> "$GITHUB_OUTPUT"
+            else
+              echo "min_success=${{ inputs.min_success }}" >> "$GITHUB_OUTPUT"
+            fi
+          fi
+
+      - name: Validate package files and stable-app isolation
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f data/symbol-map.json
+          test -f scripts/history/historical-100-runner.cjs
+          test -f scripts/history/acceptance-tests.cjs
+          test -f data/history-verification-overrides.json
+          test -f preview-v12/history-100.html
+          echo "V11/V11.5 files will not be edited. Output scope is data/history and history audit files only."
+
+      - name: Fetch and validate historical sessions
+        env:
+          HISTORY_MODE: ${{ steps.run-config.outputs.mode }}
+          HISTORY_TICKER: ${{ steps.run-config.outputs.ticker }}
+          HISTORY_BATCH_SIZE: "3"
+          HISTORY_BATCH_DELAY_MS: "1800"
+          HISTORY_SYMBOL_DELAY_MS: "550"
+        run: node scripts/history/historical-100-runner.cjs
+
+      - name: Run acceptance tests
+        env:
+          HISTORY_MODE: ${{ steps.run-config.outputs.mode }}
+          HISTORY_TICKER: ${{ steps.run-config.outputs.ticker }}
+          HISTORY_MIN_SUCCESS: ${{ steps.run-config.outputs.min_success }}
+        run: node scripts/history/acceptance-tests.cjs
+
+      - name: Enforce strict write isolation
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t changed < <(
+            {
+              git diff --name-only
+              git diff --cached --name-only
+              git ls-files --others --exclude-standard
+            } | sed '/^$/d' | sort -u
+          )
+
+          echo "Changed files:"
+          if [ "${#changed[@]}" -eq 0 ]; then
+            echo "none"
+          else
+            printf '%s\n' "${changed[@]}"
+          fi
+
+          for file in "${changed[@]}"; do
+            case "$file" in
+              data/history/*.json|data/history-summary.json|data/source-audit.json|data/history-errors.json|data/session-calendar.json|data/corporate-actions.json)
+                ;;
+              *)
+                echo "SAFETY STOP: historical workflow attempted to change forbidden path: $file"
+                exit 1
+                ;;
+            esac
+          done
+
+          test -z "$(git diff --name-only -- index.html service-worker.js assets config preview-v12/index.html)"
+          echo "Isolation passed. Stable application files were not touched."
+
+      - name: Commit valid history outputs only
+        id: commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/history data/history-summary.json data/source-audit.json \
+            data/history-errors.json data/session-calendar.json data/corporate-actions.json
+
+          if git diff --cached --quiet; then
+            echo "No valid history changes to commit."
+            echo "committed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          git commit -m "V12.2 update validated EGX historical sample"
+          git pull --rebase origin main
+          git push origin HEAD:main
+          echo "committed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Upload diagnostic artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: v12-2-history-diagnostics-${{ github.run_number }}
+          if-no-files-found: ignore
+          retention-days: 14
+          path: |
+            data/history-summary.json
+            data/history-errors.json
+            data/source-audit.json
+            data/corporate-actions.json
+
+  deploy:
+    needs: history
+    if: success()
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 1
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload current repository to Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy V12.2 history preview
+        id: deployment
+        uses: actions/deploy-pages@v4
