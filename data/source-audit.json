@@ -1,6 +1,6 @@
 {
-  "schemaVersion": "12.3.0",
-  "generatedAt": "2026-07-10T07:08:30.405Z",
+  "schemaVersion": "12.7.0",
+  "generatedAt": "2026-07-10T09:07:20.812Z",
   "mode": "batch_backfill",
   "operations": [
     {
@@ -12135,27 +12135,258 @@
         "single_source_seed",
         "latest_seed_session_is_historical"
       ]
+    },
+    {
+      "operation": "historical_seed_gap_completion",
+      "ticker": "EGBE",
+      "startedAt": "2026-07-10T09:06:50.603Z",
+      "completedAt": "2026-07-10T09:06:51.531Z",
+      "status": "failed",
+      "requestedSymbol": null,
+      "beforeSessions": 79,
+      "afterSessions": 79,
+      "appendedSessions": 0,
+      "previousLastSession": "2026-02-04",
+      "lastSession": "2026-02-04",
+      "overlap": null,
+      "confidence": 65,
+      "errors": [
+        "Yahoo seed-gap completion failed for EGBE: EGBE.CA: identity evidence failed | EGS60182C010.CA: seed overlap failed (0/0)"
+      ],
+      "warnings": [
+        "existing_history_preserved_unchanged"
+      ]
+    },
+    {
+      "operation": "historical_seed_gap_completion",
+      "ticker": "EGSA",
+      "startedAt": "2026-07-10T09:06:51.384Z",
+      "completedAt": "2026-07-10T09:06:51.669Z",
+      "status": "failed",
+      "requestedSymbol": null,
+      "beforeSessions": 64,
+      "afterSessions": 64,
+      "appendedSessions": 0,
+      "previousLastSession": "2026-02-04",
+      "lastSession": "2026-02-04",
+      "overlap": null,
+      "confidence": 65,
+      "errors": [
+        "Yahoo seed-gap completion failed for EGSA: EGSA.CA: identity evidence failed | EGS48022C015.CA: seed overlap failed (0/0)"
+      ],
+      "warnings": [
+        "existing_history_preserved_unchanged"
+      ]
+    },
+    {
+      "operation": "historical_seed_gap_completion",
+      "ticker": "ESRS",
+      "startedAt": "2026-07-10T09:06:53.271Z",
+      "completedAt": "2026-07-10T09:06:59.385Z",
+      "status": "failed",
+      "requestedSymbol": null,
+      "beforeSessions": 74,
+      "afterSessions": 74,
+      "appendedSessions": 0,
+      "previousLastSession": "2025-03-13",
+      "lastSession": "2025-03-13",
+      "overlap": null,
+      "confidence": 65,
+      "errors": [
+        "Yahoo seed-gap completion failed for ESRS: ESRS.CA: seed overlap failed (0/0) | EGS3C251C013.CA: All HTTP attempts failed. https://query1.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1736640000&period2=1783847213&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1736640000&period2=1783847213&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1736640000&period2=1783847213&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1736640000&period2=1783847213&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1736640000&period2=1783847213&interval=1d&events=history&includeAdjustedClose=true attempt 3: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1736640000&period2=1783847213&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1736640000&period2=1783847213&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1736640000&period2=1783847213&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1736640000&period2=1783847213&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1736640000&period2=1783847213&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1736640000&period2=1783847213&interval=1d&events=history&includeAdjustedClose=true attempt 3: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/EGS3C251C013.CA?period1=1736640000&period2=1783847213&interval=1d&events=history&includeAdjustedClose=true"
+      ],
+      "warnings": [
+        "existing_history_preserved_unchanged"
+      ]
+    },
+    {
+      "operation": "historical_seed_gap_completion",
+      "ticker": "FAITA",
+      "startedAt": "2026-07-10T09:06:53.871Z",
+      "completedAt": "2026-07-10T09:06:54.094Z",
+      "status": "failed",
+      "requestedSymbol": null,
+      "beforeSessions": 76,
+      "afterSessions": 76,
+      "appendedSessions": 0,
+      "previousLastSession": "2026-02-04",
+      "lastSession": "2026-02-04",
+      "overlap": null,
+      "confidence": 65,
+      "errors": [
+        "Yahoo seed-gap completion failed for FAITA: FAITA.CA: identity evidence failed | EGS60322C012.CA: seed overlap failed (0/0)"
+      ],
+      "warnings": [
+        "existing_history_preserved_unchanged"
+      ]
+    },
+    {
+      "operation": "historical_seed_gap_completion",
+      "ticker": "GPPL",
+      "startedAt": "2026-07-10T09:07:00.987Z",
+      "completedAt": "2026-07-10T09:07:01.365Z",
+      "status": "failed",
+      "requestedSymbol": null,
+      "beforeSessions": 87,
+      "afterSessions": 87,
+      "appendedSessions": 0,
+      "previousLastSession": "2026-02-03",
+      "lastSession": "2026-02-03",
+      "overlap": null,
+      "confidence": 65,
+      "errors": [
+        "Yahoo seed-gap completion failed for GPPL: GPPL.CA: identity evidence failed | EGS70342C018.CA: seed overlap failed (0/0)"
+      ],
+      "warnings": [
+        "existing_history_preserved_unchanged"
+      ]
+    },
+    {
+      "operation": "historical_seed_gap_completion",
+      "ticker": "MOIL",
+      "startedAt": "2026-07-10T09:07:01.587Z",
+      "completedAt": "2026-07-10T09:07:01.933Z",
+      "status": "failed",
+      "requestedSymbol": null,
+      "beforeSessions": 88,
+      "afterSessions": 88,
+      "appendedSessions": 0,
+      "previousLastSession": "2026-02-03",
+      "lastSession": "2026-02-03",
+      "overlap": null,
+      "confidence": 65,
+      "errors": [
+        "Yahoo seed-gap completion failed for MOIL: MOIL.CA: identity evidence failed | EGS44012C010.CA: seed overlap failed (0/0)"
+      ],
+      "warnings": [
+        "existing_history_preserved_unchanged"
+      ]
+    },
+    {
+      "operation": "historical_seed_gap_completion",
+      "ticker": "NAHO",
+      "startedAt": "2026-07-10T09:07:03.535Z",
+      "completedAt": "2026-07-10T09:07:03.738Z",
+      "status": "failed",
+      "requestedSymbol": null,
+      "beforeSessions": 77,
+      "afterSessions": 77,
+      "appendedSessions": 0,
+      "previousLastSession": "2026-02-03",
+      "lastSession": "2026-02-03",
+      "overlap": null,
+      "confidence": 65,
+      "errors": [
+        "Yahoo seed-gap completion failed for NAHO: NAHO.CA: identity evidence failed | EGS69182C011.CA: seed overlap failed (0/0)"
+      ],
+      "warnings": [
+        "existing_history_preserved_unchanged"
+      ]
+    },
+    {
+      "operation": "historical_seed_gap_completion",
+      "ticker": "NDRL",
+      "startedAt": "2026-07-10T09:07:04.136Z",
+      "completedAt": "2026-07-10T09:07:10.419Z",
+      "status": "failed",
+      "requestedSymbol": null,
+      "beforeSessions": 100,
+      "afterSessions": 100,
+      "appendedSessions": 0,
+      "previousLastSession": "2026-02-04",
+      "lastSession": "2026-02-04",
+      "overlap": null,
+      "confidence": 65,
+      "errors": [
+        "Yahoo seed-gap completion failed for NDRL: NDRL.CA: identity evidence failed | EGS735N2C012.CA: All HTTP attempts failed. https://query1.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1764979200&period2=1783847224&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1764979200&period2=1783847224&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1764979200&period2=1783847224&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1764979200&period2=1783847224&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1764979200&period2=1783847224&interval=1d&events=history&includeAdjustedClose=true attempt 3: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1764979200&period2=1783847224&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1764979200&period2=1783847224&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1764979200&period2=1783847224&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1764979200&period2=1783847224&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1764979200&period2=1783847224&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1764979200&period2=1783847224&interval=1d&events=history&includeAdjustedClose=true attempt 3: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/EGS735N2C012.CA?period1=1764979200&period2=1783847224&interval=1d&events=history&includeAdjustedClose=true"
+      ],
+      "warnings": [
+        "existing_history_preserved_unchanged"
+      ]
+    },
+    {
+      "operation": "historical_seed_gap_completion",
+      "ticker": "SAIB",
+      "startedAt": "2026-07-10T09:07:12.021Z",
+      "completedAt": "2026-07-10T09:07:12.329Z",
+      "status": "failed",
+      "requestedSymbol": null,
+      "beforeSessions": 97,
+      "afterSessions": 97,
+      "appendedSessions": 0,
+      "previousLastSession": "2026-02-04",
+      "lastSession": "2026-02-04",
+      "overlap": null,
+      "confidence": 65,
+      "errors": [
+        "Yahoo seed-gap completion failed for SAIB: SAIB.CA: identity evidence failed | EGS60142C014.CA: seed overlap failed (0/0)"
+      ],
+      "warnings": [
+        "existing_history_preserved_unchanged"
+      ]
+    },
+    {
+      "operation": "historical_seed_gap_completion",
+      "ticker": "SPHT",
+      "startedAt": "2026-07-10T09:07:12.623Z",
+      "completedAt": "2026-07-10T09:07:18.758Z",
+      "status": "failed",
+      "requestedSymbol": null,
+      "beforeSessions": 96,
+      "afterSessions": 96,
+      "appendedSessions": 0,
+      "previousLastSession": "2026-02-04",
+      "lastSession": "2026-02-04",
+      "overlap": null,
+      "confidence": 65,
+      "errors": [
+        "Yahoo seed-gap completion failed for SPHT: SPHT.CA: identity evidence failed | EGS70H02C014.CA: All HTTP attempts failed. https://query1.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1764979200&period2=1783847232&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1764979200&period2=1783847232&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1764979200&period2=1783847232&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1764979200&period2=1783847232&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1764979200&period2=1783847232&interval=1d&events=history&includeAdjustedClose=true attempt 3: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1764979200&period2=1783847232&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1764979200&period2=1783847232&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1764979200&period2=1783847232&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1764979200&period2=1783847232&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1764979200&period2=1783847232&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1764979200&period2=1783847232&interval=1d&events=history&includeAdjustedClose=true attempt 3: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/EGS70H02C014.CA?period1=1764979200&period2=1783847232&interval=1d&events=history&includeAdjustedClose=true"
+      ],
+      "warnings": [
+        "existing_history_preserved_unchanged"
+      ]
+    },
+    {
+      "operation": "historical_seed_gap_completion",
+      "ticker": "TRTO",
+      "startedAt": "2026-07-10T09:07:20.360Z",
+      "completedAt": "2026-07-10T09:07:20.575Z",
+      "status": "failed",
+      "requestedSymbol": null,
+      "beforeSessions": 71,
+      "afterSessions": 71,
+      "appendedSessions": 0,
+      "previousLastSession": "2026-02-03",
+      "lastSession": "2026-02-03",
+      "overlap": null,
+      "confidence": 65,
+      "errors": [
+        "Yahoo seed-gap completion failed for TRTO: TRTO.CA: identity evidence failed | EGS79072C012.CA: seed overlap failed (0/0)"
+      ],
+      "warnings": [
+        "existing_history_preserved_unchanged"
+      ]
     }
   ],
   "lastOperation": {
-    "operation": "historical_seed_xlsx_import",
-    "startedAt": "2026-07-10T08:50:14Z",
-    "completedAt": "2026-07-10T08:50:16Z",
-    "source": {
-      "key": "kaggle_yahoo_seed",
-      "label": "Yahoo Finance / yfinance / Kaggle historical seed",
-      "url": "https://www.kaggle.com/datasets/mahmoudalrefaey/egx-egyptian-stocks-2021-2026",
-      "latestSession": "2026-02-04",
-      "official": false
-    },
-    "workbook": "data/imports/EGX_Historical_100_Sessions_Seed.xlsx",
-    "rowsRead": 19800,
-    "rowsValid": 15221,
-    "rowsQuarantined": 4579,
-    "symbolsImportedOrImproved": 11,
+    "operation": "historical_seed_gap_completion",
+    "ticker": "TRTO",
+    "startedAt": "2026-07-10T09:07:20.360Z",
+    "completedAt": "2026-07-10T09:07:20.575Z",
+    "status": "failed",
+    "requestedSymbol": null,
+    "beforeSessions": 71,
+    "afterSessions": 71,
+    "appendedSessions": 0,
+    "previousLastSession": "2026-02-03",
+    "lastSession": "2026-02-03",
+    "overlap": null,
+    "confidence": 65,
+    "errors": [
+      "Yahoo seed-gap completion failed for TRTO: TRTO.CA: identity evidence failed | EGS79072C012.CA: seed overlap failed (0/0)"
+    ],
     "warnings": [
-      "single_source_seed",
-      "latest_seed_session_is_historical"
+      "existing_history_preserved_unchanged"
     ]
   }
 }
