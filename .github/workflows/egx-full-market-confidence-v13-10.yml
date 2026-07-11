@@ -1,0 +1,133 @@
+name: EGX Full-Market Freshness & Tiered Confidence — V13.10
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Sunday through Thursday after market close.
+    - cron: "5 15 * * 0-4"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: egx-full-market-confidence-v13-10
+  cancel-in-progress: false
+
+jobs:
+  refresh-analyze-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy2.outputs.page_url || steps.deploy1.outputs.page_url }}
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Validate integrated dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          required=(
+            scripts/history/historical-100-runner.cjs
+            scripts/history/history-summary-builder.cjs
+            scripts/history/adapters/yahoo-history-adapter.cjs
+            scripts/history/v13-10-full-market-refresh.cjs
+            scripts/quant/v13-4-quant-engine.cjs
+            scripts/quant/v13-9-recommendation-audit.cjs
+            scripts/quant/v13-10-tiered-confidence.cjs
+            scripts/quant/v13-10-acceptance.cjs
+            data/symbol-map.json
+            data/history-eligibility.json
+            data/history-summary.json
+            data/v13-4-quant-policy.json
+            data/v13-9-audit-calibration-policy.json
+            data/v13-10-tiered-confidence-policy.json
+            preview-v13/app/tiered-confidence.html
+          )
+          for file in "${required[@]}"; do
+            test -f "$file" || { echo "Missing required file: $file"; exit 1; }
+          done
+          test -d data/history || { echo "Missing data/history"; exit 1; }
+
+      - name: Refresh full market to latest session
+        env:
+          V13_10_SKIP_FETCH: "false"
+        run: node scripts/history/v13-10-full-market-refresh.cjs
+
+      - name: Rebuild strict engine and audit
+        run: |
+          node scripts/quant/v13-4-quant-engine.cjs
+          node scripts/quant/v13-9-recommendation-audit.cjs
+
+      - name: Build tiered confidence engine
+        run: |
+          node scripts/quant/v13-10-tiered-confidence.cjs
+          node scripts/quant/v13-10-acceptance.cjs
+
+      - name: Confirm V11 isolation
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --name-only | tee /tmp/v1310-changes.txt
+          if grep -E '^(index\.html|service-worker\.js|assets/|js/|css/)' /tmp/v1310-changes.txt; then
+            echo "Safety stop: stable V11 files were changed."
+            exit 1
+          fi
+
+      - name: Commit V13.10 history and analysis
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            data/history \
+            data/history-summary.json \
+            data/history-last-run.json \
+            data/history-batch-state.json \
+            data/history-errors.json \
+            data/source-audit.json \
+            data/session-calendar.json \
+            data/corporate-actions.json \
+            data/quant
+          if git diff --cached --quiet; then
+            echo "No V13.10 data changes."
+          else
+            git commit -m "Update V13.10 full-market freshness and tiered confidence"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload repository for Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy V13.10 attempt 1
+        id: deploy1
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+
+      - name: Wait if another Pages deployment is active
+        if: steps.deploy1.outcome == 'failure'
+        run: sleep 120
+
+      - name: Deploy V13.10 attempt 2
+        id: deploy2
+        if: steps.deploy1.outcome == 'failure'
+        uses: actions/deploy-pages@v4
