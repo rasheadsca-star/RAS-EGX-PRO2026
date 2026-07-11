@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <meta name="theme-color" content="#07121e">
-  <title>EGX Pro V13.8 — واجهة التشغيل الموحدة</title>
+  <title>EGX Pro V13.9 — واجهة التشغيل الموحدة</title>
   <style>
     :root{
       color-scheme:dark;
@@ -60,8 +60,8 @@
 <div class="app">
   <aside class="sidebar" id="sidebar">
     <div class="brand">
-      <h1>EGX Pro V13.8</h1>
-      <small>واجهة تشغيل موحدة<br>V11 + V13.3–V13.8 + التحليل والمحفظة والمخاطر وسجل القرارات</small>
+      <h1>EGX Pro V13.9</h1>
+      <small>واجهة تشغيل موحدة<br>V11 + V13.3–V13.9 + التحليل والمحفظة والمخاطر وتدقيق التوصيات</small>
     </div>
     <nav class="nav">
       <div class="group">المركز الموحد</div>
@@ -69,6 +69,7 @@
       <button data-view="recommendations">الفرص والتوصيات</button>
       <button data-view="paper">التداول الورقي</button>
       <button data-view="strategies">التحليل والاستراتيجيات</button>
+      <button data-view="audit139">تدقيق محرك التوصيات</button>
       <button data-view="health">صحة البيانات</button>
       <div class="group">مميزات V11 المحفوظة</div>
       <button data-view="v11">تشغيل V11 الكامل</button>
@@ -122,6 +123,7 @@
               <div class="module" data-jump="portfolio"><b>المحفظة</b><span>الحيازات والربح والخسارة والتركيز.</span></div>
               <div class="module" data-jump="risk"><b>تخصيص المخاطر</b><span>حجم ورقي وفق الوقف والسيولة والقطاع والارتباط.</span></div>
               <div class="module" data-jump="journal"><b>سجل القرارات</b><span>توثيق الخطة الأصلية والملاحظات دون أثر رجعي.</span></div>
+              <div class="module" data-jump="audit139"><b>تدقيق التوصيات V13.9</b><span>تعرف أين تُرفض الأسهم وهل المشكلة في البيانات أو الإشارة أو الاستراتيجية.</span></div>
               <div class="module" data-jump="paper"><b>التداول الورقي V13.5</b><span>نتائج قابلة للقياس دون تنفيذ حقيقي أو تعديل بأثر رجعي.</span></div>
             </div>
           </div>
@@ -150,6 +152,11 @@
         <div class="hero"><div><h2>التحليل الكمي وصحة الاستراتيجيات</h2><div class="muted">Walk-Forward، حدود القبول المتكيفة، ثبات النماذج وقاطع الأمان.</div></div><a class="btn" href="../quant-research.html" target="_blank">بحث V13.4 الكامل</a></div>
         <div class="section"><div class="section-head"><h3>صحة الاستراتيجيات</h3></div><div class="section-body table-wrap"><table><thead><tr><th>الاستراتيجية</th><th>الحالة</th><th>صحة النموذج</th><th>حد القبول</th><th>الثبات</th><th>PF تاريخي</th><th>Average R</th><th>PF ورقي</th></tr></thead><tbody id="strategyRows"></tbody></table></div></div>
         <div class="section"><div class="section-head"><h3>روابط البحث</h3></div><div class="section-body module-grid"><a class="module" href="../quant-research.html" target="_blank"><b>نتائج Walk-Forward</b><span>مراحل الاختبار والأداء خارج فترة الضبط.</span></a><a class="module" href="../recommendations.html" target="_blank"><b>توصيات V13.4</b><span>المحرك الكمي قبل المعايرة المتكيفة.</span></a><a class="module" href="../adaptive-recommendations.html" target="_blank"><b>توصيات V13.5</b><span>الجاهز ورقيًا والأقرب لاكتمال الشروط.</span></a><a class="module" href="../paper-tracker.html" target="_blank"><b>سجل القياس</b><span>الصفقات المغلقة وProfit Factor وAverage R.</span></a></div></div>
+      </section>
+
+      <section class="view" id="view-audit139">
+        <div class="hero"><div><h2>تدقيق ومعايرة محرك التوصيات V13.9</h2><div class="muted">قمع استبعاد الأسهم، إصلاح Maximum Drawdown، وتحليل الفرص التجريبية دون تخفيف الإنتاج.</div></div><a class="btn primary" href="recommendation-audit.html" target="_blank">فتح في نافذة مستقلة</a></div>
+        <div class="section"><div class="iframe-wrap" style="height:calc(100vh - 180px)"><iframe title="V13.9 Recommendation Engine Audit" src="recommendation-audit.html?embedded=1"></iframe></div></div>
       </section>
 
       <section class="view" id="view-health">
@@ -199,6 +206,7 @@
           <a class="module" href="../quant-research.html" target="_blank"><b>V13.4 البحث الكمي</b><span>نتائج الاستراتيجيات والاختبارات.</span></a>
           <a class="module" href="../adaptive-recommendations.html" target="_blank"><b>V13.5 المعايرة</b><span>الفرص الجاهزة والأقرب للاكتمال.</span></a>
           <a class="module" href="../paper-tracker.html" target="_blank"><b>V13.5 التداول الورقي</b><span>الإشارات والنتائج ومقاييس المخاطر.</span></a>
+          <a class="module" href="recommendation-audit.html" target="_blank"><b>V13.9 تدقيق التوصيات</b><span>قمع القرار والمعايرة التجريبية وإصلاح Drawdown.</span></a>
           <a class="module" href="risk-allocation.html" target="_blank"><b>V13.8 المخاطر والتخصيص</b><span>حدود الحجم والوزن والقطاع والسيولة والارتباط.</span></a>
           <a class="module" href="decision-journal.html" target="_blank"><b>V13.8 سجل القرارات</b><span>لقطة الخطة والحجم الورقي والمراجعة.</span></a>
           <a class="module" href="../../" target="_blank"><b>V11 المستقر</b><span>كل وظائف التشغيل القديمة دون تعديل.</span></a>

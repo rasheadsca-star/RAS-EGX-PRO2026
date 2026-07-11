@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>V13.9 — تدقيق ومعايرة محرك التوصيات</title>
+<style>
+:root{color-scheme:dark;--bg:#06111d;--p:#0b1f33;--p2:#102b45;--line:#2b5674;--t:#ecf8ff;--m:#9ebdd0;--b:#38bdf8;--g:#36d995;--a:#ffc857;--r:#ff6d7d}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#04101b,#071a2b);color:var(--t);font-family:Tahoma,Arial,sans-serif}a{color:inherit;text-decoration:none}button,select{font:inherit}
+.wrap{max-width:1550px;margin:auto;padding:14px}.hero,.panel{background:rgba(11,31,51,.97);border:1px solid var(--line);border-radius:15px;margin-bottom:12px}.hero{padding:15px;display:flex;justify-content:space-between;gap:12px;align-items:center}.hero h1{margin:0 0 6px;font-size:21px}.muted{color:var(--m);font-size:11px;line-height:1.7}.btn{display:inline-block;background:#123c59;border:1px solid #3b769a;color:var(--t);padding:9px 12px;border-radius:9px;cursor:pointer}
+.cards{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;padding:11px}.card{background:var(--p2);border:1px solid #2a536e;border-radius:10px;padding:11px}.card small{display:block;color:var(--m)}.card b{display:block;font-size:20px;margin-top:8px}.good{color:var(--g)}.bad{color:var(--r)}.warn{color:var(--a)}.blue{color:var(--b)}
+.section-head{padding:12px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:8px}.section-head h2{font-size:16px;margin:0}.body{padding:11px}.verdict{border-radius:11px;padding:12px;line-height:1.8}.verdict.good{background:#123527;border:1px solid #286c50}.verdict.warn{background:#362d18;border:1px solid #6f5b2d}.verdict.bad{background:#391d25;border:1px solid #7c3c4b}
+.funnel{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}.step{background:#0d2941;border:1px solid #2e5b78;border-radius:10px;padding:10px;position:relative}.step small{display:block;color:var(--m);min-height:34px}.step b{font-size:20px}.step i{position:absolute;left:7px;top:7px;font-style:normal;color:#6e9bb6;font-size:9px}
+table{width:100%;border-collapse:collapse}th,td{padding:9px;border-bottom:1px solid #193d55;text-align:right;font-size:11px;vertical-align:top}th{background:#0f2a43;position:sticky;top:0}.table{overflow:auto;max-height:600px}.tag{display:inline-block;font-size:10px;border:1px solid #315f7d;border-radius:999px;padding:4px 7px;margin:2px}.ticker{color:var(--b);font-weight:bold}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(270px,1fr));gap:9px}.candidate{background:#081a2b;border:1px solid #2b5674;border-radius:12px;padding:12px}.candidate h3{margin:0 0 8px}.nums{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:9px}.num{background:#0d2941;border-radius:8px;padding:7px;font-size:10px;color:var(--m)}.num b{display:block;color:var(--t);font-size:14px;margin-top:4px}.empty{padding:35px;text-align:center;color:var(--m)}.notice{padding:11px;border:1px solid #6c5a2d;background:#302716;border-radius:10px;color:#ffe9a7;font-size:11px;line-height:1.7}
+@media(max-width:1100px){.cards,.funnel{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:650px){.wrap{padding:6px}.hero{flex-direction:column;align-items:stretch}.cards,.funnel{grid-template-columns:repeat(2,1fr)}.grid{grid-template-columns:1fr}.nums{grid-template-columns:repeat(2,1fr)}}
+</style></head>
+<body><div class="wrap">
+<div class="hero"><div><h1>V13.9 — تدقيق ومعايرة محرك التوصيات</h1><div class="muted">يوضح لماذا وصلت النتيجة إلى صفر توصيات، ويصلح حساب Maximum Drawdown، ويفصل جودة الاستراتيجية عن إشارة السهم الحالية.</div></div><div><a class="btn" href="index.html">الواجهة الموحدة</a> <a class="btn" href="../recommendations.html" target="_blank">توصيات V13.4</a></div></div>
+
+<div class="panel"><div class="cards" id="cards"></div></div>
+<div class="panel"><div class="section-head"><h2>نتيجة التدقيق</h2></div><div class="body"><div id="verdict"></div></div></div>
+<div class="panel"><div class="section-head"><h2>قمع القرار — أين تنخفض الأسهم؟</h2><span class="muted">كل رقم يمثل عدد الأسهم التي وصلت إلى البوابة.</span></div><div class="body"><div class="funnel" id="funnel"></div></div></div>
+
+<div class="panel"><div class="section-head"><h2>تدقيق الاستراتيجيات</h2><span class="muted">حدود الإنتاج لم يتم تخفيفها.</span></div><div class="table"><table><thead><tr><th>الاستراتيجية</th><th>الحالة</th><th>الصفقات</th><th>Profit Factor</th><th>Average R</th><th>Maximum Drawdown</th><th>الطريقة</th><th>الحد التجريبي</th><th>سبب الفشل</th></tr></thead><tbody id="strategies"></tbody></table></div></div>
+
+<div class="panel"><div class="section-head"><h2>مقارنة سيناريوهات المعايرة</h2></div><div class="table"><table><thead><tr><th>السيناريو</th><th>العدد</th><th>الاستخدام</th><th>هل غيّر الإنتاج؟</th></tr></thead><tbody id="scenarios"></tbody></table></div></div>
+
+<div class="panel"><div class="section-head"><h2>أكثر أسباب الاستبعاد تكرارًا</h2></div><div class="table"><table><thead><tr><th>النوع</th><th>السبب</th><th>عدد الأسهم</th></tr></thead><tbody id="blockers"></tbody></table></div></div>
+
+<div class="panel"><div class="section-head"><h2>الفرص التجريبية الورقية منخفضة المخاطر</h2><span class="muted">لا تُسجل تلقائيًا، ولا تُعد توصية إنتاج.</span></div><div class="body"><div class="grid" id="shadow"></div></div></div>
+
+<div class="panel"><div class="section-head"><h2>أقرب الأسهم لاكتمال الشروط</h2></div><div class="table"><table><thead><tr><th>السهم</th><th>الدرجة</th><th>الإشارة</th><th>الاستراتيجية</th><th>الأهلية</th><th>السوق</th><th>الشروط الناقصة</th></tr></thead><tbody id="near"></tbody></table></div></div>
+<div class="panel" style="padding:12px"><div class="notice">V13.9 لا يختلق توصية ولا يخفض حدود الإنتاج. الطبقة التجريبية منفصلة، ورقية فقط، وبمخاطرة افتراضية قصوى 0.25% للصفقة. التنفيذ الحقيقي يظل مغلقًا.</div></div>
+</div>
+<script>
+'use strict';
+const AUDIT='../../data/quant/recommendation-engine-audit-v13-9.json';
+const SHADOW='../../data/quant/calibrated-shadow-recommendations-v13-9.json';
+const E=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+const N=(v,d=2)=>Number.isFinite(Number(v))?Number(v).toLocaleString('ar-EG',{maximumFractionDigits:d}):'—';
+const A=v=>Array.isArray(v)?v:[];
+function card(label,value,note='',cls=''){return `<div class="card"><small>${E(label)}</small><b class="${cls}">${E(value)}</b><small>${E(note)}</small></div>`}
+function verdictClass(code){return code==='STRICT_CANDIDATES_AVAILABLE'?'good':code==='DATA_COVERAGE_BOTTLENECK'?'bad':'warn'}
+async function load(){
+ try{
+  const [ar,sr]=await Promise.all([fetch(`${AUDIT}?v=${Date.now()}`,{cache:'no-store'}),fetch(`${SHADOW}?v=${Date.now()}`,{cache:'no-store'})]);
+  if(!ar.ok)throw new Error(`Audit HTTP ${ar.status}`);if(!sr.ok)throw new Error(`Shadow HTTP ${sr.status}`);
+  const audit=await ar.json(),shadow=await sr.json();
+  const strict=A(audit.funnel).find(x=>x.code==='STRICT_PAPER')?.count||0;
+  const signal=A(audit.funnel).find(x=>x.code==='SIGNAL_PASSED')?.count||0;
+  document.getElementById('cards').innerHTML=[
+    card('جلسة القرار',audit.sessionId||'—','آخر جلسة محللة'),
+    card('تغطية التاريخ',`${N(audit.coverage?.acceptedCoveragePct,1)}%`,`المستهدف ${N(audit.coverage?.minimumTargetPct,0)}%`,audit.coverage?.acceptedCoveragePct>=audit.coverage?.minimumTargetPct?'good':'bad'),
+    card('إشارات اليوم المكتملة',N(signal,0),'قبل بوابة جودة الاستراتيجية',signal?'blue':'warn'),
+    card('مرشح ورقي أساسي',N(strict,0),'حدود الإنتاج الحالية',strict?'good':'warn'),
+    card('مرشح تجريبي',N(shadow.experimentalPaperCandidateCount,0),'منفصل عن الإنتاج',shadow.experimentalPaperCandidateCount?'blue':''),
+    card('سلامة Drawdown',audit.drawdownCorrection?.passed?'سليم':'خلل',`قديم >100%: ${N(audit.drawdownCorrection?.legacyAdditiveOver100Strategies,0)}`,audit.drawdownCorrection?.passed?'good':'bad')
+  ].join('');
+  document.getElementById('verdict').innerHTML=`<div class="verdict ${verdictClass(audit.verdict?.code)}"><b>${E(audit.verdict?.labelAr||'')}</b><br><span class="muted">الكود التشخيصي: ${E(audit.verdict?.code||'')}</span></div>`;
+  document.getElementById('funnel').innerHTML=A(audit.funnel).map((x,i)=>`<div class="step"><i>${i+1}</i><small>${E(x.labelAr)}</small><b>${N(x.count,0)}</b></div>`).join('');
+  document.getElementById('strategies').innerHTML=A(audit.strategies).map(s=>{
+    const m=s.validationMetrics||{},fail=A(s.strictFailureReasons).join(' | ')||'اجتاز الحد البحثي';
+    return `<tr><td><b>${E(s.strategyLabelAr||s.strategyId)}</b><br>${E(s.selectedVariantId||'')}</td><td>${E(s.currentStatus||'')}</td><td>${N(m.closedTrades,0)}</td><td>${N(m.profitFactor,3)}</td><td>${N(m.averageR,3)}</td><td class="${Number(m.maxDrawdownPct)>20?'bad':'good'}">${N(m.maxDrawdownPct,2)}%<br><span class="muted">القديم: ${N(s.legacyAdditiveDrawdownPct,2)}%</span></td><td>${E(s.drawdownMethod||'')}</td><td class="${s.shadowPass?'good':'warn'}">${s.shadowPass?'اجتاز':'لم يجتز'}</td><td>${E(fail)}</td></tr>`;
+  }).join('')||'<tr><td colspan="9" class="empty">لا توجد بيانات استراتيجيات.</td></tr>';
+  document.getElementById('scenarios').innerHTML=A(audit.scenarioComparison).map(x=>`<tr><td><b>${E(x.labelAr)}</b><br>${E(x.code)}</td><td>${N(x.candidateCount,0)}</td><td>${E(x.usage)}</td><td class="${x.thresholdsChanged?'warn':'good'}">${x.thresholdsChanged?'لا — طبقة منفصلة':'لا'}</td></tr>`).join('');
+  document.getElementById('blockers').innerHTML=A(audit.blockerSummary).map(x=>`<tr><td>${E(x.type)}</td><td>${E(x.labelAr)}</td><td>${N(x.count,0)}</td></tr>`).join('')||'<tr><td colspan="3" class="empty">لا توجد أسباب استبعاد مسجلة.</td></tr>';
+  document.getElementById('shadow').innerHTML=A(shadow.candidates).length?A(shadow.candidates).map(c=>`<article class="candidate"><h3><span class="ticker">${E(c.ticker)}</span> — ${E(c.companyNameAr||c.companyNameEn||'')}</h3><span class="tag">${E(c.statusLabelAr)}</span><span class="tag">${E(c.strategyLabelAr||c.strategyId)}</span><div class="nums"><div class="num">الدرجة<b>${N(c.recommendationScore,1)}</b></div><div class="num">الدخول<b>${N(c.plan?.entryLow,3)}–${N(c.plan?.entryHigh,3)}</b></div><div class="num">الوقف<b>${N(c.plan?.stopLoss,3)}</b></div><div class="num">الهدف الأول<b>${N(c.plan?.target1,3)}</b></div><div class="num">R/R<b>${N(c.plan?.riskReward1,2)}</b></div><div class="num">مخاطرة تجريبية<b>${N(c.maximumRiskPerTradePct,2)}%</b></div></div><p class="muted">${E(c.reasonAr)}</p></article>`).join(''):'<div class="empty">لا توجد فرصة اجتازت الحد التجريبي المحافظ في هذه الجلسة. هذا لا يعني وجود عطل.</div>';
+  document.getElementById('near').innerHTML=A(audit.nearMisses).map(x=>`<tr><td><span class="ticker">${E(x.ticker)}</span><br>${E(x.companyNameAr||'')}</td><td>${N(x.recommendationScore,1)}</td><td class="${x.signalPassed?'good':'warn'}">${x.signalPassed?'مكتملة':'ناقصة'}</td><td>${E(x.strategyLabelAr||x.strategyId||'')}<br>${E(x.strategyValidationStatus||'')}</td><td class="${x.eligibilityDecision?'good':'bad'}">${x.eligibilityDecision?'نعم':'لا'}</td><td class="${x.regimeAllowed?'good':'bad'}">${x.regimeAllowed?'يسمح':'يحجب'}</td><td>${E(A(x.failedConditions).join(' | ')||'لا توجد شروط فنية ناقصة؛ المنع من بوابة أخرى.')}</td></tr>`).join('')||'<tr><td colspan="7" class="empty">لا توجد نتائج.</td></tr>';
+ }catch(error){
+  document.getElementById('verdict').innerHTML=`<div class="verdict bad">لم يتم بناء V13.9 بعد: ${E(error.message)}</div>`;
+ }
+}
+load();
+</script></body></html>

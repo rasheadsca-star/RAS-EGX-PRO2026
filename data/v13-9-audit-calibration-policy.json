@@ -1,0 +1,40 @@
+{
+  "schemaVersion": "13.9.0",
+  "name": "Recommendation Engine Audit & Calibration",
+  "audit": {
+    "requireCompoundedDrawdown": true,
+    "maximumValidDrawdownPct": 100,
+    "minimumAcceptedHistoryCoveragePct": 80,
+    "nearMissLimit": 30,
+    "topBlockersLimit": 20
+  },
+  "shadowPaper": {
+    "enabled": true,
+    "automaticRegistration": false,
+    "maximumCandidates": 5,
+    "minimumRecommendationScore": 62,
+    "minimumClosedTrades": 5,
+    "minimumProfitFactor": 1.0,
+    "minimumAverageR": 0.0,
+    "maximumDrawdownPct": 20,
+    "maximumFailedConditions": 0,
+    "riskScale": 0.35,
+    "riskPerTradePct": 0.25,
+    "blockInBearishRegime": true,
+    "blockInHighVolatilityRegime": true,
+    "labelAr": "مرشح تجريبي ورقي منخفض المخاطر"
+  },
+  "exploratoryDiagnostics": {
+    "minimumRecommendationScore": 55,
+    "maximumFailedConditions": 1,
+    "neverPromoteAutomatically": true
+  },
+  "safety": {
+    "liveExecutionEnabled": false,
+    "productionThresholdsRelaxed": false,
+    "productionRecommendationsOverwritten": false,
+    "noLookahead": true,
+    "noRetroactiveSignals": true,
+    "paperOnly": true
+  }
+}

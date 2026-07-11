@@ -1,0 +1,362 @@
+{
+  "schemaVersion": "13.9.0",
+  "generatedAt": "2026-07-11T06:39:21.187Z",
+  "sessionId": "2026-07-09",
+  "liveExecutionEnabled": false,
+  "productionThresholdsRelaxed": false,
+  "productionRecommendationsOverwritten": false,
+  "drawdownCorrection": {
+    "requiredMethod": "compounded_equity_peak_to_trough",
+    "strategiesChecked": 3,
+    "invalidDrawdownStrategies": 0,
+    "legacyAdditiveOver100Strategies": 3,
+    "passed": true
+  },
+  "coverage": {
+    "historyFilesRead": 199,
+    "historiesAccepted": 196,
+    "acceptedCoveragePct": 98.49,
+    "minimumTargetPct": 80
+  },
+  "funnel": [
+    {
+      "code": "HISTORY_FILES",
+      "labelAr": "ملفات التاريخ المقروءة",
+      "count": 199
+    },
+    {
+      "code": "HISTORIES_ACCEPTED",
+      "labelAr": "تاريخ مقبول للتحليل",
+      "count": 196
+    },
+    {
+      "code": "LATEST_FRESH",
+      "labelAr": "محدث حتى آخر جلسة",
+      "count": 5
+    },
+    {
+      "code": "SAFETY_ELIGIBLE",
+      "labelAr": "اجتاز السلامة والأهلية الأولية",
+      "count": 5
+    },
+    {
+      "code": "DECISION_HISTORY",
+      "labelAr": "يمتلك الحد الأدنى لجلسات القرار",
+      "count": 4
+    },
+    {
+      "code": "SIGNAL_PASSED",
+      "labelAr": "اجتاز إشارة اليوم",
+      "count": 0
+    },
+    {
+      "code": "ELIGIBILITY_PASSED",
+      "labelAr": "أهلية القرار مكتملة",
+      "count": 0
+    },
+    {
+      "code": "REGIME_PASSED",
+      "labelAr": "حالة السوق تسمح",
+      "count": 0
+    },
+    {
+      "code": "STRATEGY_VALIDATED",
+      "labelAr": "الاستراتيجية مجتازة تاريخيًا",
+      "count": 0
+    },
+    {
+      "code": "SCORE_PASSED",
+      "labelAr": "الدرجة اجتازت حد الإنتاج",
+      "count": 0
+    },
+    {
+      "code": "STRICT_PAPER",
+      "labelAr": "مرشح ورقي أساسي",
+      "count": 0
+    }
+  ],
+  "verdict": {
+    "code": "NO_CURRENT_MARKET_SIGNAL",
+    "labelAr": "البيانات متاحة، لكن لا يوجد سهم اجتاز جميع شروط إشارة اليوم."
+  },
+  "strategies": [
+    {
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "selectedVariantId": "balanced",
+      "currentStatus": "RESEARCH_ONLY",
+      "researchValidated": false,
+      "productionEligible": false,
+      "validationMetrics": {
+        "totalSignals": 323,
+        "closedTrades": 299,
+        "cancelledTrades": 24,
+        "wins": 126,
+        "losses": 173,
+        "winRatePct": 42.14,
+        "profitFactor": 1.025,
+        "averageReturnPct": 0.058,
+        "averageR": 0.017,
+        "medianR": -0.379,
+        "maxDrawdownPct": 96.807,
+        "drawdownMethod": "compounded_equity_peak_to_trough",
+        "startingEquityIndex": 100,
+        "endingEquityIndex": 78.5266,
+        "legacyAdditiveDrawdownPct": 322.504,
+        "sameBarStopFirstCount": 0
+      },
+      "drawdownValid": true,
+      "drawdownMethod": "compounded_equity_peak_to_trough",
+      "legacyAdditiveDrawdownPct": 322.504,
+      "strictFailureReasons": [
+        "Profit Factor 1.025 < 1.05",
+        "Maximum Drawdown 96.807% > 15%"
+      ],
+      "shadowPass": false,
+      "shadowFailureReasons": [
+        "Maximum Drawdown 96.807% > 20%"
+      ]
+    },
+    {
+      "strategyId": "breakout",
+      "strategyLabelAr": "اختراق مؤكد",
+      "selectedVariantId": "early",
+      "currentStatus": "RESEARCH_ONLY",
+      "researchValidated": false,
+      "productionEligible": false,
+      "validationMetrics": {
+        "totalSignals": 76,
+        "closedTrades": 68,
+        "cancelledTrades": 8,
+        "wins": 27,
+        "losses": 41,
+        "winRatePct": 39.71,
+        "profitFactor": 1.102,
+        "averageReturnPct": 0.255,
+        "averageR": 0.031,
+        "medianR": -0.372,
+        "maxDrawdownPct": 69.442,
+        "drawdownMethod": "compounded_equity_peak_to_trough",
+        "startingEquityIndex": 100,
+        "endingEquityIndex": 105.86,
+        "legacyAdditiveDrawdownPct": 113.586,
+        "sameBarStopFirstCount": 0
+      },
+      "drawdownValid": true,
+      "drawdownMethod": "compounded_equity_peak_to_trough",
+      "legacyAdditiveDrawdownPct": 113.586,
+      "strictFailureReasons": [
+        "Maximum Drawdown 69.442% > 15%"
+      ],
+      "shadowPass": false,
+      "shadowFailureReasons": [
+        "Maximum Drawdown 69.442% > 20%"
+      ]
+    },
+    {
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "selectedVariantId": "wide",
+      "currentStatus": "RESEARCH_ONLY",
+      "researchValidated": false,
+      "productionEligible": false,
+      "validationMetrics": {
+        "totalSignals": 132,
+        "closedTrades": 125,
+        "cancelledTrades": 7,
+        "wins": 41,
+        "losses": 84,
+        "winRatePct": 32.8,
+        "profitFactor": 0.72,
+        "averageReturnPct": -0.671,
+        "averageR": -0.192,
+        "medianR": -0.517,
+        "maxDrawdownPct": 84.971,
+        "drawdownMethod": "compounded_equity_peak_to_trough",
+        "startingEquityIndex": 100,
+        "endingEquityIndex": 37.4179,
+        "legacyAdditiveDrawdownPct": 182.348,
+        "sameBarStopFirstCount": 0
+      },
+      "drawdownValid": true,
+      "drawdownMethod": "compounded_equity_peak_to_trough",
+      "legacyAdditiveDrawdownPct": 182.348,
+      "strictFailureReasons": [
+        "Profit Factor 0.72 < 1.05",
+        "Average R -0.192 < 0",
+        "Maximum Drawdown 84.971% > 15%"
+      ],
+      "shadowPass": false,
+      "shadowFailureReasons": [
+        "Profit Factor 0.72 < 1",
+        "Average R -0.192 < 0",
+        "Maximum Drawdown 84.971% > 20%"
+      ]
+    }
+  ],
+  "blockerSummary": [
+    {
+      "type": "hard_gate",
+      "labelAr": "التاريخ غير محدث حتى آخر جلسة",
+      "count": 191
+    },
+    {
+      "type": "signal_condition",
+      "labelAr": "تحسن RSI",
+      "count": 2
+    },
+    {
+      "type": "signal_condition",
+      "labelAr": "دعم الحجم",
+      "count": 2
+    },
+    {
+      "type": "signal_condition",
+      "labelAr": "متوسط قيمة التداول",
+      "count": 2
+    },
+    {
+      "type": "hard_gate",
+      "labelAr": "عدد الجلسات أقل من حد القرار",
+      "count": 1
+    },
+    {
+      "type": "signal_condition",
+      "labelAr": "الاتجاه المتوسط صاعد",
+      "count": 1
+    },
+    {
+      "type": "signal_condition",
+      "labelAr": "منطقة RSI",
+      "count": 1
+    },
+    {
+      "type": "signal_condition",
+      "labelAr": "نشاط الحجم الحالي",
+      "count": 1
+    }
+  ],
+  "scenarioComparison": [
+    {
+      "code": "STRICT_CURRENT",
+      "labelAr": "الإنتاج الحالي",
+      "candidateCount": 0,
+      "usage": "التداول الورقي الأساسي وفق كل بوابات V13.4",
+      "thresholdsChanged": false
+    },
+    {
+      "code": "CONSERVATIVE_SHADOW",
+      "labelAr": "تجريبي ورقي محافظ",
+      "candidateCount": 0,
+      "usage": "قياس تجريبي منفصل بمخاطرة منخفضة، لا يغير الإنتاج",
+      "thresholdsChanged": true
+    },
+    {
+      "code": "EXPLORATORY_DIAGNOSTIC",
+      "labelAr": "تشخيص قريب من الشروط",
+      "candidateCount": 1,
+      "usage": "تحليل فقط، ليس توصية ولا صفقة ورقية تلقائية",
+      "thresholdsChanged": true
+    }
+  ],
+  "nearMisses": [
+    {
+      "ticker": "LUTS",
+      "companyNameAr": "لوتس للتنمية والاستثمار الزراعي",
+      "sector": null,
+      "recommendationScore": 72.5,
+      "signalPassed": false,
+      "failedConditionCount": 1,
+      "failedConditions": [
+        "تحسن RSI: 60.3 → 59.1"
+      ],
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "researchValidated": false,
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "scorePaperPass": true,
+      "statusLabelAr": "مراقبة مشروطة"
+    },
+    {
+      "ticker": "EGBE",
+      "companyNameAr": "البنك المصري الخليجي",
+      "sector": null,
+      "recommendationScore": 75.8,
+      "signalPassed": false,
+      "failedConditionCount": 2,
+      "failedConditions": [
+        "متوسط قيمة التداول: 63686",
+        "دعم الحجم: 0.79"
+      ],
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "researchValidated": false,
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "scorePaperPass": true,
+      "statusLabelAr": "مراقبة مشروطة"
+    },
+    {
+      "ticker": "MOIL",
+      "companyNameAr": "ماريدايف",
+      "sector": null,
+      "recommendationScore": 78.3,
+      "signalPassed": false,
+      "failedConditionCount": 3,
+      "failedConditions": [
+        "نشاط الحجم الحالي: 0.45",
+        "منطقة RSI: 70.7",
+        "دعم الحجم: 0.45"
+      ],
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "researchValidated": false,
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "scorePaperPass": true,
+      "statusLabelAr": "مراقبة مشروطة"
+    },
+    {
+      "ticker": "NAHO",
+      "companyNameAr": "نعيم القابضة",
+      "sector": null,
+      "recommendationScore": 40.1,
+      "signalPassed": false,
+      "failedConditionCount": 3,
+      "failedConditions": [
+        "متوسط قيمة التداول: 23791",
+        "الاتجاه المتوسط صاعد: لم يتحقق",
+        "تحسن RSI: 50.1 → 41.4"
+      ],
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "researchValidated": false,
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "scorePaperPass": false,
+      "statusLabelAr": "مراقبة مشروطة"
+    }
+  ],
+  "shadowCandidateTickers": [],
+  "currentCounts": {
+    "symbolsAnalyzed": 196,
+    "latestEligibleAnalyses": 4,
+    "paperCandidates": 0,
+    "watchCandidates": 3,
+    "blockedOrRejected": 193
+  },
+  "adaptiveStrategyHealthAvailable": true,
+  "safety": {
+    "liveExecutionEnabled": false,
+    "productionThresholdsRelaxed": false,
+    "productionRecommendationsOverwritten": false,
+    "noLookahead": true,
+    "noRetroactiveSignals": true,
+    "paperOnly": true
+  }
+}

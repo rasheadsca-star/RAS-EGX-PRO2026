@@ -20,7 +20,8 @@ const OUTPUTS = {
   walkForward: path.join(QUANT_DIR, 'walk-forward-results.json'),
   model: path.join(QUANT_DIR, 'recommendation-model.json'),
   recommendations: path.join(QUANT_DIR, 'daily-recommendations.json'),
-  audit: path.join(QUANT_DIR, 'recommendation-audit.json')
+  audit: path.join(QUANT_DIR, 'recommendation-audit.json'),
+  gateTraceV139: path.join(QUANT_DIR, 'recommendation-gate-trace-v13-9.json')
 };
 
 function readJson(filePath, fallback = null) {
@@ -463,15 +464,40 @@ function metrics(trades) {
   const losses = closed.filter(t => Number(t.netReturnPct) < 0);
   const grossProfit = sum(wins.map(t => t.netReturnPct));
   const grossLoss = Math.abs(sum(losses.map(t => t.netReturnPct)));
-  let equity = 0;
-  let peak = 0;
-  let maxDrawdown = 0;
-  const ordered = closed.slice().sort((a, b) => compareDates(a.exitDate, b.exitDate));
+
+  // V13.9 correction:
+  // Drawdown must be measured from the peak of a compounded equity index,
+  // not by adding percentage points. The old additive method could exceed 100%.
+  let equityIndex = 100;
+  let peakEquityIndex = 100;
+  let maxDrawdownPct = 0;
+  let additiveEquity = 0;
+  let additivePeak = 0;
+  let legacyAdditiveDrawdownPct = 0;
+
+  const ordered = closed.slice().sort((a, b) =>
+    compareDates(a.exitDate, b.exitDate) || compareDates(a.signalDate, b.signalDate)
+  );
+
   for (const trade of ordered) {
-    equity += Number(trade.netReturnPct) || 0;
-    peak = Math.max(peak, equity);
-    maxDrawdown = Math.max(maxDrawdown, peak - equity);
+    const tradeReturnPct = Number(trade.netReturnPct) || 0;
+
+    additiveEquity += tradeReturnPct;
+    additivePeak = Math.max(additivePeak, additiveEquity);
+    legacyAdditiveDrawdownPct = Math.max(
+      legacyAdditiveDrawdownPct,
+      additivePeak - additiveEquity
+    );
+
+    const returnFactor = Math.max(0, 1 + (tradeReturnPct / 100));
+    equityIndex *= returnFactor;
+    peakEquityIndex = Math.max(peakEquityIndex, equityIndex);
+    const currentDrawdownPct = peakEquityIndex > 0
+      ? ((peakEquityIndex - equityIndex) / peakEquityIndex) * 100
+      : 100;
+    maxDrawdownPct = Math.max(maxDrawdownPct, currentDrawdownPct);
   }
+
   return {
     totalSignals: trades.length,
     closedTrades: closed.length,
@@ -483,7 +509,11 @@ function metrics(trades) {
     averageReturnPct: closed.length ? round(average(closed.map(t => t.netReturnPct)), 3) : 0,
     averageR: closed.length ? round(average(closed.map(t => t.rMultiple)), 3) : 0,
     medianR: closed.length ? round(median(closed.map(t => t.rMultiple)), 3) : 0,
-    maxDrawdownPct: round(maxDrawdown, 3),
+    maxDrawdownPct: round(clamp(maxDrawdownPct, 0, 100), 3),
+    drawdownMethod: 'compounded_equity_peak_to_trough',
+    startingEquityIndex: 100,
+    endingEquityIndex: round(equityIndex, 4),
+    legacyAdditiveDrawdownPct: round(legacyAdditiveDrawdownPct, 3),
     sameBarStopFirstCount: closed.filter(t => t.sameBarConflict).length
   };
 }
@@ -730,19 +760,61 @@ function main() {
   const watchCandidates = [];
   const rejectionCounts = new Map();
   const latestAnalyses = [];
+  const gateTraceV139 = [];
   const bearishBlock = policy.recommendations.blockPaperCandidatesInBearishRegime && regime.code === 'BEARISH';
   const volatilityBlock = policy.recommendations.blockPaperCandidatesInHighVolatilityRegime && regime.code === 'HIGH_VOLATILITY';
 
   for (const [ticker, features] of featuresByTicker) {
     const meta = metadata.get(ticker);
     const feature = features.filter(f => f.date === latestSession).at(-1);
-    if (!feature) { rejectionCounts.set('history_not_fresh_to_latest_session', (rejectionCounts.get('history_not_fresh_to_latest_session') || 0) + 1); continue; }
+    if (!feature) {
+      rejectionCounts.set('history_not_fresh_to_latest_session', (rejectionCounts.get('history_not_fresh_to_latest_session') || 0) + 1);
+      gateTraceV139.push({
+        ticker,
+        companyNameAr: meta.companyNameAr,
+        companyNameEn: meta.companyNameEn,
+        sector: meta.sector,
+        sessionId: latestSession,
+        stage: 'HARD_REJECT',
+        failedGate: 'history_freshness',
+        failedGateLabelAr: 'التاريخ غير محدث حتى آخر جلسة',
+        historySessions: meta.sessions,
+        eligibilityStatus: meta.eligibility.status || 'unknown'
+      });
+      continue;
+    }
     if (blockedTickers.has(ticker) || meta.eligibility.active === false || meta.eligibility.delisted === true || blockedStatuses.has(meta.eligibility.status)) {
       rejectionCounts.set('blocked_by_safety_eligibility', (rejectionCounts.get('blocked_by_safety_eligibility') || 0) + 1);
+      gateTraceV139.push({
+        ticker,
+        companyNameAr: meta.companyNameAr,
+        companyNameEn: meta.companyNameEn,
+        sector: meta.sector,
+        sessionId: latestSession,
+        stage: 'HARD_REJECT',
+        failedGate: 'safety_eligibility',
+        failedGateLabelAr: 'محجوب بواسطة الأهلية أو السلامة',
+        historySessions: meta.sessions,
+        eligibilityStatus: meta.eligibility.status || 'unknown',
+        decisionEligible: meta.eligibility.decisionEligible === true
+      });
       continue;
     }
     if (meta.sessions < Number(policy.research.minimumDecisionSessions)) {
       rejectionCounts.set('history_below_decision_minimum', (rejectionCounts.get('history_below_decision_minimum') || 0) + 1);
+      gateTraceV139.push({
+        ticker,
+        companyNameAr: meta.companyNameAr,
+        companyNameEn: meta.companyNameEn,
+        sector: meta.sector,
+        sessionId: latestSession,
+        stage: 'HARD_REJECT',
+        failedGate: 'minimum_history',
+        failedGateLabelAr: 'عدد الجلسات أقل من حد القرار',
+        historySessions: meta.sessions,
+        requiredHistorySessions: Number(policy.research.minimumDecisionSessions),
+        eligibilityStatus: meta.eligibility.status || 'unknown'
+      });
       continue;
     }
 
@@ -760,12 +832,14 @@ function main() {
 
     const plan = tradePlan(feature, best.model.strategyId, policy);
     const eligibilityDecision = meta.eligibility.decisionEligible === true || meta.eligibility.status === 'fallback_from_symbol_map';
+    const regimeAllowed = !bearishBlock && !volatilityBlock;
+    const scorePaperPass = best.recommendationScore >= Number(policy.recommendations.minimumPaperScore);
+    const scoreWatchPass = best.recommendationScore >= Number(policy.recommendations.minimumWatchScore);
     const paperAllowed = best.evaluation.passed
       && best.model.researchValidated
       && eligibilityDecision
-      && !bearishBlock
-      && !volatilityBlock
-      && best.recommendationScore >= Number(policy.recommendations.minimumPaperScore);
+      && regimeAllowed
+      && scorePaperPass;
     const status = paperAllowed ? 'PAPER_CANDIDATE' : 'WATCH_CONDITIONAL';
     const item = {
       ticker,
@@ -812,6 +886,43 @@ function main() {
           : `أقرب نموذج حالي هو ${best.model.strategyLabelAr}، لكن بعض الشروط لم تكتمل.`
     };
     latestAnalyses.push(item);
+    gateTraceV139.push({
+      ticker,
+      companyNameAr: meta.companyNameAr,
+      companyNameEn: meta.companyNameEn,
+      sector: meta.sector,
+      sessionId: latestSession,
+      stage: paperAllowed ? 'STRICT_PAPER' : best.evaluation.passed ? 'SIGNAL_PASSED_BUT_GATED' : 'SIGNAL_CONDITIONS_FAILED',
+      strictPaperAllowed: paperAllowed,
+      signalPassed: best.evaluation.passed,
+      failedConditionCount: best.evaluation.failedConditions.length,
+      conditions: best.evaluation.conditions,
+      failedConditions: best.evaluation.failedConditions,
+      strategyId: best.model.strategyId,
+      strategyLabelAr: best.model.strategyLabelAr,
+      variantId: best.model.selectedVariantId,
+      strategyValidationStatus: best.model.status,
+      strategyResearchValidated: best.model.researchValidated,
+      strategyProductionEligible: best.model.productionEligible,
+      strategyValidationMetrics: best.model.validationMetrics,
+      recommendationScore: best.recommendationScore,
+      rawSignalScore: best.evaluation.score,
+      eligibilityDecision,
+      eligibilityStatus: meta.eligibility.status || 'unknown',
+      regimeAllowed,
+      bearishBlock,
+      volatilityBlock,
+      marketRegime: regime.code,
+      scorePaperPass,
+      scoreWatchPass,
+      historySessions: meta.sessions,
+      historyConfidence: round(meta.historyConfidence, 2),
+      price: round(feature.close, 4),
+      plan,
+      indicators: item.indicators,
+      status,
+      statusLabelAr: item.statusLabelAr
+    });
     if (paperAllowed) paperCandidates.push(item);
     else if (best.recommendationScore >= Number(policy.recommendations.minimumWatchScore)) watchCandidates.push(item);
     else rejectionCounts.set('score_below_watch_threshold', (rejectionCounts.get('score_below_watch_threshold') || 0) + 1);
@@ -940,6 +1051,14 @@ function main() {
   writeJsonAtomic(OUTPUTS.model, model);
   writeJsonAtomic(OUTPUTS.recommendations, recommendations);
   writeJsonAtomic(OUTPUTS.audit, audit);
+  writeJsonAtomic(OUTPUTS.gateTraceV139, {
+    schemaVersion: '13.9.0',
+    generatedAt,
+    latestMarketSession: latestSession,
+    drawdownMethod: 'compounded_equity_peak_to_trough',
+    productionPolicyUnchanged: true,
+    rows: gateTraceV139.sort((a, b) => String(a.ticker).localeCompare(String(b.ticker)))
+  });
 
   console.log(`V13.4 histories accepted: ${histories.size}`);
   console.log(`V13.4 latest session: ${latestSession}`);
