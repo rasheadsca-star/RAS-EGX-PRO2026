@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "13.11.0",
+  "name": "Daily Decision Workspace",
+  "ranking": {
+    "tierWeights": {
+      "STRICT_PAPER": 30,
+      "TIER_A_EXPERIMENTAL_PAPER": 20,
+      "TIER_B_PRIORITY_WATCH": 8
+    },
+    "recommendationScoreWeight": 0.38,
+    "technicalScoreWeight": 0.16,
+    "liquidityPercentileWeight": 0.1,
+    "inverseRiskWeight": 0.08,
+    "riskRewardWeight": 6,
+    "maximumRiskRewardForScore": 3,
+    "softFailurePenalty": 5,
+    "topCandidates": 3
+  },
+  "allocation": {
+    "strictDefaultRiskPerTradePct": 0.5,
+    "tierADefaultRiskPerTradePct": 0.25,
+    "maximumStockWeightPct": 15,
+    "maximumSectorWeightPct": 30,
+    "maximumLiquidityParticipationPct": 1,
+    "correlationWarning": 0.75,
+    "correlationBlock": 0.9
+  },
+  "safety": {
+    "liveExecutionEnabled": false,
+    "paperSimulationOnly": true,
+    "tierBIsWatchOnly": true,
+    "noEstimatedPrice": true,
+    "noEstimatedStop": true,
+    "automaticOrderSubmission": false,
+    "automaticPaperRegistration": false,
+    "stableV11Modified": false
+  }
+}

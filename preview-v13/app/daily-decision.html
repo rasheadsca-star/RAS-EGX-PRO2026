@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>V13.11 — قرار اليوم</title>
+<style>
+:root{color-scheme:dark;--bg:#06111d;--p:#0b1f33;--p2:#102b45;--line:#2b5674;--t:#ecf8ff;--m:#9ebdd0;--b:#38bdf8;--g:#36d995;--a:#ffc857;--r:#ff6d7d;--purple:#b899ff}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:linear-gradient(180deg,#04101b,#071a2b);color:var(--t);font-family:Tahoma,Arial,sans-serif}button,input,select,textarea{font:inherit}a{color:inherit;text-decoration:none}
+.wrap{max-width:1600px;margin:auto;padding:12px}.hero,.panel{background:rgba(11,31,51,.97);border:1px solid var(--line);border-radius:15px;margin-bottom:11px}.hero{padding:15px;display:flex;justify-content:space-between;align-items:center;gap:12px}.hero h1{margin:0 0 6px;font-size:22px}.muted{color:var(--m);font-size:11px;line-height:1.7}
+.btn{background:#123c59;border:1px solid #3b769a;color:var(--t);padding:9px 12px;border-radius:9px;cursor:pointer}.btn.primary{background:#12638e;border-color:#2f94c1}.btn.good{border-color:#2c8c65;color:#c5ffe2}.btn.warn{border-color:#8d7432;color:#ffe6a6}.btn:disabled{opacity:.45;cursor:not-allowed}
+.cards{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;padding:10px}.card{background:var(--p2);border:1px solid #2a536e;border-radius:10px;padding:11px;min-height:88px}.card small{display:block;color:var(--m)}.card b{display:block;font-size:20px;margin-top:8px}.goodText{color:var(--g)}.badText{color:var(--r)}.warnText{color:var(--a)}.blueText{color:var(--b)}
+.section-head{padding:11px 12px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:8px}.section-head h2{font-size:16px;margin:0}.body{padding:11px}
+.top-grid{display:grid;grid-template-columns:390px minmax(0,1fr);gap:10px}.shortlist{display:grid;gap:8px}.candidate{background:#081a2b;border:1px solid #2b5674;border-radius:12px;padding:11px;cursor:pointer;transition:.15s}.candidate:hover,.candidate.active{border-color:#48aee0;background:#0d2941}.candidate h3{margin:0 0 7px;font-size:16px}.ticker{color:var(--b);font-weight:bold}.tags{display:flex;gap:5px;flex-wrap:wrap}.tag{font-size:10px;border:1px solid #315f7d;border-radius:999px;padding:4px 7px}.mini{display:grid;grid-template-columns:repeat(4,1fr);gap:5px;margin-top:8px}.mini div{background:#0b2439;border-radius:7px;padding:6px;font-size:9px;color:var(--m)}.mini b{display:block;color:var(--t);font-size:12px;margin-top:3px}
+.status{padding:10px;border-radius:10px;line-height:1.7}.status.good{background:#123527;border:1px solid #286c50}.status.warn{background:#362d18;border:1px solid #6f5b2d;color:#ffe5a5}.status.bad{background:#391d25;border:1px solid #7c3c4b;color:#ffc5cc}
+.detail-head{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;margin-bottom:8px}.detail-head h2{margin:0 0 5px}.score-ring{width:82px;height:82px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--b) calc(var(--score)*1%),#17364c 0);position:relative}.score-ring:after{content:"";position:absolute;inset:8px;border-radius:50%;background:#0b1f33}.score-ring span{position:relative;z-index:1;text-align:center;font-size:10px}.score-ring b{display:block;font-size:20px}
+.chart-wrap{background:#071725;border:1px solid #244b66;border-radius:12px;padding:8px;overflow:hidden}.chart-wrap svg{width:100%;height:320px;display:block}.legend{display:flex;gap:12px;flex-wrap:wrap;color:var(--m);font-size:10px;margin:5px}.legend i{display:inline-block;width:16px;height:3px;margin-left:4px;vertical-align:middle}
+.plan-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:7px}.metric{background:#0d2941;border:1px solid #244c67;border-radius:9px;padding:9px;color:var(--m);font-size:10px}.metric b{display:block;color:var(--t);font-size:15px;margin-top:5px}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:8px}.check{background:#0a2438;border:1px solid #264c66;border-radius:9px;padding:9px;font-size:10px;line-height:1.7}.check.good{border-color:#2b7758}.check.warn{border-color:#75612e}.allocation{display:grid;grid-template-columns:repeat(6,1fr);gap:7px}.field label{font-size:10px;color:var(--m)}input{width:100%;margin-top:5px;background:#091c2e;border:1px solid #376682;color:var(--t);padding:9px;border-radius:8px}
+.actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}.reason{background:#0a2438;border:1px solid #2b5674;border-radius:9px;padding:10px;font-size:11px;line-height:1.8}
+table{width:100%;border-collapse:collapse}th,td{padding:8px;border-bottom:1px solid #193d55;text-align:right;font-size:10px;vertical-align:top}th{background:#0f2a43;position:sticky;top:0}.table{overflow:auto;max-height:500px}.empty{padding:35px;text-align:center;color:var(--m)}.notice{padding:10px;border:1px solid #6c5a2d;background:#302716;border-radius:10px;color:#ffe9a7;font-size:11px;line-height:1.7}
+@media(max-width:1150px){.cards{grid-template-columns:repeat(4,1fr)}.top-grid{grid-template-columns:1fr}.plan-grid,.allocation{grid-template-columns:repeat(3,1fr)}}@media(max-width:700px){.wrap{padding:5px}.hero{flex-direction:column;align-items:stretch}.cards{grid-template-columns:repeat(2,1fr)}.plan-grid,.allocation{grid-template-columns:repeat(2,1fr)}.checks{grid-template-columns:1fr}.mini{grid-template-columns:repeat(2,1fr)}.chart-wrap svg{height:260px}}
+</style></head>
+<body><div class="wrap">
+<div class="hero"><div><h1>V13.11 — قرار اليوم</h1><div class="muted">صفحة العمل اليومية الوحيدة: اختيار أفضل الفرص، الرسم البياني، خطة الدخول، حجم الصفقة الورقية، وتسجيل القرار.</div></div><div><a class="btn" href="tiered-confidence.html">الثقة المتدرجة</a> <a class="btn" href="decision-journal.html">سجل القرارات</a> <button class="btn primary" id="reload">تحديث العرض</button></div></div>
+<div class="panel"><div class="cards" id="summary"></div></div>
+<div class="panel"><div class="body"><div id="dailyStatus"></div></div></div>
+
+<div class="top-grid">
+  <div class="panel">
+    <div class="section-head"><h2>أفضل 3 فرص</h2><span class="muted">الترتيب: الطبقة ثم درجة القرار</span></div>
+    <div class="body"><div class="shortlist" id="shortlist"></div></div>
+  </div>
+
+  <div class="panel">
+    <div class="body">
+      <div class="detail-head">
+        <div><h2 id="selectedTitle">اختر سهمًا</h2><div class="tags" id="selectedTags"></div><div class="muted" id="selectedReason"></div></div>
+        <div class="score-ring" id="scoreRing" style="--score:0"><span>درجة القرار<b id="scoreValue">—</b></span></div>
+      </div>
+      <div class="section-head" style="padding-right:0"><h2>الرسم البياني</h2><span class="muted">السعر + SMA20 + SMA50 + الحجم</span></div>
+      <div class="chart-wrap" id="chart"><div class="empty">اختر سهمًا لعرض الرسم.</div></div>
+      <div class="legend"><span><i style="background:#38bdf8"></i>الإغلاق</span><span><i style="background:#36d995"></i>SMA20</span><span><i style="background:#ffc857"></i>SMA50</span><span><i style="background:#6e9bb6"></i>الحجم</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="panel">
+  <div class="section-head"><h2>خطة الدخول والمخاطر</h2><span class="muted">لا يتم تقدير أي رقم ناقص.</span></div>
+  <div class="body">
+    <div class="plan-grid" id="plan"></div>
+    <div class="checks" style="margin-top:9px"><div class="check good" id="hardChecks"></div><div class="check warn" id="softChecks"></div></div>
+    <div class="reason" id="decisionReason" style="margin-top:9px"></div>
+  </div>
+</div>
+
+<div class="panel">
+  <div class="section-head"><h2>حجم الصفقة الورقية المقترح</h2><span class="muted">وفق رأس المال والوقف والتركيز والسيولة والارتباط.</span></div>
+  <div class="body">
+    <div class="allocation">
+      <div class="field"><label>رأس المال للتحليل<input id="capital" type="number" min="0" step="1000"></label></div>
+      <div class="field"><label>المخاطرة لكل صفقة %<input id="riskPct" type="number" min="0.1" max="2" step="0.05"></label></div>
+      <div class="metric">الكمية الورقية<b id="qty">—</b></div>
+      <div class="metric">قيمة الصفقة<b id="notional">—</b></div>
+      <div class="metric">الخطر عند الوقف<b id="stopRisk">—</b></div>
+      <div class="metric">وزن السهم بعد الإضافة<b id="weightAfter">—</b></div>
+    </div>
+    <div class="status warn" id="allocationStatus" style="margin-top:9px"></div>
+    <div class="actions">
+      <button class="btn good" id="saveDecision">حفظ في سجل القرارات</button>
+      <a class="btn" href="risk-allocation.html">فتح صفحة المخاطر</a>
+      <a class="btn" href="stock-analysis.html">فتح تحليل جميع الأسهم</a>
+    </div>
+  </div>
+</div>
+
+<div class="panel">
+  <div class="section-head"><h2>كل المرشحين الحاليين</h2><span class="muted">الطبقة B للمراقبة فقط.</span></div>
+  <div class="table"><table><thead><tr><th>الترتيب</th><th>السهم</th><th>الطبقة</th><th>درجة القرار</th><th>درجة التوصية</th><th>R/R</th><th>السيولة</th><th>المخاطر</th><th>الشروط المرنة</th><th>الإجراء</th></tr></thead><tbody id="allRows"></tbody></table></div>
+</div>
+<div class="panel" style="padding:11px"><div class="notice">هذه الصفحة لاتخاذ قرار تداول ورقي فقط. وجود مرشح لا يضمن الربح، ولا يتم إرسال أي أمر إلى شركة السمسرة.</div></div>
+</div>
+
+<script>
+'use strict';
+const DECISION='../../data/quant/daily-decision-workspace-v13-11.json';
+const STOCK_INDEX='../../data/quant/stock-intelligence-index.json';
+const PORTFOLIO_KEY='egx-v137-portfolio';
+const SETTINGS_KEY='egx-v138-risk-settings';
+const JOURNAL_KEY='egx-v138-decision-journal';
+const E=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+const N=(v,d=2)=>Number.isFinite(Number(v))?Number(v).toLocaleString('ar-EG',{maximumFractionDigits:d}):'—';
+const A=v=>Array.isArray(v)?v:[];
+let doc=null,index=null,selected=null,detail=null,allocation=null;
+function local(key,fallback){try{const x=JSON.parse(localStorage.getItem(key)||'null');return x??fallback}catch{return fallback}}
+function card(l,v,n='',c=''){return `<div class="card"><small>${E(l)}</small><b class="${c}">${E(v)}</b><small>${E(n)}</small></div>`}
+function metric(l,v){return `<div class="metric">${E(l)}<b>${E(v)}</b></div>`}
+function statusClass(){return doc.dailyStatus==='STRICT_PAPER_AVAILABLE'?'good':doc.dailyStatus==='EXPERIMENTAL_PAPER_AVAILABLE'?'warn':'bad'}
+function candidateHtml(x){
+ return `<div class="candidate ${selected?.ticker===x.ticker?'active':''}" data-ticker="${E(x.ticker)}"><h3><span class="ticker">#${N(x.rank,0)} ${E(x.ticker)}</span> — ${E(x.companyNameAr||x.companyNameEn||'')}</h3><div class="tags"><span class="tag">${E(x.tierLabelAr)}</span><span class="tag">${E(x.confidence?.labelAr||'')}</span></div><div class="mini"><div>درجة القرار<b>${N(x.decisionScore,1)}</b></div><div>التوصية<b>${N(x.recommendationScore,1)}</b></div><div>R/R<b>${N(x.plan?.riskReward1,2)}</b></div><div>الشروط المرنة<b>${N(x.softFailureCount,0)}</b></div></div></div>`;
+}
+function renderSummary(){
+ const f=doc.freshness||{},c=doc.counts||{};
+ document.getElementById('summary').innerHTML=[
+  card('جلسة القرار',doc.sessionId||'—','آخر جلسة محللة'),
+  card('تغطية آخر جلسة',`${N(f.exactFreshCoveragePct,1)}%`,`المستهدف ${N(f.minimumTargetPct,0)}%`,f.targetPassed?'goodText':'badText'),
+  card('صارم',N(c.strictPaper,0),'أعلى أولوية',c.strictPaper?'goodText':''),
+  card('الطبقة A',N(c.tierAExperimental,0),'ورقي منخفض المخاطر',c.tierAExperimental?'blueText':''),
+  card('الطبقة B',N(c.tierBWatch,0),'مراقبة فقط',c.tierBWatch?'warnText':''),
+  card('مؤهل ورقيًا',N(c.actionablePaper,0),'صارم + A',c.actionablePaper?'goodText':'warnText'),
+  card('حالة اليوم',doc.dailyStatusLabelAr||'—','التنفيذ الحقيقي مغلق',statusClass()==='good'?'goodText':statusClass()==='warn'?'warnText':'badText')
+ ].join('');
+ document.getElementById('dailyStatus').innerHTML=`<div class="status ${statusClass()}"><b>${E(doc.dailyStatusLabelAr)}</b><br>${E(doc.dailyActionAr)}</div>`;
+}
+function renderShortlist(){
+ document.getElementById('shortlist').innerHTML=A(doc.topCandidates).length?A(doc.topCandidates).map(candidateHtml).join(''):'<div class="empty">لا توجد فرص حاليًا.</div>';
+ document.querySelectorAll('[data-ticker]').forEach(x=>x.onclick=()=>selectTicker(x.dataset.ticker));
+}
+function renderAllRows(){
+ document.getElementById('allRows').innerHTML=A(doc.candidates).length?A(doc.candidates).map(x=>`<tr data-row="${E(x.ticker)}" style="cursor:pointer"><td>${N(x.rank,0)}</td><td><b class="ticker">${E(x.ticker)}</b><br>${E(x.companyNameAr||x.companyNameEn||'')}</td><td>${E(x.tierLabelAr)}</td><td>${N(x.decisionScore,1)}</td><td>${N(x.recommendationScore,1)}</td><td>${N(x.plan?.riskReward1,2)}</td><td>${N(x.riskProfile?.liquidityPercentile,1)}%</td><td>${E(x.riskProfile?.riskLabelAr||'—')}<br>${N(x.riskProfile?.riskScore,0)}/100</td><td>${A(x.softFailures).map(y=>E(y.labelAr||y.id)).join('<br>')||'—'}</td><td>${E(x.actionLabelAr)}</td></tr>`).join(''):'<tr><td colspan="10" class="empty">لا توجد فرص.</td></tr>';
+ document.querySelectorAll('[data-row]').forEach(x=>x.onclick=()=>selectTicker(x.dataset.row));
+}
+async function selectTicker(ticker){
+ selected=A(doc.candidates).find(x=>x.ticker===ticker)||null;
+ detail=null;allocation=null;
+ renderShortlist();renderSelectedBase();
+ if(!selected)return;
+ try{
+  const r=await fetch(`${selected.stockDetailPath}?v=${Date.now()}`,{cache:'no-store'});
+  if(!r.ok)throw new Error(`HTTP ${r.status}`);
+  detail=await r.json();drawChart();renderSelectedBase();
+ }catch(e){document.getElementById('chart').innerHTML=`<div class="empty">تعذر تحميل الرسم: ${E(e.message)}</div>`}
+ calculateAllocation();
+}
+function renderSelectedBase(){
+ const x=selected;
+ if(!x){
+  document.getElementById('selectedTitle').textContent='لا توجد فرصة مختارة';
+  return;
+ }
+ document.getElementById('selectedTitle').innerHTML=`<span class="ticker">${E(x.ticker)}</span> — ${E(x.companyNameAr||x.companyNameEn||'')}`;
+ document.getElementById('selectedTags').innerHTML=`<span class="tag">${E(x.tierLabelAr)}</span><span class="tag">${E(x.strategyLabelAr||'')}</span><span class="tag">${E(x.stock?.trendLabelAr||'')}</span>`;
+ document.getElementById('selectedReason').textContent=x.selectionReasonAr||'';
+ document.getElementById('scoreRing').style.setProperty('--score',Math.max(0,Math.min(100,Number(x.decisionScore)||0)));
+ document.getElementById('scoreValue').textContent=N(x.decisionScore,1);
+ document.getElementById('plan').innerHTML=[
+  metric('السعر الحالي',N(x.stock?.price,3)),
+  metric('الدخول',`${N(x.plan?.entryLow,3)}–${N(x.plan?.entryHigh,3)}`),
+  metric('وقف الخسارة',N(x.plan?.stopLoss,3)),
+  metric('الهدف الأول',N(x.plan?.target1,3)),
+  metric('الهدف الثاني',N(x.plan?.target2,3)),
+  metric('Risk / Reward',N(x.plan?.riskReward1,2)),
+  metric('الدعم 20',N(x.stock?.support20,3)),
+  metric('المقاومة 20',N(x.stock?.resistance20,3)),
+  metric('RSI 14',N(x.stock?.rsi14,1)),
+  metric('الحجم النسبي',N(x.stock?.volumeRatio20,2)),
+  metric('درجة المخاطر',`${N(x.riskProfile?.riskScore,0)}/100`),
+  metric('السيولة',`${N(x.riskProfile?.liquidityPercentile,1)}%`)
+ ].join('');
+ document.getElementById('hardChecks').innerHTML=`<b>الشروط الإلزامية</b><br>${x.hardFailureCount===0?'✓ مكتملة':'✕ '+A(x.hardFailures).map(y=>E(y.labelAr||y.id)).join(' | ')}<br>حداثة البيانات: ${x.exactFresh?'✓ آخر جلسة':'✕ غير محدث'}<br>الخطة: ${x.planValid?'✓ صالحة':'✕ ناقصة'}`;
+ document.getElementById('softChecks').innerHTML=`<b>الشروط المرنة</b><br>${x.softFailureCount===0?'✓ مكتملة':A(x.softFailures).map(y=>`• ${E(y.labelAr||y.id)}`).join('<br>')}<br>الحالة: ${E(x.actionLabelAr)}`;
+ document.getElementById('decisionReason').innerHTML=`<b>مبرر الاختيار:</b> ${E(x.selectionReasonAr)}<br><span class="muted">درجة القرار مركبة للترتيب وليست احتمال ربح.</span>`;
+ if(detail)drawChart();
+}
+function drawChart(){
+ if(!detail?.chart?.dates?.length){document.getElementById('chart').innerHTML='<div class="empty">لا توجد بيانات رسم.</div>';return}
+ const dates=detail.chart.dates.slice(-60),close=detail.chart.close.slice(-60),s20=detail.chart.sma20.slice(-60),s50=detail.chart.sma50.slice(-60),vol=detail.chart.volume.slice(-60);
+ const values=[...close,...s20,...s50].map(Number).filter(Number.isFinite);
+ const min=Math.min(...values),max=Math.max(...values),range=max-min||1,W=900,H=320,top=18,bottom=78,left=48,right=16,plotH=H-top-bottom,plotW=W-left-right;
+ const x=i=>left+(i/Math.max(1,dates.length-1))*plotW,y=v=>top+(max-Number(v))/range*plotH;
+ const points=arr=>arr.map((v,i)=>Number.isFinite(Number(v))?`${x(i).toFixed(1)},${y(v).toFixed(1)}`:null).filter(Boolean).join(' ');
+ const vmax=Math.max(...vol.map(Number).filter(Number.isFinite),1),barW=Math.max(2,plotW/dates.length*.55);
+ const bars=vol.map((v,i)=>{const h=(Number(v)||0)/vmax*52;return `<rect x="${(x(i)-barW/2).toFixed(1)}" y="${(H-18-h).toFixed(1)}" width="${barW.toFixed(1)}" height="${h.toFixed(1)}" fill="#496d85" opacity=".65"/>`}).join('');
+ const grid=[0,.25,.5,.75,1].map(k=>{const yy=top+k*plotH,val=max-k*range;return `<line x1="${left}" y1="${yy}" x2="${W-right}" y2="${yy}" stroke="#18384e"/><text x="${left-7}" y="${yy+4}" fill="#8eafc2" text-anchor="end" font-size="10">${N(val,2)}</text>`}).join('');
+ document.getElementById('chart').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img"><rect width="${W}" height="${H}" fill="#071725"/>${grid}<line x1="${left}" y1="${H-70}" x2="${W-right}" y2="${H-70}" stroke="#274c68"/>${bars}<polyline points="${points(close)}" fill="none" stroke="#38bdf8" stroke-width="2.5"/><polyline points="${points(s20)}" fill="none" stroke="#36d995" stroke-width="1.8"/><polyline points="${points(s50)}" fill="none" stroke="#ffc857" stroke-width="1.8"/><text x="${left}" y="${H-4}" fill="#8eafc2" font-size="10">${E(dates[0])}</text><text x="${W-right}" y="${H-4}" fill="#8eafc2" text-anchor="end" font-size="10">${E(dates.at(-1))}</text></svg>`;
+}
+function portfolioContext(){
+ const portfolio=local(PORTFOLIO_KEY,[]),map=new Map(A(index?.stocks).map(x=>[x.ticker,x]));
+ const holdings=A(portfolio).map(h=>{const s=map.get(String(h.ticker||'').toUpperCase()),qty=Number(h.quantity)||0,price=Number(s?.price),value=Number.isFinite(price)?price*qty:0;return {...h,ticker:String(h.ticker||'').toUpperCase(),stock:s,value}});
+ const total=holdings.reduce((a,h)=>a+h.value,0),sectors=new Map();
+ holdings.forEach(h=>{const sec=h.stock?.sector||'غير مصنف';sectors.set(sec,(sectors.get(sec)||0)+h.value)});
+ return {holdings,total,sectors};
+}
+function calculateAllocation(){
+ if(!selected)return;
+ const p=doc.allocationPolicy||{},ctx=portfolioContext(),capital=Number(document.getElementById('capital').value)||ctx.total;
+ const riskPct=Number(document.getElementById('riskPct').value)||0;
+ const entry=Number(selected.plan?.entryHigh),stop=Number(selected.plan?.stopLoss),turnover=Number(selected.riskProfile?.averageTurnover20Egp||selected.stock?.averageTurnover20Egp);
+ const reasons=[];
+ if(!selected.actionablePaper)reasons.push('الطبقة B للمراقبة فقط');
+ if(!selected.exactFresh)reasons.push('البيانات ليست حتى آخر جلسة');
+ if(!(capital>0))reasons.push('أدخل رأس المال');
+ if(!(entry>stop&&stop>0))reasons.push('خطة الدخول والوقف غير صالحة');
+ if(!(turnover>0))reasons.push('السيولة غير متاحة');
+ if(reasons.length){allocation={qty:0,reasons,code:'BLOCKED'};renderAllocation();return}
+ const existing=ctx.holdings.find(h=>h.ticker===selected.ticker)?.value||0,sectorValue=ctx.sectors.get(selected.sector)||0;
+ const riskAmount=capital*riskPct/100,riskPerShare=entry-stop;
+ const qRisk=Math.floor(riskAmount/riskPerShare);
+ const qStock=Math.floor(Math.max(0,capital*(Number(p.maximumStockWeightPct)||15)/100-existing)/entry);
+ const qSector=Math.floor(Math.max(0,capital*(Number(p.maximumSectorWeightPct)||30)/100-sectorValue)/entry);
+ const qLiquidity=Math.floor(turnover*(Number(p.maximumLiquidityParticipationPct)||1)/100/entry);
+ let multiplier=1,corr=null;
+ for(const nbor of A(selected.riskProfile?.topCorrelated)){
+  const h=ctx.holdings.find(h=>h.ticker===nbor.ticker);
+  if(h&&h.value>0&&(!corr||Number(nbor.correlation)>Number(corr.correlation)))corr=nbor;
+ }
+ if(corr&&Number(corr.correlation)>=Number(p.correlationBlock||.9)){multiplier=0;reasons.push(`ارتباط مرتفع جدًا مع ${corr.ticker}`)}
+ else if(corr&&Number(corr.correlation)>=Number(p.correlationWarning||.75)){multiplier=.5;reasons.push(`تم خفض الحجم 50% لارتباطه مع ${corr.ticker}`)}
+ const qty=Math.floor(Math.max(0,Math.min(qRisk,qStock,qSector,qLiquidity))*multiplier),notional=qty*entry,stopRisk=qty*riskPerShare,weight=(existing+notional)/capital*100;
+ if(qty<=0)reasons.push('الحدود الحالية لا تسمح بسهم واحد');
+ allocation={qty,notional,stopRisk,weight,entry,stop,riskPct,capital,reasons,code:qty>0?'READY':'BLOCKED'};
+ renderAllocation();
+}
+function renderAllocation(){
+ const a=allocation||{};
+ document.getElementById('qty').textContent=N(a.qty,0);document.getElementById('notional').textContent=N(a.notional,2);document.getElementById('stopRisk').textContent=N(a.stopRisk,2);document.getElementById('weightAfter').textContent=Number.isFinite(a.weight)?`${N(a.weight,1)}%`:'—';
+ const ready=a.code==='READY';document.getElementById('allocationStatus').className=`status ${ready?'good':'warn'}`;document.getElementById('allocationStatus').innerHTML=ready?`<b>جاهز لمحاكاة ورقية</b><br>${E(a.reasons?.join(' | ')||'اجتاز حدود رأس المال والوقف والسيولة والتركيز.')}`:`<b>لا تسجل الصفقة</b><br>${E(a.reasons?.join(' | ')||'أكمل البيانات المطلوبة.')}`;
+ document.getElementById('saveDecision').disabled=!ready;
+}
+function saveDecision(){
+ if(!selected||allocation?.code!=='READY')return;
+ const journal=local(JOURNAL_KEY,[]);
+ journal.push({
+  id:`v1311-${selected.ticker}-${doc.sessionId}-${Date.now()}`,
+  createdAt:new Date().toISOString(),sessionId:doc.sessionId,ticker:selected.ticker,companyNameAr:selected.companyNameAr,
+  strategyId:selected.strategyId,strategyLabelAr:selected.strategyLabelAr,source:'V13.11',originalStatus:selected.tier,
+  recommendationScore:selected.recommendationScore,decision:'PAPER_SIMULATION',notes:'',
+  allocationSnapshot:{quantity:allocation.qty,entry:allocation.entry,stop:allocation.stop,target1:selected.plan.target1,target2:selected.plan.target2,riskReward1:selected.plan.riskReward1,notional:allocation.notional,stopRisk:allocation.stopRisk,portfolioWeightAfter:allocation.weight,riskScore:selected.riskProfile?.riskScore,riskLabelAr:selected.riskProfile?.riskLabelAr},
+  dailyDecisionSnapshot:{rank:selected.rank,decisionScore:selected.decisionScore,tier:selected.tier,tierLabelAr:selected.tierLabelAr,softFailures:selected.softFailures,selectionReasonAr:selected.selectionReasonAr}
+ });
+ localStorage.setItem(JOURNAL_KEY,JSON.stringify(journal));alert('تم حفظ القرار في سجل التداول الورقي. لم يتم تنفيذ شراء حقيقي.');
+}
+async function load(){
+ try{
+  const [d,i]=await Promise.all([fetch(`${DECISION}?v=${Date.now()}`,{cache:'no-store'}),fetch(`${STOCK_INDEX}?v=${Date.now()}`,{cache:'no-store'})]);
+  if(!d.ok)throw new Error(`Decision HTTP ${d.status}`);if(!i.ok)throw new Error(`Index HTTP ${i.status}`);
+  doc=await d.json();index=await i.json();
+  const settings=local(SETTINGS_KEY,{}),ctx=portfolioContext();
+  document.getElementById('capital').value=Number(settings.capital)||ctx.total||'';
+  const primary=doc.primaryCandidate;
+  document.getElementById('riskPct').value=primary?.tier==='STRICT_PAPER'?(doc.allocationPolicy?.strictDefaultRiskPerTradePct||.5):(doc.allocationPolicy?.tierADefaultRiskPerTradePct||.25);
+  renderSummary();renderAllRows();selected=primary;renderShortlist();renderSelectedBase();if(selected)await selectTicker(selected.ticker);
+ }catch(e){document.getElementById('dailyStatus').innerHTML=`<div class="status bad">لم يتم بناء V13.11 بعد: ${E(e.message)}</div>`}
+}
+document.getElementById('reload').onclick=load;document.getElementById('capital').oninput=calculateAllocation;document.getElementById('riskPct').oninput=calculateAllocation;document.getElementById('saveDecision').onclick=saveDecision;
+load();
+</script></body></html>

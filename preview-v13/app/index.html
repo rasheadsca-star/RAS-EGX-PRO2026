@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <meta name="theme-color" content="#07121e">
-  <title>EGX Pro V13.10 — واجهة التشغيل الموحدة</title>
+  <title>EGX Pro V13.11 — واجهة التشغيل الموحدة</title>
   <style>
     :root{
       color-scheme:dark;
@@ -60,12 +60,13 @@
 <div class="app">
   <aside class="sidebar" id="sidebar">
     <div class="brand">
-      <h1>EGX Pro V13.10</h1>
-      <small>واجهة تشغيل موحدة<br>V11 + V13.3–V13.10 + تحديث السوق والثقة المتدرجة</small>
+      <h1>EGX Pro V13.11</h1>
+      <small>واجهة تشغيل موحدة<br>V11 + V13.3–V13.11 + قرار يومي موحد</small>
     </div>
     <nav class="nav">
       <div class="group">المركز الموحد</div>
-      <button class="active" data-view="dashboard">لوحة التشغيل</button>
+      <button class="active" data-view="daily1311">قرار اليوم V13.11</button>
+      <button data-view="dashboard">لوحة التشغيل</button>
       <button data-view="recommendations">الفرص والتوصيات</button>
       <button data-view="paper">التداول الورقي</button>
       <button data-view="strategies">التحليل والاستراتيجيات</button>
@@ -102,7 +103,12 @@
     </header>
 
     <div class="content">
-      <section class="view active" id="view-dashboard">
+      <section class="view active" id="view-daily1311">
+        <div class="hero"><div><h2>قرار اليوم V13.11</h2><div class="muted">صفحة واحدة للاختيار والرسم البياني وخطة الدخول وحجم الصفقة الورقية وتسجيل القرار.</div></div><a class="btn primary" href="daily-decision.html" target="_blank">فتح في نافذة مستقلة</a></div>
+        <div class="section"><div class="iframe-wrap" style="height:calc(100vh - 180px)"><iframe title="V13.11 Daily Decision Workspace" src="daily-decision.html?embedded=1"></iframe></div></div>
+      </section>
+
+      <section class="view" id="view-dashboard">
         <div class="hero">
           <div>
             <h2>لوحة التشغيل الموحدة</h2>
@@ -125,6 +131,7 @@
               <div class="module" data-jump="risk"><b>تخصيص المخاطر</b><span>حجم ورقي وفق الوقف والسيولة والقطاع والارتباط.</span></div>
               <div class="module" data-jump="journal"><b>سجل القرارات</b><span>توثيق الخطة الأصلية والملاحظات دون أثر رجعي.</span></div>
               <div class="module" data-jump="audit139"><b>تدقيق التوصيات V13.9</b><span>تعرف أين تُرفض الأسهم وهل المشكلة في البيانات أو الإشارة أو الاستراتيجية.</span></div>
+              <div class="module" data-jump="daily1311"><b>قرار اليوم V13.11</b><span>أفضل 3 فرص والرسم والخطة والحجم وسجل القرار في صفحة واحدة.</span></div>
               <div class="module" data-jump="confidence1310"><b>الثقة المتدرجة V13.10</b><span>يفصل الشروط الإلزامية عن المرنة ويمنع استخدام التاريخ المتأخر.</span></div>
               <div class="module" data-jump="paper"><b>التداول الورقي V13.5</b><span>نتائج قابلة للقياس دون تنفيذ حقيقي أو تعديل بأثر رجعي.</span></div>
             </div>
@@ -214,6 +221,7 @@
           <a class="module" href="../adaptive-recommendations.html" target="_blank"><b>V13.5 المعايرة</b><span>الفرص الجاهزة والأقرب للاكتمال.</span></a>
           <a class="module" href="../paper-tracker.html" target="_blank"><b>V13.5 التداول الورقي</b><span>الإشارات والنتائج ومقاييس المخاطر.</span></a>
           <a class="module" href="recommendation-audit.html" target="_blank"><b>V13.9 تدقيق التوصيات</b><span>قمع القرار والمعايرة التجريبية وإصلاح Drawdown.</span></a>
+          <a class="module" href="daily-decision.html" target="_blank"><b>V13.11 قرار اليوم</b><span>الاختيار اليومي والرسم والخطة وحجم الصفقة الورقية.</span></a>
           <a class="module" href="tiered-confidence.html" target="_blank"><b>V13.10 الثقة المتدرجة</b><span>تغطية آخر جلسة والطبقتان A وB وتقييم المحفظة.</span></a>
           <a class="module" href="risk-allocation.html" target="_blank"><b>V13.8 المخاطر والتخصيص</b><span>حدود الحجم والوزن والقطاع والسيولة والارتباط.</span></a>
           <a class="module" href="decision-journal.html" target="_blank"><b>V13.8 سجل القرارات</b><span>لقطة الخطة والحجم الورقي والمراجعة.</span></a>
@@ -248,7 +256,7 @@ const state = {
   sourceState: {},
   candidates: [],
   searchQuery: '',
-  activeView: 'dashboard'
+  activeView: 'daily1311'
 };
 
 const E = value => String(value ?? '').replace(/[&<>"']/g, char => ({
