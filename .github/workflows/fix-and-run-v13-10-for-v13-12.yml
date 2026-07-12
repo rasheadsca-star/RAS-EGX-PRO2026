@@ -1,0 +1,191 @@
+name: Fix & Run V13.10 for V13.12
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/fix-and-run-v13-10-for-v13-12.yml"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: fix-run-v13-10-for-v13-12
+  cancel-in-progress: false
+
+jobs:
+  patch-refresh-analyze-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy2.outputs.page_url || steps.deploy1.outputs.page_url }}
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Patch V13.10 acceptance for newer unified UI
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          file = Path("scripts/quant/v13-10-acceptance.cjs")
+          if not file.exists():
+              raise SystemExit("Missing scripts/quant/v13-10-acceptance.cjs")
+
+          text = file.read_text(encoding="utf-8")
+          old = """const index = fs.readFileSync(path.join(ROOT, 'preview-v13/app/index.html'), 'utf8');
+          for (const text of ['EGX Pro V13.10', 'tiered-confidence.html', 'الثقة المتدرجة']) {
+            if (!index.includes(text)) fail(`index missing ${text}`);
+          }"""
+
+          new = """const index = fs.readFileSync(path.join(ROOT, 'preview-v13/app/index.html'), 'utf8');
+          if (!/EGX Pro V13\\.\\d+/.test(index)) {
+            fail('index missing a valid EGX Pro V13 version title');
+          }
+          for (const text of ['tiered-confidence.html', 'الثقة المتدرجة']) {
+            if (!index.includes(text)) fail(`index missing ${text}`);
+          }"""
+
+          if old in text:
+              text = text.replace(old, new)
+          elif "for (const text of ['EGX Pro V13.10', 'tiered-confidence.html', 'الثقة المتدرجة'])" in text:
+              text = text.replace(
+                  "for (const text of ['EGX Pro V13.10', 'tiered-confidence.html', 'الثقة المتدرجة']) {",
+                  "if (!/EGX Pro V13\\\\.\\\\d+/.test(index)) fail('index missing a valid EGX Pro V13 version title');\n"
+                  "for (const text of ['tiered-confidence.html', 'الثقة المتدرجة']) {"
+              )
+          elif "index missing a valid EGX Pro V13 version title" in text:
+              print("Forward-compatible patch is already present.")
+          else:
+              raise SystemExit("Could not locate the obsolete V13.10 title assertion.")
+
+          file.write_text(text, encoding="utf-8")
+          PY
+
+          node --check scripts/quant/v13-10-acceptance.cjs
+          grep -n "valid EGX Pro V13 version title" scripts/quant/v13-10-acceptance.cjs
+
+      - name: Validate dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          required=(
+            scripts/history/historical-100-runner.cjs
+            scripts/history/v13-10-full-market-refresh.cjs
+            scripts/quant/v13-4-quant-engine.cjs
+            scripts/quant/v13-9-recommendation-audit.cjs
+            scripts/quant/v13-10-tiered-confidence.cjs
+            scripts/quant/v13-10-acceptance.cjs
+            scripts/quant/v13-7-stock-intelligence.cjs
+            scripts/quant/v13-8-portfolio-risk.cjs
+            scripts/quant/v13-11-daily-decision.cjs
+            scripts/quant/v13-11-acceptance.cjs
+            data/v13-4-quant-policy.json
+            data/v13-9-audit-calibration-policy.json
+            data/v13-10-tiered-confidence-policy.json
+            data/v13-7-native-policy.json
+            data/v13-8-risk-policy.json
+            data/v13-11-daily-decision-policy.json
+            data/symbol-map.json
+            data/history-eligibility.json
+            data/history-summary.json
+            preview-v13/app/index.html
+            preview-v13/app/tiered-confidence.html
+          )
+          for file in "${required[@]}"; do
+            test -f "$file" || { echo "Missing required file: $file"; exit 1; }
+          done
+          test -d data/history || { echo "Missing data/history"; exit 1; }
+
+      - name: Refresh full market to latest session
+        env:
+          V13_10_SKIP_FETCH: "false"
+        run: node scripts/history/v13-10-full-market-refresh.cjs
+
+      - name: Rebuild strict engine and audit
+        run: |
+          node scripts/quant/v13-4-quant-engine.cjs
+          node scripts/quant/v13-9-recommendation-audit.cjs
+
+      - name: Build tiered confidence and run corrected acceptance
+        run: |
+          node scripts/quant/v13-10-tiered-confidence.cjs
+          node scripts/quant/v13-10-acceptance.cjs
+
+      - name: Rebuild V13.11 daily decision from corrected V13.10
+        run: |
+          node scripts/quant/v13-7-stock-intelligence.cjs
+          node scripts/quant/v13-8-portfolio-risk.cjs
+          node scripts/quant/v13-11-daily-decision.cjs
+          node scripts/quant/v13-11-acceptance.cjs
+
+      - name: Confirm stable V11 isolation
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --name-only | tee /tmp/v1310-fix-changes.txt
+          if grep -E '^(index\.html|service-worker\.js|assets/|js/|css/)' /tmp/v1310-fix-changes.txt; then
+            echo "Safety stop: stable V11 files were changed."
+            exit 1
+          fi
+
+      - name: Commit corrected V13.10 outputs
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            scripts/quant/v13-10-acceptance.cjs \
+            data/history \
+            data/history-summary.json \
+            data/history-last-run.json \
+            data/history-batch-state.json \
+            data/history-errors.json \
+            data/source-audit.json \
+            data/session-calendar.json \
+            data/corporate-actions.json \
+            data/quant
+          if git diff --cached --quiet; then
+            echo "No corrected V13.10 changes to commit."
+          else
+            git commit -m "Fix V13.10 acceptance for V13.12 and refresh decision data"
+            git pull --rebase -X ours origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload repository for Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy corrected V13.10 attempt 1
+        id: deploy1
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+
+      - name: Wait for an active Pages deployment
+        if: steps.deploy1.outcome == 'failure'
+        run: sleep 120
+
+      - name: Deploy corrected V13.10 attempt 2
+        id: deploy2
+        if: steps.deploy1.outcome == 'failure'
+        uses: actions/deploy-pages@v4
