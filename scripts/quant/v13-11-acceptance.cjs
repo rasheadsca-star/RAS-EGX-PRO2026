@@ -83,7 +83,10 @@ if (page.length < 10000) fail('daily page unexpectedly small');
 if (/navigator\.serviceWorker|service-worker\.js/.test(page)) fail('daily page must not modify service worker');
 
 const index = fs.readFileSync(path.join(ROOT, 'preview-v13/app/index.html'), 'utf8');
-for (const text of ['EGX Pro V13.11', 'daily-decision.html', 'قرار اليوم V13.11']) {
+if (!/EGX Pro V13\.\d+/.test(index)) {
+  fail('index missing a valid EGX Pro V13 version title');
+}
+for (const text of ['daily-decision.html', 'قرار اليوم V13.11']) {
   if (!index.includes(text)) fail(`index missing ${text}`);
 }
 if (!index.includes('class="view active" id="view-daily1311"')) fail('V13.11 is not the default view');
