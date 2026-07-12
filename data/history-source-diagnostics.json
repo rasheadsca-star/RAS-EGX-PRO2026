@@ -1,7 +1,7 @@
 {
   "ok": true,
   "engine": "v11_3_history_source_diagnostics",
-  "generatedAt": "2026-07-10T01:42:20.583Z",
+  "generatedAt": "2026-07-12T09:21:23.195Z",
   "summary": {
     "total": 243,
     "ready20": 0,
@@ -9,8 +9,8 @@
     "ready120": 0,
     "states": {
       "MISSING_HISTORY": 16,
-      "INSUFFICIENT": 167,
-      "WARMUP_10": 60
+      "INSUFFICIENT": 21,
+      "WARMUP_10": 206
     },
     "commonFailures": {
       "المصدر رفض أو لم يجد صفحة تاريخية صالحة: http_404": 19,
@@ -820,57 +820,6 @@
       ]
     },
     {
-      "symbol": "GPPL",
-      "sessions": 1,
-      "state": "INSUFFICIENT",
-      "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
-      "resolverConfidence": 90,
-      "sector": "غير مصنف",
-      "lastAttempt": "parsed_no_ohlcv",
-      "attempts": [
-        {
-          "source": "egx_official_public_pages",
-          "url": "https://www.egx.com.eg/en/Stock_Trading.aspx?code=GPPL",
-          "ok": false,
-          "reason": "TypeError"
-        },
-        {
-          "source": "egx_official_public_pages",
-          "url": "https://www.egx.com.eg/en/Trading.aspx?code=GPPL",
-          "ok": false,
-          "reason": "TypeError"
-        },
-        {
-          "source": "egx_official_public_pages",
-          "url": "https://www.egx.com.eg/en/ListedStocks.aspx",
-          "ok": false,
-          "reason": "TypeError"
-        },
-        {
-          "source": "mubasher_public_stock_pages",
-          "url": "https://english.mubasher.info/markets/EGX/stocks/GPPL/historical-data",
-          "ok": false,
-          "status": 404,
-          "reason": "http_404"
-        },
-        {
-          "source": "mubasher_public_stock_pages",
-          "url": "https://english.mubasher.info/markets/EGX/stocks/GPPL/historical-prices",
-          "ok": false,
-          "status": 404,
-          "reason": "http_404"
-        },
-        {
-          "source": "mubasher_public_stock_pages",
-          "url": "https://english.mubasher.info/markets/EGX/stocks/GPPL/",
-          "ok": true,
-          "status": 200,
-          "rows": 0,
-          "reason": "parsed_no_ohlcv"
-        }
-      ]
-    },
-    {
       "symbol": "ICLE",
       "sessions": 1,
       "state": "INSUFFICIENT",
@@ -1075,23 +1024,23 @@
       ]
     },
     {
-      "symbol": "ACTF",
-      "sessions": 3,
+      "symbol": "GPPL",
+      "sessions": 2,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
-      "sector": "خدمات مالية غير مصرفية",
+      "sector": "غير مصنف",
       "lastAttempt": "parsed_no_ohlcv",
       "attempts": [
         {
           "source": "egx_official_public_pages",
-          "url": "https://www.egx.com.eg/en/Stock_Trading.aspx?code=ACTF",
+          "url": "https://www.egx.com.eg/en/Stock_Trading.aspx?code=GPPL",
           "ok": false,
           "reason": "TypeError"
         },
         {
           "source": "egx_official_public_pages",
-          "url": "https://www.egx.com.eg/en/Trading.aspx?code=ACTF",
+          "url": "https://www.egx.com.eg/en/Trading.aspx?code=GPPL",
           "ok": false,
           "reason": "TypeError"
         },
@@ -1103,21 +1052,21 @@
         },
         {
           "source": "mubasher_public_stock_pages",
-          "url": "https://english.mubasher.info/markets/EGX/stocks/ACTF/historical-data",
+          "url": "https://english.mubasher.info/markets/EGX/stocks/GPPL/historical-data",
           "ok": false,
           "status": 404,
           "reason": "http_404"
         },
         {
           "source": "mubasher_public_stock_pages",
-          "url": "https://english.mubasher.info/markets/EGX/stocks/ACTF/historical-prices",
+          "url": "https://english.mubasher.info/markets/EGX/stocks/GPPL/historical-prices",
           "ok": false,
           "status": 404,
           "reason": "http_404"
         },
         {
           "source": "mubasher_public_stock_pages",
-          "url": "https://english.mubasher.info/markets/EGX/stocks/ACTF/",
+          "url": "https://english.mubasher.info/markets/EGX/stocks/GPPL/",
           "ok": true,
           "status": 200,
           "rows": 0,
@@ -1177,8 +1126,59 @@
       ]
     },
     {
+      "symbol": "ACTF",
+      "sessions": 4,
+      "state": "INSUFFICIENT",
+      "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
+      "resolverConfidence": 90,
+      "sector": "خدمات مالية غير مصرفية",
+      "lastAttempt": "parsed_no_ohlcv",
+      "attempts": [
+        {
+          "source": "egx_official_public_pages",
+          "url": "https://www.egx.com.eg/en/Stock_Trading.aspx?code=ACTF",
+          "ok": false,
+          "reason": "TypeError"
+        },
+        {
+          "source": "egx_official_public_pages",
+          "url": "https://www.egx.com.eg/en/Trading.aspx?code=ACTF",
+          "ok": false,
+          "reason": "TypeError"
+        },
+        {
+          "source": "egx_official_public_pages",
+          "url": "https://www.egx.com.eg/en/ListedStocks.aspx",
+          "ok": false,
+          "reason": "TypeError"
+        },
+        {
+          "source": "mubasher_public_stock_pages",
+          "url": "https://english.mubasher.info/markets/EGX/stocks/ACTF/historical-data",
+          "ok": false,
+          "status": 404,
+          "reason": "http_404"
+        },
+        {
+          "source": "mubasher_public_stock_pages",
+          "url": "https://english.mubasher.info/markets/EGX/stocks/ACTF/historical-prices",
+          "ok": false,
+          "status": 404,
+          "reason": "http_404"
+        },
+        {
+          "source": "mubasher_public_stock_pages",
+          "url": "https://english.mubasher.info/markets/EGX/stocks/ACTF/",
+          "ok": true,
+          "status": 200,
+          "rows": 0,
+          "reason": "parsed_no_ohlcv"
+        }
+      ]
+    },
+    {
       "symbol": "IRAX",
-      "sessions": 3,
+      "sessions": 4,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 82,
@@ -1229,7 +1229,7 @@
     },
     {
       "symbol": "TORA",
-      "sessions": 3,
+      "sessions": 4,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 82,
@@ -1271,108 +1271,6 @@
         {
           "source": "mubasher_public_stock_pages",
           "url": "https://english.mubasher.info/markets/EGX/stocks/TORA/",
-          "ok": true,
-          "status": 200,
-          "rows": 0,
-          "reason": "parsed_no_ohlcv"
-        }
-      ]
-    },
-    {
-      "symbol": "CFGH",
-      "sessions": 4,
-      "state": "INSUFFICIENT",
-      "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
-      "resolverConfidence": 90,
-      "sector": "صناعة وطاقة وبنية تحتية",
-      "lastAttempt": "parsed_no_ohlcv",
-      "attempts": [
-        {
-          "source": "egx_official_public_pages",
-          "url": "https://www.egx.com.eg/en/Stock_Trading.aspx?code=CFGH",
-          "ok": false,
-          "reason": "TypeError"
-        },
-        {
-          "source": "egx_official_public_pages",
-          "url": "https://www.egx.com.eg/en/Trading.aspx?code=CFGH",
-          "ok": false,
-          "reason": "TypeError"
-        },
-        {
-          "source": "egx_official_public_pages",
-          "url": "https://www.egx.com.eg/en/ListedStocks.aspx",
-          "ok": false,
-          "reason": "TypeError"
-        },
-        {
-          "source": "mubasher_public_stock_pages",
-          "url": "https://english.mubasher.info/markets/EGX/stocks/CFGH/historical-data",
-          "ok": false,
-          "status": 404,
-          "reason": "http_404"
-        },
-        {
-          "source": "mubasher_public_stock_pages",
-          "url": "https://english.mubasher.info/markets/EGX/stocks/CFGH/historical-prices",
-          "ok": false,
-          "status": 404,
-          "reason": "http_404"
-        },
-        {
-          "source": "mubasher_public_stock_pages",
-          "url": "https://english.mubasher.info/markets/EGX/stocks/CFGH/",
-          "ok": true,
-          "status": 200,
-          "rows": 0,
-          "reason": "parsed_no_ohlcv"
-        }
-      ]
-    },
-    {
-      "symbol": "SAIB",
-      "sessions": 4,
-      "state": "INSUFFICIENT",
-      "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
-      "resolverConfidence": 90,
-      "sector": "بنوك وخدمات مالية مصرفية",
-      "lastAttempt": "parsed_no_ohlcv",
-      "attempts": [
-        {
-          "source": "egx_official_public_pages",
-          "url": "https://www.egx.com.eg/en/Stock_Trading.aspx?code=SAIB",
-          "ok": false,
-          "reason": "TypeError"
-        },
-        {
-          "source": "egx_official_public_pages",
-          "url": "https://www.egx.com.eg/en/Trading.aspx?code=SAIB",
-          "ok": false,
-          "reason": "TypeError"
-        },
-        {
-          "source": "egx_official_public_pages",
-          "url": "https://www.egx.com.eg/en/ListedStocks.aspx",
-          "ok": false,
-          "reason": "TypeError"
-        },
-        {
-          "source": "mubasher_public_stock_pages",
-          "url": "https://english.mubasher.info/markets/EGX/stocks/SAIB/historical-data",
-          "ok": false,
-          "status": 404,
-          "reason": "http_404"
-        },
-        {
-          "source": "mubasher_public_stock_pages",
-          "url": "https://english.mubasher.info/markets/EGX/stocks/SAIB/historical-prices",
-          "ok": false,
-          "status": 404,
-          "reason": "http_404"
-        },
-        {
-          "source": "mubasher_public_stock_pages",
-          "url": "https://english.mubasher.info/markets/EGX/stocks/SAIB/",
           "ok": true,
           "status": 200,
           "rows": 0,
@@ -1432,6 +1330,57 @@
       ]
     },
     {
+      "symbol": "CFGH",
+      "sessions": 5,
+      "state": "INSUFFICIENT",
+      "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
+      "resolverConfidence": 90,
+      "sector": "صناعة وطاقة وبنية تحتية",
+      "lastAttempt": "parsed_no_ohlcv",
+      "attempts": [
+        {
+          "source": "egx_official_public_pages",
+          "url": "https://www.egx.com.eg/en/Stock_Trading.aspx?code=CFGH",
+          "ok": false,
+          "reason": "TypeError"
+        },
+        {
+          "source": "egx_official_public_pages",
+          "url": "https://www.egx.com.eg/en/Trading.aspx?code=CFGH",
+          "ok": false,
+          "reason": "TypeError"
+        },
+        {
+          "source": "egx_official_public_pages",
+          "url": "https://www.egx.com.eg/en/ListedStocks.aspx",
+          "ok": false,
+          "reason": "TypeError"
+        },
+        {
+          "source": "mubasher_public_stock_pages",
+          "url": "https://english.mubasher.info/markets/EGX/stocks/CFGH/historical-data",
+          "ok": false,
+          "status": 404,
+          "reason": "http_404"
+        },
+        {
+          "source": "mubasher_public_stock_pages",
+          "url": "https://english.mubasher.info/markets/EGX/stocks/CFGH/historical-prices",
+          "ok": false,
+          "status": 404,
+          "reason": "http_404"
+        },
+        {
+          "source": "mubasher_public_stock_pages",
+          "url": "https://english.mubasher.info/markets/EGX/stocks/CFGH/",
+          "ok": true,
+          "status": 200,
+          "rows": 0,
+          "reason": "parsed_no_ohlcv"
+        }
+      ]
+    },
+    {
       "symbol": "EGSA",
       "sessions": 5,
       "state": "INSUFFICIENT",
@@ -1483,8 +1432,59 @@
       ]
     },
     {
-      "symbol": "RAKT",
+      "symbol": "SAIB",
       "sessions": 5,
+      "state": "INSUFFICIENT",
+      "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
+      "resolverConfidence": 90,
+      "sector": "بنوك وخدمات مالية مصرفية",
+      "lastAttempt": "parsed_no_ohlcv",
+      "attempts": [
+        {
+          "source": "egx_official_public_pages",
+          "url": "https://www.egx.com.eg/en/Stock_Trading.aspx?code=SAIB",
+          "ok": false,
+          "reason": "TypeError"
+        },
+        {
+          "source": "egx_official_public_pages",
+          "url": "https://www.egx.com.eg/en/Trading.aspx?code=SAIB",
+          "ok": false,
+          "reason": "TypeError"
+        },
+        {
+          "source": "egx_official_public_pages",
+          "url": "https://www.egx.com.eg/en/ListedStocks.aspx",
+          "ok": false,
+          "reason": "TypeError"
+        },
+        {
+          "source": "mubasher_public_stock_pages",
+          "url": "https://english.mubasher.info/markets/EGX/stocks/SAIB/historical-data",
+          "ok": false,
+          "status": 404,
+          "reason": "http_404"
+        },
+        {
+          "source": "mubasher_public_stock_pages",
+          "url": "https://english.mubasher.info/markets/EGX/stocks/SAIB/historical-prices",
+          "ok": false,
+          "status": 404,
+          "reason": "http_404"
+        },
+        {
+          "source": "mubasher_public_stock_pages",
+          "url": "https://english.mubasher.info/markets/EGX/stocks/SAIB/",
+          "ok": true,
+          "status": 200,
+          "rows": 0,
+          "reason": "parsed_no_ohlcv"
+        }
+      ]
+    },
+    {
+      "symbol": "RAKT",
+      "sessions": 6,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -1526,108 +1526,6 @@
         {
           "source": "mubasher_public_stock_pages",
           "url": "https://english.mubasher.info/markets/EGX/stocks/RAKT/",
-          "ok": true,
-          "status": 200,
-          "rows": 0,
-          "reason": "parsed_no_ohlcv"
-        }
-      ]
-    },
-    {
-      "symbol": "ADRI",
-      "sessions": 7,
-      "state": "INSUFFICIENT",
-      "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
-      "resolverConfidence": 82,
-      "sector": "عقارات وإنشاءات",
-      "lastAttempt": "parsed_no_ohlcv",
-      "attempts": [
-        {
-          "source": "egx_official_public_pages",
-          "url": "https://www.egx.com.eg/en/Stock_Trading.aspx?code=ADRI",
-          "ok": false,
-          "reason": "TypeError"
-        },
-        {
-          "source": "egx_official_public_pages",
-          "url": "https://www.egx.com.eg/en/Trading.aspx?code=ADRI",
-          "ok": false,
-          "reason": "TypeError"
-        },
-        {
-          "source": "egx_official_public_pages",
-          "url": "https://www.egx.com.eg/en/ListedStocks.aspx",
-          "ok": false,
-          "reason": "TypeError"
-        },
-        {
-          "source": "mubasher_public_stock_pages",
-          "url": "https://english.mubasher.info/markets/EGX/stocks/ADRI/historical-data",
-          "ok": false,
-          "status": 404,
-          "reason": "http_404"
-        },
-        {
-          "source": "mubasher_public_stock_pages",
-          "url": "https://english.mubasher.info/markets/EGX/stocks/ADRI/historical-prices",
-          "ok": false,
-          "status": 404,
-          "reason": "http_404"
-        },
-        {
-          "source": "mubasher_public_stock_pages",
-          "url": "https://english.mubasher.info/markets/EGX/stocks/ADRI/",
-          "ok": true,
-          "status": 200,
-          "rows": 0,
-          "reason": "parsed_no_ohlcv"
-        }
-      ]
-    },
-    {
-      "symbol": "AIFI",
-      "sessions": 7,
-      "state": "INSUFFICIENT",
-      "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
-      "resolverConfidence": 82,
-      "sector": "أغذية ومشروبات",
-      "lastAttempt": "parsed_no_ohlcv",
-      "attempts": [
-        {
-          "source": "egx_official_public_pages",
-          "url": "https://www.egx.com.eg/en/Stock_Trading.aspx?code=AIFI",
-          "ok": false,
-          "reason": "TypeError"
-        },
-        {
-          "source": "egx_official_public_pages",
-          "url": "https://www.egx.com.eg/en/Trading.aspx?code=AIFI",
-          "ok": false,
-          "reason": "TypeError"
-        },
-        {
-          "source": "egx_official_public_pages",
-          "url": "https://www.egx.com.eg/en/ListedStocks.aspx",
-          "ok": false,
-          "reason": "TypeError"
-        },
-        {
-          "source": "mubasher_public_stock_pages",
-          "url": "https://english.mubasher.info/markets/EGX/stocks/AIFI/historical-data",
-          "ok": false,
-          "status": 404,
-          "reason": "http_404"
-        },
-        {
-          "source": "mubasher_public_stock_pages",
-          "url": "https://english.mubasher.info/markets/EGX/stocks/AIFI/historical-prices",
-          "ok": false,
-          "status": 404,
-          "reason": "http_404"
-        },
-        {
-          "source": "mubasher_public_stock_pages",
-          "url": "https://english.mubasher.info/markets/EGX/stocks/AIFI/",
           "ok": true,
           "status": 200,
           "rows": 0,
@@ -1687,8 +1585,110 @@
       ]
     },
     {
+      "symbol": "ADRI",
+      "sessions": 8,
+      "state": "INSUFFICIENT",
+      "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
+      "resolverConfidence": 82,
+      "sector": "عقارات وإنشاءات",
+      "lastAttempt": "parsed_no_ohlcv",
+      "attempts": [
+        {
+          "source": "egx_official_public_pages",
+          "url": "https://www.egx.com.eg/en/Stock_Trading.aspx?code=ADRI",
+          "ok": false,
+          "reason": "TypeError"
+        },
+        {
+          "source": "egx_official_public_pages",
+          "url": "https://www.egx.com.eg/en/Trading.aspx?code=ADRI",
+          "ok": false,
+          "reason": "TypeError"
+        },
+        {
+          "source": "egx_official_public_pages",
+          "url": "https://www.egx.com.eg/en/ListedStocks.aspx",
+          "ok": false,
+          "reason": "TypeError"
+        },
+        {
+          "source": "mubasher_public_stock_pages",
+          "url": "https://english.mubasher.info/markets/EGX/stocks/ADRI/historical-data",
+          "ok": false,
+          "status": 404,
+          "reason": "http_404"
+        },
+        {
+          "source": "mubasher_public_stock_pages",
+          "url": "https://english.mubasher.info/markets/EGX/stocks/ADRI/historical-prices",
+          "ok": false,
+          "status": 404,
+          "reason": "http_404"
+        },
+        {
+          "source": "mubasher_public_stock_pages",
+          "url": "https://english.mubasher.info/markets/EGX/stocks/ADRI/",
+          "ok": true,
+          "status": 200,
+          "rows": 0,
+          "reason": "parsed_no_ohlcv"
+        }
+      ]
+    },
+    {
+      "symbol": "AIFI",
+      "sessions": 8,
+      "state": "INSUFFICIENT",
+      "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
+      "resolverConfidence": 82,
+      "sector": "أغذية ومشروبات",
+      "lastAttempt": "parsed_no_ohlcv",
+      "attempts": [
+        {
+          "source": "egx_official_public_pages",
+          "url": "https://www.egx.com.eg/en/Stock_Trading.aspx?code=AIFI",
+          "ok": false,
+          "reason": "TypeError"
+        },
+        {
+          "source": "egx_official_public_pages",
+          "url": "https://www.egx.com.eg/en/Trading.aspx?code=AIFI",
+          "ok": false,
+          "reason": "TypeError"
+        },
+        {
+          "source": "egx_official_public_pages",
+          "url": "https://www.egx.com.eg/en/ListedStocks.aspx",
+          "ok": false,
+          "reason": "TypeError"
+        },
+        {
+          "source": "mubasher_public_stock_pages",
+          "url": "https://english.mubasher.info/markets/EGX/stocks/AIFI/historical-data",
+          "ok": false,
+          "status": 404,
+          "reason": "http_404"
+        },
+        {
+          "source": "mubasher_public_stock_pages",
+          "url": "https://english.mubasher.info/markets/EGX/stocks/AIFI/historical-prices",
+          "ok": false,
+          "status": 404,
+          "reason": "http_404"
+        },
+        {
+          "source": "mubasher_public_stock_pages",
+          "url": "https://english.mubasher.info/markets/EGX/stocks/AIFI/",
+          "ok": true,
+          "status": 200,
+          "rows": 0,
+          "reason": "parsed_no_ohlcv"
+        }
+      ]
+    },
+    {
       "symbol": "ESRS",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصدر رفض أو لم يجد صفحة تاريخية صالحة: http_404",
       "resolverConfidence": 82,
@@ -1739,7 +1739,7 @@
     },
     {
       "symbol": "MMAT",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -1790,7 +1790,7 @@
     },
     {
       "symbol": "NAHO",
-      "sessions": 7,
+      "sessions": 8,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -1841,7 +1841,7 @@
     },
     {
       "symbol": "EDFM",
-      "sessions": 8,
+      "sessions": 9,
       "state": "INSUFFICIENT",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -1892,8 +1892,8 @@
     },
     {
       "symbol": "AALR",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -1943,8 +1943,8 @@
     },
     {
       "symbol": "ACAP",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -1994,8 +1994,8 @@
     },
     {
       "symbol": "ADCI",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "رعاية صحية وأدوية",
@@ -2045,8 +2045,8 @@
     },
     {
       "symbol": "ADPC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -2096,8 +2096,8 @@
     },
     {
       "symbol": "AFDI",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -2147,8 +2147,8 @@
     },
     {
       "symbol": "AFMC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -2198,8 +2198,8 @@
     },
     {
       "symbol": "AIDC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -2249,8 +2249,8 @@
     },
     {
       "symbol": "AIHC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصدر رفض أو لم يجد صفحة تاريخية صالحة: http_404",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -2300,8 +2300,8 @@
     },
     {
       "symbol": "AJWA",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "أغذية ومشروبات",
@@ -2351,8 +2351,8 @@
     },
     {
       "symbol": "ALUM",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "معادن ومواد أساسية",
@@ -2402,8 +2402,8 @@
     },
     {
       "symbol": "AMES",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "رعاية صحية وأدوية",
@@ -2453,8 +2453,8 @@
     },
     {
       "symbol": "AMIA",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -2504,8 +2504,8 @@
     },
     {
       "symbol": "APSW",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -2555,8 +2555,8 @@
     },
     {
       "symbol": "ARAB",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -2606,8 +2606,8 @@
     },
     {
       "symbol": "AREH",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -2657,8 +2657,8 @@
     },
     {
       "symbol": "ARVA",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -2708,8 +2708,8 @@
     },
     {
       "symbol": "ASCM",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -2759,8 +2759,8 @@
     },
     {
       "symbol": "ASPI",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "خدمات مالية غير مصرفية",
@@ -2810,8 +2810,8 @@
     },
     {
       "symbol": "ATLC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "خدمات مالية غير مصرفية",
@@ -2861,8 +2861,8 @@
     },
     {
       "symbol": "ATQA",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "معادن ومواد أساسية",
@@ -2912,8 +2912,8 @@
     },
     {
       "symbol": "BINV",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -2963,8 +2963,8 @@
     },
     {
       "symbol": "BIOC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -3014,8 +3014,8 @@
     },
     {
       "symbol": "BONY",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -3065,8 +3065,8 @@
     },
     {
       "symbol": "CAED",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -3116,8 +3116,8 @@
     },
     {
       "symbol": "CCRS",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -3167,8 +3167,8 @@
     },
     {
       "symbol": "CEFM",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -3218,8 +3218,8 @@
     },
     {
       "symbol": "CERA",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "أسمنت ومواد بناء",
@@ -3269,8 +3269,8 @@
     },
     {
       "symbol": "COPR",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -3320,8 +3320,8 @@
     },
     {
       "symbol": "COSG",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -3371,8 +3371,8 @@
     },
     {
       "symbol": "CPCI",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "رعاية صحية ودواء",
@@ -3422,8 +3422,8 @@
     },
     {
       "symbol": "CPME",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -3473,8 +3473,8 @@
     },
     {
       "symbol": "CRST",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -3524,8 +3524,8 @@
     },
     {
       "symbol": "CSAG",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "نقل وخدمات لوجستية",
@@ -3575,8 +3575,8 @@
     },
     {
       "symbol": "DAPH",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -3626,8 +3626,8 @@
     },
     {
       "symbol": "DCCC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -3677,8 +3677,8 @@
     },
     {
       "symbol": "DEIN",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -3728,8 +3728,8 @@
     },
     {
       "symbol": "DGTZ",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "اتصالات وإعلام وتكنولوجيا",
@@ -3779,8 +3779,8 @@
     },
     {
       "symbol": "DSCW",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "منسوجات وملابس",
@@ -3830,8 +3830,8 @@
     },
     {
       "symbol": "DTPP",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -3881,8 +3881,8 @@
     },
     {
       "symbol": "EALR",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -3932,8 +3932,8 @@
     },
     {
       "symbol": "EBSC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -3983,8 +3983,8 @@
     },
     {
       "symbol": "ECAP",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "معادن ومواد أساسية",
@@ -4034,8 +4034,8 @@
     },
     {
       "symbol": "EEII",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -4085,8 +4085,8 @@
     },
     {
       "symbol": "EFIC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "خدمات مالية غير مصرفية",
@@ -4136,8 +4136,8 @@
     },
     {
       "symbol": "EFIH",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "تكنولوجيا ومدفوعات",
@@ -4187,8 +4187,8 @@
     },
     {
       "symbol": "EGAS",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -4238,8 +4238,8 @@
     },
     {
       "symbol": "EHDR",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -4289,8 +4289,8 @@
     },
     {
       "symbol": "ELEC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -4340,8 +4340,8 @@
     },
     {
       "symbol": "ELKA",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -4391,8 +4391,8 @@
     },
     {
       "symbol": "ELSH",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -4442,8 +4442,8 @@
     },
     {
       "symbol": "EMFD",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -4493,8 +4493,8 @@
     },
     {
       "symbol": "ENGC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -4544,8 +4544,8 @@
     },
     {
       "symbol": "EPCO",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "أغذية ومشروبات",
@@ -4595,8 +4595,8 @@
     },
     {
       "symbol": "EPPK",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -4646,8 +4646,8 @@
     },
     {
       "symbol": "ETRS",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "نقل وخدمات لوجستية",
@@ -4697,8 +4697,8 @@
     },
     {
       "symbol": "FAITA",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "بنوك وخدمات مالية مصرفية",
@@ -4748,8 +4748,8 @@
     },
     {
       "symbol": "FERC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "بتروكيماويات وكيماويات",
@@ -4799,8 +4799,8 @@
     },
     {
       "symbol": "GDWA",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -4850,8 +4850,8 @@
     },
     {
       "symbol": "GGCC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -4901,8 +4901,8 @@
     },
     {
       "symbol": "GGRN",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -4952,8 +4952,8 @@
     },
     {
       "symbol": "GIHD",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -5003,8 +5003,8 @@
     },
     {
       "symbol": "GMCI",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "خدمات مالية غير مصرفية",
@@ -5054,8 +5054,8 @@
     },
     {
       "symbol": "GPIM",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -5105,8 +5105,8 @@
     },
     {
       "symbol": "GRCA",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -5156,8 +5156,8 @@
     },
     {
       "symbol": "GSSC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -5207,8 +5207,8 @@
     },
     {
       "symbol": "GTEX",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "صناعة وطاقة وبنية تحتية",
@@ -5258,8 +5258,8 @@
     },
     {
       "symbol": "GTWL",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "منسوجات وملابس",
@@ -5309,8 +5309,8 @@
     },
     {
       "symbol": "ICID",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -5360,8 +5360,8 @@
     },
     {
       "symbol": "IDRE",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -5411,8 +5411,8 @@
     },
     {
       "symbol": "INFI",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "أغذية ومشروبات",
@@ -5462,8 +5462,8 @@
     },
     {
       "symbol": "ISMA",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "أغذية ومشروبات",
@@ -5513,8 +5513,8 @@
     },
     {
       "symbol": "ISMQ",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "معادن ومواد أساسية",
@@ -5564,8 +5564,8 @@
     },
     {
       "symbol": "KORA",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "صناعة وطاقة وبنية تحتية",
@@ -5615,8 +5615,8 @@
     },
     {
       "symbol": "KRDI",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -5666,8 +5666,8 @@
     },
     {
       "symbol": "KWIN",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -5717,8 +5717,8 @@
     },
     {
       "symbol": "KZPC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -5768,8 +5768,8 @@
     },
     {
       "symbol": "LUTS",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -5819,8 +5819,8 @@
     },
     {
       "symbol": "MAAL",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -5870,8 +5870,8 @@
     },
     {
       "symbol": "MBSC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "أسمنت ومواد بناء",
@@ -5921,8 +5921,8 @@
     },
     {
       "symbol": "MCRO",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "رعاية صحية ودواء",
@@ -5972,8 +5972,8 @@
     },
     {
       "symbol": "MEGM",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -6023,8 +6023,8 @@
     },
     {
       "symbol": "MENA",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -6074,8 +6074,8 @@
     },
     {
       "symbol": "MEPA",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "رعاية صحية وأدوية",
@@ -6125,8 +6125,8 @@
     },
     {
       "symbol": "MFSC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -6176,8 +6176,8 @@
     },
     {
       "symbol": "MHOT",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "سياحة وترفيه",
@@ -6227,8 +6227,8 @@
     },
     {
       "symbol": "MILS",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -6278,8 +6278,8 @@
     },
     {
       "symbol": "MIPH",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "رعاية صحية ودواء",
@@ -6329,8 +6329,8 @@
     },
     {
       "symbol": "MOED",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -6380,8 +6380,8 @@
     },
     {
       "symbol": "MOIL",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -6431,8 +6431,8 @@
     },
     {
       "symbol": "MOIN",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -6482,8 +6482,8 @@
     },
     {
       "symbol": "MOSC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -6533,8 +6533,8 @@
     },
     {
       "symbol": "MPCI",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "رعاية صحية ودواء",
@@ -6584,8 +6584,8 @@
     },
     {
       "symbol": "MPCO",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "أغذية ومشروبات",
@@ -6635,8 +6635,8 @@
     },
     {
       "symbol": "MPRC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "اتصالات وإعلام وتكنولوجيا",
@@ -6686,8 +6686,8 @@
     },
     {
       "symbol": "MTIE",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "تجارة وتوزيع",
@@ -6737,8 +6737,8 @@
     },
     {
       "symbol": "NAPR",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصدر رفض أو لم يجد صفحة تاريخية صالحة: http_404",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -6788,8 +6788,8 @@
     },
     {
       "symbol": "NARE",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -6839,8 +6839,8 @@
     },
     {
       "symbol": "NCCW",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -6890,8 +6890,8 @@
     },
     {
       "symbol": "NEDA",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -6941,8 +6941,8 @@
     },
     {
       "symbol": "NHPS",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -6992,8 +6992,8 @@
     },
     {
       "symbol": "NINH",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -7043,8 +7043,8 @@
     },
     {
       "symbol": "OBRI",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -7094,8 +7094,8 @@
     },
     {
       "symbol": "OCPH",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "رعاية صحية وأدوية",
@@ -7145,8 +7145,8 @@
     },
     {
       "symbol": "ODIN",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -7196,8 +7196,8 @@
     },
     {
       "symbol": "OFH",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "خدمات مالية غير مصرفية",
@@ -7247,8 +7247,8 @@
     },
     {
       "symbol": "OIH",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -7298,8 +7298,8 @@
     },
     {
       "symbol": "ORWE",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "صناعة وطاقة وبنية تحتية",
@@ -7349,8 +7349,8 @@
     },
     {
       "symbol": "PHAR",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "رعاية صحية ودواء",
@@ -7400,8 +7400,8 @@
     },
     {
       "symbol": "PHGC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصدر رفض أو لم يجد صفحة تاريخية صالحة: http_404",
       "resolverConfidence": 90,
       "sector": "رعاية صحية وأدوية",
@@ -7451,8 +7451,8 @@
     },
     {
       "symbol": "PHTV",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "سياحة وترفيه",
@@ -7502,8 +7502,8 @@
     },
     {
       "symbol": "PRCL",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "أسمنت ومواد بناء",
@@ -7553,8 +7553,8 @@
     },
     {
       "symbol": "PRDC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -7604,8 +7604,8 @@
     },
     {
       "symbol": "PRMH",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -7655,8 +7655,8 @@
     },
     {
       "symbol": "QNBE",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "بنوك وخدمات مالية مصرفية",
@@ -7706,8 +7706,8 @@
     },
     {
       "symbol": "RACC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -7757,8 +7757,8 @@
     },
     {
       "symbol": "ROTO",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "سياحة وترفيه",
@@ -7808,8 +7808,8 @@
     },
     {
       "symbol": "RREI",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -7859,8 +7859,8 @@
     },
     {
       "symbol": "RTVC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -7910,8 +7910,8 @@
     },
     {
       "symbol": "RUBX",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -7961,8 +7961,8 @@
     },
     {
       "symbol": "SCEM",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "أسمنت ومواد بناء",
@@ -8012,8 +8012,8 @@
     },
     {
       "symbol": "SCFM",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -8063,8 +8063,8 @@
     },
     {
       "symbol": "SCTS",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "اتصالات وإعلام وتكنولوجيا",
@@ -8114,8 +8114,8 @@
     },
     {
       "symbol": "SDTI",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "سياحة وترفيه",
@@ -8165,8 +8165,8 @@
     },
     {
       "symbol": "SEIG",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "خدمات مالية غير مصرفية",
@@ -8216,8 +8216,8 @@
     },
     {
       "symbol": "SEIGA",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "خدمات مالية غير مصرفية",
@@ -8267,8 +8267,8 @@
     },
     {
       "symbol": "SIPC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "رعاية صحية وأدوية",
@@ -8318,8 +8318,8 @@
     },
     {
       "symbol": "SMFR",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -8369,8 +8369,8 @@
     },
     {
       "symbol": "SNFC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "أغذية ومشروبات",
@@ -8420,8 +8420,8 @@
     },
     {
       "symbol": "SPMD",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "رعاية صحية وأدوية",
@@ -8471,8 +8471,8 @@
     },
     {
       "symbol": "SVCE",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "أسمنت ومواد بناء",
@@ -8522,8 +8522,8 @@
     },
     {
       "symbol": "TALM",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "تعليم وخدمات",
@@ -8573,8 +8573,8 @@
     },
     {
       "symbol": "TANM",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -8624,8 +8624,8 @@
     },
     {
       "symbol": "TAQA",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -8675,8 +8675,8 @@
     },
     {
       "symbol": "TYCN",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "خدمات مالية غير مصرفية",
@@ -8726,8 +8726,8 @@
     },
     {
       "symbol": "UBEE",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "بنوك وخدمات مالية مصرفية",
@@ -8777,8 +8777,8 @@
     },
     {
       "symbol": "UEFM",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -8828,8 +8828,8 @@
     },
     {
       "symbol": "UEGC",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -8879,8 +8879,8 @@
     },
     {
       "symbol": "UNIP",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -8930,8 +8930,8 @@
     },
     {
       "symbol": "UNIT",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -8981,8 +8981,8 @@
     },
     {
       "symbol": "VALU",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "خدمات مالية غير مصرفية",
@@ -9032,8 +9032,8 @@
     },
     {
       "symbol": "VLMR",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -9083,8 +9083,8 @@
     },
     {
       "symbol": "VLMRA",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -9134,8 +9134,8 @@
     },
     {
       "symbol": "WCDF",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -9185,8 +9185,8 @@
     },
     {
       "symbol": "WKOL",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -9236,8 +9236,8 @@
     },
     {
       "symbol": "ZEOT",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "غير مصنف",
@@ -9287,8 +9287,8 @@
     },
     {
       "symbol": "ZMID",
-      "sessions": 9,
-      "state": "INSUFFICIENT",
+      "sessions": 10,
+      "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
       "sector": "عقارات وإنشاءات",
@@ -9338,7 +9338,7 @@
     },
     {
       "symbol": "ABUK",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9389,7 +9389,7 @@
     },
     {
       "symbol": "ACAMD",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9440,7 +9440,7 @@
     },
     {
       "symbol": "ACGC",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9491,7 +9491,7 @@
     },
     {
       "symbol": "ADIB",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9542,7 +9542,7 @@
     },
     {
       "symbol": "ALCN",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9593,7 +9593,7 @@
     },
     {
       "symbol": "AMER",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9644,7 +9644,7 @@
     },
     {
       "symbol": "AMOC",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9695,7 +9695,7 @@
     },
     {
       "symbol": "ARCC",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9746,7 +9746,7 @@
     },
     {
       "symbol": "AXPH",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9797,7 +9797,7 @@
     },
     {
       "symbol": "BTFH",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9848,7 +9848,7 @@
     },
     {
       "symbol": "CANA",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9899,7 +9899,7 @@
     },
     {
       "symbol": "CCAP",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -9950,7 +9950,7 @@
     },
     {
       "symbol": "CICH",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10001,7 +10001,7 @@
     },
     {
       "symbol": "CIEB",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10052,7 +10052,7 @@
     },
     {
       "symbol": "CIRA",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10103,7 +10103,7 @@
     },
     {
       "symbol": "CLHO",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10154,7 +10154,7 @@
     },
     {
       "symbol": "CNFN",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10205,7 +10205,7 @@
     },
     {
       "symbol": "COMI",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10256,7 +10256,7 @@
     },
     {
       "symbol": "DOMT",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10307,7 +10307,7 @@
     },
     {
       "symbol": "EASB",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10358,7 +10358,7 @@
     },
     {
       "symbol": "EAST",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10409,7 +10409,7 @@
     },
     {
       "symbol": "EFID",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10460,7 +10460,7 @@
     },
     {
       "symbol": "EGAL",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10511,7 +10511,7 @@
     },
     {
       "symbol": "EGBE",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10562,7 +10562,7 @@
     },
     {
       "symbol": "EGCH",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10613,7 +10613,7 @@
     },
     {
       "symbol": "EGTS",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10664,7 +10664,7 @@
     },
     {
       "symbol": "ELWA",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10715,7 +10715,7 @@
     },
     {
       "symbol": "ETEL",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10766,7 +10766,7 @@
     },
     {
       "symbol": "EXPA",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10817,7 +10817,7 @@
     },
     {
       "symbol": "FAIT",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10868,7 +10868,7 @@
     },
     {
       "symbol": "FWRY",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10919,7 +10919,7 @@
     },
     {
       "symbol": "GBCO",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -10970,7 +10970,7 @@
     },
     {
       "symbol": "HDBK",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -11021,7 +11021,7 @@
     },
     {
       "symbol": "HELI",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -11072,7 +11072,7 @@
     },
     {
       "symbol": "HRHO",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -11123,7 +11123,7 @@
     },
     {
       "symbol": "IFAP",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -11174,7 +11174,7 @@
     },
     {
       "symbol": "IRON",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -11225,7 +11225,7 @@
     },
     {
       "symbol": "ISPH",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -11276,7 +11276,7 @@
     },
     {
       "symbol": "JUFO",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -11327,7 +11327,7 @@
     },
     {
       "symbol": "KABO",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -11378,7 +11378,7 @@
     },
     {
       "symbol": "LCSW",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "المصادر العامة استجابت لكن لم تعرض جدول OHLCV قابلًا للاستخراج",
       "resolverConfidence": 90,
@@ -11429,7 +11429,7 @@
     },
     {
       "symbol": "MASR",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "تاريخ جزئي للمراقبة فقط",
       "resolverConfidence": 90,
@@ -11439,7 +11439,7 @@
     },
     {
       "symbol": "MCQE",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "تاريخ جزئي للمراقبة فقط",
       "resolverConfidence": 90,
@@ -11449,7 +11449,7 @@
     },
     {
       "symbol": "MFPC",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "تاريخ جزئي للمراقبة فقط",
       "resolverConfidence": 90,
@@ -11459,7 +11459,7 @@
     },
     {
       "symbol": "MICH",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "تاريخ جزئي للمراقبة فقط",
       "resolverConfidence": 90,
@@ -11469,7 +11469,7 @@
     },
     {
       "symbol": "NIPH",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "تاريخ جزئي للمراقبة فقط",
       "resolverConfidence": 90,
@@ -11479,7 +11479,7 @@
     },
     {
       "symbol": "OCDI",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "تاريخ جزئي للمراقبة فقط",
       "resolverConfidence": 90,
@@ -11489,7 +11489,7 @@
     },
     {
       "symbol": "OLFI",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "تاريخ جزئي للمراقبة فقط",
       "resolverConfidence": 90,
@@ -11499,7 +11499,7 @@
     },
     {
       "symbol": "ORAS",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "تاريخ جزئي للمراقبة فقط",
       "resolverConfidence": 90,
@@ -11509,7 +11509,7 @@
     },
     {
       "symbol": "ORHD",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "تاريخ جزئي للمراقبة فقط",
       "resolverConfidence": 90,
@@ -11519,7 +11519,7 @@
     },
     {
       "symbol": "PHDC",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "تاريخ جزئي للمراقبة فقط",
       "resolverConfidence": 90,
@@ -11529,7 +11529,7 @@
     },
     {
       "symbol": "POUL",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "تاريخ جزئي للمراقبة فقط",
       "resolverConfidence": 90,
@@ -11539,7 +11539,7 @@
     },
     {
       "symbol": "RAYA",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "تاريخ جزئي للمراقبة فقط",
       "resolverConfidence": 90,
@@ -11549,7 +11549,7 @@
     },
     {
       "symbol": "RMDA",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "تاريخ جزئي للمراقبة فقط",
       "resolverConfidence": 90,
@@ -11559,7 +11559,7 @@
     },
     {
       "symbol": "SAUD",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "تاريخ جزئي للمراقبة فقط",
       "resolverConfidence": 90,
@@ -11569,7 +11569,7 @@
     },
     {
       "symbol": "SKPC",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "تاريخ جزئي للمراقبة فقط",
       "resolverConfidence": 90,
@@ -11579,7 +11579,7 @@
     },
     {
       "symbol": "SPIN",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "تاريخ جزئي للمراقبة فقط",
       "resolverConfidence": 90,
@@ -11589,7 +11589,7 @@
     },
     {
       "symbol": "SUGR",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "تاريخ جزئي للمراقبة فقط",
       "resolverConfidence": 90,
@@ -11599,7 +11599,7 @@
     },
     {
       "symbol": "SWDY",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "تاريخ جزئي للمراقبة فقط",
       "resolverConfidence": 90,
@@ -11609,7 +11609,7 @@
     },
     {
       "symbol": "TMGH",
-      "sessions": 10,
+      "sessions": 11,
       "state": "WARMUP_10",
       "reason": "تاريخ جزئي للمراقبة فقط",
       "resolverConfidence": 90,
