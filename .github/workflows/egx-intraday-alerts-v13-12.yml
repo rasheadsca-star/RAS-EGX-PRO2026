@@ -1,0 +1,169 @@
+name: EGX Intraday Monitor & Smart Alerts — V13.12
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Broad UTC window; an Africa/Cairo check below runs only during 09:55–14:45 local.
+    - cron: "*/15 7-12 * * 0-4"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: egx-intraday-monitor-v13-12
+  cancel-in-progress: true
+
+jobs:
+  refresh-compare-alert-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 14
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy2.outputs.page_url || steps.deploy1.outputs.page_url }}
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Check Cairo market window
+        id: session
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          node - <<'NODE'
+          const fs = require('fs');
+          const parts = new Intl.DateTimeFormat('en-GB', {
+            timeZone: 'Africa/Cairo', weekday: 'long',
+            hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
+          }).formatToParts(new Date()).reduce((a,x)=>(a[x.type]=x.value,a),{});
+          const minute = Number(parts.hour) * 60 + Number(parts.minute);
+          const tradingDay = ['Sunday','Monday','Tuesday','Wednesday','Thursday'].includes(parts.weekday);
+          const inWindow = tradingDay && minute >= 9*60+55 && minute <= 14*60+45;
+          const manual = process.env.EVENT_NAME === 'workflow_dispatch';
+          const run = manual || inWindow;
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `run=${run}\n`);
+          console.log({ cairo: `${parts.weekday} ${parts.hour}:${parts.minute}`, manual, inWindow, run });
+          NODE
+
+      - name: Validate V13.12 dependencies
+        if: steps.session.outputs.run == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          required=(
+            scripts/collect-market-gateway.js
+            scripts/fetch-market-data.js
+            scripts/intraday/v13-12-intraday-monitor.cjs
+            scripts/intraday/v13-12-acceptance.cjs
+            data/v13-12-intraday-alert-policy.json
+            data/quant/daily-decision-workspace-v13-11.json
+            preview-v13/app/intraday-monitor.html
+          )
+          for file in "${required[@]}"; do
+            test -f "$file" || { echo "Missing required file: $file"; exit 1; }
+          done
+
+      - name: Lightweight public market refresh
+        if: steps.session.outputs.run == 'true'
+        env:
+          EGX_FETCH_TIMEOUT_MS: "360000"
+          EGX_SOURCE_FETCH_TIMEOUT_MS: "45000"
+          EGX_GATEWAY_FULL_ROWS: "80"
+          EGX_GATEWAY_CONDITIONAL_ROWS: "25"
+        run: node scripts/collect-market-gateway.js
+
+      - name: Compare snapshot and build smart alerts
+        if: steps.session.outputs.run == 'true'
+        run: |
+          node scripts/intraday/v13-12-intraday-monitor.cjs
+          node scripts/intraday/v13-12-acceptance.cjs
+
+      - name: Optional Telegram alert
+        if: steps.session.outputs.run == 'true'
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          message_file="data/intraday/telegram-message.txt"
+          if [ -n "${TELEGRAM_BOT_TOKEN:-}" ] && [ -n "${TELEGRAM_CHAT_ID:-}" ] && [ -s "$message_file" ]; then
+            curl -fsS --retry 2 \
+              --data-urlencode "chat_id=${TELEGRAM_CHAT_ID}" \
+              --data-urlencode "text@${message_file}" \
+              "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" >/dev/null
+            echo "Telegram alert sent."
+          else
+            echo "Telegram not configured or there are no new important alerts."
+          fi
+
+      - name: Confirm stable V11 isolation
+        if: steps.session.outputs.run == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --name-only | tee /tmp/v1312-changes.txt
+          if grep -E '^(index\.html|service-worker\.js|assets/|js/|css/)' /tmp/v1312-changes.txt; then
+            echo "Safety stop: stable V11 files were changed."
+            exit 1
+          fi
+
+      - name: Commit latest snapshot and alerts
+        if: steps.session.outputs.run == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            data/market.json \
+            data/last-good-market.json \
+            data/source-health.json \
+            data/source-fetch-report.json \
+            data/fetch-status.json \
+            data/source-gateway-report.json \
+            data/source-alerts.json \
+            data/intraday
+          if git diff --cached --quiet; then
+            echo "No intraday changes."
+          else
+            git commit -m "Update V13.12 intraday snapshot and smart alerts"
+            git pull --rebase -X ours origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Configure Pages
+        if: steps.session.outputs.run == 'true'
+        uses: actions/configure-pages@v5
+
+      - name: Upload repository for Pages
+        if: steps.session.outputs.run == 'true'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy V13.12 attempt 1
+        if: steps.session.outputs.run == 'true'
+        id: deploy1
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+
+      - name: Wait for an active Pages deployment
+        if: steps.session.outputs.run == 'true' && steps.deploy1.outcome == 'failure'
+        run: sleep 90
+
+      - name: Deploy V13.12 attempt 2
+        if: steps.session.outputs.run == 'true' && steps.deploy1.outcome == 'failure'
+        id: deploy2
+        uses: actions/deploy-pages@v4
