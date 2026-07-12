@@ -1,7 +1,7 @@
 {
   "ok": true,
   "engine": "v11_3_readiness_accelerator",
-  "generatedAt": "2026-07-12T14:19:35.305Z",
+  "generatedAt": "2026-07-12T15:59:47.389Z",
   "phase": "PHASE_1_MONITORING",
   "readyForLiveExecution": false,
   "metrics": {
@@ -2266,24 +2266,6 @@
       ]
     },
     {
-      "symbol": "NAPR",
-      "readinessScore": 67,
-      "phase": "WATCH_READY",
-      "priceOk": true,
-      "historySessions": 10,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": true,
-      "planOk": true,
-      "sector": "غير مصنف",
-      "sectorOk": false,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "sector_unknown"
-      ]
-    },
-    {
       "symbol": "NCCW",
       "readinessScore": 67,
       "phase": "WATCH_READY",
@@ -2861,6 +2843,23 @@
       "historyReady50": false,
       "liquidityOk": true,
       "sector": "عقارات وإنشاءات",
+      "sectorOk": true,
+      "blockers": [
+        "history_less_than_20",
+        "history_less_than_50",
+        "trade_plan_invalid"
+      ]
+    },
+    {
+      "symbol": "GMCI",
+      "readinessScore": 58,
+      "phase": "WATCH_READY",
+      "priceOk": true,
+      "historySessions": 10,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": true,
+      "sector": "خدمات مالية غير مصرفية",
       "sectorOk": true,
       "blockers": [
         "history_less_than_20",
@@ -3676,6 +3675,25 @@
       ]
     },
     {
+      "symbol": "NAPR",
+      "readinessScore": 49,
+      "phase": "DATA_RECOVERY",
+      "priceOk": true,
+      "historySessions": 10,
+      "historyReady20": false,
+      "historyReady50": false,
+      "liquidityOk": false,
+      "planOk": true,
+      "sector": "غير مصنف",
+      "sectorOk": false,
+      "blockers": [
+        "history_less_than_20",
+        "history_less_than_50",
+        "liquidity_not_ready",
+        "sector_unknown"
+      ]
+    },
+    {
       "symbol": "SMFR",
       "readinessScore": 49,
       "phase": "DATA_RECOVERY",
@@ -3817,24 +3835,6 @@
       "historyReady50": false,
       "liquidityOk": false,
       "sector": "بنوك وخدمات مالية مصرفية",
-      "sectorOk": true,
-      "blockers": [
-        "history_less_than_20",
-        "history_less_than_50",
-        "liquidity_not_ready",
-        "trade_plan_invalid"
-      ]
-    },
-    {
-      "symbol": "GMCI",
-      "readinessScore": 40,
-      "phase": "DATA_RECOVERY",
-      "priceOk": true,
-      "historySessions": 10,
-      "historyReady20": false,
-      "historyReady50": false,
-      "liquidityOk": false,
-      "sector": "خدمات مالية غير مصرفية",
       "sectorOk": true,
       "blockers": [
         "history_less_than_20",
