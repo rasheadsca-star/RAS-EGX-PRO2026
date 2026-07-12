@@ -1,0 +1,161 @@
+name: Fix V13.11 Acceptance for V13.12
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/fix-v13-11-acceptance-for-v13-12.yml"
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: fix-v13-11-acceptance-for-v13-12
+  cancel-in-progress: false
+
+jobs:
+  patch-rebuild-deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy2.outputs.page_url || steps.deploy1.outputs.page_url }}
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Patch V13.11 acceptance for newer unified UI
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          file = Path("scripts/quant/v13-11-acceptance.cjs")
+          if not file.exists():
+              raise SystemExit("Missing scripts/quant/v13-11-acceptance.cjs")
+
+          text = file.read_text(encoding="utf-8")
+
+          old = """const index = fs.readFileSync(path.join(ROOT, 'preview-v13/app/index.html'), 'utf8');
+          for (const text of ['EGX Pro V13.11', 'daily-decision.html', 'قرار اليوم V13.11']) {
+            if (!index.includes(text)) fail(`index missing ${text}`);
+          }"""
+
+          new = """const index = fs.readFileSync(path.join(ROOT, 'preview-v13/app/index.html'), 'utf8');
+          if (!/EGX Pro V13\\.\\d+/.test(index)) {
+            fail('index missing a valid EGX Pro V13 version title');
+          }
+          for (const text of ['daily-decision.html', 'قرار اليوم V13.11']) {
+            if (!index.includes(text)) fail(`index missing ${text}`);
+          }"""
+
+          if old in text:
+              text = text.replace(old, new)
+          elif "for (const text of ['EGX Pro V13.11', 'daily-decision.html', 'قرار اليوم V13.11'])" in text:
+              text = text.replace(
+                  "for (const text of ['EGX Pro V13.11', 'daily-decision.html', 'قرار اليوم V13.11']) {",
+                  "if (!/EGX Pro V13\\\\.\\\\d+/.test(index)) fail('index missing a valid EGX Pro V13 version title');\n"
+                  "for (const text of ['daily-decision.html', 'قرار اليوم V13.11']) {"
+              )
+          elif "index missing a valid EGX Pro V13 version title" in text:
+              print("V13.11 forward-compatible acceptance patch is already present.")
+          else:
+              raise SystemExit("Could not locate obsolete V13.11 title assertion.")
+
+          file.write_text(text, encoding="utf-8")
+          PY
+
+          node --check scripts/quant/v13-11-acceptance.cjs
+          grep -n "valid EGX Pro V13 version title" scripts/quant/v13-11-acceptance.cjs
+
+      - name: Validate V13.11 dependencies
+        shell: bash
+        run: |
+          set -euo pipefail
+          required=(
+            scripts/quant/v13-7-stock-intelligence.cjs
+            scripts/quant/v13-8-portfolio-risk.cjs
+            scripts/quant/v13-11-daily-decision.cjs
+            scripts/quant/v13-11-acceptance.cjs
+            data/v13-7-native-policy.json
+            data/v13-8-risk-policy.json
+            data/v13-11-daily-decision-policy.json
+            data/quant/tiered-confidence-recommendations-v13-10.json
+            preview-v13/app/daily-decision.html
+            preview-v13/app/index.html
+          )
+          for file in "${required[@]}"; do
+            test -f "$file" || { echo "Missing required file: $file"; exit 1; }
+          done
+          test -d data/history || { echo "Missing data/history"; exit 1; }
+
+      - name: Rebuild V13.11 daily decision
+        run: |
+          node scripts/quant/v13-7-stock-intelligence.cjs
+          node scripts/quant/v13-8-portfolio-risk.cjs
+          node scripts/quant/v13-11-daily-decision.cjs
+          node scripts/quant/v13-11-acceptance.cjs
+
+      - name: Confirm stable V11 isolation
+        shell: bash
+        run: |
+          set -euo pipefail
+          git diff --name-only | tee /tmp/v1311-fix-changes.txt
+          if grep -E '^(index\.html|service-worker\.js|assets/|js/|css/)' /tmp/v1311-fix-changes.txt; then
+            echo "Safety stop: stable V11 files were changed."
+            exit 1
+          fi
+
+      - name: Commit corrected V13.11
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            scripts/quant/v13-11-acceptance.cjs \
+            data/quant/stocks \
+            data/quant/stock-intelligence-index.json \
+            data/quant/portfolio-risk-universe.json \
+            data/quant/daily-decision-workspace-v13-11.json
+          if git diff --cached --quiet; then
+            echo "No corrected V13.11 changes to commit."
+          else
+            git commit -m "Fix V13.11 acceptance for V13.12 interface"
+            git pull --rebase -X ours origin main
+            git push origin HEAD:main
+          fi
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload repository for Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: "."
+
+      - name: Deploy corrected V13.11 attempt 1
+        id: deploy1
+        continue-on-error: true
+        uses: actions/deploy-pages@v4
+
+      - name: Wait for an active Pages deployment
+        if: steps.deploy1.outcome == 'failure'
+        run: sleep 90
+
+      - name: Deploy corrected V13.11 attempt 2
+        id: deploy2
+        if: steps.deploy1.outcome == 'failure'
+        uses: actions/deploy-pages@v4
