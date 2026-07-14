@@ -1,12 +1,12 @@
 {
   "ok": true,
   "engine": "v11_1_practical_readiness_report",
-  "generatedAt": "2026-07-14T12:44:56.435Z",
+  "generatedAt": "2026-07-14T14:33:00.479Z",
   "phase": "PHASE_1_MONITORING",
   "readyForLiveExecution": false,
   "metrics": {
-    "priceReliableCoveragePct": 69.67,
-    "priceConflictPct": 21.7,
+    "priceReliableCoveragePct": 91.39,
+    "priceConflictPct": 0,
     "history50CoveragePct": 0,
     "history20CoveragePct": 0,
     "executionLiquidityNames": 162,
@@ -14,8 +14,8 @@
     "validTradePlans": 131,
     "invalidTradePlans": 113,
     "boardExecutionAllowed": 0,
-    "boardWatch": 77,
-    "boardBlocked": 150,
+    "boardWatch": 111,
+    "boardBlocked": 116,
     "v11ClosedSignals": 0,
     "v11ClosedWinRatePct": null,
     "sectorClassifiedPct": null
@@ -24,14 +24,14 @@
     {
       "id": "price_reliable_coverage",
       "name": "تغطية سعر موثوقة ≥80%",
-      "value": 69.67,
-      "pass": false
+      "value": 91.39,
+      "pass": true
     },
     {
       "id": "price_conflicts",
       "name": "تعارضات أسعار أقل من 5%",
-      "value": 21.7,
-      "pass": false
+      "value": 0,
+      "pass": true
     },
     {
       "id": "history_50",
@@ -97,7 +97,7 @@
       "liquidityReason": "السيولة الحالية ومتوسط 20 جلسة يسمحان بمراجعة تنفيذية",
       "currentTurnover": 10759188,
       "avg20Turnover": 26712098,
-      "sourceAgeMinutes": 1,
+      "sourceAgeMinutes": 1.1,
       "planValidation": {
         "planValid": true,
         "planErrors": [],
@@ -176,7 +176,7 @@
       "liquidityReason": "السيولة تسمح بمراقبة/تنفيذ مشروط وليس مضاربة فورية",
       "currentTurnover": 93975280,
       "avg20Turnover": 840336,
-      "sourceAgeMinutes": 1,
+      "sourceAgeMinutes": 1.1,
       "planValidation": {
         "planValid": true,
         "planErrors": [],
@@ -257,7 +257,7 @@
       "liquidityReason": "السيولة الحالية ومتوسط 20 جلسة يسمحان بمراجعة تنفيذية",
       "currentTurnover": 111365984,
       "avg20Turnover": 88904804,
-      "sourceAgeMinutes": 1,
+      "sourceAgeMinutes": 1.1,
       "planValidation": {
         "planValid": true,
         "planErrors": [],
@@ -300,8 +300,6 @@
     }
   ],
   "blockers": [
-    "تغطية السعر الموثوق أقل من 80%",
-    "تعارضات السعر أعلى من 5%",
     "تاريخ 50 جلسة غير مكتمل لـ 80% من السوق",
     "لا يوجد 30 توصية V11 مغلقة لقياس الدقة"
   ],
