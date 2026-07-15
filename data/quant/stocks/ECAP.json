@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-07-15T16:43:46.061Z",
+  "generatedAt": "2026-07-15T16:52:13.508Z",
   "ticker": "ECAP",
   "companyNameAr": "العز للسيراميك والبورسلين الجوهرة",
   "companyNameEn": "Al Ezz Ceramics & Porcelain",
@@ -49,16 +49,27 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
+    "source": "V13.4",
+    "status": "WATCH_CONDITIONAL",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 90.1,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "نشاط الحجم الحالي: 0.46",
+      "سيولة كافية: 0.46"
+    ],
     "adaptive": null,
-    "plan": {}
+    "plan": {
+      "entryLow": 32.373,
+      "entryHigh": 32.637,
+      "stopLoss": 30.624,
+      "target1": 35.891,
+      "target2": 37.395,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 101,
