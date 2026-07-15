@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-07-15T15:25:46.119Z",
+  "generatedAt": "2026-07-15T16:43:46.036Z",
   "ticker": "CIRA",
   "companyNameAr": "القاهرة للاستثمار والتنمية العقارية",
   "companyNameEn": "Cairo For Investment And Real Estate Developments CIRA Education",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "breakout",
     "strategyLabelAr": "اختراق مؤكد",
     "recommendationScore": 90.3,
@@ -59,7 +59,20 @@
     "failedConditions": [
       "منطقة RSI: 80.7"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 89.7,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 40.2,
+      "minimumRequiredScore": 74,
+      "scoreGap": 0,
+      "calibratedVariantId": "early",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "منطقة RSI: 80.7"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 31.849,
       "entryHigh": 32.188,
