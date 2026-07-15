@@ -1,6 +1,6 @@
 {
   "schemaVersion": "12.3.0",
-  "generatedAt": "2026-07-15T15:25:44.956Z",
+  "generatedAt": "2026-07-15T16:50:06.057Z",
   "targetSessions": 100,
   "symbolsTotal": 242,
   "symbolsMapped": 242,
@@ -14,9 +14,9 @@
   "symbolsFailed": 44,
   "symbolsStale": 7,
   "officiallyVerifiedSymbols": 0,
-  "crossVerifiedSymbols": 22,
-  "singleSourceSymbols": 176,
-  "averageConfidence": 74.48,
+  "crossVerifiedSymbols": 24,
+  "singleSourceSymbols": 174,
+  "averageConfidence": 74.42,
   "latestMarketSession": "2026-07-15",
   "coverage": {
     "basis": "all_active_mapped_symbols",
@@ -40,16 +40,16 @@
   },
   "sources": {
     "egx": {
-      "status": "public_market_finalized",
-      "role": "latest-session finalization"
+      "status": "manual_or_future_adapter",
+      "role": "official verification"
     },
     "yahoo": {
-      "status": "historical_backfill",
+      "status": "available",
       "role": "historical backfill"
     },
     "mubasher": {
       "status": "existing_cache_available",
-      "role": "cross-check/fallback"
+      "role": "latest-session cross-check"
     },
     "investing": {
       "status": "manual_fallback",
@@ -929,20 +929,20 @@
       "companyNameAr": "القاهرة للخدمات التعليمية",
       "companyNameEn": "Cairo Educational Services",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-01-04",
+      "availableSessions": 100,
+      "firstSession": "2026-01-08",
       "lastSession": "2026-07-15",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 75,
+      "averageConfidence": 73.9,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:4.8367%"
+        "latest_close_conflict:25.1928%"
       ],
       "sourceFile": "data/history/CAED.json"
     },
@@ -951,52 +951,7 @@
       "companyNameAr": "بنك قناة السويس",
       "companyNameEn": "Suez Canal Bank",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-01-08",
-      "lastSession": "2026-07-15",
-      "historyStatus": "historical_complete_100",
-      "processingStatus": "complete",
-      "primarySource": "yahoo",
-      "verificationSources": [],
-      "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.65,
-      "staleData": false,
-      "updateFailed": false,
-      "lastUpdateError": null,
-      "warnings": [
-        "latest_close_conflict:2.2104%",
-        "corporate_action_review_required"
-      ],
-      "sourceFile": "data/history/CANA.json"
-    },
-    {
-      "ticker": "CCAP",
-      "companyNameAr": "القلعة للاستثمارات المالية",
-      "companyNameEn": "Qalaa Holdings",
-      "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2025-12-30",
-      "lastSession": "2026-07-15",
-      "historyStatus": "historical_complete_100",
-      "processingStatus": "complete",
-      "primarySource": "yahoo",
-      "verificationSources": [],
-      "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 75,
-      "staleData": false,
-      "updateFailed": false,
-      "lastUpdateError": null,
-      "warnings": [
-        "latest_close_conflict:4.1667%"
-      ],
-      "sourceFile": "data/history/CCAP.json"
-    },
-    {
-      "ticker": "CCRS",
-      "companyNameAr": "الخليجية الكندية للاستثمار العقاري",
-      "companyNameEn": "Gulf Canadian Company for Arab Real Estate Investment",
-      "symbolVerified": true,
-      "availableSessions": 101,
+      "availableSessions": 100,
       "firstSession": "2026-01-13",
       "lastSession": "2026-07-15",
       "historyStatus": "historical_complete_100",
@@ -1006,12 +961,58 @@
         "mubasher_existing_cache"
       ],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.8,
+      "averageConfidence": 74.4,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:2.5862%"
+        "corporate_action_review_required"
+      ],
+      "sourceFile": "data/history/CANA.json"
+    },
+    {
+      "ticker": "CCAP",
+      "companyNameAr": "القلعة للاستثمارات المالية",
+      "companyNameEn": "Qalaa Holdings",
+      "symbolVerified": true,
+      "availableSessions": 100,
+      "firstSession": "2026-01-04",
+      "lastSession": "2026-07-15",
+      "historyStatus": "historical_complete_100",
+      "processingStatus": "complete",
+      "primarySource": "yahoo",
+      "verificationSources": [],
+      "officiallyVerifiedLatestSession": false,
+      "averageConfidence": 74.25,
+      "staleData": false,
+      "updateFailed": false,
+      "lastUpdateError": null,
+      "warnings": [
+        "latest_close_conflict:8.7302%"
+      ],
+      "sourceFile": "data/history/CCAP.json"
+    },
+    {
+      "ticker": "CCRS",
+      "companyNameAr": "الخليجية الكندية للاستثمار العقاري",
+      "companyNameEn": "Gulf Canadian Company for Arab Real Estate Investment",
+      "symbolVerified": true,
+      "availableSessions": 100,
+      "firstSession": "2026-01-15",
+      "lastSession": "2026-07-15",
+      "historyStatus": "historical_complete_100",
+      "processingStatus": "complete",
+      "primarySource": "yahoo",
+      "verificationSources": [
+        "mubasher_existing_cache"
+      ],
+      "officiallyVerifiedLatestSession": false,
+      "averageConfidence": 74.05,
+      "staleData": false,
+      "updateFailed": false,
+      "lastUpdateError": null,
+      "warnings": [
+        "latest_close_conflict:6.8966%"
       ],
       "sourceFile": "data/history/CCRS.json"
     },
@@ -1020,20 +1021,20 @@
       "companyNameAr": "مطاحن مصر الوسطى",
       "companyNameEn": "Middle Egypt Flour Mills",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-01-11",
+      "availableSessions": 100,
+      "firstSession": "2026-01-14",
       "lastSession": "2026-07-15",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 75,
+      "averageConfidence": 73.9,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:4.317%"
+        "latest_close_conflict:3.5775%"
       ],
       "sourceFile": "data/history/CEFM.json"
     },
@@ -1042,20 +1043,20 @@
       "companyNameAr": "العربية للخزف سيراميكا ريماس",
       "companyNameEn": "Arab Ceramic Co.",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-08",
+      "availableSessions": 100,
+      "firstSession": "2026-02-11",
       "lastSession": "2026-07-15",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.65,
+      "averageConfidence": 73.9,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:8.1967%"
+        "latest_close_conflict:6.5574%"
       ],
       "sourceFile": "data/history/CERA.json"
     },
@@ -1084,20 +1085,20 @@
       "companyNameAr": "سي آي كابيتال",
       "companyNameEn": "CI Capital Holding For Financial Investments",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-01-26",
+      "availableSessions": 100,
+      "firstSession": "2026-01-28",
       "lastSession": "2026-07-15",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.65,
+      "averageConfidence": 73.9,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:2.1061%"
+        "latest_close_conflict:0.5055%"
       ],
       "sourceFile": "data/history/CICH.json"
     },
@@ -1106,20 +1107,20 @@
       "companyNameAr": "كريدي أجريكول مصر",
       "companyNameEn": "Credit Agricole Egypt Bank",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-01-08",
+      "availableSessions": 100,
+      "firstSession": "2026-01-12",
       "lastSession": "2026-07-15",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.65,
+      "averageConfidence": 73.9,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:0.8361%"
+        "latest_close_conflict:2.0067%"
       ],
       "sourceFile": "data/history/CIEB.json"
     },
@@ -1128,20 +1129,20 @@
       "companyNameAr": "القاهرة للاستثمار والتنمية العقارية",
       "companyNameEn": "Cairo For Investment And Real Estate Developments CIRA Education",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-01-22",
+      "availableSessions": 100,
+      "firstSession": "2026-01-27",
       "lastSession": "2026-07-15",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 75,
+      "averageConfidence": 73.9,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:9.4792%"
+        "latest_close_conflict:11.1806%"
       ],
       "sourceFile": "data/history/CIRA.json"
     },
@@ -1150,20 +1151,20 @@
       "companyNameAr": "مستشفى كليوباترا",
       "companyNameEn": "Cleopatra Hospitals Group S.A.E.",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-01-14",
+      "availableSessions": 100,
+      "firstSession": "2026-01-19",
       "lastSession": "2026-07-15",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.65,
+      "averageConfidence": 73.9,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:1.1515%"
+        "latest_close_conflict:1.8182%"
       ],
       "sourceFile": "data/history/CLHO.json"
     },
@@ -1172,20 +1173,20 @@
       "companyNameAr": "كونتكت المالية القابضة",
       "companyNameEn": "Contact Financial Holding",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-01-22",
+      "availableSessions": 100,
+      "firstSession": "2026-01-27",
       "lastSession": "2026-07-15",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.65,
+      "averageConfidence": 73.9,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:1.4706%"
+        "latest_close_conflict:3.1513%"
       ],
       "sourceFile": "data/history/CNFN.json"
     },
@@ -1194,20 +1195,20 @@
       "companyNameAr": "البنك التجاري الدولي - مصر",
       "companyNameEn": "Commercial International Bank Egypt",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2025-11-18",
+      "availableSessions": 100,
+      "firstSession": "2025-11-24",
       "lastSession": "2026-07-15",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.65,
+      "averageConfidence": 73.9,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:5.5887%"
+        "latest_close_conflict:5.9419%"
       ],
       "sourceFile": "data/history/COMI.json"
     },
@@ -1216,8 +1217,8 @@
       "companyNameAr": "كوبر للاستثمار التجاري والتطوير العقاري",
       "companyNameEn": "Copper for Commercial Investment & Real Estate Development",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-01-21",
+      "availableSessions": 100,
+      "firstSession": "2026-01-25",
       "lastSession": "2026-07-15",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1226,11 +1227,13 @@
         "mubasher_existing_cache"
       ],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 75.45,
+      "averageConfidence": 74.7,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
-      "warnings": [],
+      "warnings": [
+        "latest_close_conflict:3.8889%"
+      ],
       "sourceFile": "data/history/COPR.json"
     },
     {
@@ -1238,20 +1241,20 @@
       "companyNameAr": "القاهرة للزيوت والصابون",
       "companyNameEn": "Cairo Oil & Soap Company",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-01-25",
+      "availableSessions": 100,
+      "firstSession": "2026-01-28",
       "lastSession": "2026-07-15",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.65,
+      "averageConfidence": 73.9,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:7.2368%"
+        "latest_close_conflict:9.8684%"
       ],
       "sourceFile": "data/history/COSG.json"
     },
@@ -1260,20 +1263,20 @@
       "companyNameAr": "القاهرة للأدوية",
       "companyNameEn": "Kahira Pharmaceuticals & Chemical Industries",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-01-06",
+      "availableSessions": 100,
+      "firstSession": "2026-01-12",
       "lastSession": "2026-07-15",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 75,
+      "averageConfidence": 74.25,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:0.7705%"
+        "latest_close_conflict:6.9201%"
       ],
       "sourceFile": "data/history/CPCI.json"
     },
@@ -1322,8 +1325,8 @@
       "companyNameAr": "القناة للتوكيلات الملاحية",
       "companyNameEn": "Canal Shipping Agencies Company",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2025-12-28",
+      "availableSessions": 100,
+      "firstSession": "2025-12-31",
       "lastSession": "2026-07-15",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1332,11 +1335,13 @@
         "mubasher_existing_cache"
       ],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 75.15,
+      "averageConfidence": 74.05,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
-      "warnings": [],
+      "warnings": [
+        "latest_close_conflict:0.6139%"
+      ],
       "sourceFile": "data/history/CSAG.json"
     },
     {
@@ -1344,21 +1349,21 @@
       "companyNameAr": "المشروعات الصناعية والهندسية",
       "companyNameEn": "Development & Engineering Consultants",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-01-08",
+      "availableSessions": 100,
+      "firstSession": "2026-01-13",
       "lastSession": "2026-07-15",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
-      "verificationSources": [],
+      "verificationSources": [
+        "mubasher_existing_cache"
+      ],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.65,
+      "averageConfidence": 74.4,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
-      "warnings": [
-        "latest_close_conflict:3.4026%"
-      ],
+      "warnings": [],
       "sourceFile": "data/history/DAPH.json"
     },
     {
