@@ -1,0 +1,150 @@
+name: Update EGX Market Data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '20 8 * * 0-4'
+    - cron: '15 12 * * 0-4'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: egx-market-data
+  cancel-in-progress: false
+
+jobs:
+  update-market-data:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      EGX_MUBASHER_CONCURRENCY: '4'
+      EGX_MUBASHER_TIMEOUT_MS: '25000'
+      EGX_MUBASHER_REQUEST_DELAY_MS: '120'
+      EGX_MUBASHER_MIN_PRICE_COVERAGE: '45'
+      EGX_MUBASHER_STALE_OK_HOURS: '36'
+      EGX_SR_MIN_ROWS: '80'
+      EGX_SR_MIN_COVERAGE: '60'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install project dependencies
+        run: npm ci || npm install
+
+      - name: Mandatory market collector
+        run: node scripts/fetch-market-data.js
+
+      - name: Mandatory Mubasher primary feeds
+        run: |
+          set -euo pipefail
+          if [ -f scripts/collect-mubasher-primary-feeds.js ]; then
+            node scripts/collect-mubasher-primary-feeds.js
+          else
+            npm run mubasher:primary
+          fi
+
+      - name: Install Playwright Chromium
+        run: |
+          npm install --no-save --no-package-lock playwright@1.55.0
+          npx playwright install --with-deps chromium
+
+      - name: Collect rendered Mubasher support and resistance
+        run: node scripts/collect-mubasher-support-resistance-rendered.js
+
+      - name: Merge only verified support and resistance
+        run: node scripts/merge-rendered-support-resistance.js
+
+      - name: Optional intelligence builders
+        run: |
+          set -u
+          optional_scripts=(
+            scripts/build-symbol-audit.js
+            scripts/build-v52-intelligence.js
+            scripts/build-v54-universe-index.js
+            scripts/build-v55-sector-investor-flow.js
+            scripts/build-v56-history-50.js
+            scripts/build-v56-technical-report.js
+            scripts/collect-egx-investor-type.js
+            scripts/collect-v56-news.js
+            scripts/build-multi-source-intelligence.js
+            scripts/apply-multisource-intelligence-to-ranking.js
+            scripts/apply-news-impact-to-recommendations.js
+            scripts/build-institutional-score.js
+            scripts/build-price-source-audit.js
+            scripts/build-price-freshness-report.js
+            scripts/build-signal-quality-engine.js
+            scripts/build-entry-trigger-engine.js
+            scripts/build-alert-decision-center.js
+            scripts/build-actionable-watchlist.js
+            scripts/build-data-operations-center.js
+            scripts/build-engines-console-report.js
+            scripts/build-executive-home-report.js
+            scripts/build-workflow-budget-status.js
+            scripts/build-workflow-source-verification.js
+            scripts/build-session-memory-status.js
+            scripts/build-sector-completion-report.js
+            scripts/build-regression-report.js
+            scripts/build-recommendation-outcome-tracker.js
+            scripts/build-recommendation-accuracy.js
+            scripts/build-recommendation-performance-index.js
+            scripts/build-accuracy-interpretation-report.js
+            scripts/build-recommendation-validation-panel.js
+            scripts/build-portfolio-decision-rules.js
+            scripts/build-rebalancing-candidates.js
+          )
+          for script in "${optional_scripts[@]}"; do
+            if [ -f "$script" ]; then
+              node "$script" || echo "::warning::$script failed; continuing because it is optional."
+            fi
+          done
+
+      - name: Mandatory history and final ranking
+        run: |
+          set -euo pipefail
+          [ ! -f scripts/build-history-50-engine.js ] || node scripts/build-history-50-engine.js
+          [ ! -f scripts/build-price-reconciliation-report.js ] || node scripts/build-price-reconciliation-report.js
+          node scripts/build-final-opportunity-ranking.js
+          [ ! -f scripts/build-confidence-guard-report.js ] || node scripts/build-confidence-guard-report.js
+          [ ! -f scripts/build-daily-decision-brief.js ] || node scripts/build-daily-decision-brief.js
+
+      - name: Rebuild reconciled decision after S/R merge
+        run: node scripts/build-goal-integrated-decision.js
+
+      - name: Final strict support resistance verification
+        run: node scripts/verify-final-support-resistance.js
+
+      - name: Upload support resistance diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mubasher-support-resistance-diagnostics
+          path: |
+            artifacts/mubasher-support-resistance/
+            data/mubasher-support-resistance-rendered.json
+            data/support-resistance-verification.json
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Commit generated data
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/*.json VERSION.json package.json package-lock.json || true
+          if git diff --cached --quiet; then
+            echo "No generated data changes to commit."
+          else
+            git commit -m "Update EGX market with verified Mubasher support resistance"
+            git pull --rebase -X ours origin main
+            git push origin main
+          fi
