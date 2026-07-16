@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-07-16T15:49:44.683Z",
+  "generatedAt": "2026-07-16T16:39:58.237Z",
   "ticker": "NHPS",
   "companyNameAr": "الوطنية للإسكان للنقابات المهنية",
   "companyNameEn": "National Company for Housing Professional Syndicates",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 96.9,
@@ -59,7 +59,20 @@
     "failedConditions": [
       "منطقة RSI: 72.4"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 89.6,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 35.6,
+      "minimumRequiredScore": 85,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "منطقة RSI: 72.4"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 86.587,
       "entryHigh": 87.814,

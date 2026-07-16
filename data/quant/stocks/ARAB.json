@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-07-16T15:49:44.514Z",
+  "generatedAt": "2026-07-16T16:39:58.065Z",
   "ticker": "ARAB",
   "companyNameAr": "المطورون العرب القابضة",
   "companyNameEn": "Arab Developers Holding",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 95.9,
@@ -59,7 +59,20 @@
     "failedConditions": [
       "منطقة RSI: 73.8"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 89.6,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 35.6,
+      "minimumRequiredScore": 85,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "منطقة RSI: 73.8"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 0.249,
       "entryHigh": 0.252,
