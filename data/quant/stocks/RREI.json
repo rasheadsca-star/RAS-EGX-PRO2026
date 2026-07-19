@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-07-19T15:15:26.142Z",
+  "generatedAt": "2026-07-19T16:08:32.571Z",
   "ticker": "RREI",
   "companyNameAr": "العربية للاستثمارات العقارية",
   "companyNameEn": "Arab Real Estate Investment",
@@ -49,15 +49,27 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 100,
     "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
     "failedConditions": [],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 93.7,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 35.7,
+      "minimumRequiredScore": 85,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 3.783,
       "entryHigh": 3.821,
