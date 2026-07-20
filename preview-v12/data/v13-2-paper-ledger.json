@@ -2,8 +2,8 @@
   "schemaVersion": "13.2.0",
   "activatedAt": "2026-07-10T12:26:11.483Z",
   "activationSession": "2026-07-09",
-  "lastProcessedSession": "2026-07-19",
-  "updatedAt": "2026-07-20T15:25:56.602Z",
+  "lastProcessedSession": "2026-07-20",
+  "updatedAt": "2026-07-20T19:13:18.644Z",
   "assumptions": {
     "direction": "long_only",
     "entryStartsAfterSignalSession": true,
@@ -31,9 +31,9 @@
       "eligibilityStatus": "complete_recent",
       "decisionEligibleAtSignal": true,
       "paperTradingEligibleAtSignal": true,
-      "lastEvaluatedSession": "2026-07-19",
+      "lastEvaluatedSession": "2026-07-20",
       "pendingObservedSessions": 1,
-      "signalObservedSessions": 3,
+      "signalObservedSessions": 4,
       "checkpoints": {
         "1": {
           "session": "2026-07-15",
@@ -61,7 +61,7 @@
       ],
       "openedSession": "2026-07-15",
       "entryPrice": 26.59,
-      "openObservedSessions": 3
+      "openObservedSessions": 4
     },
     {
       "id": "2026-07-12-TMGH",
@@ -79,9 +79,9 @@
       "eligibilityStatus": "complete_recent",
       "decisionEligibleAtSignal": true,
       "paperTradingEligibleAtSignal": true,
-      "lastEvaluatedSession": "2026-07-15",
-      "pendingObservedSessions": 1,
-      "signalObservedSessions": 1,
+      "lastEvaluatedSession": "2026-07-20",
+      "pendingObservedSessions": 2,
+      "signalObservedSessions": 2,
       "checkpoints": {
         "1": {
           "session": "2026-07-15",
@@ -189,7 +189,7 @@
     {
       "id": "2026-07-12-COMI",
       "ticker": "COMI",
-      "status": "PENDING",
+      "status": "EXPIRED",
       "signalSession": "2026-07-12",
       "signalPrice": 136.75,
       "entryLow": 126.91,
@@ -202,14 +202,19 @@
       "eligibilityStatus": "complete_recent",
       "decisionEligibleAtSignal": true,
       "paperTradingEligibleAtSignal": true,
-      "lastEvaluatedSession": "2026-07-16",
-      "pendingObservedSessions": 2,
-      "signalObservedSessions": 2,
+      "lastEvaluatedSession": "2026-07-20",
+      "pendingObservedSessions": 3,
+      "signalObservedSessions": 3,
       "checkpoints": {
         "1": {
           "session": "2026-07-15",
           "close": 134.24,
           "netReturnPct": -2.235
+        },
+        "3": {
+          "session": "2026-07-20",
+          "close": 136.71,
+          "netReturnPct": -0.429
         }
       },
       "events": [
@@ -217,8 +222,15 @@
           "session": "2026-07-12",
           "type": "SIGNAL_CREATED",
           "note": "Entry evaluation begins from the next market session."
+        },
+        {
+          "session": "2026-07-20",
+          "type": "EXPIRE",
+          "reason": "ENTRY_NOT_FILLED"
         }
-      ]
+      ],
+      "expiredSession": "2026-07-20",
+      "exitReason": "ENTRY_NOT_FILLED"
     },
     {
       "id": "2026-07-13-ISMQ",
@@ -236,9 +248,9 @@
       "eligibilityStatus": "complete_recent",
       "decisionEligibleAtSignal": true,
       "paperTradingEligibleAtSignal": true,
-      "lastEvaluatedSession": "2026-07-19",
+      "lastEvaluatedSession": "2026-07-20",
       "pendingObservedSessions": 3,
-      "signalObservedSessions": 3,
+      "signalObservedSessions": 4,
       "checkpoints": {
         "1": {
           "session": "2026-07-15",
@@ -266,12 +278,12 @@
       ],
       "openedSession": "2026-07-19",
       "entryPrice": 9.2,
-      "openObservedSessions": 1
+      "openObservedSessions": 2
     },
     {
       "id": "2026-07-13-RMDA",
       "ticker": "RMDA",
-      "status": "PENDING",
+      "status": "EXPIRED",
       "signalSession": "2026-07-13",
       "signalPrice": 4.96,
       "entryLow": 4.92,
@@ -284,14 +296,19 @@
       "eligibilityStatus": "complete_recent",
       "decisionEligibleAtSignal": true,
       "paperTradingEligibleAtSignal": true,
-      "lastEvaluatedSession": "2026-07-19",
-      "pendingObservedSessions": 2,
-      "signalObservedSessions": 2,
+      "lastEvaluatedSession": "2026-07-20",
+      "pendingObservedSessions": 3,
+      "signalObservedSessions": 3,
       "checkpoints": {
         "1": {
           "session": "2026-07-15",
           "close": 4.96,
           "netReturnPct": -0.4
+        },
+        "3": {
+          "session": "2026-07-20",
+          "close": 4.99,
+          "netReturnPct": 0.205
         }
       },
       "events": [
@@ -299,13 +316,20 @@
           "session": "2026-07-13",
           "type": "SIGNAL_CREATED",
           "note": "Entry evaluation begins from the next market session."
+        },
+        {
+          "session": "2026-07-20",
+          "type": "EXPIRE",
+          "reason": "ENTRY_NOT_FILLED"
         }
-      ]
+      ],
+      "expiredSession": "2026-07-20",
+      "exitReason": "ENTRY_NOT_FILLED"
     },
     {
       "id": "2026-07-13-CCAP",
       "ticker": "CCAP",
-      "status": "PENDING",
+      "status": "EXPIRED",
       "signalSession": "2026-07-13",
       "signalPrice": 5.48,
       "entryLow": 4.79,
@@ -318,14 +342,19 @@
       "eligibilityStatus": "complete_recent",
       "decisionEligibleAtSignal": true,
       "paperTradingEligibleAtSignal": true,
-      "lastEvaluatedSession": "2026-07-16",
-      "pendingObservedSessions": 2,
-      "signalObservedSessions": 2,
+      "lastEvaluatedSession": "2026-07-20",
+      "pendingObservedSessions": 3,
+      "signalObservedSessions": 3,
       "checkpoints": {
         "1": {
           "session": "2026-07-15",
           "close": 5.41,
           "netReturnPct": -1.677
+        },
+        "3": {
+          "session": "2026-07-20",
+          "close": 5.42,
+          "netReturnPct": -1.495
         }
       },
       "events": [
@@ -333,13 +362,20 @@
           "session": "2026-07-13",
           "type": "SIGNAL_CREATED",
           "note": "Entry evaluation begins from the next market session."
+        },
+        {
+          "session": "2026-07-20",
+          "type": "EXPIRE",
+          "reason": "ENTRY_NOT_FILLED"
         }
-      ]
+      ],
+      "expiredSession": "2026-07-20",
+      "exitReason": "ENTRY_NOT_FILLED"
     },
     {
       "id": "2026-07-13-ABUK",
       "ticker": "ABUK",
-      "status": "PENDING",
+      "status": "EXPIRED",
       "signalSession": "2026-07-13",
       "signalPrice": 73.25,
       "entryLow": 67.37,
@@ -352,14 +388,19 @@
       "eligibilityStatus": "complete_recent",
       "decisionEligibleAtSignal": true,
       "paperTradingEligibleAtSignal": true,
-      "lastEvaluatedSession": "2026-07-16",
-      "pendingObservedSessions": 2,
-      "signalObservedSessions": 2,
+      "lastEvaluatedSession": "2026-07-20",
+      "pendingObservedSessions": 3,
+      "signalObservedSessions": 3,
       "checkpoints": {
         "1": {
           "session": "2026-07-15",
           "close": 72.29,
           "netReturnPct": -1.711
+        },
+        "3": {
+          "session": "2026-07-20",
+          "close": 72.78,
+          "netReturnPct": -1.042
         }
       },
       "events": [
@@ -367,13 +408,20 @@
           "session": "2026-07-13",
           "type": "SIGNAL_CREATED",
           "note": "Entry evaluation begins from the next market session."
+        },
+        {
+          "session": "2026-07-20",
+          "type": "EXPIRE",
+          "reason": "ENTRY_NOT_FILLED"
         }
-      ]
+      ],
+      "expiredSession": "2026-07-20",
+      "exitReason": "ENTRY_NOT_FILLED"
     },
     {
       "id": "2026-07-13-ZMID",
       "ticker": "ZMID",
-      "status": "PENDING",
+      "status": "EXPIRED",
       "signalSession": "2026-07-13",
       "signalPrice": 7.15,
       "entryLow": 6.36,
@@ -386,14 +434,19 @@
       "eligibilityStatus": "complete_recent",
       "decisionEligibleAtSignal": true,
       "paperTradingEligibleAtSignal": true,
-      "lastEvaluatedSession": "2026-07-19",
-      "pendingObservedSessions": 2,
-      "signalObservedSessions": 2,
+      "lastEvaluatedSession": "2026-07-20",
+      "pendingObservedSessions": 3,
+      "signalObservedSessions": 3,
       "checkpoints": {
         "1": {
           "session": "2026-07-15",
           "close": 7.15,
           "netReturnPct": -0.4
+        },
+        "3": {
+          "session": "2026-07-20",
+          "close": 7.62,
+          "netReturnPct": 6.173
         }
       },
       "events": [
@@ -401,8 +454,15 @@
           "session": "2026-07-13",
           "type": "SIGNAL_CREATED",
           "note": "Entry evaluation begins from the next market session."
+        },
+        {
+          "session": "2026-07-20",
+          "type": "EXPIRE",
+          "reason": "ENTRY_NOT_FILLED"
         }
-      ]
+      ],
+      "expiredSession": "2026-07-20",
+      "exitReason": "ENTRY_NOT_FILLED"
     }
   ]
 }
