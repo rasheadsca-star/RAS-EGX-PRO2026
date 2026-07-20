@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-07-20T15:32:22.939Z",
+  "generatedAt": "2026-07-20T16:42:55.097Z",
   "ticker": "PRDC",
   "companyNameAr": "بايونيرز بروبرتيز",
   "companyNameEn": "Pioneers Properties For Urban Development PRE Group",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 91.3,
@@ -59,7 +59,20 @@
     "failedConditions": [
       "منطقة RSI: 73.4"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 88.9,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 35.4,
+      "minimumRequiredScore": 85,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "منطقة RSI: 73.4"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 9.393,
       "entryHigh": 9.535,

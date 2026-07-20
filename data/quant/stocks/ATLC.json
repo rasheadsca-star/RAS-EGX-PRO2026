@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-07-20T15:32:22.742Z",
+  "generatedAt": "2026-07-20T16:42:54.911Z",
   "ticker": "ATLC",
   "companyNameAr": "التوفيق للتأجير التمويلي",
   "companyNameEn": "Al Tawfeek Leasing Company",
@@ -49,15 +49,27 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "pullback",
     "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
     "recommendationScore": 92.5,
     "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
     "failedConditions": [],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 93.7,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 34.5,
+      "minimumRequiredScore": 83,
+      "scoreGap": 0,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 5.163,
       "entryHigh": 5.202,

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-07-20T15:32:22.808Z",
+  "generatedAt": "2026-07-20T16:42:54.959Z",
   "ticker": "EEII",
   "companyNameAr": "العربية للصناعات الهندسية",
   "companyNameEn": "Arab Engineering Industries",
@@ -49,15 +49,27 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 91.5,
     "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
     "failedConditions": [],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 93,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 35.4,
+      "minimumRequiredScore": 85,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 2.757,
       "entryHigh": 2.786,

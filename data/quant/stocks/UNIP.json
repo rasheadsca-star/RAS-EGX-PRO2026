@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-07-20T15:32:22.982Z",
+  "generatedAt": "2026-07-20T16:42:55.139Z",
   "ticker": "UNIP",
   "companyNameAr": "يونيفرسال لصناعة مواد التعبئة والتغليف",
   "companyNameEn": "Universal For Paper and Packaging Materials",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "breakout",
     "strategyLabelAr": "اختراق مؤكد",
     "recommendationScore": 89.8,
@@ -59,7 +59,20 @@
     "failedConditions": [
       "منطقة RSI: 81.5"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 88.3,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 19.7,
+      "minimumRequiredScore": 85,
+      "scoreGap": 0,
+      "calibratedVariantId": "early",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "منطقة RSI: 81.5"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 0.398,
       "entryHigh": 0.402,
