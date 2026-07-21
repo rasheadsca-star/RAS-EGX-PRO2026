@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-07-21T16:02:32.481Z",
+  "generatedAt": "2026-07-21T16:40:37.884Z",
   "ticker": "SCEM",
   "companyNameAr": "سيناء للأسمنت",
   "companyNameEn": "Sinai Cement",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "breakout",
     "strategyLabelAr": "اختراق مؤكد",
     "recommendationScore": 90.6,
@@ -59,7 +59,20 @@
     "failedConditions": [
       "منطقة RSI: 80.2"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 88.6,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 18.9,
+      "minimumRequiredScore": 85,
+      "scoreGap": 0,
+      "calibratedVariantId": "early",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "منطقة RSI: 80.2"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 76.89,
       "entryHigh": 77.564,

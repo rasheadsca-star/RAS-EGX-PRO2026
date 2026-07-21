@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-07-21T16:02:32.384Z",
+  "generatedAt": "2026-07-21T16:40:37.791Z",
   "ticker": "ICID",
   "companyNameAr": "الدولية للاستثمار والتنمية",
   "companyNameEn": "International Co. For Investment & Development",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 93.8,
@@ -59,7 +59,20 @@
     "failedConditions": [
       "دعم الحجم: 0.7"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 89.6,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 35.8,
+      "minimumRequiredScore": 85,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "دعم الحجم: 0.7"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 8.051,
       "entryHigh": 8.173,
