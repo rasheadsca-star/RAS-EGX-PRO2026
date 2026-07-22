@@ -2,8 +2,8 @@
   "schemaVersion": "13.2.0",
   "activatedAt": "2026-07-10T12:26:11.483Z",
   "activationSession": "2026-07-09",
-  "lastProcessedSession": "2026-07-21",
-  "updatedAt": "2026-07-21T18:49:40.871Z",
+  "lastProcessedSession": "2026-07-22",
+  "updatedAt": "2026-07-22T15:19:03.557Z",
   "assumptions": {
     "direction": "long_only",
     "entryStartsAfterSignalSession": true,
@@ -31,9 +31,9 @@
       "eligibilityStatus": "complete_recent",
       "decisionEligibleAtSignal": true,
       "paperTradingEligibleAtSignal": true,
-      "lastEvaluatedSession": "2026-07-21",
+      "lastEvaluatedSession": "2026-07-22",
       "pendingObservedSessions": 1,
-      "signalObservedSessions": 5,
+      "signalObservedSessions": 6,
       "checkpoints": {
         "1": {
           "session": "2026-07-15",
@@ -66,7 +66,7 @@
       ],
       "openedSession": "2026-07-15",
       "entryPrice": 26.59,
-      "openObservedSessions": 5
+      "openObservedSessions": 6
     },
     {
       "id": "2026-07-12-TMGH",
@@ -117,7 +117,7 @@
     {
       "id": "2026-07-12-MPCI",
       "ticker": "MPCI",
-      "status": "OPEN",
+      "status": "CLOSED",
       "signalSession": "2026-07-12",
       "signalPrice": 240.47,
       "entryLow": 238.08,
@@ -130,14 +130,19 @@
       "eligibilityStatus": "complete_recent",
       "decisionEligibleAtSignal": true,
       "paperTradingEligibleAtSignal": true,
-      "lastEvaluatedSession": "2026-07-16",
+      "lastEvaluatedSession": "2026-07-21",
       "pendingObservedSessions": 1,
-      "signalObservedSessions": 2,
+      "signalObservedSessions": 3,
       "checkpoints": {
         "1": {
           "session": "2026-07-15",
           "close": 240.66,
           "netReturnPct": -0.321
+        },
+        "3": {
+          "session": "2026-07-21",
+          "close": 269,
+          "netReturnPct": 11.464
         }
       },
       "events": [
@@ -151,11 +156,23 @@
           "type": "OPEN",
           "price": 242.31,
           "model": "conservative_entry_high"
+        },
+        {
+          "session": "2026-07-21",
+          "type": "CLOSE",
+          "reason": "TARGET_1",
+          "price": 257.07
         }
       ],
       "openedSession": "2026-07-15",
       "entryPrice": 242.31,
-      "openObservedSessions": 2
+      "openObservedSessions": 3,
+      "closedSession": "2026-07-21",
+      "exitPrice": 257.07,
+      "exitReason": "TARGET_1",
+      "grossReturnPct": 6.091,
+      "netReturnPct": 5.691,
+      "rMultiple": 1.15
     },
     {
       "id": "2026-07-12-ETRS",
@@ -265,9 +282,9 @@
       "eligibilityStatus": "complete_recent",
       "decisionEligibleAtSignal": true,
       "paperTradingEligibleAtSignal": true,
-      "lastEvaluatedSession": "2026-07-21",
+      "lastEvaluatedSession": "2026-07-22",
       "pendingObservedSessions": 3,
-      "signalObservedSessions": 5,
+      "signalObservedSessions": 6,
       "checkpoints": {
         "1": {
           "session": "2026-07-15",
@@ -300,7 +317,7 @@
       ],
       "openedSession": "2026-07-19",
       "entryPrice": 9.2,
-      "openObservedSessions": 3
+      "openObservedSessions": 4
     },
     {
       "id": "2026-07-13-RMDA",
