@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-07-22T15:59:52.716Z",
+  "generatedAt": "2026-07-22T16:43:15.845Z",
   "ticker": "UNIT",
   "companyNameAr": "المتحدة للإسكان",
   "companyNameEn": "United Co. for Housing & Development",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 91.9,
@@ -59,7 +59,20 @@
     "failedConditions": [
       "دعم الحجم: 0.66"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 89,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 35.6,
+      "minimumRequiredScore": 85,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "دعم الحجم: 0.66"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 18.001,
       "entryHigh": 18.273,
