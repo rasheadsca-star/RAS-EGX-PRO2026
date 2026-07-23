@@ -1,14 +1,14 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-07-22T17:27:08.612Z",
+  "generatedAt": "2026-07-23T14:35:33.143Z",
   "ticker": "SMFR",
   "companyNameAr": "سماد مصر",
   "companyNameEn": "Samad Misr EGYFERT",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-07-22",
+  "sessionId": "2026-07-23",
   "latest": {
-    "date": "2026-07-22",
+    "date": "2026-07-23",
     "open": 229.23,
     "high": 251.46,
     "low": 225,
@@ -17,24 +17,24 @@
   },
   "indicators": {
     "close": 235.18,
-    "change1Pct": 2.596,
-    "return5Pct": 13.982,
-    "return20Pct": 15.375,
-    "return50Pct": 16.616,
-    "sma5": 233.432,
-    "sma20": 208.345,
-    "sma50": 207.45,
-    "ema9": 223.296,
-    "ema21": 213.815,
-    "rsi14": 86.925,
-    "macd": 7.9,
-    "macdSignal": 3.96,
-    "atr14": 13.806,
-    "atrPct": 5.871,
-    "averageVolume20": 52291.85,
-    "volumeRatio20": 2.367,
-    "averageTurnover20Egp": 12000909.035,
-    "volatility20Pct": 3.239,
+    "change1Pct": 0,
+    "return5Pct": 1.188,
+    "return20Pct": 15.579,
+    "return50Pct": 17.437,
+    "sma5": 233.984,
+    "sma20": 209.93,
+    "sma50": 208.148,
+    "ema9": 225.673,
+    "ema21": 215.757,
+    "rsi14": 86.698,
+    "macd": 8.541,
+    "macdSignal": 4.877,
+    "atr14": 15.346,
+    "atrPct": 6.525,
+    "averageVolume20": 57963.1,
+    "volumeRatio20": 2.136,
+    "averageTurnover20Egp": 13351103.678,
+    "volatility20Pct": 3.236,
     "support20": 187.01,
     "resistance20": 277,
     "high50": 277,
@@ -49,21 +49,31 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
+    "source": "V13.4",
+    "status": "WATCH_CONDITIONAL",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 91.8,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "منطقة RSI: 72.6"
+    ],
     "adaptive": null,
-    "plan": {}
+    "plan": {
+      "entryLow": 233.769,
+      "entryHigh": 237.149,
+      "stopLoss": 222.509,
+      "target1": 258.769,
+      "target2": 269.13,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 101,
-    "firstSession": "2026-01-28",
-    "lastSession": "2026-07-22",
+    "firstSession": "2026-02-01",
+    "lastSession": "2026-07-23",
     "averageConfidence": 74.65,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +81,6 @@
   },
   "chart": {
     "dates": [
-      "2026-02-01",
       "2026-02-02",
       "2026-02-03",
       "2026-02-04",
@@ -170,10 +179,10 @@
       "2026-07-16",
       "2026-07-20",
       "2026-07-21",
-      "2026-07-22"
+      "2026-07-22",
+      "2026-07-23"
     ],
     "open": [
-      176.54,
       175.24,
       176.81,
       178.01,
@@ -272,10 +281,10 @@
       232.42,
       238.16,
       234.99,
+      229.23,
       229.23
     ],
     "high": [
-      177.99,
       178,
       179,
       178.9,
@@ -374,10 +383,10 @@
       239,
       244.7,
       239.49,
+      251.46,
       251.46
     ],
     "low": [
-      174,
       174,
       175.6,
       176.01,
@@ -476,10 +485,10 @@
       223,
       234.05,
       229,
+      225,
       225
     ],
     "close": [
-      175.24,
       176.81,
       178.01,
       178.01,
@@ -578,10 +587,10 @@
       235.34,
       234.99,
       229.23,
+      235.18,
       235.18
     ],
     "volume": [
-      2032,
       3641,
       4150,
       1166,
@@ -680,6 +689,7 @@
       162121,
       56783,
       28716,
+      123791,
       123791
     ],
     "sma20": [
@@ -702,7 +712,6 @@
       0,
       0,
       0,
-      175.372,
       175.137,
       174.835,
       175.293,
@@ -782,7 +791,8 @@
       203.951,
       205.508,
       206.778,
-      208.345
+      208.345,
+      209.93
     ],
     "sma50": [
       0,
@@ -834,7 +844,6 @@
       0,
       0,
       0,
-      180.915,
       181.416,
       181.892,
       182.451,
@@ -884,7 +893,8 @@
       205.414,
       206.159,
       206.78,
-      207.45
+      207.45,
+      208.148
     ]
   }
 }
