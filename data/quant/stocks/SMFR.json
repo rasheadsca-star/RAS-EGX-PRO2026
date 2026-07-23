@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-07-23T16:15:22.673Z",
+  "generatedAt": "2026-07-23T16:44:15.394Z",
   "ticker": "SMFR",
   "companyNameAr": "سماد مصر",
   "companyNameEn": "Samad Misr EGYFERT",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 91.8,
@@ -59,7 +59,20 @@
     "failedConditions": [
       "منطقة RSI: 72.6"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 89,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 34.8,
+      "minimumRequiredScore": 85,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "منطقة RSI: 72.6"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 233.769,
       "entryHigh": 237.149,

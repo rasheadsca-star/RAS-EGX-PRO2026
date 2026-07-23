@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-07-23T16:15:22.602Z",
+  "generatedAt": "2026-07-23T16:44:15.280Z",
   "ticker": "GMCI",
   "companyNameAr": "جي إم سي",
   "companyNameEn": "GMC Group For Industrial Commercial & Financial Investments",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 91.1,
@@ -60,7 +60,21 @@
       "نشاط الحجم الحالي: 0.47",
       "دعم الحجم: 0.47"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 84.7,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 34.8,
+      "minimumRequiredScore": 85,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "نشاط الحجم الحالي: 0.47",
+        "دعم الحجم: 0.47"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 2.019,
       "entryHigh": 2.044,
