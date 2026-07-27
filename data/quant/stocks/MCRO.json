@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-07-27T15:42:18.122Z",
+  "generatedAt": "2026-07-27T17:06:19.268Z",
   "ticker": "MCRO",
   "companyNameAr": "ماكرو جروب",
   "companyNameEn": "Macro Group Pharmaceuticals Macro Capital",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "breakout",
     "strategyLabelAr": "اختراق مؤكد",
     "recommendationScore": 92.6,
@@ -59,7 +59,20 @@
     "failedConditions": [
       "منطقة RSI: 77.4"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 89.7,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 24.3,
+      "minimumRequiredScore": 83,
+      "scoreGap": 0,
+      "calibratedVariantId": "early",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "منطقة RSI: 77.4"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 1.484,
       "entryHigh": 1.498,
