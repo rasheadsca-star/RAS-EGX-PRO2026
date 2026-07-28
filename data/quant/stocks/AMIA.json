@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-07-28T15:25:09.444Z",
+  "generatedAt": "2026-07-28T16:49:25.161Z",
   "ticker": "AMIA",
   "companyNameAr": "العربية للمحابس",
   "companyNameEn": "Arab Moltaqa Investments Company",
@@ -52,30 +52,33 @@
     "source": "V13.5",
     "status": "NEAR_TRIGGER",
     "statusLabelAr": "قريب من اكتمال الإشارة",
-    "strategyId": "trend_follow",
-    "strategyLabelAr": "اتجاه قوي مع سيولة",
-    "recommendationScore": 92.4,
-    "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
-    "failedConditions": [],
+    "strategyId": "breakout",
+    "strategyLabelAr": "اختراق مؤكد",
+    "recommendationScore": 91.7,
+    "reasonAr": "أقرب نموذج حالي هو اختراق مؤكد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "منطقة RSI: 75.4"
+    ],
     "adaptive": {
-      "proximityPct": 93.5,
+      "proximityPct": 89.5,
       "strategyHealthStatus": "RESEARCH_ONLY",
-      "strategyHealthScore": 36.8,
+      "strategyHealthScore": 25.7,
       "minimumRequiredScore": 83,
       "scoreGap": 0,
-      "calibratedVariantId": "balanced",
+      "calibratedVariantId": "early",
       "riskScale": 0,
       "missingRequirementsAr": [
-        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "منطقة RSI: 75.4"
       ],
       "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
     },
     "plan": {
-      "entryLow": 10.237,
-      "entryHigh": 10.356,
-      "stopLoss": 9.73,
-      "target1": 11.316,
-      "target2": 11.769,
+      "entryLow": 11.012,
+      "entryHigh": 11.142,
+      "stopLoss": 10.468,
+      "target1": 12.174,
+      "target2": 12.661,
       "riskReward1": 1.8,
       "maximumHoldingSessions": 10
     }

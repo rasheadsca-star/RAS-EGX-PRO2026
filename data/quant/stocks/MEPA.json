@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-07-28T15:25:09.591Z",
+  "generatedAt": "2026-07-28T16:49:25.322Z",
   "ticker": "MEPA",
   "companyNameAr": "ميديكال باكجنج",
   "companyNameEn": "Medical Packaging Company",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 92.7,
@@ -59,7 +59,20 @@
     "failedConditions": [
       "دعم الحجم: 0.77"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 89.5,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 36.8,
+      "minimumRequiredScore": 83,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "دعم الحجم: 0.77"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 1.861,
       "entryHigh": 1.881,
