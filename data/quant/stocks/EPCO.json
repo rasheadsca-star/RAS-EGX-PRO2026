@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-07-30T16:17:52.066Z",
+  "generatedAt": "2026-07-30T16:47:06.287Z",
   "ticker": "EPCO",
   "companyNameAr": "مصر للدواجن",
   "companyNameEn": "Egypt for Poultry",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 91.2,
@@ -60,7 +60,21 @@
       "نشاط الحجم الحالي: 0.53",
       "دعم الحجم: 0.53"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 84.7,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 28.1,
+      "minimumRequiredScore": 85,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "نشاط الحجم الحالي: 0.53",
+        "دعم الحجم: 0.53"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 10.446,
       "entryHigh": 10.567,
