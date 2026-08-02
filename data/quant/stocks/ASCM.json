@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-07-30T16:47:06.210Z",
+  "generatedAt": "2026-08-02T16:11:26.869Z",
   "ticker": "ASCM",
   "companyNameAr": "أسيك للتعدين أسكوم",
   "companyNameEn": "ASEC Company for Mining ASCOM",
@@ -12,36 +12,36 @@
     "open": 63.52,
     "high": 63.52,
     "low": 61,
-    "close": 62.8,
+    "close": 62.06,
     "volume": 869544
   },
   "indicators": {
-    "close": 62.8,
-    "change1Pct": -1.134,
-    "return5Pct": 2.497,
-    "return20Pct": 6.93,
-    "return50Pct": 38.174,
-    "sma5": 62.498,
-    "sma20": 60.785,
-    "sma50": 54.246,
-    "ema9": 62.02,
-    "ema21": 60.155,
-    "rsi14": 64.062,
-    "macd": 2.324,
-    "macdSignal": 2.488,
+    "close": 62.06,
+    "change1Pct": -2.298,
+    "return5Pct": 1.289,
+    "return20Pct": 5.67,
+    "return50Pct": 36.546,
+    "sma5": 62.35,
+    "sma20": 60.748,
+    "sma50": 54.231,
+    "ema9": 61.872,
+    "ema21": 60.087,
+    "rsi14": 60.561,
+    "macd": 2.265,
+    "macdSignal": 2.477,
     "atr14": 2.416,
-    "atrPct": 3.848,
+    "atrPct": 3.894,
     "averageVolume20": 1057654.2,
     "volumeRatio20": 0.822,
-    "averageTurnover20Egp": 65210681.416,
-    "volatility20Pct": 3.025,
+    "averageTurnover20Egp": 65178508.332,
+    "volatility20Pct": 3.065,
     "support20": 56.29,
     "resistance20": 73.73,
     "high50": 73.73,
     "low50": 43.76,
-    "distanceFromSupport20Pct": 11.565,
-    "relativeToResistance20Pct": -14.824,
-    "distanceFromHigh50Pct": -14.824
+    "distanceFromSupport20Pct": 10.25,
+    "relativeToResistance20Pct": -15.828,
+    "distanceFromHigh50Pct": -15.828
   },
   "technical": {
     "score": 86,
@@ -49,20 +49,43 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 90.6,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "دعم الحجم: 0.78"
+    ],
+    "adaptive": {
+      "proximityPct": 88.5,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 26.2,
+      "minimumRequiredScore": 85,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "دعم الحجم: 0.78"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 61.723,
+      "entryHigh": 62.481,
+      "stopLoss": 58.687,
+      "target1": 68.25,
+      "target2": 70.983,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
-    "historySessions": 101,
-    "firstSession": "2026-01-12",
+    "historySessions": 100,
+    "firstSession": "2026-01-13",
     "lastSession": "2026-07-30",
     "averageConfidence": 73.9,
     "symbolVerified": true,
@@ -578,7 +601,7 @@
       61.29,
       63.8,
       63.52,
-      62.8
+      62.06
     ],
     "volume": [
       108288,
@@ -782,7 +805,7 @@
       60.089,
       60.342,
       60.582,
-      60.785
+      60.748
     ],
     "sma50": [
       0,
@@ -884,7 +907,7 @@
       53.005,
       53.453,
       53.899,
-      54.246
+      54.231
     ]
   }
 }
