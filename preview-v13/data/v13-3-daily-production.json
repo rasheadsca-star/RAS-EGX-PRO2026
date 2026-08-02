@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.3.0",
-  "generatedAt": "2026-07-30T15:29:28.589Z",
+  "generatedAt": "2026-08-02T14:45:31.351Z",
   "mode": "DAILY_PRODUCTION_UNIFIED_DECISION_CENTER",
   "stableApplicationTouched": false,
   "liveExecutionEnabled": false,
@@ -24,16 +24,16 @@
       "Saturday"
     ],
     "cronUtc": "30 13 * * 0-4",
-    "currentCairoDate": "2026-07-30",
-    "currentCairoWeekday": "Thursday",
+    "currentCairoDate": "2026-08-02",
+    "currentCairoWeekday": "Sunday",
     "runDayAllowed": true,
     "forceNonTradingDay": false
   },
   "market": {
     "latestAvailableSession": "2026-07-30",
-    "expectedLatestSession": "2026-07-30",
-    "lagTradingDays": 0,
-    "decisionFresh": true,
+    "expectedLatestSession": "2026-08-02",
+    "lagTradingDays": 1,
+    "decisionFresh": false,
     "paperFresh": true
   },
   "pipeline": {
@@ -44,7 +44,7 @@
         "status": "passed",
         "ok": true,
         "critical": false,
-        "detail": "Thursday — مسموح"
+        "detail": "Sunday — مسموح"
       },
       {
         "name": "marketData",
@@ -52,7 +52,7 @@
         "status": "passed",
         "ok": true,
         "critical": true,
-        "detail": "جلسة 2026-07-30، التأخر 0 يوم تداول"
+        "detail": "جلسة 2026-07-30، التأخر 1 يوم تداول"
       },
       {
         "name": "history",
@@ -141,7 +141,7 @@
         "eligibility": {
           "status": "complete_recent",
           "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
+          "sessions": 100,
           "lastSession": "2026-07-30",
           "confidence": 74.05,
           "decisionEligible": true,
@@ -271,7 +271,7 @@
         "eligibility": {
           "status": "complete_recent",
           "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
+          "sessions": 100,
           "lastSession": "2026-07-30",
           "confidence": 73.9,
           "decisionEligible": true,
@@ -401,7 +401,7 @@
         "eligibility": {
           "status": "complete_recent",
           "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
+          "sessions": 100,
           "lastSession": "2026-07-30",
           "confidence": 73.9,
           "decisionEligible": true,
@@ -531,7 +531,7 @@
         "eligibility": {
           "status": "complete_recent",
           "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
+          "sessions": 100,
           "lastSession": "2026-07-30",
           "confidence": 74.65,
           "decisionEligible": true,
@@ -661,7 +661,7 @@
         "eligibility": {
           "status": "complete_recent",
           "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
+          "sessions": 100,
           "lastSession": "2026-07-30",
           "confidence": 73.15,
           "decisionEligible": true,
@@ -791,7 +791,7 @@
         "eligibility": {
           "status": "complete_recent",
           "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
+          "sessions": 100,
           "lastSession": "2026-07-30",
           "confidence": 73.15,
           "decisionEligible": true,
@@ -921,7 +921,7 @@
         "eligibility": {
           "status": "complete_recent",
           "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
+          "sessions": 100,
           "lastSession": "2026-07-30",
           "confidence": 73.9,
           "decisionEligible": true,
@@ -1051,7 +1051,7 @@
         "eligibility": {
           "status": "complete_recent",
           "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
+          "sessions": 100,
           "lastSession": "2026-07-30",
           "confidence": 73.15,
           "decisionEligible": true,
@@ -1163,13 +1163,13 @@
         "riskReward": 4.556,
         "confidence": 78,
         "dataQuality": 0,
-        "liquidityScore": 89.5,
+        "liquidityScore": 89.4,
         "turnover": 73879533.887379,
         "liquiditySource": "history_20_session_relative_liquidity",
         "liquidityEvidence": {
           "rawLiquidityScore": 0,
           "rawTurnover": 0,
-          "historicalPercentileScore": 89.5,
+          "historicalPercentileScore": 89.4,
           "historicalMedianTurnover": 73879533.89,
           "historicalMedianVolume": 2069764,
           "historicalNonZeroSessions": 20,
@@ -1181,7 +1181,7 @@
         "eligibility": {
           "status": "complete_recent",
           "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
+          "sessions": 100,
           "lastSession": "2026-07-30",
           "confidence": 73.9,
           "decisionEligible": true,
@@ -1243,7 +1243,7 @@
             "id": "liquidity",
             "label": "السيولة",
             "pass": true,
-            "detail": "تاريخ 20 جلسة: وسيط القيمة 73,879,534، الترتيب النسبي 89.5%، جلسات تداول 20"
+            "detail": "تاريخ 20 جلسة: وسيط القيمة 73,879,534، الترتيب النسبي 89.4%، جلسات تداول 20"
           }
         ],
         "decisionGates": [
@@ -1279,6 +1279,136 @@
         ]
       },
       {
+        "ticker": "MASR",
+        "companyNameAr": "مدينة مصر للإسكان والتعمير",
+        "companyNameEn": "Madinet Masr For Housing and Development",
+        "price": 8.24,
+        "sourceSession": "2026-07-15",
+        "sourceLagCalendarDays": 15,
+        "entryLow": 7.25,
+        "entryHigh": 7.42,
+        "stopLoss": 7.03,
+        "target1": 8.528,
+        "target2": 8.784,
+        "riskReward": 3.911,
+        "confidence": 78,
+        "dataQuality": 0,
+        "liquidityScore": 87.3,
+        "turnover": 68546594.255,
+        "liquiditySource": "history_20_session_relative_liquidity",
+        "liquidityEvidence": {
+          "rawLiquidityScore": 0,
+          "rawTurnover": 0,
+          "historicalPercentileScore": 87.3,
+          "historicalMedianTurnover": 68546594.26,
+          "historicalMedianVolume": 8472699,
+          "historicalNonZeroSessions": 18,
+          "historyLookbackSessions": 20,
+          "sourceSessionAdjusted": false
+        },
+        "score": 60.1,
+        "sourceSignal": "",
+        "eligibility": {
+          "status": "complete_recent",
+          "statusLabelAr": "مكتمل وحديث",
+          "sessions": 100,
+          "lastSession": "2026-07-29",
+          "confidence": 73.5,
+          "decisionEligible": true,
+          "paperTradingEligible": true,
+          "highConfidenceEligible": false
+        },
+        "paperPass": false,
+        "decisionPass": false,
+        "paperGates": [
+          {
+            "id": "historyEligibility",
+            "label": "أهلية التاريخ للتداول الورقي",
+            "pass": true,
+            "detail": "مكتمل وحديث"
+          },
+          {
+            "id": "price",
+            "label": "السعر",
+            "pass": true,
+            "detail": "السعر 8.24"
+          },
+          {
+            "id": "sourceFreshness",
+            "label": "حداثة ملف الفرص",
+            "pass": false,
+            "detail": "جلسة المصدر 2026-07-15، فرق 15 يوم"
+          },
+          {
+            "id": "explicitPlan",
+            "label": "خطة صفقة أصلية",
+            "pass": true,
+            "detail": "الدخول والوقف والهدف متاحة"
+          },
+          {
+            "id": "planLogic",
+            "label": "منطق الخطة",
+            "pass": true,
+            "detail": "الوقف أسفل الدخول والهدف أعلاه"
+          },
+          {
+            "id": "riskReward",
+            "label": "العائد للمخاطرة",
+            "pass": true,
+            "detail": "3.91 : 1"
+          },
+          {
+            "id": "confidence",
+            "label": "قوة الإشارة",
+            "pass": true,
+            "detail": "78%"
+          },
+          {
+            "id": "dataQuality",
+            "label": "جودة البيانات",
+            "pass": false,
+            "detail": "0%"
+          },
+          {
+            "id": "liquidity",
+            "label": "السيولة",
+            "pass": true,
+            "detail": "تاريخ 20 جلسة: وسيط القيمة 68,546,594، الترتيب النسبي 87.3%، جلسات تداول 18"
+          }
+        ],
+        "decisionGates": [
+          {
+            "id": "decisionHistoryEligibility",
+            "label": "أهلية التاريخ للقرار",
+            "pass": true,
+            "detail": "مكتمل وحديث"
+          },
+          {
+            "id": "decisionRiskReward",
+            "label": "عائد/مخاطرة القرار",
+            "pass": true,
+            "detail": "3.91 : 1"
+          },
+          {
+            "id": "decisionConfidence",
+            "label": "قوة إشارة القرار",
+            "pass": true,
+            "detail": "78%"
+          },
+          {
+            "id": "decisionDataQuality",
+            "label": "جودة بيانات القرار",
+            "pass": false,
+            "detail": "0%"
+          }
+        ],
+        "failedReasons": [
+          "حداثة ملف الفرص: جلسة المصدر 2026-07-15، فرق 15 يوم",
+          "جودة البيانات: 0%",
+          "جودة بيانات القرار: 0%"
+        ]
+      },
+      {
         "ticker": "ELSH",
         "companyNameAr": "الشمس للإسكان والتعمير",
         "companyNameEn": "Al Shams Housing and Urbanization",
@@ -1293,25 +1423,25 @@
         "riskReward": 8.899,
         "confidence": 77,
         "dataQuality": 0,
-        "liquidityScore": 90,
+        "liquidityScore": 89.9,
         "turnover": 81969928.32499999,
         "liquiditySource": "history_20_session_relative_liquidity",
         "liquidityEvidence": {
           "rawLiquidityScore": 0,
           "rawTurnover": 0,
-          "historicalPercentileScore": 90,
+          "historicalPercentileScore": 89.9,
           "historicalMedianTurnover": 81969928.32,
           "historicalMedianVolume": 5523224.5,
           "historicalNonZeroSessions": 20,
           "historyLookbackSessions": 20,
           "sourceSessionAdjusted": false
         },
-        "score": 60.2,
+        "score": 60.1,
         "sourceSignal": "",
         "eligibility": {
           "status": "complete_recent",
           "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
+          "sessions": 100,
           "lastSession": "2026-07-30",
           "confidence": 73.9,
           "decisionEligible": true,
@@ -1373,7 +1503,7 @@
             "id": "liquidity",
             "label": "السيولة",
             "pass": true,
-            "detail": "تاريخ 20 جلسة: وسيط القيمة 81,969,928، الترتيب النسبي 90%، جلسات تداول 20"
+            "detail": "تاريخ 20 جلسة: وسيط القيمة 81,969,928، الترتيب النسبي 89.9%، جلسات تداول 20"
           }
         ],
         "decisionGates": [
@@ -1394,136 +1524,6 @@
             "label": "قوة إشارة القرار",
             "pass": true,
             "detail": "77%"
-          },
-          {
-            "id": "decisionDataQuality",
-            "label": "جودة بيانات القرار",
-            "pass": false,
-            "detail": "0%"
-          }
-        ],
-        "failedReasons": [
-          "حداثة ملف الفرص: جلسة المصدر 2026-07-15، فرق 15 يوم",
-          "جودة البيانات: 0%",
-          "جودة بيانات القرار: 0%"
-        ]
-      },
-      {
-        "ticker": "MASR",
-        "companyNameAr": "مدينة مصر للإسكان والتعمير",
-        "companyNameEn": "Madinet Masr For Housing and Development",
-        "price": 8.24,
-        "sourceSession": "2026-07-15",
-        "sourceLagCalendarDays": 15,
-        "entryLow": 7.25,
-        "entryHigh": 7.42,
-        "stopLoss": 7.03,
-        "target1": 8.528,
-        "target2": 8.784,
-        "riskReward": 3.911,
-        "confidence": 78,
-        "dataQuality": 0,
-        "liquidityScore": 87.4,
-        "turnover": 68546594.255,
-        "liquiditySource": "history_20_session_relative_liquidity",
-        "liquidityEvidence": {
-          "rawLiquidityScore": 0,
-          "rawTurnover": 0,
-          "historicalPercentileScore": 87.4,
-          "historicalMedianTurnover": 68546594.26,
-          "historicalMedianVolume": 8472699,
-          "historicalNonZeroSessions": 18,
-          "historyLookbackSessions": 20,
-          "sourceSessionAdjusted": false
-        },
-        "score": 60.1,
-        "sourceSignal": "",
-        "eligibility": {
-          "status": "complete_recent",
-          "statusLabelAr": "مكتمل وحديث",
-          "sessions": 100,
-          "lastSession": "2026-07-29",
-          "confidence": 73.15,
-          "decisionEligible": true,
-          "paperTradingEligible": true,
-          "highConfidenceEligible": false
-        },
-        "paperPass": false,
-        "decisionPass": false,
-        "paperGates": [
-          {
-            "id": "historyEligibility",
-            "label": "أهلية التاريخ للتداول الورقي",
-            "pass": true,
-            "detail": "مكتمل وحديث"
-          },
-          {
-            "id": "price",
-            "label": "السعر",
-            "pass": true,
-            "detail": "السعر 8.24"
-          },
-          {
-            "id": "sourceFreshness",
-            "label": "حداثة ملف الفرص",
-            "pass": false,
-            "detail": "جلسة المصدر 2026-07-15، فرق 15 يوم"
-          },
-          {
-            "id": "explicitPlan",
-            "label": "خطة صفقة أصلية",
-            "pass": true,
-            "detail": "الدخول والوقف والهدف متاحة"
-          },
-          {
-            "id": "planLogic",
-            "label": "منطق الخطة",
-            "pass": true,
-            "detail": "الوقف أسفل الدخول والهدف أعلاه"
-          },
-          {
-            "id": "riskReward",
-            "label": "العائد للمخاطرة",
-            "pass": true,
-            "detail": "3.91 : 1"
-          },
-          {
-            "id": "confidence",
-            "label": "قوة الإشارة",
-            "pass": true,
-            "detail": "78%"
-          },
-          {
-            "id": "dataQuality",
-            "label": "جودة البيانات",
-            "pass": false,
-            "detail": "0%"
-          },
-          {
-            "id": "liquidity",
-            "label": "السيولة",
-            "pass": true,
-            "detail": "تاريخ 20 جلسة: وسيط القيمة 68,546,594، الترتيب النسبي 87.4%، جلسات تداول 18"
-          }
-        ],
-        "decisionGates": [
-          {
-            "id": "decisionHistoryEligibility",
-            "label": "أهلية التاريخ للقرار",
-            "pass": true,
-            "detail": "مكتمل وحديث"
-          },
-          {
-            "id": "decisionRiskReward",
-            "label": "عائد/مخاطرة القرار",
-            "pass": true,
-            "detail": "3.91 : 1"
-          },
-          {
-            "id": "decisionConfidence",
-            "label": "قوة إشارة القرار",
-            "pass": true,
-            "detail": "78%"
           },
           {
             "id": "decisionDataQuality",
@@ -1571,7 +1571,7 @@
         "eligibility": {
           "status": "complete_recent",
           "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
+          "sessions": 100,
           "lastSession": "2026-07-30",
           "confidence": 73.9,
           "decisionEligible": true,
@@ -1701,9 +1701,9 @@
         "eligibility": {
           "status": "complete_recent",
           "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
+          "sessions": 100,
           "lastSession": "2026-07-30",
-          "confidence": 74.25,
+          "confidence": 73.9,
           "decisionEligible": true,
           "paperTradingEligible": true,
           "highConfidenceEligible": false
@@ -1799,136 +1799,6 @@
         ]
       },
       {
-        "ticker": "ELKA",
-        "companyNameAr": "القاهرة للإسكان والتعمير",
-        "companyNameEn": "Cairo for Housing and Development",
-        "price": 1.8,
-        "sourceSession": "2026-07-15",
-        "sourceLagCalendarDays": 15,
-        "entryLow": 1.32,
-        "entryHigh": 1.37,
-        "stopLoss": 1.21,
-        "target1": 1.863,
-        "target2": 1.919,
-        "riskReward": 3.837,
-        "confidence": 78,
-        "dataQuality": 0,
-        "liquidityScore": 85.8,
-        "turnover": 63351325.30499999,
-        "liquiditySource": "history_20_session_relative_liquidity",
-        "liquidityEvidence": {
-          "rawLiquidityScore": 0,
-          "rawTurnover": 0,
-          "historicalPercentileScore": 85.8,
-          "historicalMedianTurnover": 63351325.3,
-          "historicalMedianVolume": 33505232.5,
-          "historicalNonZeroSessions": 20,
-          "historyLookbackSessions": 20,
-          "sourceSessionAdjusted": false
-        },
-        "score": 59.9,
-        "sourceSignal": "",
-        "eligibility": {
-          "status": "complete_recent",
-          "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
-          "lastSession": "2026-07-30",
-          "confidence": 73.15,
-          "decisionEligible": true,
-          "paperTradingEligible": true,
-          "highConfidenceEligible": false
-        },
-        "paperPass": false,
-        "decisionPass": false,
-        "paperGates": [
-          {
-            "id": "historyEligibility",
-            "label": "أهلية التاريخ للتداول الورقي",
-            "pass": true,
-            "detail": "مكتمل وحديث"
-          },
-          {
-            "id": "price",
-            "label": "السعر",
-            "pass": true,
-            "detail": "السعر 1.8"
-          },
-          {
-            "id": "sourceFreshness",
-            "label": "حداثة ملف الفرص",
-            "pass": false,
-            "detail": "جلسة المصدر 2026-07-15، فرق 15 يوم"
-          },
-          {
-            "id": "explicitPlan",
-            "label": "خطة صفقة أصلية",
-            "pass": true,
-            "detail": "الدخول والوقف والهدف متاحة"
-          },
-          {
-            "id": "planLogic",
-            "label": "منطق الخطة",
-            "pass": true,
-            "detail": "الوقف أسفل الدخول والهدف أعلاه"
-          },
-          {
-            "id": "riskReward",
-            "label": "العائد للمخاطرة",
-            "pass": true,
-            "detail": "3.84 : 1"
-          },
-          {
-            "id": "confidence",
-            "label": "قوة الإشارة",
-            "pass": true,
-            "detail": "78%"
-          },
-          {
-            "id": "dataQuality",
-            "label": "جودة البيانات",
-            "pass": false,
-            "detail": "0%"
-          },
-          {
-            "id": "liquidity",
-            "label": "السيولة",
-            "pass": true,
-            "detail": "تاريخ 20 جلسة: وسيط القيمة 63,351,325، الترتيب النسبي 85.8%، جلسات تداول 20"
-          }
-        ],
-        "decisionGates": [
-          {
-            "id": "decisionHistoryEligibility",
-            "label": "أهلية التاريخ للقرار",
-            "pass": true,
-            "detail": "مكتمل وحديث"
-          },
-          {
-            "id": "decisionRiskReward",
-            "label": "عائد/مخاطرة القرار",
-            "pass": true,
-            "detail": "3.84 : 1"
-          },
-          {
-            "id": "decisionConfidence",
-            "label": "قوة إشارة القرار",
-            "pass": true,
-            "detail": "78%"
-          },
-          {
-            "id": "decisionDataQuality",
-            "label": "جودة بيانات القرار",
-            "pass": false,
-            "detail": "0%"
-          }
-        ],
-        "failedReasons": [
-          "حداثة ملف الفرص: جلسة المصدر 2026-07-15، فرق 15 يوم",
-          "جودة البيانات: 0%",
-          "جودة بيانات القرار: 0%"
-        ]
-      },
-      {
         "ticker": "MCRO",
         "companyNameAr": "ماكرو جروب",
         "companyNameEn": "Macro Group Pharmaceuticals Macro Capital",
@@ -1943,13 +1813,13 @@
         "riskReward": 5.422,
         "confidence": 77,
         "dataQuality": 0,
-        "liquidityScore": 87.9,
+        "liquidityScore": 87.8,
         "turnover": 69041911.64500001,
         "liquiditySource": "history_20_session_relative_liquidity",
         "liquidityEvidence": {
           "rawLiquidityScore": 0,
           "rawTurnover": 0,
-          "historicalPercentileScore": 87.9,
+          "historicalPercentileScore": 87.8,
           "historicalMedianTurnover": 69041911.65,
           "historicalMedianVolume": 52723375.5,
           "historicalNonZeroSessions": 20,
@@ -1961,7 +1831,7 @@
         "eligibility": {
           "status": "complete_recent",
           "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
+          "sessions": 100,
           "lastSession": "2026-07-30",
           "confidence": 74.65,
           "decisionEligible": true,
@@ -2023,7 +1893,7 @@
             "id": "liquidity",
             "label": "السيولة",
             "pass": true,
-            "detail": "تاريخ 20 جلسة: وسيط القيمة 69,041,912، الترتيب النسبي 87.9%، جلسات تداول 20"
+            "detail": "تاريخ 20 جلسة: وسيط القيمة 69,041,912، الترتيب النسبي 87.8%، جلسات تداول 20"
           }
         ],
         "decisionGates": [
@@ -2059,6 +1929,136 @@
         ]
       },
       {
+        "ticker": "ELKA",
+        "companyNameAr": "القاهرة للإسكان والتعمير",
+        "companyNameEn": "Cairo for Housing and Development",
+        "price": 1.8,
+        "sourceSession": "2026-07-15",
+        "sourceLagCalendarDays": 15,
+        "entryLow": 1.32,
+        "entryHigh": 1.37,
+        "stopLoss": 1.21,
+        "target1": 1.863,
+        "target2": 1.919,
+        "riskReward": 3.837,
+        "confidence": 78,
+        "dataQuality": 0,
+        "liquidityScore": 85.7,
+        "turnover": 63351325.30499999,
+        "liquiditySource": "history_20_session_relative_liquidity",
+        "liquidityEvidence": {
+          "rawLiquidityScore": 0,
+          "rawTurnover": 0,
+          "historicalPercentileScore": 85.7,
+          "historicalMedianTurnover": 63351325.3,
+          "historicalMedianVolume": 33505232.5,
+          "historicalNonZeroSessions": 20,
+          "historyLookbackSessions": 20,
+          "sourceSessionAdjusted": false
+        },
+        "score": 59.8,
+        "sourceSignal": "",
+        "eligibility": {
+          "status": "complete_recent",
+          "statusLabelAr": "مكتمل وحديث",
+          "sessions": 100,
+          "lastSession": "2026-07-30",
+          "confidence": 73.15,
+          "decisionEligible": true,
+          "paperTradingEligible": true,
+          "highConfidenceEligible": false
+        },
+        "paperPass": false,
+        "decisionPass": false,
+        "paperGates": [
+          {
+            "id": "historyEligibility",
+            "label": "أهلية التاريخ للتداول الورقي",
+            "pass": true,
+            "detail": "مكتمل وحديث"
+          },
+          {
+            "id": "price",
+            "label": "السعر",
+            "pass": true,
+            "detail": "السعر 1.8"
+          },
+          {
+            "id": "sourceFreshness",
+            "label": "حداثة ملف الفرص",
+            "pass": false,
+            "detail": "جلسة المصدر 2026-07-15، فرق 15 يوم"
+          },
+          {
+            "id": "explicitPlan",
+            "label": "خطة صفقة أصلية",
+            "pass": true,
+            "detail": "الدخول والوقف والهدف متاحة"
+          },
+          {
+            "id": "planLogic",
+            "label": "منطق الخطة",
+            "pass": true,
+            "detail": "الوقف أسفل الدخول والهدف أعلاه"
+          },
+          {
+            "id": "riskReward",
+            "label": "العائد للمخاطرة",
+            "pass": true,
+            "detail": "3.84 : 1"
+          },
+          {
+            "id": "confidence",
+            "label": "قوة الإشارة",
+            "pass": true,
+            "detail": "78%"
+          },
+          {
+            "id": "dataQuality",
+            "label": "جودة البيانات",
+            "pass": false,
+            "detail": "0%"
+          },
+          {
+            "id": "liquidity",
+            "label": "السيولة",
+            "pass": true,
+            "detail": "تاريخ 20 جلسة: وسيط القيمة 63,351,325، الترتيب النسبي 85.7%، جلسات تداول 20"
+          }
+        ],
+        "decisionGates": [
+          {
+            "id": "decisionHistoryEligibility",
+            "label": "أهلية التاريخ للقرار",
+            "pass": true,
+            "detail": "مكتمل وحديث"
+          },
+          {
+            "id": "decisionRiskReward",
+            "label": "عائد/مخاطرة القرار",
+            "pass": true,
+            "detail": "3.84 : 1"
+          },
+          {
+            "id": "decisionConfidence",
+            "label": "قوة إشارة القرار",
+            "pass": true,
+            "detail": "78%"
+          },
+          {
+            "id": "decisionDataQuality",
+            "label": "جودة بيانات القرار",
+            "pass": false,
+            "detail": "0%"
+          }
+        ],
+        "failedReasons": [
+          "حداثة ملف الفرص: جلسة المصدر 2026-07-15، فرق 15 يوم",
+          "جودة البيانات: 0%",
+          "جودة بيانات القرار: 0%"
+        ]
+      },
+      {
         "ticker": "AMER",
         "companyNameAr": "عامر جروب",
         "companyNameEn": "Amer Group Holding Company",
@@ -2073,13 +2073,13 @@
         "riskReward": 6.443,
         "confidence": 77,
         "dataQuality": 0,
-        "liquidityScore": 86.3,
+        "liquidityScore": 86.2,
         "turnover": 65108279.900000006,
         "liquiditySource": "history_20_session_relative_liquidity",
         "liquidityEvidence": {
           "rawLiquidityScore": 0,
           "rawTurnover": 0,
-          "historicalPercentileScore": 86.3,
+          "historicalPercentileScore": 86.2,
           "historicalMedianTurnover": 65108279.9,
           "historicalMedianVolume": 18108049.5,
           "historicalNonZeroSessions": 20,
@@ -2091,7 +2091,7 @@
         "eligibility": {
           "status": "complete_recent",
           "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
+          "sessions": 100,
           "lastSession": "2026-07-30",
           "confidence": 73.9,
           "decisionEligible": true,
@@ -2153,7 +2153,7 @@
             "id": "liquidity",
             "label": "السيولة",
             "pass": true,
-            "detail": "تاريخ 20 جلسة: وسيط القيمة 65,108,280، الترتيب النسبي 86.3%، جلسات تداول 20"
+            "detail": "تاريخ 20 جلسة: وسيط القيمة 65,108,280، الترتيب النسبي 86.2%، جلسات تداول 20"
           }
         ],
         "decisionGates": [
@@ -2203,13 +2203,13 @@
         "riskReward": 3.756,
         "confidence": 78,
         "dataQuality": 0,
-        "liquidityScore": 82.6,
+        "liquidityScore": 82.5,
         "turnover": 49814742.0657345,
         "liquiditySource": "history_20_session_relative_liquidity",
         "liquidityEvidence": {
           "rawLiquidityScore": 0,
           "rawTurnover": 0,
-          "historicalPercentileScore": 82.6,
+          "historicalPercentileScore": 82.5,
           "historicalMedianTurnover": 49814742.07,
           "historicalMedianVolume": 1583561.5,
           "historicalNonZeroSessions": 18,
@@ -2223,7 +2223,7 @@
           "statusLabelAr": "مكتمل وحديث",
           "sessions": 100,
           "lastSession": "2026-07-29",
-          "confidence": 74.65,
+          "confidence": 75,
           "decisionEligible": true,
           "paperTradingEligible": true,
           "highConfidenceEligible": false
@@ -2283,7 +2283,7 @@
             "id": "liquidity",
             "label": "السيولة",
             "pass": true,
-            "detail": "تاريخ 20 جلسة: وسيط القيمة 49,814,742، الترتيب النسبي 82.6%، جلسات تداول 18"
+            "detail": "تاريخ 20 جلسة: وسيط القيمة 49,814,742، الترتيب النسبي 82.5%، جلسات تداول 18"
           }
         ],
         "decisionGates": [
@@ -2333,13 +2333,13 @@
         "riskReward": 2.686,
         "confidence": 77,
         "dataQuality": 0,
-        "liquidityScore": 83.7,
+        "liquidityScore": 83.6,
         "turnover": 51362656.11,
         "liquiditySource": "history_20_session_relative_liquidity",
         "liquidityEvidence": {
           "rawLiquidityScore": 0,
           "rawTurnover": 0,
-          "historicalPercentileScore": 83.7,
+          "historicalPercentileScore": 83.6,
           "historicalMedianTurnover": 51362656.11,
           "historicalMedianVolume": 27912815.5,
           "historicalNonZeroSessions": 20,
@@ -2351,9 +2351,9 @@
         "eligibility": {
           "status": "complete_recent",
           "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
+          "sessions": 100,
           "lastSession": "2026-07-30",
-          "confidence": 74.4,
+          "confidence": 74.05,
           "decisionEligible": true,
           "paperTradingEligible": true,
           "highConfidenceEligible": false
@@ -2413,7 +2413,7 @@
             "id": "liquidity",
             "label": "السيولة",
             "pass": true,
-            "detail": "تاريخ 20 جلسة: وسيط القيمة 51,362,656، الترتيب النسبي 83.7%، جلسات تداول 20"
+            "detail": "تاريخ 20 جلسة: وسيط القيمة 51,362,656، الترتيب النسبي 83.6%، جلسات تداول 20"
           }
         ],
         "decisionGates": [
@@ -2463,13 +2463,13 @@
         "riskReward": 4.17,
         "confidence": 77,
         "dataQuality": 0,
-        "liquidityScore": 84.2,
+        "liquidityScore": 84.1,
         "turnover": 52705135.260000005,
         "liquiditySource": "history_20_session_relative_liquidity",
         "liquidityEvidence": {
           "rawLiquidityScore": 0,
           "rawTurnover": 0,
-          "historicalPercentileScore": 84.2,
+          "historicalPercentileScore": 84.1,
           "historicalMedianTurnover": 52705135.26,
           "historicalMedianVolume": 4080918,
           "historicalNonZeroSessions": 20,
@@ -2481,7 +2481,7 @@
         "eligibility": {
           "status": "complete_recent",
           "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
+          "sessions": 100,
           "lastSession": "2026-07-30",
           "confidence": 73.9,
           "decisionEligible": true,
@@ -2543,7 +2543,7 @@
             "id": "liquidity",
             "label": "السيولة",
             "pass": true,
-            "detail": "تاريخ 20 جلسة: وسيط القيمة 52,705,135، الترتيب النسبي 84.2%، جلسات تداول 20"
+            "detail": "تاريخ 20 جلسة: وسيط القيمة 52,705,135، الترتيب النسبي 84.1%، جلسات تداول 20"
           }
         ],
         "decisionGates": [
@@ -2593,13 +2593,13 @@
         "riskReward": 3.107,
         "confidence": 77,
         "dataQuality": 0,
-        "liquidityScore": 83.2,
+        "liquidityScore": 83.1,
         "turnover": 50196191.615,
         "liquiditySource": "history_20_session_relative_liquidity",
         "liquidityEvidence": {
           "rawLiquidityScore": 0,
           "rawTurnover": 0,
-          "historicalPercentileScore": 83.2,
+          "historicalPercentileScore": 83.1,
           "historicalMedianTurnover": 50196191.62,
           "historicalMedianVolume": 6188777,
           "historicalNonZeroSessions": 18,
@@ -2613,7 +2613,7 @@
           "statusLabelAr": "مكتمل وحديث",
           "sessions": 100,
           "lastSession": "2026-07-29",
-          "confidence": 74.65,
+          "confidence": 75,
           "decisionEligible": true,
           "paperTradingEligible": true,
           "highConfidenceEligible": false
@@ -2673,7 +2673,7 @@
             "id": "liquidity",
             "label": "السيولة",
             "pass": true,
-            "detail": "تاريخ 20 جلسة: وسيط القيمة 50,196,192، الترتيب النسبي 83.2%، جلسات تداول 18"
+            "detail": "تاريخ 20 جلسة: وسيط القيمة 50,196,192، الترتيب النسبي 83.1%، جلسات تداول 18"
           }
         ],
         "decisionGates": [
@@ -2741,7 +2741,7 @@
         "eligibility": {
           "status": "complete_recent",
           "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
+          "sessions": 100,
           "lastSession": "2026-07-30",
           "confidence": 74.65,
           "decisionEligible": true,
@@ -2873,7 +2873,7 @@
           "statusLabelAr": "مكتمل وحديث",
           "sessions": 100,
           "lastSession": "2026-07-29",
-          "confidence": 73.9,
+          "confidence": 74.25,
           "decisionEligible": true,
           "paperTradingEligible": true,
           "highConfidenceEligible": false
@@ -3001,7 +3001,7 @@
         "eligibility": {
           "status": "complete_recent",
           "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
+          "sessions": 100,
           "lastSession": "2026-07-30",
           "confidence": 73.9,
           "decisionEligible": true,
@@ -3113,13 +3113,13 @@
         "riskReward": 3.455,
         "confidence": 77,
         "dataQuality": 0,
-        "liquidityScore": 79.5,
+        "liquidityScore": 79.4,
         "turnover": 43293756.94,
         "liquiditySource": "history_20_session_relative_liquidity",
         "liquidityEvidence": {
           "rawLiquidityScore": 0,
           "rawTurnover": 0,
-          "historicalPercentileScore": 79.5,
+          "historicalPercentileScore": 79.4,
           "historicalMedianTurnover": 43293756.94,
           "historicalMedianVolume": 22526262,
           "historicalNonZeroSessions": 20,
@@ -3131,7 +3131,7 @@
         "eligibility": {
           "status": "complete_recent",
           "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
+          "sessions": 100,
           "lastSession": "2026-07-30",
           "confidence": 73.9,
           "decisionEligible": true,
@@ -3193,7 +3193,7 @@
             "id": "liquidity",
             "label": "السيولة",
             "pass": true,
-            "detail": "تاريخ 20 جلسة: وسيط القيمة 43,293,757، الترتيب النسبي 79.5%، جلسات تداول 20"
+            "detail": "تاريخ 20 جلسة: وسيط القيمة 43,293,757، الترتيب النسبي 79.4%، جلسات تداول 20"
           }
         ],
         "decisionGates": [
@@ -3243,13 +3243,13 @@
         "riskReward": 11.657,
         "confidence": 76,
         "dataQuality": 0,
-        "liquidityScore": 80,
+        "liquidityScore": 79.9,
         "turnover": 45549054.16500001,
         "liquiditySource": "history_20_session_relative_liquidity",
         "liquidityEvidence": {
           "rawLiquidityScore": 0,
           "rawTurnover": 0,
-          "historicalPercentileScore": 80,
+          "historicalPercentileScore": 79.9,
           "historicalMedianTurnover": 45549054.17,
           "historicalMedianVolume": 21943164.5,
           "historicalNonZeroSessions": 20,
@@ -3261,7 +3261,7 @@
         "eligibility": {
           "status": "complete_recent",
           "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
+          "sessions": 100,
           "lastSession": "2026-07-30",
           "confidence": 73.9,
           "decisionEligible": true,
@@ -3323,7 +3323,7 @@
             "id": "liquidity",
             "label": "السيولة",
             "pass": true,
-            "detail": "تاريخ 20 جلسة: وسيط القيمة 45,549,054، الترتيب النسبي 80%، جلسات تداول 20"
+            "detail": "تاريخ 20 جلسة: وسيط القيمة 45,549,054، الترتيب النسبي 79.9%، جلسات تداول 20"
           }
         ],
         "decisionGates": [
@@ -3373,13 +3373,13 @@
         "riskReward": 2.025,
         "confidence": 78,
         "dataQuality": 0,
-        "liquidityScore": 91.6,
+        "liquidityScore": 91.5,
         "turnover": 85908356.8410205,
         "liquiditySource": "history_20_session_relative_liquidity",
         "liquidityEvidence": {
           "rawLiquidityScore": 0,
           "rawTurnover": 0,
-          "historicalPercentileScore": 91.6,
+          "historicalPercentileScore": 91.5,
           "historicalMedianTurnover": 85908356.84,
           "historicalMedianVolume": 497930.5,
           "historicalNonZeroSessions": 18,
@@ -3391,7 +3391,7 @@
         "eligibility": {
           "status": "complete_recent",
           "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
+          "sessions": 100,
           "lastSession": "2026-07-30",
           "confidence": 74.65,
           "decisionEligible": true,
@@ -3453,7 +3453,7 @@
             "id": "liquidity",
             "label": "السيولة",
             "pass": true,
-            "detail": "تاريخ 20 جلسة: وسيط القيمة 85,908,357، الترتيب النسبي 91.6%، جلسات تداول 18"
+            "detail": "تاريخ 20 جلسة: وسيط القيمة 85,908,357، الترتيب النسبي 91.5%، جلسات تداول 18"
           }
         ],
         "decisionGates": [
@@ -3503,13 +3503,13 @@
         "riskReward": 2.64,
         "confidence": 77,
         "dataQuality": 0,
-        "liquidityScore": 76.3,
+        "liquidityScore": 76.2,
         "turnover": 36872400.762375005,
         "liquiditySource": "history_20_session_relative_liquidity",
         "liquidityEvidence": {
           "rawLiquidityScore": 0,
           "rawTurnover": 0,
-          "historicalPercentileScore": 76.3,
+          "historicalPercentileScore": 76.2,
           "historicalMedianTurnover": 36872400.76,
           "historicalMedianVolume": 1723164,
           "historicalNonZeroSessions": 19,
@@ -3583,7 +3583,7 @@
             "id": "liquidity",
             "label": "السيولة",
             "pass": true,
-            "detail": "تاريخ 20 جلسة: وسيط القيمة 36,872,401، الترتيب النسبي 76.3%، جلسات تداول 19"
+            "detail": "تاريخ 20 جلسة: وسيط القيمة 36,872,401، الترتيب النسبي 76.2%، جلسات تداول 19"
           }
         ],
         "decisionGates": [
@@ -3633,13 +3633,13 @@
         "riskReward": 2.513,
         "confidence": 77,
         "dataQuality": 0,
-        "liquidityScore": 74.2,
+        "liquidityScore": 74.1,
         "turnover": 35005515.475300506,
         "liquiditySource": "history_20_session_relative_liquidity",
         "liquidityEvidence": {
           "rawLiquidityScore": 0,
           "rawTurnover": 0,
-          "historicalPercentileScore": 74.2,
+          "historicalPercentileScore": 74.1,
           "historicalMedianTurnover": 35005515.48,
           "historicalMedianVolume": 116122,
           "historicalNonZeroSessions": 20,
@@ -3651,7 +3651,7 @@
         "eligibility": {
           "status": "complete_recent",
           "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
+          "sessions": 100,
           "lastSession": "2026-07-30",
           "confidence": 74.65,
           "decisionEligible": true,
@@ -3713,7 +3713,7 @@
             "id": "liquidity",
             "label": "السيولة",
             "pass": true,
-            "detail": "تاريخ 20 جلسة: وسيط القيمة 35,005,515، الترتيب النسبي 74.2%، جلسات تداول 20"
+            "detail": "تاريخ 20 جلسة: وسيط القيمة 35,005,515، الترتيب النسبي 74.1%، جلسات تداول 20"
           }
         ],
         "decisionGates": [
@@ -3763,13 +3763,13 @@
         "riskReward": 3.98,
         "confidence": 76,
         "dataQuality": 0,
-        "liquidityScore": 75.3,
+        "liquidityScore": 75.1,
         "turnover": 36092876.04,
         "liquiditySource": "history_20_session_relative_liquidity",
         "liquidityEvidence": {
           "rawLiquidityScore": 0,
           "rawTurnover": 0,
-          "historicalPercentileScore": 75.3,
+          "historicalPercentileScore": 75.1,
           "historicalMedianTurnover": 36092876.04,
           "historicalMedianVolume": 19488028.5,
           "historicalNonZeroSessions": 20,
@@ -3781,7 +3781,7 @@
         "eligibility": {
           "status": "complete_recent",
           "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
+          "sessions": 100,
           "lastSession": "2026-07-30",
           "confidence": 73.9,
           "decisionEligible": true,
@@ -3843,7 +3843,7 @@
             "id": "liquidity",
             "label": "السيولة",
             "pass": true,
-            "detail": "تاريخ 20 جلسة: وسيط القيمة 36,092,876، الترتيب النسبي 75.3%، جلسات تداول 20"
+            "detail": "تاريخ 20 جلسة: وسيط القيمة 36,092,876، الترتيب النسبي 75.1%، جلسات تداول 20"
           }
         ],
         "decisionGates": [
@@ -3893,13 +3893,13 @@
         "riskReward": 4.612,
         "confidence": 77,
         "dataQuality": 0,
-        "liquidityScore": 72.6,
+        "liquidityScore": 72.5,
         "turnover": 33558665.489999995,
         "liquiditySource": "history_20_session_relative_liquidity",
         "liquidityEvidence": {
           "rawLiquidityScore": 0,
           "rawTurnover": 0,
-          "historicalPercentileScore": 72.6,
+          "historicalPercentileScore": 72.5,
           "historicalMedianTurnover": 33558665.49,
           "historicalMedianVolume": 11473361.5,
           "historicalNonZeroSessions": 20,
@@ -3911,7 +3911,7 @@
         "eligibility": {
           "status": "complete_recent",
           "statusLabelAr": "مكتمل وحديث",
-          "sessions": 101,
+          "sessions": 100,
           "lastSession": "2026-07-30",
           "confidence": 73.9,
           "decisionEligible": true,
@@ -3973,7 +3973,7 @@
             "id": "liquidity",
             "label": "السيولة",
             "pass": true,
-            "detail": "تاريخ 20 جلسة: وسيط القيمة 33,558,665، الترتيب النسبي 72.6%، جلسات تداول 20"
+            "detail": "تاريخ 20 جلسة: وسيط القيمة 33,558,665، الترتيب النسبي 72.5%، جلسات تداول 20"
           }
         ],
         "decisionGates": [
@@ -4031,19 +4031,23 @@
         "count": 1
       },
       {
-        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 10,023,294، الترتيب النسبي 36.8%، جلسات تداول 20",
+        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 10,023,294، الترتيب النسبي 36.5%، جلسات تداول 20",
         "count": 1
       },
       {
-        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 10,315,823، الترتيب النسبي 38.4%، جلسات تداول 20",
+        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 10,315,823، الترتيب النسبي 38.1%، جلسات تداول 20",
         "count": 1
       },
       {
-        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 10,431,593، الترتيب النسبي 38.9%، جلسات تداول 20",
+        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 10,431,593، الترتيب النسبي 38.6%، جلسات تداول 20",
         "count": 1
       },
       {
-        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 10,581,832، الترتيب النسبي 39.5%، جلسات تداول 20",
+        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 10,581,832، الترتيب النسبي 39.2%، جلسات تداول 20",
+        "count": 1
+      },
+      {
+        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 10,610,830، الترتيب النسبي 39.7%، جلسات تداول 18",
         "count": 1
       },
       {
@@ -4051,43 +4055,39 @@
         "count": 1
       },
       {
-        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 4,160,877، الترتيب النسبي 18.9%، جلسات تداول 20",
+        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 4,696,963، الترتيب النسبي 20.6%، جلسات تداول 20",
         "count": 1
       },
       {
-        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 4,696,963، الترتيب النسبي 21.1%، جلسات تداول 20",
+        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 4,758,258، الترتيب النسبي 22.8%، جلسات تداول 19",
         "count": 1
       },
       {
-        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 4,758,258، الترتيب النسبي 23.2%، جلسات تداول 19",
+        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 4,907,037، الترتيب النسبي 23.3%، جلسات تداول 20",
         "count": 1
       },
       {
-        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 4,907,037، الترتيب النسبي 23.7%، جلسات تداول 20",
+        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 5,410,841، الترتيب النسبي 24.9%، جلسات تداول 20",
         "count": 1
       },
       {
-        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 5,410,841، الترتيب النسبي 25.3%، جلسات تداول 20",
+        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 5,514,152، الترتيب النسبي 25.9%، جلسات تداول 20",
         "count": 1
       },
       {
-        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 5,514,152، الترتيب النسبي 26.3%، جلسات تداول 20",
+        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 6,321,951، الترتيب النسبي 29.6%، جلسات تداول 20",
         "count": 1
       },
       {
-        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 6,321,951، الترتيب النسبي 30%، جلسات تداول 20",
+        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 7,336,628، الترتيب النسبي 30.2%، جلسات تداول 20",
         "count": 1
       },
       {
-        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 7,336,628، الترتيب النسبي 30.5%، جلسات تداول 20",
+        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 7,972,288، الترتيب النسبي 31.7%، جلسات تداول 20",
         "count": 1
       },
       {
-        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 7,972,288، الترتيب النسبي 32.1%، جلسات تداول 20",
-        "count": 1
-      },
-      {
-        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 8,863,315، الترتيب النسبي 33.7%، جلسات تداول 20",
+        "reason": "السيولة: تاريخ 20 جلسة: وسيط القيمة 8,863,315، الترتيب النسبي 33.3%، جلسات تداول 20",
         "count": 1
       }
     ]
@@ -4095,7 +4095,7 @@
   "paper": {
     "metrics": {
       "schemaVersion": "13.2.0",
-      "generatedAt": "2026-07-30T15:29:28.486Z",
+      "generatedAt": "2026-08-02T14:45:31.252Z",
       "activationSession": "2026-07-09",
       "lastProcessedSession": "2026-07-30",
       "totalTrades": 10,
@@ -5378,8 +5378,8 @@
         "path": "data/source-health.json",
         "exists": true,
         "status": "available",
-        "generatedAt": "2026-07-30T14:35:43.236Z",
-        "ageHours": 0.9,
+        "generatedAt": "2026-08-02T14:14:41.655Z",
+        "ageHours": 0.51,
         "session": null,
         "explicitStatus": null
       },
@@ -5404,7 +5404,7 @@
         "exists": true,
         "status": "available",
         "generatedAt": "2026-07-15T05:25:36.360Z",
-        "ageHours": 370.06,
+        "ageHours": 441.33,
         "session": null,
         "explicitStatus": null
       },
@@ -5413,7 +5413,7 @@
         "exists": true,
         "status": "available",
         "generatedAt": "2026-07-15T08:44:59.268Z",
-        "ageHours": 366.74,
+        "ageHours": 438.01,
         "session": null,
         "explicitStatus": null
       },
@@ -5422,7 +5422,7 @@
         "exists": true,
         "status": "available",
         "generatedAt": "2026-07-15T05:25:54.421Z",
-        "ageHours": 370.06,
+        "ageHours": 441.33,
         "session": null,
         "explicitStatus": null
       },
@@ -5431,7 +5431,7 @@
         "exists": true,
         "status": "available",
         "generatedAt": "2026-07-15T05:25:54.954Z",
-        "ageHours": 370.06,
+        "ageHours": 441.33,
         "session": null,
         "explicitStatus": null
       },
@@ -5439,8 +5439,8 @@
         "path": "data/source-audit.json",
         "exists": true,
         "status": "available",
-        "generatedAt": "2026-07-30T12:24:09.968Z",
-        "ageHours": 3.09,
+        "generatedAt": "2026-08-02T14:29:03.392Z",
+        "ageHours": 0.27,
         "session": null,
         "explicitStatus": null
       }
