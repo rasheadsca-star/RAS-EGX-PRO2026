@@ -1,69 +1,92 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-08-02T16:11:27.004Z",
+  "generatedAt": "2026-08-03T17:18:01.800Z",
   "ticker": "MCRO",
   "companyNameAr": "ماكرو جروب",
   "companyNameEn": "Macro Group Pharmaceuticals Macro Capital",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-07-30",
+  "sessionId": "2026-08-02",
   "latest": {
-    "date": "2026-07-30",
-    "open": 1.53,
-    "high": 1.53,
-    "low": 1.45,
-    "close": 1.49,
-    "volume": 74498234
+    "date": "2026-08-02",
+    "open": 1.49,
+    "high": 1.55,
+    "low": 1.48,
+    "close": 1.5,
+    "volume": 105558462
   },
   "indicators": {
-    "close": 1.49,
-    "change1Pct": -2.614,
-    "return5Pct": 10.37,
-    "return20Pct": 22.131,
-    "return50Pct": 17.323,
-    "sma5": 1.488,
-    "sma20": 1.327,
-    "sma50": 1.279,
-    "ema9": 1.438,
-    "ema21": 1.362,
-    "rsi14": 75,
-    "macd": 0.067,
-    "macdSignal": 0.044,
-    "atr14": 0.069,
-    "atrPct": 4.602,
-    "averageVolume20": 70200832.05,
-    "volumeRatio20": 1.061,
-    "averageTurnover20Egp": 97723972.408,
-    "volatility20Pct": 2.584,
+    "close": 1.5,
+    "change1Pct": 0.671,
+    "return5Pct": 7.143,
+    "return20Pct": 27.119,
+    "return50Pct": 15.385,
+    "sma5": 1.508,
+    "sma20": 1.343,
+    "sma50": 1.283,
+    "ema9": 1.45,
+    "ema21": 1.375,
+    "rsi14": 77.273,
+    "macd": 0.069,
+    "macdSignal": 0.049,
+    "atr14": 0.071,
+    "atrPct": 4.762,
+    "averageVolume20": 74636273.15,
+    "volumeRatio20": 1.414,
+    "averageTurnover20Egp": 104646728.297,
+    "volatility20Pct": 2.39,
     "support20": 1.17,
     "resistance20": 1.6,
     "high50": 1.6,
     "low50": 1.17,
-    "distanceFromSupport20Pct": 27.35,
-    "relativeToResistance20Pct": -6.875,
-    "distanceFromHigh50Pct": -6.875
+    "distanceFromSupport20Pct": 28.205,
+    "relativeToResistance20Pct": -6.25,
+    "distanceFromHigh50Pct": -6.25
   },
   "technical": {
-    "score": 92,
+    "score": 98,
     "trendCode": "BULLISH",
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 96.4,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "منطقة RSI: 72"
+    ],
+    "adaptive": {
+      "proximityPct": 89.6,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 27.3,
+      "minimumRequiredScore": 83,
+      "scoreGap": 0,
+      "calibratedVariantId": "strict",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "منطقة RSI: 72"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 1.493,
+      "entryHigh": 1.509,
+      "stopLoss": 1.42,
+      "target1": 1.646,
+      "target2": 1.71,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-02-15",
-    "lastSession": "2026-07-30",
+    "firstSession": "2026-02-16",
+    "lastSession": "2026-08-02",
     "averageConfidence": 74.65,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +94,6 @@
   },
   "chart": {
     "dates": [
-      "2026-02-15",
       "2026-02-16",
       "2026-02-17",
       "2026-02-18",
@@ -170,10 +192,10 @@
       "2026-07-27",
       "2026-07-28",
       "2026-07-29",
-      "2026-07-30"
+      "2026-07-30",
+      "2026-08-02"
     ],
     "open": [
-      1.34,
       1.33,
       1.31,
       1.49,
@@ -272,10 +294,10 @@
       1.52,
       1.49,
       1.53,
-      1.53
+      1.53,
+      1.49
     ],
     "high": [
-      1.36,
       1.34,
       1.51,
       1.57,
@@ -374,10 +396,10 @@
       1.54,
       1.53,
       1.6,
-      1.53
+      1.53,
+      1.55
     ],
     "low": [
-      1.32,
       1.31,
       1.3,
       1.45,
@@ -476,10 +498,10 @@
       1.47,
       1.45,
       1.5,
-      1.45
+      1.45,
+      1.48
     ],
     "close": [
-      1.33,
       1.31,
       1.49,
       1.48,
@@ -578,10 +600,10 @@
       1.49,
       1.53,
       1.53,
-      1.49
+      1.49,
+      1.5
     ],
     "volume": [
-      8668808,
       9653748,
       65582719,
       124743178,
@@ -680,7 +702,8 @@
       106115400,
       95186580,
       189715387,
-      74498234
+      74498234,
+      105558462
     ],
     "sma20": [
       0,
@@ -702,7 +725,6 @@
       0,
       0,
       0,
-      1.371,
       1.373,
       1.375,
       1.368,
@@ -782,7 +804,8 @@
       1.282,
       1.298,
       1.313,
-      1.327
+      1.327,
+      1.343
     ],
     "sma50": [
       0,
@@ -834,7 +857,6 @@
       0,
       0,
       0,
-      1.297,
       1.296,
       1.296,
       1.291,
@@ -884,7 +906,8 @@
       1.265,
       1.27,
       1.275,
-      1.279
+      1.279,
+      1.283
     ]
   }
 }

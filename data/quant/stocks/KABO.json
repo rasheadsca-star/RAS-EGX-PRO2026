@@ -1,47 +1,47 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-08-02T16:11:26.991Z",
+  "generatedAt": "2026-08-03T17:18:01.787Z",
   "ticker": "KABO",
   "companyNameAr": "كابو",
   "companyNameEn": "El-Nasr Clothing & Textiles KABO",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-07-30",
+  "sessionId": "2026-08-02",
   "latest": {
-    "date": "2026-07-30",
-    "open": 8.1,
-    "high": 8.1,
-    "low": 7.75,
-    "close": 8.08,
-    "volume": 2721102
+    "date": "2026-08-02",
+    "open": 8.08,
+    "high": 8.24,
+    "low": 7.88,
+    "close": 7.92,
+    "volume": 2588085
   },
   "indicators": {
-    "close": 8.08,
-    "change1Pct": -0.247,
-    "return5Pct": -8.182,
-    "return20Pct": 30.956,
-    "return50Pct": 30.744,
-    "sma5": 8.358,
-    "sma20": 7.677,
-    "sma50": 6.794,
-    "ema9": 8.188,
-    "ema21": 7.738,
-    "rsi14": 65.611,
-    "macd": 0.505,
-    "macdSignal": 0.51,
-    "atr14": 0.345,
-    "atrPct": 4.27,
-    "averageVolume20": 5117808.25,
-    "volumeRatio20": 0.532,
-    "averageTurnover20Egp": 39867793.236,
-    "volatility20Pct": 3.719,
-    "support20": 6.04,
+    "close": 7.92,
+    "change1Pct": -1.98,
+    "return5Pct": -9.898,
+    "return20Pct": 26.518,
+    "return50Pct": 29.201,
+    "sma5": 8.184,
+    "sma20": 7.76,
+    "sma50": 6.829,
+    "ema9": 8.134,
+    "ema21": 7.755,
+    "rsi14": 61.017,
+    "macd": 0.454,
+    "macdSignal": 0.499,
+    "atr14": 0.358,
+    "atrPct": 4.518,
+    "averageVolume20": 5099021.15,
+    "volumeRatio20": 0.508,
+    "averageTurnover20Egp": 39964997.045,
+    "volatility20Pct": 3.792,
+    "support20": 6.21,
     "resistance20": 8.9,
     "high50": 8.9,
     "low50": 5.92,
-    "distanceFromSupport20Pct": 33.775,
-    "relativeToResistance20Pct": -9.213,
-    "distanceFromHigh50Pct": -9.213
+    "distanceFromSupport20Pct": 27.536,
+    "relativeToResistance20Pct": -11.011,
+    "distanceFromHigh50Pct": -11.011
   },
   "technical": {
     "score": 86,
@@ -49,21 +49,46 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 96.1,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "نشاط الحجم الحالي: 0.51",
+      "دعم الحجم: 0.51"
+    ],
+    "adaptive": {
+      "proximityPct": 85.4,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 27.3,
+      "minimumRequiredScore": 83,
+      "scoreGap": 0,
+      "calibratedVariantId": "strict",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "نشاط الحجم الحالي: 0.51",
+        "دعم الحجم: 0.51"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 7.882,
+      "entryHigh": 7.968,
+      "stopLoss": 7.493,
+      "target1": 8.703,
+      "target2": 9.048,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-02-12",
-    "lastSession": "2026-07-30",
+    "firstSession": "2026-02-15",
+    "lastSession": "2026-08-02",
     "averageConfidence": 73.9,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +96,6 @@
   },
   "chart": {
     "dates": [
-      "2026-02-12",
       "2026-02-15",
       "2026-02-16",
       "2026-02-17",
@@ -170,10 +194,10 @@
       "2026-07-27",
       "2026-07-28",
       "2026-07-29",
-      "2026-07-30"
+      "2026-07-30",
+      "2026-08-02"
     ],
     "open": [
-      6.85,
       6.76,
       6.6,
       6.49,
@@ -272,10 +296,10 @@
       8.58,
       8.62,
       8.2,
-      8.1
+      8.1,
+      8.08
     ],
     "high": [
-      6.94,
       6.8,
       6.61,
       6.78,
@@ -374,10 +398,10 @@
       8.9,
       8.85,
       8.25,
-      8.1
+      8.1,
+      8.24
     ],
     "low": [
-      6.75,
       6.54,
       6.45,
       6.45,
@@ -476,10 +500,10 @@
       8.46,
       8.17,
       7.9,
-      7.75
+      7.75,
+      7.88
     ],
     "close": [
-      6.76,
       6.6,
       6.49,
       6.45,
@@ -578,10 +602,10 @@
       8.62,
       8.2,
       8.1,
-      8.08
+      8.08,
+      7.92
     ],
     "volume": [
-      1464973,
       2818531,
       2911830,
       2578258,
@@ -680,7 +704,8 @@
       3621984,
       6059638,
       3021990,
-      2721102
+      2721102,
+      2588085
     ],
     "sma20": [
       0,
@@ -702,7 +727,6 @@
       0,
       0,
       0,
-      6.07,
       6.035,
       6.007,
       5.982,
@@ -782,7 +806,8 @@
       7.381,
       7.486,
       7.582,
-      7.677
+      7.677,
+      7.76
     ],
     "sma50": [
       0,
@@ -834,7 +859,6 @@
       0,
       0,
       0,
-      6.033,
       6.02,
       6.01,
       6.001,
@@ -884,7 +908,8 @@
       6.676,
       6.717,
       6.756,
-      6.794
+      6.794,
+      6.829
     ]
   }
 }

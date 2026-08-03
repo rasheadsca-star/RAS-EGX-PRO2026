@@ -1,47 +1,47 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-08-02T16:11:26.951Z",
+  "generatedAt": "2026-08-03T17:18:01.748Z",
   "ticker": "EPPK",
   "companyNameAr": "الأهرام للطباعة والتغليف",
   "companyNameEn": "El Ahram Co. For Printing And Packaging",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-07-30",
+  "sessionId": "2026-08-02",
   "latest": {
-    "date": "2026-07-30",
+    "date": "2026-08-02",
     "open": 15.07,
-    "high": 15.29,
-    "low": 14.34,
-    "close": 15.07,
-    "volume": 12027
+    "high": 15.15,
+    "low": 14.8,
+    "close": 14.94,
+    "volume": 32573
   },
   "indicators": {
-    "close": 15.07,
-    "change1Pct": 0,
-    "return5Pct": 4.147,
-    "return20Pct": 17.826,
-    "return50Pct": 18.103,
-    "sma5": 15.268,
-    "sma20": 14.573,
-    "sma50": 13.28,
-    "ema9": 14.97,
-    "ema21": 14.462,
-    "rsi14": 50.095,
-    "macd": 0.575,
-    "macdSignal": 0.58,
-    "atr14": 0.826,
-    "atrPct": 5.479,
-    "averageVolume20": 82939.2,
-    "volumeRatio20": 0.145,
-    "averageTurnover20Egp": 1201660.833,
-    "volatility20Pct": 3.616,
-    "support20": 12.7,
+    "close": 14.94,
+    "change1Pct": -0.863,
+    "return5Pct": -5.563,
+    "return20Pct": 14.571,
+    "return50Pct": 17.638,
+    "sma5": 15.092,
+    "sma20": 14.668,
+    "sma50": 13.325,
+    "ema9": 14.964,
+    "ema21": 14.505,
+    "rsi14": 59.368,
+    "macd": 0.54,
+    "macdSignal": 0.572,
+    "atr14": 0.749,
+    "atrPct": 5.015,
+    "averageVolume20": 72552,
+    "volumeRatio20": 0.449,
+    "averageTurnover20Egp": 1069306.181,
+    "volatility20Pct": 3.626,
+    "support20": 12.81,
     "resistance20": 15.93,
     "high50": 15.93,
     "low50": 11.67,
-    "distanceFromSupport20Pct": 18.661,
-    "relativeToResistance20Pct": -5.399,
-    "distanceFromHigh50Pct": -5.399
+    "distanceFromSupport20Pct": 16.628,
+    "relativeToResistance20Pct": -6.215,
+    "distanceFromHigh50Pct": -6.215
   },
   "technical": {
     "score": 86,
@@ -49,21 +49,46 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 94.8,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "نشاط الحجم الحالي: 0.45",
+      "دعم الحجم: 0.45"
+    ],
+    "adaptive": {
+      "proximityPct": 85.5,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 27.3,
+      "minimumRequiredScore": 83,
+      "scoreGap": 0,
+      "calibratedVariantId": "strict",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "نشاط الحجم الحالي: 0.45",
+        "دعم الحجم: 0.45"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 14.855,
+      "entryHigh": 15.047,
+      "stopLoss": 14.128,
+      "target1": 16.431,
+      "target2": 17.089,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-02-02",
-    "lastSession": "2026-07-30",
+    "firstSession": "2026-02-03",
+    "lastSession": "2026-08-02",
     "averageConfidence": 74.65,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +96,6 @@
   },
   "chart": {
     "dates": [
-      "2026-02-02",
       "2026-02-03",
       "2026-02-04",
       "2026-02-08",
@@ -170,10 +194,10 @@
       "2026-07-27",
       "2026-07-28",
       "2026-07-29",
-      "2026-07-30"
+      "2026-07-30",
+      "2026-08-02"
     ],
     "open": [
-      9.99,
       9.99,
       9.99,
       10.46,
@@ -272,10 +296,10 @@
       15.82,
       15.29,
       15.09,
+      15.07,
       15.07
     ],
     "high": [
-      10.12,
       10.11,
       10.06,
       10.98,
@@ -374,10 +398,10 @@
       15.93,
       15.75,
       15.49,
-      15.29
+      15.29,
+      15.15
     ],
     "low": [
-      9.7,
       9.8,
       9.8,
       10.46,
@@ -476,10 +500,10 @@
       15.08,
       15,
       15,
-      14.34
+      14.34,
+      14.8
     ],
     "close": [
-      9.99,
       9.99,
       9.99,
       10.46,
@@ -578,10 +602,10 @@
       15.29,
       15.09,
       15.07,
-      15.07
+      15.07,
+      14.94
     ],
     "volume": [
-      27478,
       24983,
       18752,
       16560,
@@ -680,7 +704,8 @@
       69401,
       63378,
       22208,
-      12027
+      12027,
+      32573
     ],
     "sma20": [
       0,
@@ -702,7 +727,6 @@
       0,
       0,
       0,
-      10.997,
       11.085,
       11.196,
       11.329,
@@ -782,7 +806,8 @@
       14.203,
       14.332,
       14.459,
-      14.573
+      14.573,
+      14.668
     ],
     "sma50": [
       0,
@@ -834,7 +859,6 @@
       0,
       0,
       0,
-      12.087,
       12.141,
       12.193,
       12.244,
@@ -884,7 +908,8 @@
       13.146,
       13.188,
       13.234,
-      13.28
+      13.28,
+      13.325
     ]
   }
 }

@@ -1,47 +1,47 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-08-02T16:11:27.035Z",
+  "generatedAt": "2026-08-03T17:18:01.829Z",
   "ticker": "NHPS",
   "companyNameAr": "الوطنية للإسكان للنقابات المهنية",
   "companyNameEn": "National Company for Housing Professional Syndicates",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-07-30",
+  "sessionId": "2026-08-02",
   "latest": {
-    "date": "2026-07-30",
-    "open": 86,
-    "high": 87,
-    "low": 82.25,
-    "close": 83.19,
-    "volume": 213995
+    "date": "2026-08-02",
+    "open": 83.19,
+    "high": 86,
+    "low": 83.1,
+    "close": 83.5,
+    "volume": 253706
   },
   "indicators": {
-    "close": 83.19,
-    "change1Pct": -3.267,
-    "return5Pct": -3.29,
-    "return20Pct": 22.212,
-    "return50Pct": 28.103,
-    "sma5": 86.054,
-    "sma20": 76.733,
-    "sma50": 72.195,
-    "ema9": 83.939,
-    "ema21": 79.053,
-    "rsi14": 69.546,
-    "macd": 4.929,
-    "macdSignal": 4.225,
-    "atr14": 5.883,
-    "atrPct": 7.072,
-    "averageVolume20": 620165,
-    "volumeRatio20": 0.345,
-    "averageTurnover20Egp": 51092039.559,
-    "volatility20Pct": 5.584,
+    "close": 83.5,
+    "change1Pct": 0.373,
+    "return5Pct": -2.749,
+    "return20Pct": 18.44,
+    "return50Pct": 30.062,
+    "sma5": 85.582,
+    "sma20": 77.383,
+    "sma50": 72.581,
+    "ema9": 83.852,
+    "ema21": 79.457,
+    "rsi14": 69.577,
+    "macd": 4.639,
+    "macdSignal": 4.308,
+    "atr14": 5.484,
+    "atrPct": 6.567,
+    "averageVolume20": 632850.3,
+    "volumeRatio20": 0.401,
+    "averageTurnover20Egp": 52151262.109,
+    "volatility20Pct": 5.558,
     "support20": 61.55,
     "resistance20": 95,
     "high50": 95,
     "low50": 61.55,
-    "distanceFromSupport20Pct": 35.158,
-    "relativeToResistance20Pct": -12.432,
-    "distanceFromHigh50Pct": -12.432
+    "distanceFromSupport20Pct": 35.662,
+    "relativeToResistance20Pct": -12.105,
+    "distanceFromHigh50Pct": -12.105
   },
   "technical": {
     "score": 98,
@@ -49,21 +49,46 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 95.6,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "نشاط الحجم الحالي: 0.4",
+      "دعم الحجم: 0.4"
+    ],
+    "adaptive": {
+      "proximityPct": 85.5,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 27.3,
+      "minimumRequiredScore": 83,
+      "scoreGap": 0,
+      "calibratedVariantId": "strict",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "نشاط الحجم الحالي: 0.4",
+        "دعم الحجم: 0.4"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 82.999,
+      "entryHigh": 84.16,
+      "stopLoss": 78.983,
+      "target1": 91.854,
+      "target2": 95.531,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-01-26",
-    "lastSession": "2026-07-30",
+    "firstSession": "2026-01-27",
+    "lastSession": "2026-08-02",
     "averageConfidence": 74.65,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +96,6 @@
   },
   "chart": {
     "dates": [
-      "2026-01-26",
       "2026-01-27",
       "2026-01-28",
       "2026-02-01",
@@ -170,10 +194,10 @@
       "2026-07-26",
       "2026-07-27",
       "2026-07-29",
-      "2026-07-30"
+      "2026-07-30",
+      "2026-08-02"
     ],
     "open": [
-      67.75,
       66.03,
       64.81,
       62.01,
@@ -272,10 +296,10 @@
       91.3,
       89.06,
       87.89,
-      86
+      86,
+      83.19
     ],
     "high": [
-      68,
       66.96,
       65,
       63.5,
@@ -374,10 +398,10 @@
       92.66,
       89.82,
       88,
-      87
+      87,
+      86
     ],
     "low": [
-      66,
       64.5,
       61.61,
       61,
@@ -476,10 +500,10 @@
       89,
       86.11,
       86,
-      82.25
+      82.25,
+      83.1
     ],
     "close": [
-      66.03,
       64.81,
       62.01,
       62.37,
@@ -578,10 +602,10 @@
       89.06,
       86.16,
       86,
-      83.19
+      83.19,
+      83.5
     ],
     "volume": [
-      14757,
       35541,
       47081,
       14864,
@@ -680,7 +704,8 @@
       496079,
       321960,
       287513,
-      213995
+      213995,
+      253706
     ],
     "sma20": [
       0,
@@ -702,7 +727,6 @@
       0,
       0,
       0,
-      62.967,
       62.601,
       62.311,
       62.135,
@@ -782,7 +806,8 @@
       74.158,
       75.08,
       75.976,
-      76.733
+      76.733,
+      77.383
     ],
     "sma50": [
       0,
@@ -834,7 +859,6 @@
       0,
       0,
       0,
-      62.366,
       62.329,
       62.322,
       62.383,
@@ -884,7 +908,8 @@
       70.984,
       71.409,
       71.83,
-      72.195
+      72.195,
+      72.581
     ]
   }
 }
