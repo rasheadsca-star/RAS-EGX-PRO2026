@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-08-04T15:36:10.623Z",
+  "generatedAt": "2026-08-04T17:01:50.396Z",
   "ticker": "OFH",
   "companyNameAr": "أو بي المالية القابضة",
   "companyNameEn": "O B Financial Holding",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "breakout",
     "strategyLabelAr": "اختراق مؤكد",
     "recommendationScore": 95.1,
@@ -59,7 +59,20 @@
     "failedConditions": [
       "منطقة RSI: 80.3"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 89.3,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 27.8,
+      "minimumRequiredScore": 83,
+      "scoreGap": 0,
+      "calibratedVariantId": "early",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "منطقة RSI: 80.3"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 0.757,
       "entryHigh": 0.763,
