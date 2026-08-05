@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-08-04T17:21:12.485Z",
+  "generatedAt": "2026-08-05T16:51:21.988Z",
   "ticker": "RACC",
   "companyNameAr": "راية لخدمات مراكز الاتصالات",
   "companyNameEn": "Raya Customer Experience",
@@ -17,24 +17,24 @@
   },
   "indicators": {
     "close": 10.13,
-    "change1Pct": -0.099,
-    "return5Pct": 0.596,
-    "return20Pct": 3.367,
-    "return50Pct": 1.098,
-    "sma5": 10.144,
-    "sma20": 10.054,
-    "sma50": 9.987,
-    "ema9": 10.116,
-    "ema21": 10.054,
-    "rsi14": 54.225,
-    "macd": 0.079,
-    "macdSignal": 0.085,
-    "atr14": 0.187,
-    "atrPct": 1.847,
-    "averageVolume20": 1467227.4,
-    "volumeRatio20": 1.263,
-    "averageTurnover20Egp": 14855923.576,
-    "volatility20Pct": 1.626,
+    "change1Pct": 0.696,
+    "return5Pct": 0.396,
+    "return20Pct": 5.852,
+    "return50Pct": -4.434,
+    "sma5": 10.138,
+    "sma20": 10.079,
+    "sma50": 9.976,
+    "ema9": 10.108,
+    "ema21": 10.055,
+    "rsi14": 48.201,
+    "macd": 0.071,
+    "macdSignal": 0.081,
+    "atr14": 0.181,
+    "atrPct": 1.784,
+    "averageVolume20": 1484786.5,
+    "volumeRatio20": 1.248,
+    "averageTurnover20Egp": 15049234.001,
+    "volatility20Pct": 1.539,
     "support20": 9.36,
     "resistance20": 10.57,
     "high50": 12.02,
@@ -49,20 +49,40 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 99.4,
+    "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
     "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "adaptive": {
+      "proximityPct": 93.6,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 31.4,
+      "minimumRequiredScore": 83,
+      "scoreGap": 0,
+      "calibratedVariantId": "strict",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 10.104,
+      "entryHigh": 10.163,
+      "stopLoss": 9.838,
+      "target1": 10.666,
+      "target2": 10.902,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
-    "historySessions": 101,
-    "firstSession": "2026-02-03",
+    "historySessions": 100,
+    "firstSession": "2026-02-08",
     "lastSession": "2026-08-04",
     "averageConfidence": 73.9,
     "symbolVerified": true,
@@ -71,7 +91,6 @@
   },
   "chart": {
     "dates": [
-      "2026-02-05",
       "2026-02-08",
       "2026-02-09",
       "2026-02-10",
@@ -170,10 +189,10 @@
       "2026-07-28",
       "2026-07-29",
       "2026-08-02",
+      "2026-08-03",
       "2026-08-04"
     ],
     "open": [
-      8.65,
       8.58,
       8.61,
       8.59,
@@ -272,10 +291,10 @@
       10.09,
       10.24,
       9.99,
+      10.14,
       10.06
     ],
     "high": [
-      8.69,
       8.75,
       8.67,
       8.62,
@@ -374,10 +393,10 @@
       10.26,
       10.25,
       10.15,
+      10.14,
       10.14
     ],
     "low": [
-      8.43,
       8.56,
       8.47,
       8.48,
@@ -476,10 +495,10 @@
       10.06,
       10.07,
       9.95,
+      10.04,
       9.97
     ],
     "close": [
-      8.58,
       8.61,
       8.59,
       8.49,
@@ -578,10 +597,10 @@
       10.24,
       10.12,
       10.14,
+      10.06,
       10.13
     ],
     "volume": [
-      2516417,
       1488651,
       1236708,
       727886,
@@ -680,6 +699,7 @@
       2712388,
       917941,
       1894030,
+      1031422,
       1853400
     ],
     "sma20": [
@@ -702,7 +722,6 @@
       0,
       0,
       0,
-      8.585,
       8.593,
       8.592,
       8.587,
@@ -782,7 +801,8 @@
       10.014,
       10.023,
       10.038,
-      10.054
+      10.051,
+      10.079
     ],
     "sma50": [
       0,
@@ -834,7 +854,6 @@
       0,
       0,
       0,
-      8.726,
       8.766,
       8.802,
       8.834,
@@ -884,7 +903,8 @@
       9.953,
       9.969,
       9.985,
-      9.987
+      9.986,
+      9.976
     ]
   }
 }

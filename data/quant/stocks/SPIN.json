@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-08-04T17:21:12.512Z",
+  "generatedAt": "2026-08-05T16:51:22.020Z",
   "ticker": "SPIN",
   "companyNameAr": "سبينالكس",
   "companyNameEn": "Alexandria Spinning & Weaving",
@@ -17,24 +17,24 @@
   },
   "indicators": {
     "close": 15.62,
-    "change1Pct": -0.128,
-    "return5Pct": 4.622,
-    "return20Pct": 10,
-    "return50Pct": 8.022,
-    "sma5": 15.574,
-    "sma20": 14.863,
-    "sma50": 14.451,
-    "ema9": 15.331,
-    "ema21": 14.95,
-    "rsi14": 77.419,
-    "macd": 0.356,
-    "macdSignal": 0.259,
-    "atr14": 0.471,
-    "atrPct": 3.018,
-    "averageVolume20": 1257800.45,
-    "volumeRatio20": 1.279,
-    "averageTurnover20Egp": 19026643.103,
-    "volatility20Pct": 1.543,
+    "change1Pct": -1.202,
+    "return5Pct": 3.925,
+    "return20Pct": 10.311,
+    "return50Pct": 8.699,
+    "sma5": 15.73,
+    "sma20": 14.946,
+    "sma50": 14.48,
+    "ema9": 15.419,
+    "ema21": 15.027,
+    "rsi14": 72.811,
+    "macd": 0.374,
+    "macdSignal": 0.284,
+    "atr14": 0.484,
+    "atrPct": 3.1,
+    "averageVolume20": 1303642.35,
+    "volumeRatio20": 1.234,
+    "averageTurnover20Egp": 19762207.659,
+    "volatility20Pct": 1.579,
     "support20": 14,
     "resistance20": 16.95,
     "high50": 16.95,
@@ -49,29 +49,48 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 97.2,
+    "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
     "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "adaptive": {
+      "proximityPct": 93.6,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 30.7,
+      "minimumRequiredScore": 83,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 15.564,
+      "entryHigh": 15.69,
+      "stopLoss": 15.002,
+      "target1": 16.753,
+      "target2": 17.253,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
-    "historySessions": 101,
-    "firstSession": "2026-02-18",
+    "historySessions": 100,
+    "firstSession": "2026-02-22",
     "lastSession": "2026-08-04",
-    "averageConfidence": 74.25,
+    "averageConfidence": 73.9,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
     "eligibilityLabelAr": "مكتمل وحديث"
   },
   "chart": {
     "dates": [
-      "2026-02-19",
       "2026-02-22",
       "2026-02-23",
       "2026-02-24",
@@ -170,10 +189,10 @@
       "2026-07-28",
       "2026-07-29",
       "2026-07-30",
+      "2026-08-03",
       "2026-08-04"
     ],
     "open": [
-      14.04,
       13.91,
       13.64,
       13.8,
@@ -272,10 +291,10 @@
       16.5,
       15.96,
       15.62,
+      15.82,
       15.81
     ],
     "high": [
-      14.09,
       13.94,
       13.9,
       14,
@@ -374,10 +393,10 @@
       16.95,
       16.75,
       16.09,
+      16,
       16.08
     ],
     "low": [
-      13.82,
       13.02,
       13.41,
       13.71,
@@ -476,10 +495,10 @@
       15.9,
       15.6,
       15.3,
+      15.62,
       15.6
     ],
     "close": [
-      13.91,
       13.64,
       13.8,
       13.76,
@@ -578,10 +597,10 @@
       15.96,
       15.62,
       15.64,
+      15.81,
       15.62
     ],
     "volume": [
-      91330,
       457688,
       505885,
       243293,
@@ -680,6 +699,7 @@
       3028196,
       2596865,
       1862173,
+      1047797,
       1608193
     ],
     "sma20": [
@@ -702,7 +722,6 @@
       0,
       0,
       0,
-      13.882,
       13.892,
       13.919,
       13.947,
@@ -782,7 +801,8 @@
       14.643,
       14.725,
       14.792,
-      14.863
+      14.872,
+      14.946
     ],
     "sma50": [
       0,
@@ -834,7 +854,6 @@
       0,
       0,
       0,
-      14.212,
       14.221,
       14.235,
       14.253,
@@ -884,7 +903,8 @@
       14.378,
       14.401,
       14.428,
-      14.451
+      14.455,
+      14.48
     ]
   }
 }
