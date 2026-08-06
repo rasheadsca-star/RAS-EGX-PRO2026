@@ -1,14 +1,14 @@
 {
   "schemaVersion": "13.14.0",
-  "generatedAt": "2026-08-05T17:11:23.094Z",
+  "generatedAt": "2026-08-06T08:35:45.232Z",
   "operationalStatus": "PROVISIONAL_INTRADAY_ON_OLDER_ANALYSIS",
   "operationalLabelAr": "قرار مؤقت على تحليل يومي أقدم",
   "analysisSession": "2026-08-04",
-  "marketDate": "2026-08-05",
+  "marketDate": "2026-08-06",
   "marketCurrent": true,
   "analysisCurrent": false,
   "finalizationCurrent": false,
-  "marketSessionState": "POST_CLOSE",
+  "marketSessionState": "OPEN",
   "publicDelayedData": true,
   "liveExecutionEnabled": false,
   "automaticOrderSubmission": false,
@@ -28,7 +28,7 @@
     "ready": 0,
     "wait": 0,
     "blocked": 0,
-    "unreadAlerts": 0,
+    "unreadAlerts": 20,
     "discoveryWatch": 1
   },
   "primaryCandidate": {
@@ -43,15 +43,15 @@
     "rankChange": 2,
     "recommendationScore": 100,
     "baselineDecisionScore": 83.9,
-    "liveDecisionScore": 75.7,
+    "liveDecisionScore": 45.7,
     "currentPrice": 1.85,
     "changePct": 0,
     "moveSincePreviousSnapshotPct": 0,
     "state": "ENTRY_ZONE",
     "stateLabelAr": "داخل منطقة الدخول",
     "fetchedAt": "2026-08-05T17:01:50.774Z",
-    "dataAgeMinutes": 9.5,
-    "stale": false,
+    "dataAgeMinutes": 933.9,
+    "stale": true,
     "marketCurrent": true,
     "plan": {
       "entryLow": 1.8499,
@@ -78,7 +78,22 @@
     "softFailureCount": 0,
     "softFailures": [],
     "chartPath": "../../data/quant/stocks/MEPA.json",
-    "latestAlerts": [],
+    "latestAlerts": [
+      {
+        "generatedAt": "2026-08-06T08:35:45.129Z",
+        "acknowledged": false,
+        "id": "2026-08-06:MEPA:stale_data:",
+        "level": "critical",
+        "type": "stale_data",
+        "ticker": "MEPA",
+        "titleAr": "MEPA: البيانات أصبحت قديمة",
+        "detailAr": "عمر البيانات 933.9 دقيقة.",
+        "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+        "currentValue": 933.90535,
+        "price": 1.85,
+        "tier": "TIER_B_PRIORITY_WATCH"
+      }
+    ],
     "sourceMode": "public_delayed",
     "source": "mubasher_symbol_pages",
     "finalDecision": {
@@ -87,7 +102,7 @@
       "actionable": false,
       "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
     },
-    "priorityScore": 61.57,
+    "priorityScore": 58.57,
     "riskPct": 0.25,
     "unifiedRank": 1
   },
@@ -104,15 +119,15 @@
       "rankChange": 2,
       "recommendationScore": 100,
       "baselineDecisionScore": 83.9,
-      "liveDecisionScore": 75.7,
+      "liveDecisionScore": 45.7,
       "currentPrice": 1.85,
       "changePct": 0,
       "moveSincePreviousSnapshotPct": 0,
       "state": "ENTRY_ZONE",
       "stateLabelAr": "داخل منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 1.8499,
@@ -139,7 +154,22 @@
       "softFailureCount": 0,
       "softFailures": [],
       "chartPath": "../../data/quant/stocks/MEPA.json",
-      "latestAlerts": [],
+      "latestAlerts": [
+        {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:MEPA:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "MEPA",
+          "titleAr": "MEPA: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 1.85,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        }
+      ],
       "sourceMode": "public_delayed",
       "source": "mubasher_symbol_pages",
       "finalDecision": {
@@ -148,7 +178,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 61.57,
+      "priorityScore": 58.57,
       "riskPct": 0.25,
       "unifiedRank": 1
     },
@@ -164,15 +194,15 @@
       "rankChange": 8,
       "recommendationScore": 95.6,
       "baselineDecisionScore": 79.3,
-      "liveDecisionScore": 72.5,
+      "liveDecisionScore": 42.5,
       "currentPrice": 0.47,
       "changePct": 0,
       "moveSincePreviousSnapshotPct": 0,
       "state": "ENTRY_ZONE",
       "stateLabelAr": "داخل منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 0.468,
@@ -200,6 +230,20 @@
       "softFailures": [],
       "chartPath": "../../data/quant/stocks/SPMD.json",
       "latestAlerts": [
+        {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:SPMD:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "SPMD",
+          "titleAr": "SPMD: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 0.47,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        },
         {
           "generatedAt": "2026-08-05T13:12:31.274Z",
           "acknowledged": false,
@@ -269,7 +313,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 61.25,
+      "priorityScore": 58.25,
       "riskPct": 0.25,
       "unifiedRank": 2
     },
@@ -285,15 +329,15 @@
       "rankChange": 10,
       "recommendationScore": 94.5,
       "baselineDecisionScore": 77.9,
-      "liveDecisionScore": 71,
+      "liveDecisionScore": 41,
       "currentPrice": 45.1,
       "changePct": -0.33,
       "moveSincePreviousSnapshotPct": 0,
       "state": "ENTRY_ZONE",
       "stateLabelAr": "داخل منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 44.8599,
@@ -321,6 +365,20 @@
       "softFailures": [],
       "chartPath": "../../data/quant/stocks/MPRC.json",
       "latestAlerts": [
+        {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:MPRC:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "MPRC",
+          "titleAr": "MPRC: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 45.1,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        },
         {
           "generatedAt": "2026-08-05T13:12:31.274Z",
           "acknowledged": false,
@@ -360,7 +418,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 61.1,
+      "priorityScore": 58.1,
       "riskPct": 0.25,
       "unifiedRank": 3
     },
@@ -376,15 +434,15 @@
       "rankChange": 14,
       "recommendationScore": 100,
       "baselineDecisionScore": 76.8,
-      "liveDecisionScore": 70.8,
+      "liveDecisionScore": 40.8,
       "currentPrice": 794,
       "changePct": 0.02,
       "moveSincePreviousSnapshotPct": 0,
       "state": "ENTRY_ZONE",
       "stateLabelAr": "داخل منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 790.5033,
@@ -412,6 +470,20 @@
       "softFailures": [],
       "chartPath": "../../data/quant/stocks/MIPH.json",
       "latestAlerts": [
+        {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:MIPH:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "MIPH",
+          "titleAr": "MIPH: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 794,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        },
         {
           "generatedAt": "2026-08-05T13:12:31.274Z",
           "acknowledged": false,
@@ -466,7 +538,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 61.08,
+      "priorityScore": 58.08,
       "riskPct": 0.25,
       "unifiedRank": 4
     },
@@ -482,15 +554,15 @@
       "rankChange": -3,
       "recommendationScore": 93.3,
       "baselineDecisionScore": 84.1,
-      "liveDecisionScore": 64.7,
+      "liveDecisionScore": 34.7,
       "currentPrice": 139.27,
       "changePct": -0.77,
       "moveSincePreviousSnapshotPct": 0,
       "state": "BELOW_ENTRY",
       "stateLabelAr": "أقل من منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 139.3911,
@@ -519,6 +591,20 @@
       "chartPath": "../../data/quant/stocks/COMI.json",
       "latestAlerts": [
         {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:COMI:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "COMI",
+          "titleAr": "COMI: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 139.27,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        },
+        {
           "generatedAt": "2026-08-05T13:12:31.273Z",
           "acknowledged": false,
           "id": "2026-08-05:COMI:state_change:BELOW_ENTRY",
@@ -542,7 +628,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 60.47,
+      "priorityScore": 57.47,
       "riskPct": 0.25,
       "unifiedRank": 5
     }
@@ -560,15 +646,15 @@
       "rankChange": 2,
       "recommendationScore": 100,
       "baselineDecisionScore": 83.9,
-      "liveDecisionScore": 75.7,
+      "liveDecisionScore": 45.7,
       "currentPrice": 1.85,
       "changePct": 0,
       "moveSincePreviousSnapshotPct": 0,
       "state": "ENTRY_ZONE",
       "stateLabelAr": "داخل منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 1.8499,
@@ -595,7 +681,22 @@
       "softFailureCount": 0,
       "softFailures": [],
       "chartPath": "../../data/quant/stocks/MEPA.json",
-      "latestAlerts": [],
+      "latestAlerts": [
+        {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:MEPA:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "MEPA",
+          "titleAr": "MEPA: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 1.85,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        }
+      ],
       "sourceMode": "public_delayed",
       "source": "mubasher_symbol_pages",
       "finalDecision": {
@@ -604,7 +705,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 61.57,
+      "priorityScore": 58.57,
       "riskPct": 0.25,
       "unifiedRank": 1
     },
@@ -620,15 +721,15 @@
       "rankChange": 8,
       "recommendationScore": 95.6,
       "baselineDecisionScore": 79.3,
-      "liveDecisionScore": 72.5,
+      "liveDecisionScore": 42.5,
       "currentPrice": 0.47,
       "changePct": 0,
       "moveSincePreviousSnapshotPct": 0,
       "state": "ENTRY_ZONE",
       "stateLabelAr": "داخل منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 0.468,
@@ -656,6 +757,20 @@
       "softFailures": [],
       "chartPath": "../../data/quant/stocks/SPMD.json",
       "latestAlerts": [
+        {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:SPMD:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "SPMD",
+          "titleAr": "SPMD: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 0.47,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        },
         {
           "generatedAt": "2026-08-05T13:12:31.274Z",
           "acknowledged": false,
@@ -725,7 +840,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 61.25,
+      "priorityScore": 58.25,
       "riskPct": 0.25,
       "unifiedRank": 2
     },
@@ -741,15 +856,15 @@
       "rankChange": 10,
       "recommendationScore": 94.5,
       "baselineDecisionScore": 77.9,
-      "liveDecisionScore": 71,
+      "liveDecisionScore": 41,
       "currentPrice": 45.1,
       "changePct": -0.33,
       "moveSincePreviousSnapshotPct": 0,
       "state": "ENTRY_ZONE",
       "stateLabelAr": "داخل منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 44.8599,
@@ -777,6 +892,20 @@
       "softFailures": [],
       "chartPath": "../../data/quant/stocks/MPRC.json",
       "latestAlerts": [
+        {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:MPRC:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "MPRC",
+          "titleAr": "MPRC: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 45.1,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        },
         {
           "generatedAt": "2026-08-05T13:12:31.274Z",
           "acknowledged": false,
@@ -816,7 +945,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 61.1,
+      "priorityScore": 58.1,
       "riskPct": 0.25,
       "unifiedRank": 3
     },
@@ -832,15 +961,15 @@
       "rankChange": 14,
       "recommendationScore": 100,
       "baselineDecisionScore": 76.8,
-      "liveDecisionScore": 70.8,
+      "liveDecisionScore": 40.8,
       "currentPrice": 794,
       "changePct": 0.02,
       "moveSincePreviousSnapshotPct": 0,
       "state": "ENTRY_ZONE",
       "stateLabelAr": "داخل منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 790.5033,
@@ -868,6 +997,20 @@
       "softFailures": [],
       "chartPath": "../../data/quant/stocks/MIPH.json",
       "latestAlerts": [
+        {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:MIPH:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "MIPH",
+          "titleAr": "MIPH: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 794,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        },
         {
           "generatedAt": "2026-08-05T13:12:31.274Z",
           "acknowledged": false,
@@ -922,7 +1065,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 61.08,
+      "priorityScore": 58.08,
       "riskPct": 0.25,
       "unifiedRank": 4
     },
@@ -938,15 +1081,15 @@
       "rankChange": -3,
       "recommendationScore": 93.3,
       "baselineDecisionScore": 84.1,
-      "liveDecisionScore": 64.7,
+      "liveDecisionScore": 34.7,
       "currentPrice": 139.27,
       "changePct": -0.77,
       "moveSincePreviousSnapshotPct": 0,
       "state": "BELOW_ENTRY",
       "stateLabelAr": "أقل من منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 139.3911,
@@ -975,6 +1118,20 @@
       "chartPath": "../../data/quant/stocks/COMI.json",
       "latestAlerts": [
         {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:COMI:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "COMI",
+          "titleAr": "COMI: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 139.27,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        },
+        {
           "generatedAt": "2026-08-05T13:12:31.273Z",
           "acknowledged": false,
           "id": "2026-08-05:COMI:state_change:BELOW_ENTRY",
@@ -998,7 +1155,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 60.47,
+      "priorityScore": 57.47,
       "riskPct": 0.25,
       "unifiedRank": 5
     },
@@ -1014,15 +1171,15 @@
       "rankChange": -1,
       "recommendationScore": 92.8,
       "baselineDecisionScore": 81.8,
-      "liveDecisionScore": 64.3,
+      "liveDecisionScore": 34.3,
       "currentPrice": 2.18,
       "changePct": 0,
       "moveSincePreviousSnapshotPct": 0,
       "state": "BELOW_ENTRY",
       "stateLabelAr": "أقل من منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 2.1844,
@@ -1051,6 +1208,20 @@
       "chartPath": "../../data/quant/stocks/ELEC.json",
       "latestAlerts": [
         {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:ELEC:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "ELEC",
+          "titleAr": "ELEC: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 2.18,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        },
+        {
           "generatedAt": "2026-08-05T11:03:04.623Z",
           "acknowledged": false,
           "id": "2026-08-05:ELEC:state_change:BELOW_ENTRY",
@@ -1074,7 +1245,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 60.43,
+      "priorityScore": 57.43,
       "riskPct": 0.25,
       "unifiedRank": 6
     },
@@ -1090,15 +1261,15 @@
       "rankChange": -3,
       "recommendationScore": 100,
       "baselineDecisionScore": 83.4,
-      "liveDecisionScore": 62.5,
+      "liveDecisionScore": 32.5,
       "currentPrice": 81,
       "changePct": 3.44,
       "moveSincePreviousSnapshotPct": 0,
       "state": "ABOVE_ENTRY",
       "stateLabelAr": "أعلى منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 77.6431,
@@ -1126,6 +1297,20 @@
       "softFailures": [],
       "chartPath": "../../data/quant/stocks/SCEM.json",
       "latestAlerts": [
+        {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:SCEM:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "SCEM",
+          "titleAr": "SCEM: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 81,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        },
         {
           "generatedAt": "2026-08-05T11:03:04.623Z",
           "acknowledged": false,
@@ -1184,20 +1369,6 @@
           "currentValue": 5.2,
           "price": 82.48,
           "tier": "TIER_B_PRIORITY_WATCH"
-        },
-        {
-          "generatedAt": "2026-08-05T08:32:23.324Z",
-          "acknowledged": false,
-          "id": "2026-08-05:SCEM:session_up_cross:5",
-          "level": "opportunity",
-          "type": "session_up_cross",
-          "ticker": "SCEM",
-          "titleAr": "SCEM: تجاوز +5% خلال الجلسة",
-          "detailAr": "التغير الحالي 5.2%.",
-          "actionAr": "راجع عدم مطاردة السعر ومساحة الهدف.",
-          "currentValue": 5.2,
-          "price": 82.48,
-          "tier": "TIER_B_PRIORITY_WATCH"
         }
       ],
       "sourceMode": "public_delayed",
@@ -1208,7 +1379,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 60.25,
+      "priorityScore": 57.25,
       "riskPct": 0.25,
       "unifiedRank": 7
     },
@@ -1224,15 +1395,15 @@
       "rankChange": -1,
       "recommendationScore": 100,
       "baselineDecisionScore": 81,
-      "liveDecisionScore": 62.1,
+      "liveDecisionScore": 32.1,
       "currentPrice": 10.71,
       "changePct": 4.27,
       "moveSincePreviousSnapshotPct": 0,
       "state": "ABOVE_ENTRY",
       "stateLabelAr": "أعلى منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 10.1675,
@@ -1260,6 +1431,20 @@
       "softFailures": [],
       "chartPath": "../../data/quant/stocks/MTIE.json",
       "latestAlerts": [
+        {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:MTIE:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "MTIE",
+          "titleAr": "MTIE: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 10.71,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        },
         {
           "generatedAt": "2026-08-05T11:03:04.623Z",
           "acknowledged": false,
@@ -1318,21 +1503,6 @@
           "currentValue": "ENTRY_ZONE",
           "price": 10.2,
           "tier": "TIER_B_PRIORITY_WATCH"
-        },
-        {
-          "generatedAt": "2026-08-04T13:17:32.936Z",
-          "acknowledged": false,
-          "id": "2026-08-04:MTIE:state_change:TARGET1_HIT",
-          "level": "opportunity",
-          "type": "state_change",
-          "ticker": "MTIE",
-          "titleAr": "MTIE: وصل الهدف الأول",
-          "detailAr": "الحالة السابقة: أعلى منطقة الدخول — السعر 10.2.",
-          "actionAr": "مراجعة جني جزء من الربح وتحريك الوقف.",
-          "previousValue": "ABOVE_ENTRY",
-          "currentValue": "TARGET1_HIT",
-          "price": 10.2,
-          "tier": "TIER_B_PRIORITY_WATCH"
         }
       ],
       "sourceMode": "public_delayed",
@@ -1343,7 +1513,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 60.21,
+      "priorityScore": 57.21,
       "riskPct": 0.25,
       "unifiedRank": 8
     },
@@ -1359,15 +1529,15 @@
       "rankChange": -1,
       "recommendationScore": 96.1,
       "baselineDecisionScore": 80.9,
-      "liveDecisionScore": 61.1,
+      "liveDecisionScore": 31.1,
       "currentPrice": 9.2,
       "changePct": -1.71,
       "moveSincePreviousSnapshotPct": 0,
       "state": "BELOW_ENTRY",
       "stateLabelAr": "أقل من منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 9.3038,
@@ -1396,6 +1566,20 @@
       "chartPath": "../../data/quant/stocks/PRDC.json",
       "latestAlerts": [
         {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:PRDC:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "PRDC",
+          "titleAr": "PRDC: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 9.2,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        },
+        {
           "generatedAt": "2026-08-05T11:03:04.623Z",
           "acknowledged": false,
           "id": "2026-08-05:PRDC:state_change:BELOW_ENTRY",
@@ -1419,7 +1603,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 60.11,
+      "priorityScore": 57.11,
       "riskPct": 0.25,
       "unifiedRank": 9
     },
@@ -1435,15 +1619,15 @@
       "rankChange": 6,
       "recommendationScore": 94.2,
       "baselineDecisionScore": 76.9,
-      "liveDecisionScore": 60.8,
+      "liveDecisionScore": 30.8,
       "currentPrice": 36.3,
       "changePct": 5.43,
       "moveSincePreviousSnapshotPct": 0,
       "state": "ABOVE_ENTRY",
       "stateLabelAr": "أعلى منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 34.2795,
@@ -1471,6 +1655,20 @@
       "softFailures": [],
       "chartPath": "../../data/quant/stocks/CSAG.json",
       "latestAlerts": [
+        {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:CSAG:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "CSAG",
+          "titleAr": "CSAG: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 36.3,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        },
         {
           "generatedAt": "2026-08-05T13:12:31.274Z",
           "acknowledged": false,
@@ -1538,7 +1736,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 60.08,
+      "priorityScore": 57.08,
       "riskPct": 0.25,
       "unifiedRank": 10
     },
@@ -1554,15 +1752,15 @@
       "rankChange": 1,
       "recommendationScore": 96,
       "baselineDecisionScore": 78.7,
-      "liveDecisionScore": 60.1,
+      "liveDecisionScore": 30.1,
       "currentPrice": 8.19,
       "changePct": -1.33,
       "moveSincePreviousSnapshotPct": 0,
       "state": "BELOW_ENTRY",
       "stateLabelAr": "أقل من منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 8.2411,
@@ -1591,6 +1789,20 @@
       "chartPath": "../../data/quant/stocks/KABO.json",
       "latestAlerts": [
         {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:KABO:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "KABO",
+          "titleAr": "KABO: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 8.19,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        },
+        {
           "generatedAt": "2026-08-05T08:32:23.324Z",
           "acknowledged": false,
           "id": "2026-08-05:KABO:state_change:BELOW_ENTRY",
@@ -1614,7 +1826,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 60.01,
+      "priorityScore": 57.01,
       "riskPct": 0.25,
       "unifiedRank": 11
     },
@@ -1630,15 +1842,15 @@
       "rankChange": -11,
       "recommendationScore": 100,
       "baselineDecisionScore": 84.6,
-      "liveDecisionScore": 59.7,
+      "liveDecisionScore": 29.7,
       "currentPrice": 2.05,
       "changePct": 0.99,
       "moveSincePreviousSnapshotPct": 0,
       "state": "ABOVE_ENTRY",
       "stateLabelAr": "أعلى منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 2.0239,
@@ -1666,6 +1878,20 @@
       "softFailures": [],
       "chartPath": "../../data/quant/stocks/DSCW.json",
       "latestAlerts": [
+        {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:DSCW:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "DSCW",
+          "titleAr": "DSCW: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 2.05,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        },
         {
           "generatedAt": "2026-08-05T11:03:04.623Z",
           "acknowledged": false,
@@ -1725,20 +1951,6 @@
           "currentValue": "ENTRY_ZONE",
           "price": 2.03,
           "tier": "TIER_B_PRIORITY_WATCH"
-        },
-        {
-          "generatedAt": "2026-08-04T08:37:18.523Z",
-          "acknowledged": false,
-          "id": "2026-08-04:DSCW:stale_data:",
-          "level": "critical",
-          "type": "stale_data",
-          "ticker": "DSCW",
-          "titleAr": "DSCW: البيانات أصبحت قديمة",
-          "detailAr": "عمر البيانات 909.1 دقيقة.",
-          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
-          "currentValue": 909.0693833333333,
-          "price": 2.04,
-          "tier": "TIER_B_PRIORITY_WATCH"
         }
       ],
       "sourceMode": "public_delayed",
@@ -1749,7 +1961,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 59.97,
+      "priorityScore": 56.97,
       "riskPct": 0.25,
       "unifiedRank": 12
     },
@@ -1765,15 +1977,15 @@
       "rankChange": 6,
       "recommendationScore": 100,
       "baselineDecisionScore": 76,
-      "liveDecisionScore": 59.5,
+      "liveDecisionScore": 29.5,
       "currentPrice": 51.58,
       "changePct": 4.84,
       "moveSincePreviousSnapshotPct": 0,
       "state": "ABOVE_ENTRY",
       "stateLabelAr": "أعلى منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 49.7199,
@@ -1801,6 +2013,20 @@
       "softFailures": [],
       "chartPath": "../../data/quant/stocks/MFSC.json",
       "latestAlerts": [
+        {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:MFSC:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "MFSC",
+          "titleAr": "MFSC: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 51.58,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        },
         {
           "generatedAt": "2026-08-05T11:03:04.623Z",
           "acknowledged": false,
@@ -1859,20 +2085,6 @@
           "currentValue": 9.43,
           "price": 53.84,
           "tier": "TIER_B_PRIORITY_WATCH"
-        },
-        {
-          "generatedAt": "2026-08-05T08:32:23.324Z",
-          "acknowledged": false,
-          "id": "2026-08-05:MFSC:session_up_cross:5",
-          "level": "opportunity",
-          "type": "session_up_cross",
-          "ticker": "MFSC",
-          "titleAr": "MFSC: تجاوز +5% خلال الجلسة",
-          "detailAr": "التغير الحالي 9.43%.",
-          "actionAr": "راجع عدم مطاردة السعر ومساحة الهدف.",
-          "currentValue": 9.43,
-          "price": 53.84,
-          "tier": "TIER_B_PRIORITY_WATCH"
         }
       ],
       "sourceMode": "public_delayed",
@@ -1883,7 +2095,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 59.95,
+      "priorityScore": 56.95,
       "riskPct": 0.25,
       "unifiedRank": 13
     },
@@ -1899,15 +2111,15 @@
       "rankChange": -3,
       "recommendationScore": 95.6,
       "baselineDecisionScore": 79.2,
-      "liveDecisionScore": 58.9,
+      "liveDecisionScore": 28.9,
       "currentPrice": 89.8,
       "changePct": 2.98,
       "moveSincePreviousSnapshotPct": 0,
       "state": "ABOVE_ENTRY",
       "stateLabelAr": "أعلى منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 86.6768,
@@ -1935,6 +2147,20 @@
       "softFailures": [],
       "chartPath": "../../data/quant/stocks/KWIN.json",
       "latestAlerts": [
+        {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:KWIN:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "KWIN",
+          "titleAr": "KWIN: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 89.8,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        },
         {
           "generatedAt": "2026-08-05T11:03:04.623Z",
           "acknowledged": false,
@@ -1993,20 +2219,6 @@
           "currentValue": 5.52,
           "price": 92.01,
           "tier": "TIER_B_PRIORITY_WATCH"
-        },
-        {
-          "generatedAt": "2026-08-05T08:32:23.324Z",
-          "acknowledged": false,
-          "id": "2026-08-05:KWIN:session_up_cross:5",
-          "level": "opportunity",
-          "type": "session_up_cross",
-          "ticker": "KWIN",
-          "titleAr": "KWIN: تجاوز +5% خلال الجلسة",
-          "detailAr": "التغير الحالي 5.52%.",
-          "actionAr": "راجع عدم مطاردة السعر ومساحة الهدف.",
-          "currentValue": 5.52,
-          "price": 92.01,
-          "tier": "TIER_B_PRIORITY_WATCH"
         }
       ],
       "sourceMode": "public_delayed",
@@ -2017,7 +2229,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 59.89,
+      "priorityScore": 56.89,
       "riskPct": 0.25,
       "unifiedRank": 14
     },
@@ -2033,15 +2245,15 @@
       "rankChange": -9,
       "recommendationScore": 99.6,
       "baselineDecisionScore": 81.1,
-      "liveDecisionScore": 58.1,
+      "liveDecisionScore": 28.1,
       "currentPrice": 47.06,
       "changePct": 1.58,
       "moveSincePreviousSnapshotPct": 0,
       "state": "ABOVE_ENTRY",
       "stateLabelAr": "أعلى منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 45.8841,
@@ -2069,6 +2281,20 @@
       "softFailures": [],
       "chartPath": "../../data/quant/stocks/ENGC.json",
       "latestAlerts": [
+        {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:ENGC:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "ENGC",
+          "titleAr": "ENGC: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 47.06,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        },
         {
           "generatedAt": "2026-08-05T11:03:04.623Z",
           "acknowledged": false,
@@ -2128,21 +2354,6 @@
           "currentValue": "ENTRY_ZONE",
           "price": 46.12,
           "tier": "TIER_B_PRIORITY_WATCH"
-        },
-        {
-          "generatedAt": "2026-08-04T15:36:11.282Z",
-          "acknowledged": false,
-          "id": "2026-08-04:ENGC:tier_change:TIER_A_EXPERIMENTAL_PAPER:TIER_B_PRIORITY_WATCH",
-          "level": "opportunity",
-          "type": "tier_change",
-          "ticker": "ENGC",
-          "titleAr": "ENGC: تغير مستوى الترشيح",
-          "detailAr": "من الطبقة A — ورقي تجريبي إلى الطبقة B — مراقبة أولوية.",
-          "actionAr": "راجع أسباب التغير في صفحة قرار اليوم.",
-          "previousValue": "TIER_A_EXPERIMENTAL_PAPER",
-          "currentValue": "TIER_B_PRIORITY_WATCH",
-          "price": 46.12,
-          "tier": "TIER_B_PRIORITY_WATCH"
         }
       ],
       "sourceMode": "public_delayed",
@@ -2153,7 +2364,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 59.81,
+      "priorityScore": 56.81,
       "riskPct": 0.25,
       "unifiedRank": 15
     },
@@ -2169,15 +2380,15 @@
       "rankChange": -1,
       "recommendationScore": 99.8,
       "baselineDecisionScore": 77,
-      "liveDecisionScore": 57.7,
+      "liveDecisionScore": 27.7,
       "currentPrice": 18.12,
       "changePct": -2.16,
       "moveSincePreviousSnapshotPct": 0,
       "state": "BELOW_ENTRY",
       "stateLabelAr": "أقل من منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 18.4089,
@@ -2205,6 +2416,20 @@
       "softFailures": [],
       "chartPath": "../../data/quant/stocks/UNIT.json",
       "latestAlerts": [
+        {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:UNIT:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "UNIT",
+          "titleAr": "UNIT: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 18.12,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        },
         {
           "generatedAt": "2026-08-05T11:03:04.623Z",
           "acknowledged": false,
@@ -2244,7 +2469,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 59.77,
+      "priorityScore": 56.77,
       "riskPct": 0.25,
       "unifiedRank": 16
     },
@@ -2260,15 +2485,15 @@
       "rankChange": -8,
       "recommendationScore": 98.9,
       "baselineDecisionScore": 79.7,
-      "liveDecisionScore": 57.2,
+      "liveDecisionScore": 27.2,
       "currentPrice": 191.9,
       "changePct": 1.58,
       "moveSincePreviousSnapshotPct": 0,
       "state": "ABOVE_ENTRY",
       "stateLabelAr": "أعلى منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 187.9484,
@@ -2296,6 +2521,20 @@
       "softFailures": [],
       "chartPath": "../../data/quant/stocks/AJWA.json",
       "latestAlerts": [
+        {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:AJWA:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "AJWA",
+          "titleAr": "AJWA: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 191.9,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        },
         {
           "generatedAt": "2026-08-05T11:03:04.623Z",
           "acknowledged": false,
@@ -2350,7 +2589,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 59.72,
+      "priorityScore": 56.72,
       "riskPct": 0.25,
       "unifiedRank": 17
     },
@@ -2366,15 +2605,15 @@
       "rankChange": -1,
       "recommendationScore": 100,
       "baselineDecisionScore": 76.8,
-      "liveDecisionScore": 56.5,
+      "liveDecisionScore": 26.5,
       "currentPrice": 8.23,
       "changePct": 2.49,
       "moveSincePreviousSnapshotPct": 0,
       "state": "ABOVE_ENTRY",
       "stateLabelAr": "أعلى منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 7.9879,
@@ -2402,6 +2641,20 @@
       "softFailures": [],
       "chartPath": "../../data/quant/stocks/ADRI.json",
       "latestAlerts": [
+        {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:ADRI:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "ADRI",
+          "titleAr": "ADRI: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 8.23,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        },
         {
           "generatedAt": "2026-08-05T13:12:31.274Z",
           "acknowledged": false,
@@ -2456,7 +2709,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 59.65,
+      "priorityScore": 56.65,
       "riskPct": 0.25,
       "unifiedRank": 18
     },
@@ -2472,15 +2725,15 @@
       "rankChange": -5,
       "recommendationScore": 97.1,
       "baselineDecisionScore": 77.2,
-      "liveDecisionScore": 55.6,
+      "liveDecisionScore": 25.6,
       "currentPrice": 235.04,
       "changePct": 1.7,
       "moveSincePreviousSnapshotPct": 0,
       "state": "ABOVE_ENTRY",
       "stateLabelAr": "أعلى منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 229.7092,
@@ -2508,6 +2761,20 @@
       "softFailures": [],
       "chartPath": "../../data/quant/stocks/SMFR.json",
       "latestAlerts": [
+        {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:SMFR:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "SMFR",
+          "titleAr": "SMFR: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 235.04,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        },
         {
           "generatedAt": "2026-08-05T11:03:04.623Z",
           "acknowledged": false,
@@ -2566,20 +2833,6 @@
           "currentValue": 7.75,
           "price": 249,
           "tier": "TIER_B_PRIORITY_WATCH"
-        },
-        {
-          "generatedAt": "2026-08-05T08:32:23.324Z",
-          "acknowledged": false,
-          "id": "2026-08-05:SMFR:session_up_cross:5",
-          "level": "opportunity",
-          "type": "session_up_cross",
-          "ticker": "SMFR",
-          "titleAr": "SMFR: تجاوز +5% خلال الجلسة",
-          "detailAr": "التغير الحالي 7.75%.",
-          "actionAr": "راجع عدم مطاردة السعر ومساحة الهدف.",
-          "currentValue": 7.75,
-          "price": 249,
-          "tier": "TIER_B_PRIORITY_WATCH"
         }
       ],
       "sourceMode": "public_delayed",
@@ -2590,7 +2843,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 59.56,
+      "priorityScore": 56.56,
       "riskPct": 0.25,
       "unifiedRank": 19
     },
@@ -2606,15 +2859,15 @@
       "rankChange": 0,
       "recommendationScore": 92.4,
       "baselineDecisionScore": 74.1,
-      "liveDecisionScore": 51.8,
+      "liveDecisionScore": 21.8,
       "currentPrice": 24.45,
       "changePct": 0.62,
       "moveSincePreviousSnapshotPct": 0,
       "state": "ABOVE_ENTRY",
       "stateLabelAr": "أعلى منطقة الدخول",
       "fetchedAt": "2026-08-05T17:01:50.774Z",
-      "dataAgeMinutes": 9.5,
-      "stale": false,
+      "dataAgeMinutes": 933.9,
+      "stale": true,
       "marketCurrent": true,
       "plan": {
         "entryLow": 24.2349,
@@ -2643,6 +2896,20 @@
       "chartPath": "../../data/quant/stocks/CIEB.json",
       "latestAlerts": [
         {
+          "generatedAt": "2026-08-06T08:35:45.129Z",
+          "acknowledged": false,
+          "id": "2026-08-06:CIEB:stale_data:",
+          "level": "critical",
+          "type": "stale_data",
+          "ticker": "CIEB",
+          "titleAr": "CIEB: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 933.9 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 933.90535,
+          "price": 24.45,
+          "tier": "TIER_B_PRIORITY_WATCH"
+        },
+        {
           "generatedAt": "2026-08-05T11:03:04.623Z",
           "acknowledged": false,
           "id": "2026-08-05:CIEB:state_change:ABOVE_ENTRY",
@@ -2666,7 +2933,7 @@
         "actionable": false,
         "reasonAr": "الطبقة B لا تتحول إلى شراء بسبب حركة لحظية."
       },
-      "priorityScore": 59.18,
+      "priorityScore": 56.18,
       "riskPct": 0.25,
       "unifiedRank": 20
     }
