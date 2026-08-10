@@ -1,47 +1,47 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-08-06T15:29:02.795Z",
+  "generatedAt": "2026-08-10T13:44:42.649Z",
   "ticker": "ACAMD",
   "companyNameAr": "العربية لإدارة وتطوير الأصول",
   "companyNameEn": "Arab Co. for Asset Management and Development",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-08-06",
+  "sessionId": "2026-08-09",
   "latest": {
-    "date": "2026-08-06",
-    "open": 2.34,
+    "date": "2026-08-09",
+    "open": 2.36,
     "high": 2.36,
-    "low": 2.32,
-    "close": 2.35,
-    "volume": 16428418
+    "low": 2.36,
+    "close": 2.36,
+    "volume": 0
   },
   "indicators": {
-    "close": 2.35,
-    "change1Pct": -0.844,
-    "return5Pct": -3.292,
-    "return20Pct": 4.911,
-    "return50Pct": 18.09,
-    "sma5": 2.372,
-    "sma20": 2.359,
-    "sma50": 2.296,
-    "ema9": 2.375,
+    "close": 2.36,
+    "change1Pct": 0,
+    "return5Pct": -0.84,
+    "return20Pct": 2.165,
+    "return50Pct": 5.83,
+    "sma5": 2.362,
+    "sma20": 2.366,
+    "sma50": 2.306,
+    "ema9": 2.368,
     "ema21": 2.353,
-    "rsi14": 50,
-    "macd": 0.031,
-    "macdSignal": 0.037,
-    "atr14": 0.072,
-    "atrPct": 3.07,
-    "averageVolume20": 29257674.35,
-    "volumeRatio20": 0.562,
-    "averageTurnover20Egp": 69311581.575,
-    "volatility20Pct": 1.628,
-    "support20": 2.21,
+    "rsi14": 52.778,
+    "macd": 0.024,
+    "macdSignal": 0.033,
+    "atr14": 0.068,
+    "atrPct": 2.875,
+    "averageVolume20": 27340134.8,
+    "volumeRatio20": 0,
+    "averageTurnover20Egp": 64973422.912,
+    "volatility20Pct": 1.554,
+    "support20": 2.28,
     "resistance20": 2.52,
     "high50": 2.6,
-    "low50": 1.94,
-    "distanceFromSupport20Pct": 6.335,
-    "relativeToResistance20Pct": -6.746,
-    "distanceFromHigh50Pct": -9.615
+    "low50": 2.14,
+    "distanceFromSupport20Pct": 3.509,
+    "relativeToResistance20Pct": -6.349,
+    "distanceFromHigh50Pct": -9.231
   },
   "technical": {
     "score": 66,
@@ -49,21 +49,46 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 92.4,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "نشاط الحجم الحالي: 0.57",
+      "سيولة كافية: 0.57"
+    ],
+    "adaptive": {
+      "proximityPct": 86.1,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 31.5,
+      "minimumRequiredScore": 83,
+      "scoreGap": 0,
+      "calibratedVariantId": "strict",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "نشاط الحجم الحالي: 0.57",
+        "سيولة كافية: 0.57"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 2.351,
+      "entryHigh": 2.371,
+      "stopLoss": 2.261,
+      "target1": 2.541,
+      "target2": 2.62,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
-    "historySessions": 101,
-    "firstSession": "2026-02-11",
-    "lastSession": "2026-08-06",
+    "historySessions": 100,
+    "firstSession": "2026-02-17",
+    "lastSession": "2026-08-09",
     "averageConfidence": 73.9,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,8 +96,6 @@
   },
   "chart": {
     "dates": [
-      "2026-02-12",
-      "2026-02-16",
       "2026-02-17",
       "2026-02-18",
       "2026-02-19",
@@ -170,11 +193,11 @@
       "2026-07-28",
       "2026-07-29",
       "2026-08-04",
-      "2026-08-06"
+      "2026-08-05",
+      "2026-08-06",
+      "2026-08-09"
     ],
     "open": [
-      2.16,
-      2.27,
       2.25,
       2.24,
       2.18,
@@ -272,11 +295,11 @@
       2.38,
       2.38,
       2.39,
-      2.34
+      2.37,
+      2.34,
+      2.36
     ],
     "high": [
-      2.18,
-      2.3,
       2.26,
       2.26,
       2.2,
@@ -374,11 +397,11 @@
       2.4,
       2.41,
       2.42,
+      2.37,
+      2.36,
       2.36
     ],
     "low": [
-      2.15,
-      2.22,
       2.21,
       2.18,
       2.08,
@@ -476,11 +499,11 @@
       2.33,
       2.35,
       2.32,
-      2.32
+      2.33,
+      2.32,
+      2.36
     ],
     "close": [
-      2.16,
-      2.25,
       2.24,
       2.18,
       2.09,
@@ -578,11 +601,11 @@
       2.38,
       2.38,
       2.37,
-      2.35
+      2.34,
+      2.36,
+      2.36
     ],
     "volume": [
-      26110392,
-      59294170,
       46743670,
       53536366,
       29851606,
@@ -680,7 +703,9 @@
       21959499,
       21146015,
       28553646,
-      16428418
+      14940982,
+      16428418,
+      0
     ],
     "sma20": [
       0,
@@ -702,8 +727,6 @@
       0,
       0,
       0,
-      2.049,
-      2.035,
       2.018,
       2,
       1.986,
@@ -782,7 +805,9 @@
       2.336,
       2.345,
       2.354,
-      2.359
+      2.359,
+      2.364,
+      2.366
     ],
     "sma50": [
       0,
@@ -834,8 +859,6 @@
       0,
       0,
       0,
-      1.942,
-      1.938,
       1.937,
       1.936,
       1.936,
@@ -884,7 +907,9 @@
       2.273,
       2.281,
       2.289,
-      2.296
+      2.296,
+      2.304,
+      2.306
     ]
   }
 }
