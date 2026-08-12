@@ -1,20 +1,20 @@
 {
   "schemaVersion": "13.5.0",
-  "generatedAt": "2026-08-11T15:41:45.707Z",
-  "sessionId": "2026-08-10",
+  "generatedAt": "2026-08-12T15:40:47.859Z",
+  "sessionId": "2026-08-11",
   "liveExecutionEnabled": false,
   "status": "CONDITIONAL_WATCH_ONLY",
   "statusLabelAr": "مراقبة مشروطة فقط",
   "marketRegime": {
-    "code": "BALANCED",
-    "labelAr": "سوق متوازن/جانبي",
+    "code": "BULLISH",
+    "labelAr": "اتجاه سوق صاعد",
     "basedOn": "equal-weight market breadth proxy from stored daily histories",
     "symbolsMeasured": 196,
-    "aboveSma20Pct": 76.02,
-    "aboveSma50Pct": 86.22,
-    "advancersPct": 1.53,
-    "medianReturn20Pct": 8.054,
-    "medianAtrPct": 3.125
+    "aboveSma20Pct": 77.04,
+    "aboveSma50Pct": 84.69,
+    "advancersPct": 51.53,
+    "medianReturn20Pct": 8.93,
+    "medianAtrPct": 3.258
   },
   "counts": {
     "sourcePaperCandidates": 0,
@@ -30,28 +30,28 @@
   "paperCandidates": [],
   "conditionalWatch": [
     {
-      "ticker": "MEPA",
-      "companyNameAr": "ميديكال باكجنج",
-      "companyNameEn": "Medical Packaging Company",
+      "ticker": "SCFM",
+      "companyNameAr": "مطاحن جنوب القاهرة والجيزة",
+      "companyNameEn": "South Cairo and Giza Flour Mills",
       "sector": null,
-      "signalDate": "2026-08-10",
+      "signalDate": "2026-08-11",
       "status": "NEAR_TRIGGER",
       "statusLabelAr": "قريب من اكتمال الإشارة",
       "strategyId": "trend_follow",
       "strategyLabelAr": "اتجاه قوي مع سيولة",
       "variantId": "balanced",
-      "recommendationScore": 86.6,
-      "rawSignalScore": 84.8,
+      "recommendationScore": 100,
+      "rawSignalScore": 98.1,
       "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "BALANCED",
-      "price": 1.87,
+      "marketRegime": "BULLISH",
+      "price": 286.49,
       "plan": {
-        "entryLow": 1.8619,
-        "entryHigh": 1.8802,
-        "stopLoss": 1.7794,
-        "target1": 2.0359,
-        "target2": 2.1092,
-        "riskPct": 4.897,
+        "entryLow": 284.7711,
+        "entryHigh": 288.7045,
+        "stopLoss": 270.9672,
+        "target1": 315.1248,
+        "target2": 327.7413,
+        "riskPct": 5.5,
         "riskReward1": 1.8,
         "validEntrySessions": 1,
         "maximumHoldingSessions": 10,
@@ -62,52 +62,209 @@
         ]
       },
       "indicators": {
-        "return5Pct": 3.889,
-        "return20Pct": 13.333,
-        "relativeStrength20Pct": 12.81,
-        "rsi14": 59.72,
-        "atrPct": 3.627,
-        "volumeRatio20": 0,
-        "averageTurnover20Egp": 64114515,
-        "sma20": 1.823,
-        "sma50": 1.7282,
-        "support20": 1.62,
-        "resistance20": 2.13
+        "return5Pct": 3.673,
+        "return20Pct": 20.877,
+        "relativeStrength20Pct": 19.038,
+        "rsi14": 60.27,
+        "atrPct": 5.153,
+        "volumeRatio20": 1.328,
+        "averageTurnover20Egp": 21916034,
+        "sma20": 270.123,
+        "sma50": 265.4266,
+        "support20": 230,
+        "resistance20": 325
       },
       "dataQuality": {
         "historySessions": 100,
-        "historyConfidence": 73.9,
+        "historyConfidence": 74.65,
         "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-08-10"
+        "latestHistorySession": "2026-08-11"
       },
       "passedConditions": [
         "اكتمال المؤشرات",
         "متوسط قيمة التداول",
         "جلسات حجم تداول صالحة",
+        "نشاط الحجم الحالي",
         "توفر قياس المخاطرة",
         "القوة النسبية",
         "ترتيب الاتجاه",
         "ميل متوسط 20",
         "منطقة RSI",
+        "دعم الحجم",
         "مساحة حتى المقاومة"
       ],
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0",
-        "دعم الحجم: 0"
-      ],
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+      "failedConditions": [],
+      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
       "adaptive": {
-        "proximityPct": 83.7,
+        "proximityPct": 93.7,
         "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 36,
+        "strategyHealthScore": 37.5,
         "minimumRequiredScore": 83,
         "scoreGap": 0,
         "calibratedVariantId": "balanced",
         "riskScale": 0,
         "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "نشاط الحجم الحالي: 0",
-          "دعم الحجم: 0"
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      }
+    },
+    {
+      "ticker": "ATLC",
+      "companyNameAr": "التوفيق للتأجير التمويلي",
+      "companyNameEn": "Al Tawfeek Leasing Company",
+      "sector": null,
+      "signalDate": "2026-08-11",
+      "status": "NEAR_TRIGGER",
+      "statusLabelAr": "قريب من اكتمال الإشارة",
+      "strategyId": "breakout",
+      "strategyLabelAr": "اختراق مؤكد",
+      "variantId": "early",
+      "recommendationScore": 100,
+      "rawSignalScore": 95.9,
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "marketRegime": "BULLISH",
+      "price": 5.73,
+      "plan": {
+        "entryLow": 5.71,
+        "entryHigh": 5.755,
+        "stopLoss": 5.4822,
+        "target1": 6.1831,
+        "target2": 6.3833,
+        "riskPct": 4.367,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": 8.523,
+        "return20Pct": 9.77,
+        "relativeStrength20Pct": 7.932,
+        "rsi14": 69.79,
+        "atrPct": 2.911,
+        "volumeRatio20": 2.071,
+        "averageTurnover20Egp": 17097369,
+        "sma20": 5.2515,
+        "sma50": 5.1478,
+        "support20": 5,
+        "resistance20": 5.59
+      },
+      "dataQuality": {
+        "historySessions": 100,
+        "historyConfidence": 74.05,
+        "eligibilityStatus": "complete_recent",
+        "latestHistorySession": "2026-08-11"
+      },
+      "passedConditions": [
+        "اكتمال المؤشرات",
+        "متوسط قيمة التداول",
+        "جلسات حجم تداول صالحة",
+        "نشاط الحجم الحالي",
+        "توفر قياس المخاطرة",
+        "القوة النسبية",
+        "اتجاه داعم للاختراق",
+        "اختراق مقاومة 20 جلسة",
+        "حجم يؤكد الاختراق",
+        "منطقة RSI",
+        "إغلاق إيجابي"
+      ],
+      "failedConditions": [],
+      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
+      "adaptive": {
+        "proximityPct": 93.6,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 26.2,
+        "minimumRequiredScore": 83,
+        "scoreGap": 0,
+        "calibratedVariantId": "early",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      }
+    },
+    {
+      "ticker": "EALR",
+      "companyNameAr": "العامة لاستصلاح الأراضي",
+      "companyNameEn": "Arab Company For Land Reclamation",
+      "sector": null,
+      "signalDate": "2026-08-11",
+      "status": "NEAR_TRIGGER",
+      "statusLabelAr": "قريب من اكتمال الإشارة",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "variantId": "balanced",
+      "recommendationScore": 100,
+      "rawSignalScore": 95,
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "marketRegime": "BULLISH",
+      "price": 385,
+      "plan": {
+        "entryLow": 382.739,
+        "entryHigh": 387.8263,
+        "stopLoss": 364.0921,
+        "target1": 423.4256,
+        "target2": 440.378,
+        "riskPct": 5.5,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": 3.57,
+        "return20Pct": 5.833,
+        "relativeStrength20Pct": 3.995,
+        "rsi14": 58.81,
+        "atrPct": 4.894,
+        "volumeRatio20": 2.85,
+        "averageTurnover20Egp": 28218912,
+        "sma20": 371.963,
+        "sma50": 361.9084,
+        "support20": 360,
+        "resistance20": 432
+      },
+      "dataQuality": {
+        "historySessions": 100,
+        "historyConfidence": 73.9,
+        "eligibilityStatus": "complete_recent",
+        "latestHistorySession": "2026-08-11"
+      },
+      "passedConditions": [
+        "اكتمال المؤشرات",
+        "متوسط قيمة التداول",
+        "جلسات حجم تداول صالحة",
+        "نشاط الحجم الحالي",
+        "توفر قياس المخاطرة",
+        "القوة النسبية",
+        "ترتيب الاتجاه",
+        "ميل متوسط 20",
+        "منطقة RSI",
+        "دعم الحجم",
+        "مساحة حتى المقاومة"
+      ],
+      "failedConditions": [],
+      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
+      "adaptive": {
+        "proximityPct": 93.6,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 37.5,
+        "minimumRequiredScore": 83,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
         ],
         "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
       }
@@ -117,24 +274,24 @@
       "companyNameAr": "إي فاينانس",
       "companyNameEn": "e-finance for Digital and Financial Investments S.A.E.",
       "sector": null,
-      "signalDate": "2026-08-10",
+      "signalDate": "2026-08-11",
       "status": "NEAR_TRIGGER",
       "statusLabelAr": "قريب من اكتمال الإشارة",
       "strategyId": "trend_follow",
       "strategyLabelAr": "اتجاه قوي مع سيولة",
       "variantId": "balanced",
-      "recommendationScore": 86.4,
-      "rawSignalScore": 84.6,
+      "recommendationScore": 100,
+      "rawSignalScore": 98.4,
       "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "BALANCED",
-      "price": 23.5,
+      "marketRegime": "BULLISH",
+      "price": 23.7,
       "plan": {
-        "entryLow": 23.4152,
-        "entryHigh": 23.606,
-        "stopLoss": 22.5563,
-        "target1": 25.2284,
-        "target2": 25.9919,
-        "riskPct": 4.059,
+        "entryLow": 23.6137,
+        "entryHigh": 23.8078,
+        "stopLoss": 22.7397,
+        "target1": 25.4587,
+        "target2": 26.2356,
+        "riskPct": 4.095,
         "riskReward1": 1.8,
         "validEntrySessions": 1,
         "maximumHoldingSessions": 10,
@@ -145,15 +302,15 @@
         ]
       },
       "indicators": {
-        "return5Pct": 4.213,
-        "return20Pct": 13.09,
-        "relativeStrength20Pct": 12.566,
-        "rsi14": 60.47,
-        "atrPct": 3.007,
-        "volumeRatio20": 0,
-        "averageTurnover20Egp": 68420877,
-        "sma20": 22.51,
-        "sma50": 21.947,
+        "return5Pct": 4.176,
+        "return20Pct": 16.519,
+        "relativeStrength20Pct": 14.681,
+        "rsi14": 62.04,
+        "atrPct": 3.034,
+        "volumeRatio20": 1.685,
+        "averageTurnover20Egp": 74469505,
+        "sma20": 22.678,
+        "sma50": 22.009,
         "support20": 20,
         "resistance20": 25
       },
@@ -161,866 +318,33 @@
         "historySessions": 100,
         "historyConfidence": 73.9,
         "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-08-10"
+        "latestHistorySession": "2026-08-11"
       },
       "passedConditions": [
         "اكتمال المؤشرات",
         "متوسط قيمة التداول",
         "جلسات حجم تداول صالحة",
+        "نشاط الحجم الحالي",
         "توفر قياس المخاطرة",
         "القوة النسبية",
         "ترتيب الاتجاه",
         "ميل متوسط 20",
         "منطقة RSI",
+        "دعم الحجم",
         "مساحة حتى المقاومة"
       ],
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0",
-        "دعم الحجم: 0"
-      ],
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+      "failedConditions": [],
+      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
       "adaptive": {
-        "proximityPct": 83.6,
+        "proximityPct": 93.6,
         "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 36,
+        "strategyHealthScore": 37.5,
         "minimumRequiredScore": 83,
         "scoreGap": 0,
         "calibratedVariantId": "balanced",
         "riskScale": 0,
         "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "نشاط الحجم الحالي: 0",
-          "دعم الحجم: 0"
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      }
-    },
-    {
-      "ticker": "NHPS",
-      "companyNameAr": "الوطنية للإسكان للنقابات المهنية",
-      "companyNameEn": "National Company for Housing Professional Syndicates",
-      "sector": null,
-      "signalDate": "2026-08-10",
-      "status": "NEAR_TRIGGER",
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "variantId": "balanced",
-      "recommendationScore": 86,
-      "rawSignalScore": 84.1,
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "BALANCED",
-      "price": 84.21,
-      "plan": {
-        "entryLow": 83.7786,
-        "entryHigh": 84.7493,
-        "stopLoss": 79.6294,
-        "target1": 92.6061,
-        "target2": 96.3137,
-        "riskPct": 5.5,
-        "riskReward1": 1.8,
-        "validEntrySessions": 1,
-        "maximumHoldingSessions": 10,
-        "cancelConditionsAr": [
-          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
-          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
-          "الإشارة صالحة لجلسة دخول واحدة فقط."
-        ]
-      },
-      "indicators": {
-        "return5Pct": 1.226,
-        "return20Pct": 35.604,
-        "relativeStrength20Pct": 35.081,
-        "rsi14": 61.12,
-        "atrPct": 4.269,
-        "volumeRatio20": 0,
-        "averageTurnover20Egp": 59175692,
-        "sma20": 81.1865,
-        "sma50": 73.8214,
-        "support20": 61.55,
-        "resistance20": 95
-      },
-      "dataQuality": {
-        "historySessions": 100,
-        "historyConfidence": 74.65,
-        "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-08-10"
-      },
-      "passedConditions": [
-        "اكتمال المؤشرات",
-        "متوسط قيمة التداول",
-        "جلسات حجم تداول صالحة",
-        "توفر قياس المخاطرة",
-        "القوة النسبية",
-        "ترتيب الاتجاه",
-        "ميل متوسط 20",
-        "منطقة RSI",
-        "مساحة حتى المقاومة"
-      ],
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0",
-        "دعم الحجم: 0"
-      ],
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "adaptive": {
-        "proximityPct": 83.6,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 36,
-        "minimumRequiredScore": 83,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "نشاط الحجم الحالي: 0",
-          "دعم الحجم: 0"
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      }
-    },
-    {
-      "ticker": "WCDF",
-      "companyNameAr": "مطاحن وسط وغرب الدلتا",
-      "companyNameEn": "Middle & West Delta Flour Mills",
-      "sector": null,
-      "signalDate": "2026-08-10",
-      "status": "NEAR_TRIGGER",
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "variantId": "balanced",
-      "recommendationScore": 86.1,
-      "rawSignalScore": 84.3,
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "BALANCED",
-      "price": 582.69,
-      "plan": {
-        "entryLow": 580.3773,
-        "entryHigh": 585.5809,
-        "stopLoss": 556.948,
-        "target1": 629.8351,
-        "target2": 650.6601,
-        "riskPct": 4.465,
-        "riskReward1": 1.8,
-        "validEntrySessions": 1,
-        "maximumHoldingSessions": 10,
-        "cancelConditionsAr": [
-          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
-          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
-          "الإشارة صالحة لجلسة دخول واحدة فقط."
-        ]
-      },
-      "indicators": {
-        "return5Pct": -0.534,
-        "return20Pct": 14.777,
-        "relativeStrength20Pct": 14.254,
-        "rsi14": 59.1,
-        "atrPct": 3.308,
-        "volumeRatio20": 0,
-        "averageTurnover20Egp": 3840513,
-        "sma20": 571.7145,
-        "sma50": 550.2014,
-        "support20": 505,
-        "resistance20": 634.15
-      },
-      "dataQuality": {
-        "historySessions": 100,
-        "historyConfidence": 73.9,
-        "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-08-10"
-      },
-      "passedConditions": [
-        "اكتمال المؤشرات",
-        "متوسط قيمة التداول",
-        "جلسات حجم تداول صالحة",
-        "توفر قياس المخاطرة",
-        "القوة النسبية",
-        "ترتيب الاتجاه",
-        "ميل متوسط 20",
-        "منطقة RSI",
-        "مساحة حتى المقاومة"
-      ],
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0",
-        "دعم الحجم: 0"
-      ],
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "adaptive": {
-        "proximityPct": 83.5,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 36,
-        "minimumRequiredScore": 83,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "نشاط الحجم الحالي: 0",
-          "دعم الحجم: 0"
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      }
-    },
-    {
-      "ticker": "COPR",
-      "companyNameAr": "كوبر للاستثمار التجاري والتطوير العقاري",
-      "companyNameEn": "Copper for Commercial Investment & Real Estate Development",
-      "sector": null,
-      "signalDate": "2026-08-10",
-      "status": "NEAR_TRIGGER",
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "variantId": "balanced",
-      "recommendationScore": 85.6,
-      "rawSignalScore": 84,
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "BALANCED",
-      "price": 0.401,
-      "plan": {
-        "entryLow": 0.3996,
-        "entryHigh": 0.4028,
-        "stopLoss": 0.385,
-        "target1": 0.4302,
-        "target2": 0.4431,
-        "riskPct": 4.022,
-        "riskReward1": 1.8,
-        "validEntrySessions": 1,
-        "maximumHoldingSessions": 10,
-        "cancelConditionsAr": [
-          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
-          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
-          "الإشارة صالحة لجلسة دخول واحدة فقط."
-        ]
-      },
-      "indicators": {
-        "return5Pct": -1.474,
-        "return20Pct": 12.325,
-        "relativeStrength20Pct": 11.802,
-        "rsi14": 61.2,
-        "atrPct": 2.979,
-        "volumeRatio20": 0,
-        "averageTurnover20Egp": 34478007,
-        "sma20": 0.3919,
-        "sma50": 0.3733,
-        "support20": 0.354,
-        "resistance20": 0.426
-      },
-      "dataQuality": {
-        "historySessions": 100,
-        "historyConfidence": 72.85,
-        "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-08-10"
-      },
-      "passedConditions": [
-        "اكتمال المؤشرات",
-        "متوسط قيمة التداول",
-        "جلسات حجم تداول صالحة",
-        "توفر قياس المخاطرة",
-        "القوة النسبية",
-        "ترتيب الاتجاه",
-        "ميل متوسط 20",
-        "منطقة RSI",
-        "مساحة حتى المقاومة"
-      ],
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0",
-        "دعم الحجم: 0"
-      ],
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "adaptive": {
-        "proximityPct": 83.2,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 36,
-        "minimumRequiredScore": 83,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "نشاط الحجم الحالي: 0",
-          "دعم الحجم: 0"
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      }
-    },
-    {
-      "ticker": "UNIP",
-      "companyNameAr": "يونيفرسال لصناعة مواد التعبئة والتغليف",
-      "companyNameEn": "Universal For Paper and Packaging Materials",
-      "sector": null,
-      "signalDate": "2026-08-10",
-      "status": "NEAR_TRIGGER",
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "variantId": "balanced",
-      "recommendationScore": 85.1,
-      "rawSignalScore": 83.6,
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "BALANCED",
-      "price": 0.396,
-      "plan": {
-        "entryLow": 0.3941,
-        "entryHigh": 0.3984,
-        "stopLoss": 0.3748,
-        "target1": 0.4349,
-        "target2": 0.4521,
-        "riskPct": 5.418,
-        "riskReward1": 1.8,
-        "validEntrySessions": 1,
-        "maximumHoldingSessions": 10,
-        "cancelConditionsAr": [
-          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
-          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
-          "الإشارة صالحة لجلسة دخول واحدة فقط."
-        ]
-      },
-      "indicators": {
-        "return5Pct": 2.326,
-        "return20Pct": 15.789,
-        "relativeStrength20Pct": 15.266,
-        "rsi14": 61.79,
-        "atrPct": 4.013,
-        "volumeRatio20": 0,
-        "averageTurnover20Egp": 32289958,
-        "sma20": 0.3872,
-        "sma50": 0.3415,
-        "support20": 0.335,
-        "resistance20": 0.431
-      },
-      "dataQuality": {
-        "historySessions": 100,
-        "historyConfidence": 72.7,
-        "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-08-10"
-      },
-      "passedConditions": [
-        "اكتمال المؤشرات",
-        "متوسط قيمة التداول",
-        "جلسات حجم تداول صالحة",
-        "توفر قياس المخاطرة",
-        "القوة النسبية",
-        "ترتيب الاتجاه",
-        "ميل متوسط 20",
-        "منطقة RSI",
-        "مساحة حتى المقاومة"
-      ],
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0",
-        "دعم الحجم: 0"
-      ],
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "adaptive": {
-        "proximityPct": 83,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 36,
-        "minimumRequiredScore": 83,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "نشاط الحجم الحالي: 0",
-          "دعم الحجم: 0"
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      }
-    },
-    {
-      "ticker": "ARAB",
-      "companyNameAr": "المطورون العرب القابضة",
-      "companyNameEn": "Arab Developers Holding",
-      "sector": null,
-      "signalDate": "2026-08-10",
-      "status": "NEAR_TRIGGER",
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "variantId": "balanced",
-      "recommendationScore": 84.9,
-      "rawSignalScore": 83.3,
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "BALANCED",
-      "price": 0.243,
-      "plan": {
-        "entryLow": 0.242,
-        "entryHigh": 0.2443,
-        "stopLoss": 0.2315,
-        "target1": 0.2641,
-        "target2": 0.2734,
-        "riskPct": 4.794,
-        "riskReward1": 1.8,
-        "validEntrySessions": 1,
-        "maximumHoldingSessions": 10,
-        "cancelConditionsAr": [
-          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
-          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
-          "الإشارة صالحة لجلسة دخول واحدة فقط."
-        ]
-      },
-      "indicators": {
-        "return5Pct": 2.101,
-        "return20Pct": 8,
-        "relativeStrength20Pct": 7.477,
-        "rsi14": 57.87,
-        "atrPct": 3.551,
-        "volumeRatio20": 0,
-        "averageTurnover20Egp": 123416593,
-        "sma20": 0.2426,
-        "sma50": 0.2217,
-        "support20": 0.222,
-        "resistance20": 0.265
-      },
-      "dataQuality": {
-        "historySessions": 100,
-        "historyConfidence": 73.15,
-        "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-08-10"
-      },
-      "passedConditions": [
-        "اكتمال المؤشرات",
-        "متوسط قيمة التداول",
-        "جلسات حجم تداول صالحة",
-        "توفر قياس المخاطرة",
-        "القوة النسبية",
-        "ترتيب الاتجاه",
-        "ميل متوسط 20",
-        "منطقة RSI",
-        "مساحة حتى المقاومة"
-      ],
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0",
-        "دعم الحجم: 0"
-      ],
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "adaptive": {
-        "proximityPct": 83,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 36,
-        "minimumRequiredScore": 83,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "نشاط الحجم الحالي: 0",
-          "دعم الحجم: 0"
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      }
-    },
-    {
-      "ticker": "ZMID",
-      "companyNameAr": "زهراء المعادي",
-      "companyNameEn": "Zahraa El Maadi Investment and Development",
-      "sector": null,
-      "signalDate": "2026-08-10",
-      "status": "NEAR_TRIGGER",
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "variantId": "balanced",
-      "recommendationScore": 84.9,
-      "rawSignalScore": 83.3,
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "BALANCED",
-      "price": 7.25,
-      "plan": {
-        "entryLow": 7.2248,
-        "entryHigh": 7.2815,
-        "stopLoss": 6.9693,
-        "target1": 7.7641,
-        "target2": 7.9912,
-        "riskPct": 3.914,
-        "riskReward1": 1.8,
-        "validEntrySessions": 1,
-        "maximumHoldingSessions": 10,
-        "cancelConditionsAr": [
-          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
-          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
-          "الإشارة صالحة لجلسة دخول واحدة فقط."
-        ]
-      },
-      "indicators": {
-        "return5Pct": 0.694,
-        "return20Pct": 6.932,
-        "relativeStrength20Pct": 6.409,
-        "rsi14": 57.91,
-        "atrPct": 2.899,
-        "volumeRatio20": 0,
-        "averageTurnover20Egp": 241165464,
-        "sma20": 7.2465,
-        "sma50": 6.5818,
-        "support20": 6.63,
-        "resistance20": 7.79
-      },
-      "dataQuality": {
-        "historySessions": 100,
-        "historyConfidence": 73.15,
-        "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-08-10"
-      },
-      "passedConditions": [
-        "اكتمال المؤشرات",
-        "متوسط قيمة التداول",
-        "جلسات حجم تداول صالحة",
-        "توفر قياس المخاطرة",
-        "القوة النسبية",
-        "ترتيب الاتجاه",
-        "ميل متوسط 20",
-        "منطقة RSI",
-        "مساحة حتى المقاومة"
-      ],
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0",
-        "دعم الحجم: 0"
-      ],
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "adaptive": {
-        "proximityPct": 83,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 36,
-        "minimumRequiredScore": 83,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "نشاط الحجم الحالي: 0",
-          "دعم الحجم: 0"
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      }
-    },
-    {
-      "ticker": "MOSC",
-      "companyNameAr": "مصر للزيوت والصابون",
-      "companyNameEn": "Misr Oils & Soap",
-      "sector": null,
-      "signalDate": "2026-08-10",
-      "status": "NEAR_TRIGGER",
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "variantId": "balanced",
-      "recommendationScore": 84.6,
-      "rawSignalScore": 82.8,
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "BALANCED",
-      "price": 297.96,
-      "plan": {
-        "entryLow": 296.5157,
-        "entryHigh": 299.7653,
-        "stopLoss": 281.8827,
-        "target1": 327.4046,
-        "target2": 340.4109,
-        "riskPct": 5.453,
-        "riskReward1": 1.8,
-        "validEntrySessions": 1,
-        "maximumHoldingSessions": 10,
-        "cancelConditionsAr": [
-          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
-          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
-          "الإشارة صالحة لجلسة دخول واحدة فقط."
-        ]
-      },
-      "indicators": {
-        "return5Pct": 4.478,
-        "return20Pct": 11.295,
-        "relativeStrength20Pct": 10.772,
-        "rsi14": 62.78,
-        "atrPct": 4.039,
-        "volumeRatio20": 0,
-        "averageTurnover20Egp": 10758346,
-        "sma20": 284.689,
-        "sma50": 279.1704,
-        "support20": 260.01,
-        "resistance20": 329.5
-      },
-      "dataQuality": {
-        "historySessions": 100,
-        "historyConfidence": 73.9,
-        "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-08-10"
-      },
-      "passedConditions": [
-        "اكتمال المؤشرات",
-        "متوسط قيمة التداول",
-        "جلسات حجم تداول صالحة",
-        "توفر قياس المخاطرة",
-        "القوة النسبية",
-        "ترتيب الاتجاه",
-        "ميل متوسط 20",
-        "منطقة RSI",
-        "مساحة حتى المقاومة"
-      ],
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0",
-        "دعم الحجم: 0"
-      ],
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "adaptive": {
-        "proximityPct": 83,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 36,
-        "minimumRequiredScore": 83,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "نشاط الحجم الحالي: 0",
-          "دعم الحجم: 0"
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      }
-    },
-    {
-      "ticker": "SCFM",
-      "companyNameAr": "مطاحن جنوب القاهرة والجيزة",
-      "companyNameEn": "South Cairo and Giza Flour Mills",
-      "sector": null,
-      "signalDate": "2026-08-10",
-      "status": "NEAR_TRIGGER",
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "variantId": "balanced",
-      "recommendationScore": 84.4,
-      "rawSignalScore": 82.5,
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "BALANCED",
-      "price": 279.58,
-      "plan": {
-        "entryLow": 277.9025,
-        "entryHigh": 281.7244,
-        "stopLoss": 264.4237,
-        "target1": 307.515,
-        "target2": 319.8268,
-        "riskPct": 5.5,
-        "riskReward1": 1.8,
-        "validEntrySessions": 1,
-        "maximumHoldingSessions": 10,
-        "cancelConditionsAr": [
-          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
-          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
-          "الإشارة صالحة لجلسة دخول واحدة فقط."
-        ]
-      },
-      "indicators": {
-        "return5Pct": -0.161,
-        "return20Pct": 20.847,
-        "relativeStrength20Pct": 20.324,
-        "rsi14": 56.86,
-        "atrPct": 5.113,
-        "volumeRatio20": 0,
-        "averageTurnover20Egp": 20371545,
-        "sma20": 267.649,
-        "sma50": 264.6568,
-        "support20": 230,
-        "resistance20": 325
-      },
-      "dataQuality": {
-        "historySessions": 100,
-        "historyConfidence": 74.65,
-        "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-08-10"
-      },
-      "passedConditions": [
-        "اكتمال المؤشرات",
-        "متوسط قيمة التداول",
-        "جلسات حجم تداول صالحة",
-        "توفر قياس المخاطرة",
-        "القوة النسبية",
-        "ترتيب الاتجاه",
-        "ميل متوسط 20",
-        "منطقة RSI",
-        "مساحة حتى المقاومة"
-      ],
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0",
-        "دعم الحجم: 0"
-      ],
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "adaptive": {
-        "proximityPct": 83,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 36,
-        "minimumRequiredScore": 83,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "نشاط الحجم الحالي: 0",
-          "دعم الحجم: 0"
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      }
-    },
-    {
-      "ticker": "CLHO",
-      "companyNameAr": "مستشفى كليوباترا",
-      "companyNameEn": "Cleopatra Hospitals Group S.A.E.",
-      "sector": null,
-      "signalDate": "2026-08-10",
-      "status": "NEAR_TRIGGER",
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "variantId": "balanced",
-      "recommendationScore": 84.3,
-      "rawSignalScore": 82.5,
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "BALANCED",
-      "price": 17.63,
-      "plan": {
-        "entryLow": 17.5624,
-        "entryHigh": 17.7145,
-        "stopLoss": 16.8772,
-        "target1": 19.0088,
-        "target2": 19.6178,
-        "riskPct": 4.316,
-        "riskReward1": 1.8,
-        "validEntrySessions": 1,
-        "maximumHoldingSessions": 10,
-        "cancelConditionsAr": [
-          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
-          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
-          "الإشارة صالحة لجلسة دخول واحدة فقط."
-        ]
-      },
-      "indicators": {
-        "return5Pct": -3.766,
-        "return20Pct": 8.16,
-        "relativeStrength20Pct": 7.636,
-        "rsi14": 62.06,
-        "atrPct": 3.197,
-        "volumeRatio20": 0,
-        "averageTurnover20Egp": 39476525,
-        "sma20": 16.892,
-        "sma50": 16.1984,
-        "support20": 15.98,
-        "resistance20": 19.72
-      },
-      "dataQuality": {
-        "historySessions": 100,
-        "historyConfidence": 73.9,
-        "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-08-10"
-      },
-      "passedConditions": [
-        "اكتمال المؤشرات",
-        "متوسط قيمة التداول",
-        "جلسات حجم تداول صالحة",
-        "توفر قياس المخاطرة",
-        "القوة النسبية",
-        "ترتيب الاتجاه",
-        "ميل متوسط 20",
-        "منطقة RSI",
-        "مساحة حتى المقاومة"
-      ],
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0",
-        "دعم الحجم: 0"
-      ],
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "adaptive": {
-        "proximityPct": 82.9,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 36,
-        "minimumRequiredScore": 83,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "نشاط الحجم الحالي: 0",
-          "دعم الحجم: 0"
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      }
-    },
-    {
-      "ticker": "LCSW",
-      "companyNameAr": "ليسيكو مصر",
-      "companyNameEn": "Lecico Egypt",
-      "sector": null,
-      "signalDate": "2026-08-10",
-      "status": "NEAR_TRIGGER",
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "variantId": "balanced",
-      "recommendationScore": 83.8,
-      "rawSignalScore": 81.9,
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "BALANCED",
-      "price": 34,
-      "plan": {
-        "entryLow": 33.8229,
-        "entryHigh": 34.2214,
-        "stopLoss": 32.1509,
-        "target1": 37.3903,
-        "target2": 38.8873,
-        "riskPct": 5.5,
-        "riskReward1": 1.8,
-        "validEntrySessions": 1,
-        "maximumHoldingSessions": 10,
-        "cancelConditionsAr": [
-          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
-          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
-          "الإشارة صالحة لجلسة دخول واحدة فقط."
-        ]
-      },
-      "indicators": {
-        "return5Pct": -7.659,
-        "return20Pct": 7.8,
-        "relativeStrength20Pct": 7.277,
-        "rsi14": 56.09,
-        "atrPct": 4.34,
-        "volumeRatio20": 0,
-        "averageTurnover20Egp": 45231197,
-        "sma20": 33.9475,
-        "sma50": 30.3102,
-        "support20": 30.2,
-        "resistance20": 37.79
-      },
-      "dataQuality": {
-        "historySessions": 100,
-        "historyConfidence": 74.65,
-        "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-08-10"
-      },
-      "passedConditions": [
-        "اكتمال المؤشرات",
-        "متوسط قيمة التداول",
-        "جلسات حجم تداول صالحة",
-        "توفر قياس المخاطرة",
-        "القوة النسبية",
-        "ترتيب الاتجاه",
-        "ميل متوسط 20",
-        "منطقة RSI",
-        "مساحة حتى المقاومة"
-      ],
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0",
-        "دعم الحجم: 0"
-      ],
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "adaptive": {
-        "proximityPct": 82.8,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 36,
-        "minimumRequiredScore": 83,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "نشاط الحجم الحالي: 0",
-          "دعم الحجم: 0"
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
         ],
         "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
       }
@@ -1030,24 +354,24 @@
       "companyNameAr": "مينا فارم",
       "companyNameEn": "MINAPHARM Pharmaceuticals",
       "sector": null,
-      "signalDate": "2026-08-10",
+      "signalDate": "2026-08-11",
       "status": "NEAR_TRIGGER",
       "statusLabelAr": "قريب من اكتمال الإشارة",
       "strategyId": "trend_follow",
       "strategyLabelAr": "اتجاه قوي مع سيولة",
       "variantId": "balanced",
-      "recommendationScore": 83.7,
-      "rawSignalScore": 81.9,
+      "recommendationScore": 100,
+      "rawSignalScore": 95.3,
       "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "BALANCED",
-      "price": 783.35,
+      "marketRegime": "BULLISH",
+      "price": 786.34,
       "plan": {
-        "entryLow": 780.1043,
-        "entryHigh": 787.407,
-        "stopLoss": 747.2233,
-        "target1": 849.5139,
-        "target2": 878.7398,
-        "riskPct": 4.661,
+        "entryLow": 782.9148,
+        "entryHigh": 790.6216,
+        "stopLoss": 748.2131,
+        "target1": 856.1673,
+        "target2": 887.0114,
+        "riskPct": 4.9,
         "riskReward1": 1.8,
         "validEntrySessions": 1,
         "maximumHoldingSessions": 10,
@@ -1058,244 +382,75 @@
         ]
       },
       "indicators": {
-        "return5Pct": -4.296,
-        "return20Pct": 11.907,
-        "relativeStrength20Pct": 11.384,
-        "rsi14": 63.83,
-        "atrPct": 3.453,
-        "volumeRatio20": 0,
-        "averageTurnover20Egp": 4854459,
-        "sma20": 756.0215,
-        "sma50": 700.4654,
-        "support20": 685.15,
+        "return5Pct": -0.95,
+        "return20Pct": 12.643,
+        "relativeStrength20Pct": 10.805,
+        "rsi14": 64.55,
+        "atrPct": 3.63,
+        "volumeRatio20": 1.394,
+        "averageTurnover20Egp": 5186103,
+        "sma20": 760.4345,
+        "sma50": 703.2258,
+        "support20": 690.01,
         "resistance20": 831
       },
       "dataQuality": {
         "historySessions": 100,
         "historyConfidence": 73.9,
         "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-08-10"
+        "latestHistorySession": "2026-08-11"
       },
       "passedConditions": [
         "اكتمال المؤشرات",
         "متوسط قيمة التداول",
         "جلسات حجم تداول صالحة",
+        "نشاط الحجم الحالي",
         "توفر قياس المخاطرة",
         "القوة النسبية",
         "ترتيب الاتجاه",
         "ميل متوسط 20",
         "منطقة RSI",
+        "دعم الحجم",
         "مساحة حتى المقاومة"
       ],
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0",
-        "دعم الحجم: 0"
-      ],
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+      "failedConditions": [],
+      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
       "adaptive": {
-        "proximityPct": 82.7,
+        "proximityPct": 93.6,
         "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 36,
+        "strategyHealthScore": 37.5,
         "minimumRequiredScore": 83,
         "scoreGap": 0,
         "calibratedVariantId": "balanced",
         "riskScale": 0,
         "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "نشاط الحجم الحالي: 0",
-          "دعم الحجم: 0"
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
         ],
         "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
       }
     },
     {
-      "ticker": "UEFM",
-      "companyNameAr": "مطاحن مصر العليا",
-      "companyNameEn": "Upper Egypt Mills Company",
+      "ticker": "MILS",
+      "companyNameAr": "مطاحن شمال القاهرة",
+      "companyNameEn": "North Cairo Flour Mills",
       "sector": null,
-      "signalDate": "2026-08-10",
+      "signalDate": "2026-08-11",
       "status": "NEAR_TRIGGER",
       "statusLabelAr": "قريب من اكتمال الإشارة",
       "strategyId": "trend_follow",
       "strategyLabelAr": "اتجاه قوي مع سيولة",
       "variantId": "balanced",
-      "recommendationScore": 83.7,
-      "rawSignalScore": 81.9,
+      "recommendationScore": 99.1,
+      "rawSignalScore": 92.3,
       "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "BALANCED",
-      "price": 550.03,
+      "marketRegime": "BULLISH",
+      "price": 192,
       "plan": {
-        "entryLow": 547.8009,
-        "entryHigh": 552.8165,
-        "stopLoss": 525.2178,
-        "target1": 595.4722,
-        "target2": 615.5448,
-        "riskPct": 4.559,
-        "riskReward1": 1.8,
-        "validEntrySessions": 1,
-        "maximumHoldingSessions": 10,
-        "cancelConditionsAr": [
-          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
-          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
-          "الإشارة صالحة لجلسة دخول واحدة فقط."
-        ]
-      },
-      "indicators": {
-        "return5Pct": 0.004,
-        "return20Pct": 12.258,
-        "relativeStrength20Pct": 11.735,
-        "rsi14": 63.92,
-        "atrPct": 3.377,
-        "volumeRatio20": 0,
-        "averageTurnover20Egp": 5828174,
-        "sma20": 532.4765,
-        "sma50": 499.1452,
-        "support20": 479,
-        "resistance20": 625
-      },
-      "dataQuality": {
-        "historySessions": 100,
-        "historyConfidence": 73.9,
-        "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-08-10"
-      },
-      "passedConditions": [
-        "اكتمال المؤشرات",
-        "متوسط قيمة التداول",
-        "جلسات حجم تداول صالحة",
-        "توفر قياس المخاطرة",
-        "القوة النسبية",
-        "ترتيب الاتجاه",
-        "ميل متوسط 20",
-        "منطقة RSI",
-        "مساحة حتى المقاومة"
-      ],
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0",
-        "دعم الحجم: 0"
-      ],
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "adaptive": {
-        "proximityPct": 82.7,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 36,
-        "minimumRequiredScore": 83,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "نشاط الحجم الحالي: 0",
-          "دعم الحجم: 0"
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      }
-    },
-    {
-      "ticker": "HELI",
-      "companyNameAr": "مصر الجديدة للإسكان والتعمير",
-      "companyNameEn": "Heliopolis Co. for Housing & Development",
-      "sector": null,
-      "signalDate": "2026-08-10",
-      "status": "NEAR_TRIGGER",
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "variantId": "balanced",
-      "recommendationScore": 83.9,
-      "rawSignalScore": 82.3,
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "BALANCED",
-      "price": 8.21,
-      "plan": {
-        "entryLow": 8.181,
-        "entryHigh": 8.2463,
-        "stopLoss": 7.8869,
-        "target1": 8.8018,
-        "target2": 9.0632,
-        "riskPct": 3.978,
-        "riskReward1": 1.8,
-        "validEntrySessions": 1,
-        "maximumHoldingSessions": 10,
-        "cancelConditionsAr": [
-          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
-          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
-          "الإشارة صالحة لجلسة دخول واحدة فقط."
-        ]
-      },
-      "indicators": {
-        "return5Pct": -2.262,
-        "return20Pct": 11.701,
-        "relativeStrength20Pct": 11.178,
-        "rsi14": 63.31,
-        "atrPct": 2.947,
-        "volumeRatio20": 0,
-        "averageTurnover20Egp": 172351839,
-        "sma20": 8.1415,
-        "sma50": 7.2254,
-        "support20": 7.28,
-        "resistance20": 8.65
-      },
-      "dataQuality": {
-        "historySessions": 100,
-        "historyConfidence": 73.15,
-        "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-08-10"
-      },
-      "passedConditions": [
-        "اكتمال المؤشرات",
-        "متوسط قيمة التداول",
-        "جلسات حجم تداول صالحة",
-        "توفر قياس المخاطرة",
-        "القوة النسبية",
-        "ترتيب الاتجاه",
-        "ميل متوسط 20",
-        "منطقة RSI",
-        "مساحة حتى المقاومة"
-      ],
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0",
-        "دعم الحجم: 0"
-      ],
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "adaptive": {
-        "proximityPct": 82.6,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 36,
-        "minimumRequiredScore": 83,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "نشاط الحجم الحالي: 0",
-          "دعم الحجم: 0"
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      }
-    },
-    {
-      "ticker": "NINH",
-      "companyNameAr": "النزهة الدولي",
-      "companyNameEn": "Nozha International Hospital",
-      "sector": null,
-      "signalDate": "2026-08-10",
-      "status": "NEAR_TRIGGER",
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "variantId": "balanced",
-      "recommendationScore": 83.9,
-      "rawSignalScore": 82.3,
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "BALANCED",
-      "price": 23.06,
-      "plan": {
-        "entryLow": 22.9368,
-        "entryHigh": 23.214,
-        "stopLoss": 21.8063,
-        "target1": 25.3599,
-        "target2": 26.3752,
+        "entryLow": 190.848,
+        "entryHigh": 193.728,
+        "stopLoss": 181.7122,
+        "target1": 211.3245,
+        "target2": 219.7852,
         "riskPct": 5.5,
         "riskReward1": 1.8,
         "validEntrySessions": 1,
@@ -1307,79 +462,76 @@
         ]
       },
       "indicators": {
-        "return5Pct": -9.213,
-        "return20Pct": 27.685,
-        "relativeStrength20Pct": 27.162,
-        "rsi14": 63.4,
-        "atrPct": 4.452,
-        "volumeRatio20": 0,
-        "averageTurnover20Egp": 34740485,
-        "sma20": 21.235,
-        "sma50": 19.2066,
-        "support20": 17.4,
-        "resistance20": 25.99
+        "return5Pct": -0.379,
+        "return20Pct": 47.364,
+        "relativeStrength20Pct": 45.525,
+        "rsi14": 69.62,
+        "atrPct": 7.189,
+        "volumeRatio20": 1.622,
+        "averageTurnover20Egp": 46987403,
+        "sma20": 169.8965,
+        "sma50": 149.4714,
+        "support20": 129.01,
+        "resistance20": 211.77
       },
       "dataQuality": {
         "historySessions": 100,
-        "historyConfidence": 73.15,
+        "historyConfidence": 73.9,
         "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-08-10"
+        "latestHistorySession": "2026-08-11"
       },
       "passedConditions": [
         "اكتمال المؤشرات",
         "متوسط قيمة التداول",
         "جلسات حجم تداول صالحة",
+        "نشاط الحجم الحالي",
         "توفر قياس المخاطرة",
         "القوة النسبية",
         "ترتيب الاتجاه",
         "ميل متوسط 20",
         "منطقة RSI",
+        "دعم الحجم",
         "مساحة حتى المقاومة"
       ],
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0",
-        "دعم الحجم: 0"
-      ],
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+      "failedConditions": [],
+      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
       "adaptive": {
-        "proximityPct": 82.6,
+        "proximityPct": 93.6,
         "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 36,
+        "strategyHealthScore": 37.5,
         "minimumRequiredScore": 83,
         "scoreGap": 0,
         "calibratedVariantId": "balanced",
         "riskScale": 0,
         "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "نشاط الحجم الحالي: 0",
-          "دعم الحجم: 0"
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
         ],
         "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
       }
     },
     {
-      "ticker": "ADPC",
-      "companyNameAr": "العربية لمنتجات الألبان آراب ديري",
-      "companyNameEn": "Arab Dairy Products",
+      "ticker": "CLHO",
+      "companyNameAr": "مستشفى كليوباترا",
+      "companyNameEn": "Cleopatra Hospitals Group S.A.E.",
       "sector": null,
-      "signalDate": "2026-08-10",
+      "signalDate": "2026-08-11",
       "status": "NEAR_TRIGGER",
       "statusLabelAr": "قريب من اكتمال الإشارة",
       "strategyId": "trend_follow",
       "strategyLabelAr": "اتجاه قوي مع سيولة",
       "variantId": "balanced",
-      "recommendationScore": 83.3,
-      "rawSignalScore": 81.4,
+      "recommendationScore": 98.6,
+      "rawSignalScore": 91.8,
       "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "BALANCED",
-      "price": 4.17,
+      "marketRegime": "BULLISH",
+      "price": 17.65,
       "plan": {
-        "entryLow": 4.1514,
-        "entryHigh": 4.1933,
-        "stopLoss": 3.9625,
-        "target1": 4.55,
-        "target2": 4.7179,
-        "riskPct": 5.029,
+        "entryLow": 17.582,
+        "entryHigh": 17.7349,
+        "stopLoss": 16.8936,
+        "target1": 19.0353,
+        "target2": 19.6472,
+        "riskPct": 4.332,
         "riskReward1": 1.8,
         "validEntrySessions": 1,
         "maximumHoldingSessions": 10,
@@ -1390,52 +542,775 @@
         ]
       },
       "indicators": {
-        "return5Pct": 5.838,
-        "return20Pct": 23.739,
-        "relativeStrength20Pct": 23.216,
-        "rsi14": 64.44,
-        "atrPct": 3.725,
-        "volumeRatio20": 0,
-        "averageTurnover20Egp": 33707566,
-        "sma20": 3.835,
-        "sma50": 3.7652,
-        "support20": 3.32,
-        "resistance20": 4.41
+        "return5Pct": -0.282,
+        "return20Pct": 7.23,
+        "relativeStrength20Pct": 5.391,
+        "rsi14": 62.29,
+        "atrPct": 3.209,
+        "volumeRatio20": 0.997,
+        "averageTurnover20Egp": 38637060,
+        "sma20": 16.9515,
+        "sma50": 16.2526,
+        "support20": 15.98,
+        "resistance20": 19.72
       },
       "dataQuality": {
         "historySessions": 100,
-        "historyConfidence": 74.65,
+        "historyConfidence": 73.9,
         "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-08-10"
+        "latestHistorySession": "2026-08-11"
       },
       "passedConditions": [
         "اكتمال المؤشرات",
         "متوسط قيمة التداول",
         "جلسات حجم تداول صالحة",
+        "نشاط الحجم الحالي",
         "توفر قياس المخاطرة",
         "القوة النسبية",
         "ترتيب الاتجاه",
         "ميل متوسط 20",
         "منطقة RSI",
+        "دعم الحجم",
+        "مساحة حتى المقاومة"
+      ],
+      "failedConditions": [],
+      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
+      "adaptive": {
+        "proximityPct": 93.6,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 37.5,
+        "minimumRequiredScore": 83,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      }
+    },
+    {
+      "ticker": "MEPA",
+      "companyNameAr": "ميديكال باكجنج",
+      "companyNameEn": "Medical Packaging Company",
+      "sector": null,
+      "signalDate": "2026-08-11",
+      "status": "NEAR_TRIGGER",
+      "statusLabelAr": "قريب من اكتمال الإشارة",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "variantId": "balanced",
+      "recommendationScore": 97.9,
+      "rawSignalScore": 91.1,
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "marketRegime": "BULLISH",
+      "price": 1.91,
+      "plan": {
+        "entryLow": 1.9013,
+        "entryHigh": 1.9208,
+        "stopLoss": 1.8135,
+        "target1": 2.0868,
+        "target2": 2.1649,
+        "riskPct": 5.109,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": 2.688,
+        "return20Pct": 15.06,
+        "relativeStrength20Pct": 13.222,
+        "rsi14": 63.79,
+        "atrPct": 3.784,
+        "volumeRatio20": 0.915,
+        "averageTurnover20Egp": 66735292,
+        "sma20": 1.8355,
+        "sma50": 1.733,
+        "support20": 1.64,
+        "resistance20": 2.13
+      },
+      "dataQuality": {
+        "historySessions": 100,
+        "historyConfidence": 73.9,
+        "eligibilityStatus": "complete_recent",
+        "latestHistorySession": "2026-08-11"
+      },
+      "passedConditions": [
+        "اكتمال المؤشرات",
+        "متوسط قيمة التداول",
+        "جلسات حجم تداول صالحة",
+        "نشاط الحجم الحالي",
+        "توفر قياس المخاطرة",
+        "القوة النسبية",
+        "ترتيب الاتجاه",
+        "ميل متوسط 20",
+        "منطقة RSI",
+        "دعم الحجم",
+        "مساحة حتى المقاومة"
+      ],
+      "failedConditions": [],
+      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
+      "adaptive": {
+        "proximityPct": 93.6,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 37.5,
+        "minimumRequiredScore": 83,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      }
+    },
+    {
+      "ticker": "KABO",
+      "companyNameAr": "كابو",
+      "companyNameEn": "El-Nasr Clothing & Textiles KABO",
+      "sector": null,
+      "signalDate": "2026-08-11",
+      "status": "NEAR_TRIGGER",
+      "statusLabelAr": "قريب من اكتمال الإشارة",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "variantId": "balanced",
+      "recommendationScore": 97.1,
+      "rawSignalScore": 90.3,
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "marketRegime": "BULLISH",
+      "price": 8.52,
+      "plan": {
+        "entryLow": 8.4825,
+        "entryHigh": 8.5669,
+        "stopLoss": 8.1028,
+        "target1": 9.2841,
+        "target2": 9.6217,
+        "riskPct": 4.949,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": 2.651,
+        "return20Pct": 13.449,
+        "relativeStrength20Pct": 11.61,
+        "rsi14": 67.01,
+        "atrPct": 3.666,
+        "volumeRatio20": 1.204,
+        "averageTurnover20Egp": 38461818,
+        "sma20": 8.18,
+        "sma50": 7.1274,
+        "support20": 7.4,
+        "resistance20": 8.9
+      },
+      "dataQuality": {
+        "historySessions": 100,
+        "historyConfidence": 73.9,
+        "eligibilityStatus": "complete_recent",
+        "latestHistorySession": "2026-08-11"
+      },
+      "passedConditions": [
+        "اكتمال المؤشرات",
+        "متوسط قيمة التداول",
+        "جلسات حجم تداول صالحة",
+        "نشاط الحجم الحالي",
+        "توفر قياس المخاطرة",
+        "القوة النسبية",
+        "ترتيب الاتجاه",
+        "ميل متوسط 20",
+        "منطقة RSI",
+        "دعم الحجم",
+        "مساحة حتى المقاومة"
+      ],
+      "failedConditions": [],
+      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
+      "adaptive": {
+        "proximityPct": 93.6,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 37.5,
+        "minimumRequiredScore": 83,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      }
+    },
+    {
+      "ticker": "EEII",
+      "companyNameAr": "العربية للصناعات الهندسية",
+      "companyNameEn": "Arab Engineering Industries",
+      "sector": null,
+      "signalDate": "2026-08-11",
+      "status": "NEAR_TRIGGER",
+      "statusLabelAr": "قريب من اكتمال الإشارة",
+      "strategyId": "breakout",
+      "strategyLabelAr": "اختراق مؤكد",
+      "variantId": "early",
+      "recommendationScore": 96.8,
+      "rawSignalScore": 90,
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "marketRegime": "BULLISH",
+      "price": 2.95,
+      "plan": {
+        "entryLow": 2.936,
+        "entryHigh": 2.9675,
+        "stopLoss": 2.7894,
+        "target1": 3.244,
+        "target2": 3.3739,
+        "riskPct": 5.5,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": 13.027,
+        "return20Pct": 5.735,
+        "relativeStrength20Pct": 3.896,
+        "rsi14": 72.24,
+        "atrPct": 3.963,
+        "volumeRatio20": 2.27,
+        "averageTurnover20Egp": 13875867,
+        "sma20": 2.728,
+        "sma50": 2.5576,
+        "support20": 2.54,
+        "resistance20": 2.9
+      },
+      "dataQuality": {
+        "historySessions": 100,
+        "historyConfidence": 73.9,
+        "eligibilityStatus": "complete_recent",
+        "latestHistorySession": "2026-08-11"
+      },
+      "passedConditions": [
+        "اكتمال المؤشرات",
+        "متوسط قيمة التداول",
+        "جلسات حجم تداول صالحة",
+        "نشاط الحجم الحالي",
+        "توفر قياس المخاطرة",
+        "القوة النسبية",
+        "اتجاه داعم للاختراق",
+        "اختراق مقاومة 20 جلسة",
+        "حجم يؤكد الاختراق",
+        "منطقة RSI",
+        "إغلاق إيجابي"
+      ],
+      "failedConditions": [],
+      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
+      "adaptive": {
+        "proximityPct": 93.6,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 26.2,
+        "minimumRequiredScore": 83,
+        "scoreGap": 0,
+        "calibratedVariantId": "early",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      }
+    },
+    {
+      "ticker": "ASCM",
+      "companyNameAr": "أسيك للتعدين أسكوم",
+      "companyNameEn": "ASEC Company for Mining ASCOM",
+      "sector": null,
+      "signalDate": "2026-08-11",
+      "status": "NEAR_TRIGGER",
+      "statusLabelAr": "قريب من اكتمال الإشارة",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "variantId": "balanced",
+      "recommendationScore": 96.5,
+      "rawSignalScore": 89.7,
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "marketRegime": "BULLISH",
+      "price": 66.31,
+      "plan": {
+        "entryLow": 66.0076,
+        "entryHigh": 66.688,
+        "stopLoss": 62.944,
+        "target1": 72.4746,
+        "target2": 75.1976,
+        "riskPct": 5.13,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": 0.454,
+        "return20Pct": 12.01,
+        "relativeStrength20Pct": 10.172,
+        "rsi14": 67.38,
+        "atrPct": 3.8,
+        "volumeRatio20": 1.462,
+        "averageTurnover20Egp": 48584036,
+        "sma20": 62.591,
+        "sma50": 56.7732,
+        "support20": 57.25,
+        "resistance20": 68.3
+      },
+      "dataQuality": {
+        "historySessions": 100,
+        "historyConfidence": 73.9,
+        "eligibilityStatus": "complete_recent",
+        "latestHistorySession": "2026-08-11"
+      },
+      "passedConditions": [
+        "اكتمال المؤشرات",
+        "متوسط قيمة التداول",
+        "جلسات حجم تداول صالحة",
+        "نشاط الحجم الحالي",
+        "توفر قياس المخاطرة",
+        "القوة النسبية",
+        "ترتيب الاتجاه",
+        "ميل متوسط 20",
+        "منطقة RSI",
+        "دعم الحجم",
+        "مساحة حتى المقاومة"
+      ],
+      "failedConditions": [],
+      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
+      "adaptive": {
+        "proximityPct": 93.6,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 37.5,
+        "minimumRequiredScore": 83,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      }
+    },
+    {
+      "ticker": "FAIT",
+      "companyNameAr": "بنك فيصل الإسلامي",
+      "companyNameEn": "Faisal Islamic Bank of Egypt",
+      "sector": null,
+      "signalDate": "2026-08-11",
+      "status": "NEAR_TRIGGER",
+      "statusLabelAr": "قريب من اكتمال الإشارة",
+      "strategyId": "breakout",
+      "strategyLabelAr": "اختراق مؤكد",
+      "variantId": "early",
+      "recommendationScore": 95.6,
+      "rawSignalScore": 88.8,
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "marketRegime": "BULLISH",
+      "price": 38.69,
+      "plan": {
+        "entryLow": 38.5894,
+        "entryHigh": 38.8157,
+        "stopLoss": 37.4448,
+        "target1": 40.9666,
+        "target2": 41.9729,
+        "riskPct": 3.25,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": 4.286,
+        "return20Pct": 4.455,
+        "relativeStrength20Pct": 2.616,
+        "rsi14": 66.07,
+        "atrPct": 2.167,
+        "volumeRatio20": 1.674,
+        "averageTurnover20Egp": 3194586,
+        "sma20": 37.5,
+        "sma50": 37.1232,
+        "support20": 36.1,
+        "resistance20": 38.37
+      },
+      "dataQuality": {
+        "historySessions": 100,
+        "historyConfidence": 74.2,
+        "eligibilityStatus": "complete_recent",
+        "latestHistorySession": "2026-08-11"
+      },
+      "passedConditions": [
+        "اكتمال المؤشرات",
+        "متوسط قيمة التداول",
+        "جلسات حجم تداول صالحة",
+        "نشاط الحجم الحالي",
+        "توفر قياس المخاطرة",
+        "القوة النسبية",
+        "اتجاه داعم للاختراق",
+        "اختراق مقاومة 20 جلسة",
+        "حجم يؤكد الاختراق",
+        "منطقة RSI",
+        "إغلاق إيجابي"
+      ],
+      "failedConditions": [],
+      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
+      "adaptive": {
+        "proximityPct": 93.6,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 26.2,
+        "minimumRequiredScore": 83,
+        "scoreGap": 0,
+        "calibratedVariantId": "early",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      }
+    },
+    {
+      "ticker": "DOMT",
+      "companyNameAr": "دومتي",
+      "companyNameEn": "Arabian Food Industries DOMTY",
+      "sector": null,
+      "signalDate": "2026-08-11",
+      "status": "NEAR_TRIGGER",
+      "statusLabelAr": "قريب من اكتمال الإشارة",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "variantId": "balanced",
+      "recommendationScore": 95,
+      "rawSignalScore": 88.2,
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "marketRegime": "BULLISH",
+      "price": 28,
+      "plan": {
+        "entryLow": 27.914,
+        "entryHigh": 28.1075,
+        "stopLoss": 27.043,
+        "target1": 29.7527,
+        "target2": 30.527,
+        "riskPct": 3.455,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": 0,
+        "return20Pct": 3.973,
+        "relativeStrength20Pct": 2.135,
+        "rsi14": 55.98,
+        "atrPct": 2.559,
+        "volumeRatio20": 2.516,
+        "averageTurnover20Egp": 5953850,
+        "sma20": 27.395,
+        "sma50": 26.4112,
+        "support20": 26.01,
+        "resistance20": 30.34
+      },
+      "dataQuality": {
+        "historySessions": 100,
+        "historyConfidence": 73.9,
+        "eligibilityStatus": "complete_recent",
+        "latestHistorySession": "2026-08-11"
+      },
+      "passedConditions": [
+        "اكتمال المؤشرات",
+        "متوسط قيمة التداول",
+        "جلسات حجم تداول صالحة",
+        "نشاط الحجم الحالي",
+        "توفر قياس المخاطرة",
+        "القوة النسبية",
+        "ترتيب الاتجاه",
+        "ميل متوسط 20",
+        "منطقة RSI",
+        "دعم الحجم",
+        "مساحة حتى المقاومة"
+      ],
+      "failedConditions": [],
+      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
+      "adaptive": {
+        "proximityPct": 93.6,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 37.5,
+        "minimumRequiredScore": 83,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      }
+    },
+    {
+      "ticker": "EPCO",
+      "companyNameAr": "مصر للدواجن",
+      "companyNameEn": "Egypt for Poultry",
+      "sector": null,
+      "signalDate": "2026-08-11",
+      "status": "NEAR_TRIGGER",
+      "statusLabelAr": "قريب من اكتمال الإشارة",
+      "strategyId": "breakout",
+      "strategyLabelAr": "اختراق مؤكد",
+      "variantId": "early",
+      "recommendationScore": 94.8,
+      "rawSignalScore": 87.9,
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "marketRegime": "BULLISH",
+      "price": 12.71,
+      "plan": {
+        "entryLow": 12.6484,
+        "entryHigh": 12.787,
+        "stopLoss": 12.0182,
+        "target1": 13.9768,
+        "target2": 14.5363,
+        "riskPct": 5.5,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": 21.048,
+        "return20Pct": 42.809,
+        "relativeStrength20Pct": 40.97,
+        "rsi14": 79.2,
+        "atrPct": 4.039,
+        "volumeRatio20": 1.546,
+        "averageTurnover20Egp": 17554695,
+        "sma20": 10.2835,
+        "sma50": 9.5906,
+        "support20": 8.5,
+        "resistance20": 11.58
+      },
+      "dataQuality": {
+        "historySessions": 100,
+        "historyConfidence": 74.65,
+        "eligibilityStatus": "complete_recent",
+        "latestHistorySession": "2026-08-11"
+      },
+      "passedConditions": [
+        "اكتمال المؤشرات",
+        "متوسط قيمة التداول",
+        "جلسات حجم تداول صالحة",
+        "نشاط الحجم الحالي",
+        "توفر قياس المخاطرة",
+        "القوة النسبية",
+        "اتجاه داعم للاختراق",
+        "اختراق مقاومة 20 جلسة",
+        "حجم يؤكد الاختراق",
+        "إغلاق إيجابي"
+      ],
+      "failedConditions": [
+        "منطقة RSI: 79.2"
+      ],
+      "reasonAr": "أقرب نموذج حالي هو اختراق مؤكد، لكن بعض الشروط لم تكتمل.",
+      "adaptive": {
+        "proximityPct": 89.6,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 26.2,
+        "minimumRequiredScore": 83,
+        "scoreGap": 0,
+        "calibratedVariantId": "early",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+          "منطقة RSI: 79.2"
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      }
+    },
+    {
+      "ticker": "AXPH",
+      "companyNameAr": "الإسكندرية للأدوية",
+      "companyNameEn": "Alexandria Pharmaceuticals & Chemical Industries",
+      "sector": null,
+      "signalDate": "2026-08-11",
+      "status": "NEAR_TRIGGER",
+      "statusLabelAr": "قريب من اكتمال الإشارة",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "variantId": "balanced",
+      "recommendationScore": 98.7,
+      "rawSignalScore": 91.9,
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "marketRegime": "BULLISH",
+      "price": 1343.5601,
+      "plan": {
+        "entryLow": 1336.338,
+        "entryHigh": 1352.5876,
+        "stopLoss": 1270.5174,
+        "target1": 1477.5646,
+        "target2": 1536.721,
+        "riskPct": 5.5,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": 11.071,
+        "return20Pct": 11.948,
+        "relativeStrength20Pct": 10.11,
+        "rsi14": 70.07,
+        "atrPct": 4.479,
+        "volumeRatio20": 2.537,
+        "averageTurnover20Egp": 4238556,
+        "sma20": 1233.131,
+        "sma50": 1168.0994,
+        "support20": 1121.5601,
+        "resistance20": 1439
+      },
+      "dataQuality": {
+        "historySessions": 100,
+        "historyConfidence": 74.05,
+        "eligibilityStatus": "complete_recent",
+        "latestHistorySession": "2026-08-11"
+      },
+      "passedConditions": [
+        "اكتمال المؤشرات",
+        "متوسط قيمة التداول",
+        "جلسات حجم تداول صالحة",
+        "نشاط الحجم الحالي",
+        "توفر قياس المخاطرة",
+        "القوة النسبية",
+        "ترتيب الاتجاه",
+        "ميل متوسط 20",
+        "دعم الحجم",
         "مساحة حتى المقاومة"
       ],
       "failedConditions": [
-        "نشاط الحجم الحالي: 0",
-        "دعم الحجم: 0"
+        "منطقة RSI: 70.1"
       ],
       "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
       "adaptive": {
-        "proximityPct": 82.6,
+        "proximityPct": 89.5,
         "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 36,
+        "strategyHealthScore": 37.5,
         "minimumRequiredScore": 83,
         "scoreGap": 0,
         "calibratedVariantId": "balanced",
         "riskScale": 0,
         "missingRequirementsAr": [
           "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "نشاط الحجم الحالي: 0",
-          "دعم الحجم: 0"
+          "منطقة RSI: 70.1"
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      }
+    },
+    {
+      "ticker": "ICID",
+      "companyNameAr": "الدولية للاستثمار والتنمية",
+      "companyNameEn": "International Co. For Investment & Development",
+      "sector": null,
+      "signalDate": "2026-08-11",
+      "status": "NEAR_TRIGGER",
+      "statusLabelAr": "قريب من اكتمال الإشارة",
+      "strategyId": "breakout",
+      "strategyLabelAr": "اختراق مؤكد",
+      "variantId": "early",
+      "recommendationScore": 96.6,
+      "rawSignalScore": 89.8,
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "marketRegime": "BULLISH",
+      "price": 9.82,
+      "plan": {
+        "entryLow": 9.7684,
+        "entryHigh": 9.8845,
+        "stopLoss": 9.286,
+        "target1": 10.7993,
+        "target2": 11.2316,
+        "riskPct": 5.5,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": 22.444,
+        "return20Pct": 18.456,
+        "relativeStrength20Pct": 16.617,
+        "rsi14": 78.5,
+        "atrPct": 4.382,
+        "volumeRatio20": 1.924,
+        "averageTurnover20Egp": 7105936,
+        "sma20": 8.2225,
+        "sma50": 7.4344,
+        "support20": 7.51,
+        "resistance20": 8.98
+      },
+      "dataQuality": {
+        "historySessions": 100,
+        "historyConfidence": 74.2,
+        "eligibilityStatus": "complete_recent",
+        "latestHistorySession": "2026-08-11"
+      },
+      "passedConditions": [
+        "اكتمال المؤشرات",
+        "متوسط قيمة التداول",
+        "جلسات حجم تداول صالحة",
+        "نشاط الحجم الحالي",
+        "توفر قياس المخاطرة",
+        "القوة النسبية",
+        "اتجاه داعم للاختراق",
+        "اختراق مقاومة 20 جلسة",
+        "حجم يؤكد الاختراق",
+        "إغلاق إيجابي"
+      ],
+      "failedConditions": [
+        "منطقة RSI: 78.5"
+      ],
+      "reasonAr": "أقرب نموذج حالي هو اختراق مؤكد، لكن بعض الشروط لم تكتمل.",
+      "adaptive": {
+        "proximityPct": 89.5,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 26.2,
+        "minimumRequiredScore": 83,
+        "scoreGap": 0,
+        "calibratedVariantId": "early",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+          "منطقة RSI: 78.5"
         ],
         "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
       }
@@ -1445,24 +1320,24 @@
       "companyNameAr": "الإسماعيلية مصر للدواجن",
       "companyNameEn": "Ismailia Misr Poultry",
       "sector": null,
-      "signalDate": "2026-08-10",
+      "signalDate": "2026-08-11",
       "status": "NEAR_TRIGGER",
       "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "variantId": "balanced",
-      "recommendationScore": 83,
-      "rawSignalScore": 81.2,
+      "strategyId": "breakout",
+      "strategyLabelAr": "اختراق مؤكد",
+      "variantId": "early",
+      "recommendationScore": 96,
+      "rawSignalScore": 89.2,
       "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "BALANCED",
-      "price": 30.9,
+      "marketRegime": "BULLISH",
+      "price": 34.76,
       "plan": {
-        "entryLow": 30.7705,
-        "entryHigh": 31.0619,
-        "stopLoss": 29.4585,
-        "target1": 33.54,
-        "target2": 34.7062,
-        "riskPct": 4.715,
+        "entryLow": 34.5883,
+        "entryHigh": 34.9746,
+        "stopLoss": 32.8685,
+        "target1": 38.2248,
+        "target2": 39.7552,
+        "riskPct": 5.5,
         "riskReward1": 1.8,
         "validEntrySessions": 1,
         "maximumHoldingSessions": 10,
@@ -1473,15 +1348,15 @@
         ]
       },
       "indicators": {
-        "return5Pct": -2.83,
-        "return20Pct": 10.912,
-        "relativeStrength20Pct": 10.389,
-        "rsi14": 64.69,
-        "atrPct": 3.493,
-        "volumeRatio20": 0,
-        "averageTurnover20Egp": 23012090,
-        "sma20": 29.164,
-        "sma50": 28.6382,
+        "return5Pct": 12.129,
+        "return20Pct": 26.4,
+        "relativeStrength20Pct": 24.561,
+        "rsi14": 79.39,
+        "atrPct": 4.116,
+        "volumeRatio20": 2.81,
+        "averageTurnover20Egp": 26671259,
+        "sma20": 29.527,
+        "sma50": 28.8454,
         "support20": 26.54,
         "resistance20": 32.7
       },
@@ -1489,12 +1364,259 @@
         "historySessions": 100,
         "historyConfidence": 74.05,
         "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-08-10"
+        "latestHistorySession": "2026-08-11"
       },
       "passedConditions": [
         "اكتمال المؤشرات",
         "متوسط قيمة التداول",
         "جلسات حجم تداول صالحة",
+        "نشاط الحجم الحالي",
+        "توفر قياس المخاطرة",
+        "القوة النسبية",
+        "اتجاه داعم للاختراق",
+        "اختراق مقاومة 20 جلسة",
+        "حجم يؤكد الاختراق",
+        "إغلاق إيجابي"
+      ],
+      "failedConditions": [
+        "منطقة RSI: 79.4"
+      ],
+      "reasonAr": "أقرب نموذج حالي هو اختراق مؤكد، لكن بعض الشروط لم تكتمل.",
+      "adaptive": {
+        "proximityPct": 89.5,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 26.2,
+        "minimumRequiredScore": 83,
+        "scoreGap": 0,
+        "calibratedVariantId": "early",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+          "منطقة RSI: 79.4"
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      }
+    },
+    {
+      "ticker": "MPCO",
+      "companyNameAr": "المنصورة للدواجن",
+      "companyNameEn": "Mansoura Poultry",
+      "sector": null,
+      "signalDate": "2026-08-11",
+      "status": "NEAR_TRIGGER",
+      "statusLabelAr": "قريب من اكتمال الإشارة",
+      "strategyId": "breakout",
+      "strategyLabelAr": "اختراق مؤكد",
+      "variantId": "early",
+      "recommendationScore": 96,
+      "rawSignalScore": 89.2,
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "marketRegime": "BULLISH",
+      "price": 2.23,
+      "plan": {
+        "entryLow": 2.2212,
+        "entryHigh": 2.2411,
+        "stopLoss": 2.1204,
+        "target1": 2.4303,
+        "target2": 2.5188,
+        "riskPct": 4.96,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": 14.948,
+        "return20Pct": 18.617,
+        "relativeStrength20Pct": 16.778,
+        "rsi14": 79.36,
+        "atrPct": 3.307,
+        "volumeRatio20": 2.166,
+        "averageTurnover20Egp": 78724745,
+        "sma20": 1.924,
+        "sma50": 1.834,
+        "support20": 1.82,
+        "resistance20": 2.04
+      },
+      "dataQuality": {
+        "historySessions": 100,
+        "historyConfidence": 74.05,
+        "eligibilityStatus": "complete_recent",
+        "latestHistorySession": "2026-08-11"
+      },
+      "passedConditions": [
+        "اكتمال المؤشرات",
+        "متوسط قيمة التداول",
+        "جلسات حجم تداول صالحة",
+        "نشاط الحجم الحالي",
+        "توفر قياس المخاطرة",
+        "القوة النسبية",
+        "اتجاه داعم للاختراق",
+        "اختراق مقاومة 20 جلسة",
+        "حجم يؤكد الاختراق",
+        "إغلاق إيجابي"
+      ],
+      "failedConditions": [
+        "منطقة RSI: 79.4"
+      ],
+      "reasonAr": "أقرب نموذج حالي هو اختراق مؤكد، لكن بعض الشروط لم تكتمل.",
+      "adaptive": {
+        "proximityPct": 89.5,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 26.2,
+        "minimumRequiredScore": 83,
+        "scoreGap": 0,
+        "calibratedVariantId": "early",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+          "منطقة RSI: 79.4"
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      }
+    },
+    {
+      "ticker": "SVCE",
+      "companyNameAr": "جنوب الوادي للأسمنت",
+      "companyNameEn": "South Valley Cement Company",
+      "sector": null,
+      "signalDate": "2026-08-11",
+      "status": "NEAR_TRIGGER",
+      "statusLabelAr": "قريب من اكتمال الإشارة",
+      "strategyId": "breakout",
+      "strategyLabelAr": "اختراق مؤكد",
+      "variantId": "early",
+      "recommendationScore": 95.2,
+      "rawSignalScore": 88.4,
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "marketRegime": "BULLISH",
+      "price": 11.26,
+      "plan": {
+        "entryLow": 11.2171,
+        "entryHigh": 11.3136,
+        "stopLoss": 10.7289,
+        "target1": 12.2309,
+        "target2": 12.6601,
+        "riskPct": 4.762,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": 22.391,
+        "return20Pct": 19.787,
+        "relativeStrength20Pct": 17.949,
+        "rsi14": 80.63,
+        "atrPct": 3.175,
+        "volumeRatio20": 9.146,
+        "averageTurnover20Egp": 70392885,
+        "sma20": 9.3845,
+        "sma50": 9.2364,
+        "support20": 9.06,
+        "resistance20": 9.75
+      },
+      "dataQuality": {
+        "historySessions": 100,
+        "historyConfidence": 73.9,
+        "eligibilityStatus": "complete_recent",
+        "latestHistorySession": "2026-08-11"
+      },
+      "passedConditions": [
+        "اكتمال المؤشرات",
+        "متوسط قيمة التداول",
+        "جلسات حجم تداول صالحة",
+        "نشاط الحجم الحالي",
+        "توفر قياس المخاطرة",
+        "القوة النسبية",
+        "اتجاه داعم للاختراق",
+        "اختراق مقاومة 20 جلسة",
+        "حجم يؤكد الاختراق",
+        "إغلاق إيجابي"
+      ],
+      "failedConditions": [
+        "منطقة RSI: 80.6"
+      ],
+      "reasonAr": "أقرب نموذج حالي هو اختراق مؤكد، لكن بعض الشروط لم تكتمل.",
+      "adaptive": {
+        "proximityPct": 89.5,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 26.2,
+        "minimumRequiredScore": 83,
+        "scoreGap": 0,
+        "calibratedVariantId": "early",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+          "منطقة RSI: 80.6"
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      }
+    },
+    {
+      "ticker": "NINH",
+      "companyNameAr": "النزهة الدولي",
+      "companyNameEn": "Nozha International Hospital",
+      "sector": null,
+      "signalDate": "2026-08-11",
+      "status": "NEAR_TRIGGER",
+      "statusLabelAr": "قريب من اكتمال الإشارة",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "variantId": "balanced",
+      "recommendationScore": 99.2,
+      "rawSignalScore": 92.6,
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "marketRegime": "BULLISH",
+      "price": 22.69,
+      "plan": {
+        "entryLow": 22.5632,
+        "entryHigh": 22.8484,
+        "stopLoss": 21.457,
+        "target1": 24.9537,
+        "target2": 25.9528,
+        "riskPct": 5.5,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": -3.815,
+        "return20Pct": 25.567,
+        "relativeStrength20Pct": 23.729,
+        "rsi14": 60.45,
+        "atrPct": 4.655,
+        "volumeRatio20": 0.793,
+        "averageTurnover20Egp": 36162227,
+        "sma20": 21.466,
+        "sma50": 19.3042,
+        "support20": 17.4,
+        "resistance20": 25.99
+      },
+      "dataQuality": {
+        "historySessions": 100,
+        "historyConfidence": 73.15,
+        "eligibilityStatus": "complete_recent",
+        "latestHistorySession": "2026-08-11"
+      },
+      "passedConditions": [
+        "اكتمال المؤشرات",
+        "متوسط قيمة التداول",
+        "جلسات حجم تداول صالحة",
+        "نشاط الحجم الحالي",
         "توفر قياس المخاطرة",
         "القوة النسبية",
         "ترتيب الاتجاه",
@@ -1503,190 +1625,20 @@
         "مساحة حتى المقاومة"
       ],
       "failedConditions": [
-        "نشاط الحجم الحالي: 0",
-        "دعم الحجم: 0"
+        "دعم الحجم: 0.79"
       ],
       "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
       "adaptive": {
-        "proximityPct": 82.4,
+        "proximityPct": 89.4,
         "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 36,
+        "strategyHealthScore": 37.5,
         "minimumRequiredScore": 83,
         "scoreGap": 0,
         "calibratedVariantId": "balanced",
         "riskScale": 0,
         "missingRequirementsAr": [
           "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "نشاط الحجم الحالي: 0",
-          "دعم الحجم: 0"
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      }
-    },
-    {
-      "ticker": "GRCA",
-      "companyNameAr": "جراند كابيتال",
-      "companyNameEn": "Grand Capital for Financial Investments",
-      "sector": null,
-      "signalDate": "2026-08-10",
-      "status": "NEAR_TRIGGER",
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "variantId": "balanced",
-      "recommendationScore": 82.7,
-      "rawSignalScore": 80.9,
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "BALANCED",
-      "price": 58.04,
-      "plan": {
-        "entryLow": 57.6918,
-        "entryHigh": 58.4876,
-        "stopLoss": 54.8947,
-        "target1": 63.8406,
-        "target2": 66.3965,
-        "riskPct": 5.5,
-        "riskReward1": 1.8,
-        "validEntrySessions": 1,
-        "maximumHoldingSessions": 10,
-        "cancelConditionsAr": [
-          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
-          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
-          "الإشارة صالحة لجلسة دخول واحدة فقط."
-        ]
-      },
-      "indicators": {
-        "return5Pct": -3.17,
-        "return20Pct": 12.22,
-        "relativeStrength20Pct": 11.697,
-        "rsi14": 54.93,
-        "atrPct": 5.141,
-        "volumeRatio20": 0,
-        "averageTurnover20Egp": 12949452,
-        "sma20": 56.007,
-        "sma50": 55.4394,
-        "support20": 48,
-        "resistance20": 68.95
-      },
-      "dataQuality": {
-        "historySessions": 100,
-        "historyConfidence": 73.9,
-        "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-08-10"
-      },
-      "passedConditions": [
-        "اكتمال المؤشرات",
-        "متوسط قيمة التداول",
-        "جلسات حجم تداول صالحة",
-        "توفر قياس المخاطرة",
-        "القوة النسبية",
-        "ترتيب الاتجاه",
-        "ميل متوسط 20",
-        "منطقة RSI",
-        "مساحة حتى المقاومة"
-      ],
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0",
-        "دعم الحجم: 0"
-      ],
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "adaptive": {
-        "proximityPct": 82.3,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 36,
-        "minimumRequiredScore": 83,
-        "scoreGap": 0.3,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "تحتاج 0.3 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
-          "نشاط الحجم الحالي: 0",
-          "دعم الحجم: 0"
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      }
-    },
-    {
-      "ticker": "CAED",
-      "companyNameAr": "القاهرة للخدمات التعليمية",
-      "companyNameEn": "Cairo Educational Services",
-      "sector": null,
-      "signalDate": "2026-08-10",
-      "status": "NEAR_TRIGGER",
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "variantId": "balanced",
-      "recommendationScore": 82.7,
-      "rawSignalScore": 81.1,
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "BALANCED",
-      "price": 119.03,
-      "plan": {
-        "entryLow": 118.3158,
-        "entryHigh": 120.1013,
-        "stopLoss": 112.6521,
-        "target1": 131.0102,
-        "target2": 136.2554,
-        "riskPct": 5.5,
-        "riskReward1": 1.8,
-        "validEntrySessions": 1,
-        "maximumHoldingSessions": 10,
-        "cancelConditionsAr": [
-          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
-          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
-          "الإشارة صالحة لجلسة دخول واحدة فقط."
-        ]
-      },
-      "indicators": {
-        "return5Pct": -2.218,
-        "return20Pct": 65.572,
-        "relativeStrength20Pct": 65.049,
-        "rsi14": 64.87,
-        "atrPct": 6.531,
-        "volumeRatio20": 0,
-        "averageTurnover20Egp": 61867822,
-        "sma20": 113.495,
-        "sma50": 88.536,
-        "support20": 71.17,
-        "resistance20": 135.98
-      },
-      "dataQuality": {
-        "historySessions": 100,
-        "historyConfidence": 73.15,
-        "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-08-10"
-      },
-      "passedConditions": [
-        "اكتمال المؤشرات",
-        "متوسط قيمة التداول",
-        "جلسات حجم تداول صالحة",
-        "توفر قياس المخاطرة",
-        "القوة النسبية",
-        "ترتيب الاتجاه",
-        "ميل متوسط 20",
-        "منطقة RSI",
-        "مساحة حتى المقاومة"
-      ],
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0",
-        "دعم الحجم: 0"
-      ],
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "adaptive": {
-        "proximityPct": 82.2,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 36,
-        "minimumRequiredScore": 83,
-        "scoreGap": 0.3,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "تحتاج 0.3 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
-          "نشاط الحجم الحالي: 0",
-          "دعم الحجم: 0"
+          "دعم الحجم: 0.79"
         ],
         "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
       }
