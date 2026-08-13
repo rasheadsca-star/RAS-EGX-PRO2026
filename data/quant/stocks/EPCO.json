@@ -1,69 +1,92 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-08-10T16:34:34.308Z",
+  "generatedAt": "2026-08-13T13:33:45.013Z",
   "ticker": "EPCO",
   "companyNameAr": "مصر للدواجن",
   "companyNameEn": "Egypt for Poultry",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-08-09",
+  "sessionId": "2026-08-13",
   "latest": {
-    "date": "2026-08-09",
-    "open": 11.38,
-    "high": 11.38,
-    "low": 11.38,
-    "close": 11.38,
-    "volume": 0
+    "date": "2026-08-13",
+    "open": 12.07,
+    "high": 12.64,
+    "low": 11.49,
+    "close": 11.88,
+    "volume": 3235977
   },
   "indicators": {
-    "close": 11.38,
-    "change1Pct": 2.063,
-    "return5Pct": 3.267,
-    "return20Pct": 25.33,
-    "return50Pct": 23.427,
-    "sma5": 10.984,
-    "sma20": 9.974,
-    "sma50": 9.473,
-    "ema9": 10.842,
-    "ema21": 10.262,
-    "rsi14": 77.564,
-    "macd": 0.561,
-    "macdSignal": 0.437,
-    "atr14": 0.591,
-    "atrPct": 5.197,
-    "averageVolume20": 1391639.25,
-    "volumeRatio20": 0,
-    "averageTurnover20Egp": 14577411.419,
-    "volatility20Pct": 4.233,
-    "support20": 8.5,
-    "resistance20": 11.58,
-    "high50": 11.58,
+    "close": 11.88,
+    "change1Pct": -1.574,
+    "return5Pct": 6.547,
+    "return20Pct": 38.785,
+    "return50Pct": 29.13,
+    "sma5": 11.884,
+    "sma20": 10.618,
+    "sma50": 9.703,
+    "ema9": 11.54,
+    "ema21": 10.819,
+    "rsi14": 64.198,
+    "macd": 0.715,
+    "macdSignal": 0.583,
+    "atr14": 0.674,
+    "atrPct": 5.67,
+    "averageVolume20": 1688410.15,
+    "volumeRatio20": 1.917,
+    "averageTurnover20Egp": 18453090.898,
+    "volatility20Pct": 4.902,
+    "support20": 8.57,
+    "resistance20": 13.05,
+    "high50": 13.05,
     "low50": 8.5,
-    "distanceFromSupport20Pct": 33.882,
-    "relativeToResistance20Pct": -1.727,
-    "distanceFromHigh50Pct": -1.727
+    "distanceFromSupport20Pct": 38.623,
+    "relativeToResistance20Pct": -8.966,
+    "distanceFromHigh50Pct": -8.966
   },
   "technical": {
-    "score": 92,
+    "score": 100,
     "trendCode": "BULLISH",
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "breakout",
+    "strategyLabelAr": "اختراق مؤكد",
+    "recommendationScore": 94.8,
+    "reasonAr": "أقرب نموذج حالي هو اختراق مؤكد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "منطقة RSI: 79.2"
+    ],
+    "adaptive": {
+      "proximityPct": 89.6,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 26.2,
+      "minimumRequiredScore": 83,
+      "scoreGap": 0,
+      "calibratedVariantId": "early",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "منطقة RSI: 79.2"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 12.648,
+      "entryHigh": 12.787,
+      "stopLoss": 12.018,
+      "target1": 13.977,
+      "target2": 14.536,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
-    "historySessions": 100,
-    "firstSession": "2026-01-28",
-    "lastSession": "2026-08-09",
+    "historySessions": 101,
+    "firstSession": "2026-02-03",
+    "lastSession": "2026-08-13",
     "averageConfidence": 74.65,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,10 +94,6 @@
   },
   "chart": {
     "dates": [
-      "2026-01-28",
-      "2026-02-01",
-      "2026-02-02",
-      "2026-02-03",
       "2026-02-04",
       "2026-02-05",
       "2026-02-09",
@@ -170,13 +189,13 @@
       "2026-07-30",
       "2026-08-04",
       "2026-08-05",
-      "2026-08-09"
+      "2026-08-09",
+      "2026-08-10",
+      "2026-08-11",
+      "2026-08-12",
+      "2026-08-13"
     ],
     "open": [
-      6.3,
-      6.16,
-      6.24,
-      6.44,
       7.72,
       9.26,
       11.1,
@@ -272,13 +291,13 @@
       10.78,
       11.23,
       11.11,
-      11.38
+      11.38,
+      11.38,
+      12.5,
+      12.71,
+      12.07
     ],
     "high": [
-      6.34,
-      6.34,
-      6.48,
-      7.72,
       9.26,
       11,
       12.25,
@@ -374,13 +393,13 @@
       10.8,
       11.5,
       11.4,
-      11.38
+      11.38,
+      11.38,
+      13.05,
+      13,
+      12.64
     ],
     "low": [
-      6.02,
-      6.08,
-      6.17,
-      6.3,
       7.42,
       9.05,
       10.06,
@@ -476,13 +495,13 @@
       10.32,
       11,
       11.11,
-      11.38
+      11.38,
+      11.38,
+      12.45,
+      11.8,
+      11.49
     ],
     "close": [
-      6.16,
-      6.24,
-      6.44,
-      7.72,
       9.26,
       10.42,
       11.9,
@@ -578,13 +597,13 @@
       10.5,
       11.11,
       11.15,
-      11.38
+      11.38,
+      11.38,
+      12.71,
+      12.07,
+      11.88
     ],
     "volume": [
-      316097,
-      185509,
-      318660,
-      6663357,
       16443410,
       20131372,
       19888115,
@@ -680,7 +699,11 @@
       759928,
       1025329,
       760782,
-      0
+      0,
+      0,
+      2533803,
+      1662554,
+      3235977
     ],
     "sma20": [
       0,
@@ -702,10 +725,6 @@
       0,
       0,
       0,
-      8.898,
-      9.006,
-      9.119,
-      9.214,
       9.25,
       9.207,
       9.102,
@@ -782,7 +801,11 @@
       9.665,
       9.762,
       9.859,
-      9.974
+      9.974,
+      10.093,
+      10.284,
+      10.451,
+      10.618
     ],
     "sma50": [
       0,
@@ -834,10 +857,6 @@
       0,
       0,
       0,
-      8.725,
-      8.785,
-      8.842,
-      8.896,
       8.925,
       8.925,
       8.903,
@@ -884,7 +903,11 @@
       9.36,
       9.393,
       9.43,
-      9.473
+      9.473,
+      9.517,
+      9.591,
+      9.649,
+      9.703
     ]
   }
 }
