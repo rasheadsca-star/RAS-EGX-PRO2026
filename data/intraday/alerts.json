@@ -1,62 +1,48 @@
 {
   "schemaVersion": "13.12.0",
-  "generatedAt": "2026-08-16T11:18:52.621Z",
-  "cairoTime": "2026-08-16 14:18:52",
+  "generatedAt": "2026-08-16T11:44:49.264Z",
+  "cairoTime": "2026-08-16 14:44:49",
   "publicDelayedData": true,
-  "newAlertCount": 3,
+  "newAlertCount": 1,
   "counts": {
-    "critical": 31,
+    "critical": 30,
     "opportunity": 112,
     "warning": 51,
-    "info": 56
+    "info": 57
   },
   "newAlerts": [
     {
-      "generatedAt": "2026-08-16T11:18:52.658Z",
+      "generatedAt": "2026-08-16T11:44:49.302Z",
       "acknowledged": false,
-      "id": "2026-08-16:ISPH:session_down_cross:-3",
-      "level": "warning",
-      "type": "session_down_cross",
-      "ticker": "ISPH",
-      "titleAr": "ISPH: هبط دون -3% خلال الجلسة",
-      "detailAr": "التغير الحالي -3.32%.",
-      "actionAr": "راجع الدعم والوقف وأوقف أي دخول جديد عند كسر الخطة.",
-      "currentValue": -3.32,
-      "price": 13.1,
-      "tier": "TIER_B_PRIORITY_WATCH"
-    },
-    {
-      "generatedAt": "2026-08-16T11:18:52.659Z",
-      "acknowledged": false,
-      "id": "2026-08-16:COPR:snapshot_move:-1:1",
-      "level": "warning",
-      "type": "snapshot_move",
-      "ticker": "COPR",
-      "titleAr": "COPR: هبوط 2.17% منذ آخر لقطة",
-      "detailAr": "السعر السابق 0.46 والحالي 0.45.",
-      "actionAr": "راجع الخطة والوقف والحجم قبل أي قرار.",
-      "previousValue": 0.46,
-      "currentValue": 0.45,
-      "price": 0.45,
-      "tier": "TIER_B_PRIORITY_WATCH"
-    },
-    {
-      "generatedAt": "2026-08-16T11:18:52.659Z",
-      "acknowledged": false,
-      "id": "2026-08-16:DOMT:snapshot_move:1:1",
-      "level": "opportunity",
-      "type": "snapshot_move",
-      "ticker": "DOMT",
-      "titleAr": "DOMT: صعود 1.97% منذ آخر لقطة",
-      "detailAr": "السعر السابق 29.4 والحالي 29.98.",
-      "actionAr": "راجع الخطة والوقف والحجم قبل أي قرار.",
-      "previousValue": 29.4,
-      "currentValue": 29.98,
-      "price": 29.98,
+      "id": "2026-08-16:OLFI:state_change:ABOVE_ENTRY",
+      "level": "info",
+      "type": "state_change",
+      "ticker": "OLFI",
+      "titleAr": "OLFI: أعلى منطقة الدخول",
+      "detailAr": "الحالة السابقة: داخل منطقة الدخول — السعر 25.19.",
+      "actionAr": "انتظر إعادة اختبار أو خطة بديلة؛ لا تطارد السعر.",
+      "previousValue": "ENTRY_ZONE",
+      "currentValue": "ABOVE_ENTRY",
+      "price": 25.19,
       "tier": "TIER_B_PRIORITY_WATCH"
     }
   ],
   "alerts": [
+    {
+      "generatedAt": "2026-08-16T11:44:49.302Z",
+      "acknowledged": false,
+      "id": "2026-08-16:OLFI:state_change:ABOVE_ENTRY",
+      "level": "info",
+      "type": "state_change",
+      "ticker": "OLFI",
+      "titleAr": "OLFI: أعلى منطقة الدخول",
+      "detailAr": "الحالة السابقة: داخل منطقة الدخول — السعر 25.19.",
+      "actionAr": "انتظر إعادة اختبار أو خطة بديلة؛ لا تطارد السعر.",
+      "previousValue": "ENTRY_ZONE",
+      "currentValue": "ABOVE_ENTRY",
+      "price": 25.19,
+      "tier": "TIER_B_PRIORITY_WATCH"
+    },
     {
       "generatedAt": "2026-08-16T11:18:52.659Z",
       "acknowledged": false,
@@ -3727,20 +3713,6 @@
       "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
       "currentValue": 891.7161,
       "price": 3.05,
-      "tier": "TIER_B_PRIORITY_WATCH"
-    },
-    {
-      "generatedAt": "2026-08-13T07:27:14.001Z",
-      "acknowledged": false,
-      "id": "2026-08-13:SMFR:stale_data:",
-      "level": "critical",
-      "type": "stale_data",
-      "ticker": "SMFR",
-      "titleAr": "SMFR: البيانات أصبحت قديمة",
-      "detailAr": "عمر البيانات 891.7 دقيقة.",
-      "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
-      "currentValue": 891.7161,
-      "price": 264.18,
       "tier": "TIER_B_PRIORITY_WATCH"
     }
   ]
