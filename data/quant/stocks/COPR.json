@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-08-17T15:06:36.943Z",
+  "generatedAt": "2026-08-17T15:39:22.260Z",
   "ticker": "COPR",
   "companyNameAr": "كوبر للاستثمار التجاري والتطوير العقاري",
   "companyNameEn": "Copper for Commercial Investment & Real Estate Development",
@@ -52,30 +52,33 @@
     "source": "V13.5",
     "status": "NEAR_TRIGGER",
     "statusLabelAr": "قريب من اكتمال الإشارة",
-    "strategyId": "trend_follow",
-    "strategyLabelAr": "اتجاه قوي مع سيولة",
-    "recommendationScore": 92,
-    "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
-    "failedConditions": [],
+    "strategyId": "breakout",
+    "strategyLabelAr": "اختراق مؤكد",
+    "recommendationScore": 98.4,
+    "reasonAr": "أقرب نموذج حالي هو اختراق مؤكد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "منطقة RSI: 75.5"
+    ],
     "adaptive": {
-      "proximityPct": 93.4,
+      "proximityPct": 89.3,
       "strategyHealthStatus": "RESEARCH_ONLY",
-      "strategyHealthScore": 37.3,
-      "minimumRequiredScore": 83,
+      "strategyHealthScore": 23.9,
+      "minimumRequiredScore": 85,
       "scoreGap": 0,
-      "calibratedVariantId": "balanced",
+      "calibratedVariantId": "early",
       "riskScale": 0,
       "missingRequirementsAr": [
-        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "منطقة RSI: 75.5"
       ],
       "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
     },
     "plan": {
-      "entryLow": 0.409,
-      "entryHigh": 0.412,
-      "stopLoss": 0.394,
-      "target1": 0.439,
-      "target2": 0.451,
+      "entryLow": 0.438,
+      "entryHigh": 0.442,
+      "stopLoss": 0.419,
+      "target1": 0.479,
+      "target2": 0.496,
       "riskReward1": 1.8,
       "maximumHoldingSessions": 10
     }
