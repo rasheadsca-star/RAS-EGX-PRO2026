@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.9.0",
-  "generatedAt": "2026-08-18T15:07:09.642Z",
+  "generatedAt": "2026-08-18T15:46:41.706Z",
   "sessionId": "2026-08-18",
   "liveExecutionEnabled": false,
   "productionThresholdsRelaxed": false,
@@ -32,32 +32,32 @@
     {
       "code": "LATEST_FRESH",
       "labelAr": "محدث حتى آخر جلسة",
-      "count": 150
+      "count": 151
     },
     {
       "code": "SAFETY_ELIGIBLE",
       "labelAr": "اجتاز السلامة والأهلية الأولية",
-      "count": 150
+      "count": 151
     },
     {
       "code": "DECISION_HISTORY",
       "labelAr": "يمتلك الحد الأدنى لجلسات القرار",
-      "count": 150
+      "count": 151
     },
     {
       "code": "SIGNAL_PASSED",
       "labelAr": "اجتاز إشارة اليوم",
-      "count": 17
+      "count": 18
     },
     {
       "code": "ELIGIBILITY_PASSED",
       "labelAr": "أهلية القرار مكتملة",
-      "count": 17
+      "count": 18
     },
     {
       "code": "REGIME_PASSED",
       "labelAr": "حالة السوق تسمح",
-      "count": 17
+      "count": 18
     },
     {
       "code": "STRATEGY_VALIDATED",
@@ -216,7 +216,7 @@
     {
       "type": "hard_gate",
       "labelAr": "التاريخ غير محدث حتى آخر جلسة",
-      "count": 46
+      "count": 45
     },
     {
       "type": "signal_condition",
@@ -234,13 +234,13 @@
       "count": 19
     },
     {
-      "type": "signal_condition",
-      "labelAr": "الاقتراب من متوسط 20",
-      "count": 17
-    },
-    {
       "type": "strategy_validation",
       "labelAr": "حالة الاستراتيجية: RESEARCH_ONLY",
+      "count": 18
+    },
+    {
+      "type": "signal_condition",
+      "labelAr": "الاقتراب من متوسط 20",
       "count": 17
     },
     {
@@ -317,7 +317,7 @@
     {
       "code": "EXPLORATORY_DIAGNOSTIC",
       "labelAr": "تشخيص قريب من الشروط",
-      "candidateCount": 55,
+      "candidateCount": 56,
       "usage": "تحليل فقط، ليس توصية ولا صفقة ورقية تلقائية",
       "thresholdsChanged": true
     }
@@ -326,6 +326,23 @@
     {
       "ticker": "ADPC",
       "companyNameAr": "العربية لمنتجات الألبان آراب ديري",
+      "sector": null,
+      "recommendationScore": 100,
+      "signalPassed": true,
+      "failedConditionCount": 0,
+      "failedConditions": [],
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "researchValidated": false,
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "scorePaperPass": true,
+      "statusLabelAr": "مراقبة مشروطة"
+    },
+    {
+      "ticker": "EALR",
+      "companyNameAr": "العامة لاستصلاح الأراضي",
       "sector": null,
       "recommendationScore": 100,
       "signalPassed": true,
@@ -839,34 +856,15 @@
       "regimeAllowed": true,
       "scorePaperPass": true,
       "statusLabelAr": "مراقبة مشروطة"
-    },
-    {
-      "ticker": "SWDY",
-      "companyNameAr": "السويدي إليكتريك",
-      "sector": null,
-      "recommendationScore": 86.6,
-      "signalPassed": false,
-      "failedConditionCount": 1,
-      "failedConditions": [
-        "منطقة RSI: 85.6"
-      ],
-      "strategyId": "breakout",
-      "strategyLabelAr": "اختراق مؤكد",
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "researchValidated": false,
-      "eligibilityDecision": true,
-      "regimeAllowed": true,
-      "scorePaperPass": true,
-      "statusLabelAr": "مراقبة مشروطة"
     }
   ],
   "shadowCandidateTickers": [],
   "currentCounts": {
     "symbolsAnalyzed": 196,
-    "latestEligibleAnalyses": 150,
+    "latestEligibleAnalyses": 151,
     "paperCandidates": 0,
     "watchCandidates": 20,
-    "blockedOrRejected": 79
+    "blockedOrRejected": 78
   },
   "adaptiveStrategyHealthAvailable": true,
   "safety": {
