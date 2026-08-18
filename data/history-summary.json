@@ -1,6 +1,6 @@
 {
   "schemaVersion": "12.3.0",
-  "generatedAt": "2026-08-17T17:04:17.230Z",
+  "generatedAt": "2026-08-18T12:09:51.930Z",
   "targetSessions": 100,
   "symbolsTotal": 242,
   "symbolsMapped": 242,
@@ -12,11 +12,11 @@
   "symbolsBelow5": 0,
   "symbolsPending": 0,
   "symbolsFailed": 44,
-  "symbolsStale": 8,
+  "symbolsStale": 11,
   "officiallyVerifiedSymbols": 0,
   "crossVerifiedSymbols": 41,
   "singleSourceSymbols": 157,
-  "averageConfidence": 73.58,
+  "averageConfidence": 73.63,
   "latestMarketSession": "2026-08-17",
   "coverage": {
     "basis": "all_active_mapped_symbols",
@@ -40,16 +40,16 @@
   },
   "sources": {
     "egx": {
-      "status": "public_market_finalized",
-      "role": "latest-session finalization"
+      "status": "manual_or_future_adapter",
+      "role": "official verification"
     },
     "yahoo": {
-      "status": "historical_backfill",
+      "status": "available",
       "role": "historical backfill"
     },
     "mubasher": {
       "status": "existing_cache_available",
-      "role": "cross-check/fallback"
+      "role": "latest-session cross-check"
     },
     "investing": {
       "status": "manual_fallback",
@@ -70,12 +70,12 @@
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 72.4,
+      "averageConfidence": 72.75,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:45.4616%"
+        "latest_close_conflict:77.4631%"
       ],
       "sourceFile": "data/history/AALR.json"
     },
@@ -92,12 +92,12 @@
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.15,
+      "averageConfidence": 73.9,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:14.66%"
+        "latest_close_conflict:14.8072%"
       ],
       "sourceFile": "data/history/ABUK.json"
     },
@@ -116,11 +116,13 @@
         "mubasher_existing_cache"
       ],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.8,
+      "averageConfidence": 74.2,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
-      "warnings": [],
+      "warnings": [
+        "latest_close_conflict:0.8889%"
+      ],
       "sourceFile": "data/history/ACAMD.json"
     },
     {
@@ -156,12 +158,12 @@
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.9,
+      "averageConfidence": 74.65,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:31.636%"
+        "latest_close_conflict:51.1376%"
       ],
       "sourceFile": "data/history/ACGC.json"
     },
@@ -198,12 +200,12 @@
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.15,
+      "averageConfidence": 73.9,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:28.5803%"
+        "latest_close_conflict:24.1399%"
       ],
       "sourceFile": "data/history/ADCI.json"
     },
@@ -220,12 +222,12 @@
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.15,
+      "averageConfidence": 73.9,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:17.6029%"
+        "latest_close_conflict:18.7822%"
       ],
       "sourceFile": "data/history/ADIB.json"
     },
@@ -242,12 +244,12 @@
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.9,
+      "averageConfidence": 74.65,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:27.5362%"
+        "latest_close_conflict:30.7246%"
       ],
       "sourceFile": "data/history/ADPC.json"
     },
@@ -260,14 +262,14 @@
       "firstSession": "2026-02-09",
       "lastSession": "2026-08-04",
       "historyStatus": "historical_complete_100",
-      "processingStatus": "complete",
+      "processingStatus": "stale",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
       "averageConfidence": 66,
-      "staleData": false,
-      "updateFailed": false,
-      "lastUpdateError": null,
+      "staleData": true,
+      "updateFailed": true,
+      "lastUpdateError": "Yahoo history failed for ADRI: ADRI.CA: All HTTP attempts failed. https://query1.finance.yahoo.com/v8/finance/chart/ADRI.CA?range=3mo&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/ADRI.CA?range=3mo&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/ADRI.CA?range=3mo&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/ADRI.CA?range=3mo&interval=1d&events=history&includeAdjustedClose=true | https://query1.finance.yahoo.com/v8/finance/chart/ADRI.CA?range=3mo&interval=1d&events=history&includeAdjustedClose=true attempt 3: HTTP 404 from https://query1.finance.yahoo.com/v8/finance/chart/ADRI.CA?range=3mo&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/ADRI.CA?range=3mo&interval=1d&events=history&includeAdjustedClose=true attempt 1: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/ADRI.CA?range=3mo&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/ADRI.CA?range=3mo&interval=1d&events=history&includeAdjustedClose=true attempt 2: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/ADRI.CA?range=3mo&interval=1d&events=history&includeAdjustedClose=true | https://query2.finance.yahoo.com/v8/finance/chart/ADRI.CA?range=3mo&interval=1d&events=history&includeAdjustedClose=true attempt 3: HTTP 404 from https://query2.finance.yahoo.com/v8/finance/chart/ADRI.CA?range=3mo&interval=1d&events=history&includeAdjustedClose=true",
       "warnings": [
         "latest_close_conflict:3.2033%"
       ],
@@ -286,12 +288,12 @@
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.15,
+      "averageConfidence": 73.5,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:51.0825%"
+        "latest_close_conflict:40.9562%"
       ],
       "sourceFile": "data/history/AFDI.json"
     },
@@ -308,12 +310,12 @@
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.9,
+      "averageConfidence": 74.65,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:244.182%"
+        "latest_close_conflict:256.9844%"
       ],
       "sourceFile": "data/history/AFMC.json"
     },
@@ -350,12 +352,12 @@
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.5,
+      "averageConfidence": 74.25,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:1.4151%"
+        "latest_close_conflict:10.3774%"
       ],
       "sourceFile": "data/history/AIFI.json"
     },
@@ -394,12 +396,12 @@
         "mubasher_existing_cache"
       ],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.15,
+      "averageConfidence": 73.9,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:10.4652%"
+        "latest_close_conflict:10.2139%"
       ],
       "sourceFile": "data/history/AJWA.json"
     },
@@ -416,12 +418,12 @@
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 72.4,
+      "averageConfidence": 73.15,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:12.5618%"
+        "latest_close_conflict:10.7622%"
       ],
       "sourceFile": "data/history/ALCN.json"
     },
@@ -458,12 +460,12 @@
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 72.4,
+      "averageConfidence": 73.15,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:32.4009%"
+        "latest_close_conflict:32.4942%"
       ],
       "sourceFile": "data/history/ALUM.json"
     },
@@ -480,12 +482,12 @@
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.15,
+      "averageConfidence": 73.9,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:168.595%"
+        "latest_close_conflict:178.9256%"
       ],
       "sourceFile": "data/history/AMER.json"
     },
@@ -494,8 +496,8 @@
       "companyNameAr": "مركز الإسكندرية الطبي",
       "companyNameEn": "Alexandria New Medical Center",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-10",
+      "availableSessions": 100,
+      "firstSession": "2026-02-12",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -507,7 +509,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:99.6034%",
+        "latest_close_conflict:98.9258%",
         "corporate_action_review_required"
       ],
       "sourceFile": "data/history/AMES.json"
@@ -518,19 +520,19 @@
       "companyNameEn": "Arab Moltaqa Investments Company",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-03-05",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-03-08",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.9,
+      "averageConfidence": 74.25,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:48.9679%"
+        "latest_close_conflict:74.7706%"
       ],
       "sourceFile": "data/history/AMIA.json"
     },
@@ -540,19 +542,19 @@
       "companyNameEn": "Alexandria Mineral Oils Company",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-01-11",
-      "lastSession": "2026-08-10",
+      "firstSession": "2026-01-13",
+      "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 75,
+      "averageConfidence": 74.65,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:32.732%"
+        "latest_close_conflict:49.3557%"
       ],
       "sourceFile": "data/history/AMOC.json"
     },
@@ -561,8 +563,8 @@
       "companyNameAr": "يونيراب بولفارا",
       "companyNameEn": "Unirab Polvara Spinning & Weaving",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-03-03",
+      "availableSessions": 100,
+      "firstSession": "2026-03-08",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -576,7 +578,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:2.5943%"
+        "latest_close_conflict:7.5472%"
       ],
       "sourceFile": "data/history/APSW.json"
     },
@@ -585,8 +587,8 @@
       "companyNameAr": "المطورون العرب القابضة",
       "companyNameEn": "Arab Developers Holding",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-25",
+      "availableSessions": 100,
+      "firstSession": "2026-03-02",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -598,7 +600,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:16.6667%"
+        "latest_close_conflict:14.7619%"
       ],
       "sourceFile": "data/history/ARAB.json"
     },
@@ -607,8 +609,8 @@
       "companyNameAr": "العربية للأسمنت",
       "companyNameEn": "Arabian Cement Company S.A.E.",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-03",
+      "availableSessions": 100,
+      "firstSession": "2026-02-05",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -620,7 +622,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:33.8384%"
+        "latest_close_conflict:34.614%"
       ],
       "sourceFile": "data/history/ARCC.json"
     },
@@ -629,8 +631,8 @@
       "companyNameAr": "المجموعة المصرية العقارية",
       "companyNameEn": "Real Estate Egyptian Consortium",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-24",
+      "availableSessions": 100,
+      "firstSession": "2026-02-26",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -644,7 +646,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:3.8462%"
+        "latest_close_conflict:1.9231%"
       ],
       "sourceFile": "data/history/AREH.json"
     },
@@ -654,8 +656,8 @@
       "companyNameEn": "Arab Valves Company",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-02-25",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-03-02",
+      "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
@@ -675,8 +677,8 @@
       "companyNameAr": "أسيك للتعدين أسكوم",
       "companyNameEn": "ASEC Company for Mining ASCOM",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-02",
+      "availableSessions": 100,
+      "firstSession": "2026-02-04",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -688,7 +690,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:10.3611%"
+        "latest_close_conflict:7.9143%"
       ],
       "sourceFile": "data/history/ASCM.json"
     },
@@ -717,8 +719,8 @@
       "companyNameAr": "أسباير كابيتال",
       "companyNameEn": "Aspire Capital Holding for Financial Investments",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-25",
+      "availableSessions": 100,
+      "firstSession": "2026-03-02",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -732,7 +734,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:55%"
+        "latest_close_conflict:71.875%"
       ],
       "sourceFile": "data/history/ASPI.json"
     },
@@ -742,8 +744,8 @@
       "companyNameEn": "Al Tawfeek Leasing Company",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-03-04",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-03-05",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
@@ -751,12 +753,12 @@
         "mubasher_existing_cache"
       ],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.05,
+      "averageConfidence": 74.4,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:6.2619%"
+        "latest_close_conflict:5.3131%"
       ],
       "sourceFile": "data/history/ATLC.json"
     },
@@ -765,8 +767,8 @@
       "companyNameAr": "مصر الوطنية للصلب عتاقة",
       "companyNameEn": "Misr National Steel Ataqa",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-01-28",
+      "availableSessions": 100,
+      "firstSession": "2026-02-03",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -778,7 +780,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:14.9947%"
+        "latest_close_conflict:16.6843%"
       ],
       "sourceFile": "data/history/ATQA.json"
     },
@@ -787,8 +789,8 @@
       "companyNameAr": "الإسكندرية للأدوية",
       "companyNameEn": "Alexandria Pharmaceuticals & Chemical Industries",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-23",
+      "availableSessions": 100,
+      "firstSession": "2026-02-25",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -802,7 +804,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:7.6777%"
+        "latest_close_conflict:10.9061%"
       ],
       "sourceFile": "data/history/AXPH.json"
     },
@@ -811,8 +813,8 @@
       "companyNameAr": "بي إنفستمنتس",
       "companyNameEn": "B Investments Holding",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-10",
+      "availableSessions": 100,
+      "firstSession": "2026-02-12",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -824,7 +826,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:6.9505%"
+        "latest_close_conflict:4.6916%"
       ],
       "sourceFile": "data/history/BINV.json"
     },
@@ -833,8 +835,8 @@
       "companyNameAr": "جلاكسو سميثكلاين",
       "companyNameEn": "GlaxoSmithKline S.A.E",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-03",
+      "availableSessions": 100,
+      "firstSession": "2026-02-09",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -846,7 +848,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:628.8892%",
+        "latest_close_conflict:609.2893%",
         "corporate_action_review_required"
       ],
       "sourceFile": "data/history/BIOC.json"
@@ -896,8 +898,8 @@
       "companyNameAr": "بلتون القابضة",
       "companyNameEn": "Beltone Holding S.A.E",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-22",
+      "availableSessions": 100,
+      "firstSession": "2026-02-24",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -909,7 +911,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:3.7037%"
+        "latest_close_conflict:5.0505%"
       ],
       "sourceFile": "data/history/BTFH.json"
     },
@@ -939,19 +941,19 @@
       "companyNameEn": "Cairo Educational Services",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-02-11",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-02-15",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.15,
+      "averageConfidence": 73.5,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:77.5691%"
+        "latest_close_conflict:81.0599%"
       ],
       "sourceFile": "data/history/CAED.json"
     },
@@ -960,8 +962,8 @@
       "companyNameAr": "بنك قناة السويس",
       "companyNameEn": "Suez Canal Bank",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-15",
+      "availableSessions": 100,
+      "firstSession": "2026-02-17",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -970,12 +972,12 @@
         "mubasher_existing_cache"
       ],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.65,
+      "averageConfidence": 73.3,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:19.6698%",
+        "latest_close_conflict:18.3828%",
         "corporate_action_review_required"
       ],
       "sourceFile": "data/history/CANA.json"
@@ -986,19 +988,19 @@
       "companyNameEn": "Qalaa Holdings",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-01-27",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-01-28",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.65,
+      "averageConfidence": 75,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:4.9603%"
+        "latest_close_conflict:6.3492%"
       ],
       "sourceFile": "data/history/CCAP.json"
     },
@@ -1007,8 +1009,8 @@
       "companyNameAr": "الخليجية الكندية للاستثمار العقاري",
       "companyNameEn": "Gulf Canadian Company for Arab Real Estate Investment",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-17",
+      "availableSessions": 100,
+      "firstSession": "2026-02-22",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1022,7 +1024,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:5.1724%"
+        "latest_close_conflict:7.7586%"
       ],
       "sourceFile": "data/history/CCRS.json"
     },
@@ -1031,8 +1033,8 @@
       "companyNameAr": "مطاحن مصر الوسطى",
       "companyNameEn": "Middle Egypt Flour Mills",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-10",
+      "availableSessions": 100,
+      "firstSession": "2026-02-15",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1044,7 +1046,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:33.0069%"
+        "latest_close_conflict:34.9855%"
       ],
       "sourceFile": "data/history/CEFM.json"
     },
@@ -1053,8 +1055,8 @@
       "companyNameAr": "العربية للخزف سيراميكا ريماس",
       "companyNameEn": "Arab Ceramic Co.",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-03-12",
+      "availableSessions": 100,
+      "firstSession": "2026-03-16",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1066,7 +1068,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:9.0164%"
+        "latest_close_conflict:7.377%"
       ],
       "sourceFile": "data/history/CERA.json"
     },
@@ -1095,8 +1097,8 @@
       "companyNameAr": "سي آي كابيتال",
       "companyNameEn": "CI Capital Holding For Financial Investments",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-03-02",
+      "availableSessions": 100,
+      "firstSession": "2026-03-04",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1108,7 +1110,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:6.3184%"
+        "latest_close_conflict:6.7397%"
       ],
       "sourceFile": "data/history/CICH.json"
     },
@@ -1118,19 +1120,19 @@
       "companyNameEn": "Credit Agricole Egypt Bank",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-02-15",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-02-16",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.9,
+      "averageConfidence": 74.25,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:2.2575%"
+        "latest_close_conflict:4.097%"
       ],
       "sourceFile": "data/history/CIEB.json"
     },
@@ -1139,8 +1141,8 @@
       "companyNameAr": "القاهرة للاستثمار والتنمية العقارية",
       "companyNameEn": "Cairo For Investment And Real Estate Developments CIRA Education",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-19",
+      "availableSessions": 100,
+      "firstSession": "2026-02-23",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1152,7 +1154,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:32.7431%"
+        "latest_close_conflict:29.5139%"
       ],
       "sourceFile": "data/history/CIRA.json"
     },
@@ -1162,19 +1164,19 @@
       "companyNameEn": "Cleopatra Hospitals Group S.A.E.",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-02-15",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-02-16",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.9,
+      "averageConfidence": 74.25,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:3.8788%"
+        "latest_close_conflict:5.0909%"
       ],
       "sourceFile": "data/history/CLHO.json"
     },
@@ -1183,8 +1185,8 @@
       "companyNameAr": "كونتكت المالية القابضة",
       "companyNameEn": "Contact Financial Holding",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-03-05",
+      "availableSessions": 100,
+      "firstSession": "2026-03-09",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1198,7 +1200,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:3.1513%"
+        "latest_close_conflict:2.3109%"
       ],
       "sourceFile": "data/history/CNFN.json"
     },
@@ -1207,8 +1209,8 @@
       "companyNameAr": "البنك التجاري الدولي - مصر",
       "companyNameEn": "Commercial International Bank Egypt",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2025-12-30",
+      "availableSessions": 100,
+      "firstSession": "2026-01-04",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1220,7 +1222,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:9.3171%"
+        "latest_close_conflict:8.9874%"
       ],
       "sourceFile": "data/history/COMI.json"
     },
@@ -1229,8 +1231,8 @@
       "companyNameAr": "كوبر للاستثمار التجاري والتطوير العقاري",
       "companyNameEn": "Copper for Commercial Investment & Real Estate Development",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-24",
+      "availableSessions": 100,
+      "firstSession": "2026-02-26",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1239,12 +1241,12 @@
         "mubasher_existing_cache"
       ],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 72.45,
+      "averageConfidence": 72.1,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:19.7222%"
+        "latest_close_conflict:21.6667%"
       ],
       "sourceFile": "data/history/COPR.json"
     },
@@ -1253,30 +1255,8 @@
       "companyNameAr": "القاهرة للزيوت والصابون",
       "companyNameEn": "Cairo Oil & Soap Company",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-24",
-      "lastSession": "2026-08-17",
-      "historyStatus": "historical_complete_100",
-      "processingStatus": "complete",
-      "primarySource": "yahoo",
-      "verificationSources": [],
-      "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.25,
-      "staleData": false,
-      "updateFailed": false,
-      "lastUpdateError": null,
-      "warnings": [
-        "latest_close_conflict:21.0526%"
-      ],
-      "sourceFile": "data/history/COSG.json"
-    },
-    {
-      "ticker": "CPCI",
-      "companyNameAr": "القاهرة للأدوية",
-      "companyNameEn": "Kahira Pharmaceuticals & Chemical Industries",
-      "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-10",
+      "availableSessions": 100,
+      "firstSession": "2026-02-26",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1288,7 +1268,29 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:31.9281%"
+        "latest_close_conflict:18.4211%"
+      ],
+      "sourceFile": "data/history/COSG.json"
+    },
+    {
+      "ticker": "CPCI",
+      "companyNameAr": "القاهرة للأدوية",
+      "companyNameEn": "Kahira Pharmaceuticals & Chemical Industries",
+      "symbolVerified": true,
+      "availableSessions": 100,
+      "firstSession": "2026-02-12",
+      "lastSession": "2026-08-17",
+      "historyStatus": "historical_complete_100",
+      "processingStatus": "complete",
+      "primarySource": "yahoo",
+      "verificationSources": [],
+      "officiallyVerifiedLatestSession": false,
+      "averageConfidence": 73.9,
+      "staleData": false,
+      "updateFailed": false,
+      "lastUpdateError": null,
+      "warnings": [
+        "latest_close_conflict:33.0765%"
       ],
       "sourceFile": "data/history/CPCI.json"
     },
@@ -1337,8 +1339,8 @@
       "companyNameAr": "القناة للتوكيلات الملاحية",
       "companyNameEn": "Canal Shipping Agencies Company",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-05",
+      "availableSessions": 100,
+      "firstSession": "2026-02-09",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1352,7 +1354,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:28.76%"
+        "latest_close_conflict:27.7471%"
       ],
       "sourceFile": "data/history/CSAG.json"
     },
@@ -1361,8 +1363,8 @@
       "companyNameAr": "المشروعات الصناعية والهندسية",
       "companyNameEn": "Development & Engineering Consultants",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-18",
+      "availableSessions": 100,
+      "firstSession": "2026-02-22",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1376,7 +1378,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:51.2334%"
+        "latest_close_conflict:58.464%"
       ],
       "sourceFile": "data/history/DAPH.json"
     },
@@ -1386,8 +1388,8 @@
       "companyNameEn": "Damietta Container & Cargo Handling",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-03-24",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-03-26",
+      "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
@@ -1408,8 +1410,8 @@
       "companyNameEn": "Delta Insurance Company",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-03-12",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-03-16",
+      "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
@@ -1449,8 +1451,8 @@
       "companyNameAr": "دومتي",
       "companyNameEn": "Arabian Food Industries DOMTY",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-03-02",
+      "availableSessions": 100,
+      "firstSession": "2026-03-04",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1462,7 +1464,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:7.4917%"
+        "latest_close_conflict:6.9776%"
       ],
       "sourceFile": "data/history/DOMT.json"
     },
@@ -1491,8 +1493,8 @@
       "companyNameAr": "دايس للملابس الجاهزة",
       "companyNameEn": "Dice For Ready-Made Garments",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-03-08",
+      "availableSessions": 100,
+      "firstSession": "2026-03-10",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1504,7 +1506,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:22.5434%"
+        "latest_close_conflict:17.341%"
       ],
       "sourceFile": "data/history/DSCW.json"
     },
@@ -1514,19 +1516,19 @@
       "companyNameEn": "Delta Co. For Printing & Packaging",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-02-05",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-02-08",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.9,
+      "averageConfidence": 74.25,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:50.5219%",
+        "latest_close_conflict:47.8771%",
         "corporate_action_review_required"
       ],
       "sourceFile": "data/history/DTPP.json"
@@ -1536,20 +1538,20 @@
       "companyNameAr": "العامة لاستصلاح الأراضي",
       "companyNameEn": "Arab Company For Land Reclamation",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-17",
+      "availableSessions": 100,
+      "firstSession": "2026-02-19",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.5,
+      "averageConfidence": 73.15,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:14.0121%"
+        "latest_close_conflict:34.1522%"
       ],
       "sourceFile": "data/history/EALR.json"
     },
@@ -1558,8 +1560,8 @@
       "companyNameAr": "ثمار للوساطة",
       "companyNameEn": "Egyptian Arabian Company Themar for securities Brokerage",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-03-11",
+      "availableSessions": 100,
+      "firstSession": "2026-03-15",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1571,7 +1573,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:4.244%"
+        "latest_close_conflict:0.9284%"
       ],
       "sourceFile": "data/history/EASB.json"
     },
@@ -1580,8 +1582,8 @@
       "companyNameAr": "الشرقية - إيسترن كومباني",
       "companyNameEn": "Eastern Company",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-15",
+      "availableSessions": 100,
+      "firstSession": "2026-02-17",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1593,7 +1595,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:2.6838%"
+        "latest_close_conflict:1.6103%"
       ],
       "sourceFile": "data/history/EAST.json"
     },
@@ -1602,8 +1604,8 @@
       "companyNameAr": "أصول إي إس بي للوساطة",
       "companyNameEn": "Osool ESB Securities Brokerage",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-03-08",
+      "availableSessions": 100,
+      "firstSession": "2026-03-10",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1615,7 +1617,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:9.0476%"
+        "latest_close_conflict:8.0952%"
       ],
       "sourceFile": "data/history/EBSC.json"
     },
@@ -1625,8 +1627,8 @@
       "companyNameEn": "Al Ezz Ceramics & Porcelain",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-02-19",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-02-22",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
@@ -1637,7 +1639,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:18.857%"
+        "latest_close_conflict:20.11%"
       ],
       "sourceFile": "data/history/ECAP.json"
     },
@@ -1647,8 +1649,8 @@
       "companyNameEn": "East Delta Flour Mills",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-02-19",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-02-22",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
@@ -1659,7 +1661,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:13.1195%"
+        "latest_close_conflict:13.3482%"
       ],
       "sourceFile": "data/history/EDFM.json"
     },
@@ -1668,8 +1670,8 @@
       "companyNameAr": "العربية للصناعات الهندسية",
       "companyNameEn": "Arab Engineering Industries",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-23",
+      "availableSessions": 100,
+      "firstSession": "2026-02-25",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1681,7 +1683,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:21.6%"
+        "latest_close_conflict:22%"
       ],
       "sourceFile": "data/history/EEII.json"
     },
@@ -1691,19 +1693,19 @@
       "companyNameEn": "Egyptian Financial and Industrial SAE",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-03-03",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-03-04",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.9,
+      "averageConfidence": 74.25,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:20.9729%"
+        "latest_close_conflict:26.1276%"
       ],
       "sourceFile": "data/history/EFIC.json"
     },
@@ -1713,8 +1715,8 @@
       "companyNameEn": "Edita Food Industries Company",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-02-15",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-02-16",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
@@ -1722,12 +1724,12 @@
         "mubasher_existing_cache"
       ],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.05,
+      "averageConfidence": 74.4,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:19.4739%"
+        "latest_close_conflict:21.3738%"
       ],
       "sourceFile": "data/history/EFID.json"
     },
@@ -1736,8 +1738,8 @@
       "companyNameAr": "إي فاينانس",
       "companyNameEn": "e-finance for Digital and Financial Investments S.A.E.",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-01",
+      "availableSessions": 100,
+      "firstSession": "2026-02-03",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1749,7 +1751,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:15.6713%"
+        "latest_close_conflict:19.398%"
       ],
       "sourceFile": "data/history/EFIH.json"
     },
@@ -1758,8 +1760,8 @@
       "companyNameAr": "مصر للألومنيوم",
       "companyNameEn": "Egypt Aluminum",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-03",
+      "availableSessions": 100,
+      "firstSession": "2026-02-05",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1771,7 +1773,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:16.3145%"
+        "latest_close_conflict:18.9345%"
       ],
       "sourceFile": "data/history/EGAL.json"
     },
@@ -1780,8 +1782,8 @@
       "companyNameAr": "غاز مصر",
       "companyNameEn": "Egypt Gas Company",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-09",
+      "availableSessions": 100,
+      "firstSession": "2026-02-11",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1793,7 +1795,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:19.0208%"
+        "latest_close_conflict:20.0484%"
       ],
       "sourceFile": "data/history/EGAS.json"
     },
@@ -1806,15 +1808,15 @@
       "firstSession": "2026-02-04",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
-      "processingStatus": "complete",
+      "processingStatus": "stale",
       "primarySource": "mixed_history_with_starta_ohlc_api",
       "verificationSources": [
         "starta_egx_database_identity"
       ],
       "officiallyVerifiedLatestSession": false,
       "averageConfidence": 74.9,
-      "staleData": false,
-      "updateFailed": false,
+      "staleData": true,
+      "updateFailed": true,
       "lastUpdateError": "Yahoo history failed for EGBE: EGBE.CA: identity score 65",
       "warnings": [
         "historical_seed_not_officially_verified",
@@ -1830,8 +1832,8 @@
       "companyNameAr": "كيما",
       "companyNameEn": "Egyptian Chemical Industries",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-10",
+      "availableSessions": 100,
+      "firstSession": "2026-02-12",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1843,7 +1845,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:17.7143%"
+        "latest_close_conflict:16.0816%"
       ],
       "sourceFile": "data/history/EGCH.json"
     },
@@ -1876,8 +1878,8 @@
       "companyNameAr": "المصرية للمنتجعات السياحية",
       "companyNameEn": "Egyptian Resorts Company",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-10",
+      "availableSessions": 100,
+      "firstSession": "2026-02-12",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1889,7 +1891,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:5.7627%",
+        "latest_close_conflict:6.1582%",
         "corporate_action_review_required"
       ],
       "sourceFile": "data/history/EGTS.json"
@@ -1919,8 +1921,8 @@
       "companyNameAr": "المصريين للإسكان والتنمية",
       "companyNameEn": "Egyptians for Housing & Development",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-25",
+      "availableSessions": 100,
+      "firstSession": "2026-03-02",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1932,7 +1934,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:19.6%"
+        "latest_close_conflict:26%"
       ],
       "sourceFile": "data/history/EHDR.json"
     },
@@ -1941,8 +1943,8 @@
       "companyNameAr": "الكابلات الكهربائية المصرية",
       "companyNameEn": "Electro Cable Egypt",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-03-04",
+      "availableSessions": 100,
+      "firstSession": "2026-03-08",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1956,7 +1958,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:3.3333%"
+        "latest_close_conflict:3.8095%"
       ],
       "sourceFile": "data/history/ELEC.json"
     },
@@ -1965,8 +1967,8 @@
       "companyNameAr": "القاهرة للإسكان والتعمير",
       "companyNameEn": "Cairo for Housing and Development",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-24",
+      "availableSessions": 100,
+      "firstSession": "2026-02-26",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -1978,7 +1980,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:30.1471%"
+        "latest_close_conflict:27.9412%"
       ],
       "sourceFile": "data/history/ELKA.json"
     },
@@ -1988,8 +1990,8 @@
       "companyNameEn": "El Nasr Manufacturing Agricultural Crops",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-02-23",
-      "lastSession": "2026-08-11",
+      "firstSession": "2026-02-26",
+      "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
@@ -2000,7 +2002,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:4.2709%"
+        "latest_close_conflict:4.8016%"
       ],
       "sourceFile": "data/history/ELNA.json"
     },
@@ -2009,8 +2011,8 @@
       "companyNameAr": "الشمس للإسكان والتعمير",
       "companyNameEn": "Al Shams Housing and Urbanization",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-12",
+      "availableSessions": 100,
+      "firstSession": "2026-02-17",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2022,7 +2024,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:20.0689%",
+        "latest_close_conflict:18.3463%",
         "corporate_action_review_required"
       ],
       "sourceFile": "data/history/ELSH.json"
@@ -2032,8 +2034,8 @@
       "companyNameAr": "الوادي العالمية للاستثمار والتنمية",
       "companyNameEn": "El Wadi for International and Investment Development",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-03-18",
+      "availableSessions": 100,
+      "firstSession": "2026-03-24",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2047,7 +2049,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:10.2564%"
+        "latest_close_conflict:11.2821%"
       ],
       "sourceFile": "data/history/ELWA.json"
     },
@@ -2056,8 +2058,8 @@
       "companyNameAr": "إعمار مصر",
       "companyNameEn": "Emaar Misr for Development Company",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-18",
+      "availableSessions": 100,
+      "firstSession": "2026-02-22",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2071,7 +2073,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:1.5571%"
+        "latest_close_conflict:0.692%"
       ],
       "sourceFile": "data/history/EMFD.json"
     },
@@ -2080,8 +2082,8 @@
       "companyNameAr": "آيكون",
       "companyNameEn": "Industrial Engineering Company for Construction and Development ICON",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-12",
+      "availableSessions": 100,
+      "firstSession": "2026-02-17",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2093,7 +2095,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:37.2131%"
+        "latest_close_conflict:39.8907%"
       ],
       "sourceFile": "data/history/ENGC.json"
     },
@@ -2103,8 +2105,8 @@
       "companyNameEn": "El Orouba Securities Brokerage",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2025-07-23",
-      "lastSession": "2026-08-10",
+      "firstSession": "2025-07-29",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
@@ -2124,8 +2126,8 @@
       "companyNameAr": "مصر للدواجن",
       "companyNameEn": "Egypt for Poultry",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-04",
+      "availableSessions": 100,
+      "firstSession": "2026-02-09",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2137,7 +2139,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:36.5517%"
+        "latest_close_conflict:37.3563%"
       ],
       "sourceFile": "data/history/EPCO.json"
     },
@@ -2146,20 +2148,20 @@
       "companyNameAr": "الأهرام للطباعة والتغليف",
       "companyNameEn": "El Ahram Co. For Printing And Packaging",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-22",
+      "availableSessions": 100,
+      "firstSession": "2026-02-24",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.25,
+      "averageConfidence": 73.9,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:7.1177%"
+        "latest_close_conflict:5.7787%"
       ],
       "sourceFile": "data/history/EPPK.json"
     },
@@ -2168,20 +2170,20 @@
       "companyNameAr": "المصرية للاتصالات",
       "companyNameEn": "Telecom Egypt",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-01",
+      "availableSessions": 100,
+      "firstSession": "2026-02-04",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.5,
+      "averageConfidence": 73.15,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:21.3024%"
+        "latest_close_conflict:23.4305%"
       ],
       "sourceFile": "data/history/ETEL.json"
     },
@@ -2190,8 +2192,8 @@
       "companyNameAr": "إيجيترانس",
       "companyNameEn": "Egyptian Transport & Commercial Services EGYTRANS NOSCO",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-12",
+      "availableSessions": 100,
+      "firstSession": "2026-02-16",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2203,7 +2205,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:2.9245%"
+        "latest_close_conflict:8.2075%"
       ],
       "sourceFile": "data/history/ETRS.json"
     },
@@ -2212,8 +2214,8 @@
       "companyNameAr": "البنك المصري لتنمية الصادرات",
       "companyNameEn": "Export Development Bank of Egypt",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-25",
+      "availableSessions": 100,
+      "firstSession": "2026-03-02",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2225,7 +2227,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:16.2029%"
+        "latest_close_conflict:15.8756%"
       ],
       "sourceFile": "data/history/EXPA.json"
     },
@@ -2234,8 +2236,8 @@
       "companyNameAr": "بنك فيصل الإسلامي",
       "companyNameEn": "Faisal Islamic Bank of Egypt",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-26",
+      "availableSessions": 100,
+      "firstSession": "2026-03-03",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2249,7 +2251,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:10.357%"
+        "latest_close_conflict:16.0357%"
       ],
       "sourceFile": "data/history/FAIT.json"
     },
@@ -2282,8 +2284,8 @@
       "companyNameAr": "فيركيم مصر",
       "companyNameEn": "Ferchem Misr for fertilizers and chemicals",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-17",
+      "availableSessions": 100,
+      "firstSession": "2026-02-19",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2295,7 +2297,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:10.1564%"
+        "latest_close_conflict:7.2332%"
       ],
       "sourceFile": "data/history/FERC.json"
     },
@@ -2324,20 +2326,20 @@
       "companyNameAr": "فوري لتكنولوجيا البنوك والمدفوعات الإلكترونية",
       "companyNameEn": "Fawry for Banking Technology and Electronic Payments",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-01-28",
+      "availableSessions": 100,
+      "firstSession": "2026-02-02",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.5,
+      "averageConfidence": 73.15,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:3.4839%"
+        "latest_close_conflict:4.1372%"
       ],
       "sourceFile": "data/history/FWRY.json"
     },
@@ -2346,8 +2348,8 @@
       "companyNameAr": "جي بي كوربوريشن",
       "companyNameEn": "GB Corp",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-12",
+      "availableSessions": 100,
+      "firstSession": "2026-02-16",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2359,7 +2361,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:1.7774%"
+        "latest_close_conflict:5.0514%"
       ],
       "sourceFile": "data/history/GBCO.json"
     },
@@ -2368,8 +2370,8 @@
       "companyNameAr": "جدوى للتنمية الصناعية",
       "companyNameEn": "Gadwa for Industrial Development",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-17",
+      "availableSessions": 100,
+      "firstSession": "2026-02-19",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2381,7 +2383,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:6.1842%"
+        "latest_close_conflict:6.5789%"
       ],
       "sourceFile": "data/history/GDWA.json"
     },
@@ -2390,8 +2392,8 @@
       "companyNameAr": "الجيزة العامة للمقاولات",
       "companyNameEn": "Giza General Contracting and Real Estate Investment",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-18",
+      "availableSessions": 100,
+      "firstSession": "2026-02-22",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2403,7 +2405,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:106.1224%"
+        "latest_close_conflict:102.0408%"
       ],
       "sourceFile": "data/history/GGCC.json"
     },
@@ -2432,8 +2434,8 @@
       "companyNameAr": "الغربية الإسلامية للتنمية العمرانية",
       "companyNameEn": "Gharbia Islamic Housing Development",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-02",
+      "availableSessions": 100,
+      "firstSession": "2026-02-05",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2445,7 +2447,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:59.534%"
+        "latest_close_conflict:60.9605%"
       ],
       "sourceFile": "data/history/GIHD.json"
     },
@@ -2454,8 +2456,8 @@
       "companyNameAr": "جي إم سي",
       "companyNameEn": "GMC Group For Industrial Commercial & Financial Investments",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-01-21",
+      "availableSessions": 100,
+      "firstSession": "2026-01-25",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2467,7 +2469,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:2.1505%"
+        "latest_close_conflict:3.2258%"
       ],
       "sourceFile": "data/history/GMCI.json"
     },
@@ -2545,8 +2547,8 @@
       "companyNameAr": "جراند كابيتال",
       "companyNameEn": "Grand Capital for Financial Investments",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-03-03",
+      "availableSessions": 100,
+      "firstSession": "2026-03-05",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2558,7 +2560,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:6.0623%"
+        "latest_close_conflict:12.2012%"
       ],
       "sourceFile": "data/history/GRCA.json"
     },
@@ -2567,8 +2569,8 @@
       "companyNameAr": "الصوامع والتخزين",
       "companyNameEn": "General Co. For Silos & Storage",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-15",
+      "availableSessions": 100,
+      "firstSession": "2026-02-17",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2580,7 +2582,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:14.8175%"
+        "latest_close_conflict:15.0262%"
       ],
       "sourceFile": "data/history/GSSC.json"
     },
@@ -2610,8 +2612,8 @@
       "companyNameEn": "Golden Textiles & Clothes Wool",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-02-17",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-02-18",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
@@ -2622,7 +2624,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:48.596%"
+        "latest_close_conflict:87.4861%"
       ],
       "sourceFile": "data/history/GTWL.json"
     },
@@ -2632,19 +2634,19 @@
       "companyNameEn": "Housing and Development Bank Egypt",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-02-23",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-02-24",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.9,
+      "averageConfidence": 74.25,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:47.5311%",
+        "latest_close_conflict:44.8251%",
         "corporate_action_review_required"
       ],
       "sourceFile": "data/history/HDBK.json"
@@ -2654,8 +2656,8 @@
       "companyNameAr": "مصر الجديدة للإسكان والتعمير",
       "companyNameEn": "Heliopolis Co. for Housing & Development",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-05",
+      "availableSessions": 100,
+      "firstSession": "2026-02-11",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2667,7 +2669,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:22.084%"
+        "latest_close_conflict:18.818%"
       ],
       "sourceFile": "data/history/HELI.json"
     },
@@ -2676,8 +2678,8 @@
       "companyNameAr": "إي إف جي القابضة",
       "companyNameEn": "EFG Holding Company S.A.E",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-08",
+      "availableSessions": 100,
+      "firstSession": "2026-02-11",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2691,7 +2693,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:1.1128%"
+        "latest_close_conflict:1.8546%"
       ],
       "sourceFile": "data/history/HRHO.json"
     },
@@ -2700,8 +2702,8 @@
       "companyNameAr": "الدولية للاستثمار والتنمية",
       "companyNameEn": "International Co. For Investment & Development",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-24",
+      "availableSessions": 100,
+      "firstSession": "2026-02-26",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2715,7 +2717,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:69.7995%"
+        "latest_close_conflict:86.4662%"
       ],
       "sourceFile": "data/history/ICID.json"
     },
@@ -2725,8 +2727,8 @@
       "companyNameEn": "International Company for Leasing",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-03-09",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-03-11",
+      "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
@@ -2764,52 +2766,8 @@
       "companyNameAr": "الإسماعيلية للتطوير العقاري",
       "companyNameEn": "Ismailia Development and Real Estate",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-05",
-      "lastSession": "2026-08-17",
-      "historyStatus": "historical_complete_100",
-      "processingStatus": "complete",
-      "primarySource": "yahoo",
-      "verificationSources": [],
-      "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.5,
-      "staleData": false,
-      "updateFailed": false,
-      "lastUpdateError": null,
-      "warnings": [
-        "latest_close_conflict:26.0023%"
-      ],
-      "sourceFile": "data/history/IDRE.json"
-    },
-    {
-      "ticker": "IFAP",
-      "companyNameAr": "الدولية للمحاصيل الزراعية",
-      "companyNameEn": "International Company for Agricultural Crops",
-      "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-26",
-      "lastSession": "2026-08-17",
-      "historyStatus": "historical_complete_100",
-      "processingStatus": "complete",
-      "primarySource": "yahoo",
-      "verificationSources": [],
-      "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.9,
-      "staleData": false,
-      "updateFailed": false,
-      "lastUpdateError": null,
-      "warnings": [
-        "latest_close_conflict:13.0885%"
-      ],
-      "sourceFile": "data/history/IFAP.json"
-    },
-    {
-      "ticker": "INFI",
-      "companyNameAr": "الإسماعيلية الوطنية للصناعات الغذائية",
-      "companyNameEn": "Ismailia National Co. for Food Industries",
-      "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-03",
+      "availableSessions": 100,
+      "firstSession": "2026-02-09",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2821,7 +2779,51 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:63.0018%"
+        "latest_close_conflict:26.4605%"
+      ],
+      "sourceFile": "data/history/IDRE.json"
+    },
+    {
+      "ticker": "IFAP",
+      "companyNameAr": "الدولية للمحاصيل الزراعية",
+      "companyNameEn": "International Company for Agricultural Crops",
+      "symbolVerified": true,
+      "availableSessions": 100,
+      "firstSession": "2026-03-02",
+      "lastSession": "2026-08-17",
+      "historyStatus": "historical_complete_100",
+      "processingStatus": "complete",
+      "primarySource": "yahoo",
+      "verificationSources": [],
+      "officiallyVerifiedLatestSession": false,
+      "averageConfidence": 73.9,
+      "staleData": false,
+      "updateFailed": false,
+      "lastUpdateError": null,
+      "warnings": [
+        "latest_close_conflict:8.3808%"
+      ],
+      "sourceFile": "data/history/IFAP.json"
+    },
+    {
+      "ticker": "INFI",
+      "companyNameAr": "الإسماعيلية الوطنية للصناعات الغذائية",
+      "companyNameEn": "Ismailia National Co. for Food Industries",
+      "symbolVerified": true,
+      "availableSessions": 100,
+      "firstSession": "2026-02-05",
+      "lastSession": "2026-08-17",
+      "historyStatus": "historical_complete_100",
+      "processingStatus": "complete",
+      "primarySource": "yahoo",
+      "verificationSources": [],
+      "officiallyVerifiedLatestSession": false,
+      "averageConfidence": 73.15,
+      "staleData": false,
+      "updateFailed": false,
+      "lastUpdateError": null,
+      "warnings": [
+        "latest_close_conflict:64.9181%"
       ],
       "sourceFile": "data/history/INFI.json"
     },
@@ -2850,8 +2852,8 @@
       "companyNameAr": "الحديد والصلب",
       "companyNameEn": "Egyptian Iron and Steel Company",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-03-05",
+      "availableSessions": 100,
+      "firstSession": "2026-03-09",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2863,7 +2865,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:3.6945%"
+        "latest_close_conflict:2.701%"
       ],
       "sourceFile": "data/history/IRON.json"
     },
@@ -2872,8 +2874,8 @@
       "companyNameAr": "الإسماعيلية مصر للدواجن",
       "companyNameEn": "Ismailia Misr Poultry",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-15",
+      "availableSessions": 100,
+      "firstSession": "2026-02-17",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2887,7 +2889,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:24.3339%"
+        "latest_close_conflict:24.6536%"
       ],
       "sourceFile": "data/history/ISMA.json"
     },
@@ -2896,8 +2898,8 @@
       "companyNameAr": "الحديد والصلب للمناجم والمحاجر",
       "companyNameEn": "Iron & Steel for Mines & Quarries",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-19",
+      "availableSessions": 100,
+      "firstSession": "2026-02-23",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2909,7 +2911,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:0.6424%"
+        "latest_close_conflict:0.9636%"
       ],
       "sourceFile": "data/history/ISMQ.json"
     },
@@ -2918,8 +2920,8 @@
       "companyNameAr": "ابن سينا فارما",
       "companyNameEn": "Ibnsina Pharma",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-02",
+      "availableSessions": 100,
+      "firstSession": "2026-02-05",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2931,7 +2933,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:16.7097%"
+        "latest_close_conflict:16.1929%"
       ],
       "sourceFile": "data/history/ISPH.json"
     },
@@ -2940,20 +2942,20 @@
       "companyNameAr": "جهينة للصناعات الغذائية",
       "companyNameEn": "Juhayna Food Industries S.A.E.",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-22",
+      "availableSessions": 100,
+      "firstSession": "2026-02-24",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 72.75,
+      "averageConfidence": 72.4,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:9.3031%"
+        "latest_close_conflict:9.3364%"
       ],
       "sourceFile": "data/history/JUFO.json"
     },
@@ -2962,8 +2964,8 @@
       "companyNameAr": "كابو",
       "companyNameEn": "El-Nasr Clothing & Textiles KABO",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-26",
+      "availableSessions": 100,
+      "firstSession": "2026-03-04",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -2975,7 +2977,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:38.5466%"
+        "latest_close_conflict:51.9747%"
       ],
       "sourceFile": "data/history/KABO.json"
     },
@@ -3024,8 +3026,8 @@
       "companyNameAr": "القاهرة الوطنية للاستثمار",
       "companyNameEn": "El Kahera El Watania Investment",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-15",
+      "availableSessions": 100,
+      "firstSession": "2026-02-18",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3037,7 +3039,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:28.707%"
+        "latest_close_conflict:27.0018%"
       ],
       "sourceFile": "data/history/KWIN.json"
     },
@@ -3047,8 +3049,8 @@
       "companyNameEn": "Kafr El Zayat For Pesticides & Chemicals",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-02-17",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-02-22",
+      "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
@@ -3056,12 +3058,12 @@
         "mubasher_existing_cache"
       ],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.65,
+      "averageConfidence": 73.3,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:23.7308%"
+        "latest_close_conflict:44.51%"
       ],
       "sourceFile": "data/history/KZPC.json"
     },
@@ -3070,8 +3072,8 @@
       "companyNameAr": "ليسيكو مصر",
       "companyNameEn": "Lecico Egypt",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-11",
+      "availableSessions": 100,
+      "firstSession": "2026-02-15",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3083,7 +3085,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:18.5133%"
+        "latest_close_conflict:16.1062%"
       ],
       "sourceFile": "data/history/LCSW.json"
     },
@@ -3092,8 +3094,8 @@
       "companyNameAr": "لوتس للتنمية والاستثمار الزراعي",
       "companyNameEn": "Lotus For Agricultural Investments And Development",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-03-02",
+      "availableSessions": 100,
+      "firstSession": "2026-03-04",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3102,12 +3104,12 @@
         "mubasher_existing_cache"
       ],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.85,
+      "averageConfidence": 74.1,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:29.7297%"
+        "latest_close_conflict:60.4054%"
       ],
       "sourceFile": "data/history/LUTS.json"
     },
@@ -3116,8 +3118,8 @@
       "companyNameAr": "مرسيليا المصرية الخليجية",
       "companyNameEn": "Marseille Almasreia Alkhalegeya Holding",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-23",
+      "availableSessions": 100,
+      "firstSession": "2026-02-25",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3129,7 +3131,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:20.6897%"
+        "latest_close_conflict:22.7586%"
       ],
       "sourceFile": "data/history/MAAL.json"
     },
@@ -3138,8 +3140,8 @@
       "companyNameAr": "مدينة مصر للإسكان والتعمير",
       "companyNameEn": "Madinet Masr For Housing and Development",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-15",
+      "availableSessions": 100,
+      "firstSession": "2026-02-17",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3151,7 +3153,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:2.973%"
+        "latest_close_conflict:4.7297%"
       ],
       "sourceFile": "data/history/MASR.json"
     },
@@ -3160,8 +3162,8 @@
       "companyNameAr": "مصر بني سويف للأسمنت",
       "companyNameEn": "Misr Beni Suef Cement",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-17",
+      "availableSessions": 100,
+      "firstSession": "2026-02-19",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3175,7 +3177,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:57.5357%",
+        "latest_close_conflict:63.3661%",
         "corporate_action_review_required"
       ],
       "sourceFile": "data/history/MBSC.json"
@@ -3185,8 +3187,8 @@
       "companyNameAr": "مصر للأسمنت قنا",
       "companyNameEn": "Misr Cement Qena",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-01-27",
+      "availableSessions": 100,
+      "firstSession": "2026-02-01",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3198,7 +3200,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:44.1662%"
+        "latest_close_conflict:39.4538%"
       ],
       "sourceFile": "data/history/MCQE.json"
     },
@@ -3207,8 +3209,8 @@
       "companyNameAr": "ماكرو جروب",
       "companyNameEn": "Macro Group Pharmaceuticals Macro Capital",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-03-02",
+      "availableSessions": 100,
+      "firstSession": "2026-03-04",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3220,7 +3222,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:29.1667%"
+        "latest_close_conflict:26.6667%"
       ],
       "sourceFile": "data/history/MCRO.json"
     },
@@ -3230,8 +3232,8 @@
       "companyNameEn": "Middle East Glass Manufacturing",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-03-24",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-03-26",
+      "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
@@ -3251,8 +3253,8 @@
       "companyNameAr": "مينا للاستثمار السياحي والعقاري",
       "companyNameEn": "Mena for Touristic & Real Estate Investment",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-03-08",
+      "availableSessions": 100,
+      "firstSession": "2026-03-10",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3264,7 +3266,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:5.0798%"
+        "latest_close_conflict:5.5152%"
       ],
       "sourceFile": "data/history/MENA.json"
     },
@@ -3273,8 +3275,8 @@
       "companyNameAr": "ميديكال باكجنج",
       "companyNameEn": "Medical Packaging Company",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-03-02",
+      "availableSessions": 100,
+      "firstSession": "2026-03-05",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3286,7 +3288,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:19.7452%"
+        "latest_close_conflict:16.5605%"
       ],
       "sourceFile": "data/history/MEPA.json"
     },
@@ -3295,20 +3297,20 @@
       "companyNameAr": "موبكو",
       "companyNameEn": "Misr Fertilizer Production Company",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-01-21",
+      "availableSessions": 100,
+      "firstSession": "2026-01-27",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.25,
+      "averageConfidence": 73.9,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:11.7301%"
+        "latest_close_conflict:11.1422%"
       ],
       "sourceFile": "data/history/MFPC.json"
     },
@@ -3317,8 +3319,8 @@
       "companyNameAr": "مصر للأسواق الحرة",
       "companyNameEn": "Egypt Free Shops",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-01-25",
+      "availableSessions": 100,
+      "firstSession": "2026-01-28",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3330,7 +3332,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:0.1617%"
+        "latest_close_conflict:0.101%"
       ],
       "sourceFile": "data/history/MFSC.json"
     },
@@ -3339,8 +3341,8 @@
       "companyNameAr": "مصر للفنادق",
       "companyNameEn": "Misr Hotels Company",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-17",
+      "availableSessions": 100,
+      "firstSession": "2026-02-19",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3352,7 +3354,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:44.9971%",
+        "latest_close_conflict:44.4085%",
         "corporate_action_review_required"
       ],
       "sourceFile": "data/history/MHOT.json"
@@ -3362,8 +3364,8 @@
       "companyNameAr": "مصر لصناعة الكيماويات",
       "companyNameEn": "Misr Chemical Industries",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-02",
+      "availableSessions": 100,
+      "firstSession": "2026-02-09",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3377,7 +3379,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:26.7981%"
+        "latest_close_conflict:27.2776%"
       ],
       "sourceFile": "data/history/MICH.json"
     },
@@ -3386,8 +3388,8 @@
       "companyNameAr": "مطاحن شمال القاهرة",
       "companyNameEn": "North Cairo Flour Mills",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-09",
+      "availableSessions": 100,
+      "firstSession": "2026-02-12",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3399,7 +3401,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:46.7525%"
+        "latest_close_conflict:47.6011%"
       ],
       "sourceFile": "data/history/MILS.json"
     },
@@ -3408,8 +3410,8 @@
       "companyNameAr": "مينا فارم",
       "companyNameEn": "MINAPHARM Pharmaceuticals",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-25",
+      "availableSessions": 100,
+      "firstSession": "2026-03-01",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3421,7 +3423,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:17.5096%"
+        "latest_close_conflict:16.9431%"
       ],
       "sourceFile": "data/history/MIPH.json"
     },
@@ -3431,8 +3433,8 @@
       "companyNameEn": "Marsa Marsa Alam For Tourism Development",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2025-12-17",
-      "lastSession": "2026-08-13",
+      "firstSession": "2025-12-29",
+      "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
@@ -3452,8 +3454,8 @@
       "companyNameAr": "المصرية الحديثة للتعليم",
       "companyNameEn": "Egyptian Modern Education Systems",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-03-02",
+      "availableSessions": 100,
+      "firstSession": "2026-03-05",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3462,11 +3464,13 @@
         "mubasher_existing_cache"
       ],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.7,
+      "averageConfidence": 74.35,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
-      "warnings": [],
+      "warnings": [
+        "latest_close_conflict:1.7647%"
+      ],
       "sourceFile": "data/history/MOED.json"
     },
     {
@@ -3478,15 +3482,15 @@
       "firstSession": "2026-02-04",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
-      "processingStatus": "complete",
+      "processingStatus": "stale",
       "primarySource": "mixed_history_with_starta_ohlc_api",
       "verificationSources": [
         "starta_egx_database_identity"
       ],
       "officiallyVerifiedLatestSession": false,
       "averageConfidence": 75,
-      "staleData": false,
-      "updateFailed": false,
+      "staleData": true,
+      "updateFailed": true,
       "lastUpdateError": "Yahoo history failed for MOIL: MOIL.CA: identity score 75",
       "warnings": [
         "historical_seed_not_officially_verified",
@@ -3503,8 +3507,8 @@
       "companyNameEn": "Mohandes Insurance Company",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-02-04",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-02-08",
+      "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
@@ -3517,7 +3521,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:43.2786%"
+        "latest_close_conflict:61.3991%"
       ],
       "sourceFile": "data/history/MOIN.json"
     },
@@ -3526,31 +3530,8 @@
       "companyNameAr": "مصر للزيوت والصابون",
       "companyNameEn": "Misr Oils & Soap",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-09",
-      "lastSession": "2026-08-17",
-      "historyStatus": "historical_complete_100",
-      "processingStatus": "complete",
-      "primarySource": "yahoo",
-      "verificationSources": [],
-      "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.25,
-      "staleData": false,
-      "updateFailed": false,
-      "lastUpdateError": null,
-      "warnings": [
-        "latest_close_conflict:20.1591%",
-        "corporate_action_review_required"
-      ],
-      "sourceFile": "data/history/MOSC.json"
-    },
-    {
-      "ticker": "MPCI",
-      "companyNameAr": "ممفيس للأدوية",
-      "companyNameEn": "Memphis Pharmaceuticals & Chemical Industries",
-      "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-08",
+      "availableSessions": 100,
+      "firstSession": "2026-02-11",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3562,7 +3543,30 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:54.878%"
+        "latest_close_conflict:25.7396%",
+        "corporate_action_review_required"
+      ],
+      "sourceFile": "data/history/MOSC.json"
+    },
+    {
+      "ticker": "MPCI",
+      "companyNameAr": "ممفيس للأدوية",
+      "companyNameEn": "Memphis Pharmaceuticals & Chemical Industries",
+      "symbolVerified": true,
+      "availableSessions": 100,
+      "firstSession": "2026-02-10",
+      "lastSession": "2026-08-17",
+      "historyStatus": "historical_complete_100",
+      "processingStatus": "complete",
+      "primarySource": "yahoo",
+      "verificationSources": [],
+      "officiallyVerifiedLatestSession": false,
+      "averageConfidence": 73.9,
+      "staleData": false,
+      "updateFailed": false,
+      "lastUpdateError": null,
+      "warnings": [
+        "latest_close_conflict:53.252%"
       ],
       "sourceFile": "data/history/MPCI.json"
     },
@@ -3571,8 +3575,8 @@
       "companyNameAr": "المنصورة للدواجن",
       "companyNameEn": "Mansoura Poultry",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-03-03",
+      "availableSessions": 100,
+      "firstSession": "2026-03-05",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3586,7 +3590,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:17.9348%"
+        "latest_close_conflict:15.2174%"
       ],
       "sourceFile": "data/history/MPCO.json"
     },
@@ -3595,8 +3599,8 @@
       "companyNameAr": "مدينة الإنتاج الإعلامي",
       "companyNameEn": "Egyptian Media Production City",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-23",
+      "availableSessions": 100,
+      "firstSession": "2026-02-25",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3608,7 +3612,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:19.3682%"
+        "latest_close_conflict:16.4164%"
       ],
       "sourceFile": "data/history/MPRC.json"
     },
@@ -3617,8 +3621,8 @@
       "companyNameAr": "إم إم جروب",
       "companyNameEn": "MM Group for Industry and International Trade",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-16",
+      "availableSessions": 100,
+      "firstSession": "2026-02-18",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3632,7 +3636,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:2.4625%"
+        "latest_close_conflict:0.6424%"
       ],
       "sourceFile": "data/history/MTIE.json"
     },
@@ -3709,8 +3713,8 @@
       "companyNameAr": "النصر للأعمال المدنية",
       "companyNameEn": "Nasr Company for Civil Works",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-19",
+      "availableSessions": 100,
+      "firstSession": "2026-02-23",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3719,13 +3723,11 @@
         "mubasher_existing_cache"
       ],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.05,
+      "averageConfidence": 74.55,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
-      "warnings": [
-        "latest_close_conflict:2.7597%"
-      ],
+      "warnings": [],
       "sourceFile": "data/history/NCCW.json"
     },
     {
@@ -3757,8 +3759,8 @@
       "companyNameEn": "Northern Upper Egypt For Development & Agricultural Production",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-03-04",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-03-05",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
@@ -3766,12 +3768,12 @@
         "mubasher_existing_cache"
       ],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.65,
+      "averageConfidence": 75,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:1.4545%"
+        "latest_close_conflict:2.9091%"
       ],
       "sourceFile": "data/history/NEDA.json"
     },
@@ -3781,19 +3783,19 @@
       "companyNameEn": "National Company for Housing Professional Syndicates",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-02-09",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-02-10",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.65,
+      "averageConfidence": 75,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:30.9706%"
+        "latest_close_conflict:35%"
       ],
       "sourceFile": "data/history/NHPS.json"
     },
@@ -3803,19 +3805,19 @@
       "companyNameEn": "Nozha International Hospital",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-02-15",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-02-16",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.15,
+      "averageConfidence": 73.5,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:21.7608%"
+        "latest_close_conflict:20.598%"
       ],
       "sourceFile": "data/history/NINH.json"
     },
@@ -3824,8 +3826,8 @@
       "companyNameAr": "النيل للأدوية",
       "companyNameEn": "El Nile Co. for Pharmaceuticals and Chemical Industries",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-01-27",
+      "availableSessions": 100,
+      "firstSession": "2026-02-01",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3837,7 +3839,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:127.713%"
+        "latest_close_conflict:109.3802%"
       ],
       "sourceFile": "data/history/NIPH.json"
     },
@@ -3866,8 +3868,8 @@
       "companyNameAr": "العبور للاستثمار العقاري",
       "companyNameEn": "El-Ebour Co. for Real Estate Investment",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-12",
+      "availableSessions": 100,
+      "firstSession": "2026-02-16",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3879,7 +3881,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:6.411%"
+        "latest_close_conflict:3.0338%"
       ],
       "sourceFile": "data/history/OBRI.json"
     },
@@ -3888,8 +3890,8 @@
       "companyNameAr": "سوديك",
       "companyNameEn": "Sixth of October for Development and Investment Company SODIC",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-01-26",
+      "availableSessions": 100,
+      "firstSession": "2026-01-28",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3901,7 +3903,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:41.7587%"
+        "latest_close_conflict:32.0189%"
       ],
       "sourceFile": "data/history/OCDI.json"
     },
@@ -3910,8 +3912,8 @@
       "companyNameAr": "أكتوبر فارما",
       "companyNameEn": "October Pharma",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-22",
+      "availableSessions": 100,
+      "firstSession": "2026-02-25",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3925,7 +3927,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:18.6581%",
+        "latest_close_conflict:24.2679%",
         "corporate_action_review_required"
       ],
       "sourceFile": "data/history/OCPH.json"
@@ -3935,8 +3937,8 @@
       "companyNameAr": "أودن للاستثمارات",
       "companyNameEn": "ODIN Investments",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-16",
+      "availableSessions": 100,
+      "firstSession": "2026-02-18",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3948,7 +3950,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:55.9633%"
+        "latest_close_conflict:52.2936%"
       ],
       "sourceFile": "data/history/ODIN.json"
     },
@@ -3957,8 +3959,8 @@
       "companyNameAr": "أو بي المالية القابضة",
       "companyNameEn": "O B Financial Holding",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-23",
+      "availableSessions": 100,
+      "firstSession": "2026-02-25",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3970,7 +3972,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:48.6667%"
+        "latest_close_conflict:47.5%"
       ],
       "sourceFile": "data/history/OFH.json"
     },
@@ -3979,8 +3981,8 @@
       "companyNameAr": "أوراسكوم للاستثمار القابضة",
       "companyNameEn": "Orascom Investment Holding",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-03-04",
+      "availableSessions": 100,
+      "firstSession": "2026-03-08",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -3994,7 +3996,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:29.7872%"
+        "latest_close_conflict:25.5319%"
       ],
       "sourceFile": "data/history/OIH.json"
     },
@@ -4003,8 +4005,8 @@
       "companyNameAr": "عبور لاند",
       "companyNameEn": "Obour Land for Food Industries",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-24",
+      "availableSessions": 100,
+      "firstSession": "2026-02-26",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -4016,7 +4018,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:12.6066%"
+        "latest_close_conflict:12.1579%"
       ],
       "sourceFile": "data/history/OLFI.json"
     },
@@ -4026,8 +4028,8 @@
       "companyNameEn": "Orascom Construction PLC",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-03-24",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-03-26",
+      "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
@@ -4047,20 +4049,20 @@
       "companyNameAr": "أوراسكوم للتنمية مصر",
       "companyNameEn": "Orascom Development Egypt S.A.E.",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-01-21",
+      "availableSessions": 100,
+      "firstSession": "2026-01-26",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.25,
+      "averageConfidence": 73.9,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:12.1307%"
+        "latest_close_conflict:11.3464%"
       ],
       "sourceFile": "data/history/ORHD.json"
     },
@@ -4069,8 +4071,8 @@
       "companyNameAr": "النساجون الشرقيون",
       "companyNameEn": "Oriental Weavers Carpets Company",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-02",
+      "availableSessions": 100,
+      "firstSession": "2026-02-09",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -4082,7 +4084,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:16.6146%"
+        "latest_close_conflict:15.3193%"
       ],
       "sourceFile": "data/history/ORWE.json"
     },
@@ -4091,8 +4093,8 @@
       "companyNameAr": "إيبيكو",
       "companyNameEn": "Egyptian International Pharmaceutical Industries Company",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-15",
+      "availableSessions": 100,
+      "firstSession": "2026-02-17",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -4104,7 +4106,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:62.1131%"
+        "latest_close_conflict:55.3112%"
       ],
       "sourceFile": "data/history/PHAR.json"
     },
@@ -4113,8 +4115,8 @@
       "companyNameAr": "بالم هيلز للتعمير",
       "companyNameEn": "Palm Hills Developments S.A.E.",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-09",
+      "availableSessions": 100,
+      "firstSession": "2026-02-11",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -4126,7 +4128,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:4.8697%"
+        "latest_close_conflict:7.5446%"
       ],
       "sourceFile": "data/history/PHDC.json"
     },
@@ -4155,8 +4157,8 @@
       "companyNameAr": "بيراميزا للفنادق",
       "companyNameEn": "Pyramisa Hotels & Resorts",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-15",
+      "availableSessions": 100,
+      "firstSession": "2026-02-17",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -4168,7 +4170,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:43.0038%"
+        "latest_close_conflict:31.4718%"
       ],
       "sourceFile": "data/history/PHTV.json"
     },
@@ -4217,8 +4219,8 @@
       "companyNameAr": "القاهرة للدواجن",
       "companyNameEn": "Cairo Poultry Company",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-15",
+      "availableSessions": 100,
+      "firstSession": "2026-02-17",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -4232,7 +4234,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:3.421%"
+        "latest_close_conflict:0.2632%"
       ],
       "sourceFile": "data/history/POUL.json"
     },
@@ -4241,52 +4243,8 @@
       "companyNameAr": "العامة لمنتجات الخزف والصيني",
       "companyNameEn": "General Company for Ceramic and Porcelain Products",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-15",
-      "lastSession": "2026-08-17",
-      "historyStatus": "historical_complete_100",
-      "processingStatus": "complete",
-      "primarySource": "yahoo",
-      "verificationSources": [],
-      "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.5,
-      "staleData": false,
-      "updateFailed": false,
-      "lastUpdateError": null,
-      "warnings": [
-        "latest_close_conflict:0.1515%"
-      ],
-      "sourceFile": "data/history/PRCL.json"
-    },
-    {
-      "ticker": "PRDC",
-      "companyNameAr": "بايونيرز بروبرتيز",
-      "companyNameEn": "Pioneers Properties For Urban Development PRE Group",
-      "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-03-04",
-      "lastSession": "2026-08-17",
-      "historyStatus": "historical_complete_100",
-      "processingStatus": "complete",
-      "primarySource": "yahoo",
-      "verificationSources": [],
-      "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.9,
-      "staleData": false,
-      "updateFailed": false,
-      "lastUpdateError": null,
-      "warnings": [
-        "latest_close_conflict:14.6753%"
-      ],
-      "sourceFile": "data/history/PRDC.json"
-    },
-    {
-      "ticker": "PRMH",
-      "companyNameAr": "برايم القابضة",
-      "companyNameEn": "Prime Holding",
-      "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-19",
+      "availableSessions": 100,
+      "firstSession": "2026-02-17",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -4298,7 +4256,51 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:6.2257%"
+        "latest_close_conflict:10.4848%"
+      ],
+      "sourceFile": "data/history/PRCL.json"
+    },
+    {
+      "ticker": "PRDC",
+      "companyNameAr": "بايونيرز بروبرتيز",
+      "companyNameEn": "Pioneers Properties For Urban Development PRE Group",
+      "symbolVerified": true,
+      "availableSessions": 100,
+      "firstSession": "2026-03-08",
+      "lastSession": "2026-08-17",
+      "historyStatus": "historical_complete_100",
+      "processingStatus": "complete",
+      "primarySource": "yahoo",
+      "verificationSources": [],
+      "officiallyVerifiedLatestSession": false,
+      "averageConfidence": 73.9,
+      "staleData": false,
+      "updateFailed": false,
+      "lastUpdateError": null,
+      "warnings": [
+        "latest_close_conflict:16.8831%"
+      ],
+      "sourceFile": "data/history/PRDC.json"
+    },
+    {
+      "ticker": "PRMH",
+      "companyNameAr": "برايم القابضة",
+      "companyNameEn": "Prime Holding",
+      "symbolVerified": true,
+      "availableSessions": 100,
+      "firstSession": "2026-02-23",
+      "lastSession": "2026-08-17",
+      "historyStatus": "historical_complete_100",
+      "processingStatus": "complete",
+      "primarySource": "yahoo",
+      "verificationSources": [],
+      "officiallyVerifiedLatestSession": false,
+      "averageConfidence": 73.15,
+      "staleData": false,
+      "updateFailed": false,
+      "lastUpdateError": null,
+      "warnings": [
+        "latest_close_conflict:1.1673%"
       ],
       "sourceFile": "data/history/PRMH.json"
     },
@@ -4327,8 +4329,8 @@
       "companyNameAr": "راية لخدمات مراكز الاتصالات",
       "companyNameEn": "Raya Customer Experience",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-19",
+      "availableSessions": 100,
+      "firstSession": "2026-02-23",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -4340,7 +4342,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:5.4822%"
+        "latest_close_conflict:6.599%"
       ],
       "sourceFile": "data/history/RACC.json"
     },
@@ -4350,8 +4352,8 @@
       "companyNameEn": "Rakta Paper Manufacturing Company",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-03-01",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-03-03",
+      "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
@@ -4371,8 +4373,8 @@
       "companyNameAr": "راية القابضة",
       "companyNameEn": "Raya Holding Company for Financial Investments",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-17",
+      "availableSessions": 100,
+      "firstSession": "2026-02-22",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -4384,7 +4386,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:7.8227%"
+        "latest_close_conflict:5.7366%"
       ],
       "sourceFile": "data/history/RAYA.json"
     },
@@ -4414,8 +4416,8 @@
       "companyNameEn": "Tenth of Ramadan for Pharmaceutical Industries and Diagnostic Reagents Rameda",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-02-24",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-02-25",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
@@ -4423,12 +4425,12 @@
         "mubasher_existing_cache"
       ],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.05,
+      "averageConfidence": 74.4,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:29.5409%"
+        "latest_close_conflict:29.1417%"
       ],
       "sourceFile": "data/history/RMDA.json"
     },
@@ -4437,20 +4439,20 @@
       "companyNameAr": "رواد السياحة",
       "companyNameEn": "Rowad Tourism Company",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-04",
+      "availableSessions": 100,
+      "firstSession": "2026-02-09",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.5,
+      "averageConfidence": 73.15,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:22.7097%"
+        "latest_close_conflict:22.4446%"
       ],
       "sourceFile": "data/history/ROTO.json"
     },
@@ -4459,8 +4461,8 @@
       "companyNameAr": "العربية للاستثمارات العقارية",
       "companyNameEn": "Arab Real Estate Investment",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-19",
+      "availableSessions": 100,
+      "firstSession": "2026-02-23",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -4472,7 +4474,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:27.6657%"
+        "latest_close_conflict:33.4294%"
       ],
       "sourceFile": "data/history/RREI.json"
     },
@@ -4482,8 +4484,8 @@
       "companyNameEn": "Remco Tourism Villages Construction",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-03-04",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-03-09",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
@@ -4491,13 +4493,11 @@
         "mubasher_existing_cache"
       ],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.95,
+      "averageConfidence": 75.3,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
-      "warnings": [
-        "latest_close_conflict:0.7916%"
-      ],
+      "warnings": [],
       "sourceFile": "data/history/RTVC.json"
     },
     {
@@ -4506,19 +4506,19 @@
       "companyNameEn": "Rubex International for Plastic and Acrylic Manufacturing",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-03-04",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-03-08",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.15,
+      "averageConfidence": 73.5,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:0.2429%"
+        "latest_close_conflict:7.6923%"
       ],
       "sourceFile": "data/history/RUBX.json"
     },
@@ -4597,19 +4597,19 @@
       "companyNameEn": "alBaraka Bank Egypt",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-02-17",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-02-19",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.9,
+      "averageConfidence": 74.25,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:11.4746%"
+        "latest_close_conflict:11.285%"
       ],
       "sourceFile": "data/history/SAUD.json"
     },
@@ -4639,19 +4639,19 @@
       "companyNameEn": "Sinai Cement",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-02-01",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-02-02",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.65,
+      "averageConfidence": 75,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:49.084%"
+        "latest_close_conflict:70.3885%"
       ],
       "sourceFile": "data/history/SCEM.json"
     },
@@ -4660,8 +4660,8 @@
       "companyNameAr": "مطاحن جنوب القاهرة والجيزة",
       "companyNameEn": "South Cairo and Giza Flour Mills",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-03",
+      "availableSessions": 100,
+      "firstSession": "2026-02-08",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -4673,7 +4673,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:17.7024%"
+        "latest_close_conflict:18.9998%"
       ],
       "sourceFile": "data/history/SCFM.json"
     },
@@ -4683,19 +4683,19 @@
       "companyNameEn": "Suez Canal Company for Technology Settling",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-02-11",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-02-12",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.9,
+      "averageConfidence": 74.25,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:1.4219%",
+        "latest_close_conflict:1.5879%",
         "corporate_action_review_required"
       ],
       "sourceFile": "data/history/SCTS.json"
@@ -4705,8 +4705,8 @@
       "companyNameAr": "شرم دريمز",
       "companyNameEn": "SHARM DREAMS Co. for Touristic Investment",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-03-04",
+      "availableSessions": 100,
+      "firstSession": "2026-03-08",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -4718,7 +4718,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:56.5461%"
+        "latest_close_conflict:52.6701%"
       ],
       "sourceFile": "data/history/SDTI.json"
     },
@@ -4727,20 +4727,20 @@
       "companyNameAr": "السعودية المصرية للاستثمار والتمويل",
       "companyNameEn": "Saudi Egyptian Investment & Finance",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-03",
+      "availableSessions": 100,
+      "firstSession": "2026-02-05",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.5,
+      "averageConfidence": 73.15,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:45.9221%"
+        "latest_close_conflict:42.7574%"
       ],
       "sourceFile": "data/history/SEIG.json"
     },
@@ -4749,8 +4749,8 @@
       "companyNameAr": "السعودية المصرية للاستثمار والتمويل",
       "companyNameEn": "Saudi Egyptian Investment & Finance",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-03-24",
+      "availableSessions": 100,
+      "firstSession": "2026-03-26",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -4771,8 +4771,8 @@
       "companyNameAr": "سبأ الدولية للأدوية",
       "companyNameEn": "Sabaa International Company for Pharmaceutical and Chemical Industry",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-22",
+      "availableSessions": 100,
+      "firstSession": "2026-02-25",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -4784,7 +4784,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:38.4615%"
+        "latest_close_conflict:50.5917%"
       ],
       "sourceFile": "data/history/SIPC.json"
     },
@@ -4793,8 +4793,8 @@
       "companyNameAr": "سيدي كرير للبتروكيماويات",
       "companyNameEn": "Sidi Kerir Petrochemicals",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-02",
+      "availableSessions": 100,
+      "firstSession": "2026-02-04",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -4808,7 +4808,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:4.534%"
+        "latest_close_conflict:5.8564%"
       ],
       "sourceFile": "data/history/SKPC.json"
     },
@@ -4817,8 +4817,8 @@
       "companyNameAr": "سماد مصر",
       "companyNameEn": "Samad Misr EGYFERT",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-18",
+      "availableSessions": 100,
+      "firstSession": "2026-02-23",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -4830,7 +4830,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:38.424%"
+        "latest_close_conflict:34.5559%"
       ],
       "sourceFile": "data/history/SMFR.json"
     },
@@ -4839,8 +4839,8 @@
       "companyNameAr": "الشرقية الوطنية للأمن الغذائي",
       "companyNameEn": "Sharkia National Company for Food Security",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-19",
+      "availableSessions": 100,
+      "firstSession": "2026-02-23",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -4852,7 +4852,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:8.7748%"
+        "latest_close_conflict:8.0298%"
       ],
       "sourceFile": "data/history/SNFC.json"
     },
@@ -4906,8 +4906,8 @@
       "companyNameEn": "Alexandria Spinning & Weaving",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-03-03",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-03-04",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
@@ -4918,7 +4918,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:14.326%"
+        "latest_close_conflict:43.2604%"
       ],
       "sourceFile": "data/history/SPIN.json"
     },
@@ -4927,8 +4927,8 @@
       "companyNameAr": "سبيد ميديكال",
       "companyNameEn": "Speed Medical Co",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-15",
+      "availableSessions": 100,
+      "firstSession": "2026-02-17",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -4940,7 +4940,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:11.3953%"
+        "latest_close_conflict:11.6279%"
       ],
       "sourceFile": "data/history/SPMD.json"
     },
@@ -4950,8 +4950,8 @@
       "companyNameEn": "Delta Sugar Company",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-02-24",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-02-25",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
@@ -4959,12 +4959,12 @@
         "mubasher_existing_cache"
       ],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 74.65,
+      "averageConfidence": 75,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:5.2003%"
+        "latest_close_conflict:8.8235%"
       ],
       "sourceFile": "data/history/SUGR.json"
     },
@@ -4973,8 +4973,8 @@
       "companyNameAr": "جنوب الوادي للأسمنت",
       "companyNameEn": "South Valley Cement Company",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-19",
+      "availableSessions": 100,
+      "firstSession": "2026-02-23",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -4996,8 +4996,8 @@
       "companyNameEn": "Elsewedy Electric",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-02-04",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-02-08",
+      "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
@@ -5008,7 +5008,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:23.5977%"
+        "latest_close_conflict:40.3678%"
       ],
       "sourceFile": "data/history/SWDY.json"
     },
@@ -5017,8 +5017,8 @@
       "companyNameAr": "تعليم لخدمات الإدارة",
       "companyNameEn": "Taaleem Management Services Company",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-24",
+      "availableSessions": 100,
+      "firstSession": "2026-02-26",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -5032,7 +5032,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:20.2532%"
+        "latest_close_conflict:26.3924%"
       ],
       "sourceFile": "data/history/TALM.json"
     },
@@ -5081,8 +5081,8 @@
       "companyNameAr": "مجموعة طلعت مصطفى القابضة",
       "companyNameEn": "Talaat Moustafa Group Holding",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-01-22",
+      "availableSessions": 100,
+      "firstSession": "2026-01-26",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -5094,7 +5094,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:2.9799%"
+        "latest_close_conflict:1.611%"
       ],
       "sourceFile": "data/history/TMGH.json"
     },
@@ -5191,8 +5191,8 @@
       "companyNameAr": "مطاحن مصر العليا",
       "companyNameEn": "Upper Egypt Mills Company",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-23",
+      "availableSessions": 100,
+      "firstSession": "2026-02-25",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -5204,7 +5204,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:19.1348%"
+        "latest_close_conflict:13.9121%"
       ],
       "sourceFile": "data/history/UEFM.json"
     },
@@ -5213,8 +5213,8 @@
       "companyNameAr": "الصعيد العامة للمقاولات",
       "companyNameEn": "El-Saeed Company for Contracting and Real Estate Investment SCCD",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-03-10",
+      "availableSessions": 100,
+      "firstSession": "2026-03-12",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -5226,7 +5226,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:76.5517%"
+        "latest_close_conflict:68.2759%"
       ],
       "sourceFile": "data/history/UEGC.json"
     },
@@ -5235,8 +5235,8 @@
       "companyNameAr": "يونيفرسال لصناعة مواد التعبئة والتغليف",
       "companyNameEn": "Universal For Paper and Packaging Materials",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-26",
+      "availableSessions": 100,
+      "firstSession": "2026-03-03",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -5250,7 +5250,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:22.4242%"
+        "latest_close_conflict:22.1212%"
       ],
       "sourceFile": "data/history/UNIP.json"
     },
@@ -5259,8 +5259,8 @@
       "companyNameAr": "المتحدة للإسكان",
       "companyNameEn": "United Co. for Housing & Development",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-19",
+      "availableSessions": 100,
+      "firstSession": "2026-02-23",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -5272,7 +5272,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:55.8301%"
+        "latest_close_conflict:46.2548%"
       ],
       "sourceFile": "data/history/UNIT.json"
     },
@@ -5341,8 +5341,8 @@
       "companyNameAr": "مطاحن وسط وغرب الدلتا",
       "companyNameEn": "Middle & West Delta Flour Mills",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-01-19",
+      "availableSessions": 100,
+      "firstSession": "2026-01-21",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -5354,7 +5354,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:24.6473%"
+        "latest_close_conflict:25.3409%"
       ],
       "sourceFile": "data/history/WCDF.json"
     },
@@ -5364,19 +5364,19 @@
       "companyNameEn": "Wadi Kom Ombo For Land Reclamation",
       "symbolVerified": true,
       "availableSessions": 100,
-      "firstSession": "2026-02-22",
-      "lastSession": "2026-08-13",
+      "firstSession": "2026-02-23",
+      "lastSession": "2026-08-16",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
       "primarySource": "yahoo",
       "verificationSources": [],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.9,
+      "averageConfidence": 74.25,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:14.9047%"
+        "latest_close_conflict:33.9677%"
       ],
       "sourceFile": "data/history/WKOL.json"
     },
@@ -5385,8 +5385,8 @@
       "companyNameAr": "الزيوت المستخلصة",
       "companyNameEn": "Extracted Oil & Derivatives",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-19",
+      "availableSessions": 100,
+      "firstSession": "2026-02-24",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -5395,12 +5395,12 @@
         "mubasher_existing_cache"
       ],
       "officiallyVerifiedLatestSession": false,
-      "averageConfidence": 73.65,
+      "averageConfidence": 73.3,
       "staleData": false,
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:23.279%"
+        "latest_close_conflict:29.0761%"
       ],
       "sourceFile": "data/history/ZEOT.json"
     },
@@ -5409,8 +5409,8 @@
       "companyNameAr": "زهراء المعادي",
       "companyNameEn": "Zahraa El Maadi Investment and Development",
       "symbolVerified": true,
-      "availableSessions": 101,
-      "firstSession": "2026-02-10",
+      "availableSessions": 100,
+      "firstSession": "2026-02-12",
       "lastSession": "2026-08-17",
       "historyStatus": "historical_complete_100",
       "processingStatus": "complete",
@@ -5422,7 +5422,7 @@
       "updateFailed": false,
       "lastUpdateError": null,
       "warnings": [
-        "latest_close_conflict:18.3359%"
+        "latest_close_conflict:15.7165%"
       ],
       "sourceFile": "data/history/ZMID.json"
     }
