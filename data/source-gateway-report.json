@@ -1,22 +1,22 @@
 {
   "ok": true,
   "engine": "v9_8_7_data_gateway",
-  "generatedAt": "2026-08-17T17:03:00.699Z",
+  "generatedAt": "2026-08-18T07:23:53.610Z",
   "mode": "multi_source_gateway",
-  "status": "accepted_full",
-  "level": "ok",
+  "status": "accepted_partial",
+  "level": "warn",
   "accepted": true,
   "selectedSource": "mubasher_symbol_pages_precise_enriched",
   "selectedUrl": "244 symbols + analysis tools enrichment",
-  "marketRows": 217,
+  "marketRows": 119,
   "expectedUniverse": 224,
-  "coveragePct": 96.9,
+  "coveragePct": 53.1,
   "fallbackUsed": false,
   "lastGoodSnapshotUsed": false,
-  "lastGoodAt": "2026-08-17T17:03:00.699Z",
+  "lastGoodAt": "2026-08-18T07:23:53.610Z",
   "lastGoodAgeMinutes": 0,
   "fetchExit": 0,
-  "message": "Full gateway acceptance",
+  "message": "Conditional gateway acceptance; coverage is enough but not complete.",
   "sources": [
     {
       "name": "configured_json",
@@ -29,15 +29,15 @@
       "name": "mubasher_symbol_pages",
       "url": "244 symbols",
       "ok": true,
-      "rows": 217,
-      "message": "Parsed 217/244"
+      "rows": 119,
+      "message": "Parsed 119/244"
     },
     {
       "name": "mubasher_symbol_pages",
       "url": "244 symbols",
       "ok": true,
-      "rows": 217,
-      "message": "Parsed 217/244 symbol pages"
+      "rows": 119,
+      "message": "Parsed 119/244 symbol pages"
     },
     {
       "name": "mubasher_liquidity_monitor",
@@ -509,6 +509,6 @@
       "message": "Combined 0 rows from tools/API discovery"
     }
   ],
-  "fetchStdout": "Accepted mubasher_symbol_pages_precise_enriched: 217/224 rows\n",
+  "fetchStdout": "Accepted mubasher_symbol_pages_precise_enriched: 119/224 rows\n",
   "fetchStderr": ""
 }
