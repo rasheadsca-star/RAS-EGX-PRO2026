@@ -1,47 +1,47 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-08-20T17:07:34.365Z",
+  "generatedAt": "2026-08-24T14:03:15.926Z",
   "ticker": "MCQE",
   "companyNameAr": "مصر للأسمنت قنا",
   "companyNameEn": "Misr Cement Qena",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-08-20",
+  "sessionId": "2026-08-23",
   "latest": {
-    "date": "2026-08-20",
-    "open": 223.99,
-    "high": 227.4,
-    "low": 215,
-    "close": 218.22,
-    "volume": 141605
+    "date": "2026-08-23",
+    "open": 222,
+    "high": 227,
+    "low": 219.25,
+    "close": 220.1,
+    "volume": 89349
   },
   "indicators": {
-    "close": 218.22,
-    "change1Pct": 0.428,
-    "return5Pct": -12.047,
-    "return20Pct": 14.841,
-    "return50Pct": 12.49,
-    "sma5": 229.024,
-    "sma20": 207.08,
-    "sma50": 190.698,
-    "ema9": 223.201,
-    "ema21": 210.967,
-    "rsi14": 64.57,
-    "macd": 12.784,
-    "macdSignal": 11.858,
-    "atr14": 17.69,
-    "atrPct": 8.106,
-    "averageVolume20": 193575.7,
-    "volumeRatio20": 0.732,
-    "averageTurnover20Egp": 44710705.493,
-    "volatility20Pct": 6.575,
+    "close": 220.1,
+    "change1Pct": -0.856,
+    "return5Pct": -11.289,
+    "return20Pct": 16.857,
+    "return50Pct": 13.459,
+    "sma5": 225.518,
+    "sma20": 209.192,
+    "sma50": 191.43,
+    "ema9": 224.043,
+    "ema21": 212.614,
+    "rsi14": 65.508,
+    "macd": 12.383,
+    "macdSignal": 12.14,
+    "atr14": 17.835,
+    "atrPct": 8.103,
+    "averageVolume20": 193533.35,
+    "volumeRatio20": 0.462,
+    "averageTurnover20Egp": 44986443.188,
+    "volatility20Pct": 6.555,
     "support20": 178,
     "resistance20": 292.32,
     "high50": 292.32,
     "low50": 166.66,
-    "distanceFromSupport20Pct": 22.596,
-    "relativeToResistance20Pct": -25.349,
-    "distanceFromHigh50Pct": -25.349
+    "distanceFromSupport20Pct": 23.652,
+    "relativeToResistance20Pct": -24.706,
+    "distanceFromHigh50Pct": -24.706
   },
   "technical": {
     "score": 98,
@@ -49,21 +49,44 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 91.8,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "دعم الحجم: 0.62"
+    ],
+    "adaptive": {
+      "proximityPct": 89.5,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 39.3,
+      "minimumRequiredScore": 79,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "دعم الحجم: 0.62"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 220.668,
+      "entryHigh": 223.998,
+      "stopLoss": 210.105,
+      "target1": 244.344,
+      "target2": 254.127,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
-    "historySessions": 102,
-    "firstSession": "2026-02-02",
-    "lastSession": "2026-08-20",
+    "historySessions": 100,
+    "firstSession": "2026-02-10",
+    "lastSession": "2026-08-23",
     "averageConfidence": 73.9,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +94,6 @@
   },
   "chart": {
     "dates": [
-      "2026-02-05",
       "2026-02-10",
       "2026-02-11",
       "2026-02-17",
@@ -170,10 +192,10 @@
       "2026-08-17",
       "2026-08-18",
       "2026-08-19",
-      "2026-08-20"
+      "2026-08-20",
+      "2026-08-23"
     ],
     "open": [
-      168.04,
       175.7,
       175.8,
       176.4,
@@ -272,10 +294,10 @@
       251.5,
       240,
       221.5,
-      223.99
+      223.99,
+      222
     ],
     "high": [
-      170.4,
       179,
       177.47,
       181.89,
@@ -374,10 +396,10 @@
       255,
       244.79,
       236,
-      227.4
+      227.4,
+      227
     ],
     "low": [
-      160.01,
       175,
       171,
       176.01,
@@ -476,10 +498,10 @@
       238,
       212.01,
       214,
-      215
+      215,
+      219.25
     ],
     "close": [
-      164.03,
       175.8,
       171.02,
       180.88,
@@ -577,11 +599,11 @@
       248.11,
       240,
       221.5,
-      217.29,
-      218.22
+      223.99,
+      222,
+      220.1
     ],
     "volume": [
-      101188,
       117356,
       82769,
       139286,
@@ -680,7 +702,8 @@
       330198,
       234207,
       343610,
-      141605
+      141605,
+      89349
     ],
     "sma20": [
       0,
@@ -702,7 +725,6 @@
       0,
       0,
       0,
-      185.034,
       185.732,
       185.737,
       185.936,
@@ -781,8 +803,9 @@
       198.22,
       201.415,
       203.692,
-      205.67,
-      207.08
+      206.005,
+      207.604,
+      209.192
     ],
     "sma50": [
       0,
@@ -834,7 +857,6 @@
       0,
       0,
       0,
-      186.016,
       186.615,
       187.041,
       187.561,
@@ -883,8 +905,9 @@
       188.28,
       189.198,
       189.748,
-      190.214,
-      190.698
+      190.348,
+      190.908,
+      191.43
     ]
   }
 }
