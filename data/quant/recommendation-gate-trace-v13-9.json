@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.9.0",
-  "generatedAt": "2026-08-24T15:23:45.352Z",
+  "generatedAt": "2026-08-24T15:47:16.497Z",
   "latestMarketSession": "2026-08-24",
   "drawdownMethod": "compounded_equity_peak_to_trough",
   "productionPolicyUnchanged": true,
@@ -2023,11 +2023,149 @@
       "companyNameEn": "Arab Moltaqa Investments Company",
       "sector": null,
       "sessionId": "2026-08-24",
-      "stage": "HARD_REJECT",
-      "failedGate": "history_freshness",
-      "failedGateLabelAr": "التاريخ غير محدث حتى آخر جلسة",
-      "historySessions": 100,
-      "eligibilityStatus": "complete_recent"
+      "stage": "SIGNAL_CONDITIONS_FAILED",
+      "strictPaperAllowed": false,
+      "signalPassed": false,
+      "failedConditionCount": 1,
+      "conditions": [
+        {
+          "id": "warmup",
+          "labelAr": "اكتمال المؤشرات",
+          "pass": true,
+          "detail": 101
+        },
+        {
+          "id": "turnover",
+          "labelAr": "متوسط قيمة التداول",
+          "pass": true,
+          "detail": 39056156
+        },
+        {
+          "id": "volumeSessions",
+          "labelAr": "جلسات حجم تداول صالحة",
+          "pass": true,
+          "detail": 17
+        },
+        {
+          "id": "volumeRatioFloor",
+          "labelAr": "نشاط الحجم الحالي",
+          "pass": true,
+          "detail": 4.69
+        },
+        {
+          "id": "atr",
+          "labelAr": "توفر قياس المخاطرة",
+          "pass": true,
+          "detail": 5.69
+        },
+        {
+          "id": "relativeStrength",
+          "labelAr": "القوة النسبية",
+          "pass": true,
+          "detail": 94.95
+        },
+        {
+          "id": "trendStructure",
+          "labelAr": "اتجاه داعم للاختراق",
+          "pass": true,
+          "detail": null
+        },
+        {
+          "id": "breakout",
+          "labelAr": "اختراق مقاومة 20 جلسة",
+          "pass": true,
+          "detail": 6.25
+        },
+        {
+          "id": "volumeRatio",
+          "labelAr": "حجم يؤكد الاختراق",
+          "pass": true,
+          "detail": 4.69
+        },
+        {
+          "id": "rsiRange",
+          "labelAr": "منطقة RSI",
+          "pass": false,
+          "detail": 96.4
+        },
+        {
+          "id": "positiveClose",
+          "labelAr": "إغلاق إيجابي",
+          "pass": true,
+          "detail": 8.45
+        }
+      ],
+      "failedConditions": [
+        "منطقة RSI: 96.4"
+      ],
+      "strategyId": "breakout",
+      "strategyLabelAr": "اختراق مؤكد",
+      "variantId": "early",
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "strategyResearchValidated": false,
+      "strategyProductionEligible": false,
+      "strategyValidationMetrics": {
+        "totalSignals": 66,
+        "closedTrades": 60,
+        "cancelledTrades": 6,
+        "wins": 20,
+        "losses": 40,
+        "winRatePct": 33.33,
+        "profitFactor": 0.703,
+        "averageReturnPct": -0.953,
+        "averageR": -0.198,
+        "medianR": -1.109,
+        "maxDrawdownPct": 63,
+        "drawdownMethod": "compounded_equity_peak_to_trough",
+        "startingEquityIndex": 100,
+        "endingEquityIndex": 51.0359,
+        "legacyAdditiveDrawdownPct": 96.248,
+        "sameBarStopFirstCount": 0
+      },
+      "recommendationScore": 86.8,
+      "rawSignalScore": 85,
+      "eligibilityDecision": true,
+      "eligibilityStatus": "complete_recent",
+      "regimeAllowed": true,
+      "bearishBlock": false,
+      "volatilityBlock": false,
+      "marketRegime": "BALANCED",
+      "scorePaperPass": true,
+      "scoreWatchPass": true,
+      "historySessions": 101,
+      "historyConfidence": 73.9,
+      "price": 20.4,
+      "plan": {
+        "entryLow": 20.2776,
+        "entryHigh": 20.5742,
+        "stopLoss": 19.3025,
+        "target1": 22.4481,
+        "target2": 23.3468,
+        "riskPct": 5.5,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": 57.044,
+        "return20Pct": 94.286,
+        "relativeStrength20Pct": 94.951,
+        "rsi14": 96.45,
+        "atrPct": 5.694,
+        "volumeRatio20": 4.693,
+        "averageTurnover20Egp": 39056156,
+        "sma20": 13.2315,
+        "sma50": 10.7102,
+        "support20": 10.1,
+        "resistance20": 19.2
+      },
+      "status": "WATCH_CONDITIONAL",
+      "statusLabelAr": "مراقبة مشروطة"
     },
     {
       "ticker": "AMOC",
