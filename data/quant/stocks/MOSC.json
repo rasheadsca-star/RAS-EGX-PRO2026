@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-08-25T15:23:01.211Z",
+  "generatedAt": "2026-08-25T16:09:33.654Z",
   "ticker": "MOSC",
   "companyNameAr": "مصر للزيوت والصابون",
   "companyNameEn": "Misr Oils & Soap",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 92,
@@ -59,7 +59,20 @@
     "failedConditions": [
       "منطقة RSI: 71.4"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 89.5,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 40.1,
+      "minimumRequiredScore": 79,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "منطقة RSI: 71.4"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 330.622,
       "entryHigh": 334.87,

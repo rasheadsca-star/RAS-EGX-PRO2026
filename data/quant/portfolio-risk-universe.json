@@ -1,7 +1,7 @@
 {
   "schemaVersion": "13.8.0",
-  "generatedAt": "2026-08-25T15:23:01.910Z",
-  "sessionId": "2026-08-24",
+  "generatedAt": "2026-08-25T16:09:34.361Z",
+  "sessionId": "2026-08-25",
   "liveExecutionEnabled": false,
   "paperSimulationOnly": true,
   "marketRegime": {
@@ -9,16 +9,16 @@
     "labelAr": "سوق متوازن/جانبي",
     "basedOn": "equal-weight market breadth proxy from stored daily histories",
     "symbolsMeasured": 196,
-    "aboveSma20Pct": 63.27,
-    "aboveSma50Pct": 79.59,
-    "advancersPct": 44.39,
-    "medianReturn20Pct": 6.974,
-    "medianAtrPct": 3.809
+    "aboveSma20Pct": 57.65,
+    "aboveSma50Pct": 76.53,
+    "advancersPct": 28.57,
+    "medianReturn20Pct": 6.131,
+    "medianAtrPct": 3.922
   },
   "counts": {
     "historySymbols": 199,
     "riskProfiles": 199,
-    "recommendationCandidates": 36,
+    "recommendationCandidates": 20,
     "allocationReadyCandidates": 0,
     "highRiskSymbols": 73,
     "lowRiskSymbols": 11
@@ -34,224 +34,6 @@
   },
   "candidates": [
     {
-      "ticker": "CCAP",
-      "source": "V13.5",
-      "status": "WATCH",
-      "priority": 3,
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "breakout",
-      "strategyLabelAr": "اختراق مؤكد",
-      "recommendationScore": 96.3,
-      "companyNameAr": "القلعة للاستثمارات المالية",
-      "companyNameEn": "Qalaa Holdings",
-      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
-      "failedConditions": [],
-      "adaptive": {
-        "proximityPct": 93.8,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 22.9,
-        "minimumRequiredScore": 85,
-        "scoreGap": 0,
-        "calibratedVariantId": "early",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      },
-      "plan": {
-        "entryLow": 5.7311,
-        "entryHigh": 5.7737,
-        "stopLoss": 5.5156,
-        "target1": 6.1786,
-        "target2": 6.3681,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 5.774,
-      "stopDistancePct": 4.47,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 47,
-        "riskCode": "MEDIUM",
-        "riskLabelAr": "مخاطر متوسطة",
-        "volatility20Pct": 1.859,
-        "var95OneDayPct": 2.987,
-        "maxDrawdown100Pct": 17.018,
-        "beta60": 0.903,
-        "liquidityPercentile": 100,
-        "averageTurnover20Egp": 433120334.1,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "ISMA",
-            "companyNameAr": "الإسماعيلية مصر للدواجن",
-            "sector": "غير مصنف",
-            "correlation": 0.488,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ZMID",
-            "companyNameAr": "زهراء المعادي",
-            "sector": "غير مصنف",
-            "correlation": 0.33,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ALCN",
-            "companyNameAr": "الإسكندرية لتداول الحاويات والبضائع",
-            "sector": "غير مصنف",
-            "correlation": 0.311,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "AMOC",
-            "companyNameAr": "الإسكندرية للزيوت المعدنية",
-            "sector": "غير مصنف",
-            "correlation": 0.296,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ARVA",
-            "companyNameAr": "العربية للصمامات",
-            "sector": "غير مصنف",
-            "correlation": 0.287,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ALUM",
-            "companyNameAr": "الألومنيوم العربية",
-            "sector": "غير مصنف",
-            "correlation": 0.272,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "PRMH",
-            "companyNameAr": "برايم القابضة",
-            "sector": "غير مصنف",
-            "correlation": 0.257,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "EHDR",
-            "companyNameAr": "المصريين للإسكان والتنمية",
-            "sector": "غير مصنف",
-            "correlation": 0.247,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "CCRS",
-      "source": "V13.5",
-      "status": "WATCH",
-      "priority": 3,
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "breakout",
-      "strategyLabelAr": "اختراق مؤكد",
-      "recommendationScore": 96,
-      "companyNameAr": "الخليجية الكندية للاستثمار العقاري",
-      "companyNameEn": "Gulf Canadian Company for Arab Real Estate Investment",
-      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
-      "failedConditions": [],
-      "adaptive": {
-        "proximityPct": 93.7,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 22.9,
-        "minimumRequiredScore": 85,
-        "scoreGap": 0,
-        "calibratedVariantId": "early",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      },
-      "plan": {
-        "entryLow": 2.9048,
-        "entryHigh": 2.939,
-        "stopLoss": 2.7612,
-        "target1": 3.2112,
-        "target2": 3.3397,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 2.939,
-      "stopDistancePct": 6.05,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 63,
-        "riskCode": "MEDIUM",
-        "riskLabelAr": "مخاطر متوسطة",
-        "volatility20Pct": 5.042,
-        "var95OneDayPct": 3.127,
-        "maxDrawdown100Pct": 14.286,
-        "beta60": 1.114,
-        "liquidityPercentile": 61.3,
-        "averageTurnover20Egp": 37027880.74,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "AXPH",
-            "companyNameAr": "الإسكندرية للأدوية",
-            "sector": "غير مصنف",
-            "correlation": 0.404,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ORWE",
-            "companyNameAr": "النساجون الشرقيون",
-            "sector": "غير مصنف",
-            "correlation": 0.391,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MFPC",
-            "companyNameAr": "موبكو",
-            "sector": "غير مصنف",
-            "correlation": 0.349,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ARAB",
-            "companyNameAr": "المطورون العرب القابضة",
-            "sector": "غير مصنف",
-            "correlation": 0.332,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ETEL",
-            "companyNameAr": "المصرية للاتصالات",
-            "sector": "غير مصنف",
-            "correlation": 0.319,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "RUBX",
-            "companyNameAr": "روبيكس",
-            "sector": "غير مصنف",
-            "correlation": 0.302,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "CPCI",
-            "companyNameAr": "القاهرة للأدوية",
-            "sector": "غير مصنف",
-            "correlation": 0.296,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "OFH",
-            "companyNameAr": "أو بي المالية القابضة",
-            "sector": "غير مصنف",
-            "correlation": 0.292,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
       "ticker": "MOED",
       "source": "V13.5",
       "status": "WATCH",
@@ -259,7 +41,7 @@
       "statusLabelAr": "قريب من اكتمال الإشارة",
       "strategyId": "trend_follow",
       "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "recommendationScore": 95.3,
+      "recommendationScore": 95.1,
       "companyNameAr": "المصرية الحديثة للتعليم",
       "companyNameEn": "Egyptian Modern Education Systems",
       "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
@@ -267,7 +49,7 @@
       "adaptive": {
         "proximityPct": 93.7,
         "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 40.2,
+        "strategyHealthScore": 40.1,
         "minimumRequiredScore": 79,
         "scoreGap": 0,
         "calibratedVariantId": "balanced",
@@ -278,16 +60,16 @@
         "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
       },
       "plan": {
-        "entryLow": 0.7866,
-        "entryHigh": 0.7943,
-        "stopLoss": 0.7519,
-        "target1": 0.8598,
-        "target2": 0.8906,
+        "entryLow": 0.7664,
+        "entryHigh": 0.7745,
+        "stopLoss": 0.7298,
+        "target1": 0.8436,
+        "target2": 0.8761,
         "riskReward1": 1.8,
         "maximumHoldingSessions": 10
       },
-      "referenceEntry": 0.794,
-      "stopDistancePct": 5.338,
+      "referenceEntry": 0.774,
+      "stopDistancePct": 5.771,
       "allocationReady": false,
       "riskProfile": {
         "riskScore": 68,
@@ -361,1887 +143,11 @@
       }
     },
     {
-      "ticker": "ODIN",
-      "source": "V13.5",
-      "status": "WATCH",
-      "priority": 3,
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "recommendationScore": 94.8,
-      "companyNameAr": "أودن للاستثمارات",
-      "companyNameEn": "ODIN Investments",
-      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
-      "failedConditions": [],
-      "adaptive": {
-        "proximityPct": 93.7,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 40.2,
-        "minimumRequiredScore": 79,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      },
-      "plan": {
-        "entryLow": 3.1013,
-        "entryHigh": 3.1478,
-        "stopLoss": 2.9527,
-        "target1": 3.4339,
-        "target2": 3.5713,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 3.148,
-      "stopDistancePct": 6.198,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 71,
-        "riskCode": "HIGH",
-        "riskLabelAr": "مخاطر مرتفعة",
-        "volatility20Pct": 4.784,
-        "var95OneDayPct": 3.024,
-        "maxDrawdown100Pct": 9.329,
-        "beta60": 1.768,
-        "liquidityPercentile": 38.2,
-        "averageTurnover20Egp": 22358942.005,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "SCEM",
-            "companyNameAr": "سيناء للأسمنت",
-            "sector": "غير مصنف",
-            "correlation": 0.651,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "DAPH",
-            "companyNameAr": "المشروعات الصناعية والهندسية",
-            "sector": "غير مصنف",
-            "correlation": 0.647,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ECAP",
-            "companyNameAr": "العز للسيراميك والبورسلين الجوهرة",
-            "sector": "غير مصنف",
-            "correlation": 0.607,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MBSC",
-            "companyNameAr": "مصر بني سويف للأسمنت",
-            "sector": "غير مصنف",
-            "correlation": 0.607,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "INFI",
-            "companyNameAr": "الإسماعيلية الوطنية للصناعات الغذائية",
-            "sector": "غير مصنف",
-            "correlation": 0.495,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "EEII",
-            "companyNameAr": "العربية للصناعات الهندسية",
-            "sector": "غير مصنف",
-            "correlation": 0.488,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ALUM",
-            "companyNameAr": "الألومنيوم العربية",
-            "sector": "غير مصنف",
-            "correlation": 0.468,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ATQA",
-            "companyNameAr": "مصر الوطنية للصلب عتاقة",
-            "sector": "غير مصنف",
-            "correlation": 0.429,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "EGBE",
-      "source": "V13.5",
-      "status": "WATCH",
-      "priority": 3,
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "recommendationScore": 93.5,
-      "companyNameAr": "البنك المصري الخليجي",
-      "companyNameEn": "Egyptian Gulf Bank",
-      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
-      "failedConditions": [],
-      "adaptive": {
-        "proximityPct": 93.7,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 40.2,
-        "minimumRequiredScore": 79,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      },
-      "plan": {
-        "entryLow": 0.5375,
-        "entryHigh": 0.5431,
-        "stopLoss": 0.5125,
-        "target1": 0.5903,
-        "target2": 0.6126,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 0.543,
-      "stopDistancePct": 5.634,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 55,
-        "riskCode": "MEDIUM",
-        "riskLabelAr": "مخاطر متوسطة",
-        "volatility20Pct": 3.368,
-        "var95OneDayPct": 2.152,
-        "maxDrawdown100Pct": 8.298,
-        "beta60": 0.563,
-        "liquidityPercentile": 4.7,
-        "averageTurnover20Egp": 194888.417,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "OIH",
-            "companyNameAr": "أوراسكوم للاستثمار القابضة",
-            "sector": "غير مصنف",
-            "correlation": 0.494,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "RMDA",
-            "companyNameAr": "راميدا",
-            "sector": "غير مصنف",
-            "correlation": 0.41,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "IFAP",
-            "companyNameAr": "الدولية للمحاصيل الزراعية",
-            "sector": "غير مصنف",
-            "correlation": 0.396,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "SKPC",
-            "companyNameAr": "سيدي كرير للبتروكيماويات",
-            "sector": "غير مصنف",
-            "correlation": 0.369,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "OFH",
-            "companyNameAr": "أو بي المالية القابضة",
-            "sector": "غير مصنف",
-            "correlation": 0.345,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "AMER",
-            "companyNameAr": "عامر جروب",
-            "sector": "غير مصنف",
-            "correlation": 0.325,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MTIE",
-            "companyNameAr": "إم إم جروب",
-            "sector": "غير مصنف",
-            "correlation": 0.291,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ORWE",
-            "companyNameAr": "النساجون الشرقيون",
-            "sector": "غير مصنف",
-            "correlation": 0.282,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "LUTS",
-      "source": "V13.5",
-      "status": "WATCH",
-      "priority": 3,
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "recommendationScore": 96.6,
-      "companyNameAr": "لوتس للتنمية والاستثمار الزراعي",
-      "companyNameEn": "Lotus For Agricultural Investments And Development",
-      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
-      "failedConditions": [],
-      "adaptive": {
-        "proximityPct": 93.6,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 40.2,
-        "minimumRequiredScore": 79,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      },
-      "plan": {
-        "entryLow": 1.3618,
-        "entryHigh": 1.3823,
-        "stopLoss": 1.2966,
-        "target1": 1.5079,
-        "target2": 1.5683,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 1.382,
-      "stopDistancePct": 6.2,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 82,
-        "riskCode": "HIGH",
-        "riskLabelAr": "مخاطر مرتفعة",
-        "volatility20Pct": 15.376,
-        "var95OneDayPct": 3.907,
-        "maxDrawdown100Pct": 30.828,
-        "beta60": 1.62,
-        "liquidityPercentile": 95.8,
-        "averageTurnover20Egp": 168558423.508,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "KZPC",
-            "companyNameAr": "كفر الزيات للمبيدات",
-            "sector": "غير مصنف",
-            "correlation": 0.556,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "CAED",
-            "companyNameAr": "القاهرة للخدمات التعليمية",
-            "sector": "غير مصنف",
-            "correlation": 0.426,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MBSC",
-            "companyNameAr": "مصر بني سويف للأسمنت",
-            "sector": "غير مصنف",
-            "correlation": 0.423,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ODIN",
-            "companyNameAr": "أودن للاستثمارات",
-            "sector": "غير مصنف",
-            "correlation": 0.365,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "EEII",
-            "companyNameAr": "العربية للصناعات الهندسية",
-            "sector": "غير مصنف",
-            "correlation": 0.357,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ICID",
-            "companyNameAr": "الدولية للاستثمار والتنمية",
-            "sector": "غير مصنف",
-            "correlation": 0.334,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "SCEM",
-            "companyNameAr": "سيناء للأسمنت",
-            "sector": "غير مصنف",
-            "correlation": 0.332,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "SAUD",
-            "companyNameAr": "بنك البركة مصر",
-            "sector": "غير مصنف",
-            "correlation": 0.312,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "SVCE",
-      "source": "V13.5",
-      "status": "WATCH",
-      "priority": 3,
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "recommendationScore": 94.6,
-      "companyNameAr": "جنوب الوادي للأسمنت",
-      "companyNameEn": "South Valley Cement Company",
-      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
-      "failedConditions": [],
-      "adaptive": {
-        "proximityPct": 93.6,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 40.2,
-        "minimumRequiredScore": 79,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      },
-      "plan": {
-        "entryLow": 10.693,
-        "entryHigh": 10.8213,
-        "stopLoss": 10.1655,
-        "target1": 11.8221,
-        "target2": 12.2954,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 10.821,
-      "stopDistancePct": 6.06,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 71,
-        "riskCode": "HIGH",
-        "riskLabelAr": "مخاطر مرتفعة",
-        "volatility20Pct": 4.984,
-        "var95OneDayPct": 3.896,
-        "maxDrawdown100Pct": 21.919,
-        "beta60": 1.722,
-        "liquidityPercentile": 88,
-        "averageTurnover20Egp": 95051857.104,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "ARCC",
-            "companyNameAr": "العربية للأسمنت",
-            "sector": "غير مصنف",
-            "correlation": 0.591,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ATLC",
-            "companyNameAr": "التوفيق للتأجير التمويلي",
-            "sector": "غير مصنف",
-            "correlation": 0.539,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MPCO",
-            "companyNameAr": "المنصورة للدواجن",
-            "sector": "غير مصنف",
-            "correlation": 0.527,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MCQE",
-            "companyNameAr": "مصر للأسمنت قنا",
-            "sector": "غير مصنف",
-            "correlation": 0.52,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MPRC",
-            "companyNameAr": "مدينة الإنتاج الإعلامي",
-            "sector": "غير مصنف",
-            "correlation": 0.515,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MCRO",
-            "companyNameAr": "ماكرو جروب",
-            "sector": "غير مصنف",
-            "correlation": 0.496,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "SDTI",
-            "companyNameAr": "شرم دريمز",
-            "sector": "غير مصنف",
-            "correlation": 0.448,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "AFDI",
-            "companyNameAr": "الأهلي للتنمية والاستثمار",
-            "sector": "غير مصنف",
-            "correlation": 0.437,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "MENA",
-      "source": "V13.5",
-      "status": "WATCH",
-      "priority": 3,
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "pullback",
-      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
-      "recommendationScore": 92.3,
-      "companyNameAr": "مينا للاستثمار السياحي والعقاري",
-      "companyNameEn": "Mena for Touristic & Real Estate Investment",
-      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
-      "failedConditions": [],
-      "adaptive": {
-        "proximityPct": 93.6,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 37,
-        "minimumRequiredScore": 81,
-        "scoreGap": 0,
-        "calibratedVariantId": "strict",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      },
-      "plan": {
-        "entryLow": 6.973,
-        "entryHigh": 7.0337,
-        "stopLoss": 6.7975,
-        "target1": 7.3739,
-        "target2": 7.5386,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 7.034,
-      "stopDistancePct": 3.358,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 45,
-        "riskCode": "MEDIUM",
-        "riskLabelAr": "مخاطر متوسطة",
-        "volatility20Pct": 1.25,
-        "var95OneDayPct": 2.512,
-        "maxDrawdown100Pct": 9.465,
-        "beta60": 1.349,
-        "liquidityPercentile": 12,
-        "averageTurnover20Egp": 3018534.752,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "EGTS",
-            "companyNameAr": "المصرية للمنتجعات السياحية",
-            "sector": "غير مصنف",
-            "correlation": 0.548,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ISMQ",
-            "companyNameAr": "الحديد والصلب للمناجم والمحاجر",
-            "sector": "غير مصنف",
-            "correlation": 0.51,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "OBRI",
-            "companyNameAr": "العبور للاستثمار العقاري",
-            "sector": "غير مصنف",
-            "correlation": 0.495,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "DTPP",
-            "companyNameAr": "دلتا للطباعة والتغليف",
-            "sector": "غير مصنف",
-            "correlation": 0.45,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "BTFH",
-            "companyNameAr": "بلتون القابضة",
-            "sector": "غير مصنف",
-            "correlation": 0.364,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ETRS",
-            "companyNameAr": "إيجيترانس",
-            "sector": "غير مصنف",
-            "correlation": 0.342,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "EGAL",
-            "companyNameAr": "مصر للألومنيوم",
-            "sector": "غير مصنف",
-            "correlation": 0.336,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ORWE",
-            "companyNameAr": "النساجون الشرقيون",
-            "sector": "غير مصنف",
-            "correlation": 0.334,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "EEII",
-      "source": "V13.5",
-      "status": "WATCH",
-      "priority": 3,
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "recommendationScore": 92.2,
-      "companyNameAr": "العربية للصناعات الهندسية",
-      "companyNameEn": "Arab Engineering Industries",
-      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
-      "failedConditions": [],
-      "adaptive": {
-        "proximityPct": 93.6,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 40.2,
-        "minimumRequiredScore": 79,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      },
-      "plan": {
-        "entryLow": 2.9323,
-        "entryHigh": 2.9723,
-        "stopLoss": 2.7899,
-        "target1": 3.2446,
-        "target2": 3.3745,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 2.972,
-      "stopDistancePct": 6.137,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 68,
-        "riskCode": "HIGH",
-        "riskLabelAr": "مخاطر مرتفعة",
-        "volatility20Pct": 3.68,
-        "var95OneDayPct": 4.106,
-        "maxDrawdown100Pct": 9.127,
-        "beta60": 1.642,
-        "liquidityPercentile": 40.3,
-        "averageTurnover20Egp": 22615117.925,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "MCQE",
-            "companyNameAr": "مصر للأسمنت قنا",
-            "sector": "غير مصنف",
-            "correlation": 0.52,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ODIN",
-            "companyNameAr": "أودن للاستثمارات",
-            "sector": "غير مصنف",
-            "correlation": 0.488,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ZMID",
-            "companyNameAr": "زهراء المعادي",
-            "sector": "غير مصنف",
-            "correlation": 0.486,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ELKA",
-            "companyNameAr": "القاهرة للإسكان والتعمير",
-            "sector": "غير مصنف",
-            "correlation": 0.476,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ARCC",
-            "companyNameAr": "العربية للأسمنت",
-            "sector": "غير مصنف",
-            "correlation": 0.472,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "DAPH",
-            "companyNameAr": "المشروعات الصناعية والهندسية",
-            "sector": "غير مصنف",
-            "correlation": 0.446,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MBSC",
-            "companyNameAr": "مصر بني سويف للأسمنت",
-            "sector": "غير مصنف",
-            "correlation": 0.426,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "IDRE",
-            "companyNameAr": "الإسماعيلية للتطوير العقاري",
-            "sector": "غير مصنف",
-            "correlation": 0.41,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "CICH",
-      "source": "V13.5",
-      "status": "WATCH",
-      "priority": 3,
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "pullback",
-      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
-      "recommendationScore": 92,
-      "companyNameAr": "سي آي كابيتال",
-      "companyNameEn": "CI Capital Holding For Financial Investments",
-      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
-      "failedConditions": [],
-      "adaptive": {
-        "proximityPct": 93.6,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 37,
-        "minimumRequiredScore": 81,
-        "scoreGap": 0,
-        "calibratedVariantId": "strict",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      },
-      "plan": {
-        "entryLow": 12.4295,
-        "entryHigh": 12.5206,
-        "stopLoss": 11.7293,
-        "target1": 13.8174,
-        "target2": 14.414,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 12.521,
-      "stopDistancePct": 6.32,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 52,
-        "riskCode": "MEDIUM",
-        "riskLabelAr": "مخاطر متوسطة",
-        "volatility20Pct": 1.587,
-        "var95OneDayPct": 2.557,
-        "maxDrawdown100Pct": 10.828,
-        "beta60": 0.38,
-        "liquidityPercentile": 16.2,
-        "averageTurnover20Egp": 5681335.823,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "CAED",
-            "companyNameAr": "القاهرة للخدمات التعليمية",
-            "sector": "غير مصنف",
-            "correlation": 0.464,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "BTFH",
-            "companyNameAr": "بلتون القابضة",
-            "sector": "غير مصنف",
-            "correlation": 0.43,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "OLFI",
-            "companyNameAr": "عبور لاند",
-            "sector": "غير مصنف",
-            "correlation": 0.427,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "NIPH",
-            "companyNameAr": "النيل للأدوية",
-            "sector": "غير مصنف",
-            "correlation": 0.384,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "AIFI",
-            "companyNameAr": "",
-            "sector": "غير مصنف",
-            "correlation": 0.369,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "SIPC",
-            "companyNameAr": "سبأ الدولية للأدوية",
-            "sector": "غير مصنف",
-            "correlation": 0.353,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ABUK",
-            "companyNameAr": "أبو قير للأسمدة والصناعات الكيماوية",
-            "sector": "غير مصنف",
-            "correlation": 0.326,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ATQA",
-            "companyNameAr": "مصر الوطنية للصلب عتاقة",
-            "sector": "غير مصنف",
-            "correlation": 0.308,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "KWIN",
-      "source": "V13.5",
-      "status": "WATCH",
-      "priority": 3,
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "recommendationScore": 91.8,
-      "companyNameAr": "القاهرة الوطنية للاستثمار",
-      "companyNameEn": "El Kahera El Watania Investment",
-      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
-      "failedConditions": [],
-      "adaptive": {
-        "proximityPct": 93.6,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 40.2,
-        "minimumRequiredScore": 79,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      },
-      "plan": {
-        "entryLow": 99.9169,
-        "entryHigh": 101.4247,
-        "stopLoss": 95.1339,
-        "target1": 110.6372,
-        "target2": 115.0667,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 101.425,
-      "stopDistancePct": 6.202,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 73,
-        "riskCode": "HIGH",
-        "riskLabelAr": "مخاطر مرتفعة",
-        "volatility20Pct": 5.869,
-        "var95OneDayPct": 2.905,
-        "maxDrawdown100Pct": 16.041,
-        "beta60": 0.4,
-        "liquidityPercentile": 72.3,
-        "averageTurnover20Egp": 51521573.079,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "SKPC",
-            "companyNameAr": "سيدي كرير للبتروكيماويات",
-            "sector": "غير مصنف",
-            "correlation": 0.406,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MOED",
-            "companyNameAr": "المصرية الحديثة للتعليم",
-            "sector": "غير مصنف",
-            "correlation": 0.362,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "COPR",
-            "companyNameAr": "كوبر للاستثمار التجاري والتطوير العقاري",
-            "sector": "غير مصنف",
-            "correlation": 0.35,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "AMES",
-            "companyNameAr": "مركز الإسكندرية الطبي",
-            "sector": "غير مصنف",
-            "correlation": 0.335,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "NINH",
-            "companyNameAr": "النزهة الدولي",
-            "sector": "غير مصنف",
-            "correlation": 0.333,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MCRO",
-            "companyNameAr": "ماكرو جروب",
-            "sector": "غير مصنف",
-            "correlation": 0.323,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "OCPH",
-            "companyNameAr": "أكتوبر فارما",
-            "sector": "غير مصنف",
-            "correlation": 0.283,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "CEFM",
-            "companyNameAr": "مطاحن مصر الوسطى",
-            "sector": "غير مصنف",
-            "correlation": 0.282,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "DAPH",
-      "source": "V13.5",
-      "status": "WATCH",
-      "priority": 3,
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "recommendationScore": 94.5,
-      "companyNameAr": "المشروعات الصناعية والهندسية",
-      "companyNameEn": "Development & Engineering Consultants",
-      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
-      "failedConditions": [],
-      "adaptive": {
-        "proximityPct": 93.5,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 40.2,
-        "minimumRequiredScore": 79,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      },
-      "plan": {
-        "entryLow": 111.328,
-        "entryHigh": 113.008,
-        "stopLoss": 105.9988,
-        "target1": 123.2726,
-        "target2": 128.208,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 113.008,
-      "stopDistancePct": 6.202,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 77,
-        "riskCode": "HIGH",
-        "riskLabelAr": "مخاطر مرتفعة",
-        "volatility20Pct": 5.122,
-        "var95OneDayPct": 2.863,
-        "maxDrawdown100Pct": 15.644,
-        "beta60": 2.22,
-        "liquidityPercentile": 44.5,
-        "averageTurnover20Egp": 24595836.675,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "MBSC",
-            "companyNameAr": "مصر بني سويف للأسمنت",
-            "sector": "غير مصنف",
-            "correlation": 0.721,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ECAP",
-            "companyNameAr": "العز للسيراميك والبورسلين الجوهرة",
-            "sector": "غير مصنف",
-            "correlation": 0.709,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "SCEM",
-            "companyNameAr": "سيناء للأسمنت",
-            "sector": "غير مصنف",
-            "correlation": 0.674,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ATQA",
-            "companyNameAr": "مصر الوطنية للصلب عتاقة",
-            "sector": "غير مصنف",
-            "correlation": 0.659,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ODIN",
-            "companyNameAr": "أودن للاستثمارات",
-            "sector": "غير مصنف",
-            "correlation": 0.647,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "EGAL",
-            "companyNameAr": "مصر للألومنيوم",
-            "sector": "غير مصنف",
-            "correlation": 0.611,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ALUM",
-            "companyNameAr": "الألومنيوم العربية",
-            "sector": "غير مصنف",
-            "correlation": 0.576,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "INFI",
-            "companyNameAr": "الإسماعيلية الوطنية للصناعات الغذائية",
-            "sector": "غير مصنف",
-            "correlation": 0.561,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "AFDI",
-      "source": "V13.5",
-      "status": "WATCH",
-      "priority": 3,
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "recommendationScore": 91.2,
-      "companyNameAr": "الأهلي للتنمية والاستثمار",
-      "companyNameEn": "Al Ahly for Development & Investment",
-      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
-      "failedConditions": [],
-      "adaptive": {
-        "proximityPct": 93.5,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 40.2,
-        "minimumRequiredScore": 79,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      },
-      "plan": {
-        "entryLow": 64.2522,
-        "entryHigh": 65.1321,
-        "stopLoss": 61.1341,
-        "target1": 71.0967,
-        "target2": 73.9431,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 65.132,
-      "stopDistancePct": 6.138,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 85,
-        "riskCode": "HIGH",
-        "riskLabelAr": "مخاطر مرتفعة",
-        "volatility20Pct": 4.966,
-        "var95OneDayPct": 3.913,
-        "maxDrawdown100Pct": 13.728,
-        "beta60": 2.407,
-        "liquidityPercentile": 43.5,
-        "averageTurnover20Egp": 24052135.28,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "MPCI",
-            "companyNameAr": "ممفيس للأدوية",
-            "sector": "غير مصنف",
-            "correlation": 0.602,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "CSAG",
-            "companyNameAr": "القناة للتوكيلات الملاحية",
-            "sector": "غير مصنف",
-            "correlation": 0.574,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "PHAR",
-            "companyNameAr": "إيبيكو",
-            "sector": "غير مصنف",
-            "correlation": 0.55,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ARCC",
-            "companyNameAr": "العربية للأسمنت",
-            "sector": "غير مصنف",
-            "correlation": 0.528,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ADCI",
-            "companyNameAr": "العربية للأدوية",
-            "sector": "غير مصنف",
-            "correlation": 0.518,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ATLC",
-            "companyNameAr": "التوفيق للتأجير التمويلي",
-            "sector": "غير مصنف",
-            "correlation": 0.501,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MCQE",
-            "companyNameAr": "مصر للأسمنت قنا",
-            "sector": "غير مصنف",
-            "correlation": 0.493,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ENGC",
-            "companyNameAr": "آيكون",
-            "sector": "غير مصنف",
-            "correlation": 0.488,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "SAUD",
-      "source": "V13.5",
-      "status": "WATCH",
-      "priority": 3,
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "recommendationScore": 91.2,
-      "companyNameAr": "بنك البركة مصر",
-      "companyNameEn": "alBaraka Bank Egypt",
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "failedConditions": [
-        "دعم الحجم: 0.7"
-      ],
-      "adaptive": {
-        "proximityPct": 89.5,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 40.2,
-        "minimumRequiredScore": 79,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "دعم الحجم: 0.7"
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      },
-      "plan": {
-        "entryLow": 23.5738,
-        "entryHigh": 23.7227,
-        "stopLoss": 22.9038,
-        "target1": 24.9883,
-        "target2": 25.5839,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 23.723,
-      "stopDistancePct": 3.452,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 56,
-        "riskCode": "MEDIUM",
-        "riskLabelAr": "مخاطر متوسطة",
-        "volatility20Pct": 1.658,
-        "var95OneDayPct": 2.984,
-        "maxDrawdown100Pct": 18.826,
-        "beta60": 0.803,
-        "liquidityPercentile": 30.9,
-        "averageTurnover20Egp": 16907332.725,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "SCEM",
-            "companyNameAr": "سيناء للأسمنت",
-            "sector": "غير مصنف",
-            "correlation": 0.436,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "EXPA",
-            "companyNameAr": "البنك المصري لتنمية الصادرات",
-            "sector": "غير مصنف",
-            "correlation": 0.423,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "FWRY",
-            "companyNameAr": "فوري لتكنولوجيا البنوك والمدفوعات الإلكترونية",
-            "sector": "غير مصنف",
-            "correlation": 0.419,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MOED",
-            "companyNameAr": "المصرية الحديثة للتعليم",
-            "sector": "غير مصنف",
-            "correlation": 0.416,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ALCN",
-            "companyNameAr": "الإسكندرية لتداول الحاويات والبضائع",
-            "sector": "غير مصنف",
-            "correlation": 0.407,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "PHDC",
-            "companyNameAr": "بالم هيلز للتعمير",
-            "sector": "غير مصنف",
-            "correlation": 0.399,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "RMDA",
-            "companyNameAr": "راميدا",
-            "sector": "غير مصنف",
-            "correlation": 0.362,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MCRO",
-            "companyNameAr": "ماكرو جروب",
-            "sector": "غير مصنف",
-            "correlation": 0.361,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "OCDI",
-      "source": "V13.5",
-      "status": "WATCH",
-      "priority": 3,
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "recommendationScore": 93.4,
-      "companyNameAr": "سوديك",
-      "companyNameEn": "Sixth of October for Development and Investment Company SODIC",
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "failedConditions": [
-        "دعم الحجم: 0.73"
-      ],
-      "adaptive": {
-        "proximityPct": 89.4,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 40.2,
-        "minimumRequiredScore": 79,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "دعم الحجم: 0.73"
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      },
-      "plan": {
-        "entryLow": 32.8173,
-        "entryHigh": 33.2284,
-        "stopLoss": 31.2066,
-        "target1": 36.2921,
-        "target2": 37.7451,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 33.228,
-      "stopDistancePct": 6.085,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 70,
-        "riskCode": "HIGH",
-        "riskLabelAr": "مخاطر مرتفعة",
-        "volatility20Pct": 4.055,
-        "var95OneDayPct": 4.225,
-        "maxDrawdown100Pct": 15.511,
-        "beta60": 1.654,
-        "liquidityPercentile": 90.6,
-        "averageTurnover20Egp": 113365426.47,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "CSAG",
-            "companyNameAr": "القناة للتوكيلات الملاحية",
-            "sector": "غير مصنف",
-            "correlation": 0.582,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "IFAP",
-            "companyNameAr": "الدولية للمحاصيل الزراعية",
-            "sector": "غير مصنف",
-            "correlation": 0.515,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MCQE",
-            "companyNameAr": "مصر للأسمنت قنا",
-            "sector": "غير مصنف",
-            "correlation": 0.475,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "AFDI",
-            "companyNameAr": "الأهلي للتنمية والاستثمار",
-            "sector": "غير مصنف",
-            "correlation": 0.457,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ADCI",
-            "companyNameAr": "العربية للأدوية",
-            "sector": "غير مصنف",
-            "correlation": 0.457,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "DSCW",
-            "companyNameAr": "دايس للملابس الجاهزة",
-            "sector": "غير مصنف",
-            "correlation": 0.432,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "RMDA",
-            "companyNameAr": "راميدا",
-            "sector": "غير مصنف",
-            "correlation": 0.416,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MPCI",
-            "companyNameAr": "ممفيس للأدوية",
-            "sector": "غير مصنف",
-            "correlation": 0.402,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "SWDY",
-      "source": "V13.5",
-      "status": "WATCH",
-      "priority": 3,
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "recommendationScore": 91.7,
-      "companyNameAr": "السويدي إليكتريك",
-      "companyNameEn": "Elsewedy Electric",
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "failedConditions": [
-        "منطقة RSI: 72.3"
-      ],
-      "adaptive": {
-        "proximityPct": 89.4,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 40.2,
-        "minimumRequiredScore": 79,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "منطقة RSI: 72.3"
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      },
-      "plan": {
-        "entryLow": 126.3764,
-        "entryHigh": 127.982,
-        "stopLoss": 120.1843,
-        "target1": 139.7699,
-        "target2": 145.3658,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 127.982,
-      "stopDistancePct": 6.093,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 56,
-        "riskCode": "MEDIUM",
-        "riskLabelAr": "مخاطر متوسطة",
-        "volatility20Pct": 5.145,
-        "var95OneDayPct": 1.947,
-        "maxDrawdown100Pct": 8.841,
-        "beta60": 1.101,
-        "liquidityPercentile": 85.3,
-        "averageTurnover20Egp": 89450608.646,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "SIPC",
-            "companyNameAr": "سبأ الدولية للأدوية",
-            "sector": "غير مصنف",
-            "correlation": 0.591,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ORWE",
-            "companyNameAr": "النساجون الشرقيون",
-            "sector": "غير مصنف",
-            "correlation": 0.572,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "AMOC",
-            "companyNameAr": "الإسكندرية للزيوت المعدنية",
-            "sector": "غير مصنف",
-            "correlation": 0.552,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "AXPH",
-            "companyNameAr": "الإسكندرية للأدوية",
-            "sector": "غير مصنف",
-            "correlation": 0.524,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "BIOC",
-            "companyNameAr": "جلاكسو سميثكلاين",
-            "sector": "غير مصنف",
-            "correlation": 0.505,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ACGC",
-            "companyNameAr": "العربية لحليج الأقطان",
-            "sector": "غير مصنف",
-            "correlation": 0.503,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ISPH",
-            "companyNameAr": "ابن سينا فارما",
-            "sector": "غير مصنف",
-            "correlation": 0.49,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ENGC",
-            "companyNameAr": "آيكون",
-            "sector": "غير مصنف",
-            "correlation": 0.449,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "ECAP",
-      "source": "V13.5",
-      "status": "WATCH",
-      "priority": 3,
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "recommendationScore": 91.1,
-      "companyNameAr": "العز للسيراميك والبورسلين الجوهرة",
-      "companyNameEn": "Al Ezz Ceramics & Porcelain",
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "failedConditions": [
-        "دعم الحجم: 0.72"
-      ],
-      "adaptive": {
-        "proximityPct": 89.4,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 40.2,
-        "minimumRequiredScore": 79,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "دعم الحجم: 0.72"
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      },
-      "plan": {
-        "entryLow": 36.0626,
-        "entryHigh": 36.4392,
-        "stopLoss": 34.3668,
-        "target1": 39.6424,
-        "target2": 41.1497,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 36.439,
-      "stopDistancePct": 5.687,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 71,
-        "riskCode": "HIGH",
-        "riskLabelAr": "مخاطر مرتفعة",
-        "volatility20Pct": 4.162,
-        "var95OneDayPct": 2.634,
-        "maxDrawdown100Pct": 14.76,
-        "beta60": 1.337,
-        "liquidityPercentile": 19.9,
-        "averageTurnover20Egp": 9018096.336,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "DAPH",
-            "companyNameAr": "المشروعات الصناعية والهندسية",
-            "sector": "غير مصنف",
-            "correlation": 0.709,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MBSC",
-            "companyNameAr": "مصر بني سويف للأسمنت",
-            "sector": "غير مصنف",
-            "correlation": 0.683,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ODIN",
-            "companyNameAr": "أودن للاستثمارات",
-            "sector": "غير مصنف",
-            "correlation": 0.607,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "PHTV",
-            "companyNameAr": "بيراميزا للفنادق",
-            "sector": "غير مصنف",
-            "correlation": 0.549,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ALUM",
-            "companyNameAr": "الألومنيوم العربية",
-            "sector": "غير مصنف",
-            "correlation": 0.535,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ATQA",
-            "companyNameAr": "مصر الوطنية للصلب عتاقة",
-            "sector": "غير مصنف",
-            "correlation": 0.497,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "SCEM",
-            "companyNameAr": "سيناء للأسمنت",
-            "sector": "غير مصنف",
-            "correlation": 0.486,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "EGAL",
-            "companyNameAr": "مصر للألومنيوم",
-            "sector": "غير مصنف",
-            "correlation": 0.482,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "AXPH",
-      "source": "V13.5",
-      "status": "WATCH",
-      "priority": 3,
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "breakout",
-      "strategyLabelAr": "اختراق مؤكد",
-      "recommendationScore": 91.9,
-      "companyNameAr": "الإسكندرية للأدوية",
-      "companyNameEn": "Alexandria Pharmaceuticals & Chemical Industries",
-      "reasonAr": "أقرب نموذج حالي هو اختراق مؤكد، لكن بعض الشروط لم تكتمل.",
-      "failedConditions": [
-        "منطقة RSI: 78.3"
-      ],
-      "adaptive": {
-        "proximityPct": 89,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 22.9,
-        "minimumRequiredScore": 85,
-        "scoreGap": 0,
-        "calibratedVariantId": "early",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "منطقة RSI: 78.3"
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      },
-      "plan": {
-        "entryLow": 1495.8993,
-        "entryHigh": 1514.4634,
-        "stopLoss": 1422.3964,
-        "target1": 1654.1943,
-        "target2": 1720.4223,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 1514.463,
-      "stopDistancePct": 6.079,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 60,
-        "riskCode": "MEDIUM",
-        "riskLabelAr": "مخاطر متوسطة",
-        "volatility20Pct": 3.834,
-        "var95OneDayPct": 2.084,
-        "maxDrawdown100Pct": 8.161,
-        "beta60": 0.612,
-        "liquidityPercentile": 13.1,
-        "averageTurnover20Egp": 3642828.014,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "SWDY",
-            "companyNameAr": "السويدي إليكتريك",
-            "sector": "غير مصنف",
-            "correlation": 0.524,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "AMIA",
-            "companyNameAr": "العربية للمحابس",
-            "sector": "غير مصنف",
-            "correlation": 0.459,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "CPCI",
-            "companyNameAr": "القاهرة للأدوية",
-            "sector": "غير مصنف",
-            "correlation": 0.457,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "SIPC",
-            "companyNameAr": "سبأ الدولية للأدوية",
-            "sector": "غير مصنف",
-            "correlation": 0.429,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "CCRS",
-            "companyNameAr": "الخليجية الكندية للاستثمار العقاري",
-            "sector": "غير مصنف",
-            "correlation": 0.404,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "JUFO",
-            "companyNameAr": "جهينة للصناعات الغذائية",
-            "sector": "غير مصنف",
-            "correlation": 0.401,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ADCI",
-            "companyNameAr": "العربية للأدوية",
-            "sector": "غير مصنف",
-            "correlation": 0.328,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MFSC",
-            "companyNameAr": "مصر للأسواق الحرة",
-            "sector": "غير مصنف",
-            "correlation": 0.319,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "ACGC",
-      "source": "V13.5",
-      "status": "WATCH",
-      "priority": 3,
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "breakout",
-      "strategyLabelAr": "اختراق مؤكد",
-      "recommendationScore": 91.6,
-      "companyNameAr": "العربية لحليج الأقطان",
-      "companyNameEn": "Arabia Cotton Ginning Company",
-      "reasonAr": "أقرب نموذج حالي هو اختراق مؤكد، لكن بعض الشروط لم تكتمل.",
-      "failedConditions": [
-        "منطقة RSI: 78.7"
-      ],
-      "adaptive": {
-        "proximityPct": 88.9,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 22.9,
-        "minimumRequiredScore": 85,
-        "scoreGap": 0,
-        "calibratedVariantId": "early",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "منطقة RSI: 78.7"
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      },
-      "plan": {
-        "entryLow": 14.0934,
-        "entryHigh": 14.2657,
-        "stopLoss": 13.3997,
-        "target1": 15.5833,
-        "target2": 16.2072,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 14.266,
-      "stopDistancePct": 6.071,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 66,
-        "riskCode": "HIGH",
-        "riskLabelAr": "مخاطر مرتفعة",
-        "volatility20Pct": 4.03,
-        "var95OneDayPct": 3.122,
-        "maxDrawdown100Pct": 9.406,
-        "beta60": 1.012,
-        "liquidityPercentile": 58.1,
-        "averageTurnover20Egp": 34781832.74,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "FAIT",
-            "companyNameAr": "بنك فيصل الإسلامي",
-            "sector": "غير مصنف",
-            "correlation": 0.565,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "SWDY",
-            "companyNameAr": "السويدي إليكتريك",
-            "sector": "غير مصنف",
-            "correlation": 0.503,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "EALR",
-            "companyNameAr": "العامة لاستصلاح الأراضي",
-            "sector": "غير مصنف",
-            "correlation": 0.449,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "SIPC",
-            "companyNameAr": "سبأ الدولية للأدوية",
-            "sector": "غير مصنف",
-            "correlation": 0.428,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "AMOC",
-            "companyNameAr": "الإسكندرية للزيوت المعدنية",
-            "sector": "غير مصنف",
-            "correlation": 0.418,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MOIN",
-            "companyNameAr": "المهندس للتأمين",
-            "sector": "غير مصنف",
-            "correlation": 0.404,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "KABO",
-            "companyNameAr": "كابو",
-            "sector": "غير مصنف",
-            "correlation": 0.397,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MBSC",
-            "companyNameAr": "مصر بني سويف للأسمنت",
-            "sector": "غير مصنف",
-            "correlation": 0.393,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "ADCI",
-      "source": "V13.5",
-      "status": "WATCH",
-      "priority": 3,
-      "statusLabelAr": "قريب من اكتمال الإشارة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "recommendationScore": 92.1,
-      "companyNameAr": "العربية للأدوية",
-      "companyNameEn": "The Arab Drug Company",
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0.56",
-        "دعم الحجم: 0.56"
-      ],
-      "adaptive": {
-        "proximityPct": 85.4,
-        "strategyHealthStatus": "RESEARCH_ONLY",
-        "strategyHealthScore": 40.2,
-        "minimumRequiredScore": 79,
-        "scoreGap": 0,
-        "calibratedVariantId": "balanced",
-        "riskScale": 0,
-        "missingRequirementsAr": [
-          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-          "نشاط الحجم الحالي: 0.56",
-          "دعم الحجم: 0.56"
-        ],
-        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
-      },
-      "plan": {
-        "entryLow": 293.3592,
-        "entryHigh": 297.7604,
-        "stopLoss": 279.304,
-        "target1": 324.8203,
-        "target2": 337.8249,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 297.76,
-      "stopDistancePct": 6.198,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 62,
-        "riskCode": "MEDIUM",
-        "riskLabelAr": "مخاطر متوسطة",
-        "volatility20Pct": 4.22,
-        "var95OneDayPct": 2.646,
-        "maxDrawdown100Pct": 10.735,
-        "beta60": 0.884,
-        "liquidityPercentile": 24.1,
-        "averageTurnover20Egp": 11204020.896,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "MPCI",
-            "companyNameAr": "ممفيس للأدوية",
-            "sector": "غير مصنف",
-            "correlation": 0.657,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "PHAR",
-            "companyNameAr": "إيبيكو",
-            "sector": "غير مصنف",
-            "correlation": 0.615,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "RMDA",
-            "companyNameAr": "راميدا",
-            "sector": "غير مصنف",
-            "correlation": 0.533,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "SDTI",
-            "companyNameAr": "شرم دريمز",
-            "sector": "غير مصنف",
-            "correlation": 0.523,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "AFDI",
-            "companyNameAr": "الأهلي للتنمية والاستثمار",
-            "sector": "غير مصنف",
-            "correlation": 0.518,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "CSAG",
-            "companyNameAr": "القناة للتوكيلات الملاحية",
-            "sector": "غير مصنف",
-            "correlation": 0.508,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ISPH",
-            "companyNameAr": "ابن سينا فارما",
-            "sector": "غير مصنف",
-            "correlation": 0.503,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "IFAP",
-            "companyNameAr": "الدولية للمحاصيل الزراعية",
-            "sector": "غير مصنف",
-            "correlation": 0.495,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
       "ticker": "COSG",
-      "source": "V13.4",
+      "source": "V13.5",
       "status": "WATCH",
-      "priority": 1,
-      "statusLabelAr": "مراقبة مشروطة",
+      "priority": 3,
+      "statusLabelAr": "قريب من اكتمال الإشارة",
       "strategyId": "trend_follow",
       "strategyLabelAr": "اتجاه قوي مع سيولة",
       "recommendationScore": 100,
@@ -2249,7 +155,19 @@
       "companyNameEn": "Cairo Oil & Soap Company",
       "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
       "failedConditions": [],
-      "adaptive": null,
+      "adaptive": {
+        "proximityPct": 93.6,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 40.1,
+        "minimumRequiredScore": 79,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      },
       "plan": {
         "entryLow": 1.7923,
         "entryHigh": 1.8096,
@@ -2335,10 +253,10 @@
     },
     {
       "ticker": "CLHO",
-      "source": "V13.4",
+      "source": "V13.5",
       "status": "WATCH",
-      "priority": 1,
-      "statusLabelAr": "مراقبة مشروطة",
+      "priority": 3,
+      "statusLabelAr": "قريب من اكتمال الإشارة",
       "strategyId": "trend_follow",
       "strategyLabelAr": "اتجاه قوي مع سيولة",
       "recommendationScore": 98.1,
@@ -2346,7 +264,19 @@
       "companyNameEn": "Cleopatra Hospitals Group S.A.E.",
       "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
       "failedConditions": [],
-      "adaptive": null,
+      "adaptive": {
+        "proximityPct": 93.6,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 40.1,
+        "minimumRequiredScore": 79,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      },
       "plan": {
         "entryLow": 17.4791,
         "entryHigh": 17.6162,
@@ -2431,110 +361,11 @@
       }
     },
     {
-      "ticker": "KZPC",
-      "source": "V13.4",
-      "status": "WATCH",
-      "priority": 1,
-      "statusLabelAr": "مراقبة مشروطة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "recommendationScore": 93,
-      "companyNameAr": "كفر الزيات للمبيدات",
-      "companyNameEn": "Kafr El Zayat For Pesticides & Chemicals",
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "failedConditions": [
-        "منطقة RSI: 70.8"
-      ],
-      "adaptive": null,
-      "plan": {
-        "entryLow": 13.0313,
-        "entryHigh": 13.228,
-        "stopLoss": 12.4075,
-        "target1": 14.4295,
-        "target2": 15.0072,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 13.228,
-      "stopDistancePct": 6.203,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 78,
-        "riskCode": "HIGH",
-        "riskLabelAr": "مخاطر مرتفعة",
-        "volatility20Pct": 5.667,
-        "var95OneDayPct": 2.919,
-        "maxDrawdown100Pct": 27.565,
-        "beta60": 0.103,
-        "liquidityPercentile": 64.4,
-        "averageTurnover20Egp": 42943327.299,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "LUTS",
-            "companyNameAr": "لوتس للتنمية والاستثمار الزراعي",
-            "sector": "غير مصنف",
-            "correlation": 0.556,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "GRCA",
-            "companyNameAr": "جراند كابيتال",
-            "sector": "غير مصنف",
-            "correlation": 0.371,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "AMOC",
-            "companyNameAr": "الإسكندرية للزيوت المعدنية",
-            "sector": "غير مصنف",
-            "correlation": 0.338,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MBSC",
-            "companyNameAr": "مصر بني سويف للأسمنت",
-            "sector": "غير مصنف",
-            "correlation": 0.286,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "EALR",
-            "companyNameAr": "العامة لاستصلاح الأراضي",
-            "sector": "غير مصنف",
-            "correlation": 0.283,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "KABO",
-            "companyNameAr": "كابو",
-            "sector": "غير مصنف",
-            "correlation": 0.279,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "AXPH",
-            "companyNameAr": "الإسكندرية للأدوية",
-            "sector": "غير مصنف",
-            "correlation": 0.272,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "AIFI",
-            "companyNameAr": "",
-            "sector": "غير مصنف",
-            "correlation": 0.27,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
       "ticker": "IFAP",
-      "source": "V13.4",
+      "source": "V13.5",
       "status": "WATCH",
-      "priority": 1,
-      "statusLabelAr": "مراقبة مشروطة",
+      "priority": 3,
+      "statusLabelAr": "قريب من اكتمال الإشارة",
       "strategyId": "trend_follow",
       "strategyLabelAr": "اتجاه قوي مع سيولة",
       "recommendationScore": 92.9,
@@ -2542,7 +373,19 @@
       "companyNameEn": "International Company for Agricultural Crops",
       "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
       "failedConditions": [],
-      "adaptive": null,
+      "adaptive": {
+        "proximityPct": 93.6,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 40.1,
+        "minimumRequiredScore": 79,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      },
       "plan": {
         "entryLow": 20.8326,
         "entryHigh": 21.0067,
@@ -2627,110 +470,11 @@
       }
     },
     {
-      "ticker": "AMOC",
-      "source": "V13.4",
-      "status": "WATCH",
-      "priority": 1,
-      "statusLabelAr": "مراقبة مشروطة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "recommendationScore": 92.4,
-      "companyNameAr": "الإسكندرية للزيوت المعدنية",
-      "companyNameEn": "Alexandria Mineral Oils Company",
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "failedConditions": [
-        "منطقة RSI: 70.1"
-      ],
-      "adaptive": null,
-      "plan": {
-        "entryLow": 10.8809,
-        "entryHigh": 10.9914,
-        "stopLoss": 10.3835,
-        "target1": 11.9309,
-        "target2": 12.373,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 10.991,
-      "stopDistancePct": 5.531,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 67,
-        "riskCode": "HIGH",
-        "riskLabelAr": "مخاطر مرتفعة",
-        "volatility20Pct": 4.504,
-        "var95OneDayPct": 3.105,
-        "maxDrawdown100Pct": 19.239,
-        "beta60": 1.627,
-        "liquidityPercentile": 85.9,
-        "averageTurnover20Egp": 89673528.216,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "SWDY",
-            "companyNameAr": "السويدي إليكتريك",
-            "sector": "غير مصنف",
-            "correlation": 0.552,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "SIPC",
-            "companyNameAr": "سبأ الدولية للأدوية",
-            "sector": "غير مصنف",
-            "correlation": 0.521,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MOIN",
-            "companyNameAr": "المهندس للتأمين",
-            "sector": "غير مصنف",
-            "correlation": 0.444,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ACGC",
-            "companyNameAr": "العربية لحليج الأقطان",
-            "sector": "غير مصنف",
-            "correlation": 0.418,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "DAPH",
-            "companyNameAr": "المشروعات الصناعية والهندسية",
-            "sector": "غير مصنف",
-            "correlation": 0.381,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MOSC",
-            "companyNameAr": "مصر للزيوت والصابون",
-            "sector": "غير مصنف",
-            "correlation": 0.363,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "EALR",
-            "companyNameAr": "العامة لاستصلاح الأراضي",
-            "sector": "غير مصنف",
-            "correlation": 0.358,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "KZPC",
-            "companyNameAr": "كفر الزيات للمبيدات",
-            "sector": "غير مصنف",
-            "correlation": 0.338,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
       "ticker": "MCQE",
-      "source": "V13.4",
+      "source": "V13.5",
       "status": "WATCH",
-      "priority": 1,
-      "statusLabelAr": "مراقبة مشروطة",
+      "priority": 3,
+      "statusLabelAr": "قريب من اكتمال الإشارة",
       "strategyId": "trend_follow",
       "strategyLabelAr": "اتجاه قوي مع سيولة",
       "recommendationScore": 92.2,
@@ -2738,7 +482,19 @@
       "companyNameEn": "Misr Cement Qena",
       "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
       "failedConditions": [],
-      "adaptive": null,
+      "adaptive": {
+        "proximityPct": 93.6,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 40.1,
+        "minimumRequiredScore": 79,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      },
       "plan": {
         "entryLow": 236.0551,
         "entryHigh": 239.6118,
@@ -2823,11 +579,565 @@
       }
     },
     {
-      "ticker": "MOSC",
-      "source": "V13.4",
+      "ticker": "OCDI",
+      "source": "V13.5",
       "status": "WATCH",
-      "priority": 1,
-      "statusLabelAr": "مراقبة مشروطة",
+      "priority": 3,
+      "statusLabelAr": "قريب من اكتمال الإشارة",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "recommendationScore": 93,
+      "companyNameAr": "سوديك",
+      "companyNameEn": "Sixth of October for Development and Investment Company SODIC",
+      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
+      "failedConditions": [],
+      "adaptive": {
+        "proximityPct": 93.5,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 40.1,
+        "minimumRequiredScore": 79,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      },
+      "plan": {
+        "entryLow": 31.9684,
+        "entryHigh": 32.377,
+        "stopLoss": 30.4032,
+        "target1": 35.3578,
+        "target2": 36.7734,
+        "riskReward1": 1.8,
+        "maximumHoldingSessions": 10
+      },
+      "referenceEntry": 32.377,
+      "stopDistancePct": 6.096,
+      "allocationReady": false,
+      "riskProfile": {
+        "riskScore": 70,
+        "riskCode": "HIGH",
+        "riskLabelAr": "مخاطر مرتفعة",
+        "volatility20Pct": 4.055,
+        "var95OneDayPct": 4.225,
+        "maxDrawdown100Pct": 15.511,
+        "beta60": 1.654,
+        "liquidityPercentile": 90.6,
+        "averageTurnover20Egp": 113365426.47,
+        "sector": "غير مصنف",
+        "topCorrelated": [
+          {
+            "ticker": "CSAG",
+            "companyNameAr": "القناة للتوكيلات الملاحية",
+            "sector": "غير مصنف",
+            "correlation": 0.582,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "IFAP",
+            "companyNameAr": "الدولية للمحاصيل الزراعية",
+            "sector": "غير مصنف",
+            "correlation": 0.515,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "MCQE",
+            "companyNameAr": "مصر للأسمنت قنا",
+            "sector": "غير مصنف",
+            "correlation": 0.475,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "AFDI",
+            "companyNameAr": "الأهلي للتنمية والاستثمار",
+            "sector": "غير مصنف",
+            "correlation": 0.457,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "ADCI",
+            "companyNameAr": "العربية للأدوية",
+            "sector": "غير مصنف",
+            "correlation": 0.457,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "DSCW",
+            "companyNameAr": "دايس للملابس الجاهزة",
+            "sector": "غير مصنف",
+            "correlation": 0.432,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "RMDA",
+            "companyNameAr": "راميدا",
+            "sector": "غير مصنف",
+            "correlation": 0.416,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "MPCI",
+            "companyNameAr": "ممفيس للأدوية",
+            "sector": "غير مصنف",
+            "correlation": 0.402,
+            "overlapSessions": 60
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "DAPH",
+      "source": "V13.5",
+      "status": "WATCH",
+      "priority": 3,
+      "statusLabelAr": "قريب من اكتمال الإشارة",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "recommendationScore": 91.1,
+      "companyNameAr": "المشروعات الصناعية والهندسية",
+      "companyNameEn": "Development & Engineering Consultants",
+      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
+      "failedConditions": [],
+      "adaptive": {
+        "proximityPct": 93.5,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 40.1,
+        "minimumRequiredScore": 79,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      },
+      "plan": {
+        "entryLow": 109.34,
+        "entryHigh": 110.99,
+        "stopLoss": 104.1059,
+        "target1": 121.0713,
+        "target2": 125.9186,
+        "riskReward1": 1.8,
+        "maximumHoldingSessions": 10
+      },
+      "referenceEntry": 110.99,
+      "stopDistancePct": 6.202,
+      "allocationReady": false,
+      "riskProfile": {
+        "riskScore": 77,
+        "riskCode": "HIGH",
+        "riskLabelAr": "مخاطر مرتفعة",
+        "volatility20Pct": 5.122,
+        "var95OneDayPct": 2.863,
+        "maxDrawdown100Pct": 15.644,
+        "beta60": 2.22,
+        "liquidityPercentile": 44.5,
+        "averageTurnover20Egp": 24595836.675,
+        "sector": "غير مصنف",
+        "topCorrelated": [
+          {
+            "ticker": "MBSC",
+            "companyNameAr": "مصر بني سويف للأسمنت",
+            "sector": "غير مصنف",
+            "correlation": 0.721,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "ECAP",
+            "companyNameAr": "العز للسيراميك والبورسلين الجوهرة",
+            "sector": "غير مصنف",
+            "correlation": 0.709,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "SCEM",
+            "companyNameAr": "سيناء للأسمنت",
+            "sector": "غير مصنف",
+            "correlation": 0.674,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "ATQA",
+            "companyNameAr": "مصر الوطنية للصلب عتاقة",
+            "sector": "غير مصنف",
+            "correlation": 0.659,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "ODIN",
+            "companyNameAr": "أودن للاستثمارات",
+            "sector": "غير مصنف",
+            "correlation": 0.647,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "EGAL",
+            "companyNameAr": "مصر للألومنيوم",
+            "sector": "غير مصنف",
+            "correlation": 0.611,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "ALUM",
+            "companyNameAr": "الألومنيوم العربية",
+            "sector": "غير مصنف",
+            "correlation": 0.576,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "INFI",
+            "companyNameAr": "الإسماعيلية الوطنية للصناعات الغذائية",
+            "sector": "غير مصنف",
+            "correlation": 0.561,
+            "overlapSessions": 60
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "AMOC",
+      "source": "V13.5",
+      "status": "WATCH",
+      "priority": 3,
+      "statusLabelAr": "قريب من اكتمال الإشارة",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "recommendationScore": 92.4,
+      "companyNameAr": "الإسكندرية للزيوت المعدنية",
+      "companyNameEn": "Alexandria Mineral Oils Company",
+      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+      "failedConditions": [
+        "منطقة RSI: 70.1"
+      ],
+      "adaptive": {
+        "proximityPct": 89.6,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 40.1,
+        "minimumRequiredScore": 79,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+          "منطقة RSI: 70.1"
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      },
+      "plan": {
+        "entryLow": 10.8809,
+        "entryHigh": 10.9914,
+        "stopLoss": 10.3835,
+        "target1": 11.9309,
+        "target2": 12.373,
+        "riskReward1": 1.8,
+        "maximumHoldingSessions": 10
+      },
+      "referenceEntry": 10.991,
+      "stopDistancePct": 5.531,
+      "allocationReady": false,
+      "riskProfile": {
+        "riskScore": 67,
+        "riskCode": "HIGH",
+        "riskLabelAr": "مخاطر مرتفعة",
+        "volatility20Pct": 4.504,
+        "var95OneDayPct": 3.105,
+        "maxDrawdown100Pct": 19.239,
+        "beta60": 1.627,
+        "liquidityPercentile": 85.9,
+        "averageTurnover20Egp": 89673528.216,
+        "sector": "غير مصنف",
+        "topCorrelated": [
+          {
+            "ticker": "SWDY",
+            "companyNameAr": "السويدي إليكتريك",
+            "sector": "غير مصنف",
+            "correlation": 0.552,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "SIPC",
+            "companyNameAr": "سبأ الدولية للأدوية",
+            "sector": "غير مصنف",
+            "correlation": 0.521,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "MOIN",
+            "companyNameAr": "المهندس للتأمين",
+            "sector": "غير مصنف",
+            "correlation": 0.444,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "ACGC",
+            "companyNameAr": "العربية لحليج الأقطان",
+            "sector": "غير مصنف",
+            "correlation": 0.418,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "DAPH",
+            "companyNameAr": "المشروعات الصناعية والهندسية",
+            "sector": "غير مصنف",
+            "correlation": 0.381,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "MOSC",
+            "companyNameAr": "مصر للزيوت والصابون",
+            "sector": "غير مصنف",
+            "correlation": 0.363,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "EALR",
+            "companyNameAr": "العامة لاستصلاح الأراضي",
+            "sector": "غير مصنف",
+            "correlation": 0.358,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "KZPC",
+            "companyNameAr": "كفر الزيات للمبيدات",
+            "sector": "غير مصنف",
+            "correlation": 0.338,
+            "overlapSessions": 60
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "MICH",
+      "source": "V13.5",
+      "status": "WATCH",
+      "priority": 3,
+      "statusLabelAr": "قريب من اكتمال الإشارة",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "recommendationScore": 91.4,
+      "companyNameAr": "مصر لصناعة الكيماويات",
+      "companyNameEn": "Misr Chemical Industries",
+      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+      "failedConditions": [
+        "منطقة RSI: 70.9"
+      ],
+      "adaptive": {
+        "proximityPct": 89.6,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 40.1,
+        "minimumRequiredScore": 79,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+          "منطقة RSI: 70.9"
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      },
+      "plan": {
+        "entryLow": 49.256,
+        "entryHigh": 49.805,
+        "stopLoss": 46.8063,
+        "target1": 54.434,
+        "target2": 56.6134,
+        "riskReward1": 1.8,
+        "maximumHoldingSessions": 10
+      },
+      "referenceEntry": 49.805,
+      "stopDistancePct": 6.021,
+      "allocationReady": false,
+      "riskProfile": {
+        "riskScore": 67,
+        "riskCode": "HIGH",
+        "riskLabelAr": "مخاطر مرتفعة",
+        "volatility20Pct": 3.849,
+        "var95OneDayPct": 3.181,
+        "maxDrawdown100Pct": 12.082,
+        "beta60": 0.475,
+        "liquidityPercentile": 41.9,
+        "averageTurnover20Egp": 23816351.267,
+        "sector": "غير مصنف",
+        "topCorrelated": [
+          {
+            "ticker": "OLFI",
+            "companyNameAr": "عبور لاند",
+            "sector": "غير مصنف",
+            "correlation": 0.502,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "MIPH",
+            "companyNameAr": "مينا فارم",
+            "sector": "غير مصنف",
+            "correlation": 0.484,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "DOMT",
+            "companyNameAr": "دومتي",
+            "sector": "غير مصنف",
+            "correlation": 0.45,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "EFID",
+            "companyNameAr": "إيديتا للصناعات الغذائية",
+            "sector": "غير مصنف",
+            "correlation": 0.448,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "MOIN",
+            "companyNameAr": "المهندس للتأمين",
+            "sector": "غير مصنف",
+            "correlation": 0.423,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "ODIN",
+            "companyNameAr": "أودن للاستثمارات",
+            "sector": "غير مصنف",
+            "correlation": 0.402,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "CLHO",
+            "companyNameAr": "مستشفى كليوباترا",
+            "sector": "غير مصنف",
+            "correlation": 0.344,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "BTFH",
+            "companyNameAr": "بلتون القابضة",
+            "sector": "غير مصنف",
+            "correlation": 0.343,
+            "overlapSessions": 60
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "LUTS",
+      "source": "V13.5",
+      "status": "WATCH",
+      "priority": 3,
+      "statusLabelAr": "قريب من اكتمال الإشارة",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "recommendationScore": 92,
+      "companyNameAr": "لوتس للتنمية والاستثمار الزراعي",
+      "companyNameEn": "Lotus For Agricultural Investments And Development",
+      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+      "failedConditions": [
+        "منطقة RSI: 72.3"
+      ],
+      "adaptive": {
+        "proximityPct": 89.5,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 40.1,
+        "minimumRequiredScore": 79,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+          "منطقة RSI: 72.3"
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      },
+      "plan": {
+        "entryLow": 1.6103,
+        "entryHigh": 1.6346,
+        "stopLoss": 1.5332,
+        "target1": 1.7831,
+        "target2": 1.8544,
+        "riskReward1": 1.8,
+        "maximumHoldingSessions": 10
+      },
+      "referenceEntry": 1.635,
+      "stopDistancePct": 6.203,
+      "allocationReady": false,
+      "riskProfile": {
+        "riskScore": 82,
+        "riskCode": "HIGH",
+        "riskLabelAr": "مخاطر مرتفعة",
+        "volatility20Pct": 15.376,
+        "var95OneDayPct": 3.907,
+        "maxDrawdown100Pct": 30.828,
+        "beta60": 1.62,
+        "liquidityPercentile": 95.8,
+        "averageTurnover20Egp": 168558423.508,
+        "sector": "غير مصنف",
+        "topCorrelated": [
+          {
+            "ticker": "KZPC",
+            "companyNameAr": "كفر الزيات للمبيدات",
+            "sector": "غير مصنف",
+            "correlation": 0.556,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "CAED",
+            "companyNameAr": "القاهرة للخدمات التعليمية",
+            "sector": "غير مصنف",
+            "correlation": 0.426,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "MBSC",
+            "companyNameAr": "مصر بني سويف للأسمنت",
+            "sector": "غير مصنف",
+            "correlation": 0.423,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "ODIN",
+            "companyNameAr": "أودن للاستثمارات",
+            "sector": "غير مصنف",
+            "correlation": 0.365,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "EEII",
+            "companyNameAr": "العربية للصناعات الهندسية",
+            "sector": "غير مصنف",
+            "correlation": 0.357,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "ICID",
+            "companyNameAr": "الدولية للاستثمار والتنمية",
+            "sector": "غير مصنف",
+            "correlation": 0.334,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "SCEM",
+            "companyNameAr": "سيناء للأسمنت",
+            "sector": "غير مصنف",
+            "correlation": 0.332,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "SAUD",
+            "companyNameAr": "بنك البركة مصر",
+            "sector": "غير مصنف",
+            "correlation": 0.312,
+            "overlapSessions": 60
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "MOSC",
+      "source": "V13.5",
+      "status": "WATCH",
+      "priority": 3,
+      "statusLabelAr": "قريب من اكتمال الإشارة",
       "strategyId": "trend_follow",
       "strategyLabelAr": "اتجاه قوي مع سيولة",
       "recommendationScore": 92,
@@ -2837,7 +1147,20 @@
       "failedConditions": [
         "منطقة RSI: 71.4"
       ],
-      "adaptive": null,
+      "adaptive": {
+        "proximityPct": 89.5,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 40.1,
+        "minimumRequiredScore": 79,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+          "منطقة RSI: 71.4"
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      },
       "plan": {
         "entryLow": 330.6224,
         "entryHigh": 334.8695,
@@ -2922,11 +1245,123 @@
       }
     },
     {
-      "ticker": "SKPC",
-      "source": "V13.4",
+      "ticker": "KZPC",
+      "source": "V13.5",
       "status": "WATCH",
-      "priority": 1,
-      "statusLabelAr": "مراقبة مشروطة",
+      "priority": 3,
+      "statusLabelAr": "قريب من اكتمال الإشارة",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "recommendationScore": 93,
+      "companyNameAr": "كفر الزيات للمبيدات",
+      "companyNameEn": "Kafr El Zayat For Pesticides & Chemicals",
+      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+      "failedConditions": [
+        "منطقة RSI: 70.8"
+      ],
+      "adaptive": {
+        "proximityPct": 89.4,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 40.1,
+        "minimumRequiredScore": 79,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+          "منطقة RSI: 70.8"
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      },
+      "plan": {
+        "entryLow": 13.0313,
+        "entryHigh": 13.228,
+        "stopLoss": 12.4075,
+        "target1": 14.4295,
+        "target2": 15.0072,
+        "riskReward1": 1.8,
+        "maximumHoldingSessions": 10
+      },
+      "referenceEntry": 13.228,
+      "stopDistancePct": 6.203,
+      "allocationReady": false,
+      "riskProfile": {
+        "riskScore": 78,
+        "riskCode": "HIGH",
+        "riskLabelAr": "مخاطر مرتفعة",
+        "volatility20Pct": 5.667,
+        "var95OneDayPct": 2.919,
+        "maxDrawdown100Pct": 27.565,
+        "beta60": 0.103,
+        "liquidityPercentile": 64.4,
+        "averageTurnover20Egp": 42943327.299,
+        "sector": "غير مصنف",
+        "topCorrelated": [
+          {
+            "ticker": "LUTS",
+            "companyNameAr": "لوتس للتنمية والاستثمار الزراعي",
+            "sector": "غير مصنف",
+            "correlation": 0.556,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "GRCA",
+            "companyNameAr": "جراند كابيتال",
+            "sector": "غير مصنف",
+            "correlation": 0.371,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "AMOC",
+            "companyNameAr": "الإسكندرية للزيوت المعدنية",
+            "sector": "غير مصنف",
+            "correlation": 0.338,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "MBSC",
+            "companyNameAr": "مصر بني سويف للأسمنت",
+            "sector": "غير مصنف",
+            "correlation": 0.286,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "EALR",
+            "companyNameAr": "العامة لاستصلاح الأراضي",
+            "sector": "غير مصنف",
+            "correlation": 0.283,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "KABO",
+            "companyNameAr": "كابو",
+            "sector": "غير مصنف",
+            "correlation": 0.279,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "AXPH",
+            "companyNameAr": "الإسكندرية للأدوية",
+            "sector": "غير مصنف",
+            "correlation": 0.272,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "AIFI",
+            "companyNameAr": "",
+            "sector": "غير مصنف",
+            "correlation": 0.27,
+            "overlapSessions": 60
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "SKPC",
+      "source": "V13.5",
+      "status": "WATCH",
+      "priority": 3,
+      "statusLabelAr": "قريب من اكتمال الإشارة",
       "strategyId": "trend_follow",
       "strategyLabelAr": "اتجاه قوي مع سيولة",
       "recommendationScore": 92,
@@ -2937,7 +1372,21 @@
         "نشاط الحجم الحالي: 0.55",
         "دعم الحجم: 0.55"
       ],
-      "adaptive": null,
+      "adaptive": {
+        "proximityPct": 85.5,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 40.1,
+        "minimumRequiredScore": 79,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+          "نشاط الحجم الحالي: 0.55",
+          "دعم الحجم: 0.55"
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      },
       "plan": {
         "entryLow": 17.1876,
         "entryHigh": 17.3055,
@@ -3022,11 +1471,353 @@
       }
     },
     {
-      "ticker": "ASPI",
-      "source": "V13.4",
+      "ticker": "EGAS",
+      "source": "V13.5",
       "status": "WATCH",
-      "priority": 1,
-      "statusLabelAr": "مراقبة مشروطة",
+      "priority": 3,
+      "statusLabelAr": "قريب من اكتمال الإشارة",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "recommendationScore": 89.8,
+      "companyNameAr": "غاز مصر",
+      "companyNameEn": "Egypt Gas Company",
+      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+      "failedConditions": [
+        "نشاط الحجم الحالي: 0.3",
+        "دعم الحجم: 0.3"
+      ],
+      "adaptive": {
+        "proximityPct": 85.5,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 40.1,
+        "minimumRequiredScore": 79,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+          "نشاط الحجم الحالي: 0.3",
+          "دعم الحجم: 0.3"
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      },
+      "plan": {
+        "entryLow": 57.2342,
+        "entryHigh": 57.8547,
+        "stopLoss": 54.4401,
+        "target1": 63.1324,
+        "target2": 65.6159,
+        "riskReward1": 1.8,
+        "maximumHoldingSessions": 10
+      },
+      "referenceEntry": 57.855,
+      "stopDistancePct": 5.902,
+      "allocationReady": false,
+      "riskProfile": {
+        "riskScore": 46,
+        "riskCode": "MEDIUM",
+        "riskLabelAr": "مخاطر متوسطة",
+        "volatility20Pct": 2.772,
+        "var95OneDayPct": 1.924,
+        "maxDrawdown100Pct": 5.77,
+        "beta60": 0.517,
+        "liquidityPercentile": 23.6,
+        "averageTurnover20Egp": 10942752.654,
+        "sector": "غير مصنف",
+        "topCorrelated": [
+          {
+            "ticker": "ENGC",
+            "companyNameAr": "آيكون",
+            "sector": "غير مصنف",
+            "correlation": 0.558,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "BIOC",
+            "companyNameAr": "جلاكسو سميثكلاين",
+            "sector": "غير مصنف",
+            "correlation": 0.498,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "PHAR",
+            "companyNameAr": "إيبيكو",
+            "sector": "غير مصنف",
+            "correlation": 0.481,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "UEGC",
+            "companyNameAr": "الصعيد العامة للمقاولات",
+            "sector": "غير مصنف",
+            "correlation": 0.47,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "MOSC",
+            "companyNameAr": "مصر للزيوت والصابون",
+            "sector": "غير مصنف",
+            "correlation": 0.465,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "NHPS",
+            "companyNameAr": "الوطنية للإسكان للنقابات المهنية",
+            "sector": "غير مصنف",
+            "correlation": 0.399,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "MOIN",
+            "companyNameAr": "المهندس للتأمين",
+            "sector": "غير مصنف",
+            "correlation": 0.393,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "SWDY",
+            "companyNameAr": "السويدي إليكتريك",
+            "sector": "غير مصنف",
+            "correlation": 0.389,
+            "overlapSessions": 60
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "PHAR",
+      "source": "V13.5",
+      "status": "WATCH",
+      "priority": 3,
+      "statusLabelAr": "قريب من اكتمال الإشارة",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "recommendationScore": 89.6,
+      "companyNameAr": "إيبيكو",
+      "companyNameEn": "Egyptian International Pharmaceutical Industries Company",
+      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+      "failedConditions": [
+        "نشاط الحجم الحالي: 0.32",
+        "دعم الحجم: 0.32"
+      ],
+      "adaptive": {
+        "proximityPct": 85.5,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 40.1,
+        "minimumRequiredScore": 79,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+          "نشاط الحجم الحالي: 0.32",
+          "دعم الحجم: 0.32"
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      },
+      "plan": {
+        "entryLow": 130.5718,
+        "entryHigh": 132.5422,
+        "stopLoss": 124.3214,
+        "target1": 144.5812,
+        "target2": 150.3697,
+        "riskReward1": 1.8,
+        "maximumHoldingSessions": 10
+      },
+      "referenceEntry": 132.542,
+      "stopDistancePct": 6.202,
+      "allocationReady": false,
+      "riskProfile": {
+        "riskScore": 74,
+        "riskCode": "HIGH",
+        "riskLabelAr": "مخاطر مرتفعة",
+        "volatility20Pct": 8.072,
+        "var95OneDayPct": 3.233,
+        "maxDrawdown100Pct": 15.884,
+        "beta60": 2.31,
+        "liquidityPercentile": 99,
+        "averageTurnover20Egp": 365074515.176,
+        "sector": "غير مصنف",
+        "topCorrelated": [
+          {
+            "ticker": "ISPH",
+            "companyNameAr": "ابن سينا فارما",
+            "sector": "غير مصنف",
+            "correlation": 0.729,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "BIOC",
+            "companyNameAr": "جلاكسو سميثكلاين",
+            "sector": "غير مصنف",
+            "correlation": 0.711,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "ADCI",
+            "companyNameAr": "العربية للأدوية",
+            "sector": "غير مصنف",
+            "correlation": 0.615,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "EGCH",
+            "companyNameAr": "كيما",
+            "sector": "غير مصنف",
+            "correlation": 0.561,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "ENGC",
+            "companyNameAr": "آيكون",
+            "sector": "غير مصنف",
+            "correlation": 0.553,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "AFDI",
+            "companyNameAr": "الأهلي للتنمية والاستثمار",
+            "sector": "غير مصنف",
+            "correlation": 0.55,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "SDTI",
+            "companyNameAr": "شرم دريمز",
+            "sector": "غير مصنف",
+            "correlation": 0.532,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "OFH",
+            "companyNameAr": "أو بي المالية القابضة",
+            "sector": "غير مصنف",
+            "correlation": 0.492,
+            "overlapSessions": 60
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "FAIT",
+      "source": "V13.5",
+      "status": "WATCH",
+      "priority": 3,
+      "statusLabelAr": "قريب من اكتمال الإشارة",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "recommendationScore": 89.8,
+      "companyNameAr": "بنك فيصل الإسلامي",
+      "companyNameEn": "Faisal Islamic Bank of Egypt",
+      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+      "failedConditions": [
+        "نشاط الحجم الحالي: 0.49",
+        "دعم الحجم: 0.49"
+      ],
+      "adaptive": {
+        "proximityPct": 85.4,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 40.1,
+        "minimumRequiredScore": 79,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+          "نشاط الحجم الحالي: 0.49",
+          "دعم الحجم: 0.49"
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      },
+      "plan": {
+        "entryLow": 41.523,
+        "entryHigh": 41.8763,
+        "stopLoss": 39.9323,
+        "target1": 44.8808,
+        "target2": 46.2947,
+        "riskReward1": 1.8,
+        "maximumHoldingSessions": 10
+      },
+      "referenceEntry": 41.876,
+      "stopDistancePct": 4.642,
+      "allocationReady": false,
+      "riskProfile": {
+        "riskScore": 59,
+        "riskCode": "MEDIUM",
+        "riskLabelAr": "مخاطر متوسطة",
+        "volatility20Pct": 2.784,
+        "var95OneDayPct": 2.357,
+        "maxDrawdown100Pct": 8.355,
+        "beta60": 0.871,
+        "liquidityPercentile": 14.1,
+        "averageTurnover20Egp": 3797812.684,
+        "sector": "غير مصنف",
+        "topCorrelated": [
+          {
+            "ticker": "ACGC",
+            "companyNameAr": "العربية لحليج الأقطان",
+            "sector": "غير مصنف",
+            "correlation": 0.565,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "ATLC",
+            "companyNameAr": "التوفيق للتأجير التمويلي",
+            "sector": "غير مصنف",
+            "correlation": 0.56,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "CSAG",
+            "companyNameAr": "القناة للتوكيلات الملاحية",
+            "sector": "غير مصنف",
+            "correlation": 0.483,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "MOSC",
+            "companyNameAr": "مصر للزيوت والصابون",
+            "sector": "غير مصنف",
+            "correlation": 0.453,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "MOED",
+            "companyNameAr": "المصرية الحديثة للتعليم",
+            "sector": "غير مصنف",
+            "correlation": 0.445,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "OLFI",
+            "companyNameAr": "عبور لاند",
+            "sector": "غير مصنف",
+            "correlation": 0.421,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "EFID",
+            "companyNameAr": "إيديتا للصناعات الغذائية",
+            "sector": "غير مصنف",
+            "correlation": 0.408,
+            "overlapSessions": 60
+          },
+          {
+            "ticker": "AIFI",
+            "companyNameAr": "",
+            "sector": "غير مصنف",
+            "correlation": 0.402,
+            "overlapSessions": 60
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "ASPI",
+      "source": "V13.5",
+      "status": "WATCH",
+      "priority": 3,
+      "statusLabelAr": "قريب من اكتمال الإشارة",
       "strategyId": "trend_follow",
       "strategyLabelAr": "اتجاه قوي مع سيولة",
       "recommendationScore": 91.9,
@@ -3037,7 +1828,21 @@
         "نشاط الحجم الحالي: 0.59",
         "دعم الحجم: 0.59"
       ],
-      "adaptive": null,
+      "adaptive": {
+        "proximityPct": 85.3,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 40.1,
+        "minimumRequiredScore": 79,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+          "نشاط الحجم الحالي: 0.59",
+          "دعم الحجم: 0.59"
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      },
       "plan": {
         "entryLow": 0.5069,
         "entryHigh": 0.5146,
@@ -3123,10 +1928,10 @@
     },
     {
       "ticker": "GIHD",
-      "source": "V13.4",
+      "source": "V13.5",
       "status": "WATCH",
-      "priority": 1,
-      "statusLabelAr": "مراقبة مشروطة",
+      "priority": 3,
+      "statusLabelAr": "قريب من اكتمال الإشارة",
       "strategyId": "trend_follow",
       "strategyLabelAr": "اتجاه قوي مع سيولة",
       "recommendationScore": 91.6,
@@ -3137,7 +1942,21 @@
         "نشاط الحجم الحالي: 0.55",
         "دعم الحجم: 0.55"
       ],
-      "adaptive": null,
+      "adaptive": {
+        "proximityPct": 85.3,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 40.1,
+        "minimumRequiredScore": 79,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+          "نشاط الحجم الحالي: 0.55",
+          "دعم الحجم: 0.55"
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      },
       "plan": {
         "entryLow": 62.1846,
         "entryHigh": 63.123,
@@ -3222,110 +2041,11 @@
       }
     },
     {
-      "ticker": "MICH",
-      "source": "V13.4",
-      "status": "WATCH",
-      "priority": 1,
-      "statusLabelAr": "مراقبة مشروطة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "recommendationScore": 91.4,
-      "companyNameAr": "مصر لصناعة الكيماويات",
-      "companyNameEn": "Misr Chemical Industries",
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "failedConditions": [
-        "منطقة RSI: 70.9"
-      ],
-      "adaptive": null,
-      "plan": {
-        "entryLow": 49.256,
-        "entryHigh": 49.805,
-        "stopLoss": 46.8063,
-        "target1": 54.434,
-        "target2": 56.6134,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 49.805,
-      "stopDistancePct": 6.021,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 67,
-        "riskCode": "HIGH",
-        "riskLabelAr": "مخاطر مرتفعة",
-        "volatility20Pct": 3.849,
-        "var95OneDayPct": 3.181,
-        "maxDrawdown100Pct": 12.082,
-        "beta60": 0.475,
-        "liquidityPercentile": 41.9,
-        "averageTurnover20Egp": 23816351.267,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "OLFI",
-            "companyNameAr": "عبور لاند",
-            "sector": "غير مصنف",
-            "correlation": 0.502,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MIPH",
-            "companyNameAr": "مينا فارم",
-            "sector": "غير مصنف",
-            "correlation": 0.484,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "DOMT",
-            "companyNameAr": "دومتي",
-            "sector": "غير مصنف",
-            "correlation": 0.45,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "EFID",
-            "companyNameAr": "إيديتا للصناعات الغذائية",
-            "sector": "غير مصنف",
-            "correlation": 0.448,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MOIN",
-            "companyNameAr": "المهندس للتأمين",
-            "sector": "غير مصنف",
-            "correlation": 0.423,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ODIN",
-            "companyNameAr": "أودن للاستثمارات",
-            "sector": "غير مصنف",
-            "correlation": 0.402,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "CLHO",
-            "companyNameAr": "مستشفى كليوباترا",
-            "sector": "غير مصنف",
-            "correlation": 0.344,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "BTFH",
-            "companyNameAr": "بلتون القابضة",
-            "sector": "غير مصنف",
-            "correlation": 0.343,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
       "ticker": "AMER",
-      "source": "V13.4",
+      "source": "V13.5",
       "status": "WATCH",
-      "priority": 1,
-      "statusLabelAr": "مراقبة مشروطة",
+      "priority": 3,
+      "statusLabelAr": "قريب من اكتمال الإشارة",
       "strategyId": "trend_follow",
       "strategyLabelAr": "اتجاه قوي مع سيولة",
       "recommendationScore": 90,
@@ -3336,7 +2056,21 @@
         "نشاط الحجم الحالي: 0.35",
         "دعم الحجم: 0.35"
       ],
-      "adaptive": null,
+      "adaptive": {
+        "proximityPct": 85.3,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 40.1,
+        "minimumRequiredScore": 79,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+          "نشاط الحجم الحالي: 0.35",
+          "دعم الحجم: 0.35"
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      },
       "plan": {
         "entryLow": 5.7453,
         "entryHigh": 5.832,
@@ -3421,211 +2155,11 @@
       }
     },
     {
-      "ticker": "EGAS",
-      "source": "V13.4",
-      "status": "WATCH",
-      "priority": 1,
-      "statusLabelAr": "مراقبة مشروطة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "recommendationScore": 89.8,
-      "companyNameAr": "غاز مصر",
-      "companyNameEn": "Egypt Gas Company",
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0.3",
-        "دعم الحجم: 0.3"
-      ],
-      "adaptive": null,
-      "plan": {
-        "entryLow": 57.2342,
-        "entryHigh": 57.8547,
-        "stopLoss": 54.4401,
-        "target1": 63.1324,
-        "target2": 65.6159,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 57.855,
-      "stopDistancePct": 5.902,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 46,
-        "riskCode": "MEDIUM",
-        "riskLabelAr": "مخاطر متوسطة",
-        "volatility20Pct": 2.772,
-        "var95OneDayPct": 1.924,
-        "maxDrawdown100Pct": 5.77,
-        "beta60": 0.517,
-        "liquidityPercentile": 23.6,
-        "averageTurnover20Egp": 10942752.654,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "ENGC",
-            "companyNameAr": "آيكون",
-            "sector": "غير مصنف",
-            "correlation": 0.558,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "BIOC",
-            "companyNameAr": "جلاكسو سميثكلاين",
-            "sector": "غير مصنف",
-            "correlation": 0.498,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "PHAR",
-            "companyNameAr": "إيبيكو",
-            "sector": "غير مصنف",
-            "correlation": 0.481,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "UEGC",
-            "companyNameAr": "الصعيد العامة للمقاولات",
-            "sector": "غير مصنف",
-            "correlation": 0.47,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MOSC",
-            "companyNameAr": "مصر للزيوت والصابون",
-            "sector": "غير مصنف",
-            "correlation": 0.465,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "NHPS",
-            "companyNameAr": "الوطنية للإسكان للنقابات المهنية",
-            "sector": "غير مصنف",
-            "correlation": 0.399,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MOIN",
-            "companyNameAr": "المهندس للتأمين",
-            "sector": "غير مصنف",
-            "correlation": 0.393,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "SWDY",
-            "companyNameAr": "السويدي إليكتريك",
-            "sector": "غير مصنف",
-            "correlation": 0.389,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "FAIT",
-      "source": "V13.4",
-      "status": "WATCH",
-      "priority": 1,
-      "statusLabelAr": "مراقبة مشروطة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "recommendationScore": 89.8,
-      "companyNameAr": "بنك فيصل الإسلامي",
-      "companyNameEn": "Faisal Islamic Bank of Egypt",
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0.49",
-        "دعم الحجم: 0.49"
-      ],
-      "adaptive": null,
-      "plan": {
-        "entryLow": 41.523,
-        "entryHigh": 41.8763,
-        "stopLoss": 39.9323,
-        "target1": 44.8808,
-        "target2": 46.2947,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 41.876,
-      "stopDistancePct": 4.642,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 59,
-        "riskCode": "MEDIUM",
-        "riskLabelAr": "مخاطر متوسطة",
-        "volatility20Pct": 2.784,
-        "var95OneDayPct": 2.357,
-        "maxDrawdown100Pct": 8.355,
-        "beta60": 0.871,
-        "liquidityPercentile": 14.1,
-        "averageTurnover20Egp": 3797812.684,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "ACGC",
-            "companyNameAr": "العربية لحليج الأقطان",
-            "sector": "غير مصنف",
-            "correlation": 0.565,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ATLC",
-            "companyNameAr": "التوفيق للتأجير التمويلي",
-            "sector": "غير مصنف",
-            "correlation": 0.56,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "CSAG",
-            "companyNameAr": "القناة للتوكيلات الملاحية",
-            "sector": "غير مصنف",
-            "correlation": 0.483,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MOSC",
-            "companyNameAr": "مصر للزيوت والصابون",
-            "sector": "غير مصنف",
-            "correlation": 0.453,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "MOED",
-            "companyNameAr": "المصرية الحديثة للتعليم",
-            "sector": "غير مصنف",
-            "correlation": 0.445,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "OLFI",
-            "companyNameAr": "عبور لاند",
-            "sector": "غير مصنف",
-            "correlation": 0.421,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "EFID",
-            "companyNameAr": "إيديتا للصناعات الغذائية",
-            "sector": "غير مصنف",
-            "correlation": 0.408,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "AIFI",
-            "companyNameAr": "",
-            "sector": "غير مصنف",
-            "correlation": 0.402,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
       "ticker": "ZEOT",
-      "source": "V13.4",
+      "source": "V13.5",
       "status": "WATCH",
-      "priority": 1,
-      "statusLabelAr": "مراقبة مشروطة",
+      "priority": 3,
+      "statusLabelAr": "قريب من اكتمال الإشارة",
       "strategyId": "trend_follow",
       "strategyLabelAr": "اتجاه قوي مع سيولة",
       "recommendationScore": 89.7,
@@ -3636,7 +2170,21 @@
         "نشاط الحجم الحالي: 0.3",
         "دعم الحجم: 0.3"
       ],
-      "adaptive": null,
+      "adaptive": {
+        "proximityPct": 85.3,
+        "strategyHealthStatus": "RESEARCH_ONLY",
+        "strategyHealthScore": 40.1,
+        "minimumRequiredScore": 79,
+        "scoreGap": 0,
+        "calibratedVariantId": "balanced",
+        "riskScale": 0,
+        "missingRequirementsAr": [
+          "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+          "نشاط الحجم الحالي: 0.3",
+          "دعم الحجم: 0.3"
+        ],
+        "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+      },
       "plan": {
         "entryLow": 13.352,
         "entryHigh": 13.505,
@@ -3715,106 +2263,6 @@
             "companyNameAr": "برايم القابضة",
             "sector": "غير مصنف",
             "correlation": 0.305,
-            "overlapSessions": 60
-          }
-        ]
-      }
-    },
-    {
-      "ticker": "PHAR",
-      "source": "V13.4",
-      "status": "WATCH",
-      "priority": 1,
-      "statusLabelAr": "مراقبة مشروطة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "recommendationScore": 89.6,
-      "companyNameAr": "إيبيكو",
-      "companyNameEn": "Egyptian International Pharmaceutical Industries Company",
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0.32",
-        "دعم الحجم: 0.32"
-      ],
-      "adaptive": null,
-      "plan": {
-        "entryLow": 130.5718,
-        "entryHigh": 132.5422,
-        "stopLoss": 124.3214,
-        "target1": 144.5812,
-        "target2": 150.3697,
-        "riskReward1": 1.8,
-        "maximumHoldingSessions": 10
-      },
-      "referenceEntry": 132.542,
-      "stopDistancePct": 6.202,
-      "allocationReady": false,
-      "riskProfile": {
-        "riskScore": 74,
-        "riskCode": "HIGH",
-        "riskLabelAr": "مخاطر مرتفعة",
-        "volatility20Pct": 8.072,
-        "var95OneDayPct": 3.233,
-        "maxDrawdown100Pct": 15.884,
-        "beta60": 2.31,
-        "liquidityPercentile": 99,
-        "averageTurnover20Egp": 365074515.176,
-        "sector": "غير مصنف",
-        "topCorrelated": [
-          {
-            "ticker": "ISPH",
-            "companyNameAr": "ابن سينا فارما",
-            "sector": "غير مصنف",
-            "correlation": 0.729,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "BIOC",
-            "companyNameAr": "جلاكسو سميثكلاين",
-            "sector": "غير مصنف",
-            "correlation": 0.711,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ADCI",
-            "companyNameAr": "العربية للأدوية",
-            "sector": "غير مصنف",
-            "correlation": 0.615,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "EGCH",
-            "companyNameAr": "كيما",
-            "sector": "غير مصنف",
-            "correlation": 0.561,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "ENGC",
-            "companyNameAr": "آيكون",
-            "sector": "غير مصنف",
-            "correlation": 0.553,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "AFDI",
-            "companyNameAr": "الأهلي للتنمية والاستثمار",
-            "sector": "غير مصنف",
-            "correlation": 0.55,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "SDTI",
-            "companyNameAr": "شرم دريمز",
-            "sector": "غير مصنف",
-            "correlation": 0.532,
-            "overlapSessions": 60
-          },
-          {
-            "ticker": "OFH",
-            "companyNameAr": "أو بي المالية القابضة",
-            "sector": "غير مصنف",
-            "correlation": 0.492,
             "overlapSessions": 60
           }
         ]
@@ -4090,8 +2538,8 @@
       "technicalScore": 90,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "NEAR_TRIGGER",
-      "recommendationLabelAr": "قريب من اكتمال الإشارة",
+      "recommendationStatus": "NO_CURRENT_SIGNAL",
+      "recommendationLabelAr": "لا توجد إشارة حالية",
       "averageTurnover20Egp": 34781832.74,
       "historySessions": 101,
       "volatility20Pct": 4.03,
@@ -4176,8 +2624,8 @@
       "technicalScore": 86,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "NEAR_TRIGGER",
-      "recommendationLabelAr": "قريب من اكتمال الإشارة",
+      "recommendationStatus": "NO_CURRENT_SIGNAL",
+      "recommendationLabelAr": "لا توجد إشارة حالية",
       "averageTurnover20Egp": 11204020.896,
       "historySessions": 101,
       "volatility20Pct": 4.22,
@@ -4520,8 +2968,8 @@
       "technicalScore": 72,
       "trendCode": "NEUTRAL",
       "trendLabelAr": "محايد / متذبذب",
-      "recommendationStatus": "NEAR_TRIGGER",
-      "recommendationLabelAr": "قريب من اكتمال الإشارة",
+      "recommendationStatus": "NO_CURRENT_SIGNAL",
+      "recommendationLabelAr": "لا توجد إشارة حالية",
       "averageTurnover20Egp": 24052135.28,
       "historySessions": 101,
       "volatility20Pct": 4.966,
@@ -5036,8 +3484,8 @@
       "technicalScore": 86,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "WATCH_CONDITIONAL",
-      "recommendationLabelAr": "مراقبة مشروطة",
+      "recommendationStatus": "NEAR_TRIGGER",
+      "recommendationLabelAr": "قريب من اكتمال الإشارة",
       "averageTurnover20Egp": 73485920.569,
       "historySessions": 101,
       "volatility20Pct": 6.418,
@@ -5294,8 +3742,8 @@
       "technicalScore": 90,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "WATCH_CONDITIONAL",
-      "recommendationLabelAr": "مراقبة مشروطة",
+      "recommendationStatus": "NEAR_TRIGGER",
+      "recommendationLabelAr": "قريب من اكتمال الإشارة",
       "averageTurnover20Egp": 89673528.216,
       "historySessions": 102,
       "volatility20Pct": 4.504,
@@ -5896,8 +4344,8 @@
       "technicalScore": 86,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "WATCH_CONDITIONAL",
-      "recommendationLabelAr": "مراقبة مشروطة",
+      "recommendationStatus": "NEAR_TRIGGER",
+      "recommendationLabelAr": "قريب من اكتمال الإشارة",
       "averageTurnover20Egp": 26671639.741,
       "historySessions": 102,
       "volatility20Pct": 4.652,
@@ -6154,8 +4602,8 @@
       "technicalScore": 90,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "NEAR_TRIGGER",
-      "recommendationLabelAr": "قريب من اكتمال الإشارة",
+      "recommendationStatus": "NO_CURRENT_SIGNAL",
+      "recommendationLabelAr": "لا توجد إشارة حالية",
       "averageTurnover20Egp": 3642828.014,
       "historySessions": 102,
       "volatility20Pct": 3.834,
@@ -6670,8 +5118,8 @@
       "technicalScore": 100,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "NEAR_TRIGGER",
-      "recommendationLabelAr": "قريب من اكتمال الإشارة",
+      "recommendationStatus": "NO_CURRENT_SIGNAL",
+      "recommendationLabelAr": "لا توجد إشارة حالية",
       "averageTurnover20Egp": 433120334.1,
       "historySessions": 101,
       "volatility20Pct": 1.859,
@@ -6756,8 +5204,8 @@
       "technicalScore": 100,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "NEAR_TRIGGER",
-      "recommendationLabelAr": "قريب من اكتمال الإشارة",
+      "recommendationStatus": "NO_CURRENT_SIGNAL",
+      "recommendationLabelAr": "لا توجد إشارة حالية",
       "averageTurnover20Egp": 37027880.74,
       "historySessions": 102,
       "volatility20Pct": 5.042,
@@ -7014,8 +5462,8 @@
       "technicalScore": 36,
       "trendCode": "NEUTRAL",
       "trendLabelAr": "محايد / متذبذب",
-      "recommendationStatus": "NEAR_TRIGGER",
-      "recommendationLabelAr": "قريب من اكتمال الإشارة",
+      "recommendationStatus": "NO_CURRENT_SIGNAL",
+      "recommendationLabelAr": "لا توجد إشارة حالية",
       "averageTurnover20Egp": 5681335.823,
       "historySessions": 102,
       "volatility20Pct": 1.587,
@@ -7272,8 +5720,8 @@
       "technicalScore": 86,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "WATCH_CONDITIONAL",
-      "recommendationLabelAr": "مراقبة مشروطة",
+      "recommendationStatus": "NEAR_TRIGGER",
+      "recommendationLabelAr": "قريب من اكتمال الإشارة",
       "averageTurnover20Egp": 53414554.597,
       "historySessions": 102,
       "volatility20Pct": 2.234,
@@ -7616,8 +6064,8 @@
       "technicalScore": 100,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "WATCH_CONDITIONAL",
-      "recommendationLabelAr": "مراقبة مشروطة",
+      "recommendationStatus": "NEAR_TRIGGER",
+      "recommendationLabelAr": "قريب من اكتمال الإشارة",
       "averageTurnover20Egp": 32358150.793,
       "historySessions": 102,
       "volatility20Pct": 2.543,
@@ -8677,8 +7125,8 @@
       "technicalScore": 72,
       "trendCode": "NEUTRAL",
       "trendLabelAr": "محايد / متذبذب",
-      "recommendationStatus": "NEAR_TRIGGER",
-      "recommendationLabelAr": "قريب من اكتمال الإشارة",
+      "recommendationStatus": "NO_CURRENT_SIGNAL",
+      "recommendationLabelAr": "لا توجد إشارة حالية",
       "averageTurnover20Egp": 9018096.336,
       "historySessions": 102,
       "volatility20Pct": 4.162,
@@ -8849,8 +7297,8 @@
       "technicalScore": 86,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "NEAR_TRIGGER",
-      "recommendationLabelAr": "قريب من اكتمال الإشارة",
+      "recommendationStatus": "NO_CURRENT_SIGNAL",
+      "recommendationLabelAr": "لا توجد إشارة حالية",
       "averageTurnover20Egp": 22615117.925,
       "historySessions": 102,
       "volatility20Pct": 3.68,
@@ -9279,8 +7727,8 @@
       "technicalScore": 80,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "WATCH_CONDITIONAL",
-      "recommendationLabelAr": "مراقبة مشروطة",
+      "recommendationStatus": "NEAR_TRIGGER",
+      "recommendationLabelAr": "قريب من اكتمال الإشارة",
       "averageTurnover20Egp": 10942752.654,
       "historySessions": 102,
       "volatility20Pct": 2.772,
@@ -9365,8 +7813,8 @@
       "technicalScore": 98,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "NEAR_TRIGGER",
-      "recommendationLabelAr": "قريب من اكتمال الإشارة",
+      "recommendationStatus": "NO_CURRENT_SIGNAL",
+      "recommendationLabelAr": "لا توجد إشارة حالية",
       "averageTurnover20Egp": 194888.417,
       "historySessions": 121,
       "volatility20Pct": 3.368,
@@ -10907,8 +9355,8 @@
       "technicalScore": 98,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "WATCH_CONDITIONAL",
-      "recommendationLabelAr": "مراقبة مشروطة",
+      "recommendationStatus": "NEAR_TRIGGER",
+      "recommendationLabelAr": "قريب من اكتمال الإشارة",
       "averageTurnover20Egp": 3797812.684,
       "historySessions": 101,
       "volatility20Pct": 2.784,
@@ -11460,8 +9908,8 @@
       "technicalScore": 86,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "WATCH_CONDITIONAL",
-      "recommendationLabelAr": "مراقبة مشروطة",
+      "recommendationStatus": "NEAR_TRIGGER",
+      "recommendationLabelAr": "قريب من اكتمال الإشارة",
       "averageTurnover20Egp": 23287029.618,
       "historySessions": 101,
       "volatility20Pct": 4.736,
@@ -12400,8 +10848,8 @@
       "technicalScore": 86,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "WATCH_CONDITIONAL",
-      "recommendationLabelAr": "مراقبة مشروطة",
+      "recommendationStatus": "NEAR_TRIGGER",
+      "recommendationLabelAr": "قريب من اكتمال الإشارة",
       "averageTurnover20Egp": 23944062.122,
       "historySessions": 102,
       "volatility20Pct": 1.833,
@@ -13088,8 +11536,8 @@
       "technicalScore": 100,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "NEAR_TRIGGER",
-      "recommendationLabelAr": "قريب من اكتمال الإشارة",
+      "recommendationStatus": "NO_CURRENT_SIGNAL",
+      "recommendationLabelAr": "لا توجد إشارة حالية",
       "averageTurnover20Egp": 51521573.079,
       "historySessions": 102,
       "volatility20Pct": 5.869,
@@ -13174,8 +11622,8 @@
       "technicalScore": 90,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "WATCH_CONDITIONAL",
-      "recommendationLabelAr": "مراقبة مشروطة",
+      "recommendationStatus": "NEAR_TRIGGER",
+      "recommendationLabelAr": "قريب من اكتمال الإشارة",
       "averageTurnover20Egp": 42943327.299,
       "historySessions": 102,
       "volatility20Pct": 5.667,
@@ -13690,8 +12138,8 @@
       "technicalScore": 98,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "WATCH_CONDITIONAL",
-      "recommendationLabelAr": "مراقبة مشروطة",
+      "recommendationStatus": "NEAR_TRIGGER",
+      "recommendationLabelAr": "قريب من اكتمال الإشارة",
       "averageTurnover20Egp": 46695853.732,
       "historySessions": 101,
       "volatility20Pct": 6.723,
@@ -13891,8 +12339,8 @@
       "technicalScore": 56,
       "trendCode": "NEUTRAL",
       "trendLabelAr": "محايد / متذبذب",
-      "recommendationStatus": "NEAR_TRIGGER",
-      "recommendationLabelAr": "قريب من اكتمال الإشارة",
+      "recommendationStatus": "NO_CURRENT_SIGNAL",
+      "recommendationLabelAr": "لا توجد إشارة حالية",
       "averageTurnover20Egp": 3018534.752,
       "historySessions": 102,
       "volatility20Pct": 1.25,
@@ -14321,8 +12769,8 @@
       "technicalScore": 98,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "WATCH_CONDITIONAL",
-      "recommendationLabelAr": "مراقبة مشروطة",
+      "recommendationStatus": "NEAR_TRIGGER",
+      "recommendationLabelAr": "قريب من اكتمال الإشارة",
       "averageTurnover20Egp": 23816351.267,
       "historySessions": 102,
       "volatility20Pct": 3.849,
@@ -14923,8 +13371,8 @@
       "technicalScore": 90,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "WATCH_CONDITIONAL",
-      "recommendationLabelAr": "مراقبة مشروطة",
+      "recommendationStatus": "NEAR_TRIGGER",
+      "recommendationLabelAr": "قريب من اكتمال الإشارة",
       "averageTurnover20Egp": 8253268.076,
       "historySessions": 101,
       "volatility20Pct": 2.566,
@@ -16156,8 +14604,8 @@
       "technicalScore": 98,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "NEAR_TRIGGER",
-      "recommendationLabelAr": "قريب من اكتمال الإشارة",
+      "recommendationStatus": "NO_CURRENT_SIGNAL",
+      "recommendationLabelAr": "لا توجد إشارة حالية",
       "averageTurnover20Egp": 22358942.005,
       "historySessions": 101,
       "volatility20Pct": 4.784,
@@ -16701,8 +15149,8 @@
       "technicalScore": 86,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "WATCH_CONDITIONAL",
-      "recommendationLabelAr": "مراقبة مشروطة",
+      "recommendationStatus": "NEAR_TRIGGER",
+      "recommendationLabelAr": "قريب من اكتمال الإشارة",
       "averageTurnover20Egp": 365074515.176,
       "historySessions": 102,
       "volatility20Pct": 8.072,
@@ -18028,8 +16476,8 @@
       "technicalScore": 98,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "NEAR_TRIGGER",
-      "recommendationLabelAr": "قريب من اكتمال الإشارة",
+      "recommendationStatus": "NO_CURRENT_SIGNAL",
+      "recommendationLabelAr": "لا توجد إشارة حالية",
       "averageTurnover20Egp": 16907332.725,
       "historySessions": 102,
       "volatility20Pct": 1.658,
@@ -18716,8 +17164,8 @@
       "technicalScore": 92,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "WATCH_CONDITIONAL",
-      "recommendationLabelAr": "مراقبة مشروطة",
+      "recommendationStatus": "NEAR_TRIGGER",
+      "recommendationLabelAr": "قريب من اكتمال الإشارة",
       "averageTurnover20Egp": 47025509.365,
       "historySessions": 102,
       "volatility20Pct": 1.896,
@@ -19283,8 +17731,8 @@
       "technicalScore": 98,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "NEAR_TRIGGER",
-      "recommendationLabelAr": "قريب من اكتمال الإشارة",
+      "recommendationStatus": "NO_CURRENT_SIGNAL",
+      "recommendationLabelAr": "لا توجد إشارة حالية",
       "averageTurnover20Egp": 95051857.104,
       "historySessions": 101,
       "volatility20Pct": 4.984,
@@ -19369,8 +17817,8 @@
       "technicalScore": 98,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "NEAR_TRIGGER",
-      "recommendationLabelAr": "قريب من اكتمال الإشارة",
+      "recommendationStatus": "NO_CURRENT_SIGNAL",
+      "recommendationLabelAr": "لا توجد إشارة حالية",
       "averageTurnover20Egp": 89450608.646,
       "historySessions": 102,
       "volatility20Pct": 5.145,
@@ -20229,8 +18677,8 @@
       "technicalScore": 86,
       "trendCode": "BULLISH",
       "trendLabelAr": "اتجاه صاعد",
-      "recommendationStatus": "WATCH_CONDITIONAL",
-      "recommendationLabelAr": "مراقبة مشروطة",
+      "recommendationStatus": "NEAR_TRIGGER",
+      "recommendationLabelAr": "قريب من اكتمال الإشارة",
       "averageTurnover20Egp": 17390934.309,
       "historySessions": 102,
       "volatility20Pct": 2.501,
