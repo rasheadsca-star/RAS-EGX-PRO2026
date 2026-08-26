@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-08-26T15:59:51.992Z",
+  "generatedAt": "2026-08-26T16:53:10.917Z",
   "ticker": "ORWE",
   "companyNameAr": "النساجون الشرقيون",
   "companyNameEn": "Oriental Weavers Carpets Company",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 92.9,
@@ -59,7 +59,20 @@
     "failedConditions": [
       "دعم الحجم: 0.76"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 89.2,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 36.4,
+      "minimumRequiredScore": 85,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "دعم الحجم: 0.76"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 25.433,
       "entryHigh": 25.628,

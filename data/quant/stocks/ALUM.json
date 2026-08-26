@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-08-26T15:59:51.802Z",
+  "generatedAt": "2026-08-26T16:53:10.763Z",
   "ticker": "ALUM",
   "companyNameAr": "الألومنيوم العربية",
   "companyNameEn": "Arab Aluminum Company",
@@ -27,8 +27,8 @@
     "ema9": 27.526,
     "ema21": 26.06,
     "rsi14": 79.12,
-    "macd": 1.422,
-    "macdSignal": 1.116,
+    "macd": 1.423,
+    "macdSignal": 1.117,
     "atr14": 1.481,
     "atrPct": 4.994,
     "averageVolume20": 505737.4,
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 88.9,
@@ -59,7 +59,20 @@
     "failedConditions": [
       "منطقة RSI: 71.5"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 87.8,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 36.4,
+      "minimumRequiredScore": 85,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "منطقة RSI: 71.5"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 29.491,
       "entryHigh": 29.848,
@@ -71,10 +84,10 @@
     }
   },
   "dataQuality": {
-    "historySessions": 101,
-    "firstSession": "2026-02-09",
+    "historySessions": 100,
+    "firstSession": "2026-02-10",
     "lastSession": "2026-08-26",
-    "averageConfidence": 73.5,
+    "averageConfidence": 72.75,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
     "eligibilityLabelAr": "مكتمل وحديث"
