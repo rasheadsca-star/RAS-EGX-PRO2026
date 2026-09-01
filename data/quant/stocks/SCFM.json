@@ -1,77 +1,101 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-08-30T15:21:03.007Z",
+  "generatedAt": "2026-09-01T15:29:40.492Z",
   "ticker": "SCFM",
   "companyNameAr": "مطاحن جنوب القاهرة والجيزة",
   "companyNameEn": "South Cairo and Giza Flour Mills",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-08-30",
+  "sessionId": "2026-09-01",
   "latest": {
-    "date": "2026-08-30",
-    "open": 288.1,
-    "high": 293,
-    "low": 288,
-    "close": 289.03,
-    "volume": 22889
+    "date": "2026-09-01",
+    "open": 283.05,
+    "high": 287.9,
+    "low": 282,
+    "close": 282.11,
+    "volume": 11890
   },
   "indicators": {
-    "close": 289.03,
-    "change1Pct": 2.261,
-    "return5Pct": 3.107,
-    "return20Pct": 6.914,
-    "return50Pct": 5.586,
-    "sma5": 283.468,
-    "sma20": 281.707,
-    "sma50": 265.239,
-    "ema9": 282.935,
-    "ema21": 278.106,
-    "rsi14": 62.288,
-    "macd": 5.842,
-    "macdSignal": 6.292,
-    "atr14": 9.834,
-    "atrPct": 3.403,
-    "averageVolume20": 56365.45,
-    "volumeRatio20": 0.406,
-    "averageTurnover20Egp": 16036176.297,
-    "volatility20Pct": 2.216,
-    "support20": 270.51,
+    "close": 282.11,
+    "change1Pct": -2.394,
+    "return5Pct": -0.459,
+    "return20Pct": 3.877,
+    "return50Pct": 6.404,
+    "sma5": 283.208,
+    "sma20": 282.234,
+    "sma50": 265.579,
+    "ema9": 282.77,
+    "ema21": 278.47,
+    "rsi14": 57.24,
+    "macd": 5.428,
+    "macdSignal": 6.119,
+    "atr14": 9.415,
+    "atrPct": 3.337,
+    "averageVolume20": 55871.65,
+    "volumeRatio20": 0.213,
+    "averageTurnover20Egp": 15908330.192,
+    "volatility20Pct": 2.295,
+    "support20": 271.51,
     "resistance20": 319,
     "high50": 325,
     "low50": 230,
-    "distanceFromSupport20Pct": 6.846,
-    "relativeToResistance20Pct": -9.395,
-    "distanceFromHigh50Pct": -11.068
+    "distanceFromSupport20Pct": 3.904,
+    "relativeToResistance20Pct": -11.564,
+    "distanceFromHigh50Pct": -13.197
   },
   "technical": {
-    "score": 86,
-    "trendCode": "BULLISH",
-    "trendLabelAr": "اتجاه صاعد"
+    "score": 66,
+    "trendCode": "NEUTRAL",
+    "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 89.6,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "نشاط الحجم الحالي: 0.35",
+      "دعم الحجم: 0.35"
+    ],
+    "adaptive": {
+      "proximityPct": 85.5,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 39.3,
+      "minimumRequiredScore": 77,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "نشاط الحجم الحالي: 0.35",
+        "دعم الحجم: 0.35"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 287.524,
+      "entryHigh": 290.912,
+      "stopLoss": 273.311,
+      "target1": 317.851,
+      "target2": 330.576,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 101,
-    "firstSession": "2026-02-12",
-    "lastSession": "2026-08-30",
-    "averageConfidence": 74.65,
+    "firstSession": "2026-02-16",
+    "lastSession": "2026-09-01",
+    "averageConfidence": 74.25,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
     "eligibilityLabelAr": "مكتمل وحديث"
   },
   "chart": {
     "dates": [
-      "2026-02-16",
       "2026-02-17",
       "2026-02-18",
       "2026-02-19",
@@ -170,10 +194,10 @@
       "2026-08-19",
       "2026-08-23",
       "2026-08-25",
-      "2026-08-30"
+      "2026-08-30",
+      "2026-09-01"
     ],
     "open": [
-      238.18,
       236.25,
       233.06,
       233.4,
@@ -272,10 +296,10 @@
       295.12,
       283.01,
       282.99,
-      288.1
+      288.1,
+      283.05
     ],
     "high": [
-      239.88,
       238.4,
       236.99,
       235,
@@ -374,10 +398,10 @@
       297.9,
       286.5,
       287.9,
-      293
+      293,
+      287.9
     ],
     "low": [
-      236,
       232.25,
       232,
       226.16,
@@ -476,10 +500,10 @@
       280,
       280.01,
       282,
-      288
+      288,
+      282
     ],
     "close": [
-      236.25,
       233.06,
       233.4,
       231.31,
@@ -578,10 +602,10 @@
       280,
       282.26,
       282.64,
-      289.03
+      289.03,
+      282.11
     ],
     "volume": [
-      11621,
       9538,
       9171,
       11292,
@@ -680,7 +704,8 @@
       90290,
       19235,
       12894,
-      22889
+      22889,
+      11890
     ],
     "sma20": [
       0,
@@ -702,7 +727,6 @@
       0,
       0,
       0,
-      223.97,
       223.337,
       222.839,
       222.396,
@@ -782,7 +806,8 @@
       280.197,
       281.476,
       280.773,
-      281.707
+      281.707,
+      282.234
     ],
     "sma50": [
       0,
@@ -834,7 +859,6 @@
       0,
       0,
       0,
-      235.892,
       236.47,
       237.033,
       237.621,
@@ -884,7 +908,8 @@
       264.912,
       264.807,
       264.933,
-      265.239
+      265.239,
+      265.579
     ]
   }
 }

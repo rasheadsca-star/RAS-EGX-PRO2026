@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-08-30T15:21:02.955Z",
+  "generatedAt": "2026-09-01T15:29:40.440Z",
   "ticker": "MOSC",
   "companyNameAr": "مصر للزيوت والصابون",
   "companyNameEn": "Misr Oils & Soap",
@@ -28,12 +28,12 @@
     "ema21": 311.803,
     "rsi14": 64.201,
     "macd": 12.857,
-    "macdSignal": 12.775,
+    "macdSignal": 12.776,
     "atr14": 16.236,
     "atrPct": 5.112,
     "averageVolume20": 23456,
     "volumeRatio20": 1.124,
-    "averageTurnover20Egp": 7390456.606,
+    "averageTurnover20Egp": 7390456.61,
     "volatility20Pct": 2.404,
     "support20": 282,
     "resistance20": 380,
@@ -49,17 +49,29 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
-    "recommendationScore": 94.5,
+    "recommendationScore": 94.2,
     "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
     "failedConditions": [],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 93.4,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 39.3,
+      "minimumRequiredScore": 77,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
-      "entryLow": 315.802,
+      "entryLow": 315.803,
       "entryHigh": 319.892,
       "stopLoss": 300.366,
       "target1": 349.314,
@@ -69,10 +81,10 @@
     }
   },
   "dataQuality": {
-    "historySessions": 103,
-    "firstSession": "2026-02-18",
+    "historySessions": 100,
+    "firstSession": "2026-02-24",
     "lastSession": "2026-08-30",
-    "averageConfidence": 73.9,
+    "averageConfidence": 72.4,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
     "eligibilityLabelAr": "مكتمل وحديث"
