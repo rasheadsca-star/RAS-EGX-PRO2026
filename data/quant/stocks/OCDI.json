@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-09-02T14:43:13.697Z",
+  "generatedAt": "2026-09-03T14:52:54.714Z",
   "ticker": "OCDI",
   "companyNameAr": "سوديك",
   "companyNameEn": "Sixth of October for Development and Investment Company SODIC",
@@ -18,23 +18,23 @@
   "indicators": {
     "close": 33,
     "change1Pct": 6.417,
-    "return5Pct": 2.009,
-    "return20Pct": 17.731,
-    "return50Pct": 53.846,
-    "sma5": 31.742,
-    "sma20": 32.425,
-    "sma50": 28.169,
-    "ema9": 32.218,
-    "ema21": 31.595,
-    "rsi14": 44.548,
-    "macd": 1.066,
-    "macdSignal": 1.506,
-    "atr14": 1.661,
-    "atrPct": 5.035,
-    "averageVolume20": 3375419,
-    "volumeRatio20": 1.515,
-    "averageTurnover20Egp": 110462308.61,
-    "volatility20Pct": 4.276,
+    "return5Pct": 4.762,
+    "return20Pct": 12.398,
+    "return50Pct": 52.778,
+    "sma5": 31.642,
+    "sma20": 32.507,
+    "sma50": 28.357,
+    "ema9": 32.066,
+    "ema21": 31.561,
+    "rsi14": 41.459,
+    "macd": 0.934,
+    "macdSignal": 1.365,
+    "atr14": 1.502,
+    "atrPct": 4.552,
+    "averageVolume20": 3080037.55,
+    "volumeRatio20": 1.661,
+    "averageTurnover20Egp": 101481568.148,
+    "volatility20Pct": 4.171,
     "support20": 28.82,
     "resistance20": 36.97,
     "high50": 36.97,
@@ -49,15 +49,27 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 98.3,
     "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
     "failedConditions": [],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 93.2,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 40.4,
+      "minimumRequiredScore": 77,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 32.822,
       "entryHigh": 33.223,
@@ -69,17 +81,16 @@
     }
   },
   "dataQuality": {
-    "historySessions": 102,
-    "firstSession": "2026-02-19",
+    "historySessions": 100,
+    "firstSession": "2026-02-24",
     "lastSession": "2026-09-02",
-    "averageConfidence": 71.65,
+    "averageConfidence": 73.15,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
     "eligibilityLabelAr": "مكتمل وحديث"
   },
   "chart": {
     "dates": [
-      "2026-02-23",
       "2026-02-24",
       "2026-02-25",
       "2026-02-26",
@@ -177,11 +188,11 @@
       "2026-08-26",
       "2026-08-27",
       "2026-08-30",
+      "2026-08-31",
       "2026-09-01",
       "2026-09-02"
     ],
     "open": [
-      18.83,
       19.34,
       19.75,
       18.75,
@@ -277,13 +288,13 @@
       33.96,
       32.98,
       32.35,
-      32.35,
+      31.5,
+      31.5,
       31.5,
       31.2,
       31.01
     ],
     "high": [
-      19.55,
       20,
       19.84,
       18.87,
@@ -379,13 +390,13 @@
       33.96,
       33.4,
       32.5,
-      32.5,
+      31.5,
       32.3,
+      31.79,
       31.43,
       33.09
     ],
     "low": [
-      18.8,
       19,
       18.3,
       18.3,
@@ -481,13 +492,13 @@
       32,
       32,
       31.4,
-      31.4,
+      31.5,
       31.3,
+      31,
       30.03,
       30.8
     ],
     "close": [
-      19.34,
       19.75,
       18.75,
       18.5,
@@ -583,13 +594,13 @@
       32.98,
       32.35,
       31.5,
-      31.8,
-      31.4,
+      31.5,
+      31.5,
+      31.2,
       31.01,
       33
     ],
     "volume": [
-      1724748,
       2810470,
       1917703,
       793932,
@@ -685,8 +696,9 @@
       3087243,
       3939744,
       4513663,
-      4513663,
+      0,
       3413086,
+      2448483,
       1720064,
       5114450
     ],
@@ -710,7 +722,6 @@
       0,
       0,
       0,
-      18.668,
       18.682,
       18.691,
       18.749,
@@ -787,10 +798,11 @@
       31.211,
       31.461,
       31.681,
-      31.877,
-      32.032,
+      31.862,
+      32.022,
       32.176,
-      32.425
+      32.325,
+      32.507
     ],
     "sma50": [
       0,
@@ -842,7 +854,6 @@
       0,
       0,
       0,
-      20.367,
       20.412,
       20.433,
       20.49,
@@ -889,10 +900,11 @@
       26.937,
       27.159,
       27.364,
-      27.575,
-      27.758,
+      27.569,
+      27.754,
       27.938,
-      28.169
+      28.129,
+      28.357
     ]
   }
 }
