@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-09-03T14:52:54.639Z",
+  "generatedAt": "2026-09-05T16:59:09.613Z",
   "ticker": "GIHD",
   "companyNameAr": "الغربية الإسلامية للتنمية العمرانية",
   "companyNameEn": "Gharbia Islamic Housing Development",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 89.8,
@@ -59,7 +59,20 @@
     "failedConditions": [
       "منطقة RSI: 71.3"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 89.4,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 39.1,
+      "minimumRequiredScore": 77,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "منطقة RSI: 71.3"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 71.3,
       "entryHigh": 72.362,

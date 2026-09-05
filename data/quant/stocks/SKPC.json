@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-09-03T14:52:54.762Z",
+  "generatedAt": "2026-09-05T16:59:09.736Z",
   "ticker": "SKPC",
   "companyNameAr": "سيدي كرير للبتروكيماويات",
   "companyNameEn": "Sidi Kerir Petrochemicals",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "breakout",
     "strategyLabelAr": "اختراق مؤكد",
     "recommendationScore": 93.3,
@@ -59,7 +59,20 @@
     "failedConditions": [
       "منطقة RSI: 76.4"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 89.7,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 42.2,
+      "minimumRequiredScore": 74,
+      "scoreGap": 0,
+      "calibratedVariantId": "early",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "منطقة RSI: 76.4"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 18.743,
       "entryHigh": 18.872,

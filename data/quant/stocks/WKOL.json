@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-09-03T14:52:54.786Z",
+  "generatedAt": "2026-09-05T16:59:09.760Z",
   "ticker": "WKOL",
   "companyNameAr": "وادي كوم أمبو",
   "companyNameEn": "Wadi Kom Ombo For Land Reclamation",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 90.4,
@@ -60,7 +60,21 @@
       "نشاط الحجم الحالي: 0.54",
       "دعم الحجم: 0.54"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 85.4,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 39.1,
+      "minimumRequiredScore": 77,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "نشاط الحجم الحالي: 0.54",
+        "دعم الحجم: 0.54"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 338.86,
       "entryHigh": 342.55,
