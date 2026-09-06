@@ -1,58 +1,54 @@
 {
   "schemaVersion": "13.14.0",
-  "generatedAt": "2026-09-03T14:52:52.595Z",
-  "cairoTime": "2026-09-03 17:52:52",
-  "sessionDate": "2026-09-03",
-  "status": "FINALIZED",
+  "generatedAt": "2026-09-06T13:50:39.686Z",
+  "cairoTime": "2026-09-06 16:50:39",
+  "sessionDate": "2026-09-06",
+  "status": "INSUFFICIENT_COVERAGE",
   "globalProblems": [],
   "counts": {
     "eligibleSymbols": 192,
     "symbolsWithAnySource": 227,
     "alreadyValid": 0,
-    "stagedChanges": 148,
-    "appended": 148,
+    "stagedChanges": 140,
+    "appended": 140,
     "replaced": 0,
     "unchanged": 0,
-    "acceptedCoverage": 148,
-    "rejected": 44
+    "acceptedCoverage": 140,
+    "rejected": 52
   },
-  "coveragePct": 77.08,
+  "coveragePct": 72.92,
   "minimumCoveragePct": 75,
   "minimumAcceptedSymbols": 100,
-  "targetPassed": true,
+  "targetPassed": false,
   "changedTickers": [
     "AALR",
     "ACAMD",
     "ACGC",
     "ADCI",
     "ADIB",
-    "ADPC",
     "AFDI",
     "AFMC",
     "AIFI",
     "AJWA",
     "ALCN",
     "ALUM",
+    "AMER",
+    "AMES",
     "AMIA",
     "AMOC",
-    "APSW",
     "ARAB",
     "ARCC",
-    "AREH",
-    "ASCM",
     "ASPI",
+    "ATLC",
     "ATQA",
     "AXPH",
     "BINV",
+    "BIOC",
     "BTFH",
     "CAED",
     "CANA",
-    "CCAP",
     "CCRS",
-    "CERA",
-    "CICH",
-    "CIEB",
-    "CIRA",
+    "CEFM",
     "CLHO",
     "CNFN",
     "COMI",
@@ -63,19 +59,19 @@
     "DAPH",
     "DOMT",
     "DSCW",
-    "DTPP",
     "EALR",
+    "EASB",
     "EAST",
     "EBSC",
-    "ECAP",
+    "EDFM",
     "EEII",
-    "EFIC",
     "EFID",
     "EFIH",
     "EGAL",
+    "EGAS",
     "EGBE",
+    "EGCH",
     "EGTS",
-    "EHDR",
     "ELEC",
     "ELKA",
     "ELNA",
@@ -83,23 +79,20 @@
     "ELWA",
     "EMFD",
     "ENGC",
-    "EPCO",
-    "EPPK",
     "ETEL",
     "ETRS",
     "FAIT",
-    "FWRY",
+    "FERC",
     "GBCO",
     "GDWA",
     "GGCC",
     "GIHD",
-    "GMCI",
     "GRCA",
-    "GTWL",
+    "GSSC",
     "HDBK",
-    "HELI",
     "ICID",
     "IDRE",
+    "IFAP",
     "INFI",
     "IRON",
     "ISMA",
@@ -107,14 +100,12 @@
     "JUFO",
     "KABO",
     "KWIN",
-    "LCSW",
     "LUTS",
+    "MAAL",
     "MBSC",
     "MCQE",
-    "MCRO",
     "MENA",
-    "MEPA",
-    "MHOT",
+    "MFPC",
     "MICH",
     "MILS",
     "MIPH",
@@ -126,30 +117,31 @@
     "MPRC",
     "MTIE",
     "NCCW",
-    "NHPS",
+    "NEDA",
     "NINH",
     "NIPH",
     "OBRI",
+    "OCDI",
+    "OCPH",
     "ODIN",
     "OFH",
     "OIH",
-    "OLFI",
-    "ORWE",
+    "ORHD",
+    "PHAR",
+    "PHDC",
     "PHTV",
     "POUL",
     "PRCL",
     "PRDC",
     "PRMH",
-    "RACC",
     "RAYA",
+    "RMDA",
     "ROTO",
-    "RREI",
     "RTVC",
     "RUBX",
     "SAUD",
     "SCEM",
     "SCFM",
-    "SCTS",
     "SDTI",
     "SEIG",
     "SEIGA",
@@ -158,8 +150,8 @@
     "SNFC",
     "SPIN",
     "SPMD",
+    "SUGR",
     "SVCE",
-    "TALM",
     "TMGH",
     "UEFM",
     "UEGC",
@@ -179,14 +171,14 @@
       "availableSources": [
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "high_below_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "high_below_open_or_close"
           ]
@@ -194,6 +186,33 @@
         {
           "source": "full_market_cache",
           "sourceDate": "2026-07-04",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "ADPC",
+      "reasons": [
+        "no_complete_same_day_ohlcv"
+      ],
+      "availableSources": [
+        {
+          "source": "full_market_cache",
+          "sourceDate": "2026-07-04",
+          "missing": []
+        },
+        {
+          "source": "market",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        },
+        {
+          "source": "last_good_market",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -205,12 +224,41 @@
       "reasons": [
         "previous_close_mismatch"
       ],
-      "mismatchPct": 17.06,
+      "mismatchPct": 12.58,
       "historyClose": 8.03,
-      "sourcePreviousClose": 9.4
+      "sourcePreviousClose": 9.04
     },
     {
-      "ticker": "AMER",
+      "ticker": "APSW",
+      "reasons": [
+        "no_complete_same_day_ohlcv"
+      ],
+      "availableSources": [
+        {
+          "source": "market",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        },
+        {
+          "source": "last_good_market",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        },
+        {
+          "source": "full_market_cache",
+          "sourceDate": "2026-07-04",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "AREH",
       "reasons": [
         "no_complete_same_day_ohlcv"
       ],
@@ -222,28 +270,19 @@
         },
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         }
       ]
-    },
-    {
-      "ticker": "AMES",
-      "reasons": [
-        "previous_close_mismatch"
-      ],
-      "mismatchPct": 29.37,
-      "historyClose": 130.729996,
-      "sourcePreviousClose": 92.33
     },
     {
       "ticker": "ARVA",
@@ -255,36 +294,36 @@
       "sourcePreviousClose": 14.66
     },
     {
-      "ticker": "ATLC",
+      "ticker": "ASCM",
       "reasons": [
         "no_complete_same_day_ohlcv"
       ],
       "availableSources": [
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
-            "high_below_open_or_close"
+            "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
-            "high_below_open_or_close"
+            "low_above_open_or_close"
           ]
         },
         {
           "source": "full_market_cache",
           "sourceDate": "2026-07-04",
           "missing": [
-            "high_below_open_or_close"
+            "low_above_open_or_close"
           ]
         }
       ]
     },
     {
-      "ticker": "BIOC",
+      "ticker": "CCAP",
       "reasons": [
         "no_complete_same_day_ohlcv"
       ],
@@ -296,14 +335,14 @@
         },
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -311,7 +350,7 @@
       ]
     },
     {
-      "ticker": "CEFM",
+      "ticker": "CERA",
       "reasons": [
         "no_complete_same_day_ohlcv"
       ],
@@ -323,14 +362,97 @@
         },
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "CICH",
+      "reasons": [
+        "no_complete_same_day_ohlcv"
+      ],
+      "availableSources": [
+        {
+          "source": "full_market_cache",
+          "sourceDate": "2026-07-04",
+          "missing": []
+        },
+        {
+          "source": "market",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        },
+        {
+          "source": "last_good_market",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "CIEB",
+      "reasons": [
+        "no_complete_same_day_ohlcv"
+      ],
+      "availableSources": [
+        {
+          "source": "full_market_cache",
+          "sourceDate": "2026-07-04",
+          "missing": []
+        },
+        {
+          "source": "market",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        },
+        {
+          "source": "last_good_market",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "CIRA",
+      "reasons": [
+        "no_complete_same_day_ohlcv"
+      ],
+      "availableSources": [
+        {
+          "source": "market",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        },
+        {
+          "source": "last_good_market",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        },
+        {
+          "source": "full_market_cache",
+          "sourceDate": "2026-07-04",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -362,7 +484,36 @@
       ]
     },
     {
-      "ticker": "EASB",
+      "ticker": "DTPP",
+      "reasons": [
+        "no_complete_same_day_ohlcv"
+      ],
+      "availableSources": [
+        {
+          "source": "market",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "high_below_open_or_close"
+          ]
+        },
+        {
+          "source": "last_good_market",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "high_below_open_or_close"
+          ]
+        },
+        {
+          "source": "full_market_cache",
+          "sourceDate": "2026-07-04",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "ECAP",
       "reasons": [
         "no_complete_same_day_ohlcv"
       ],
@@ -374,14 +525,14 @@
         },
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -389,21 +540,21 @@
       ]
     },
     {
-      "ticker": "EDFM",
+      "ticker": "EFIC",
       "reasons": [
         "no_complete_same_day_ohlcv"
       ],
       "availableSources": [
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -412,14 +563,13 @@
           "source": "full_market_cache",
           "sourceDate": "2026-07-04",
           "missing": [
-            "invalid_close",
             "low_above_open_or_close"
           ]
         }
       ]
     },
     {
-      "ticker": "EGAS",
+      "ticker": "EHDR",
       "reasons": [
         "no_complete_same_day_ohlcv"
       ],
@@ -431,14 +581,14 @@
         },
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -446,21 +596,48 @@
       ]
     },
     {
-      "ticker": "EGCH",
+      "ticker": "EPCO",
       "reasons": [
         "no_complete_same_day_ohlcv"
       ],
       "availableSources": [
         {
+          "source": "full_market_cache",
+          "sourceDate": "2026-07-04",
+          "missing": []
+        },
+        {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "EPPK",
+      "reasons": [
+        "no_complete_same_day_ohlcv"
+      ],
+      "availableSources": [
+        {
+          "source": "market",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        },
+        {
+          "source": "last_good_market",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -487,14 +664,14 @@
         },
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -502,7 +679,7 @@
       ]
     },
     {
-      "ticker": "FERC",
+      "ticker": "FWRY",
       "reasons": [
         "no_complete_same_day_ohlcv"
       ],
@@ -514,17 +691,30 @@
         },
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
+        }
+      ]
+    },
+    {
+      "ticker": "GMCI",
+      "reasons": [
+        "no_complete_same_day_ohlcv"
+      ],
+      "availableSources": [
+        {
+          "source": "full_market_cache",
+          "sourceDate": "2026-07-04",
+          "missing": []
         }
       ]
     },
@@ -546,7 +736,7 @@
       ]
     },
     {
-      "ticker": "GSSC",
+      "ticker": "GTWL",
       "reasons": [
         "no_complete_same_day_ohlcv"
       ],
@@ -558,14 +748,43 @@
         },
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "HELI",
+      "reasons": [
+        "no_complete_same_day_ohlcv"
+      ],
+      "availableSources": [
+        {
+          "source": "market",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        },
+        {
+          "source": "last_good_market",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        },
+        {
+          "source": "full_market_cache",
+          "sourceDate": "2026-07-04",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -585,14 +804,14 @@
         },
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -618,33 +837,6 @@
       ]
     },
     {
-      "ticker": "IFAP",
-      "reasons": [
-        "no_complete_same_day_ohlcv"
-      ],
-      "availableSources": [
-        {
-          "source": "full_market_cache",
-          "sourceDate": "2026-07-04",
-          "missing": []
-        },
-        {
-          "source": "market",
-          "sourceDate": "2026-09-03",
-          "missing": [
-            "low_above_open_or_close"
-          ]
-        },
-        {
-          "source": "last_good_market",
-          "sourceDate": "2026-09-03",
-          "missing": [
-            "low_above_open_or_close"
-          ]
-        }
-      ]
-    },
-    {
       "ticker": "ISPH",
       "reasons": [
         "no_complete_same_day_ohlcv"
@@ -657,14 +849,14 @@
         },
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -684,14 +876,14 @@
         },
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -699,7 +891,7 @@
       ]
     },
     {
-      "ticker": "MAAL",
+      "ticker": "LCSW",
       "reasons": [
         "no_complete_same_day_ohlcv"
       ],
@@ -711,14 +903,14 @@
         },
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -738,14 +930,41 @@
         },
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "MCRO",
+      "reasons": [
+        "no_complete_same_day_ohlcv"
+      ],
+      "availableSources": [
+        {
+          "source": "full_market_cache",
+          "sourceDate": "2026-07-04",
+          "missing": []
+        },
+        {
+          "source": "market",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        },
+        {
+          "source": "last_good_market",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -762,13 +981,31 @@
       "sourcePreviousClose": 17.69
     },
     {
-      "ticker": "MFPC",
+      "ticker": "MEPA",
       "reasons": [
-        "previous_close_mismatch"
+        "no_complete_same_day_ohlcv"
       ],
-      "mismatchPct": 12.05,
-      "historyClose": 41.5,
-      "sourcePreviousClose": 46.5
+      "availableSources": [
+        {
+          "source": "full_market_cache",
+          "sourceDate": "2026-07-04",
+          "missing": []
+        },
+        {
+          "source": "market",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        },
+        {
+          "source": "last_good_market",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        }
+      ]
     },
     {
       "ticker": "MFSC",
@@ -778,14 +1015,14 @@
       "availableSources": [
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -800,6 +1037,33 @@
       ]
     },
     {
+      "ticker": "MHOT",
+      "reasons": [
+        "no_complete_same_day_ohlcv"
+      ],
+      "availableSources": [
+        {
+          "source": "full_market_cache",
+          "sourceDate": "2026-07-04",
+          "missing": []
+        },
+        {
+          "source": "market",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        },
+        {
+          "source": "last_good_market",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        }
+      ]
+    },
+    {
       "ticker": "MMAT",
       "reasons": [
         "no_complete_same_day_ohlcv"
@@ -807,14 +1071,14 @@
       "availableSources": [
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -842,14 +1106,14 @@
         },
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -866,20 +1130,7 @@
       "sourcePreviousClose": 0.14
     },
     {
-      "ticker": "NEDA",
-      "reasons": [
-        "no_complete_same_day_ohlcv"
-      ],
-      "availableSources": [
-        {
-          "source": "full_market_cache",
-          "sourceDate": "2026-07-04",
-          "missing": []
-        }
-      ]
-    },
-    {
-      "ticker": "OCDI",
+      "ticker": "NHPS",
       "reasons": [
         "no_complete_same_day_ohlcv"
       ],
@@ -891,14 +1142,14 @@
         },
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -906,7 +1157,7 @@
       ]
     },
     {
-      "ticker": "OCPH",
+      "ticker": "OLFI",
       "reasons": [
         "no_complete_same_day_ohlcv"
       ],
@@ -918,14 +1169,14 @@
         },
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -945,14 +1196,14 @@
         },
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -960,36 +1211,7 @@
       ]
     },
     {
-      "ticker": "ORHD",
-      "reasons": [
-        "no_complete_same_day_ohlcv"
-      ],
-      "availableSources": [
-        {
-          "source": "market",
-          "sourceDate": "2026-09-03",
-          "missing": [
-            "low_above_open_or_close"
-          ]
-        },
-        {
-          "source": "last_good_market",
-          "sourceDate": "2026-09-03",
-          "missing": [
-            "low_above_open_or_close"
-          ]
-        },
-        {
-          "source": "full_market_cache",
-          "sourceDate": "2026-07-04",
-          "missing": [
-            "high_below_open_or_close"
-          ]
-        }
-      ]
-    },
-    {
-      "ticker": "PHAR",
+      "ticker": "ORWE",
       "reasons": [
         "no_complete_same_day_ohlcv"
       ],
@@ -1001,14 +1223,14 @@
         },
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -1016,7 +1238,7 @@
       ]
     },
     {
-      "ticker": "PHDC",
+      "ticker": "RACC",
       "reasons": [
         "no_complete_same_day_ohlcv"
       ],
@@ -1028,14 +1250,14 @@
         },
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -1059,7 +1281,7 @@
       ]
     },
     {
-      "ticker": "RMDA",
+      "ticker": "RREI",
       "reasons": [
         "no_complete_same_day_ohlcv"
       ],
@@ -1071,14 +1293,41 @@
         },
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "SCTS",
+      "reasons": [
+        "no_complete_same_day_ohlcv"
+      ],
+      "availableSources": [
+        {
+          "source": "full_market_cache",
+          "sourceDate": "2026-07-04",
+          "missing": []
+        },
+        {
+          "source": "market",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        },
+        {
+          "source": "last_good_market",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -1098,43 +1347,14 @@
         },
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
-          "missing": [
-            "low_above_open_or_close"
-          ]
-        }
-      ]
-    },
-    {
-      "ticker": "SUGR",
-      "reasons": [
-        "no_complete_same_day_ohlcv"
-      ],
-      "availableSources": [
-        {
-          "source": "market",
-          "sourceDate": "2026-09-03",
-          "missing": [
-            "low_above_open_or_close"
-          ]
-        },
-        {
-          "source": "last_good_market",
-          "sourceDate": "2026-09-03",
-          "missing": [
-            "low_above_open_or_close"
-          ]
-        },
-        {
-          "source": "full_market_cache",
-          "sourceDate": "2026-07-04",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -1149,14 +1369,43 @@
       "availableSources": [
         {
           "source": "market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
         },
         {
           "source": "last_good_market",
-          "sourceDate": "2026-09-03",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        },
+        {
+          "source": "full_market_cache",
+          "sourceDate": "2026-07-04",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        }
+      ]
+    },
+    {
+      "ticker": "TALM",
+      "reasons": [
+        "no_complete_same_day_ohlcv"
+      ],
+      "availableSources": [
+        {
+          "source": "market",
+          "sourceDate": "2026-09-06",
+          "missing": [
+            "low_above_open_or_close"
+          ]
+        },
+        {
+          "source": "last_good_market",
+          "sourceDate": "2026-09-06",
           "missing": [
             "low_above_open_or_close"
           ]
@@ -1175,9 +1424,9 @@
       "reasons": [
         "previous_close_mismatch"
       ],
-      "mismatchPct": 133.33,
+      "mismatchPct": 166.67,
       "historyClose": 0.03,
-      "sourcePreviousClose": 0.07
+      "sourcePreviousClose": 0.08
     }
   ]
 }
