@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-09-13T14:55:42.380Z",
+  "generatedAt": "2026-09-13T18:10:33.334Z",
   "ticker": "EASB",
   "companyNameAr": "ثمار للوساطة",
   "companyNameEn": "Egyptian Arabian Company Themar for securities Brokerage",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 89.4,
@@ -59,7 +59,20 @@
     "failedConditions": [
       "منطقة RSI: 75.5"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 89.2,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 37.4,
+      "minimumRequiredScore": 82,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "منطقة RSI: 75.5"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 9.145,
       "entryHigh": 9.283,
