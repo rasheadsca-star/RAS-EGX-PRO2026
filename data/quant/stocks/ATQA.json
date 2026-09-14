@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-09-14T17:04:26.203Z",
+  "generatedAt": "2026-09-14T19:50:20.546Z",
   "ticker": "ATQA",
   "companyNameAr": "مصر الوطنية للصلب عتاقة",
   "companyNameEn": "Misr National Steel Ataqa",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 89.1,
@@ -59,7 +59,20 @@
     "failedConditions": [
       "دعم الحجم: 0.64"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 87.8,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 35.2,
+      "minimumRequiredScore": 85,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "دعم الحجم: 0.64"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 12.425,
       "entryHigh": 12.549,
