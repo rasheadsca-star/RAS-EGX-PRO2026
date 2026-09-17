@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-09-17T15:26:22.975Z",
+  "generatedAt": "2026-09-17T19:00:12.395Z",
   "ticker": "EBSC",
   "companyNameAr": "أصول إي إس بي للوساطة",
   "companyNameEn": "Osool ESB Securities Brokerage",
@@ -49,9 +49,9 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "pullback",
     "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
     "recommendationScore": 91.5,
@@ -60,7 +60,21 @@
       "نشاط الحجم الحالي: 0.51",
       "سيولة كافية: 0.51"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 86.1,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 53.6,
+      "minimumRequiredScore": 77,
+      "scoreGap": 0,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "نشاط الحجم الحالي: 0.51",
+        "سيولة كافية: 0.51"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 2.028,
       "entryHigh": 2.055,
