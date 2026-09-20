@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-09-20T14:22:03.687Z",
+  "generatedAt": "2026-09-20T18:11:36.899Z",
   "ticker": "RUBX",
   "companyNameAr": "روبيكس",
   "companyNameEn": "Rubex International for Plastic and Acrylic Manufacturing",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "breakout",
     "strategyLabelAr": "اختراق مؤكد",
     "recommendationScore": 90.3,
@@ -59,7 +59,20 @@
     "failedConditions": [
       "منطقة RSI: 80.2"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 89.4,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 38.6,
+      "minimumRequiredScore": 82,
+      "scoreGap": 0,
+      "calibratedVariantId": "early",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "منطقة RSI: 80.2"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 16.175,
       "entryHigh": 16.389,
