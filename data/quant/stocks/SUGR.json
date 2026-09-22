@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-09-22T15:25:17.561Z",
+  "generatedAt": "2026-09-22T18:51:51.630Z",
   "ticker": "SUGR",
   "companyNameAr": "الدلتا للسكر",
   "companyNameEn": "Delta Sugar Company",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 86,
@@ -60,7 +60,21 @@
       "نشاط الحجم الحالي: 0.2",
       "دعم الحجم: 0.2"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 82.9,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 34.4,
+      "minimumRequiredScore": 85,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "نشاط الحجم الحالي: 0.2",
+        "دعم الحجم: 0.2"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 59.139,
       "entryHigh": 59.771,
