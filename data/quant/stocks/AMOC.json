@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-09-24T15:49:48.659Z",
+  "generatedAt": "2026-09-24T19:07:17.615Z",
   "ticker": "AMOC",
   "companyNameAr": "الإسكندرية للزيوت المعدنية",
   "companyNameEn": "Alexandria Mineral Oils Company",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 88.9,
@@ -59,7 +59,20 @@
     "failedConditions": [
       "دعم الحجم: 0.65"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 88,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 32.6,
+      "minimumRequiredScore": 85,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "دعم الحجم: 0.65"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 13.237,
       "entryHigh": 13.401,
