@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-09-27T15:45:34.736Z",
+  "generatedAt": "2026-09-27T18:58:25.624Z",
   "ticker": "EXPA",
   "companyNameAr": "البنك المصري لتنمية الصادرات",
   "companyNameEn": "Export Development Bank of Egypt",
@@ -49,15 +49,28 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 69.9,
     "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
     "failedConditions": [],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 85.3,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 33,
+      "minimumRequiredScore": 85,
+      "scoreGap": 15.1,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 15.1 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف."
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 21.87,
       "entryHigh": 22.027,

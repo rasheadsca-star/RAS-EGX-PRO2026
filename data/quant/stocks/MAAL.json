@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-09-27T15:45:34.783Z",
+  "generatedAt": "2026-09-27T18:58:25.667Z",
   "ticker": "MAAL",
   "companyNameAr": "مرسيليا المصرية الخليجية",
   "companyNameEn": "Marseille Almasreia Alkhalegeya Holding",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "breakout",
     "strategyLabelAr": "اختراق مؤكد",
     "recommendationScore": 77.4,
@@ -59,7 +59,21 @@
     "failedConditions": [
       "منطقة RSI: 76.7"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 84.8,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 38.1,
+      "minimumRequiredScore": 82,
+      "scoreGap": 4.6,
+      "calibratedVariantId": "early",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 4.6 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "منطقة RSI: 76.7"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 11.242,
       "entryHigh": 11.409,

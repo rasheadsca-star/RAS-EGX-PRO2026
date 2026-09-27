@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-09-27T15:45:34.614Z",
+  "generatedAt": "2026-09-27T18:58:25.523Z",
   "ticker": "ALCN",
   "companyNameAr": "الإسكندرية لتداول الحاويات والبضائع",
   "companyNameEn": "Alexandria Container & Cargo Handling Company",
@@ -54,28 +54,34 @@
     "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
-    "recommendationScore": 92.1,
-    "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
-    "failedConditions": [],
+    "recommendationScore": 73,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "نشاط الحجم الحالي: 0.47",
+      "دعم الحجم: 0.47"
+    ],
     "adaptive": {
-      "proximityPct": 93,
+      "proximityPct": 78.1,
       "strategyHealthStatus": "RESEARCH_ONLY",
-      "strategyHealthScore": 32.6,
+      "strategyHealthScore": 33,
       "minimumRequiredScore": 85,
-      "scoreGap": 0,
+      "scoreGap": 12,
       "calibratedVariantId": "balanced",
       "riskScale": 0,
       "missingRequirementsAr": [
-        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 12 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "نشاط الحجم الحالي: 0.47",
+        "دعم الحجم: 0.47"
       ],
       "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
     },
     "plan": {
-      "entryLow": 33.343,
-      "entryHigh": 33.696,
-      "stopLoss": 31.755,
-      "target1": 36.695,
-      "target2": 38.107,
+      "entryLow": 31.888,
+      "entryHigh": 32.253,
+      "stopLoss": 30.306,
+      "target1": 35.245,
+      "target2": 36.656,
       "riskReward1": 1.8,
       "maximumHoldingSessions": 10
     }

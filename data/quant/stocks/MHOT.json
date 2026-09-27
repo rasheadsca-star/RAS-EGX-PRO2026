@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-09-27T15:45:34.798Z",
+  "generatedAt": "2026-09-27T18:58:25.680Z",
   "ticker": "MHOT",
   "companyNameAr": "مصر للفنادق",
   "companyNameEn": "Misr Hotels Company",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 72.6,
@@ -59,7 +59,21 @@
     "failedConditions": [
       "ميل متوسط 20: -0.02"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 82.2,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 33,
+      "minimumRequiredScore": 85,
+      "scoreGap": 12.4,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 12.4 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "ميل متوسط 20: -0.02"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 18.753,
       "entryHigh": 18.993,

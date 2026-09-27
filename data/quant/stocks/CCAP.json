@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-09-27T15:45:34.657Z",
+  "generatedAt": "2026-09-27T18:58:25.556Z",
   "ticker": "CCAP",
   "companyNameAr": "القلعة للاستثمارات المالية",
   "companyNameEn": "Qalaa Holdings",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 78.9,
@@ -59,7 +59,21 @@
     "failedConditions": [
       "دعم الحجم: 0.72"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 84.4,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 33,
+      "minimumRequiredScore": 85,
+      "scoreGap": 6.1,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 6.1 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "دعم الحجم: 0.72"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 6.771,
       "entryHigh": 6.836,
