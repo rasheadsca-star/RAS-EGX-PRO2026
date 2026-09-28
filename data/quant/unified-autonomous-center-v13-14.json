@@ -1,24 +1,24 @@
 {
   "schemaVersion": "13.14.0",
-  "generatedAt": "2026-09-27T15:45:35.787Z",
-  "operationalStatus": "CONFIRMED_LATEST_SESSION",
-  "operationalLabelAr": "قرار يومي مؤكد ومتابعة حية",
+  "generatedAt": "2026-09-28T12:58:05.971Z",
+  "operationalStatus": "PROVISIONAL_INTRADAY_ON_OLDER_ANALYSIS",
+  "operationalLabelAr": "قرار مؤقت على تحليل يومي أقدم",
   "analysisSession": "2026-09-27",
-  "marketDate": "2026-09-27",
+  "marketDate": "2026-09-28",
   "marketCurrent": true,
-  "analysisCurrent": true,
-  "finalizationCurrent": true,
+  "analysisCurrent": false,
+  "finalizationCurrent": false,
   "marketSessionState": "POST_CLOSE",
   "publicDelayedData": true,
   "liveExecutionEnabled": false,
   "automaticOrderSubmission": false,
   "finalization": {
-    "status": "FINALIZED",
-    "sessionDate": "2026-09-27",
-    "coveragePct": 90.1,
-    "accepted": 173,
+    "status": "INSUFFICIENT_COVERAGE",
+    "sessionDate": "2026-09-28",
+    "coveragePct": 1.04,
+    "accepted": 2,
     "eligible": 192,
-    "targetPassed": true
+    "targetPassed": false
   },
   "counts": {
     "totalCandidates": 0,
@@ -29,65 +29,12 @@
     "wait": 0,
     "blocked": 0,
     "unreadAlerts": 0,
-    "discoveryWatch": 1
+    "discoveryWatch": 0
   },
   "primaryCandidate": null,
   "topCandidates": [],
   "candidates": [],
-  "discoveryWatch": [
-    {
-      "unifiedRank": 1,
-      "ticker": "CPME",
-      "companyNameAr": "كاتاليست بارتنرز",
-      "companyNameEn": "Catalyst Partners",
-      "sector": "غير مصنف",
-      "tier": "DISCOVERY_WATCH",
-      "tierLabelAr": "اكتشاف سوقي",
-      "currentPrice": 18,
-      "changePct": -6.49,
-      "turnover": 1419177.88,
-      "turnoverPaceRatio": 0,
-      "state": "MARKET_LEADER",
-      "stateLabelAr": "قائد تداول",
-      "stale": true,
-      "finalDecision": {
-        "code": "WATCH_ONLY",
-        "labelAr": "مراقبة سوقية فقط",
-        "actionable": false,
-        "reasonAr": "السهم نشط لكنه غير موجود داخل طبقات التوصية اليومية."
-      },
-      "latestAlerts": [
-        {
-          "generatedAt": "2026-09-27T11:21:34.126Z",
-          "acknowledged": false,
-          "id": "2026-09-27:CPME:stale_data:",
-          "level": "warning",
-          "type": "stale_data",
-          "ticker": "CPME",
-          "titleAr": "CPME: البيانات أصبحت قديمة",
-          "detailAr": "عمر البيانات 121970.5 دقيقة.",
-          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
-          "currentValue": 121970.4759,
-          "price": 18,
-          "tier": null
-        },
-        {
-          "generatedAt": "2026-09-23T10:43:44.557Z",
-          "acknowledged": false,
-          "id": "2026-09-23:CPME:stale_data:",
-          "level": "warning",
-          "type": "stale_data",
-          "ticker": "CPME",
-          "titleAr": "CPME: البيانات أصبحت قديمة",
-          "detailAr": "عمر البيانات 116172.6 دقيقة.",
-          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
-          "currentValue": 116172.64973333334,
-          "price": 18,
-          "tier": null
-        }
-      ]
-    }
-  ],
+  "discoveryWatch": [],
   "allocationPolicy": {
     "strictRiskPct": 0.5,
     "tierARiskPct": 0.25,
