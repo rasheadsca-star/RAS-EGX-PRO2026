@@ -1,47 +1,47 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-09-30T19:59:44.761Z",
+  "generatedAt": "2026-10-01T20:20:27.245Z",
   "ticker": "ALCN",
   "companyNameAr": "الإسكندرية لتداول الحاويات والبضائع",
   "companyNameEn": "Alexandria Container & Cargo Handling Company",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-09-28",
+  "sessionId": "2026-09-30",
   "latest": {
-    "date": "2026-09-28",
-    "open": 32.05,
-    "high": 32.88,
-    "low": 31.25,
-    "close": 32.43,
-    "volume": 693713
+    "date": "2026-09-30",
+    "open": 33.8,
+    "high": 33.8,
+    "low": 32.5,
+    "close": 33.01,
+    "volume": 708625
   },
   "indicators": {
-    "close": 32.43,
-    "change1Pct": 1.186,
-    "return5Pct": -4.449,
-    "return20Pct": 6.293,
-    "return50Pct": 12.331,
-    "sma5": 33.24,
-    "sma20": 32.397,
-    "sma50": 31.214,
-    "ema9": 32.803,
-    "ema21": 32.331,
-    "rsi14": 51.868,
-    "macd": 0.554,
-    "macdSignal": 0.576,
-    "atr14": 1.473,
-    "atrPct": 4.542,
-    "averageVolume20": 1113371.1,
-    "volumeRatio20": 0.623,
-    "averageTurnover20Egp": 36586910.905,
-    "volatility20Pct": 3.721,
-    "support20": 30.05,
+    "close": 33.01,
+    "change1Pct": -2.337,
+    "return5Pct": -3.48,
+    "return20Pct": 0.825,
+    "return50Pct": 11.107,
+    "sma5": 32.958,
+    "sma20": 32.598,
+    "sma50": 31.366,
+    "ema9": 33.004,
+    "ema21": 32.514,
+    "rsi14": 52.055,
+    "macd": 0.569,
+    "macdSignal": 0.579,
+    "atr14": 1.582,
+    "atrPct": 4.793,
+    "averageVolume20": 1033530.75,
+    "volumeRatio20": 0.686,
+    "averageTurnover20Egp": 34127989.546,
+    "volatility20Pct": 3.32,
+    "support20": 30.4,
     "resistance20": 34.68,
     "high50": 34.68,
     "low50": 28.8,
-    "distanceFromSupport20Pct": 7.92,
-    "relativeToResistance20Pct": -6.488,
-    "distanceFromHigh50Pct": -6.488
+    "distanceFromSupport20Pct": 8.586,
+    "relativeToResistance20Pct": -4.815,
+    "distanceFromHigh50Pct": -4.815
   },
   "technical": {
     "score": 86,
@@ -52,39 +52,42 @@
     "source": "V13.5",
     "status": "NEAR_TRIGGER",
     "statusLabelAr": "قريب من اكتمال الإشارة",
-    "strategyId": "pullback",
-    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
-    "recommendationScore": 83.9,
-    "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
-    "failedConditions": [],
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 77.1,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "دعم الحجم: 0.69"
+    ],
     "adaptive": {
-      "proximityPct": 90.1,
+      "proximityPct": 83.6,
       "strategyHealthStatus": "RESEARCH_ONLY",
-      "strategyHealthScore": 32.8,
+      "strategyHealthScore": 34.4,
       "minimumRequiredScore": 85,
-      "scoreGap": 1.1,
-      "calibratedVariantId": "wide",
+      "scoreGap": 7.9,
+      "calibratedVariantId": "balanced",
       "riskScale": 0,
       "missingRequirementsAr": [
         "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-        "تحتاج 1.1 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف."
+        "تحتاج 7.9 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "دعم الحجم: 0.69"
       ],
       "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
     },
     "plan": {
-      "entryLow": 32.267,
-      "entryHigh": 32.633,
-      "stopLoss": 30.666,
-      "target1": 35.663,
-      "target2": 37.091,
+      "entryLow": 32.846,
+      "entryHigh": 33.215,
+      "stopLoss": 31.214,
+      "target1": 36.3,
+      "target2": 37.754,
       "riskReward1": 1.8,
       "maximumHoldingSessions": 10
     }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-04-08",
-    "lastSession": "2026-09-28",
+    "firstSession": "2026-04-14",
+    "lastSession": "2026-09-30",
     "averageConfidence": 73.15,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -92,8 +95,6 @@
   },
   "chart": {
     "dates": [
-      "2026-04-08",
-      "2026-04-09",
       "2026-04-14",
       "2026-04-16",
       "2026-04-19",
@@ -191,11 +192,11 @@
       "2026-09-23",
       "2026-09-24",
       "2026-09-27",
-      "2026-09-28"
+      "2026-09-28",
+      "2026-09-29",
+      "2026-09-30"
     ],
     "open": [
-      32.27,
-      32.2,
       31.33,
       31.7,
       31.29,
@@ -293,11 +294,11 @@
       34.02,
       34.2,
       33.5,
-      32.05
+      32.05,
+      32.43,
+      33.8
     ],
     "high": [
-      33.5,
-      33,
       31.73,
       32.3,
       31.46,
@@ -395,11 +396,11 @@
       34.45,
       34.38,
       33.98,
-      32.88
+      32.88,
+      33.89,
+      33.8
     ],
     "low": [
-      31.95,
-      31.1,
       31.1,
       31.1,
       30,
@@ -497,11 +498,11 @@
       33.5,
       32.45,
       32.02,
-      31.25
+      31.25,
+      32.31,
+      32.5
     ],
     "close": [
-      32.2,
-      31.33,
       31.22,
       31.29,
       30.3,
@@ -599,11 +600,11 @@
       34.2,
       33.5,
       32.05,
-      32.43
+      32.43,
+      33.8,
+      33.01
     ],
     "volume": [
-      29650260,
-      2793428,
       967034,
       1590353,
       2922142,
@@ -701,7 +702,9 @@
       777898,
       1013225,
       497846,
-      693713
+      693713,
+      656045,
+      708625
     ],
     "sma20": [
       0,
@@ -723,8 +726,6 @@
       0,
       0,
       0,
-      30.109,
-      29.935,
       29.802,
       29.717,
       29.628,
@@ -803,7 +804,9 @@
       32.05,
       32.212,
       32.301,
-      32.397
+      32.397,
+      32.585,
+      32.598
     ],
     "sma50": [
       0,
@@ -855,8 +858,6 @@
       0,
       0,
       0,
-      29.275,
-      29.221,
       29.188,
       29.162,
       29.131,
@@ -905,7 +906,9 @@
       30.986,
       31.074,
       31.142,
-      31.214
+      31.214,
+      31.3,
+      31.366
     ]
   }
 }

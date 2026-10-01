@@ -1,47 +1,47 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-09-30T19:59:44.792Z",
+  "generatedAt": "2026-10-01T20:20:27.296Z",
   "ticker": "COPR",
   "companyNameAr": "كوبر للاستثمار التجاري والتطوير العقاري",
   "companyNameEn": "Copper for Commercial Investment & Real Estate Development",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-09-28",
+  "sessionId": "2026-09-30",
   "latest": {
-    "date": "2026-09-28",
-    "open": 0.461,
-    "high": 0.475,
-    "low": 0.435,
-    "close": 0.454,
-    "volume": 35619466
+    "date": "2026-09-30",
+    "open": 0.454,
+    "high": 0.467,
+    "low": 0.446,
+    "close": 0.464,
+    "volume": 50404081
   },
   "indicators": {
-    "close": 0.454,
-    "change1Pct": -1.518,
-    "return5Pct": -7.536,
-    "return20Pct": -15.613,
-    "return50Pct": 25.762,
-    "sma5": 0.473,
-    "sma20": 0.489,
-    "sma50": 0.453,
-    "ema9": 0.477,
-    "ema21": 0.481,
-    "rsi14": 32.061,
-    "macd": 0.002,
-    "macdSignal": 0.01,
+    "close": 0.464,
+    "change1Pct": 2.203,
+    "return5Pct": -3.934,
+    "return20Pct": -9.903,
+    "return50Pct": 25.405,
+    "sma5": 0.462,
+    "sma20": 0.483,
+    "sma50": 0.457,
+    "ema9": 0.471,
+    "ema21": 0.477,
+    "rsi14": 40.678,
+    "macd": -0.001,
+    "macdSignal": 0.006,
     "atr14": 0.026,
-    "atrPct": 5.648,
-    "averageVolume20": 60958724.95,
-    "volumeRatio20": 0.584,
-    "averageTurnover20Egp": 30062040.763,
-    "volatility20Pct": 2.319,
+    "atrPct": 5.603,
+    "averageVolume20": 55663395.45,
+    "volumeRatio20": 0.906,
+    "averageTurnover20Egp": 27086907.34,
+    "volatility20Pct": 2.361,
     "support20": 0.435,
-    "resistance20": 0.546,
+    "resistance20": 0.525,
     "high50": 0.564,
-    "low50": 0.361,
-    "distanceFromSupport20Pct": 4.368,
-    "relativeToResistance20Pct": -16.85,
-    "distanceFromHigh50Pct": -19.504
+    "low50": 0.372,
+    "distanceFromSupport20Pct": 6.667,
+    "relativeToResistance20Pct": -11.619,
+    "distanceFromHigh50Pct": -17.73
   },
   "technical": {
     "score": 36,
@@ -49,21 +49,45 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 64.1,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "الاقتراب من متوسط 20: -4"
+    ],
+    "adaptive": {
+      "proximityPct": 79,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 32.6,
+      "minimumRequiredScore": 85,
+      "scoreGap": 20.9,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 20.9 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "الاقتراب من متوسط 20: -4"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 0.461,
+      "entryHigh": 0.468,
+      "stopLoss": 0.439,
+      "target1": 0.51,
+      "target2": 0.531,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-04-16",
-    "lastSession": "2026-09-28",
+    "firstSession": "2026-04-20",
+    "lastSession": "2026-09-30",
     "averageConfidence": 70.6,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,8 +95,6 @@
   },
   "chart": {
     "dates": [
-      "2026-04-16",
-      "2026-04-19",
       "2026-04-20",
       "2026-04-21",
       "2026-04-22",
@@ -170,11 +192,11 @@
       "2026-09-23",
       "2026-09-24",
       "2026-09-27",
-      "2026-09-28"
+      "2026-09-28",
+      "2026-09-29",
+      "2026-09-30"
     ],
     "open": [
-      0.282,
-      0.284,
       0.281,
       0.281,
       0.282,
@@ -272,11 +294,11 @@
       0.487,
       0.483,
       0.478,
-      0.461
+      0.461,
+      0.454,
+      0.454
     ],
     "high": [
-      0.286,
-      0.285,
       0.283,
       0.284,
       0.286,
@@ -374,11 +396,11 @@
       0.496,
       0.484,
       0.492,
-      0.475
+      0.475,
+      0.473,
+      0.467
     ],
     "low": [
-      0.282,
-      0.281,
       0.281,
       0.281,
       0.282,
@@ -476,11 +498,11 @@
       0.482,
       0.461,
       0.46,
-      0.435
+      0.435,
+      0.451,
+      0.446
     ],
     "close": [
-      0.284,
-      0.281,
       0.281,
       0.282,
       0.284,
@@ -578,11 +600,11 @@
       0.483,
       0.478,
       0.461,
-      0.454
+      0.454,
+      0.454,
+      0.464
     ],
     "volume": [
-      56755382,
-      31656660,
       21463296,
       39629016,
       50816930,
@@ -680,7 +702,9 @@
       23050344,
       44841002,
       35859612,
-      35619466
+      35619466,
+      27104798,
+      50404081
     ],
     "sma20": [
       0,
@@ -702,8 +726,6 @@
       0,
       0,
       0,
-      0.306,
-      0.31,
       0.314,
       0.318,
       0.322,
@@ -782,7 +804,9 @@
       0.501,
       0.497,
       0.494,
-      0.489
+      0.489,
+      0.486,
+      0.483
     ],
     "sma50": [
       0,
@@ -834,8 +858,6 @@
       0,
       0,
       0,
-      0.34,
-      0.341,
       0.343,
       0.345,
       0.347,
@@ -884,7 +906,9 @@
       0.447,
       0.45,
       0.452,
-      0.453
+      0.453,
+      0.455,
+      0.457
     ]
   }
 }

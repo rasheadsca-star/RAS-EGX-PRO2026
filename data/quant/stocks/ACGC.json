@@ -1,69 +1,93 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-09-30T19:59:44.748Z",
+  "generatedAt": "2026-10-01T20:20:27.218Z",
   "ticker": "ACGC",
   "companyNameAr": "العربية لحليج الأقطان",
   "companyNameEn": "Arabia Cotton Ginning Company",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-09-28",
+  "sessionId": "2026-09-30",
   "latest": {
-    "date": "2026-09-28",
-    "open": 13.81,
-    "high": 13.98,
-    "low": 13.11,
-    "close": 13.55,
-    "volume": 490489
+    "date": "2026-09-30",
+    "open": 13.95,
+    "high": 14.7,
+    "low": 13.8,
+    "close": 14.7,
+    "volume": 2961609
   },
   "indicators": {
-    "close": 13.55,
-    "change1Pct": -1.883,
-    "return5Pct": -3.352,
-    "return20Pct": -7.445,
-    "return50Pct": 45.075,
-    "sma5": 13.95,
-    "sma20": 14.302,
-    "sma50": 12.61,
-    "ema9": 14.028,
-    "ema21": 13.947,
-    "rsi14": 30.829,
-    "macd": 0.286,
-    "macdSignal": 0.514,
-    "atr14": 0.616,
-    "atrPct": 4.544,
-    "averageVolume20": 1579438.9,
-    "volumeRatio20": 0.311,
-    "averageTurnover20Egp": 22700820.026,
-    "volatility20Pct": 2.572,
+    "close": 14.7,
+    "change1Pct": 5.376,
+    "return5Pct": 5.075,
+    "return20Pct": 3.96,
+    "return50Pct": 52.174,
+    "sma5": 14.058,
+    "sma20": 14.316,
+    "sma50": 12.799,
+    "ema9": 14.15,
+    "ema21": 14.015,
+    "rsi14": 42.208,
+    "macd": 0.288,
+    "macdSignal": 0.427,
+    "atr14": 0.619,
+    "atrPct": 4.208,
+    "averageVolume20": 1680441.65,
+    "volumeRatio20": 1.762,
+    "averageTurnover20Egp": 24198350.369,
+    "volatility20Pct": 2.853,
     "support20": 13.11,
     "resistance20": 15.79,
     "high50": 15.79,
-    "low50": 9.32,
-    "distanceFromSupport20Pct": 3.356,
-    "relativeToResistance20Pct": -14.186,
-    "distanceFromHigh50Pct": -14.186
+    "low50": 9.42,
+    "distanceFromSupport20Pct": 12.128,
+    "relativeToResistance20Pct": -6.903,
+    "distanceFromHigh50Pct": -6.903
   },
   "technical": {
-    "score": 50,
-    "trendCode": "NEUTRAL",
-    "trendLabelAr": "محايد / متذبذب"
+    "score": 86,
+    "trendCode": "BULLISH",
+    "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 76.8,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "ميل متوسط 20: -0.47"
+    ],
+    "adaptive": {
+      "proximityPct": 83.7,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 34.4,
+      "minimumRequiredScore": 85,
+      "scoreGap": 8.2,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 8.2 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "ميل متوسط 20: -0.47"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 14.624,
+      "entryHigh": 14.794,
+      "stopLoss": 13.9,
+      "target1": 16.166,
+      "target2": 16.813,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-04-07",
-    "lastSession": "2026-09-28",
+    "firstSession": "2026-04-15",
+    "lastSession": "2026-09-30",
     "averageConfidence": 74.65,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,8 +95,6 @@
   },
   "chart": {
     "dates": [
-      "2026-04-07",
-      "2026-04-09",
       "2026-04-15",
       "2026-04-16",
       "2026-04-19",
@@ -170,11 +192,11 @@
       "2026-09-23",
       "2026-09-24",
       "2026-09-27",
-      "2026-09-28"
+      "2026-09-28",
+      "2026-09-29",
+      "2026-09-30"
     ],
     "open": [
-      7.93,
-      7.85,
       8.18,
       8.21,
       8.15,
@@ -272,11 +294,11 @@
       14.12,
       13.99,
       14.28,
-      13.81
+      13.81,
+      13.55,
+      13.95
     ],
     "high": [
-      8.03,
-      7.89,
       8.26,
       8.33,
       8.25,
@@ -374,11 +396,11 @@
       14.13,
       14.3,
       14.32,
-      13.98
+      13.98,
+      13.96,
+      14.7
     ],
     "low": [
-      7.79,
-      7.78,
       8.17,
       8.12,
       8.04,
@@ -476,11 +498,11 @@
       13.92,
       13.82,
       13.58,
-      13.11
+      13.11,
+      13.35,
+      13.8
     ],
     "close": [
-      7.8,
-      7.79,
       8.21,
       8.15,
       8.06,
@@ -578,11 +600,11 @@
       13.99,
       14.28,
       13.81,
-      13.55
+      13.55,
+      13.95,
+      14.7
     ],
     "volume": [
-      502682,
-      304405,
       690675,
       827131,
       506863,
@@ -680,7 +702,9 @@
       351753,
       1567296,
       641645,
-      490489
+      490489,
+      964420,
+      2961609
     ],
     "sma20": [
       0,
@@ -702,8 +726,6 @@
       0,
       0,
       0,
-      8.276,
-      8.33,
       8.389,
       8.478,
       8.553,
@@ -782,7 +804,9 @@
       14.384,
       14.398,
       14.357,
-      14.302
+      14.302,
+      14.289,
+      14.316
     ],
     "sma50": [
       0,
@@ -834,8 +858,6 @@
       0,
       0,
       0,
-      9.052,
-      9.086,
       9.124,
       9.15,
       9.177,
@@ -884,7 +906,9 @@
       12.333,
       12.434,
       12.526,
-      12.61
+      12.61,
+      12.698,
+      12.799
     ]
   }
 }

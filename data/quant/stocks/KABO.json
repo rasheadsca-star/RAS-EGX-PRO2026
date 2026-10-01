@@ -1,69 +1,93 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-09-30T19:59:44.934Z",
+  "generatedAt": "2026-10-01T20:20:27.388Z",
   "ticker": "KABO",
   "companyNameAr": "كابو",
   "companyNameEn": "El-Nasr Clothing & Textiles KABO",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-09-28",
+  "sessionId": "2026-09-30",
   "latest": {
-    "date": "2026-09-28",
-    "open": 8.6,
-    "high": 8.85,
-    "low": 8.2,
-    "close": 8.26,
-    "volume": 1852062
+    "date": "2026-09-30",
+    "open": 8.32,
+    "high": 9.5,
+    "low": 8,
+    "close": 9.5,
+    "volume": 6966737
   },
   "indicators": {
-    "close": 8.26,
-    "change1Pct": -3.953,
-    "return5Pct": -8.931,
-    "return20Pct": -9.33,
-    "return50Pct": 6.856,
-    "sma5": 8.836,
-    "sma20": 9.2,
-    "sma50": 8.782,
-    "ema9": 8.917,
-    "ema21": 9.025,
-    "rsi14": 31.381,
-    "macd": 0.001,
-    "macdSignal": 0.156,
-    "atr14": 0.405,
-    "atrPct": 4.903,
-    "averageVolume20": 3378042.3,
-    "volumeRatio20": 0.548,
-    "averageTurnover20Egp": 31315916.751,
-    "volatility20Pct": 2.233,
-    "support20": 8.2,
+    "close": 9.5,
+    "change1Pct": 14.183,
+    "return5Pct": 4.972,
+    "return20Pct": 2.151,
+    "return50Pct": 23.377,
+    "sma5": 8.736,
+    "sma20": 9.153,
+    "sma50": 8.83,
+    "ema9": 8.938,
+    "ema21": 9.01,
+    "rsi14": 50,
+    "macd": 0,
+    "macdSignal": 0.092,
+    "atr14": 0.506,
+    "atrPct": 5.331,
+    "averageVolume20": 3245570.75,
+    "volumeRatio20": 2.147,
+    "averageTurnover20Egp": 30053337.427,
+    "volatility20Pct": 3.791,
+    "support20": 7.97,
     "resistance20": 10.1,
     "high50": 10.1,
     "low50": 7.56,
-    "distanceFromSupport20Pct": 0.732,
-    "relativeToResistance20Pct": -18.218,
-    "distanceFromHigh50Pct": -18.218
+    "distanceFromSupport20Pct": 19.197,
+    "relativeToResistance20Pct": -5.941,
+    "distanceFromHigh50Pct": -5.941
   },
   "technical": {
-    "score": 36,
-    "trendCode": "NEUTRAL",
-    "trendLabelAr": "محايد / متذبذب"
+    "score": 78,
+    "trendCode": "BULLISH",
+    "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 75.6,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "ميل متوسط 20: -1.24"
+    ],
+    "adaptive": {
+      "proximityPct": 83.2,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 34.4,
+      "minimumRequiredScore": 85,
+      "scoreGap": 9.4,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 9.4 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "ميل متوسط 20: -1.24"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 9.443,
+      "entryHigh": 9.571,
+      "stopLoss": 8.984,
+      "target1": 10.448,
+      "target2": 10.867,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-04-21",
-    "lastSession": "2026-09-28",
+    "firstSession": "2026-04-23",
+    "lastSession": "2026-09-30",
     "averageConfidence": 73.9,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,8 +95,6 @@
   },
   "chart": {
     "dates": [
-      "2026-04-21",
-      "2026-04-22",
       "2026-04-23",
       "2026-04-26",
       "2026-04-28",
@@ -170,11 +192,11 @@
       "2026-09-23",
       "2026-09-24",
       "2026-09-27",
-      "2026-09-28"
+      "2026-09-28",
+      "2026-09-29",
+      "2026-09-30"
     ],
     "open": [
-      5.98,
-      5.94,
       6.1,
       6.13,
       6.1,
@@ -272,11 +294,11 @@
       9.27,
       9.05,
       9,
-      8.6
+      8.6,
+      8.26,
+      8.32
     ],
     "high": [
-      6,
-      6.21,
       6.17,
       6.15,
       6.14,
@@ -374,11 +396,11 @@
       9.38,
       9.1,
       9.11,
-      8.85
+      8.85,
+      8.49,
+      9.5
     ],
     "low": [
-      5.91,
-      5.92,
       5.99,
       6.02,
       6.03,
@@ -476,11 +498,11 @@
       9.05,
       8.78,
       8.6,
-      8.2
+      8.2,
+      7.97,
+      8
     ],
     "close": [
-      5.94,
-      6.1,
       6.13,
       6.07,
       6.04,
@@ -578,11 +600,11 @@
       9.05,
       9,
       8.6,
-      8.26
+      8.26,
+      8.32,
+      9.5
     ],
     "volume": [
-      661473,
-      2134193,
       2167893,
       3716298,
       625028,
@@ -680,7 +702,9 @@
       869630,
       2905432,
       1235750,
-      1852062
+      1852062,
+      854783,
+      6966737
     ],
     "sma20": [
       0,
@@ -702,8 +726,6 @@
       0,
       0,
       0,
-      6.076,
-      6.091,
       6.098,
       6.103,
       6.119,
@@ -782,7 +804,9 @@
       9.268,
       9.268,
       9.243,
-      9.2
+      9.2,
+      9.143,
+      9.153
     ],
     "sma50": [
       0,
@@ -834,8 +858,6 @@
       0,
       0,
       0,
-      6.316,
-      6.351,
       6.383,
       6.42,
       6.463,
@@ -884,7 +906,9 @@
       8.717,
       8.749,
       8.771,
-      8.782
+      8.782,
+      8.794,
+      8.83
     ]
   }
 }
