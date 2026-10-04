@@ -1,22 +1,22 @@
 {
   "ok": true,
   "engine": "v9_8_7_data_gateway",
-  "generatedAt": "2026-10-04T11:44:26.759Z",
+  "generatedAt": "2026-10-04T15:59:51.510Z",
   "mode": "multi_source_gateway",
-  "status": "degraded_last_good",
-  "level": "warn",
-  "accepted": false,
+  "status": "accepted_full",
+  "level": "ok",
+  "accepted": true,
   "selectedSource": "mubasher_symbol_pages_precise_enriched",
   "selectedUrl": "244 symbols + analysis tools enrichment",
-  "marketRows": 212,
+  "marketRows": 214,
   "expectedUniverse": 224,
-  "coveragePct": 94.6,
-  "fallbackUsed": true,
-  "lastGoodSnapshotUsed": true,
-  "lastGoodAt": "2026-10-01T12:22:11.062Z",
-  "lastGoodAgeMinutes": 4286.8,
+  "coveragePct": 95.5,
+  "fallbackUsed": false,
+  "lastGoodSnapshotUsed": false,
+  "lastGoodAt": "2026-10-04T15:59:51.510Z",
+  "lastGoodAgeMinutes": 0,
   "fetchExit": 0,
-  "message": "Current source fetch was rejected; last good snapshot restored.",
+  "message": "Full gateway acceptance",
   "sources": [
     {
       "name": "configured_json",
@@ -29,15 +29,15 @@
       "name": "mubasher_symbol_pages",
       "url": "244 symbols",
       "ok": true,
-      "rows": 10,
-      "message": "Parsed 10/244"
+      "rows": 214,
+      "message": "Parsed 214/244"
     },
     {
       "name": "mubasher_symbol_pages",
       "url": "244 symbols",
-      "ok": false,
-      "rows": 10,
-      "message": "Parsed 10/244 symbol pages"
+      "ok": true,
+      "rows": 214,
+      "message": "Parsed 214/244 symbol pages"
     },
     {
       "name": "mubasher_liquidity_monitor",
@@ -509,6 +509,6 @@
       "message": "Combined 0 rows from tools/API discovery"
     }
   ],
-  "fetchStdout": "",
-  "fetchStderr": "Mubasher analysis tools and symbol pages did not produce enough valid rows. Existing repository data preserved; freshness is not guaranteed.\n"
+  "fetchStdout": "Accepted mubasher_symbol_pages_precise_enriched: 214/224 rows\n",
+  "fetchStderr": ""
 }
