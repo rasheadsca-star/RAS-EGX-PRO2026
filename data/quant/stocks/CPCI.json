@@ -1,69 +1,92 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-01T20:20:27.300Z",
+  "generatedAt": "2026-10-04T18:37:53.453Z",
   "ticker": "CPCI",
   "companyNameAr": "القاهرة للأدوية",
   "companyNameEn": "Kahira Pharmaceuticals & Chemical Industries",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-09-30",
+  "sessionId": "2026-10-01",
   "latest": {
-    "date": "2026-09-30",
-    "open": 575.51,
-    "high": 590.7,
-    "low": 565.26,
-    "close": 576.31,
-    "volume": 6925
+    "date": "2026-10-01",
+    "open": 576.31,
+    "high": 600,
+    "low": 570,
+    "close": 595.69,
+    "volume": 14479
   },
   "indicators": {
-    "close": 576.31,
-    "change1Pct": 0.139,
-    "return5Pct": 2.313,
-    "return20Pct": 5.147,
-    "return50Pct": 44.175,
-    "sma5": 566.798,
-    "sma20": 549.017,
-    "sma50": 520.061,
-    "ema9": 561.888,
-    "ema21": 549.09,
-    "rsi14": 78.899,
-    "macd": 14.957,
-    "macdSignal": 14.256,
-    "atr14": 14.369,
-    "atrPct": 2.493,
-    "averageVolume20": 5916,
-    "volumeRatio20": 1.171,
-    "averageTurnover20Egp": 3272550.934,
-    "volatility20Pct": 1.237,
+    "close": 595.69,
+    "change1Pct": 3.363,
+    "return5Pct": 6.106,
+    "return20Pct": 8.51,
+    "return50Pct": 32.417,
+    "sma5": 573.654,
+    "sma20": 551.353,
+    "sma50": 522.978,
+    "ema9": 568.648,
+    "ema21": 553.328,
+    "rsi14": 85.478,
+    "macd": 16.816,
+    "macdSignal": 14.754,
+    "atr14": 16.226,
+    "atrPct": 2.724,
+    "averageVolume20": 6312.35,
+    "volumeRatio20": 2.294,
+    "averageTurnover20Egp": 3523958.148,
+    "volatility20Pct": 1.409,
     "support20": 530,
     "resistance20": 594,
     "high50": 644,
-    "low50": 400.03,
-    "distanceFromSupport20Pct": 8.738,
-    "relativeToResistance20Pct": -2.978,
-    "distanceFromHigh50Pct": -10.511
+    "low50": 430.03,
+    "distanceFromSupport20Pct": 12.394,
+    "relativeToResistance20Pct": 0.285,
+    "distanceFromHigh50Pct": -7.502
   },
   "technical": {
-    "score": 84,
+    "score": 96,
     "trendCode": "BULLISH",
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "breakout",
+    "strategyLabelAr": "اختراق مؤكد",
+    "recommendationScore": 79.1,
+    "reasonAr": "أقرب نموذج حالي هو اختراق مؤكد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "منطقة RSI: 82.7"
+    ],
+    "adaptive": {
+      "proximityPct": 87.3,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 43,
+      "minimumRequiredScore": 77,
+      "scoreGap": 0,
+      "calibratedVariantId": "early",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "منطقة RSI: 82.7"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 593.615,
+      "entryHigh": 598.284,
+      "stopLoss": 570.002,
+      "target1": 642.654,
+      "target2": 663.412,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-04-07",
-    "lastSession": "2026-09-30",
+    "firstSession": "2026-04-14",
+    "lastSession": "2026-10-01",
     "averageConfidence": 73.9,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +94,6 @@
   },
   "chart": {
     "dates": [
-      "2026-04-07",
       "2026-04-14",
       "2026-04-16",
       "2026-04-19",
@@ -170,10 +192,10 @@
       "2026-09-27",
       "2026-09-28",
       "2026-09-29",
-      "2026-09-30"
+      "2026-09-30",
+      "2026-10-01"
     ],
     "open": [
-      260.76,
       289.98,
       285.41,
       284.99,
@@ -272,10 +294,10 @@
       561.41,
       560.05,
       560.71,
-      575.51
+      575.51,
+      576.31
     ],
     "high": [
-      264.98,
       294.98,
       287.4,
       288.98,
@@ -374,10 +396,10 @@
       563,
       562.99,
       594,
-      590.7
+      590.7,
+      600
     ],
     "low": [
-      260,
       285,
       280.06,
       284,
@@ -476,10 +498,10 @@
       557.72,
       550.2,
       558.5,
-      565.26
+      565.26,
+      570
     ],
     "close": [
-      260.06,
       285.09,
       284.99,
       285.15,
@@ -578,10 +600,10 @@
       560.05,
       560.71,
       575.51,
-      576.31
+      576.31,
+      595.69
     ],
     "volume": [
-      11960,
       24711,
       6006,
       9590,
@@ -680,7 +702,8 @@
       6576,
       9819,
       13518,
-      6925
+      6925,
+      14479
     ],
     "sma20": [
       0,
@@ -702,7 +725,6 @@
       0,
       0,
       0,
-      320.618,
       325.051,
       328.147,
       331.244,
@@ -782,7 +804,8 @@
       545.316,
       546.144,
       547.606,
-      549.017
+      549.017,
+      551.353
     ],
     "sma50": [
       0,
@@ -834,7 +857,6 @@
       0,
       0,
       0,
-      347.299,
       351.095,
       354.865,
       358.328,
@@ -884,7 +906,8 @@
       509.695,
       512.961,
       516.529,
-      520.061
+      520.061,
+      522.978
     ]
   }
 }

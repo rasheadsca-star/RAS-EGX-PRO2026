@@ -1,47 +1,47 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-01T20:20:27.285Z",
+  "generatedAt": "2026-10-04T18:37:53.439Z",
   "ticker": "CERA",
   "companyNameAr": "العربية للخزف سيراميكا ريماس",
   "companyNameEn": "Arab Ceramic Co.",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-09-30",
+  "sessionId": "2026-10-01",
   "latest": {
-    "date": "2026-09-30",
-    "open": 1.2,
-    "high": 1.27,
-    "low": 1.18,
-    "close": 1.27,
-    "volume": 45355178
+    "date": "2026-10-01",
+    "open": 1.27,
+    "high": 1.42,
+    "low": 1.26,
+    "close": 1.41,
+    "volume": 106493739
   },
   "indicators": {
-    "close": 1.27,
-    "change1Pct": 5.833,
-    "return5Pct": -5.926,
-    "return20Pct": 1.6,
-    "return50Pct": -7.299,
-    "sma5": 1.248,
-    "sma20": 1.443,
-    "sma50": 1.362,
-    "ema9": 1.305,
-    "ema21": 1.36,
-    "rsi14": 26.25,
-    "macd": -0.037,
-    "macdSignal": -0.004,
-    "atr14": 0.101,
-    "atrPct": 7.987,
-    "averageVolume20": 99435475.25,
-    "volumeRatio20": 0.456,
-    "averageTurnover20Egp": 145066431.368,
-    "volatility20Pct": 6.69,
+    "close": 1.41,
+    "change1Pct": 11.024,
+    "return5Pct": 8.462,
+    "return20Pct": 0.714,
+    "return50Pct": 3.676,
+    "sma5": 1.27,
+    "sma20": 1.444,
+    "sma50": 1.363,
+    "ema9": 1.326,
+    "ema21": 1.364,
+    "rsi14": 41.667,
+    "macd": -0.028,
+    "macdSignal": -0.009,
+    "atr14": 0.106,
+    "atrPct": 7.497,
+    "averageVolume20": 93501982.35,
+    "volumeRatio20": 1.139,
+    "averageTurnover20Egp": 136812788.177,
+    "volatility20Pct": 6.607,
     "support20": 1.18,
     "resistance20": 2.08,
     "high50": 2.08,
     "low50": 1.18,
-    "distanceFromSupport20Pct": 7.627,
-    "relativeToResistance20Pct": -38.942,
-    "distanceFromHigh50Pct": -38.942
+    "distanceFromSupport20Pct": 19.492,
+    "relativeToResistance20Pct": -32.212,
+    "distanceFromHigh50Pct": -32.212
   },
   "technical": {
     "score": 46,
@@ -49,21 +49,45 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 83.6,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "الاقتراب من متوسط 20: -2.32"
+    ],
+    "adaptive": {
+      "proximityPct": 86.3,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 31,
+      "minimumRequiredScore": 85,
+      "scoreGap": 1.4,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 1.4 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "الاقتراب من متوسط 20: -2.32"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 1.401,
+      "entryHigh": 1.423,
+      "stopLoss": 1.334,
+      "target1": 1.552,
+      "target2": 1.614,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-05-05",
-    "lastSession": "2026-09-30",
+    "firstSession": "2026-05-06",
+    "lastSession": "2026-10-01",
     "averageConfidence": 73.3,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +95,6 @@
   },
   "chart": {
     "dates": [
-      "2026-05-05",
       "2026-05-06",
       "2026-05-10",
       "2026-05-11",
@@ -170,10 +193,10 @@
       "2026-09-27",
       "2026-09-28",
       "2026-09-29",
-      "2026-09-30"
+      "2026-09-30",
+      "2026-10-01"
     ],
     "open": [
-      1.14,
       1.18,
       1.16,
       1.17,
@@ -272,10 +295,10 @@
       1.3,
       1.22,
       1.25,
-      1.2
+      1.2,
+      1.27
     ],
     "high": [
-      1.19,
       1.2,
       1.19,
       1.17,
@@ -374,10 +397,10 @@
       1.34,
       1.3,
       1.27,
-      1.27
+      1.27,
+      1.42
     ],
     "low": [
-      1.14,
       1.16,
       1.14,
       1.15,
@@ -476,10 +499,10 @@
       1.2,
       1.18,
       1.18,
-      1.18
+      1.18,
+      1.26
     ],
     "close": [
-      1.18,
       1.16,
       1.17,
       1.17,
@@ -578,10 +601,10 @@
       1.22,
       1.25,
       1.2,
-      1.27
+      1.27,
+      1.41
     ],
     "volume": [
-      33889170,
       15961566,
       20897915,
       5617304,
@@ -680,7 +703,8 @@
       91458051,
       87516311,
       48827612,
-      45355178
+      45355178,
+      106493739
     ],
     "sma20": [
       0,
@@ -702,7 +726,6 @@
       0,
       0,
       0,
-      1.167,
       1.167,
       1.168,
       1.169,
@@ -782,7 +805,8 @@
       1.446,
       1.444,
       1.442,
-      1.443
+      1.443,
+      1.444
     ],
     "sma50": [
       0,
@@ -834,7 +858,6 @@
       0,
       0,
       0,
-      1.219,
       1.222,
       1.226,
       1.229,
@@ -884,7 +907,8 @@
       1.369,
       1.368,
       1.364,
-      1.362
+      1.362,
+      1.363
     ]
   }
 }

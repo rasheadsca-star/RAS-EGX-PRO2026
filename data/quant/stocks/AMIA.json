@@ -1,69 +1,94 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-01T20:20:27.252Z",
+  "generatedAt": "2026-10-04T18:37:53.409Z",
   "ticker": "AMIA",
   "companyNameAr": "العربية للمحابس",
   "companyNameEn": "Arab Moltaqa Investments Company",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-09-30",
+  "sessionId": "2026-10-01",
   "latest": {
-    "date": "2026-09-30",
-    "open": 18.3,
-    "high": 18.5,
-    "low": 18.11,
-    "close": 18.29,
-    "volume": 269954
+    "date": "2026-10-01",
+    "open": 18.29,
+    "high": 18.8,
+    "low": 18.2,
+    "close": 18.43,
+    "volume": 551708
   },
   "indicators": {
-    "close": 18.29,
-    "change1Pct": -0.055,
-    "return5Pct": -0.109,
-    "return20Pct": -9.231,
-    "return50Pct": 105.506,
-    "sma5": 18.552,
-    "sma20": 18.568,
-    "sma50": 15.811,
-    "ema9": 18.436,
-    "ema21": 18.126,
-    "rsi14": 39.32,
-    "macd": 0.591,
-    "macdSignal": 0.833,
-    "atr14": 0.8,
-    "atrPct": 4.374,
-    "averageVolume20": 1272225.65,
-    "volumeRatio20": 0.212,
-    "averageTurnover20Egp": 24116282.935,
-    "volatility20Pct": 2.224,
+    "close": 18.43,
+    "change1Pct": 0.765,
+    "return5Pct": -2.124,
+    "return20Pct": -5.729,
+    "return50Pct": 105.922,
+    "sma5": 18.472,
+    "sma20": 18.512,
+    "sma50": 16.001,
+    "ema9": 18.435,
+    "ema21": 18.154,
+    "rsi14": 47.312,
+    "macd": 0.548,
+    "macdSignal": 0.776,
+    "atr14": 0.782,
+    "atrPct": 4.244,
+    "averageVolume20": 1053469.75,
+    "volumeRatio20": 0.524,
+    "averageTurnover20Egp": 19808709.688,
+    "volatility20Pct": 2.16,
     "support20": 17.12,
-    "resistance20": 20.4,
+    "resistance20": 20.15,
     "high50": 22.4,
-    "low50": 8.83,
-    "distanceFromSupport20Pct": 6.834,
-    "relativeToResistance20Pct": -10.343,
-    "distanceFromHigh50Pct": -18.348
+    "low50": 8.88,
+    "distanceFromSupport20Pct": 7.652,
+    "relativeToResistance20Pct": -8.536,
+    "distanceFromHigh50Pct": -17.723
   },
   "technical": {
-    "score": 50,
+    "score": 56,
     "trendCode": "NEUTRAL",
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 87,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "نشاط الحجم الحالي: 0.52",
+      "سيولة كافية: 0.52"
+    ],
+    "adaptive": {
+      "proximityPct": 83.8,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 31,
+      "minimumRequiredScore": 85,
+      "scoreGap": 0,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "نشاط الحجم الحالي: 0.52",
+        "سيولة كافية: 0.52"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 18.33,
+      "entryHigh": 18.555,
+      "stopLoss": 17.428,
+      "target1": 20.268,
+      "target2": 21.08,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-04-26",
-    "lastSession": "2026-09-30",
+    "firstSession": "2026-04-27",
+    "lastSession": "2026-10-01",
     "averageConfidence": 73.9,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +96,6 @@
   },
   "chart": {
     "dates": [
-      "2026-04-26",
       "2026-04-27",
       "2026-04-28",
       "2026-04-29",
@@ -170,10 +194,10 @@
       "2026-09-27",
       "2026-09-28",
       "2026-09-29",
-      "2026-09-30"
+      "2026-09-30",
+      "2026-10-01"
     ],
     "open": [
-      7.42,
       7.2,
       7.21,
       7.27,
@@ -272,10 +296,10 @@
       18.83,
       18.65,
       18.69,
-      18.3
+      18.3,
+      18.29
     ],
     "high": [
-      7.45,
       7.29,
       7.32,
       7.55,
@@ -374,10 +398,10 @@
       19.19,
       18.94,
       18.76,
-      18.5
+      18.5,
+      18.8
     ],
     "low": [
-      7.18,
       7.17,
       7.2,
       7.2,
@@ -476,10 +500,10 @@
       18.41,
       18.03,
       18.3,
-      18.11
+      18.11,
+      18.2
     ],
     "close": [
-      7.2,
       7.21,
       7.27,
       7.43,
@@ -578,10 +602,10 @@
       18.65,
       18.69,
       18.3,
-      18.29
+      18.29,
+      18.43
     ],
     "volume": [
-      1916303,
       1271862,
       1090578,
       3197802,
@@ -680,7 +704,8 @@
       1329847,
       814212,
       375754,
-      269954
+      269954,
+      551708
     ],
     "sma20": [
       0,
@@ -702,7 +727,6 @@
       0,
       0,
       0,
-      8.419,
       8.494,
       8.569,
       8.64,
@@ -782,7 +806,8 @@
       18.733,
       18.713,
       18.661,
-      18.568
+      18.568,
+      18.512
     ],
     "sma50": [
       0,
@@ -834,7 +859,6 @@
       0,
       0,
       0,
-      8.717,
       8.752,
       8.787,
       8.84,
@@ -884,7 +908,8 @@
       15.248,
       15.436,
       15.623,
-      15.811
+      15.811,
+      16.001
     ]
   }
 }

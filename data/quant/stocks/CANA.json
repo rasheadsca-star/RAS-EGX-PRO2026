@@ -1,47 +1,47 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-01T20:20:27.279Z",
+  "generatedAt": "2026-10-04T18:37:53.434Z",
   "ticker": "CANA",
   "companyNameAr": "بنك قناة السويس",
   "companyNameEn": "Suez Canal Bank",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-09-29",
+  "sessionId": "2026-10-01",
   "latest": {
-    "date": "2026-09-29",
-    "open": 45.01,
-    "high": 48,
-    "low": 44.64,
-    "close": 45.14,
-    "volume": 298582
+    "date": "2026-10-01",
+    "open": 45.91,
+    "high": 46.99,
+    "low": 45,
+    "close": 45.77,
+    "volume": 222709
   },
   "indicators": {
-    "close": 45.14,
-    "change1Pct": -2.841,
-    "return5Pct": -4.445,
-    "return20Pct": 8.484,
-    "return50Pct": 22.397,
-    "sma5": 46.364,
-    "sma20": 44.229,
-    "sma50": 41.132,
-    "ema9": 45.592,
-    "ema21": 44.257,
-    "rsi14": 54.566,
-    "macd": 1.479,
-    "macdSignal": 1.398,
-    "atr14": 2.342,
-    "atrPct": 5.189,
-    "averageVolume20": 531326.5,
-    "volumeRatio20": 0.562,
-    "averageTurnover20Egp": 23972835.127,
-    "volatility20Pct": 2.551,
+    "close": 45.77,
+    "change1Pct": 1.396,
+    "return5Pct": -2.201,
+    "return20Pct": 6.096,
+    "return50Pct": 25.294,
+    "sma5": 46.158,
+    "sma20": 44.36,
+    "sma50": 41.317,
+    "ema9": 45.628,
+    "ema21": 44.394,
+    "rsi14": 58.921,
+    "macd": 1.411,
+    "macdSignal": 1.399,
+    "atr14": 2.427,
+    "atrPct": 5.303,
+    "averageVolume20": 526417.55,
+    "volumeRatio20": 0.423,
+    "averageTurnover20Egp": 23790349.274,
+    "volatility20Pct": 2.453,
     "support20": 41.35,
     "resistance20": 52,
     "high50": 52,
     "low50": 35.2,
-    "distanceFromSupport20Pct": 9.166,
-    "relativeToResistance20Pct": -13.192,
-    "distanceFromHigh50Pct": -13.192
+    "distanceFromSupport20Pct": 10.689,
+    "relativeToResistance20Pct": -11.981,
+    "distanceFromHigh50Pct": -11.981
   },
   "technical": {
     "score": 98,
@@ -49,29 +49,53 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 90.4,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "نشاط الحجم الحالي: 0.42",
+      "دعم الحجم: 0.42"
+    ],
+    "adaptive": {
+      "proximityPct": 84.2,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 34,
+      "minimumRequiredScore": 85,
+      "scoreGap": 0,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "نشاط الحجم الحالي: 0.42",
+        "دعم الحجم: 0.42"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 45.523,
+      "entryHigh": 46.079,
+      "stopLoss": 43.282,
+      "target1": 50.335,
+      "target2": 52.35,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-04-07",
-    "lastSession": "2026-09-29",
-    "averageConfidence": 73.65,
+    "firstSession": "2026-04-09",
+    "lastSession": "2026-10-01",
+    "averageConfidence": 73.3,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
     "eligibilityLabelAr": "مكتمل وحديث"
   },
   "chart": {
     "dates": [
-      "2026-04-07",
       "2026-04-09",
       "2026-04-16",
       "2026-04-19",
@@ -170,10 +194,10 @@
       "2026-09-23",
       "2026-09-24",
       "2026-09-27",
-      "2026-09-29"
+      "2026-09-29",
+      "2026-10-01"
     ],
     "open": [
-      30.881,
       31.831,
       37.73,
       36.9,
@@ -272,10 +296,10 @@
       46.8,
       45.93,
       47.49,
-      45.01
+      45.01,
+      45.91
     ],
     "high": [
-      31.629,
       33.54,
       38.9,
       37,
@@ -374,10 +398,10 @@
       47.44,
       48,
       48.48,
-      48
+      48,
+      46.99
     ],
     "low": [
-      30.55,
       31.532,
       36.52,
       35.2,
@@ -476,10 +500,10 @@
       45.52,
       45.04,
       44.85,
-      44.64
+      44.64,
+      45
     ],
     "close": [
-      30.829,
       32.584,
       36.9,
       35.6,
@@ -578,10 +602,10 @@
       45.93,
       47.49,
       46.46,
-      45.14
+      45.14,
+      45.77
     ],
     "volume": [
-      123559,
       497315,
       568369,
       1149436,
@@ -680,7 +704,8 @@
       297164,
       243314,
       799447,
-      298582
+      298582,
+      222709
     ],
     "sma20": [
       0,
@@ -702,7 +727,6 @@
       0,
       0,
       0,
-      34.23,
       34.45,
       34.546,
       34.446,
@@ -782,7 +806,8 @@
       43.544,
       43.823,
       44.052,
-      44.229
+      44.229,
+      44.36
     ],
     "sma50": [
       0,
@@ -834,7 +859,6 @@
       0,
       0,
       0,
-      35.202,
       35.316,
       35.387,
       35.364,
@@ -884,7 +908,8 @@
       40.525,
       40.76,
       40.967,
-      41.132
+      41.132,
+      41.317
     ]
   }
 }

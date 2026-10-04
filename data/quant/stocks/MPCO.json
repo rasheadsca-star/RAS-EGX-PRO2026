@@ -1,69 +1,97 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-01T20:20:27.421Z",
+  "generatedAt": "2026-10-04T18:37:53.574Z",
   "ticker": "MPCO",
   "companyNameAr": "المنصورة للدواجن",
   "companyNameEn": "Mansoura Poultry",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-09-30",
+  "sessionId": "2026-10-01",
   "latest": {
-    "date": "2026-09-30",
+    "date": "2026-10-01",
     "open": 2.39,
-    "high": 2.4,
-    "low": 2.25,
-    "close": 2.39,
-    "volume": 50208494
+    "high": 2.49,
+    "low": 2.38,
+    "close": 2.48,
+    "volume": 42517154
   },
   "indicators": {
-    "close": 2.39,
-    "change1Pct": 0,
-    "return5Pct": -9.125,
-    "return20Pct": 14.354,
-    "return50Pct": 31.319,
-    "sma5": 2.438,
-    "sma20": 2.516,
-    "sma50": 2.25,
-    "ema9": 2.508,
+    "close": 2.48,
+    "change1Pct": 3.766,
+    "return5Pct": -3.502,
+    "return20Pct": 18.66,
+    "return50Pct": 34.054,
+    "sma5": 2.42,
+    "sma20": 2.535,
+    "sma50": 2.262,
+    "ema9": 2.502,
     "ema21": 2.481,
-    "rsi14": 53.571,
-    "macd": 0.068,
-    "macdSignal": 0.121,
-    "atr14": 0.247,
-    "atrPct": 10.341,
-    "averageVolume20": 70735380.5,
-    "volumeRatio20": 0.71,
-    "averageTurnover20Egp": 184137166.263,
-    "volatility20Pct": 4.562,
-    "support20": 2.08,
+    "rsi14": 44.915,
+    "macd": 0.06,
+    "macdSignal": 0.109,
+    "atr14": 0.224,
+    "atrPct": 9.044,
+    "averageVolume20": 71967999.4,
+    "volumeRatio20": 0.591,
+    "averageTurnover20Egp": 187542424.267,
+    "volatility20Pct": 4.604,
+    "support20": 2.09,
     "resistance20": 3.02,
     "high50": 3.02,
     "low50": 1.82,
-    "distanceFromSupport20Pct": 14.904,
-    "relativeToResistance20Pct": -20.861,
-    "distanceFromHigh50Pct": -20.861
+    "distanceFromSupport20Pct": 18.66,
+    "relativeToResistance20Pct": -17.881,
+    "distanceFromHigh50Pct": -17.881
   },
   "technical": {
-    "score": 66,
+    "score": 60,
     "trendCode": "NEUTRAL",
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 81.3,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "نشاط الحجم الحالي: 0.59",
+      "الاقتراب من متوسط 20: -2.19",
+      "سيولة كافية: 0.59"
+    ],
+    "adaptive": {
+      "proximityPct": 78.1,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 31,
+      "minimumRequiredScore": 85,
+      "scoreGap": 3.7,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 3.7 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "نشاط الحجم الحالي: 0.59",
+        "الاقتراب من متوسط 20: -2.19",
+        "سيولة كافية: 0.59"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 2.465,
+      "entryHigh": 2.502,
+      "stopLoss": 2.347,
+      "target1": 2.73,
+      "target2": 2.839,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-04-27",
-    "lastSession": "2026-09-30",
+    "firstSession": "2026-04-28",
+    "lastSession": "2026-10-01",
     "averageConfidence": 74.05,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +99,6 @@
   },
   "chart": {
     "dates": [
-      "2026-04-27",
       "2026-04-28",
       "2026-04-29",
       "2026-04-30",
@@ -170,10 +197,10 @@
       "2026-09-27",
       "2026-09-28",
       "2026-09-29",
-      "2026-09-30"
+      "2026-09-30",
+      "2026-10-01"
     ],
     "open": [
-      1.63,
       1.63,
       1.61,
       1.63,
@@ -272,10 +299,10 @@
       2.57,
       2.44,
       2.4,
+      2.39,
       2.39
     ],
     "high": [
-      1.65,
       1.64,
       1.63,
       1.67,
@@ -374,10 +401,10 @@
       2.76,
       2.55,
       2.53,
-      2.4
+      2.4,
+      2.49
     ],
     "low": [
-      1.62,
       1.61,
       1.6,
       1.62,
@@ -476,10 +503,10 @@
       2.44,
       2.25,
       2.34,
-      2.25
+      2.25,
+      2.38
     ],
     "close": [
-      1.63,
       1.61,
       1.63,
       1.62,
@@ -578,10 +605,10 @@
       2.44,
       2.4,
       2.39,
-      2.39
+      2.39,
+      2.48
     ],
     "volume": [
-      12395502,
       19177666,
       19834417,
       62824469,
@@ -680,7 +707,8 @@
       59654772,
       70470932,
       47043444,
-      50208494
+      50208494,
+      42517154
     ],
     "sma20": [
       0,
@@ -702,7 +730,6 @@
       0,
       0,
       0,
-      1.62,
       1.619,
       1.619,
       1.618,
@@ -782,7 +809,8 @@
       2.476,
       2.487,
       2.501,
-      2.516
+      2.516,
+      2.535
     ],
     "sma50": [
       0,
@@ -834,7 +862,6 @@
       0,
       0,
       0,
-      1.741,
       1.745,
       1.75,
       1.754,
@@ -884,7 +911,8 @@
       2.218,
       2.228,
       2.238,
-      2.25
+      2.25,
+      2.262
     ]
   }
 }

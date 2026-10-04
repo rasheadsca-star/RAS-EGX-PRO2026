@@ -1,47 +1,47 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-01T20:20:27.211Z",
+  "generatedAt": "2026-10-04T18:37:53.385Z",
   "ticker": "ABUK",
   "companyNameAr": "أبو قير للأسمدة والصناعات الكيماوية",
   "companyNameEn": "Abu Qir Fertilizers and Chemical Industries",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-09-30",
+  "sessionId": "2026-10-01",
   "latest": {
-    "date": "2026-09-30",
-    "open": 88.6,
-    "high": 88.98,
-    "low": 83.55,
-    "close": 85.78,
-    "volume": 1312675
+    "date": "2026-10-01",
+    "open": 85.78,
+    "high": 87.18,
+    "low": 85.5,
+    "close": 87.02,
+    "volume": 483181
   },
   "indicators": {
-    "close": 85.78,
-    "change1Pct": -3.183,
-    "return5Pct": -8.453,
-    "return20Pct": 12.322,
-    "return50Pct": 24.229,
-    "sma5": 88.302,
-    "sma20": 88.42,
-    "sma50": 78.987,
-    "ema9": 88.849,
-    "ema21": 86.999,
-    "rsi14": 42.507,
-    "macd": 2.716,
-    "macdSignal": 3.629,
-    "atr14": 3.567,
-    "atrPct": 4.158,
-    "averageVolume20": 1644698.55,
-    "volumeRatio20": 0.798,
-    "averageTurnover20Egp": 148486917.867,
-    "volatility20Pct": 3.682,
-    "support20": 75.01,
+    "close": 87.02,
+    "change1Pct": 1.446,
+    "return5Pct": -3.845,
+    "return20Pct": 14.863,
+    "return50Pct": 28.348,
+    "sma5": 87.606,
+    "sma20": 88.983,
+    "sma50": 79.372,
+    "ema9": 88.483,
+    "ema21": 87.001,
+    "rsi14": 40.912,
+    "macd": 2.383,
+    "macdSignal": 3.381,
+    "atr14": 3.509,
+    "atrPct": 4.032,
+    "averageVolume20": 1609808.1,
+    "volumeRatio20": 0.3,
+    "averageTurnover20Egp": 146115648.088,
+    "volatility20Pct": 3.67,
+    "support20": 75.76,
     "resistance20": 96.29,
     "high50": 96.29,
     "low50": 66.66,
-    "distanceFromSupport20Pct": 14.358,
-    "relativeToResistance20Pct": -10.915,
-    "distanceFromHigh50Pct": -10.915
+    "distanceFromSupport20Pct": 14.863,
+    "relativeToResistance20Pct": -9.627,
+    "distanceFromHigh50Pct": -9.627
   },
   "technical": {
     "score": 60,
@@ -49,21 +49,49 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 78.7,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "نشاط الحجم الحالي: 0.29",
+      "الاقتراب من متوسط 20: -2.21",
+      "سيولة كافية: 0.29"
+    ],
+    "adaptive": {
+      "proximityPct": 77.1,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 31,
+      "minimumRequiredScore": 85,
+      "scoreGap": 6.3,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 6.3 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "نشاط الحجم الحالي: 0.29",
+        "الاقتراب من متوسط 20: -2.21",
+        "سيولة كافية: 0.29"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 86.615,
+      "entryHigh": 87.526,
+      "stopLoss": 82.514,
+      "target1": 95.273,
+      "target2": 98.919,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-03-24",
-    "lastSession": "2026-09-30",
+    "firstSession": "2026-03-25",
+    "lastSession": "2026-10-01",
     "averageConfidence": 73.9,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +99,6 @@
   },
   "chart": {
     "dates": [
-      "2026-03-24",
       "2026-03-25",
       "2026-03-26",
       "2026-03-29",
@@ -170,10 +197,10 @@
       "2026-09-27",
       "2026-09-28",
       "2026-09-29",
-      "2026-09-30"
+      "2026-09-30",
+      "2026-10-01"
     ],
     "open": [
-      87,
       94,
       92.5,
       89,
@@ -272,10 +299,10 @@
       90.5,
       87.63,
       89,
-      88.6
+      88.6,
+      85.78
     ],
     "high": [
-      94.4,
       95,
       93.75,
       89.84,
@@ -374,10 +401,10 @@
       92.48,
       89.78,
       89.95,
-      88.98
+      88.98,
+      87.18
     ],
     "low": [
-      87,
       91.25,
       88.88,
       83.6,
@@ -476,10 +503,10 @@
       87.5,
       85.02,
       87,
-      83.55
+      83.55,
+      85.5
     ],
     "close": [
-      94,
       92.5,
       89,
       85.04,
@@ -578,10 +605,10 @@
       87.63,
       89,
       88.6,
-      85.78
+      85.78,
+      87.02
     ],
     "volume": [
-      4170773,
       1607902,
       2890786,
       6284552,
@@ -680,7 +707,8 @@
       529865,
       1025129,
       427445,
-      1312675
+      1312675,
+      483181
     ],
     "sma20": [
       0,
@@ -702,7 +730,6 @@
       0,
       0,
       0,
-      85.782,
       85.557,
       85.282,
       85.075,
@@ -782,7 +809,8 @@
       86.646,
       87.296,
       87.95,
-      88.42
+      88.42,
+      88.983
     ],
     "sma50": [
       0,
@@ -834,7 +862,6 @@
       0,
       0,
       0,
-      82.234,
       81.71,
       81.198,
       80.812,
@@ -884,7 +911,8 @@
       77.87,
       78.278,
       78.653,
-      78.987
+      78.987,
+      79.372
     ]
   }
 }
