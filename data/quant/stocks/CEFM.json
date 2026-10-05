@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-05T13:31:34.792Z",
+  "generatedAt": "2026-10-05T21:59:49.790Z",
   "ticker": "CEFM",
   "companyNameAr": "مطاحن مصر الوسطى",
   "companyNameEn": "Middle Egypt Flour Mills",
@@ -49,9 +49,9 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "pullback",
     "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
     "recommendationScore": 83.9,
@@ -60,7 +60,22 @@
       "نشاط الحجم الحالي: 0.17",
       "سيولة كافية: 0.17"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 82.7,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 30.8,
+      "minimumRequiredScore": 85,
+      "scoreGap": 1.1,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 1.1 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "نشاط الحجم الحالي: 0.17",
+        "سيولة كافية: 0.17"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 140.164,
       "entryHigh": 142.279,

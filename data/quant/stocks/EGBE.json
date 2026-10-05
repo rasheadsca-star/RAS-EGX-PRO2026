@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-05T13:31:34.829Z",
+  "generatedAt": "2026-10-05T21:59:49.833Z",
   "ticker": "EGBE",
   "companyNameAr": "البنك المصري الخليجي",
   "companyNameEn": "Egyptian Gulf Bank",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 84.3,
@@ -59,7 +59,21 @@
     "failedConditions": [
       "ميل متوسط 20: -0.86"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 86.4,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 34.3,
+      "minimumRequiredScore": 85,
+      "scoreGap": 0.7,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 0.7 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "ميل متوسط 20: -0.86"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 0.538,
       "entryHigh": 0.542,
