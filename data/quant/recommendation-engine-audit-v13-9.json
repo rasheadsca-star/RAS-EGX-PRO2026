@@ -1,7 +1,7 @@
 {
   "schemaVersion": "13.9.0",
-  "generatedAt": "2026-09-27T15:45:34.456Z",
-  "sessionId": "2026-09-27",
+  "generatedAt": "2026-10-05T13:31:34.638Z",
+  "sessionId": "2026-10-05",
   "liveExecutionEnabled": false,
   "productionThresholdsRelaxed": false,
   "productionRecommendationsOverwritten": false,
@@ -9,7 +9,7 @@
     "requiredMethod": "compounded_equity_peak_to_trough",
     "strategiesChecked": 3,
     "invalidDrawdownStrategies": 0,
-    "legacyAdditiveOver100Strategies": 1,
+    "legacyAdditiveOver100Strategies": 2,
     "passed": true
   },
   "coverage": {
@@ -32,32 +32,32 @@
     {
       "code": "LATEST_FRESH",
       "labelAr": "محدث حتى آخر جلسة",
-      "count": 173
+      "count": 156
     },
     {
       "code": "SAFETY_ELIGIBLE",
       "labelAr": "اجتاز السلامة والأهلية الأولية",
-      "count": 173
+      "count": 156
     },
     {
       "code": "DECISION_HISTORY",
       "labelAr": "يمتلك الحد الأدنى لجلسات القرار",
-      "count": 173
+      "count": 156
     },
     {
       "code": "SIGNAL_PASSED",
       "labelAr": "اجتاز إشارة اليوم",
-      "count": 6
+      "count": 10
     },
     {
       "code": "ELIGIBILITY_PASSED",
       "labelAr": "أهلية القرار مكتملة",
-      "count": 6
+      "count": 10
     },
     {
       "code": "REGIME_PASSED",
       "labelAr": "حالة السوق تسمح",
-      "count": 0
+      "count": 10
     },
     {
       "code": "STRATEGY_VALIDATED",
@@ -88,36 +88,36 @@
       "researchValidated": false,
       "productionEligible": false,
       "validationMetrics": {
-        "totalSignals": 314,
-        "closedTrades": 289,
-        "cancelledTrades": 25,
-        "wins": 118,
-        "losses": 171,
-        "winRatePct": 40.83,
-        "profitFactor": 0.962,
-        "averageReturnPct": -0.105,
-        "averageR": -0.016,
-        "medianR": -0.552,
-        "maxDrawdownPct": 93.054,
+        "totalSignals": 289,
+        "closedTrades": 267,
+        "cancelledTrades": 22,
+        "wins": 101,
+        "losses": 166,
+        "winRatePct": 37.83,
+        "profitFactor": 0.861,
+        "averageReturnPct": -0.419,
+        "averageR": -0.066,
+        "medianR": -1.109,
+        "maxDrawdownPct": 97.444,
         "drawdownMethod": "compounded_equity_peak_to_trough",
         "startingEquityIndex": 100,
-        "endingEquityIndex": 45.0827,
-        "legacyAdditiveDrawdownPct": 246.458,
+        "endingEquityIndex": 20.0836,
+        "legacyAdditiveDrawdownPct": 343.028,
         "sameBarStopFirstCount": 1
       },
       "drawdownValid": true,
       "drawdownMethod": "compounded_equity_peak_to_trough",
-      "legacyAdditiveDrawdownPct": 246.458,
+      "legacyAdditiveDrawdownPct": 343.028,
       "strictFailureReasons": [
-        "Profit Factor 0.962 < 1.05",
-        "Average R -0.016 < 0",
-        "Maximum Drawdown 93.054% > 15%"
+        "Profit Factor 0.861 < 1.05",
+        "Average R -0.066 < 0",
+        "Maximum Drawdown 97.444% > 15%"
       ],
       "shadowPass": false,
       "shadowFailureReasons": [
-        "Profit Factor 0.962 < 1",
-        "Average R -0.016 < 0",
-        "Maximum Drawdown 93.054% > 20%"
+        "Profit Factor 0.861 < 1",
+        "Average R -0.066 < 0",
+        "Maximum Drawdown 97.444% > 20%"
       ]
     },
     {
@@ -128,32 +128,32 @@
       "researchValidated": false,
       "productionEligible": false,
       "validationMetrics": {
-        "totalSignals": 110,
-        "closedTrades": 95,
-        "cancelledTrades": 15,
-        "wins": 42,
-        "losses": 53,
-        "winRatePct": 44.21,
-        "profitFactor": 1.167,
-        "averageReturnPct": 0.45,
-        "averageR": 0.11,
-        "medianR": -0.604,
-        "maxDrawdownPct": 32.872,
+        "totalSignals": 77,
+        "closedTrades": 70,
+        "cancelledTrades": 7,
+        "wins": 32,
+        "losses": 38,
+        "winRatePct": 45.71,
+        "profitFactor": 1.32,
+        "averageReturnPct": 0.804,
+        "averageR": 0.153,
+        "medianR": -0.54,
+        "maxDrawdownPct": 41.951,
         "drawdownMethod": "compounded_equity_peak_to_trough",
         "startingEquityIndex": 100,
-        "endingEquityIndex": 128.0363,
-        "legacyAdditiveDrawdownPct": 38.81,
+        "endingEquityIndex": 153.6622,
+        "legacyAdditiveDrawdownPct": 51.343,
         "sameBarStopFirstCount": 1
       },
       "drawdownValid": true,
       "drawdownMethod": "compounded_equity_peak_to_trough",
-      "legacyAdditiveDrawdownPct": 38.81,
+      "legacyAdditiveDrawdownPct": 51.343,
       "strictFailureReasons": [
-        "Maximum Drawdown 32.872% > 15%"
+        "Maximum Drawdown 41.951% > 15%"
       ],
       "shadowPass": false,
       "shadowFailureReasons": [
-        "Maximum Drawdown 32.872% > 20%"
+        "Maximum Drawdown 41.951% > 20%"
       ]
     },
     {
@@ -164,100 +164,124 @@
       "researchValidated": false,
       "productionEligible": false,
       "validationMetrics": {
-        "totalSignals": 110,
-        "closedTrades": 106,
-        "cancelledTrades": 4,
-        "wins": 54,
-        "losses": 52,
-        "winRatePct": 50.94,
-        "profitFactor": 1.669,
-        "averageReturnPct": 1.152,
-        "averageR": 0.192,
-        "medianR": 0.024,
-        "maxDrawdownPct": 42.172,
+        "totalSignals": 101,
+        "closedTrades": 96,
+        "cancelledTrades": 5,
+        "wins": 37,
+        "losses": 59,
+        "winRatePct": 38.54,
+        "profitFactor": 0.806,
+        "averageReturnPct": -0.469,
+        "averageR": -0.116,
+        "medianR": -0.418,
+        "maxDrawdownPct": 75.193,
         "drawdownMethod": "compounded_equity_peak_to_trough",
         "startingEquityIndex": 100,
-        "endingEquityIndex": 292.416,
-        "legacyAdditiveDrawdownPct": 52.554,
+        "endingEquityIndex": 56.4733,
+        "legacyAdditiveDrawdownPct": 133.031,
         "sameBarStopFirstCount": 1
       },
       "drawdownValid": true,
       "drawdownMethod": "compounded_equity_peak_to_trough",
-      "legacyAdditiveDrawdownPct": 52.554,
+      "legacyAdditiveDrawdownPct": 133.031,
       "strictFailureReasons": [
-        "Maximum Drawdown 42.172% > 15%"
+        "Profit Factor 0.806 < 1.05",
+        "Average R -0.116 < 0",
+        "Maximum Drawdown 75.193% > 15%"
       ],
       "shadowPass": false,
       "shadowFailureReasons": [
-        "Maximum Drawdown 42.172% > 20%"
+        "Profit Factor 0.806 < 1",
+        "Average R -0.116 < 0",
+        "Maximum Drawdown 75.193% > 20%"
       ]
     }
   ],
   "blockerSummary": [
     {
       "type": "signal_condition",
-      "labelAr": "منطقة RSI",
-      "count": 118
-    },
-    {
-      "type": "signal_condition",
-      "labelAr": "ترتيب الاتجاه",
-      "count": 117
-    },
-    {
-      "type": "signal_condition",
-      "labelAr": "ميل متوسط 20",
-      "count": 98
-    },
-    {
-      "type": "signal_condition",
-      "labelAr": "دعم الحجم",
-      "count": 89
-    },
-    {
-      "type": "signal_condition",
-      "labelAr": "نشاط الحجم الحالي",
-      "count": 85
-    },
-    {
-      "type": "signal_condition",
-      "labelAr": "القوة النسبية",
-      "count": 58
-    },
-    {
-      "type": "signal_condition",
-      "labelAr": "تحسن RSI",
-      "count": 31
-    },
-    {
-      "type": "signal_condition",
       "labelAr": "الاقتراب من متوسط 20",
-      "count": 26
-    },
-    {
-      "type": "hard_gate",
-      "labelAr": "التاريخ غير محدث حتى آخر جلسة",
-      "count": 23
-    },
-    {
-      "type": "signal_condition",
-      "labelAr": "سيولة كافية",
-      "count": 23
-    },
-    {
-      "type": "signal_condition",
-      "labelAr": "RSI مناسب للارتداد",
-      "count": 10
+      "count": 94
     },
     {
       "type": "signal_condition",
       "labelAr": "الاتجاه المتوسط صاعد",
-      "count": 9
+      "count": 88
+    },
+    {
+      "type": "signal_condition",
+      "labelAr": "نشاط الحجم الحالي",
+      "count": 67
+    },
+    {
+      "type": "signal_condition",
+      "labelAr": "سيولة كافية",
+      "count": 54
+    },
+    {
+      "type": "hard_gate",
+      "labelAr": "التاريخ غير محدث حتى آخر جلسة",
+      "count": 40
+    },
+    {
+      "type": "signal_condition",
+      "labelAr": "القوة النسبية",
+      "count": 38
+    },
+    {
+      "type": "signal_condition",
+      "labelAr": "RSI مناسب للارتداد",
+      "count": 32
+    },
+    {
+      "type": "signal_condition",
+      "labelAr": "ترتيب الاتجاه",
+      "count": 19
+    },
+    {
+      "type": "signal_condition",
+      "labelAr": "ميل متوسط 20",
+      "count": 19
+    },
+    {
+      "type": "signal_condition",
+      "labelAr": "منطقة RSI",
+      "count": 18
+    },
+    {
+      "type": "signal_condition",
+      "labelAr": "دعم الحجم",
+      "count": 15
+    },
+    {
+      "type": "signal_condition",
+      "labelAr": "تحسن RSI",
+      "count": 10
     },
     {
       "type": "strategy_validation",
       "labelAr": "حالة الاستراتيجية: RESEARCH_ONLY",
-      "count": 6
+      "count": 10
+    },
+    {
+      "type": "signal_condition",
+      "labelAr": "اتجاه داعم للاختراق",
+      "count": 3
+    },
+    {
+      "type": "signal_condition",
+      "labelAr": "مساحة حتى المقاومة",
+      "count": 3
+    },
+    {
+      "type": "signal_condition",
+      "labelAr": "جلسات حجم تداول صالحة",
+      "count": 2
+    },
+    {
+      "type": "signal_condition",
+      "labelAr": "حجم يؤكد الاختراق",
+      "count": 2
     },
     {
       "type": "signal_condition",
@@ -266,8 +290,8 @@
     },
     {
       "type": "signal_condition",
-      "labelAr": "مساحة حتى المقاومة",
-      "count": 2
+      "labelAr": "اختراق مقاومة 20 جلسة",
+      "count": 1
     }
   ],
   "scenarioComparison": [
@@ -288,17 +312,17 @@
     {
       "code": "EXPLORATORY_DIAGNOSTIC",
       "labelAr": "تشخيص قريب من الشروط",
-      "candidateCount": 0,
+      "candidateCount": 31,
       "usage": "تحليل فقط، ليس توصية ولا صفقة ورقية تلقائية",
       "thresholdsChanged": true
     }
   ],
   "nearMisses": [
     {
-      "ticker": "CANA",
-      "companyNameAr": "بنك قناة السويس",
+      "ticker": "RUBX",
+      "companyNameAr": "روبيكس",
       "sector": null,
-      "recommendationScore": 88.1,
+      "recommendationScore": 99.9,
       "signalPassed": true,
       "failedConditionCount": 0,
       "failedConditions": [],
@@ -307,111 +331,7 @@
       "strategyValidationStatus": "RESEARCH_ONLY",
       "researchValidated": false,
       "eligibilityDecision": true,
-      "regimeAllowed": false,
-      "scorePaperPass": true,
-      "statusLabelAr": "مراقبة مشروطة"
-    },
-    {
-      "ticker": "ORWE",
-      "companyNameAr": "النساجون الشرقيون",
-      "sector": null,
-      "recommendationScore": 86.4,
-      "signalPassed": true,
-      "failedConditionCount": 0,
-      "failedConditions": [],
-      "strategyId": "pullback",
-      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "researchValidated": false,
-      "eligibilityDecision": true,
-      "regimeAllowed": false,
-      "scorePaperPass": true,
-      "statusLabelAr": "مراقبة مشروطة"
-    },
-    {
-      "ticker": "GIHD",
-      "companyNameAr": "الغربية الإسلامية للتنمية العمرانية",
-      "sector": null,
-      "recommendationScore": 82.6,
-      "signalPassed": true,
-      "failedConditionCount": 0,
-      "failedConditions": [],
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "researchValidated": false,
-      "eligibilityDecision": true,
-      "regimeAllowed": false,
-      "scorePaperPass": true,
-      "statusLabelAr": "مراقبة مشروطة"
-    },
-    {
-      "ticker": "TALM",
-      "companyNameAr": "تعليم لخدمات الإدارة",
-      "sector": null,
-      "recommendationScore": 82.4,
-      "signalPassed": true,
-      "failedConditionCount": 0,
-      "failedConditions": [],
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "researchValidated": false,
-      "eligibilityDecision": true,
-      "regimeAllowed": false,
-      "scorePaperPass": true,
-      "statusLabelAr": "مراقبة مشروطة"
-    },
-    {
-      "ticker": "MPCO",
-      "companyNameAr": "المنصورة للدواجن",
-      "sector": null,
-      "recommendationScore": 79.7,
-      "signalPassed": true,
-      "failedConditionCount": 0,
-      "failedConditions": [],
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "researchValidated": false,
-      "eligibilityDecision": true,
-      "regimeAllowed": false,
-      "scorePaperPass": true,
-      "statusLabelAr": "مراقبة مشروطة"
-    },
-    {
-      "ticker": "EXPA",
-      "companyNameAr": "البنك المصري لتنمية الصادرات",
-      "sector": null,
-      "recommendationScore": 69.9,
-      "signalPassed": true,
-      "failedConditionCount": 0,
-      "failedConditions": [],
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "researchValidated": false,
-      "eligibilityDecision": true,
-      "regimeAllowed": false,
-      "scorePaperPass": false,
-      "statusLabelAr": "مراقبة مشروطة"
-    },
-    {
-      "ticker": "SDTI",
-      "companyNameAr": "شرم دريمز",
-      "sector": null,
-      "recommendationScore": 80.7,
-      "signalPassed": false,
-      "failedConditionCount": 1,
-      "failedConditions": [
-        "منطقة RSI: 80.1"
-      ],
-      "strategyId": "breakout",
-      "strategyLabelAr": "اختراق مؤكد",
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "researchValidated": false,
-      "eligibilityDecision": true,
-      "regimeAllowed": false,
+      "regimeAllowed": true,
       "scorePaperPass": true,
       "statusLabelAr": "مراقبة مشروطة"
     },
@@ -419,37 +339,50 @@
       "ticker": "CIRA",
       "companyNameAr": "القاهرة للاستثمار والتنمية العقارية",
       "sector": null,
-      "recommendationScore": 79.7,
-      "signalPassed": false,
-      "failedConditionCount": 1,
-      "failedConditions": [
-        "دعم الحجم: 0.66"
-      ],
+      "recommendationScore": 97.6,
+      "signalPassed": true,
+      "failedConditionCount": 0,
+      "failedConditions": [],
       "strategyId": "trend_follow",
       "strategyLabelAr": "اتجاه قوي مع سيولة",
       "strategyValidationStatus": "RESEARCH_ONLY",
       "researchValidated": false,
       "eligibilityDecision": true,
-      "regimeAllowed": false,
+      "regimeAllowed": true,
       "scorePaperPass": true,
       "statusLabelAr": "مراقبة مشروطة"
     },
     {
-      "ticker": "CCAP",
-      "companyNameAr": "القلعة للاستثمارات المالية",
+      "ticker": "EXPA",
+      "companyNameAr": "البنك المصري لتنمية الصادرات",
       "sector": null,
-      "recommendationScore": 78.9,
-      "signalPassed": false,
-      "failedConditionCount": 1,
-      "failedConditions": [
-        "دعم الحجم: 0.72"
-      ],
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "recommendationScore": 94.4,
+      "signalPassed": true,
+      "failedConditionCount": 0,
+      "failedConditions": [],
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
       "strategyValidationStatus": "RESEARCH_ONLY",
       "researchValidated": false,
       "eligibilityDecision": true,
-      "regimeAllowed": false,
+      "regimeAllowed": true,
+      "scorePaperPass": true,
+      "statusLabelAr": "مراقبة مشروطة"
+    },
+    {
+      "ticker": "NIPH",
+      "companyNameAr": "النيل للأدوية",
+      "sector": null,
+      "recommendationScore": 93.5,
+      "signalPassed": true,
+      "failedConditionCount": 0,
+      "failedConditions": [],
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "researchValidated": false,
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
       "scorePaperPass": true,
       "statusLabelAr": "مراقبة مشروطة"
     },
@@ -457,249 +390,158 @@
       "ticker": "MAAL",
       "companyNameAr": "مرسيليا المصرية الخليجية",
       "sector": null,
-      "recommendationScore": 77.4,
-      "signalPassed": false,
-      "failedConditionCount": 1,
-      "failedConditions": [
-        "منطقة RSI: 76.7"
-      ],
-      "strategyId": "breakout",
-      "strategyLabelAr": "اختراق مؤكد",
+      "recommendationScore": 93,
+      "signalPassed": true,
+      "failedConditionCount": 0,
+      "failedConditions": [],
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
       "strategyValidationStatus": "RESEARCH_ONLY",
       "researchValidated": false,
       "eligibilityDecision": true,
-      "regimeAllowed": false,
+      "regimeAllowed": true,
       "scorePaperPass": true,
       "statusLabelAr": "مراقبة مشروطة"
     },
     {
-      "ticker": "EGCH",
-      "companyNameAr": "كيما",
+      "ticker": "ZEOT",
+      "companyNameAr": "الزيوت المستخلصة",
       "sector": null,
-      "recommendationScore": 73.4,
+      "recommendationScore": 92.4,
+      "signalPassed": true,
+      "failedConditionCount": 0,
+      "failedConditions": [],
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "researchValidated": false,
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "scorePaperPass": true,
+      "statusLabelAr": "مراقبة مشروطة"
+    },
+    {
+      "ticker": "EGAS",
+      "companyNameAr": "غاز مصر",
+      "sector": null,
+      "recommendationScore": 92.1,
+      "signalPassed": true,
+      "failedConditionCount": 0,
+      "failedConditions": [],
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "researchValidated": false,
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "scorePaperPass": true,
+      "statusLabelAr": "مراقبة مشروطة"
+    },
+    {
+      "ticker": "SAUD",
+      "companyNameAr": "بنك البركة مصر",
+      "sector": null,
+      "recommendationScore": 91.1,
+      "signalPassed": true,
+      "failedConditionCount": 0,
+      "failedConditions": [],
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "researchValidated": false,
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "scorePaperPass": true,
+      "statusLabelAr": "مراقبة مشروطة"
+    },
+    {
+      "ticker": "SIPC",
+      "companyNameAr": "سبأ الدولية للأدوية",
+      "sector": null,
+      "recommendationScore": 87.6,
+      "signalPassed": true,
+      "failedConditionCount": 0,
+      "failedConditions": [],
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "researchValidated": false,
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "scorePaperPass": true,
+      "statusLabelAr": "مراقبة مشروطة"
+    },
+    {
+      "ticker": "CERA",
+      "companyNameAr": "العربية للخزف سيراميكا ريماس",
+      "sector": null,
+      "recommendationScore": 84.2,
+      "signalPassed": true,
+      "failedConditionCount": 0,
+      "failedConditions": [],
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "researchValidated": false,
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "scorePaperPass": true,
+      "statusLabelAr": "مراقبة مشروطة"
+    },
+    {
+      "ticker": "CANA",
+      "companyNameAr": "بنك قناة السويس",
+      "sector": null,
+      "recommendationScore": 92.5,
       "signalPassed": false,
       "failedConditionCount": 1,
       "failedConditions": [
-        "تحسن RSI: 56.2 → 51.3"
+        "دعم الحجم: 0.61"
+      ],
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "researchValidated": false,
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "scorePaperPass": true,
+      "statusLabelAr": "مراقبة مشروطة"
+    },
+    {
+      "ticker": "EDFM",
+      "companyNameAr": "مطاحن شرق الدلتا",
+      "sector": null,
+      "recommendationScore": 92.3,
+      "signalPassed": false,
+      "failedConditionCount": 1,
+      "failedConditions": [
+        "الاقتراب من متوسط 20: -1.59"
       ],
       "strategyId": "pullback",
       "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
       "strategyValidationStatus": "RESEARCH_ONLY",
       "researchValidated": false,
       "eligibilityDecision": true,
-      "regimeAllowed": false,
+      "regimeAllowed": true,
       "scorePaperPass": true,
       "statusLabelAr": "مراقبة مشروطة"
     },
     {
-      "ticker": "MHOT",
-      "companyNameAr": "مصر للفنادق",
+      "ticker": "CCAP",
+      "companyNameAr": "القلعة للاستثمارات المالية",
       "sector": null,
-      "recommendationScore": 72.6,
+      "recommendationScore": 91.3,
       "signalPassed": false,
       "failedConditionCount": 1,
       "failedConditions": [
-        "ميل متوسط 20: -0.02"
+        "دعم الحجم: 0.61"
       ],
       "strategyId": "trend_follow",
       "strategyLabelAr": "اتجاه قوي مع سيولة",
       "strategyValidationStatus": "RESEARCH_ONLY",
       "researchValidated": false,
       "eligibilityDecision": true,
-      "regimeAllowed": false,
-      "scorePaperPass": true,
-      "statusLabelAr": "مراقبة مشروطة"
-    },
-    {
-      "ticker": "CPCI",
-      "companyNameAr": "القاهرة للأدوية",
-      "sector": null,
-      "recommendationScore": 71.7,
-      "signalPassed": false,
-      "failedConditionCount": 1,
-      "failedConditions": [
-        "منطقة RSI: 70.8"
-      ],
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "researchValidated": false,
-      "eligibilityDecision": true,
-      "regimeAllowed": false,
-      "scorePaperPass": true,
-      "statusLabelAr": "مراقبة مشروطة"
-    },
-    {
-      "ticker": "EGBE",
-      "companyNameAr": "البنك المصري الخليجي",
-      "sector": null,
-      "recommendationScore": 69.7,
-      "signalPassed": false,
-      "failedConditionCount": 1,
-      "failedConditions": [
-        "تحسن RSI: 53.5 → 53.5"
-      ],
-      "strategyId": "pullback",
-      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "researchValidated": false,
-      "eligibilityDecision": true,
-      "regimeAllowed": false,
-      "scorePaperPass": false,
-      "statusLabelAr": "مراقبة مشروطة"
-    },
-    {
-      "ticker": "PHTV",
-      "companyNameAr": "بيراميزا للفنادق",
-      "sector": null,
-      "recommendationScore": 66.5,
-      "signalPassed": false,
-      "failedConditionCount": 1,
-      "failedConditions": [
-        "تحسن RSI: 49.7 → 49.1"
-      ],
-      "strategyId": "pullback",
-      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "researchValidated": false,
-      "eligibilityDecision": true,
-      "regimeAllowed": false,
-      "scorePaperPass": false,
-      "statusLabelAr": "مراقبة مشروطة"
-    },
-    {
-      "ticker": "ATQA",
-      "companyNameAr": "مصر الوطنية للصلب عتاقة",
-      "sector": null,
-      "recommendationScore": 66.4,
-      "signalPassed": false,
-      "failedConditionCount": 1,
-      "failedConditions": [
-        "تحسن RSI: 67.3 → 55.6"
-      ],
-      "strategyId": "pullback",
-      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "researchValidated": false,
-      "eligibilityDecision": true,
-      "regimeAllowed": false,
-      "scorePaperPass": false,
-      "statusLabelAr": "مراقبة مشروطة"
-    },
-    {
-      "ticker": "AMIA",
-      "companyNameAr": "العربية للمحابس",
-      "sector": null,
-      "recommendationScore": 59.5,
-      "signalPassed": false,
-      "failedConditionCount": 1,
-      "failedConditions": [
-        "تحسن RSI: 63.6 → 61.5"
-      ],
-      "strategyId": "pullback",
-      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "researchValidated": false,
-      "eligibilityDecision": true,
-      "regimeAllowed": false,
-      "scorePaperPass": false,
-      "statusLabelAr": "مراقبة مشروطة"
-    },
-    {
-      "ticker": "AXPH",
-      "companyNameAr": "الإسكندرية للأدوية",
-      "sector": null,
-      "recommendationScore": 58.3,
-      "signalPassed": false,
-      "failedConditionCount": 1,
-      "failedConditions": [
-        "ترتيب الاتجاه: 1600.79 > 1672.885 > 1412.873"
-      ],
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "researchValidated": false,
-      "eligibilityDecision": true,
-      "regimeAllowed": false,
-      "scorePaperPass": false,
-      "statusLabelAr": "مراقبة مشروطة"
-    },
-    {
-      "ticker": "EGTS",
-      "companyNameAr": "المصرية للمنتجعات السياحية",
-      "sector": null,
-      "recommendationScore": 48.1,
-      "signalPassed": false,
-      "failedConditionCount": 1,
-      "failedConditions": [
-        "ترتيب الاتجاه: 17.99 > 17.294 > 17.775"
-      ],
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "researchValidated": false,
-      "eligibilityDecision": true,
-      "regimeAllowed": false,
-      "scorePaperPass": false,
-      "statusLabelAr": "مراقبة مشروطة"
-    },
-    {
-      "ticker": "AMOC",
-      "companyNameAr": "الإسكندرية للزيوت المعدنية",
-      "sector": null,
-      "recommendationScore": 79.8,
-      "signalPassed": false,
-      "failedConditionCount": 2,
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0.39",
-        "دعم الحجم: 0.39"
-      ],
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "researchValidated": false,
-      "eligibilityDecision": true,
-      "regimeAllowed": false,
-      "scorePaperPass": true,
-      "statusLabelAr": "مراقبة مشروطة"
-    },
-    {
-      "ticker": "ABUK",
-      "companyNameAr": "أبو قير للأسمدة والصناعات الكيماوية",
-      "sector": null,
-      "recommendationScore": 77.4,
-      "signalPassed": false,
-      "failedConditionCount": 2,
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0.31",
-        "دعم الحجم: 0.31"
-      ],
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "researchValidated": false,
-      "eligibilityDecision": true,
-      "regimeAllowed": false,
-      "scorePaperPass": true,
-      "statusLabelAr": "مراقبة مشروطة"
-    },
-    {
-      "ticker": "BINV",
-      "companyNameAr": "بي إنفستمنتس",
-      "sector": null,
-      "recommendationScore": 76.6,
-      "signalPassed": false,
-      "failedConditionCount": 2,
-      "failedConditions": [
-        "نشاط الحجم الحالي: 0.16",
-        "دعم الحجم: 0.16"
-      ],
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "strategyValidationStatus": "RESEARCH_ONLY",
-      "researchValidated": false,
-      "eligibilityDecision": true,
-      "regimeAllowed": false,
+      "regimeAllowed": true,
       "scorePaperPass": true,
       "statusLabelAr": "مراقبة مشروطة"
     },
@@ -707,159 +549,322 @@
       "ticker": "ALCN",
       "companyNameAr": "الإسكندرية لتداول الحاويات والبضائع",
       "sector": null,
-      "recommendationScore": 73,
+      "recommendationScore": 88.3,
       "signalPassed": false,
-      "failedConditionCount": 2,
+      "failedConditionCount": 1,
       "failedConditions": [
-        "نشاط الحجم الحالي: 0.47",
-        "دعم الحجم: 0.47"
+        "حجم يؤكد الاختراق: 0.68"
+      ],
+      "strategyId": "breakout",
+      "strategyLabelAr": "اختراق مؤكد",
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "researchValidated": false,
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "scorePaperPass": true,
+      "statusLabelAr": "مراقبة مشروطة"
+    },
+    {
+      "ticker": "EGBE",
+      "companyNameAr": "البنك المصري الخليجي",
+      "sector": null,
+      "recommendationScore": 84.3,
+      "signalPassed": false,
+      "failedConditionCount": 1,
+      "failedConditions": [
+        "ميل متوسط 20: -0.86"
       ],
       "strategyId": "trend_follow",
       "strategyLabelAr": "اتجاه قوي مع سيولة",
       "strategyValidationStatus": "RESEARCH_ONLY",
       "researchValidated": false,
       "eligibilityDecision": true,
-      "regimeAllowed": false,
+      "regimeAllowed": true,
       "scorePaperPass": true,
       "statusLabelAr": "مراقبة مشروطة"
     },
     {
-      "ticker": "MOIN",
-      "companyNameAr": "المهندس للتأمين",
+      "ticker": "COPR",
+      "companyNameAr": "كوبر للاستثمار التجاري والتطوير العقاري",
       "sector": null,
-      "recommendationScore": 65.2,
+      "recommendationScore": 80.9,
       "signalPassed": false,
-      "failedConditionCount": 2,
+      "failedConditionCount": 1,
       "failedConditions": [
-        "الاقتراب من متوسط 20: -1.56",
-        "تحسن RSI: 54.4 → 53.1"
+        "ميل متوسط 20: -2.9"
       ],
-      "strategyId": "pullback",
-      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
       "strategyValidationStatus": "RESEARCH_ONLY",
       "researchValidated": false,
       "eligibilityDecision": true,
-      "regimeAllowed": false,
-      "scorePaperPass": false,
+      "regimeAllowed": true,
+      "scorePaperPass": true,
       "statusLabelAr": "مراقبة مشروطة"
     },
     {
       "ticker": "ICID",
       "companyNameAr": "الدولية للاستثمار والتنمية",
       "sector": null,
-      "recommendationScore": 54.7,
+      "recommendationScore": 79.8,
       "signalPassed": false,
-      "failedConditionCount": 2,
+      "failedConditionCount": 1,
       "failedConditions": [
-        "ترتيب الاتجاه: 17.41 > 17.778 > 13.292",
-        "دعم الحجم: 0.71"
+        "تحسن RSI: 65.4 → 58.3"
       ],
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
       "strategyValidationStatus": "RESEARCH_ONLY",
       "researchValidated": false,
       "eligibilityDecision": true,
-      "regimeAllowed": false,
+      "regimeAllowed": true,
+      "scorePaperPass": true,
+      "statusLabelAr": "مراقبة مشروطة"
+    },
+    {
+      "ticker": "ATQA",
+      "companyNameAr": "مصر الوطنية للصلب عتاقة",
+      "sector": null,
+      "recommendationScore": 78.6,
+      "signalPassed": false,
+      "failedConditionCount": 1,
+      "failedConditions": [
+        "الاقتراب من متوسط 20: -3.62"
+      ],
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "researchValidated": false,
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "scorePaperPass": true,
+      "statusLabelAr": "مراقبة مشروطة"
+    },
+    {
+      "ticker": "AJWA",
+      "companyNameAr": "أجواء للصناعات الغذائية",
+      "sector": null,
+      "recommendationScore": 78.5,
+      "signalPassed": false,
+      "failedConditionCount": 1,
+      "failedConditions": [
+        "اتجاه داعم للاختراق: لم يتحقق"
+      ],
+      "strategyId": "breakout",
+      "strategyLabelAr": "اختراق مؤكد",
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "researchValidated": false,
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "scorePaperPass": true,
+      "statusLabelAr": "مراقبة مشروطة"
+    },
+    {
+      "ticker": "AFDI",
+      "companyNameAr": "الأهلي للتنمية والاستثمار",
+      "sector": null,
+      "recommendationScore": 74.3,
+      "signalPassed": false,
+      "failedConditionCount": 1,
+      "failedConditions": [
+        "الاتجاه المتوسط صاعد: لم يتحقق"
+      ],
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "researchValidated": false,
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "scorePaperPass": true,
+      "statusLabelAr": "مراقبة مشروطة"
+    },
+    {
+      "ticker": "SUGR",
+      "companyNameAr": "الدلتا للسكر",
+      "sector": null,
+      "recommendationScore": 74.2,
+      "signalPassed": false,
+      "failedConditionCount": 1,
+      "failedConditions": [
+        "الاقتراب من متوسط 20: -6.33"
+      ],
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "researchValidated": false,
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "scorePaperPass": true,
+      "statusLabelAr": "مراقبة مشروطة"
+    },
+    {
+      "ticker": "EGAL",
+      "companyNameAr": "مصر للألومنيوم",
+      "sector": null,
+      "recommendationScore": 72.7,
+      "signalPassed": false,
+      "failedConditionCount": 1,
+      "failedConditions": [
+        "الاقتراب من متوسط 20: -4.29"
+      ],
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "researchValidated": false,
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "scorePaperPass": true,
+      "statusLabelAr": "مراقبة مشروطة"
+    },
+    {
+      "ticker": "MENA",
+      "companyNameAr": "مينا للاستثمار السياحي والعقاري",
+      "sector": null,
+      "recommendationScore": 72.5,
+      "signalPassed": false,
+      "failedConditionCount": 1,
+      "failedConditions": [
+        "الاتجاه المتوسط صاعد: لم يتحقق"
+      ],
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "researchValidated": false,
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "scorePaperPass": true,
+      "statusLabelAr": "مراقبة مشروطة"
+    },
+    {
+      "ticker": "ACAMD",
+      "companyNameAr": "العربية لإدارة وتطوير الأصول",
+      "sector": null,
+      "recommendationScore": 71.4,
+      "signalPassed": false,
+      "failedConditionCount": 1,
+      "failedConditions": [
+        "الاتجاه المتوسط صاعد: لم يتحقق"
+      ],
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "researchValidated": false,
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "scorePaperPass": true,
+      "statusLabelAr": "مراقبة مشروطة"
+    },
+    {
+      "ticker": "OIH",
+      "companyNameAr": "أوراسكوم للاستثمار القابضة",
+      "sector": null,
+      "recommendationScore": 68.5,
+      "signalPassed": false,
+      "failedConditionCount": 1,
+      "failedConditions": [
+        "الاقتراب من متوسط 20: -8.87"
+      ],
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "researchValidated": false,
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
       "scorePaperPass": false,
       "statusLabelAr": "مراقبة مشروطة"
     },
     {
-      "ticker": "WCDF",
-      "companyNameAr": "مطاحن وسط وغرب الدلتا",
+      "ticker": "SEIG",
+      "companyNameAr": "السعودية المصرية للاستثمار والتمويل",
       "sector": null,
-      "recommendationScore": 52.2,
+      "recommendationScore": 68.4,
       "signalPassed": false,
-      "failedConditionCount": 2,
+      "failedConditionCount": 1,
       "failedConditions": [
-        "ترتيب الاتجاه: 658.79 > 682.53 > 621.716",
-        "منطقة RSI: 46.5"
+        "الاتجاه المتوسط صاعد: لم يتحقق"
       ],
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
       "strategyValidationStatus": "RESEARCH_ONLY",
       "researchValidated": false,
       "eligibilityDecision": true,
-      "regimeAllowed": false,
+      "regimeAllowed": true,
       "scorePaperPass": false,
       "statusLabelAr": "مراقبة مشروطة"
     },
     {
-      "ticker": "MIPH",
-      "companyNameAr": "مينا فارم",
+      "ticker": "GIHD",
+      "companyNameAr": "الغربية الإسلامية للتنمية العمرانية",
       "sector": null,
-      "recommendationScore": 48.5,
+      "recommendationScore": 67.6,
       "signalPassed": false,
-      "failedConditionCount": 2,
+      "failedConditionCount": 1,
       "failedConditions": [
-        "ترتيب الاتجاه: 766 > 812.781 > 782.951",
-        "منطقة RSI: 40.9"
+        "الاقتراب من متوسط 20: -8.36"
       ],
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
       "strategyValidationStatus": "RESEARCH_ONLY",
       "researchValidated": false,
       "eligibilityDecision": true,
-      "regimeAllowed": false,
+      "regimeAllowed": true,
       "scorePaperPass": false,
       "statusLabelAr": "مراقبة مشروطة"
     },
     {
-      "ticker": "ZMID",
-      "companyNameAr": "زهراء المعادي",
+      "ticker": "APSW",
+      "companyNameAr": "يونيراب بولفارا",
       "sector": null,
-      "recommendationScore": 45.4,
+      "recommendationScore": 66.1,
       "signalPassed": false,
-      "failedConditionCount": 2,
+      "failedConditionCount": 1,
       "failedConditions": [
-        "ترتيب الاتجاه: 7.82 > 8.977 > 8.012",
-        "منطقة RSI: 38.3"
+        "الاتجاه المتوسط صاعد: لم يتحقق"
       ],
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
       "strategyValidationStatus": "RESEARCH_ONLY",
       "researchValidated": false,
       "eligibilityDecision": true,
-      "regimeAllowed": false,
+      "regimeAllowed": true,
       "scorePaperPass": false,
       "statusLabelAr": "مراقبة مشروطة"
     },
     {
-      "ticker": "SNFC",
-      "companyNameAr": "الشرقية الوطنية للأمن الغذائي",
+      "ticker": "EFIH",
+      "companyNameAr": "إي فاينانس",
       "sector": null,
-      "recommendationScore": 45.2,
+      "recommendationScore": 65.4,
       "signalPassed": false,
-      "failedConditionCount": 2,
+      "failedConditionCount": 1,
       "failedConditions": [
-        "ترتيب الاتجاه: 11.33 > 10.938 > 11.187",
-        "دعم الحجم: 0.73"
+        "اتجاه داعم للاختراق: لم يتحقق"
       ],
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "strategyId": "breakout",
+      "strategyLabelAr": "اختراق مؤكد",
       "strategyValidationStatus": "RESEARCH_ONLY",
       "researchValidated": false,
       "eligibilityDecision": true,
-      "regimeAllowed": false,
+      "regimeAllowed": true,
       "scorePaperPass": false,
       "statusLabelAr": "مراقبة مشروطة"
     },
     {
-      "ticker": "CERA",
-      "companyNameAr": "العربية للخزف سيراميكا ريماس",
+      "ticker": "LCSW",
+      "companyNameAr": "ليسيكو مصر",
       "sector": null,
-      "recommendationScore": 41.8,
+      "recommendationScore": 63.6,
       "signalPassed": false,
-      "failedConditionCount": 2,
+      "failedConditionCount": 1,
       "failedConditions": [
-        "ترتيب الاتجاه: 1.22 > 1.396 > 1.351",
-        "منطقة RSI: 38.9"
+        "الاتجاه المتوسط صاعد: لم يتحقق"
       ],
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
       "strategyValidationStatus": "RESEARCH_ONLY",
       "researchValidated": false,
       "eligibilityDecision": true,
-      "regimeAllowed": false,
+      "regimeAllowed": true,
       "scorePaperPass": false,
       "statusLabelAr": "مراقبة مشروطة"
     }
@@ -867,10 +872,10 @@
   "shadowCandidateTickers": [],
   "currentCounts": {
     "symbolsAnalyzed": 196,
-    "latestEligibleAnalyses": 173,
+    "latestEligibleAnalyses": 156,
     "paperCandidates": 0,
     "watchCandidates": 20,
-    "blockedOrRejected": 165
+    "blockedOrRejected": 132
   },
   "adaptiveStrategyHealthAvailable": true,
   "safety": {
