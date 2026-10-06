@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-05T21:59:49.912Z",
+  "generatedAt": "2026-10-06T20:16:08.984Z",
   "ticker": "MFPC",
   "companyNameAr": "موبكو",
   "companyNameEn": "Misr Fertilizer Production Company",
@@ -12,36 +12,36 @@
     "open": 47.3,
     "high": 47.4,
     "low": 46,
-    "close": 46.39,
+    "close": 46.4,
     "volume": 1128370
   },
   "indicators": {
-    "close": 46.39,
-    "change1Pct": 3.318,
-    "return5Pct": -1.298,
-    "return20Pct": 11.783,
-    "return50Pct": 29.98,
-    "sma5": 45.706,
-    "sma20": 47.133,
+    "close": 46.4,
+    "change1Pct": 3.341,
+    "return5Pct": -1.277,
+    "return20Pct": 11.807,
+    "return50Pct": 30.008,
+    "sma5": 45.708,
+    "sma20": 47.134,
     "sma50": 41.649,
-    "ema9": 46.395,
-    "ema21": 45.693,
-    "rsi14": 45.336,
+    "ema9": 46.397,
+    "ema21": 45.694,
+    "rsi14": 45.374,
     "macd": 1.214,
     "macdSignal": 1.784,
     "atr14": 2.237,
-    "atrPct": 4.822,
+    "atrPct": 4.821,
     "averageVolume20": 2513263.4,
     "volumeRatio20": 0.449,
-    "averageTurnover20Egp": 119741410.241,
-    "volatility20Pct": 3.388,
+    "averageTurnover20Egp": 119741974.539,
+    "volatility20Pct": 3.389,
     "support20": 43,
     "resistance20": 51.3,
     "high50": 51.3,
     "low50": 35.37,
-    "distanceFromSupport20Pct": 7.884,
-    "relativeToResistance20Pct": -9.571,
-    "distanceFromHigh50Pct": -9.571
+    "distanceFromSupport20Pct": 7.907,
+    "relativeToResistance20Pct": -9.552,
+    "distanceFromHigh50Pct": -9.552
   },
   "technical": {
     "score": 66,
@@ -49,22 +49,50 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 81.3,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "نشاط الحجم الحالي: 0.45",
+      "الاقتراب من متوسط 20: -1.56",
+      "سيولة كافية: 0.45"
+    ],
+    "adaptive": {
+      "proximityPct": 78,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 33.9,
+      "minimumRequiredScore": 85,
+      "scoreGap": 3.7,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 3.7 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "نشاط الحجم الحالي: 0.45",
+        "الاقتراب من متوسط 20: -1.56",
+        "سيولة كافية: 0.45"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 46.158,
+      "entryHigh": 46.703,
+      "stopLoss": 43.877,
+      "target1": 51.027,
+      "target2": 53.07,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
-    "historySessions": 101,
-    "firstSession": "2026-03-19",
+    "historySessions": 100,
+    "firstSession": "2026-03-25",
     "lastSession": "2026-10-05",
-    "averageConfidence": 74.25,
+    "averageConfidence": 73.9,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
     "eligibilityLabelAr": "مكتمل وحديث"
@@ -578,7 +606,7 @@
       46.24,
       46,
       44.9,
-      46.39
+      46.4
     ],
     "volume": [
       2543047,
@@ -782,7 +810,7 @@
       46.277,
       46.61,
       46.889,
-      47.133
+      47.134
     ],
     "sma50": [
       0,
