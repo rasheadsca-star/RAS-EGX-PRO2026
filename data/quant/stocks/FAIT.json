@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-07T12:35:53.384Z",
+  "generatedAt": "2026-10-07T20:35:26.954Z",
   "ticker": "FAIT",
   "companyNameAr": "بنك فيصل الإسلامي",
   "companyNameEn": "Faisal Islamic Bank of Egypt",
@@ -49,9 +49,9 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "pullback",
     "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
     "recommendationScore": 76.8,
@@ -60,7 +60,22 @@
       "نشاط الحجم الحالي: 0.57",
       "سيولة كافية: 0.57"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 80.2,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 32.5,
+      "minimumRequiredScore": 85,
+      "scoreGap": 8.2,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 8.2 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "نشاط الحجم الحالي: 0.57",
+        "سيولة كافية: 0.57"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 45.364,
       "entryHigh": 45.872,

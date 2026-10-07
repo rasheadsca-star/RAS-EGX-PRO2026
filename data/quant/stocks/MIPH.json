@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-07T12:35:53.447Z",
+  "generatedAt": "2026-10-07T20:35:26.994Z",
   "ticker": "MIPH",
   "companyNameAr": "مينا فارم",
   "companyNameEn": "MINAPHARM Pharmaceuticals",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "pullback",
     "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
     "recommendationScore": 75.9,
@@ -60,7 +60,22 @@
       "نشاط الحجم الحالي: 0.37",
       "سيولة كافية: 0.37"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 79.9,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 32.5,
+      "minimumRequiredScore": 85,
+      "scoreGap": 9.1,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 9.1 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "نشاط الحجم الحالي: 0.37",
+        "سيولة كافية: 0.37"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 824.424,
       "entryHigh": 836.865,

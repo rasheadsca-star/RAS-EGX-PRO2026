@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-07T12:35:53.451Z",
+  "generatedAt": "2026-10-07T20:35:26.997Z",
   "ticker": "MOIL",
   "companyNameAr": "ماريدايف",
   "companyNameEn": "Maridive and Oil Services",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 78.1,
@@ -59,7 +59,21 @@
     "failedConditions": [
       "دعم الحجم: 0.71"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 84.2,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 33.5,
+      "minimumRequiredScore": 85,
+      "scoreGap": 6.9,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 6.9 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "دعم الحجم: 0.71"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 0.688,
       "entryHigh": 0.692,

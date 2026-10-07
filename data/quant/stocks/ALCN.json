@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-07T12:35:53.275Z",
+  "generatedAt": "2026-10-07T20:35:26.883Z",
   "ticker": "ALCN",
   "companyNameAr": "الإسكندرية لتداول الحاويات والبضائع",
   "companyNameEn": "Alexandria Container & Cargo Handling Company",
@@ -52,33 +52,34 @@
     "source": "V13.5",
     "status": "NEAR_TRIGGER",
     "statusLabelAr": "قريب من اكتمال الإشارة",
-    "strategyId": "breakout",
-    "strategyLabelAr": "اختراق مؤكد",
-    "recommendationScore": 88.2,
-    "reasonAr": "أقرب نموذج حالي هو اختراق مؤكد، لكن بعض الشروط لم تكتمل.",
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 76.9,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
     "failedConditions": [
-      "حجم يؤكد الاختراق: 0.68"
+      "دعم الحجم: 0.68"
     ],
     "adaptive": {
-      "proximityPct": 89.4,
+      "proximityPct": 83.5,
       "strategyHealthStatus": "RESEARCH_ONLY",
-      "strategyHealthScore": 40.2,
-      "minimumRequiredScore": 79,
-      "scoreGap": 0,
-      "calibratedVariantId": "early",
+      "strategyHealthScore": 33.5,
+      "minimumRequiredScore": 85,
+      "scoreGap": 8.1,
+      "calibratedVariantId": "balanced",
       "riskScale": 0,
       "missingRequirementsAr": [
         "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-        "حجم يؤكد الاختراق: 0.68"
+        "تحتاج 8.1 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "دعم الحجم: 0.68"
       ],
       "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
     },
     "plan": {
-      "entryLow": 34.894,
-      "entryHigh": 35.291,
-      "stopLoss": 33.162,
-      "target1": 38.566,
-      "target2": 40.11,
+      "entryLow": 34.14,
+      "entryHigh": 34.545,
+      "stopLoss": 32.454,
+      "target1": 37.742,
+      "target2": 39.254,
       "riskReward1": 1.8,
       "maximumHoldingSessions": 10
     }
