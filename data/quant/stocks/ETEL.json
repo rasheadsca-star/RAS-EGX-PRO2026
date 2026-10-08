@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-08T12:46:17.622Z",
+  "generatedAt": "2026-10-08T20:41:04.990Z",
   "ticker": "ETEL",
   "companyNameAr": "المصرية للاتصالات",
   "companyNameEn": "Telecom Egypt",
@@ -49,8 +49,8 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
+    "source": "V13.5",
+    "status": "CONDITIONAL_WATCH",
     "statusLabelAr": "مراقبة مشروطة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
@@ -61,7 +61,23 @@
       "منطقة RSI: 76.1",
       "دعم الحجم: 0.46"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 72.3,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 32.4,
+      "minimumRequiredScore": 85,
+      "scoreGap": 16.7,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 16.7 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "نشاط الحجم الحالي: 0.46",
+        "منطقة RSI: 76.1",
+        "دعم الحجم: 0.46"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 147.221,
       "entryHigh": 148.838,

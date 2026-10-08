@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-08T12:46:17.571Z",
+  "generatedAt": "2026-10-08T20:41:04.951Z",
   "ticker": "CPCI",
   "companyNameAr": "القاهرة للأدوية",
   "companyNameEn": "Kahira Pharmaceuticals & Chemical Industries",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 67.8,
@@ -59,7 +59,21 @@
     "failedConditions": [
       "منطقة RSI: 84.2"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 80.4,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 32.4,
+      "minimumRequiredScore": 85,
+      "scoreGap": 17.2,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 17.2 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "منطقة RSI: 84.2"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 600.545,
       "entryHigh": 605.843,

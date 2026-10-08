@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-08T12:46:17.506Z",
+  "generatedAt": "2026-10-08T20:41:04.898Z",
   "ticker": "ACGC",
   "companyNameAr": "العربية لحليج الأقطان",
   "companyNameEn": "Arabia Cotton Ginning Company",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "pullback",
     "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
     "recommendationScore": 79,
@@ -60,7 +60,22 @@
       "نشاط الحجم الحالي: 0.15",
       "سيولة كافية: 0.15"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 81.1,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 31.6,
+      "minimumRequiredScore": 85,
+      "scoreGap": 6,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 6 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "نشاط الحجم الحالي: 0.15",
+        "سيولة كافية: 0.15"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 14.263,
       "entryHigh": 14.414,

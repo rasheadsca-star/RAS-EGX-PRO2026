@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-08T12:46:17.533Z",
+  "generatedAt": "2026-10-08T20:41:04.919Z",
   "ticker": "ARCC",
   "companyNameAr": "العربية للأسمنت",
   "companyNameEn": "Arabian Cement Company S.A.E.",
@@ -49,9 +49,9 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "pullback",
     "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
     "recommendationScore": 67.3,
@@ -59,7 +59,21 @@
     "failedConditions": [
       "تحسن RSI: 51.9 → 51.9"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 80.5,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 31.6,
+      "minimumRequiredScore": 85,
+      "scoreGap": 17.7,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 17.7 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "تحسن RSI: 51.9 → 51.9"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 70.664,
       "entryHigh": 71.578,
