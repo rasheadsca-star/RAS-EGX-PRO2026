@@ -1,14 +1,14 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-07T20:35:26.984Z",
+  "generatedAt": "2026-10-08T12:46:17.675Z",
   "ticker": "MBSC",
   "companyNameAr": "مصر بني سويف للأسمنت",
   "companyNameEn": "Misr Beni Suef Cement",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-10-07",
+  "sessionId": "2026-10-08",
   "latest": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "open": 380.02,
     "high": 399,
     "low": 370,
@@ -17,24 +17,24 @@
   },
   "indicators": {
     "close": 376.31,
-    "change1Pct": -7.027,
-    "return5Pct": 16.364,
-    "return20Pct": -6.625,
-    "return50Pct": 56.77,
-    "sma5": 334.166,
-    "sma20": 371.084,
-    "sma50": 327.936,
-    "ema9": 347.927,
-    "ema21": 352.798,
-    "rsi14": 43.996,
-    "macd": -1.631,
-    "macdSignal": 1.512,
-    "atr14": 30.085,
-    "atrPct": 7.995,
-    "averageVolume20": 172874.8,
-    "volumeRatio20": 2.106,
-    "averageTurnover20Egp": 66978995.279,
-    "volatility20Pct": 10.087,
+    "change1Pct": 0,
+    "return5Pct": 25.747,
+    "return20Pct": -7.925,
+    "return50Pct": 60.816,
+    "sma5": 349.576,
+    "sma20": 369.465,
+    "sma50": 330.782,
+    "ema9": 353.603,
+    "ema21": 354.935,
+    "rsi14": 42.372,
+    "macd": 0.612,
+    "macdSignal": 1.332,
+    "atr14": 30.893,
+    "atrPct": 8.209,
+    "averageVolume20": 186675.95,
+    "volumeRatio20": 1.95,
+    "averageTurnover20Egp": 72029870.14,
+    "volatility20Pct": 10.082,
     "support20": 288,
     "resistance20": 470,
     "high50": 470,
@@ -49,21 +49,31 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
+    "source": "V13.4",
+    "status": "WATCH_CONDITIONAL",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 66.9,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "ميل متوسط 20: -2.97"
+    ],
     "adaptive": null,
-    "plan": {}
+    "plan": {
+      "entryLow": 374.052,
+      "entryHigh": 379.697,
+      "stopLoss": 356.146,
+      "target1": 414.185,
+      "target2": 430.767,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
-    "historySessions": 101,
+    "historySessions": 102,
     "firstSession": "2026-04-05",
-    "lastSession": "2026-10-07",
+    "lastSession": "2026-10-08",
     "averageConfidence": 74.05,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +81,6 @@
   },
   "chart": {
     "dates": [
-      "2026-04-06",
       "2026-04-07",
       "2026-04-08",
       "2026-04-09",
@@ -170,10 +179,10 @@
       "2026-09-29",
       "2026-09-30",
       "2026-10-05",
-      "2026-10-07"
+      "2026-10-07",
+      "2026-10-08"
     ],
     "open": [
-      250.99,
       252,
       249.02,
       249.36,
@@ -272,10 +281,10 @@
       299.26,
       300.38,
       356.64,
+      380.02,
       380.02
     ],
     "high": [
-      256.99,
       255.5,
       252.93,
       252.5,
@@ -374,10 +383,10 @@
       306,
       302.99,
       414.99,
+      399,
       399
     ],
     "low": [
-      250.07,
       248.21,
       249.02,
       248,
@@ -476,10 +485,10 @@
       298,
       288,
       350.04,
+      370,
       370
     ],
     "close": [
-      252,
       249.02,
       249.36,
       248.41,
@@ -578,10 +587,10 @@
       300.38,
       290.13,
       404.75,
+      376.31,
       376.31
     ],
     "volume": [
-      19505,
       65512,
       31104,
       68359,
@@ -680,6 +689,7 @@
       219630,
       92531,
       1211306,
+      364097,
       364097
     ],
     "sma20": [
@@ -702,7 +712,6 @@
       0,
       0,
       0,
-      260.377,
       261.977,
       263.526,
       264.706,
@@ -782,7 +791,8 @@
       376.418,
       371.808,
       372.419,
-      371.084
+      371.084,
+      369.465
     ],
     "sma50": [
       0,
@@ -834,7 +844,6 @@
       0,
       0,
       0,
-      259.08,
       258.72,
       258.537,
       258.371,
@@ -884,7 +893,8 @@
       321.039,
       321.935,
       325.21,
-      327.936
+      327.936,
+      330.782
     ]
   }
 }
