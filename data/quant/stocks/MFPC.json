@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-08T20:41:05.036Z",
+  "generatedAt": "2026-10-11T19:32:22.463Z",
   "ticker": "MFPC",
   "companyNameAr": "موبكو",
   "companyNameEn": "Misr Fertilizer Production Company",
@@ -17,24 +17,24 @@
   },
   "indicators": {
     "close": 46.59,
-    "change1Pct": 0,
-    "return5Pct": 0.757,
-    "return20Pct": 1.283,
-    "return50Pct": 25.58,
-    "sma5": 46.096,
-    "sma20": 47.18,
-    "sma50": 42.033,
-    "ema9": 46.466,
-    "ema21": 45.85,
-    "rsi14": 48.061,
-    "macd": 1.069,
-    "macdSignal": 1.538,
-    "atr14": 2.213,
-    "atrPct": 4.75,
-    "averageVolume20": 2156405.75,
-    "volumeRatio20": 0.267,
-    "averageTurnover20Egp": 103286623.211,
-    "volatility20Pct": 2.301,
+    "change1Pct": 0.194,
+    "return5Pct": 1.283,
+    "return20Pct": -1.895,
+    "return50Pct": 22.605,
+    "sma5": 46.058,
+    "sma20": 47.096,
+    "sma50": 42.189,
+    "ema9": 46.388,
+    "ema21": 45.857,
+    "rsi14": 50.332,
+    "macd": 0.964,
+    "macdSignal": 1.41,
+    "atr14": 2.252,
+    "atrPct": 4.834,
+    "averageVolume20": 1840742.3,
+    "volumeRatio20": 0.313,
+    "averageTurnover20Egp": 88260034.287,
+    "volatility20Pct": 2.216,
     "support20": 43,
     "resistance20": 51.3,
     "high50": 51.3,
@@ -44,34 +44,59 @@
     "distanceFromHigh50Pct": -9.181
   },
   "technical": {
-    "score": 66,
+    "score": 56,
     "trendCode": "NEUTRAL",
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 72.7,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "نشاط الحجم الحالي: 0.31",
+      "سيولة كافية: 0.31"
+    ],
+    "adaptive": {
+      "proximityPct": 78.6,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 24.7,
+      "minimumRequiredScore": 85,
+      "scoreGap": 12.3,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 12.3 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "نشاط الحجم الحالي: 0.31",
+        "سيولة كافية: 0.31"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 46.359,
+      "entryHigh": 46.879,
+      "stopLoss": 44.055,
+      "target1": 51.234,
+      "target2": 53.285,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
-    "historySessions": 102,
-    "firstSession": "2026-03-25",
+    "historySessions": 100,
+    "firstSession": "2026-03-30",
     "lastSession": "2026-10-08",
-    "averageConfidence": 73.9,
+    "averageConfidence": 73.15,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
     "eligibilityLabelAr": "مكتمل وحديث"
   },
   "chart": {
     "dates": [
-      "2026-03-29",
       "2026-03-30",
       "2026-03-31",
       "2026-04-01",
@@ -169,11 +194,11 @@
       "2026-09-29",
       "2026-09-30",
       "2026-10-05",
+      "2026-10-06",
       "2026-10-07",
       "2026-10-08"
     ],
     "open": [
-      41.98,
       40.35,
       39.9,
       40.75,
@@ -271,11 +296,11 @@
       46.24,
       46,
       47.3,
+      46.4,
       45.9,
       45.9
     ],
     "high": [
-      42.69,
       40.8,
       40.86,
       41.35,
@@ -373,11 +398,11 @@
       46.7,
       46.05,
       47.4,
+      46.89,
       46.68,
       46.68
     ],
     "low": [
-      40.32,
       38.8,
       39.02,
       40,
@@ -475,11 +500,11 @@
       45.04,
       43.8,
       46,
+      45.35,
       45.12,
       45.12
     ],
     "close": [
-      40.35,
       39.9,
       40.75,
       40.44,
@@ -577,11 +602,11 @@
       46,
       44.9,
       46.4,
-      46.59,
+      45.9,
+      46.5,
       46.59
     ],
     "volume": [
-      8145697,
       7368509,
       2910693,
       3605552,
@@ -679,6 +704,7 @@
       706079,
       1067707,
       1128370,
+      416809,
       576608,
       576608
     ],
@@ -702,7 +728,6 @@
       0,
       0,
       0,
-      43.965,
       44.21,
       44.441,
       44.578,
@@ -781,8 +806,9 @@
       46.61,
       46.889,
       47.134,
-      47.151,
-      47.18
+      47.116,
+      47.141,
+      47.096
     ],
     "sma50": [
       0,
@@ -834,7 +860,6 @@
       0,
       0,
       0,
-      41.448,
       41.401,
       41.359,
       41.302,
@@ -883,8 +908,9 @@
       41.252,
       41.435,
       41.649,
-      41.843,
-      42.033
+      41.829,
+      42.017,
+      42.189
     ]
   }
 }
