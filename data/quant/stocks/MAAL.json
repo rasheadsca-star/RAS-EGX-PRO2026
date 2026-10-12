@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-12T14:20:56.601Z",
+  "generatedAt": "2026-10-12T22:29:07.757Z",
   "ticker": "MAAL",
   "companyNameAr": "مرسيليا المصرية الخليجية",
   "companyNameEn": "Marseille Almasreia Alkhalegeya Holding",
@@ -50,38 +50,40 @@
   },
   "recommendation": {
     "source": "V13.5",
-    "status": "NEAR_TRIGGER",
-    "statusLabelAr": "قريب من اكتمال الإشارة",
-    "strategyId": "trend_follow",
-    "strategyLabelAr": "اتجاه قوي مع سيولة",
-    "recommendationScore": 76.5,
-    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 65.6,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
     "failedConditions": [
-      "نشاط الحجم الحالي: 0.32",
-      "دعم الحجم: 0.32"
+      "نشاط الحجم الحالي: 0.51",
+      "تحسن RSI: 64.1 → 49",
+      "سيولة كافية: 0.51"
     ],
     "adaptive": {
-      "proximityPct": 79.3,
+      "proximityPct": 72.4,
       "strategyHealthStatus": "RESEARCH_ONLY",
-      "strategyHealthScore": 33.9,
+      "strategyHealthScore": 23.3,
       "minimumRequiredScore": 85,
-      "scoreGap": 8.5,
-      "calibratedVariantId": "balanced",
+      "scoreGap": 19.4,
+      "calibratedVariantId": "wide",
       "riskScale": 0,
       "missingRequirementsAr": [
         "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-        "تحتاج 8.5 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
-        "نشاط الحجم الحالي: 0.32",
-        "دعم الحجم: 0.32"
+        "تحتاج 19.4 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "نشاط الحجم الحالي: 0.51",
+        "تحسن RSI: 64.1 → 49",
+        "سيولة كافية: 0.51"
       ],
       "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
     },
     "plan": {
-      "entryLow": 10.835,
-      "entryHigh": 10.998,
-      "stopLoss": 10.316,
-      "target1": 11.997,
-      "target2": 12.477,
+      "entryLow": 9.781,
+      "entryHigh": 9.929,
+      "stopLoss": 9.313,
+      "target1": 10.83,
+      "target2": 11.264,
       "riskReward1": 1.8,
       "maximumHoldingSessions": 10
     }

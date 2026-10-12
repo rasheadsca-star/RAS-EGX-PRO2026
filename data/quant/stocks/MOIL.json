@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-12T14:20:56.623Z",
+  "generatedAt": "2026-10-12T22:29:07.774Z",
   "ticker": "MOIL",
   "companyNameAr": "ماريدايف",
   "companyNameEn": "Maridive and Oil Services",
@@ -50,36 +50,38 @@
   },
   "recommendation": {
     "source": "V13.5",
-    "status": "NEAR_TRIGGER",
-    "statusLabelAr": "قريب من اكتمال الإشارة",
-    "strategyId": "trend_follow",
-    "strategyLabelAr": "اتجاه قوي مع سيولة",
-    "recommendationScore": 77.2,
-    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 60.1,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
     "failedConditions": [
-      "دعم الحجم: 0.69"
+      "الاقتراب من متوسط 20: -2.33",
+      "تحسن RSI: 60.5 → 49.1"
     ],
     "adaptive": {
-      "proximityPct": 83.9,
+      "proximityPct": 74.5,
       "strategyHealthStatus": "RESEARCH_ONLY",
-      "strategyHealthScore": 33.9,
+      "strategyHealthScore": 23.3,
       "minimumRequiredScore": 85,
-      "scoreGap": 7.8,
-      "calibratedVariantId": "balanced",
+      "scoreGap": 24.9,
+      "calibratedVariantId": "wide",
       "riskScale": 0,
       "missingRequirementsAr": [
         "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-        "تحتاج 7.8 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
-        "دعم الحجم: 0.69"
+        "تحتاج 24.9 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "الاقتراب من متوسط 20: -2.33",
+        "تحسن RSI: 60.5 → 49.1"
       ],
       "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
     },
     "plan": {
-      "entryLow": 0.688,
-      "entryHigh": 0.692,
-      "stopLoss": 0.657,
-      "target1": 0.75,
-      "target2": 0.777,
+      "entryLow": 0.668,
+      "entryHigh": 0.672,
+      "stopLoss": 0.658,
+      "target1": 0.692,
+      "target2": 0.702,
       "riskReward1": 1.8,
       "maximumHoldingSessions": 10
     }
