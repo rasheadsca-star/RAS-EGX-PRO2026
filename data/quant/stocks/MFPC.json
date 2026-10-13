@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-13T13:30:20.741Z",
+  "generatedAt": "2026-10-13T20:38:58.401Z",
   "ticker": "MFPC",
   "companyNameAr": "موبكو",
   "companyNameEn": "Misr Fertilizer Production Company",
@@ -49,9 +49,9 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "pullback",
     "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
     "recommendationScore": 64,
@@ -59,7 +59,21 @@
     "failedConditions": [
       "الاقتراب من متوسط 20: -5.83"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 79.3,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 22.6,
+      "minimumRequiredScore": 85,
+      "scoreGap": 21,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 21 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "الاقتراب من متوسط 20: -5.83"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 43.777,
       "entryHigh": 44.324,

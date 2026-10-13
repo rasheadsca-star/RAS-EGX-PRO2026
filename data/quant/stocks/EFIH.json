@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-13T13:30:20.658Z",
+  "generatedAt": "2026-10-13T20:38:58.318Z",
   "ticker": "EFIH",
   "companyNameAr": "إي فاينانس",
   "companyNameEn": "e-finance for Digital and Financial Investments S.A.E.",
@@ -49,9 +49,9 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "pullback",
     "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
     "recommendationScore": 74.3,
@@ -59,7 +59,21 @@
     "failedConditions": [
       "تحسن RSI: 64.1 → 49.5"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 82.9,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 22.6,
+      "minimumRequiredScore": 85,
+      "scoreGap": 10.7,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 10.7 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "تحسن RSI: 64.1 → 49.5"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 23.521,
       "entryHigh": 23.788,
