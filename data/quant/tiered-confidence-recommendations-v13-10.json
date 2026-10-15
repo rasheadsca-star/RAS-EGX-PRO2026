@@ -1,30 +1,5223 @@
 {
   "schemaVersion": "13.10.0",
-  "generatedAt": "2026-10-13T13:30:20.488Z",
-  "sessionId": "2026-10-13",
+  "generatedAt": "2026-10-15T15:29:34.967Z",
+  "sessionId": "2026-10-15",
   "liveExecutionEnabled": false,
   "automaticRegistration": false,
   "productionThresholdsChanged": false,
   "strictProductionCandidatesOverwritten": false,
   "freshness": {
-    "exactFreshCoveragePct": 88.36,
+    "exactFreshCoveragePct": 85.19,
     "minimumTargetPct": 80,
     "targetPassed": true,
-    "exactFresh": 167,
+    "exactFresh": 161,
     "decisionHistories": 189,
-    "lagOneTradingDay": 10,
-    "lagTwoOrMoreTradingDays": 12
+    "lagOneTradingDay": 0,
+    "lagTwoOrMoreTradingDays": 28
   },
   "counts": {
     "strictPaperCandidates": 0,
-    "tierAExperimentalPaper": 0,
-    "tierBPriorityWatch": 0,
-    "exactFreshEvaluated": 167,
+    "tierAExperimentalPaper": 3,
+    "tierBPriorityWatch": 14,
+    "exactFreshEvaluated": 161,
     "strategyPortfolioValidated": 1
   },
   "strictPaperCandidates": [],
-  "tierAExperimentalPaper": [],
-  "tierBPriorityWatch": [],
+  "tierAExperimentalPaper": [
+    {
+      "ticker": "ARAB",
+      "companyNameAr": "المطورون العرب القابضة",
+      "companyNameEn": "Arab Developers Holding",
+      "sector": "غير مصنف",
+      "sessionId": "2026-10-15",
+      "tier": "TIER_A_EXPERIMENTAL_PAPER",
+      "status": "EXPERIMENTAL_PAPER",
+      "statusLabelAr": "مرشح ورقي تجريبي — ثقة متوسطة",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "variantId": "balanced",
+      "recommendationScore": 92.1,
+      "rawSignalScore": 90.6,
+      "hardFailureCount": 0,
+      "softFailureCount": 1,
+      "hardFailures": [],
+      "softFailures": [
+        {
+          "id": "volumeRatio",
+          "labelAr": "دعم الحجم",
+          "detail": 0.63,
+          "classification": "soft"
+        }
+      ],
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "marketRegime": "BALANCED",
+      "exactFreshSession": "2026-10-15",
+      "price": 0.27,
+      "plan": {
+        "entryLow": 0.2685,
+        "entryHigh": 0.2719,
+        "stopLoss": 0.2553,
+        "target1": 0.2969,
+        "target2": 0.3088,
+        "riskPct": 5.5,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": -1.099,
+        "return20Pct": 7.143,
+        "relativeStrength20Pct": 20.075,
+        "rsi14": 59.08,
+        "atrPct": 4.781,
+        "volumeRatio20": 0.632,
+        "averageTurnover20Egp": 102016275,
+        "sma20": 0.25,
+        "sma50": 0.2493,
+        "support20": 0.202,
+        "resistance20": 0.285
+      },
+      "portfolioValidation": {
+        "strategyId": "trend_follow",
+        "strategyLabelAr": "اتجاه قوي مع سيولة",
+        "selectedVariantId": "balanced",
+        "originalStatus": "RESEARCH_ONLY",
+        "originalResearchValidated": false,
+        "originalValidationMetrics": {
+          "totalSignals": 275,
+          "closedTrades": 260,
+          "cancelledTrades": 15,
+          "wins": 91,
+          "losses": 169,
+          "winRatePct": 35,
+          "profitFactor": 0.706,
+          "averageReturnPct": -0.971,
+          "averageR": -0.183,
+          "medianR": -1.109,
+          "maxDrawdownPct": 98.09,
+          "drawdownMethod": "compounded_equity_peak_to_trough",
+          "startingEquityIndex": 100,
+          "endingEquityIndex": 4.9887,
+          "legacyAdditiveDrawdownPct": 359.39,
+          "sameBarStopFirstCount": 1
+        },
+        "portfolioMetrics": {
+          "acceptedTrades": 21,
+          "skippedCapacity": 239,
+          "riskPerTradePct": 0.25,
+          "maximumConcurrentTrades": 5,
+          "startingEquity": 100000,
+          "endingEquity": 102127.68,
+          "totalReturnPct": 2.128,
+          "profitFactor": 2.466,
+          "averageR": 0.271,
+          "maximumDrawdownPct": 0.592,
+          "method": "fixed_fractional_risk_portfolio_with_concurrency_limit",
+          "equityCurve": [
+            {
+              "date": "2026-08-05",
+              "equity": 100563.71
+            },
+            {
+              "date": "2026-08-06",
+              "equity": 100967.06
+            },
+            {
+              "date": "2026-08-09",
+              "equity": 100967.06
+            },
+            {
+              "date": "2026-08-11",
+              "equity": 101390.45
+            },
+            {
+              "date": "2026-08-12",
+              "equity": 101797.6
+            },
+            {
+              "date": "2026-08-13",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-16",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-23",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-27",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-30",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-06",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-07",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-08",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-10",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-13",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-14",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-15",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-16",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-17",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-20",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-21",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-22",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-23",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-24",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-27",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-28",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-29",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-30",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-01",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-04",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-05",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-06",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-07",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-08",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-11",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-12",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-13",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-15",
+              "equity": 102127.68
+            }
+          ]
+        },
+        "experimentalPortfolioPass": true
+      },
+      "maximumRiskPerTradePct": 0.25,
+      "automaticRegistration": false,
+      "liveExecutionEnabled": false,
+      "reasonAr": "اجتاز كل البوابات الإلزامية وفشل 1 شرط مرن فقط. مخصص للتداول الورقي التجريبي منخفض المخاطر."
+    },
+    {
+      "ticker": "ETEL",
+      "companyNameAr": "المصرية للاتصالات",
+      "companyNameEn": "Telecom Egypt",
+      "sector": "غير مصنف",
+      "sessionId": "2026-10-15",
+      "tier": "TIER_A_EXPERIMENTAL_PAPER",
+      "status": "EXPERIMENTAL_PAPER",
+      "statusLabelAr": "مرشح ورقي تجريبي — ثقة متوسطة",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "variantId": "balanced",
+      "recommendationScore": 91.2,
+      "rawSignalScore": 89.7,
+      "hardFailureCount": 0,
+      "softFailureCount": 0,
+      "hardFailures": [],
+      "softFailures": [],
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "marketRegime": "BALANCED",
+      "exactFreshSession": "2026-10-15",
+      "price": 144.77,
+      "plan": {
+        "entryLow": 144.0837,
+        "entryHigh": 145.6279,
+        "stopLoss": 137.1301,
+        "target1": 158.7619,
+        "target2": 164.9425,
+        "riskPct": 5.333,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": -2.182,
+        "return20Pct": 22.479,
+        "relativeStrength20Pct": 35.411,
+        "rsi14": 65.94,
+        "atrPct": 3.951,
+        "volumeRatio20": 0.949,
+        "averageTurnover20Egp": 247433017,
+        "sma20": 136.3615,
+        "sma50": 120.679,
+        "support20": 115,
+        "resistance20": 156
+      },
+      "portfolioValidation": {
+        "strategyId": "trend_follow",
+        "strategyLabelAr": "اتجاه قوي مع سيولة",
+        "selectedVariantId": "balanced",
+        "originalStatus": "RESEARCH_ONLY",
+        "originalResearchValidated": false,
+        "originalValidationMetrics": {
+          "totalSignals": 275,
+          "closedTrades": 260,
+          "cancelledTrades": 15,
+          "wins": 91,
+          "losses": 169,
+          "winRatePct": 35,
+          "profitFactor": 0.706,
+          "averageReturnPct": -0.971,
+          "averageR": -0.183,
+          "medianR": -1.109,
+          "maxDrawdownPct": 98.09,
+          "drawdownMethod": "compounded_equity_peak_to_trough",
+          "startingEquityIndex": 100,
+          "endingEquityIndex": 4.9887,
+          "legacyAdditiveDrawdownPct": 359.39,
+          "sameBarStopFirstCount": 1
+        },
+        "portfolioMetrics": {
+          "acceptedTrades": 21,
+          "skippedCapacity": 239,
+          "riskPerTradePct": 0.25,
+          "maximumConcurrentTrades": 5,
+          "startingEquity": 100000,
+          "endingEquity": 102127.68,
+          "totalReturnPct": 2.128,
+          "profitFactor": 2.466,
+          "averageR": 0.271,
+          "maximumDrawdownPct": 0.592,
+          "method": "fixed_fractional_risk_portfolio_with_concurrency_limit",
+          "equityCurve": [
+            {
+              "date": "2026-08-05",
+              "equity": 100563.71
+            },
+            {
+              "date": "2026-08-06",
+              "equity": 100967.06
+            },
+            {
+              "date": "2026-08-09",
+              "equity": 100967.06
+            },
+            {
+              "date": "2026-08-11",
+              "equity": 101390.45
+            },
+            {
+              "date": "2026-08-12",
+              "equity": 101797.6
+            },
+            {
+              "date": "2026-08-13",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-16",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-23",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-27",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-30",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-06",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-07",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-08",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-10",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-13",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-14",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-15",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-16",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-17",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-20",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-21",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-22",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-23",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-24",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-27",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-28",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-29",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-30",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-01",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-04",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-05",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-06",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-07",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-08",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-11",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-12",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-13",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-15",
+              "equity": 102127.68
+            }
+          ]
+        },
+        "experimentalPortfolioPass": true
+      },
+      "maximumRiskPerTradePct": 0.25,
+      "automaticRegistration": false,
+      "liveExecutionEnabled": false,
+      "reasonAr": "اجتاز كل البوابات الإلزامية وفشل 0 شرط مرن فقط. مخصص للتداول الورقي التجريبي منخفض المخاطر."
+    },
+    {
+      "ticker": "AMIA",
+      "companyNameAr": "العربية للمحابس",
+      "companyNameEn": "Arab Moltaqa Investments Company",
+      "sector": "غير مصنف",
+      "sessionId": "2026-10-15",
+      "tier": "TIER_A_EXPERIMENTAL_PAPER",
+      "status": "EXPERIMENTAL_PAPER",
+      "statusLabelAr": "مرشح ورقي تجريبي — ثقة متوسطة",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "variantId": "balanced",
+      "recommendationScore": 83.3,
+      "rawSignalScore": 81.7,
+      "hardFailureCount": 0,
+      "softFailureCount": 1,
+      "hardFailures": [],
+      "softFailures": [
+        {
+          "id": "volumeRatio",
+          "labelAr": "دعم الحجم",
+          "detail": 0.76,
+          "classification": "soft"
+        }
+      ],
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "marketRegime": "BALANCED",
+      "exactFreshSession": "2026-10-15",
+      "price": 19,
+      "plan": {
+        "entryLow": 18.9068,
+        "entryHigh": 19.1165,
+        "stopLoss": 17.966,
+        "target1": 20.8938,
+        "target2": 21.7303,
+        "riskPct": 5.5,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": -0.938,
+        "return20Pct": 8.509,
+        "relativeStrength20Pct": 21.442,
+        "rsi14": 57.84,
+        "atrPct": 4.087,
+        "volumeRatio20": 0.765,
+        "averageTurnover20Egp": 16167192,
+        "sma20": 18.622,
+        "sma50": 17.3818,
+        "support20": 17.12,
+        "resistance20": 19.96
+      },
+      "portfolioValidation": {
+        "strategyId": "trend_follow",
+        "strategyLabelAr": "اتجاه قوي مع سيولة",
+        "selectedVariantId": "balanced",
+        "originalStatus": "RESEARCH_ONLY",
+        "originalResearchValidated": false,
+        "originalValidationMetrics": {
+          "totalSignals": 275,
+          "closedTrades": 260,
+          "cancelledTrades": 15,
+          "wins": 91,
+          "losses": 169,
+          "winRatePct": 35,
+          "profitFactor": 0.706,
+          "averageReturnPct": -0.971,
+          "averageR": -0.183,
+          "medianR": -1.109,
+          "maxDrawdownPct": 98.09,
+          "drawdownMethod": "compounded_equity_peak_to_trough",
+          "startingEquityIndex": 100,
+          "endingEquityIndex": 4.9887,
+          "legacyAdditiveDrawdownPct": 359.39,
+          "sameBarStopFirstCount": 1
+        },
+        "portfolioMetrics": {
+          "acceptedTrades": 21,
+          "skippedCapacity": 239,
+          "riskPerTradePct": 0.25,
+          "maximumConcurrentTrades": 5,
+          "startingEquity": 100000,
+          "endingEquity": 102127.68,
+          "totalReturnPct": 2.128,
+          "profitFactor": 2.466,
+          "averageR": 0.271,
+          "maximumDrawdownPct": 0.592,
+          "method": "fixed_fractional_risk_portfolio_with_concurrency_limit",
+          "equityCurve": [
+            {
+              "date": "2026-08-05",
+              "equity": 100563.71
+            },
+            {
+              "date": "2026-08-06",
+              "equity": 100967.06
+            },
+            {
+              "date": "2026-08-09",
+              "equity": 100967.06
+            },
+            {
+              "date": "2026-08-11",
+              "equity": 101390.45
+            },
+            {
+              "date": "2026-08-12",
+              "equity": 101797.6
+            },
+            {
+              "date": "2026-08-13",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-16",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-23",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-27",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-30",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-06",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-07",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-08",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-10",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-13",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-14",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-15",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-16",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-17",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-20",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-21",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-22",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-23",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-24",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-27",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-28",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-29",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-30",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-01",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-04",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-05",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-06",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-07",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-08",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-11",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-12",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-13",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-15",
+              "equity": 102127.68
+            }
+          ]
+        },
+        "experimentalPortfolioPass": true
+      },
+      "maximumRiskPerTradePct": 0.25,
+      "automaticRegistration": false,
+      "liveExecutionEnabled": false,
+      "reasonAr": "اجتاز كل البوابات الإلزامية وفشل 1 شرط مرن فقط. مخصص للتداول الورقي التجريبي منخفض المخاطر."
+    }
+  ],
+  "tierBPriorityWatch": [
+    {
+      "ticker": "GBCO",
+      "companyNameAr": "جي بي كوربوريشن",
+      "companyNameEn": "GB Corp",
+      "sector": "غير مصنف",
+      "sessionId": "2026-10-15",
+      "tier": "TIER_B_PRIORITY_WATCH",
+      "status": "PRIORITY_WATCH",
+      "statusLabelAr": "مراقبة أولوية — قريب من الاكتمال",
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "variantId": "wide",
+      "recommendationScore": 93.4,
+      "rawSignalScore": 91.8,
+      "hardFailureCount": 0,
+      "softFailureCount": 0,
+      "hardFailures": [],
+      "softFailures": [],
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "marketRegime": "BALANCED",
+      "exactFreshSession": "2026-10-15",
+      "price": 30.81,
+      "plan": {
+        "entryLow": 30.6592,
+        "entryHigh": 30.9984,
+        "stopLoss": 29.1333,
+        "target1": 33.8809,
+        "target2": 35.2374,
+        "riskPct": 5.5,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": -0.645,
+        "return20Pct": 2.02,
+        "relativeStrength20Pct": 14.952,
+        "rsi14": 52.64,
+        "atrPct": 4.078,
+        "volumeRatio20": 1.409,
+        "averageTurnover20Egp": 80251730,
+        "sma20": 30.5085,
+        "sma50": 30.3922,
+        "support20": 27,
+        "resistance20": 32.97
+      },
+      "portfolioValidation": {
+        "strategyId": "pullback",
+        "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+        "selectedVariantId": "wide",
+        "originalStatus": "RESEARCH_ONLY",
+        "originalResearchValidated": false,
+        "originalValidationMetrics": {
+          "totalSignals": 92,
+          "closedTrades": 85,
+          "cancelledTrades": 7,
+          "wins": 25,
+          "losses": 60,
+          "winRatePct": 29.41,
+          "profitFactor": 0.472,
+          "averageReturnPct": -1.652,
+          "averageR": -0.323,
+          "medianR": -1.103,
+          "maxDrawdownPct": 84.765,
+          "drawdownMethod": "compounded_equity_peak_to_trough",
+          "startingEquityIndex": 100,
+          "endingEquityIndex": 21.9496,
+          "legacyAdditiveDrawdownPct": 179.246,
+          "sameBarStopFirstCount": 1
+        },
+        "portfolioMetrics": {
+          "acceptedTrades": 45,
+          "skippedCapacity": 40,
+          "riskPerTradePct": 0.25,
+          "maximumConcurrentTrades": 5,
+          "startingEquity": 100000,
+          "endingEquity": 97339.57,
+          "totalReturnPct": -2.66,
+          "profitFactor": 0.611,
+          "averageR": -0.31,
+          "maximumDrawdownPct": 4.844,
+          "method": "fixed_fractional_risk_portfolio_with_concurrency_limit",
+          "equityCurve": [
+            {
+              "date": "2026-06-29",
+              "equity": 99986.89
+            },
+            {
+              "date": "2026-07-05",
+              "equity": 99986.89
+            },
+            {
+              "date": "2026-07-08",
+              "equity": 100405.83
+            },
+            {
+              "date": "2026-07-14",
+              "equity": 100127.46
+            },
+            {
+              "date": "2026-08-04",
+              "equity": 100127.46
+            },
+            {
+              "date": "2026-08-05",
+              "equity": 100550.75
+            },
+            {
+              "date": "2026-08-06",
+              "equity": 100955.76
+            },
+            {
+              "date": "2026-08-09",
+              "equity": 100955.76
+            },
+            {
+              "date": "2026-08-11",
+              "equity": 101063.67
+            },
+            {
+              "date": "2026-08-12",
+              "equity": 101490.51
+            },
+            {
+              "date": "2026-08-13",
+              "equity": 101490.51
+            },
+            {
+              "date": "2026-08-16",
+              "equity": 101905.1
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 102038.39
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 102294.47
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 101419.71
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-23",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-30",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 100536.93
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 100536.93
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 100502.26
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 100502.26
+            },
+            {
+              "date": "2026-09-06",
+              "equity": 100398.94
+            },
+            {
+              "date": "2026-09-07",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-08",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-10",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-13",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-14",
+              "equity": 100247.01
+            },
+            {
+              "date": "2026-09-15",
+              "equity": 100247.01
+            },
+            {
+              "date": "2026-09-16",
+              "equity": 100033.44
+            },
+            {
+              "date": "2026-09-17",
+              "equity": 100033.44
+            },
+            {
+              "date": "2026-09-20",
+              "equity": 99905.8
+            },
+            {
+              "date": "2026-09-21",
+              "equity": 99418.48
+            },
+            {
+              "date": "2026-09-23",
+              "equity": 99418.48
+            },
+            {
+              "date": "2026-09-24",
+              "equity": 98589.65
+            },
+            {
+              "date": "2026-09-27",
+              "equity": 98316.31
+            },
+            {
+              "date": "2026-09-28",
+              "equity": 98316.31
+            },
+            {
+              "date": "2026-09-29",
+              "equity": 98316.31
+            },
+            {
+              "date": "2026-09-30",
+              "equity": 98043.72
+            },
+            {
+              "date": "2026-10-05",
+              "equity": 98043.72
+            },
+            {
+              "date": "2026-10-06",
+              "equity": 98043.72
+            },
+            {
+              "date": "2026-10-07",
+              "equity": 97771.9
+            },
+            {
+              "date": "2026-10-08",
+              "equity": 97771.9
+            },
+            {
+              "date": "2026-10-11",
+              "equity": 97771.9
+            },
+            {
+              "date": "2026-10-12",
+              "equity": 97387.24
+            },
+            {
+              "date": "2026-10-13",
+              "equity": 97387.24
+            },
+            {
+              "date": "2026-10-15",
+              "equity": 97339.57
+            }
+          ]
+        },
+        "experimentalPortfolioPass": false
+      },
+      "maximumRiskPerTradePct": 0,
+      "automaticRegistration": false,
+      "liveExecutionEnabled": false,
+      "reasonAr": "اجتاز البوابات الإلزامية لكنه يحتاج تحسن 0 شرط مرن قبل رفعه إلى الطبقة التجريبية."
+    },
+    {
+      "ticker": "SNFC",
+      "companyNameAr": "الشرقية الوطنية للأمن الغذائي",
+      "companyNameEn": "Sharkia National Company for Food Security",
+      "sector": "غير مصنف",
+      "sessionId": "2026-10-15",
+      "tier": "TIER_B_PRIORITY_WATCH",
+      "status": "PRIORITY_WATCH",
+      "statusLabelAr": "مراقبة أولوية — قريب من الاكتمال",
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "variantId": "wide",
+      "recommendationScore": 88.3,
+      "rawSignalScore": 86.7,
+      "hardFailureCount": 0,
+      "softFailureCount": 0,
+      "hardFailures": [],
+      "softFailures": [],
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "marketRegime": "BALANCED",
+      "exactFreshSession": "2026-10-15",
+      "price": 11.26,
+      "plan": {
+        "entryLow": 11.2229,
+        "entryHigh": 11.3063,
+        "stopLoss": 10.8476,
+        "target1": 12.0152,
+        "target2": 12.3489,
+        "riskPct": 3.702,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": -3.265,
+        "return20Pct": 0.987,
+        "relativeStrength20Pct": 13.919,
+        "rsi14": 48.7,
+        "atrPct": 2.742,
+        "volumeRatio20": 0.74,
+        "averageTurnover20Egp": 11988607,
+        "sma20": 11.401,
+        "sma50": 11.1208,
+        "support20": 10.58,
+        "resistance20": 11.8
+      },
+      "portfolioValidation": {
+        "strategyId": "pullback",
+        "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+        "selectedVariantId": "wide",
+        "originalStatus": "RESEARCH_ONLY",
+        "originalResearchValidated": false,
+        "originalValidationMetrics": {
+          "totalSignals": 92,
+          "closedTrades": 85,
+          "cancelledTrades": 7,
+          "wins": 25,
+          "losses": 60,
+          "winRatePct": 29.41,
+          "profitFactor": 0.472,
+          "averageReturnPct": -1.652,
+          "averageR": -0.323,
+          "medianR": -1.103,
+          "maxDrawdownPct": 84.765,
+          "drawdownMethod": "compounded_equity_peak_to_trough",
+          "startingEquityIndex": 100,
+          "endingEquityIndex": 21.9496,
+          "legacyAdditiveDrawdownPct": 179.246,
+          "sameBarStopFirstCount": 1
+        },
+        "portfolioMetrics": {
+          "acceptedTrades": 45,
+          "skippedCapacity": 40,
+          "riskPerTradePct": 0.25,
+          "maximumConcurrentTrades": 5,
+          "startingEquity": 100000,
+          "endingEquity": 97339.57,
+          "totalReturnPct": -2.66,
+          "profitFactor": 0.611,
+          "averageR": -0.31,
+          "maximumDrawdownPct": 4.844,
+          "method": "fixed_fractional_risk_portfolio_with_concurrency_limit",
+          "equityCurve": [
+            {
+              "date": "2026-06-29",
+              "equity": 99986.89
+            },
+            {
+              "date": "2026-07-05",
+              "equity": 99986.89
+            },
+            {
+              "date": "2026-07-08",
+              "equity": 100405.83
+            },
+            {
+              "date": "2026-07-14",
+              "equity": 100127.46
+            },
+            {
+              "date": "2026-08-04",
+              "equity": 100127.46
+            },
+            {
+              "date": "2026-08-05",
+              "equity": 100550.75
+            },
+            {
+              "date": "2026-08-06",
+              "equity": 100955.76
+            },
+            {
+              "date": "2026-08-09",
+              "equity": 100955.76
+            },
+            {
+              "date": "2026-08-11",
+              "equity": 101063.67
+            },
+            {
+              "date": "2026-08-12",
+              "equity": 101490.51
+            },
+            {
+              "date": "2026-08-13",
+              "equity": 101490.51
+            },
+            {
+              "date": "2026-08-16",
+              "equity": 101905.1
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 102038.39
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 102294.47
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 101419.71
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-23",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-30",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 100536.93
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 100536.93
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 100502.26
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 100502.26
+            },
+            {
+              "date": "2026-09-06",
+              "equity": 100398.94
+            },
+            {
+              "date": "2026-09-07",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-08",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-10",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-13",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-14",
+              "equity": 100247.01
+            },
+            {
+              "date": "2026-09-15",
+              "equity": 100247.01
+            },
+            {
+              "date": "2026-09-16",
+              "equity": 100033.44
+            },
+            {
+              "date": "2026-09-17",
+              "equity": 100033.44
+            },
+            {
+              "date": "2026-09-20",
+              "equity": 99905.8
+            },
+            {
+              "date": "2026-09-21",
+              "equity": 99418.48
+            },
+            {
+              "date": "2026-09-23",
+              "equity": 99418.48
+            },
+            {
+              "date": "2026-09-24",
+              "equity": 98589.65
+            },
+            {
+              "date": "2026-09-27",
+              "equity": 98316.31
+            },
+            {
+              "date": "2026-09-28",
+              "equity": 98316.31
+            },
+            {
+              "date": "2026-09-29",
+              "equity": 98316.31
+            },
+            {
+              "date": "2026-09-30",
+              "equity": 98043.72
+            },
+            {
+              "date": "2026-10-05",
+              "equity": 98043.72
+            },
+            {
+              "date": "2026-10-06",
+              "equity": 98043.72
+            },
+            {
+              "date": "2026-10-07",
+              "equity": 97771.9
+            },
+            {
+              "date": "2026-10-08",
+              "equity": 97771.9
+            },
+            {
+              "date": "2026-10-11",
+              "equity": 97771.9
+            },
+            {
+              "date": "2026-10-12",
+              "equity": 97387.24
+            },
+            {
+              "date": "2026-10-13",
+              "equity": 97387.24
+            },
+            {
+              "date": "2026-10-15",
+              "equity": 97339.57
+            }
+          ]
+        },
+        "experimentalPortfolioPass": false
+      },
+      "maximumRiskPerTradePct": 0,
+      "automaticRegistration": false,
+      "liveExecutionEnabled": false,
+      "reasonAr": "اجتاز البوابات الإلزامية لكنه يحتاج تحسن 0 شرط مرن قبل رفعه إلى الطبقة التجريبية."
+    },
+    {
+      "ticker": "SUGR",
+      "companyNameAr": "الدلتا للسكر",
+      "companyNameEn": "Delta Sugar Company",
+      "sector": "غير مصنف",
+      "sessionId": "2026-10-15",
+      "tier": "TIER_B_PRIORITY_WATCH",
+      "status": "PRIORITY_WATCH",
+      "statusLabelAr": "مراقبة أولوية — قريب من الاكتمال",
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "variantId": "wide",
+      "recommendationScore": 85.4,
+      "rawSignalScore": 83.6,
+      "hardFailureCount": 0,
+      "softFailureCount": 0,
+      "hardFailures": [],
+      "softFailures": [],
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "marketRegime": "BALANCED",
+      "exactFreshSession": "2026-10-15",
+      "price": 58.12,
+      "plan": {
+        "entryLow": 57.7879,
+        "entryHigh": 58.5351,
+        "stopLoss": 54.9626,
+        "target1": 63.9195,
+        "target2": 66.4786,
+        "riskPct": 5.5,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": 4.438,
+        "return20Pct": -4.721,
+        "relativeStrength20Pct": 8.211,
+        "rsi14": 57.17,
+        "atrPct": 4.761,
+        "volumeRatio20": 1.524,
+        "averageTurnover20Egp": 13217781,
+        "sma20": 57.1035,
+        "sma50": 53.4776,
+        "support20": 50.5,
+        "resistance20": 64.4
+      },
+      "portfolioValidation": {
+        "strategyId": "pullback",
+        "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+        "selectedVariantId": "wide",
+        "originalStatus": "RESEARCH_ONLY",
+        "originalResearchValidated": false,
+        "originalValidationMetrics": {
+          "totalSignals": 92,
+          "closedTrades": 85,
+          "cancelledTrades": 7,
+          "wins": 25,
+          "losses": 60,
+          "winRatePct": 29.41,
+          "profitFactor": 0.472,
+          "averageReturnPct": -1.652,
+          "averageR": -0.323,
+          "medianR": -1.103,
+          "maxDrawdownPct": 84.765,
+          "drawdownMethod": "compounded_equity_peak_to_trough",
+          "startingEquityIndex": 100,
+          "endingEquityIndex": 21.9496,
+          "legacyAdditiveDrawdownPct": 179.246,
+          "sameBarStopFirstCount": 1
+        },
+        "portfolioMetrics": {
+          "acceptedTrades": 45,
+          "skippedCapacity": 40,
+          "riskPerTradePct": 0.25,
+          "maximumConcurrentTrades": 5,
+          "startingEquity": 100000,
+          "endingEquity": 97339.57,
+          "totalReturnPct": -2.66,
+          "profitFactor": 0.611,
+          "averageR": -0.31,
+          "maximumDrawdownPct": 4.844,
+          "method": "fixed_fractional_risk_portfolio_with_concurrency_limit",
+          "equityCurve": [
+            {
+              "date": "2026-06-29",
+              "equity": 99986.89
+            },
+            {
+              "date": "2026-07-05",
+              "equity": 99986.89
+            },
+            {
+              "date": "2026-07-08",
+              "equity": 100405.83
+            },
+            {
+              "date": "2026-07-14",
+              "equity": 100127.46
+            },
+            {
+              "date": "2026-08-04",
+              "equity": 100127.46
+            },
+            {
+              "date": "2026-08-05",
+              "equity": 100550.75
+            },
+            {
+              "date": "2026-08-06",
+              "equity": 100955.76
+            },
+            {
+              "date": "2026-08-09",
+              "equity": 100955.76
+            },
+            {
+              "date": "2026-08-11",
+              "equity": 101063.67
+            },
+            {
+              "date": "2026-08-12",
+              "equity": 101490.51
+            },
+            {
+              "date": "2026-08-13",
+              "equity": 101490.51
+            },
+            {
+              "date": "2026-08-16",
+              "equity": 101905.1
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 102038.39
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 102294.47
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 101419.71
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-23",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-30",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 100536.93
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 100536.93
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 100502.26
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 100502.26
+            },
+            {
+              "date": "2026-09-06",
+              "equity": 100398.94
+            },
+            {
+              "date": "2026-09-07",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-08",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-10",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-13",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-14",
+              "equity": 100247.01
+            },
+            {
+              "date": "2026-09-15",
+              "equity": 100247.01
+            },
+            {
+              "date": "2026-09-16",
+              "equity": 100033.44
+            },
+            {
+              "date": "2026-09-17",
+              "equity": 100033.44
+            },
+            {
+              "date": "2026-09-20",
+              "equity": 99905.8
+            },
+            {
+              "date": "2026-09-21",
+              "equity": 99418.48
+            },
+            {
+              "date": "2026-09-23",
+              "equity": 99418.48
+            },
+            {
+              "date": "2026-09-24",
+              "equity": 98589.65
+            },
+            {
+              "date": "2026-09-27",
+              "equity": 98316.31
+            },
+            {
+              "date": "2026-09-28",
+              "equity": 98316.31
+            },
+            {
+              "date": "2026-09-29",
+              "equity": 98316.31
+            },
+            {
+              "date": "2026-09-30",
+              "equity": 98043.72
+            },
+            {
+              "date": "2026-10-05",
+              "equity": 98043.72
+            },
+            {
+              "date": "2026-10-06",
+              "equity": 98043.72
+            },
+            {
+              "date": "2026-10-07",
+              "equity": 97771.9
+            },
+            {
+              "date": "2026-10-08",
+              "equity": 97771.9
+            },
+            {
+              "date": "2026-10-11",
+              "equity": 97771.9
+            },
+            {
+              "date": "2026-10-12",
+              "equity": 97387.24
+            },
+            {
+              "date": "2026-10-13",
+              "equity": 97387.24
+            },
+            {
+              "date": "2026-10-15",
+              "equity": 97339.57
+            }
+          ]
+        },
+        "experimentalPortfolioPass": false
+      },
+      "maximumRiskPerTradePct": 0,
+      "automaticRegistration": false,
+      "liveExecutionEnabled": false,
+      "reasonAr": "اجتاز البوابات الإلزامية لكنه يحتاج تحسن 0 شرط مرن قبل رفعه إلى الطبقة التجريبية."
+    },
+    {
+      "ticker": "ORWE",
+      "companyNameAr": "النساجون الشرقيون",
+      "companyNameEn": "Oriental Weavers Carpets Company",
+      "sector": "غير مصنف",
+      "sessionId": "2026-10-15",
+      "tier": "TIER_B_PRIORITY_WATCH",
+      "status": "PRIORITY_WATCH",
+      "statusLabelAr": "مراقبة أولوية — قريب من الاكتمال",
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "variantId": "wide",
+      "recommendationScore": 82.9,
+      "rawSignalScore": 81.4,
+      "hardFailureCount": 0,
+      "softFailureCount": 0,
+      "hardFailures": [],
+      "softFailures": [],
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "marketRegime": "BALANCED",
+      "exactFreshSession": "2026-10-15",
+      "price": 27.77,
+      "plan": {
+        "entryLow": 27.671,
+        "entryHigh": 27.8937,
+        "stopLoss": 26.6686,
+        "target1": 29.7872,
+        "target2": 30.6782,
+        "riskPct": 4.009,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": 2.321,
+        "return20Pct": 4.556,
+        "relativeStrength20Pct": 17.488,
+        "rsi14": 58.12,
+        "atrPct": 2.97,
+        "volumeRatio20": 1.51,
+        "averageTurnover20Egp": 40048536,
+        "sma20": 27.2225,
+        "sma50": 26.3254,
+        "support20": 26.01,
+        "resistance20": 28.61
+      },
+      "portfolioValidation": {
+        "strategyId": "pullback",
+        "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+        "selectedVariantId": "wide",
+        "originalStatus": "RESEARCH_ONLY",
+        "originalResearchValidated": false,
+        "originalValidationMetrics": {
+          "totalSignals": 92,
+          "closedTrades": 85,
+          "cancelledTrades": 7,
+          "wins": 25,
+          "losses": 60,
+          "winRatePct": 29.41,
+          "profitFactor": 0.472,
+          "averageReturnPct": -1.652,
+          "averageR": -0.323,
+          "medianR": -1.103,
+          "maxDrawdownPct": 84.765,
+          "drawdownMethod": "compounded_equity_peak_to_trough",
+          "startingEquityIndex": 100,
+          "endingEquityIndex": 21.9496,
+          "legacyAdditiveDrawdownPct": 179.246,
+          "sameBarStopFirstCount": 1
+        },
+        "portfolioMetrics": {
+          "acceptedTrades": 45,
+          "skippedCapacity": 40,
+          "riskPerTradePct": 0.25,
+          "maximumConcurrentTrades": 5,
+          "startingEquity": 100000,
+          "endingEquity": 97339.57,
+          "totalReturnPct": -2.66,
+          "profitFactor": 0.611,
+          "averageR": -0.31,
+          "maximumDrawdownPct": 4.844,
+          "method": "fixed_fractional_risk_portfolio_with_concurrency_limit",
+          "equityCurve": [
+            {
+              "date": "2026-06-29",
+              "equity": 99986.89
+            },
+            {
+              "date": "2026-07-05",
+              "equity": 99986.89
+            },
+            {
+              "date": "2026-07-08",
+              "equity": 100405.83
+            },
+            {
+              "date": "2026-07-14",
+              "equity": 100127.46
+            },
+            {
+              "date": "2026-08-04",
+              "equity": 100127.46
+            },
+            {
+              "date": "2026-08-05",
+              "equity": 100550.75
+            },
+            {
+              "date": "2026-08-06",
+              "equity": 100955.76
+            },
+            {
+              "date": "2026-08-09",
+              "equity": 100955.76
+            },
+            {
+              "date": "2026-08-11",
+              "equity": 101063.67
+            },
+            {
+              "date": "2026-08-12",
+              "equity": 101490.51
+            },
+            {
+              "date": "2026-08-13",
+              "equity": 101490.51
+            },
+            {
+              "date": "2026-08-16",
+              "equity": 101905.1
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 102038.39
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 102294.47
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 101419.71
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-23",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-30",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 100536.93
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 100536.93
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 100502.26
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 100502.26
+            },
+            {
+              "date": "2026-09-06",
+              "equity": 100398.94
+            },
+            {
+              "date": "2026-09-07",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-08",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-10",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-13",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-14",
+              "equity": 100247.01
+            },
+            {
+              "date": "2026-09-15",
+              "equity": 100247.01
+            },
+            {
+              "date": "2026-09-16",
+              "equity": 100033.44
+            },
+            {
+              "date": "2026-09-17",
+              "equity": 100033.44
+            },
+            {
+              "date": "2026-09-20",
+              "equity": 99905.8
+            },
+            {
+              "date": "2026-09-21",
+              "equity": 99418.48
+            },
+            {
+              "date": "2026-09-23",
+              "equity": 99418.48
+            },
+            {
+              "date": "2026-09-24",
+              "equity": 98589.65
+            },
+            {
+              "date": "2026-09-27",
+              "equity": 98316.31
+            },
+            {
+              "date": "2026-09-28",
+              "equity": 98316.31
+            },
+            {
+              "date": "2026-09-29",
+              "equity": 98316.31
+            },
+            {
+              "date": "2026-09-30",
+              "equity": 98043.72
+            },
+            {
+              "date": "2026-10-05",
+              "equity": 98043.72
+            },
+            {
+              "date": "2026-10-06",
+              "equity": 98043.72
+            },
+            {
+              "date": "2026-10-07",
+              "equity": 97771.9
+            },
+            {
+              "date": "2026-10-08",
+              "equity": 97771.9
+            },
+            {
+              "date": "2026-10-11",
+              "equity": 97771.9
+            },
+            {
+              "date": "2026-10-12",
+              "equity": 97387.24
+            },
+            {
+              "date": "2026-10-13",
+              "equity": 97387.24
+            },
+            {
+              "date": "2026-10-15",
+              "equity": 97339.57
+            }
+          ]
+        },
+        "experimentalPortfolioPass": false
+      },
+      "maximumRiskPerTradePct": 0,
+      "automaticRegistration": false,
+      "liveExecutionEnabled": false,
+      "reasonAr": "اجتاز البوابات الإلزامية لكنه يحتاج تحسن 0 شرط مرن قبل رفعه إلى الطبقة التجريبية."
+    },
+    {
+      "ticker": "ICID",
+      "companyNameAr": "الدولية للاستثمار والتنمية",
+      "companyNameEn": "International Co. For Investment & Development",
+      "sector": "غير مصنف",
+      "sessionId": "2026-10-15",
+      "tier": "TIER_B_PRIORITY_WATCH",
+      "status": "PRIORITY_WATCH",
+      "statusLabelAr": "مراقبة أولوية — قريب من الاكتمال",
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "variantId": "wide",
+      "recommendationScore": 80,
+      "rawSignalScore": 78.3,
+      "hardFailureCount": 0,
+      "softFailureCount": 0,
+      "hardFailures": [],
+      "softFailures": [],
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "marketRegime": "BALANCED",
+      "exactFreshSession": "2026-10-15",
+      "price": 18.21,
+      "plan": {
+        "entryLow": 18.1007,
+        "entryHigh": 18.3467,
+        "stopLoss": 17.2214,
+        "target1": 20.0279,
+        "target2": 20.8297,
+        "riskPct": 5.5,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": 0.22,
+        "return20Pct": -0.383,
+        "relativeStrength20Pct": 12.55,
+        "rsi14": 57.93,
+        "atrPct": 5.004,
+        "volumeRatio20": 0.637,
+        "averageTurnover20Egp": 7790311,
+        "sma20": 17.9155,
+        "sma50": 16.048,
+        "support20": 16.52,
+        "resistance20": 20
+      },
+      "portfolioValidation": {
+        "strategyId": "pullback",
+        "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+        "selectedVariantId": "wide",
+        "originalStatus": "RESEARCH_ONLY",
+        "originalResearchValidated": false,
+        "originalValidationMetrics": {
+          "totalSignals": 92,
+          "closedTrades": 85,
+          "cancelledTrades": 7,
+          "wins": 25,
+          "losses": 60,
+          "winRatePct": 29.41,
+          "profitFactor": 0.472,
+          "averageReturnPct": -1.652,
+          "averageR": -0.323,
+          "medianR": -1.103,
+          "maxDrawdownPct": 84.765,
+          "drawdownMethod": "compounded_equity_peak_to_trough",
+          "startingEquityIndex": 100,
+          "endingEquityIndex": 21.9496,
+          "legacyAdditiveDrawdownPct": 179.246,
+          "sameBarStopFirstCount": 1
+        },
+        "portfolioMetrics": {
+          "acceptedTrades": 45,
+          "skippedCapacity": 40,
+          "riskPerTradePct": 0.25,
+          "maximumConcurrentTrades": 5,
+          "startingEquity": 100000,
+          "endingEquity": 97339.57,
+          "totalReturnPct": -2.66,
+          "profitFactor": 0.611,
+          "averageR": -0.31,
+          "maximumDrawdownPct": 4.844,
+          "method": "fixed_fractional_risk_portfolio_with_concurrency_limit",
+          "equityCurve": [
+            {
+              "date": "2026-06-29",
+              "equity": 99986.89
+            },
+            {
+              "date": "2026-07-05",
+              "equity": 99986.89
+            },
+            {
+              "date": "2026-07-08",
+              "equity": 100405.83
+            },
+            {
+              "date": "2026-07-14",
+              "equity": 100127.46
+            },
+            {
+              "date": "2026-08-04",
+              "equity": 100127.46
+            },
+            {
+              "date": "2026-08-05",
+              "equity": 100550.75
+            },
+            {
+              "date": "2026-08-06",
+              "equity": 100955.76
+            },
+            {
+              "date": "2026-08-09",
+              "equity": 100955.76
+            },
+            {
+              "date": "2026-08-11",
+              "equity": 101063.67
+            },
+            {
+              "date": "2026-08-12",
+              "equity": 101490.51
+            },
+            {
+              "date": "2026-08-13",
+              "equity": 101490.51
+            },
+            {
+              "date": "2026-08-16",
+              "equity": 101905.1
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 102038.39
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 102294.47
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 101419.71
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-23",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-30",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 100536.93
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 100536.93
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 100502.26
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 100502.26
+            },
+            {
+              "date": "2026-09-06",
+              "equity": 100398.94
+            },
+            {
+              "date": "2026-09-07",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-08",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-10",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-13",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-14",
+              "equity": 100247.01
+            },
+            {
+              "date": "2026-09-15",
+              "equity": 100247.01
+            },
+            {
+              "date": "2026-09-16",
+              "equity": 100033.44
+            },
+            {
+              "date": "2026-09-17",
+              "equity": 100033.44
+            },
+            {
+              "date": "2026-09-20",
+              "equity": 99905.8
+            },
+            {
+              "date": "2026-09-21",
+              "equity": 99418.48
+            },
+            {
+              "date": "2026-09-23",
+              "equity": 99418.48
+            },
+            {
+              "date": "2026-09-24",
+              "equity": 98589.65
+            },
+            {
+              "date": "2026-09-27",
+              "equity": 98316.31
+            },
+            {
+              "date": "2026-09-28",
+              "equity": 98316.31
+            },
+            {
+              "date": "2026-09-29",
+              "equity": 98316.31
+            },
+            {
+              "date": "2026-09-30",
+              "equity": 98043.72
+            },
+            {
+              "date": "2026-10-05",
+              "equity": 98043.72
+            },
+            {
+              "date": "2026-10-06",
+              "equity": 98043.72
+            },
+            {
+              "date": "2026-10-07",
+              "equity": 97771.9
+            },
+            {
+              "date": "2026-10-08",
+              "equity": 97771.9
+            },
+            {
+              "date": "2026-10-11",
+              "equity": 97771.9
+            },
+            {
+              "date": "2026-10-12",
+              "equity": 97387.24
+            },
+            {
+              "date": "2026-10-13",
+              "equity": 97387.24
+            },
+            {
+              "date": "2026-10-15",
+              "equity": 97339.57
+            }
+          ]
+        },
+        "experimentalPortfolioPass": false
+      },
+      "maximumRiskPerTradePct": 0,
+      "automaticRegistration": false,
+      "liveExecutionEnabled": false,
+      "reasonAr": "اجتاز البوابات الإلزامية لكنه يحتاج تحسن 0 شرط مرن قبل رفعه إلى الطبقة التجريبية."
+    },
+    {
+      "ticker": "AJWA",
+      "companyNameAr": "أجواء للصناعات الغذائية",
+      "companyNameEn": "AJWA For Food Industries Egypt",
+      "sector": "غير مصنف",
+      "sessionId": "2026-10-15",
+      "tier": "TIER_B_PRIORITY_WATCH",
+      "status": "PRIORITY_WATCH",
+      "statusLabelAr": "مراقبة أولوية — قريب من الاكتمال",
+      "strategyId": "breakout",
+      "strategyLabelAr": "اختراق مؤكد",
+      "variantId": "early",
+      "recommendationScore": 79.9,
+      "rawSignalScore": 78.2,
+      "hardFailureCount": 0,
+      "softFailureCount": 1,
+      "hardFailures": [],
+      "softFailures": [
+        {
+          "id": "rsiRange",
+          "labelAr": "منطقة RSI",
+          "detail": 84.9,
+          "classification": "soft"
+        }
+      ],
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "marketRegime": "BALANCED",
+      "exactFreshSession": "2026-10-15",
+      "price": 227,
+      "plan": {
+        "entryLow": 226.0632,
+        "entryHigh": 228.1709,
+        "stopLoss": 215.4016,
+        "target1": 248.205,
+        "target2": 257.5773,
+        "riskPct": 5.158,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": 15.722,
+        "return20Pct": 26.181,
+        "relativeStrength20Pct": 39.114,
+        "rsi14": 84.95,
+        "atrPct": 3.439,
+        "volumeRatio20": 1.076,
+        "averageTurnover20Egp": 29658407,
+        "sma20": 189.478,
+        "sma50": 187.0078,
+        "support20": 176,
+        "resistance20": 215.7
+      },
+      "portfolioValidation": {
+        "strategyId": "breakout",
+        "strategyLabelAr": "اختراق مؤكد",
+        "selectedVariantId": "early",
+        "originalStatus": "RESEARCH_ONLY",
+        "originalResearchValidated": false,
+        "originalValidationMetrics": {
+          "totalSignals": 62,
+          "closedTrades": 58,
+          "cancelledTrades": 4,
+          "wins": 19,
+          "losses": 39,
+          "winRatePct": 32.76,
+          "profitFactor": 0.832,
+          "averageReturnPct": -0.524,
+          "averageR": -0.184,
+          "medianR": -1.109,
+          "maxDrawdownPct": 45.214,
+          "drawdownMethod": "compounded_equity_peak_to_trough",
+          "startingEquityIndex": 100,
+          "endingEquityIndex": 66.4244,
+          "legacyAdditiveDrawdownPct": 54.303,
+          "sameBarStopFirstCount": 1
+        },
+        "portfolioMetrics": {
+          "acceptedTrades": 25,
+          "skippedCapacity": 33,
+          "riskPerTradePct": 0.25,
+          "maximumConcurrentTrades": 5,
+          "startingEquity": 100000,
+          "endingEquity": 99443.94,
+          "totalReturnPct": -0.556,
+          "profitFactor": 0.839,
+          "averageR": -0.096,
+          "maximumDrawdownPct": 1.135,
+          "method": "fixed_fractional_risk_portfolio_with_concurrency_limit",
+          "equityCurve": [
+            {
+              "date": "2026-06-02",
+              "equity": 99699
+            },
+            {
+              "date": "2026-06-08",
+              "equity": 99699
+            },
+            {
+              "date": "2026-06-10",
+              "equity": 99422.58
+            },
+            {
+              "date": "2026-06-11",
+              "equity": 99126.73
+            },
+            {
+              "date": "2026-07-06",
+              "equity": 99126.73
+            },
+            {
+              "date": "2026-07-15",
+              "equity": 99530.17
+            },
+            {
+              "date": "2026-07-27",
+              "equity": 99530.17
+            },
+            {
+              "date": "2026-07-28",
+              "equity": 99530.17
+            },
+            {
+              "date": "2026-07-29",
+              "equity": 99238.3
+            },
+            {
+              "date": "2026-08-04",
+              "equity": 99238.3
+            },
+            {
+              "date": "2026-08-05",
+              "equity": 99238.3
+            },
+            {
+              "date": "2026-08-06",
+              "equity": 98963.16
+            },
+            {
+              "date": "2026-08-09",
+              "equity": 98963.16
+            },
+            {
+              "date": "2026-08-10",
+              "equity": 98929.32
+            },
+            {
+              "date": "2026-08-11",
+              "equity": 99754.35
+            },
+            {
+              "date": "2026-08-12",
+              "equity": 100159.49
+            },
+            {
+              "date": "2026-08-13",
+              "equity": 99588.83
+            },
+            {
+              "date": "2026-08-16",
+              "equity": 99588.83
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 99588.83
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 99588.83
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 100012.26
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 99443.44
+            },
+            {
+              "date": "2026-08-23",
+              "equity": 99443.44
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 99144.68
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 99144.68
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 99144.68
+            },
+            {
+              "date": "2026-08-27",
+              "equity": 99558.61
+            },
+            {
+              "date": "2026-08-30",
+              "equity": 99023.06
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 99443.94
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 99443.94
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 99443.94
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 99443.94
+            },
+            {
+              "date": "2026-09-06",
+              "equity": 99443.94
+            },
+            {
+              "date": "2026-09-07",
+              "equity": 99443.94
+            },
+            {
+              "date": "2026-09-08",
+              "equity": 99443.94
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 99443.94
+            },
+            {
+              "date": "2026-09-10",
+              "equity": 99443.94
+            },
+            {
+              "date": "2026-09-13",
+              "equity": 99443.94
+            },
+            {
+              "date": "2026-09-14",
+              "equity": 99443.94
+            },
+            {
+              "date": "2026-09-15",
+              "equity": 99443.94
+            },
+            {
+              "date": "2026-09-20",
+              "equity": 99443.94
+            },
+            {
+              "date": "2026-09-21",
+              "equity": 99443.94
+            },
+            {
+              "date": "2026-09-22",
+              "equity": 99443.94
+            },
+            {
+              "date": "2026-09-23",
+              "equity": 99443.94
+            },
+            {
+              "date": "2026-09-24",
+              "equity": 99443.94
+            },
+            {
+              "date": "2026-09-27",
+              "equity": 99443.94
+            },
+            {
+              "date": "2026-09-28",
+              "equity": 99443.94
+            },
+            {
+              "date": "2026-10-07",
+              "equity": 99443.94
+            },
+            {
+              "date": "2026-10-12",
+              "equity": 99443.94
+            },
+            {
+              "date": "2026-10-13",
+              "equity": 99443.94
+            }
+          ]
+        },
+        "experimentalPortfolioPass": false
+      },
+      "maximumRiskPerTradePct": 0,
+      "automaticRegistration": false,
+      "liveExecutionEnabled": false,
+      "reasonAr": "اجتاز البوابات الإلزامية لكنه يحتاج تحسن 1 شرط مرن قبل رفعه إلى الطبقة التجريبية."
+    },
+    {
+      "ticker": "KZPC",
+      "companyNameAr": "كفر الزيات للمبيدات",
+      "companyNameEn": "Kafr El Zayat For Pesticides & Chemicals",
+      "sector": "غير مصنف",
+      "sessionId": "2026-10-15",
+      "tier": "TIER_B_PRIORITY_WATCH",
+      "status": "PRIORITY_WATCH",
+      "statusLabelAr": "مراقبة أولوية — قريب من الاكتمال",
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "variantId": "wide",
+      "recommendationScore": 90,
+      "rawSignalScore": 88.5,
+      "hardFailureCount": 0,
+      "softFailureCount": 2,
+      "hardFailures": [],
+      "softFailures": [
+        {
+          "id": "volumeRatioFloor",
+          "labelAr": "نشاط الحجم الحالي",
+          "detail": 0.59,
+          "classification": "soft"
+        },
+        {
+          "id": "volumeRatio",
+          "labelAr": "سيولة كافية",
+          "detail": 0.59,
+          "classification": "soft"
+        }
+      ],
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "marketRegime": "BALANCED",
+      "exactFreshSession": "2026-10-15",
+      "price": 13.5,
+      "plan": {
+        "entryLow": 13.4223,
+        "entryHigh": 13.5972,
+        "stopLoss": 12.7667,
+        "target1": 14.8472,
+        "target2": 15.4416,
+        "riskPct": 5.5,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": 2.506,
+        "return20Pct": -3.017,
+        "relativeStrength20Pct": 9.915,
+        "rsi14": 56.01,
+        "atrPct": 4.798,
+        "volumeRatio20": 0.586,
+        "averageTurnover20Egp": 10684439,
+        "sma20": 13.517,
+        "sma50": 12.0908,
+        "support20": 12.4,
+        "resistance20": 14.89
+      },
+      "portfolioValidation": {
+        "strategyId": "pullback",
+        "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+        "selectedVariantId": "wide",
+        "originalStatus": "RESEARCH_ONLY",
+        "originalResearchValidated": false,
+        "originalValidationMetrics": {
+          "totalSignals": 92,
+          "closedTrades": 85,
+          "cancelledTrades": 7,
+          "wins": 25,
+          "losses": 60,
+          "winRatePct": 29.41,
+          "profitFactor": 0.472,
+          "averageReturnPct": -1.652,
+          "averageR": -0.323,
+          "medianR": -1.103,
+          "maxDrawdownPct": 84.765,
+          "drawdownMethod": "compounded_equity_peak_to_trough",
+          "startingEquityIndex": 100,
+          "endingEquityIndex": 21.9496,
+          "legacyAdditiveDrawdownPct": 179.246,
+          "sameBarStopFirstCount": 1
+        },
+        "portfolioMetrics": {
+          "acceptedTrades": 45,
+          "skippedCapacity": 40,
+          "riskPerTradePct": 0.25,
+          "maximumConcurrentTrades": 5,
+          "startingEquity": 100000,
+          "endingEquity": 97339.57,
+          "totalReturnPct": -2.66,
+          "profitFactor": 0.611,
+          "averageR": -0.31,
+          "maximumDrawdownPct": 4.844,
+          "method": "fixed_fractional_risk_portfolio_with_concurrency_limit",
+          "equityCurve": [
+            {
+              "date": "2026-06-29",
+              "equity": 99986.89
+            },
+            {
+              "date": "2026-07-05",
+              "equity": 99986.89
+            },
+            {
+              "date": "2026-07-08",
+              "equity": 100405.83
+            },
+            {
+              "date": "2026-07-14",
+              "equity": 100127.46
+            },
+            {
+              "date": "2026-08-04",
+              "equity": 100127.46
+            },
+            {
+              "date": "2026-08-05",
+              "equity": 100550.75
+            },
+            {
+              "date": "2026-08-06",
+              "equity": 100955.76
+            },
+            {
+              "date": "2026-08-09",
+              "equity": 100955.76
+            },
+            {
+              "date": "2026-08-11",
+              "equity": 101063.67
+            },
+            {
+              "date": "2026-08-12",
+              "equity": 101490.51
+            },
+            {
+              "date": "2026-08-13",
+              "equity": 101490.51
+            },
+            {
+              "date": "2026-08-16",
+              "equity": 101905.1
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 102038.39
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 102294.47
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 101419.71
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-23",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-30",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 100536.93
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 100536.93
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 100502.26
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 100502.26
+            },
+            {
+              "date": "2026-09-06",
+              "equity": 100398.94
+            },
+            {
+              "date": "2026-09-07",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-08",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-10",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-13",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-14",
+              "equity": 100247.01
+            },
+            {
+              "date": "2026-09-15",
+              "equity": 100247.01
+            },
+            {
+              "date": "2026-09-16",
+              "equity": 100033.44
+            },
+            {
+              "date": "2026-09-17",
+              "equity": 100033.44
+            },
+            {
+              "date": "2026-09-20",
+              "equity": 99905.8
+            },
+            {
+              "date": "2026-09-21",
+              "equity": 99418.48
+            },
+            {
+              "date": "2026-09-23",
+              "equity": 99418.48
+            },
+            {
+              "date": "2026-09-24",
+              "equity": 98589.65
+            },
+            {
+              "date": "2026-09-27",
+              "equity": 98316.31
+            },
+            {
+              "date": "2026-09-28",
+              "equity": 98316.31
+            },
+            {
+              "date": "2026-09-29",
+              "equity": 98316.31
+            },
+            {
+              "date": "2026-09-30",
+              "equity": 98043.72
+            },
+            {
+              "date": "2026-10-05",
+              "equity": 98043.72
+            },
+            {
+              "date": "2026-10-06",
+              "equity": 98043.72
+            },
+            {
+              "date": "2026-10-07",
+              "equity": 97771.9
+            },
+            {
+              "date": "2026-10-08",
+              "equity": 97771.9
+            },
+            {
+              "date": "2026-10-11",
+              "equity": 97771.9
+            },
+            {
+              "date": "2026-10-12",
+              "equity": 97387.24
+            },
+            {
+              "date": "2026-10-13",
+              "equity": 97387.24
+            },
+            {
+              "date": "2026-10-15",
+              "equity": 97339.57
+            }
+          ]
+        },
+        "experimentalPortfolioPass": false
+      },
+      "maximumRiskPerTradePct": 0,
+      "automaticRegistration": false,
+      "liveExecutionEnabled": false,
+      "reasonAr": "اجتاز البوابات الإلزامية لكنه يحتاج تحسن 2 شرط مرن قبل رفعه إلى الطبقة التجريبية."
+    },
+    {
+      "ticker": "SDTI",
+      "companyNameAr": "شرم دريمز",
+      "companyNameEn": "SHARM DREAMS Co. for Touristic Investment",
+      "sector": "غير مصنف",
+      "sessionId": "2026-10-15",
+      "tier": "TIER_B_PRIORITY_WATCH",
+      "status": "PRIORITY_WATCH",
+      "statusLabelAr": "مراقبة أولوية — قريب من الاكتمال",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "variantId": "balanced",
+      "recommendationScore": 88.7,
+      "rawSignalScore": 86.9,
+      "hardFailureCount": 0,
+      "softFailureCount": 2,
+      "hardFailures": [],
+      "softFailures": [
+        {
+          "id": "volumeRatioFloor",
+          "labelAr": "نشاط الحجم الحالي",
+          "detail": 0.58,
+          "classification": "soft"
+        },
+        {
+          "id": "volumeRatio",
+          "labelAr": "دعم الحجم",
+          "detail": 0.58,
+          "classification": "soft"
+        }
+      ],
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "marketRegime": "BALANCED",
+      "exactFreshSession": "2026-10-15",
+      "price": 86,
+      "plan": {
+        "entryLow": 85.5058,
+        "entryHigh": 86.6177,
+        "stopLoss": 81.3284,
+        "target1": 94.5819,
+        "target2": 98.3686,
+        "riskPct": 5.5,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": -1.149,
+        "return20Pct": 16.232,
+        "relativeStrength20Pct": 29.164,
+        "rsi14": 64.93,
+        "atrPct": 4.788,
+        "volumeRatio20": 0.583,
+        "averageTurnover20Egp": 33176124,
+        "sma20": 82.7685,
+        "sma50": 74.9928,
+        "support20": 73,
+        "resistance20": 94.9
+      },
+      "portfolioValidation": {
+        "strategyId": "trend_follow",
+        "strategyLabelAr": "اتجاه قوي مع سيولة",
+        "selectedVariantId": "balanced",
+        "originalStatus": "RESEARCH_ONLY",
+        "originalResearchValidated": false,
+        "originalValidationMetrics": {
+          "totalSignals": 275,
+          "closedTrades": 260,
+          "cancelledTrades": 15,
+          "wins": 91,
+          "losses": 169,
+          "winRatePct": 35,
+          "profitFactor": 0.706,
+          "averageReturnPct": -0.971,
+          "averageR": -0.183,
+          "medianR": -1.109,
+          "maxDrawdownPct": 98.09,
+          "drawdownMethod": "compounded_equity_peak_to_trough",
+          "startingEquityIndex": 100,
+          "endingEquityIndex": 4.9887,
+          "legacyAdditiveDrawdownPct": 359.39,
+          "sameBarStopFirstCount": 1
+        },
+        "portfolioMetrics": {
+          "acceptedTrades": 21,
+          "skippedCapacity": 239,
+          "riskPerTradePct": 0.25,
+          "maximumConcurrentTrades": 5,
+          "startingEquity": 100000,
+          "endingEquity": 102127.68,
+          "totalReturnPct": 2.128,
+          "profitFactor": 2.466,
+          "averageR": 0.271,
+          "maximumDrawdownPct": 0.592,
+          "method": "fixed_fractional_risk_portfolio_with_concurrency_limit",
+          "equityCurve": [
+            {
+              "date": "2026-08-05",
+              "equity": 100563.71
+            },
+            {
+              "date": "2026-08-06",
+              "equity": 100967.06
+            },
+            {
+              "date": "2026-08-09",
+              "equity": 100967.06
+            },
+            {
+              "date": "2026-08-11",
+              "equity": 101390.45
+            },
+            {
+              "date": "2026-08-12",
+              "equity": 101797.6
+            },
+            {
+              "date": "2026-08-13",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-16",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-23",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-27",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-30",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-06",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-07",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-08",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-10",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-13",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-14",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-15",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-16",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-17",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-20",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-21",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-22",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-23",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-24",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-27",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-28",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-29",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-30",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-01",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-04",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-05",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-06",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-07",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-08",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-11",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-12",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-13",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-15",
+              "equity": 102127.68
+            }
+          ]
+        },
+        "experimentalPortfolioPass": true
+      },
+      "maximumRiskPerTradePct": 0,
+      "automaticRegistration": false,
+      "liveExecutionEnabled": false,
+      "reasonAr": "اجتاز البوابات الإلزامية لكنه يحتاج تحسن 2 شرط مرن قبل رفعه إلى الطبقة التجريبية."
+    },
+    {
+      "ticker": "RUBX",
+      "companyNameAr": "روبيكس",
+      "companyNameEn": "Rubex International for Plastic and Acrylic Manufacturing",
+      "sector": "غير مصنف",
+      "sessionId": "2026-10-15",
+      "tier": "TIER_B_PRIORITY_WATCH",
+      "status": "PRIORITY_WATCH",
+      "statusLabelAr": "مراقبة أولوية — قريب من الاكتمال",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "variantId": "balanced",
+      "recommendationScore": 86.7,
+      "rawSignalScore": 85.2,
+      "hardFailureCount": 0,
+      "softFailureCount": 2,
+      "hardFailures": [],
+      "softFailures": [
+        {
+          "id": "volumeRatioFloor",
+          "labelAr": "نشاط الحجم الحالي",
+          "detail": 0.33,
+          "classification": "soft"
+        },
+        {
+          "id": "volumeRatio",
+          "labelAr": "دعم الحجم",
+          "detail": 0.33,
+          "classification": "soft"
+        }
+      ],
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "marketRegime": "BALANCED",
+      "exactFreshSession": "2026-10-15",
+      "price": 16.49,
+      "plan": {
+        "entryLow": 16.3911,
+        "entryHigh": 16.6384,
+        "stopLoss": 15.6064,
+        "target1": 18.1497,
+        "target2": 18.8763,
+        "riskPct": 5.5,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": -8.44,
+        "return20Pct": 24.641,
+        "relativeStrength20Pct": 37.573,
+        "rsi14": 56.03,
+        "atrPct": 9.591,
+        "volumeRatio20": 0.334,
+        "averageTurnover20Egp": 95419820,
+        "sma20": 15.4575,
+        "sma50": 13.8006,
+        "support20": 12.65,
+        "resistance20": 19.7
+      },
+      "portfolioValidation": {
+        "strategyId": "trend_follow",
+        "strategyLabelAr": "اتجاه قوي مع سيولة",
+        "selectedVariantId": "balanced",
+        "originalStatus": "RESEARCH_ONLY",
+        "originalResearchValidated": false,
+        "originalValidationMetrics": {
+          "totalSignals": 275,
+          "closedTrades": 260,
+          "cancelledTrades": 15,
+          "wins": 91,
+          "losses": 169,
+          "winRatePct": 35,
+          "profitFactor": 0.706,
+          "averageReturnPct": -0.971,
+          "averageR": -0.183,
+          "medianR": -1.109,
+          "maxDrawdownPct": 98.09,
+          "drawdownMethod": "compounded_equity_peak_to_trough",
+          "startingEquityIndex": 100,
+          "endingEquityIndex": 4.9887,
+          "legacyAdditiveDrawdownPct": 359.39,
+          "sameBarStopFirstCount": 1
+        },
+        "portfolioMetrics": {
+          "acceptedTrades": 21,
+          "skippedCapacity": 239,
+          "riskPerTradePct": 0.25,
+          "maximumConcurrentTrades": 5,
+          "startingEquity": 100000,
+          "endingEquity": 102127.68,
+          "totalReturnPct": 2.128,
+          "profitFactor": 2.466,
+          "averageR": 0.271,
+          "maximumDrawdownPct": 0.592,
+          "method": "fixed_fractional_risk_portfolio_with_concurrency_limit",
+          "equityCurve": [
+            {
+              "date": "2026-08-05",
+              "equity": 100563.71
+            },
+            {
+              "date": "2026-08-06",
+              "equity": 100967.06
+            },
+            {
+              "date": "2026-08-09",
+              "equity": 100967.06
+            },
+            {
+              "date": "2026-08-11",
+              "equity": 101390.45
+            },
+            {
+              "date": "2026-08-12",
+              "equity": 101797.6
+            },
+            {
+              "date": "2026-08-13",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-16",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-23",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-27",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-30",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-06",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-07",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-08",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-10",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-13",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-14",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-15",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-16",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-17",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-20",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-21",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-22",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-23",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-24",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-27",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-28",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-29",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-30",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-01",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-04",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-05",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-06",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-07",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-08",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-11",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-12",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-13",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-15",
+              "equity": 102127.68
+            }
+          ]
+        },
+        "experimentalPortfolioPass": true
+      },
+      "maximumRiskPerTradePct": 0,
+      "automaticRegistration": false,
+      "liveExecutionEnabled": false,
+      "reasonAr": "اجتاز البوابات الإلزامية لكنه يحتاج تحسن 2 شرط مرن قبل رفعه إلى الطبقة التجريبية."
+    },
+    {
+      "ticker": "TALM",
+      "companyNameAr": "تعليم لخدمات الإدارة",
+      "companyNameEn": "Taaleem Management Services Company",
+      "sector": "غير مصنف",
+      "sessionId": "2026-10-15",
+      "tier": "TIER_B_PRIORITY_WATCH",
+      "status": "PRIORITY_WATCH",
+      "statusLabelAr": "مراقبة أولوية — قريب من الاكتمال",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "variantId": "balanced",
+      "recommendationScore": 85.1,
+      "rawSignalScore": 83.4,
+      "hardFailureCount": 0,
+      "softFailureCount": 2,
+      "hardFailures": [],
+      "softFailures": [
+        {
+          "id": "volumeRatioFloor",
+          "labelAr": "نشاط الحجم الحالي",
+          "detail": 0.21,
+          "classification": "soft"
+        },
+        {
+          "id": "volumeRatio",
+          "labelAr": "دعم الحجم",
+          "detail": 0.21,
+          "classification": "soft"
+        }
+      ],
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "marketRegime": "BALANCED",
+      "exactFreshSession": "2026-10-15",
+      "price": 21.05,
+      "plan": {
+        "entryLow": 20.9237,
+        "entryHigh": 21.2394,
+        "stopLoss": 19.9221,
+        "target1": 23.1687,
+        "target2": 24.0962,
+        "riskPct": 5.5,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": -3.04,
+        "return20Pct": 11.376,
+        "relativeStrength20Pct": 24.308,
+        "rsi14": 55.35,
+        "atrPct": 6.159,
+        "volumeRatio20": 0.211,
+        "averageTurnover20Egp": 41346190,
+        "sma20": 21.026,
+        "sma50": 19.4582,
+        "support20": 17.61,
+        "resistance20": 23.5
+      },
+      "portfolioValidation": {
+        "strategyId": "trend_follow",
+        "strategyLabelAr": "اتجاه قوي مع سيولة",
+        "selectedVariantId": "balanced",
+        "originalStatus": "RESEARCH_ONLY",
+        "originalResearchValidated": false,
+        "originalValidationMetrics": {
+          "totalSignals": 275,
+          "closedTrades": 260,
+          "cancelledTrades": 15,
+          "wins": 91,
+          "losses": 169,
+          "winRatePct": 35,
+          "profitFactor": 0.706,
+          "averageReturnPct": -0.971,
+          "averageR": -0.183,
+          "medianR": -1.109,
+          "maxDrawdownPct": 98.09,
+          "drawdownMethod": "compounded_equity_peak_to_trough",
+          "startingEquityIndex": 100,
+          "endingEquityIndex": 4.9887,
+          "legacyAdditiveDrawdownPct": 359.39,
+          "sameBarStopFirstCount": 1
+        },
+        "portfolioMetrics": {
+          "acceptedTrades": 21,
+          "skippedCapacity": 239,
+          "riskPerTradePct": 0.25,
+          "maximumConcurrentTrades": 5,
+          "startingEquity": 100000,
+          "endingEquity": 102127.68,
+          "totalReturnPct": 2.128,
+          "profitFactor": 2.466,
+          "averageR": 0.271,
+          "maximumDrawdownPct": 0.592,
+          "method": "fixed_fractional_risk_portfolio_with_concurrency_limit",
+          "equityCurve": [
+            {
+              "date": "2026-08-05",
+              "equity": 100563.71
+            },
+            {
+              "date": "2026-08-06",
+              "equity": 100967.06
+            },
+            {
+              "date": "2026-08-09",
+              "equity": 100967.06
+            },
+            {
+              "date": "2026-08-11",
+              "equity": 101390.45
+            },
+            {
+              "date": "2026-08-12",
+              "equity": 101797.6
+            },
+            {
+              "date": "2026-08-13",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-16",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-23",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-27",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-30",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-06",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-07",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-08",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-10",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-13",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-14",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-15",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-16",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-17",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-20",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-21",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-22",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-23",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-24",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-27",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-28",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-29",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-30",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-01",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-04",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-05",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-06",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-07",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-08",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-11",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-12",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-13",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-15",
+              "equity": 102127.68
+            }
+          ]
+        },
+        "experimentalPortfolioPass": true
+      },
+      "maximumRiskPerTradePct": 0,
+      "automaticRegistration": false,
+      "liveExecutionEnabled": false,
+      "reasonAr": "اجتاز البوابات الإلزامية لكنه يحتاج تحسن 2 شرط مرن قبل رفعه إلى الطبقة التجريبية."
+    },
+    {
+      "ticker": "MOIL",
+      "companyNameAr": "ماريدايف",
+      "companyNameEn": "Maridive and Oil Services",
+      "sector": "غير مصنف",
+      "sessionId": "2026-10-15",
+      "tier": "TIER_B_PRIORITY_WATCH",
+      "status": "PRIORITY_WATCH",
+      "statusLabelAr": "مراقبة أولوية — قريب من الاكتمال",
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "variantId": "wide",
+      "recommendationScore": 83.8,
+      "rawSignalScore": 81.8,
+      "hardFailureCount": 0,
+      "softFailureCount": 2,
+      "hardFailures": [],
+      "softFailures": [
+        {
+          "id": "volumeRatioFloor",
+          "labelAr": "نشاط الحجم الحالي",
+          "detail": 0.05,
+          "classification": "soft"
+        },
+        {
+          "id": "volumeRatio",
+          "labelAr": "سيولة كافية",
+          "detail": 0.05,
+          "classification": "soft"
+        }
+      ],
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "marketRegime": "BALANCED",
+      "exactFreshSession": "2026-10-15",
+      "price": 0.68,
+      "plan": {
+        "entryLow": 0.6781,
+        "entryHigh": 0.6824,
+        "stopLoss": 0.6587,
+        "target1": 0.719,
+        "target2": 0.7362,
+        "riskPct": 3.163,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": -2.857,
+        "return20Pct": -1.449,
+        "relativeStrength20Pct": 11.483,
+        "rsi14": 54.12,
+        "atrPct": 2.343,
+        "volumeRatio20": 0.052,
+        "averageTurnover20Egp": 222657,
+        "sma20": 0.686,
+        "sma50": 0.6392,
+        "support20": 0.63,
+        "resistance20": 0.72
+      },
+      "portfolioValidation": {
+        "strategyId": "pullback",
+        "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+        "selectedVariantId": "wide",
+        "originalStatus": "RESEARCH_ONLY",
+        "originalResearchValidated": false,
+        "originalValidationMetrics": {
+          "totalSignals": 92,
+          "closedTrades": 85,
+          "cancelledTrades": 7,
+          "wins": 25,
+          "losses": 60,
+          "winRatePct": 29.41,
+          "profitFactor": 0.472,
+          "averageReturnPct": -1.652,
+          "averageR": -0.323,
+          "medianR": -1.103,
+          "maxDrawdownPct": 84.765,
+          "drawdownMethod": "compounded_equity_peak_to_trough",
+          "startingEquityIndex": 100,
+          "endingEquityIndex": 21.9496,
+          "legacyAdditiveDrawdownPct": 179.246,
+          "sameBarStopFirstCount": 1
+        },
+        "portfolioMetrics": {
+          "acceptedTrades": 45,
+          "skippedCapacity": 40,
+          "riskPerTradePct": 0.25,
+          "maximumConcurrentTrades": 5,
+          "startingEquity": 100000,
+          "endingEquity": 97339.57,
+          "totalReturnPct": -2.66,
+          "profitFactor": 0.611,
+          "averageR": -0.31,
+          "maximumDrawdownPct": 4.844,
+          "method": "fixed_fractional_risk_portfolio_with_concurrency_limit",
+          "equityCurve": [
+            {
+              "date": "2026-06-29",
+              "equity": 99986.89
+            },
+            {
+              "date": "2026-07-05",
+              "equity": 99986.89
+            },
+            {
+              "date": "2026-07-08",
+              "equity": 100405.83
+            },
+            {
+              "date": "2026-07-14",
+              "equity": 100127.46
+            },
+            {
+              "date": "2026-08-04",
+              "equity": 100127.46
+            },
+            {
+              "date": "2026-08-05",
+              "equity": 100550.75
+            },
+            {
+              "date": "2026-08-06",
+              "equity": 100955.76
+            },
+            {
+              "date": "2026-08-09",
+              "equity": 100955.76
+            },
+            {
+              "date": "2026-08-11",
+              "equity": 101063.67
+            },
+            {
+              "date": "2026-08-12",
+              "equity": 101490.51
+            },
+            {
+              "date": "2026-08-13",
+              "equity": 101490.51
+            },
+            {
+              "date": "2026-08-16",
+              "equity": 101905.1
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 102038.39
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 102294.47
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 101419.71
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-23",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-30",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 100536.93
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 100536.93
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 100502.26
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 100502.26
+            },
+            {
+              "date": "2026-09-06",
+              "equity": 100398.94
+            },
+            {
+              "date": "2026-09-07",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-08",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-10",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-13",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-14",
+              "equity": 100247.01
+            },
+            {
+              "date": "2026-09-15",
+              "equity": 100247.01
+            },
+            {
+              "date": "2026-09-16",
+              "equity": 100033.44
+            },
+            {
+              "date": "2026-09-17",
+              "equity": 100033.44
+            },
+            {
+              "date": "2026-09-20",
+              "equity": 99905.8
+            },
+            {
+              "date": "2026-09-21",
+              "equity": 99418.48
+            },
+            {
+              "date": "2026-09-23",
+              "equity": 99418.48
+            },
+            {
+              "date": "2026-09-24",
+              "equity": 98589.65
+            },
+            {
+              "date": "2026-09-27",
+              "equity": 98316.31
+            },
+            {
+              "date": "2026-09-28",
+              "equity": 98316.31
+            },
+            {
+              "date": "2026-09-29",
+              "equity": 98316.31
+            },
+            {
+              "date": "2026-09-30",
+              "equity": 98043.72
+            },
+            {
+              "date": "2026-10-05",
+              "equity": 98043.72
+            },
+            {
+              "date": "2026-10-06",
+              "equity": 98043.72
+            },
+            {
+              "date": "2026-10-07",
+              "equity": 97771.9
+            },
+            {
+              "date": "2026-10-08",
+              "equity": 97771.9
+            },
+            {
+              "date": "2026-10-11",
+              "equity": 97771.9
+            },
+            {
+              "date": "2026-10-12",
+              "equity": 97387.24
+            },
+            {
+              "date": "2026-10-13",
+              "equity": 97387.24
+            },
+            {
+              "date": "2026-10-15",
+              "equity": 97339.57
+            }
+          ]
+        },
+        "experimentalPortfolioPass": false
+      },
+      "maximumRiskPerTradePct": 0,
+      "automaticRegistration": false,
+      "liveExecutionEnabled": false,
+      "reasonAr": "اجتاز البوابات الإلزامية لكنه يحتاج تحسن 2 شرط مرن قبل رفعه إلى الطبقة التجريبية."
+    },
+    {
+      "ticker": "EFIH",
+      "companyNameAr": "إي فاينانس",
+      "companyNameEn": "e-finance for Digital and Financial Investments S.A.E.",
+      "sector": "غير مصنف",
+      "sessionId": "2026-10-15",
+      "tier": "TIER_B_PRIORITY_WATCH",
+      "status": "PRIORITY_WATCH",
+      "statusLabelAr": "مراقبة أولوية — قريب من الاكتمال",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "variantId": "balanced",
+      "recommendationScore": 79.3,
+      "rawSignalScore": 77.7,
+      "hardFailureCount": 0,
+      "softFailureCount": 2,
+      "hardFailures": [],
+      "softFailures": [
+        {
+          "id": "volumeRatioFloor",
+          "labelAr": "نشاط الحجم الحالي",
+          "detail": 0.53,
+          "classification": "soft"
+        },
+        {
+          "id": "volumeRatio",
+          "labelAr": "دعم الحجم",
+          "detail": 0.53,
+          "classification": "soft"
+        }
+      ],
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "marketRegime": "BALANCED",
+      "exactFreshSession": "2026-10-15",
+      "price": 24.34,
+      "plan": {
+        "entryLow": 24.2264,
+        "entryHigh": 24.482,
+        "stopLoss": 23.0753,
+        "target1": 26.6563,
+        "target2": 27.6794,
+        "riskPct": 5.251,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": -1.815,
+        "return20Pct": 2.269,
+        "relativeStrength20Pct": 15.201,
+        "rsi14": 54.08,
+        "atrPct": 3.89,
+        "volumeRatio20": 0.534,
+        "averageTurnover20Egp": 69369479,
+        "sma20": 23.734,
+        "sma50": 23.6826,
+        "support20": 20.2,
+        "resistance20": 25.37
+      },
+      "portfolioValidation": {
+        "strategyId": "trend_follow",
+        "strategyLabelAr": "اتجاه قوي مع سيولة",
+        "selectedVariantId": "balanced",
+        "originalStatus": "RESEARCH_ONLY",
+        "originalResearchValidated": false,
+        "originalValidationMetrics": {
+          "totalSignals": 275,
+          "closedTrades": 260,
+          "cancelledTrades": 15,
+          "wins": 91,
+          "losses": 169,
+          "winRatePct": 35,
+          "profitFactor": 0.706,
+          "averageReturnPct": -0.971,
+          "averageR": -0.183,
+          "medianR": -1.109,
+          "maxDrawdownPct": 98.09,
+          "drawdownMethod": "compounded_equity_peak_to_trough",
+          "startingEquityIndex": 100,
+          "endingEquityIndex": 4.9887,
+          "legacyAdditiveDrawdownPct": 359.39,
+          "sameBarStopFirstCount": 1
+        },
+        "portfolioMetrics": {
+          "acceptedTrades": 21,
+          "skippedCapacity": 239,
+          "riskPerTradePct": 0.25,
+          "maximumConcurrentTrades": 5,
+          "startingEquity": 100000,
+          "endingEquity": 102127.68,
+          "totalReturnPct": 2.128,
+          "profitFactor": 2.466,
+          "averageR": 0.271,
+          "maximumDrawdownPct": 0.592,
+          "method": "fixed_fractional_risk_portfolio_with_concurrency_limit",
+          "equityCurve": [
+            {
+              "date": "2026-08-05",
+              "equity": 100563.71
+            },
+            {
+              "date": "2026-08-06",
+              "equity": 100967.06
+            },
+            {
+              "date": "2026-08-09",
+              "equity": 100967.06
+            },
+            {
+              "date": "2026-08-11",
+              "equity": 101390.45
+            },
+            {
+              "date": "2026-08-12",
+              "equity": 101797.6
+            },
+            {
+              "date": "2026-08-13",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-16",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-23",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-27",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-30",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-06",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-07",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-08",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-10",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-13",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-14",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-15",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-16",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-17",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-20",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-21",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-22",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-23",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-24",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-27",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-28",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-29",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-30",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-01",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-04",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-05",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-06",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-07",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-08",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-11",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-12",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-13",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-15",
+              "equity": 102127.68
+            }
+          ]
+        },
+        "experimentalPortfolioPass": true
+      },
+      "maximumRiskPerTradePct": 0,
+      "automaticRegistration": false,
+      "liveExecutionEnabled": false,
+      "reasonAr": "اجتاز البوابات الإلزامية لكنه يحتاج تحسن 2 شرط مرن قبل رفعه إلى الطبقة التجريبية."
+    },
+    {
+      "ticker": "ALCN",
+      "companyNameAr": "الإسكندرية لتداول الحاويات والبضائع",
+      "companyNameEn": "Alexandria Container & Cargo Handling Company",
+      "sector": "غير مصنف",
+      "sessionId": "2026-10-15",
+      "tier": "TIER_B_PRIORITY_WATCH",
+      "status": "PRIORITY_WATCH",
+      "statusLabelAr": "مراقبة أولوية — قريب من الاكتمال",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "variantId": "balanced",
+      "recommendationScore": 78.8,
+      "rawSignalScore": 77.2,
+      "hardFailureCount": 0,
+      "softFailureCount": 2,
+      "hardFailures": [],
+      "softFailures": [
+        {
+          "id": "volumeRatioFloor",
+          "labelAr": "نشاط الحجم الحالي",
+          "detail": 0.29,
+          "classification": "soft"
+        },
+        {
+          "id": "volumeRatio",
+          "labelAr": "دعم الحجم",
+          "detail": 0.29,
+          "classification": "soft"
+        }
+      ],
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "marketRegime": "BALANCED",
+      "exactFreshSession": "2026-10-15",
+      "price": 33.45,
+      "plan": {
+        "entryLow": 33.2689,
+        "entryHigh": 33.6764,
+        "stopLoss": 31.6316,
+        "target1": 36.7864,
+        "target2": 38.2592,
+        "riskPct": 5.5,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": -3.043,
+        "return20Pct": 7.903,
+        "relativeStrength20Pct": 20.836,
+        "rsi14": 52.09,
+        "atrPct": 4.511,
+        "volumeRatio20": 0.291,
+        "averageTurnover20Egp": 28877237,
+        "sma20": 33.212,
+        "sma50": 31.9766,
+        "support20": 30.4,
+        "resistance20": 35.83
+      },
+      "portfolioValidation": {
+        "strategyId": "trend_follow",
+        "strategyLabelAr": "اتجاه قوي مع سيولة",
+        "selectedVariantId": "balanced",
+        "originalStatus": "RESEARCH_ONLY",
+        "originalResearchValidated": false,
+        "originalValidationMetrics": {
+          "totalSignals": 275,
+          "closedTrades": 260,
+          "cancelledTrades": 15,
+          "wins": 91,
+          "losses": 169,
+          "winRatePct": 35,
+          "profitFactor": 0.706,
+          "averageReturnPct": -0.971,
+          "averageR": -0.183,
+          "medianR": -1.109,
+          "maxDrawdownPct": 98.09,
+          "drawdownMethod": "compounded_equity_peak_to_trough",
+          "startingEquityIndex": 100,
+          "endingEquityIndex": 4.9887,
+          "legacyAdditiveDrawdownPct": 359.39,
+          "sameBarStopFirstCount": 1
+        },
+        "portfolioMetrics": {
+          "acceptedTrades": 21,
+          "skippedCapacity": 239,
+          "riskPerTradePct": 0.25,
+          "maximumConcurrentTrades": 5,
+          "startingEquity": 100000,
+          "endingEquity": 102127.68,
+          "totalReturnPct": 2.128,
+          "profitFactor": 2.466,
+          "averageR": 0.271,
+          "maximumDrawdownPct": 0.592,
+          "method": "fixed_fractional_risk_portfolio_with_concurrency_limit",
+          "equityCurve": [
+            {
+              "date": "2026-08-05",
+              "equity": 100563.71
+            },
+            {
+              "date": "2026-08-06",
+              "equity": 100967.06
+            },
+            {
+              "date": "2026-08-09",
+              "equity": 100967.06
+            },
+            {
+              "date": "2026-08-11",
+              "equity": 101390.45
+            },
+            {
+              "date": "2026-08-12",
+              "equity": 101797.6
+            },
+            {
+              "date": "2026-08-13",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-16",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 101927.81
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-23",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-27",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-30",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-06",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-07",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-08",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-09",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-10",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-13",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-14",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-15",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-16",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-17",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-20",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-21",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-22",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-23",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-24",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-27",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-28",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-29",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-09-30",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-01",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-04",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-05",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-06",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-07",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-08",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-11",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-12",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-13",
+              "equity": 102127.68
+            },
+            {
+              "date": "2026-10-15",
+              "equity": 102127.68
+            }
+          ]
+        },
+        "experimentalPortfolioPass": true
+      },
+      "maximumRiskPerTradePct": 0,
+      "automaticRegistration": false,
+      "liveExecutionEnabled": false,
+      "reasonAr": "اجتاز البوابات الإلزامية لكنه يحتاج تحسن 2 شرط مرن قبل رفعه إلى الطبقة التجريبية."
+    },
+    {
+      "ticker": "MBSC",
+      "companyNameAr": "مصر بني سويف للأسمنت",
+      "companyNameEn": "Misr Beni Suef Cement",
+      "sector": "غير مصنف",
+      "sessionId": "2026-10-15",
+      "tier": "TIER_B_PRIORITY_WATCH",
+      "status": "PRIORITY_WATCH",
+      "statusLabelAr": "مراقبة أولوية — قريب من الاكتمال",
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "variantId": "wide",
+      "recommendationScore": 76.6,
+      "rawSignalScore": 74.9,
+      "hardFailureCount": 0,
+      "softFailureCount": 2,
+      "hardFailures": [],
+      "softFailures": [
+        {
+          "id": "volumeRatioFloor",
+          "labelAr": "نشاط الحجم الحالي",
+          "detail": 0.6,
+          "classification": "soft"
+        },
+        {
+          "id": "volumeRatio",
+          "labelAr": "سيولة كافية",
+          "detail": 0.6,
+          "classification": "soft"
+        }
+      ],
+      "eligibilityDecision": true,
+      "regimeAllowed": true,
+      "marketRegime": "BALANCED",
+      "exactFreshSession": "2026-10-15",
+      "price": 348,
+      "plan": {
+        "entryLow": 345.912,
+        "entryHigh": 351.132,
+        "stopLoss": 329.3533,
+        "target1": 383.0257,
+        "target2": 398.3606,
+        "riskPct": 5.5,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": -7.692,
+        "return20Pct": -15.134,
+        "relativeStrength20Pct": -2.202,
+        "rsi14": 48.8,
+        "atrPct": 8.489,
+        "volumeRatio20": 0.596,
+        "averageTurnover20Egp": 80981110,
+        "sma20": 352.047,
+        "sma50": 341.9886,
+        "support20": 288,
+        "resistance20": 428.48
+      },
+      "portfolioValidation": {
+        "strategyId": "pullback",
+        "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+        "selectedVariantId": "wide",
+        "originalStatus": "RESEARCH_ONLY",
+        "originalResearchValidated": false,
+        "originalValidationMetrics": {
+          "totalSignals": 92,
+          "closedTrades": 85,
+          "cancelledTrades": 7,
+          "wins": 25,
+          "losses": 60,
+          "winRatePct": 29.41,
+          "profitFactor": 0.472,
+          "averageReturnPct": -1.652,
+          "averageR": -0.323,
+          "medianR": -1.103,
+          "maxDrawdownPct": 84.765,
+          "drawdownMethod": "compounded_equity_peak_to_trough",
+          "startingEquityIndex": 100,
+          "endingEquityIndex": 21.9496,
+          "legacyAdditiveDrawdownPct": 179.246,
+          "sameBarStopFirstCount": 1
+        },
+        "portfolioMetrics": {
+          "acceptedTrades": 45,
+          "skippedCapacity": 40,
+          "riskPerTradePct": 0.25,
+          "maximumConcurrentTrades": 5,
+          "startingEquity": 100000,
+          "endingEquity": 97339.57,
+          "totalReturnPct": -2.66,
+          "profitFactor": 0.611,
+          "averageR": -0.31,
+          "maximumDrawdownPct": 4.844,
+          "method": "fixed_fractional_risk_portfolio_with_concurrency_limit",
+          "equityCurve": [
+            {
+              "date": "2026-06-29",
+              "equity": 99986.89
+            },
+            {
+              "date": "2026-07-05",
+              "equity": 99986.89
+            },
+            {
+              "date": "2026-07-08",
+              "equity": 100405.83
+            },
+            {
+              "date": "2026-07-14",
+              "equity": 100127.46
+            },
+            {
+              "date": "2026-08-04",
+              "equity": 100127.46
+            },
+            {
+              "date": "2026-08-05",
+              "equity": 100550.75
+            },
+            {
+              "date": "2026-08-06",
+              "equity": 100955.76
+            },
+            {
+              "date": "2026-08-09",
+              "equity": 100955.76
+            },
+            {
+              "date": "2026-08-11",
+              "equity": 101063.67
+            },
+            {
+              "date": "2026-08-12",
+              "equity": 101490.51
+            },
+            {
+              "date": "2026-08-13",
+              "equity": 101490.51
+            },
+            {
+              "date": "2026-08-16",
+              "equity": 101905.1
+            },
+            {
+              "date": "2026-08-17",
+              "equity": 102038.39
+            },
+            {
+              "date": "2026-08-18",
+              "equity": 102294.47
+            },
+            {
+              "date": "2026-08-19",
+              "equity": 101419.71
+            },
+            {
+              "date": "2026-08-20",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-23",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-24",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-25",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-26",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-30",
+              "equity": 100840.72
+            },
+            {
+              "date": "2026-08-31",
+              "equity": 100536.93
+            },
+            {
+              "date": "2026-09-01",
+              "equity": 100536.93
+            },
+            {
+              "date": "2026-09-02",
+              "equity": 100502.26
+            },
+            {
+              "date": "2026-09-03",
+              "equity": 100502.26
+            },
+            {
+              "date": "2026-09-06",
+              "equity": 100398.94
+            },
+            {
+              "date": "2026-09-07",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-08",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-10",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-13",
+              "equity": 100812.65
+            },
+            {
+              "date": "2026-09-14",
+              "equity": 100247.01
+            },
+            {
+              "date": "2026-09-15",
+              "equity": 100247.01
+            },
+            {
+              "date": "2026-09-16",
+              "equity": 100033.44
+            },
+            {
+              "date": "2026-09-17",
+              "equity": 100033.44
+            },
+            {
+              "date": "2026-09-20",
+              "equity": 99905.8
+            },
+            {
+              "date": "2026-09-21",
+              "equity": 99418.48
+            },
+            {
+              "date": "2026-09-23",
+              "equity": 99418.48
+            },
+            {
+              "date": "2026-09-24",
+              "equity": 98589.65
+            },
+            {
+              "date": "2026-09-27",
+              "equity": 98316.31
+            },
+            {
+              "date": "2026-09-28",
+              "equity": 98316.31
+            },
+            {
+              "date": "2026-09-29",
+              "equity": 98316.31
+            },
+            {
+              "date": "2026-09-30",
+              "equity": 98043.72
+            },
+            {
+              "date": "2026-10-05",
+              "equity": 98043.72
+            },
+            {
+              "date": "2026-10-06",
+              "equity": 98043.72
+            },
+            {
+              "date": "2026-10-07",
+              "equity": 97771.9
+            },
+            {
+              "date": "2026-10-08",
+              "equity": 97771.9
+            },
+            {
+              "date": "2026-10-11",
+              "equity": 97771.9
+            },
+            {
+              "date": "2026-10-12",
+              "equity": 97387.24
+            },
+            {
+              "date": "2026-10-13",
+              "equity": 97387.24
+            },
+            {
+              "date": "2026-10-15",
+              "equity": 97339.57
+            }
+          ]
+        },
+        "experimentalPortfolioPass": false
+      },
+      "maximumRiskPerTradePct": 0,
+      "automaticRegistration": false,
+      "liveExecutionEnabled": false,
+      "reasonAr": "اجتاز البوابات الإلزامية لكنه يحتاج تحسن 2 شرط مرن قبل رفعه إلى الطبقة التجريبية."
+    }
+  ],
   "strategyPortfolioValidation": [
     {
       "strategyId": "trend_follow",
@@ -33,239 +5226,239 @@
       "originalStatus": "RESEARCH_ONLY",
       "originalResearchValidated": false,
       "originalValidationMetrics": {
-        "totalSignals": 255,
-        "closedTrades": 236,
-        "cancelledTrades": 19,
-        "wins": 93,
-        "losses": 143,
-        "winRatePct": 39.41,
-        "profitFactor": 0.881,
-        "averageReturnPct": -0.361,
-        "averageR": -0.047,
+        "totalSignals": 275,
+        "closedTrades": 260,
+        "cancelledTrades": 15,
+        "wins": 91,
+        "losses": 169,
+        "winRatePct": 35,
+        "profitFactor": 0.706,
+        "averageReturnPct": -0.971,
+        "averageR": -0.183,
         "medianR": -1.109,
-        "maxDrawdownPct": 95.735,
+        "maxDrawdownPct": 98.09,
         "drawdownMethod": "compounded_equity_peak_to_trough",
         "startingEquityIndex": 100,
-        "endingEquityIndex": 27.6411,
-        "legacyAdditiveDrawdownPct": 287.277,
+        "endingEquityIndex": 4.9887,
+        "legacyAdditiveDrawdownPct": 359.39,
         "sameBarStopFirstCount": 1
       },
       "portfolioMetrics": {
-        "acceptedTrades": 19,
-        "skippedCapacity": 217,
+        "acceptedTrades": 21,
+        "skippedCapacity": 239,
         "riskPerTradePct": 0.25,
         "maximumConcurrentTrades": 5,
         "startingEquity": 100000,
-        "endingEquity": 99642.19,
-        "totalReturnPct": -0.358,
-        "profitFactor": 0.826,
-        "averageR": -0.222,
-        "maximumDrawdownPct": 1.034,
+        "endingEquity": 102127.68,
+        "totalReturnPct": 2.128,
+        "profitFactor": 2.466,
+        "averageR": 0.271,
+        "maximumDrawdownPct": 0.592,
         "method": "fixed_fractional_risk_portfolio_with_concurrency_limit",
         "equityCurve": [
           {
-            "date": "2026-08-03",
-            "equity": 99858.71
-          },
-          {
-            "date": "2026-08-04",
-            "equity": 100257.99
-          },
-          {
             "date": "2026-08-05",
-            "equity": 100257.99
+            "equity": 100563.71
           },
           {
             "date": "2026-08-06",
-            "equity": 100257.99
+            "equity": 100967.06
           },
           {
             "date": "2026-08-09",
-            "equity": 100220.88
+            "equity": 100967.06
           },
           {
             "date": "2026-08-11",
-            "equity": 99929.99
+            "equity": 101390.45
           },
           {
             "date": "2026-08-12",
-            "equity": 99929.99
+            "equity": 101797.6
           },
           {
             "date": "2026-08-13",
-            "equity": 99642.19
+            "equity": 101927.81
           },
           {
             "date": "2026-08-16",
-            "equity": 99642.19
+            "equity": 101927.81
           },
           {
             "date": "2026-08-17",
-            "equity": 99642.19
+            "equity": 101927.81
           },
           {
             "date": "2026-08-18",
-            "equity": 99642.19
+            "equity": 101927.81
           },
           {
             "date": "2026-08-19",
-            "equity": 99642.19
+            "equity": 101927.81
           },
           {
             "date": "2026-08-20",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-08-23",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-08-24",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-08-25",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-08-26",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-08-27",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-08-30",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-08-31",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-09-01",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-09-02",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-09-03",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-09-06",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-09-07",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-09-08",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-09-09",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-09-10",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-09-13",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-09-14",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-09-15",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-09-16",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-09-17",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-09-20",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-09-21",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-09-22",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-09-23",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-09-24",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-09-27",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-09-28",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-09-29",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-09-30",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-10-01",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-10-04",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-10-05",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-10-06",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-10-07",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-10-08",
-            "equity": 99642.19
+            "equity": 102127.68
+          },
+          {
+            "date": "2026-10-11",
+            "equity": 102127.68
           },
           {
             "date": "2026-10-12",
-            "equity": 99642.19
+            "equity": 102127.68
           },
           {
             "date": "2026-10-13",
-            "equity": 99642.19
+            "equity": 102127.68
+          },
+          {
+            "date": "2026-10-15",
+            "equity": 102127.68
           }
         ]
       },
-      "experimentalPortfolioPass": false
+      "experimentalPortfolioPass": true
     },
     {
       "strategyId": "breakout",
@@ -274,36 +5467,44 @@
       "originalStatus": "RESEARCH_ONLY",
       "originalResearchValidated": false,
       "originalValidationMetrics": {
-        "totalSignals": 68,
-        "closedTrades": 63,
-        "cancelledTrades": 5,
-        "wins": 26,
-        "losses": 37,
-        "winRatePct": 41.27,
-        "profitFactor": 1.162,
-        "averageReturnPct": 0.434,
-        "averageR": 0.032,
+        "totalSignals": 62,
+        "closedTrades": 58,
+        "cancelledTrades": 4,
+        "wins": 19,
+        "losses": 39,
+        "winRatePct": 32.76,
+        "profitFactor": 0.832,
+        "averageReturnPct": -0.524,
+        "averageR": -0.184,
         "medianR": -1.109,
-        "maxDrawdownPct": 44.458,
+        "maxDrawdownPct": 45.214,
         "drawdownMethod": "compounded_equity_peak_to_trough",
         "startingEquityIndex": 100,
-        "endingEquityIndex": 116.8083,
-        "legacyAdditiveDrawdownPct": 54.319,
+        "endingEquityIndex": 66.4244,
+        "legacyAdditiveDrawdownPct": 54.303,
         "sameBarStopFirstCount": 1
       },
       "portfolioMetrics": {
-        "acceptedTrades": 27,
-        "skippedCapacity": 36,
+        "acceptedTrades": 25,
+        "skippedCapacity": 33,
         "riskPerTradePct": 0.25,
         "maximumConcurrentTrades": 5,
         "startingEquity": 100000,
-        "endingEquity": 101585.63,
-        "totalReturnPct": 1.586,
-        "profitFactor": 1.531,
-        "averageR": 0.332,
-        "maximumDrawdownPct": 1.055,
+        "endingEquity": 99443.94,
+        "totalReturnPct": -0.556,
+        "profitFactor": 0.839,
+        "averageR": -0.096,
+        "maximumDrawdownPct": 1.135,
         "method": "fixed_fractional_risk_portfolio_with_concurrency_limit",
         "equityCurve": [
+          {
+            "date": "2026-06-02",
+            "equity": 99699
+          },
+          {
+            "date": "2026-06-08",
+            "equity": 99699
+          },
           {
             "date": "2026-06-10",
             "equity": 99422.58
@@ -321,14 +5522,6 @@
             "equity": 99530.17
           },
           {
-            "date": "2026-07-20",
-            "equity": 99530.17
-          },
-          {
-            "date": "2026-07-23",
-            "equity": 99530.17
-          },
-          {
             "date": "2026-07-27",
             "equity": 99530.17
           },
@@ -341,172 +5534,172 @@
             "equity": 99238.3
           },
           {
-            "date": "2026-07-30",
+            "date": "2026-08-04",
             "equity": 99238.3
           },
           {
-            "date": "2026-08-02",
-            "equity": 98945.18
-          },
-          {
-            "date": "2026-08-03",
-            "equity": 99779.75
-          },
-          {
-            "date": "2026-08-04",
-            "equity": 99779.75
-          },
-          {
             "date": "2026-08-05",
-            "equity": 99779.75
+            "equity": 99238.3
           },
           {
             "date": "2026-08-06",
-            "equity": 99673.25
+            "equity": 98963.16
           },
           {
             "date": "2026-08-09",
-            "equity": 99673.25
+            "equity": 98963.16
           },
           {
             "date": "2026-08-10",
-            "equity": 99673.25
+            "equity": 98929.32
           },
           {
             "date": "2026-08-11",
-            "equity": 100503.48
+            "equity": 99754.35
           },
           {
             "date": "2026-08-12",
-            "equity": 101327.66
+            "equity": 100159.49
           },
           {
             "date": "2026-08-13",
-            "equity": 100750.34
+            "equity": 99588.83
           },
           {
             "date": "2026-08-16",
-            "equity": 100750.34
+            "equity": 99588.83
           },
           {
             "date": "2026-08-17",
-            "equity": 100750.34
+            "equity": 99588.83
           },
           {
             "date": "2026-08-18",
-            "equity": 100750.34
+            "equity": 99588.83
           },
           {
             "date": "2026-08-19",
-            "equity": 101178.71
+            "equity": 100012.26
           },
           {
             "date": "2026-08-20",
-            "equity": 100599.14
+            "equity": 99443.44
+          },
+          {
+            "date": "2026-08-23",
+            "equity": 99443.44
+          },
+          {
+            "date": "2026-08-24",
+            "equity": 99144.68
           },
           {
             "date": "2026-08-25",
-            "equity": 100599.14
+            "equity": 99144.68
           },
           {
             "date": "2026-08-26",
-            "equity": 100599.14
+            "equity": 99144.68
           },
           {
             "date": "2026-08-27",
-            "equity": 101017.88
+            "equity": 99558.61
           },
           {
             "date": "2026-08-30",
-            "equity": 100753.41
+            "equity": 99023.06
           },
           {
             "date": "2026-08-31",
-            "equity": 101180.47
+            "equity": 99443.94
           },
           {
             "date": "2026-09-01",
-            "equity": 101585.63
+            "equity": 99443.94
+          },
+          {
+            "date": "2026-09-02",
+            "equity": 99443.94
           },
           {
             "date": "2026-09-03",
-            "equity": 101585.63
+            "equity": 99443.94
           },
           {
             "date": "2026-09-06",
-            "equity": 101585.63
+            "equity": 99443.94
           },
           {
             "date": "2026-09-07",
-            "equity": 101585.63
+            "equity": 99443.94
           },
           {
             "date": "2026-09-08",
-            "equity": 101585.63
+            "equity": 99443.94
           },
           {
             "date": "2026-09-09",
-            "equity": 101585.63
+            "equity": 99443.94
           },
           {
             "date": "2026-09-10",
-            "equity": 101585.63
+            "equity": 99443.94
           },
           {
             "date": "2026-09-13",
-            "equity": 101585.63
+            "equity": 99443.94
           },
           {
             "date": "2026-09-14",
-            "equity": 101585.63
+            "equity": 99443.94
           },
           {
             "date": "2026-09-15",
-            "equity": 101585.63
+            "equity": 99443.94
           },
           {
             "date": "2026-09-20",
-            "equity": 101585.63
+            "equity": 99443.94
           },
           {
             "date": "2026-09-21",
-            "equity": 101585.63
+            "equity": 99443.94
           },
           {
             "date": "2026-09-22",
-            "equity": 101585.63
+            "equity": 99443.94
           },
           {
             "date": "2026-09-23",
-            "equity": 101585.63
+            "equity": 99443.94
           },
           {
             "date": "2026-09-24",
-            "equity": 101585.63
+            "equity": 99443.94
           },
           {
             "date": "2026-09-27",
-            "equity": 101585.63
+            "equity": 99443.94
           },
           {
             "date": "2026-09-28",
-            "equity": 101585.63
+            "equity": 99443.94
           },
           {
             "date": "2026-10-07",
-            "equity": 101585.63
+            "equity": 99443.94
           },
           {
             "date": "2026-10-12",
-            "equity": 101585.63
+            "equity": 99443.94
           },
           {
             "date": "2026-10-13",
-            "equity": 101585.63
+            "equity": 99443.94
           }
         ]
       },
-      "experimentalPortfolioPass": true
+      "experimentalPortfolioPass": false
     },
     {
       "strategyId": "pullback",
@@ -515,36 +5708,44 @@
       "originalStatus": "RESEARCH_ONLY",
       "originalResearchValidated": false,
       "originalValidationMetrics": {
-        "totalSignals": 100,
-        "closedTrades": 94,
-        "cancelledTrades": 6,
-        "wins": 28,
-        "losses": 66,
-        "winRatePct": 29.79,
-        "profitFactor": 0.515,
-        "averageReturnPct": -1.493,
-        "averageR": -0.29,
-        "medianR": -0.876,
-        "maxDrawdownPct": 86.311,
+        "totalSignals": 92,
+        "closedTrades": 85,
+        "cancelledTrades": 7,
+        "wins": 25,
+        "losses": 60,
+        "winRatePct": 29.41,
+        "profitFactor": 0.472,
+        "averageReturnPct": -1.652,
+        "averageR": -0.323,
+        "medianR": -1.103,
+        "maxDrawdownPct": 84.765,
         "drawdownMethod": "compounded_equity_peak_to_trough",
         "startingEquityIndex": 100,
-        "endingEquityIndex": 21.6466,
-        "legacyAdditiveDrawdownPct": 189.989,
+        "endingEquityIndex": 21.9496,
+        "legacyAdditiveDrawdownPct": 179.246,
         "sameBarStopFirstCount": 1
       },
       "portfolioMetrics": {
-        "acceptedTrades": 41,
-        "skippedCapacity": 53,
+        "acceptedTrades": 45,
+        "skippedCapacity": 40,
         "riskPerTradePct": 0.25,
         "maximumConcurrentTrades": 5,
         "startingEquity": 100000,
-        "endingEquity": 99776.69,
-        "totalReturnPct": -0.223,
-        "profitFactor": 0.959,
-        "averageR": -0.128,
-        "maximumDrawdownPct": 3.071,
+        "endingEquity": 97339.57,
+        "totalReturnPct": -2.66,
+        "profitFactor": 0.611,
+        "averageR": -0.31,
+        "maximumDrawdownPct": 4.844,
         "method": "fixed_fractional_risk_portfolio_with_concurrency_limit",
         "equityCurve": [
+          {
+            "date": "2026-06-29",
+            "equity": 99986.89
+          },
+          {
+            "date": "2026-07-05",
+            "equity": 99986.89
+          },
           {
             "date": "2026-07-08",
             "equity": 100405.83
@@ -554,196 +5755,188 @@
             "equity": 100127.46
           },
           {
-            "date": "2026-07-26",
+            "date": "2026-08-04",
             "equity": 100127.46
           },
           {
-            "date": "2026-07-29",
-            "equity": 99847.1
-          },
-          {
-            "date": "2026-07-30",
-            "equity": 99847.1
-          },
-          {
-            "date": "2026-08-03",
-            "equity": 99847.1
-          },
-          {
-            "date": "2026-08-04",
-            "equity": 99971.16
-          },
-          {
             "date": "2026-08-05",
-            "equity": 100796.42
+            "equity": 100550.75
           },
           {
             "date": "2026-08-06",
-            "equity": 101200.81
+            "equity": 100955.76
           },
           {
             "date": "2026-08-09",
-            "equity": 101200.81
+            "equity": 100955.76
           },
           {
             "date": "2026-08-11",
-            "equity": 102033.08
+            "equity": 101063.67
           },
           {
             "date": "2026-08-12",
-            "equity": 102413.03
+            "equity": 101490.51
           },
           {
             "date": "2026-08-13",
-            "equity": 102413.03
+            "equity": 101490.51
           },
           {
             "date": "2026-08-16",
-            "equity": 102831.13
+            "equity": 101905.1
           },
           {
             "date": "2026-08-17",
-            "equity": 102937.9
+            "equity": 102038.39
           },
           {
             "date": "2026-08-18",
-            "equity": 102937.9
+            "equity": 102294.47
           },
           {
             "date": "2026-08-19",
-            "equity": 102346.84
+            "equity": 101419.71
           },
           {
             "date": "2026-08-20",
-            "equity": 101763.61
+            "equity": 100840.72
           },
           {
             "date": "2026-08-23",
-            "equity": 101763.61
+            "equity": 100840.72
           },
           {
             "date": "2026-08-24",
-            "equity": 101763.61
+            "equity": 100840.72
           },
           {
             "date": "2026-08-25",
-            "equity": 101763.61
+            "equity": 100840.72
           },
           {
             "date": "2026-08-26",
-            "equity": 101763.61
+            "equity": 100840.72
           },
           {
             "date": "2026-08-30",
-            "equity": 101763.61
+            "equity": 100840.72
           },
           {
             "date": "2026-08-31",
-            "equity": 101457.05
+            "equity": 100536.93
           },
           {
             "date": "2026-09-01",
-            "equity": 101457.05
+            "equity": 100536.93
           },
           {
             "date": "2026-09-02",
-            "equity": 101557.66
+            "equity": 100502.26
           },
           {
             "date": "2026-09-03",
-            "equity": 101557.66
+            "equity": 100502.26
           },
           {
             "date": "2026-09-06",
-            "equity": 101557.66
+            "equity": 100398.94
           },
           {
             "date": "2026-09-07",
-            "equity": 101975.16
+            "equity": 100812.65
           },
           {
             "date": "2026-09-08",
-            "equity": 101975.16
+            "equity": 100812.65
           },
           {
             "date": "2026-09-10",
-            "equity": 101975.16
+            "equity": 100812.65
           },
           {
             "date": "2026-09-13",
-            "equity": 101975.16
+            "equity": 100812.65
           },
           {
             "date": "2026-09-14",
-            "equity": 101692.43
+            "equity": 100247.01
           },
           {
             "date": "2026-09-15",
-            "equity": 101692.43
+            "equity": 100247.01
           },
           {
             "date": "2026-09-16",
-            "equity": 101476.62
+            "equity": 100033.44
           },
           {
             "date": "2026-09-17",
-            "equity": 101476.62
+            "equity": 100033.44
           },
           {
             "date": "2026-09-20",
-            "equity": 101347.64
+            "equity": 99905.8
           },
           {
             "date": "2026-09-21",
-            "equity": 101066.66
+            "equity": 99418.48
           },
           {
             "date": "2026-09-23",
-            "equity": 101066.66
+            "equity": 99418.48
           },
           {
             "date": "2026-09-24",
-            "equity": 100785.31
+            "equity": 98589.65
           },
           {
             "date": "2026-09-27",
-            "equity": 100505.89
+            "equity": 98316.31
           },
           {
             "date": "2026-09-28",
-            "equity": 100505.89
+            "equity": 98316.31
           },
           {
             "date": "2026-09-29",
-            "equity": 100505.89
+            "equity": 98316.31
           },
           {
             "date": "2026-09-30",
-            "equity": 100227.23
+            "equity": 98043.72
           },
           {
             "date": "2026-10-05",
-            "equity": 100227.23
+            "equity": 98043.72
           },
           {
             "date": "2026-10-06",
-            "equity": 100227.23
+            "equity": 98043.72
           },
           {
             "date": "2026-10-07",
-            "equity": 99949.35
+            "equity": 97771.9
           },
           {
             "date": "2026-10-08",
-            "equity": 99949.35
+            "equity": 97771.9
+          },
+          {
+            "date": "2026-10-11",
+            "equity": 97771.9
           },
           {
             "date": "2026-10-12",
-            "equity": 99949.35
+            "equity": 97387.24
           },
           {
             "date": "2026-10-13",
-            "equity": 99776.69
+            "equity": 97387.24
+          },
+          {
+            "date": "2026-10-15",
+            "equity": 97339.57
           }
         ]
       },
@@ -753,58 +5946,62 @@
   "gateDiagnostics": {
     "hardFailureSummary": [
       {
-        "labelAr": "ترتيب الاتجاه",
-        "count": 134
-      },
-      {
-        "labelAr": "القوة النسبية",
-        "count": 85
-      },
-      {
         "labelAr": "الاقتراب من متوسط 20",
-        "count": 17
+        "count": 95
       },
       {
         "labelAr": "الاتجاه المتوسط صاعد",
-        "count": 12
+        "count": 93
+      },
+      {
+        "labelAr": "القوة النسبية",
+        "count": 72
+      },
+      {
+        "labelAr": "ترتيب الاتجاه",
+        "count": 40
+      },
+      {
+        "labelAr": "جلسات حجم تداول صالحة",
+        "count": 2
       },
       {
         "labelAr": "متوسط قيمة التداول",
         "count": 2
       },
       {
-        "labelAr": "جلسات حجم تداول صالحة",
+        "labelAr": "اتجاه داعم للاختراق",
         "count": 1
       }
     ],
     "softFailureSummary": [
       {
-        "labelAr": "منطقة RSI",
-        "count": 137
-      },
-      {
-        "labelAr": "ميل متوسط 20",
-        "count": 127
-      },
-      {
-        "labelAr": "دعم الحجم",
-        "count": 43
-      },
-      {
         "labelAr": "نشاط الحجم الحالي",
-        "count": 22
-      },
-      {
-        "labelAr": "تحسن RSI",
-        "count": 10
+        "count": 75
       },
       {
         "labelAr": "RSI مناسب للارتداد",
-        "count": 9
+        "count": 64
       },
       {
         "labelAr": "سيولة كافية",
-        "count": 2
+        "count": 51
+      },
+      {
+        "labelAr": "منطقة RSI",
+        "count": 43
+      },
+      {
+        "labelAr": "ميل متوسط 20",
+        "count": 39
+      },
+      {
+        "labelAr": "دعم الحجم",
+        "count": 35
+      },
+      {
+        "labelAr": "تحسن RSI",
+        "count": 4
       },
       {
         "labelAr": "مساحة حتى المقاومة",
