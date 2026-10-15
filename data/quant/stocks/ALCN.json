@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-15T15:29:35.061Z",
+  "generatedAt": "2026-10-15T19:05:45.373Z",
   "ticker": "ALCN",
   "companyNameAr": "الإسكندرية لتداول الحاويات والبضائع",
   "companyNameEn": "Alexandria Container & Cargo Handling Company",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 78.8,
@@ -60,7 +60,22 @@
       "نشاط الحجم الحالي: 0.29",
       "دعم الحجم: 0.29"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 80,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 29.5,
+      "minimumRequiredScore": 85,
+      "scoreGap": 6.2,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 6.2 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "نشاط الحجم الحالي: 0.29",
+        "دعم الحجم: 0.29"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 33.269,
       "entryHigh": 33.676,

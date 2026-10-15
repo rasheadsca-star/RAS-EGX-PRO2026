@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-15T15:29:35.041Z",
+  "generatedAt": "2026-10-15T19:05:45.355Z",
   "ticker": "ABUK",
   "companyNameAr": "أبو قير للأسمدة والصناعات الكيماوية",
   "companyNameEn": "Abu Qir Fertilizers and Chemical Industries",
@@ -49,9 +49,9 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "pullback",
     "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
     "recommendationScore": 83.2,
@@ -59,7 +59,21 @@
     "failedConditions": [
       "الاقتراب من متوسط 20: -2.44"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 86.1,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 21.2,
+      "minimumRequiredScore": 85,
+      "scoreGap": 1.8,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 1.8 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "الاقتراب من متوسط 20: -2.44"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 85.962,
       "entryHigh": 86.879,
