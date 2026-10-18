@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-15T19:05:45.605Z",
+  "generatedAt": "2026-10-18T18:04:01.909Z",
   "ticker": "SUGR",
   "companyNameAr": "الدلتا للسكر",
   "companyNameEn": "Delta Sugar Company",
@@ -12,36 +12,36 @@
     "open": 54.65,
     "high": 58.5,
     "low": 54.6,
-    "close": 58.12,
+    "close": 58.5,
     "volume": 343387
   },
   "indicators": {
-    "close": 58.12,
-    "change1Pct": 10.684,
-    "return5Pct": 4.438,
-    "return20Pct": -4.721,
-    "return50Pct": 23.712,
-    "sma5": 55.138,
-    "sma20": 57.104,
-    "sma50": 53.478,
-    "ema9": 55.288,
-    "ema21": 55.643,
-    "rsi14": 46.442,
-    "macd": -0.036,
-    "macdSignal": 0.316,
+    "close": 58.5,
+    "change1Pct": 11.407,
+    "return5Pct": 5.121,
+    "return20Pct": -4.098,
+    "return50Pct": 24.521,
+    "sma5": 55.214,
+    "sma20": 57.123,
+    "sma50": 53.485,
+    "ema9": 55.364,
+    "ema21": 55.677,
+    "rsi14": 47.39,
+    "macd": -0.006,
+    "macdSignal": 0.322,
     "atr14": 2.842,
-    "atrPct": 4.89,
+    "atrPct": 4.858,
     "averageVolume20": 225265.5,
     "volumeRatio20": 1.524,
-    "averageTurnover20Egp": 13217780.942,
-    "volatility20Pct": 3.423,
+    "averageTurnover20Egp": 13224305.295,
+    "volatility20Pct": 3.54,
     "support20": 50.5,
     "resistance20": 64.4,
     "high50": 64.4,
     "low50": 46.47,
-    "distanceFromSupport20Pct": 15.089,
-    "relativeToResistance20Pct": -9.752,
-    "distanceFromHigh50Pct": -9.752
+    "distanceFromSupport20Pct": 15.842,
+    "relativeToResistance20Pct": -9.161,
+    "distanceFromHigh50Pct": -9.161
   },
   "technical": {
     "score": 68,
@@ -52,37 +52,40 @@
     "source": "V13.5",
     "status": "NEAR_TRIGGER",
     "statusLabelAr": "قريب من اكتمال الإشارة",
-    "strategyId": "pullback",
-    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
-    "recommendationScore": 85.4,
-    "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
-    "failedConditions": [],
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 85.2,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "ميل متوسط 20: -1.43"
+    ],
     "adaptive": {
-      "proximityPct": 90.7,
+      "proximityPct": 86.6,
       "strategyHealthStatus": "RESEARCH_ONLY",
-      "strategyHealthScore": 21.2,
+      "strategyHealthScore": 26.1,
       "minimumRequiredScore": 85,
       "scoreGap": 0,
-      "calibratedVariantId": "wide",
+      "calibratedVariantId": "balanced",
       "riskScale": 0,
       "missingRequirementsAr": [
-        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن."
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "ميل متوسط 20: -1.43"
       ],
       "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
     },
     "plan": {
-      "entryLow": 57.788,
-      "entryHigh": 58.535,
-      "stopLoss": 54.963,
-      "target1": 63.919,
-      "target2": 66.479,
+      "entryLow": 58.168,
+      "entryHigh": 58.915,
+      "stopLoss": 55.322,
+      "target1": 64.337,
+      "target2": 66.913,
       "riskReward1": 1.8,
       "maximumHoldingSessions": 10
     }
   },
   "dataQuality": {
-    "historySessions": 101,
-    "firstSession": "2026-04-28",
+    "historySessions": 100,
+    "firstSession": "2026-04-29",
     "lastSession": "2026-10-15",
     "averageConfidence": 73.9,
     "symbolVerified": true,
@@ -598,7 +601,7 @@
       55.76,
       53.54,
       52.51,
-      58.12
+      58.5
     ],
     "volume": [
       162864,
@@ -802,7 +805,7 @@
       57.877,
       57.639,
       57.248,
-      57.104
+      57.123
     ],
     "sma50": [
       0,
@@ -904,7 +907,7 @@
       53.011,
       53.143,
       53.255,
-      53.478
+      53.485
     ]
   }
 }
