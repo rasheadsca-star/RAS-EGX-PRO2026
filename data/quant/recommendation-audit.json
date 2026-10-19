@@ -1,7 +1,7 @@
 {
   "schemaVersion": "13.4.0",
-  "generatedAt": "2026-10-18T17:34:08.091Z",
-  "latestMarketSession": "2026-10-15",
+  "generatedAt": "2026-10-19T19:56:02.718Z",
+  "latestMarketSession": "2026-10-18",
   "controls": {
     "noLookahead": true,
     "chronologicalWalkForward": true,
@@ -15,7 +15,7 @@
     "historyFilesRead": 199,
     "historiesAccepted": 196,
     "featuresBuilt": 196,
-    "latestAnalyses": 170
+    "latestAnalyses": 130
   },
   "blockedTickers": [
     "SAIB",
@@ -28,56 +28,46 @@
   "rejectionSummary": [
     {
       "reason": "score_below_watch_threshold",
-      "count": 131
+      "count": 124
     },
     {
       "reason": "history_not_fresh_to_latest_session",
-      "count": 26
+      "count": 65
+    },
+    {
+      "reason": "blocked_by_safety_eligibility",
+      "count": 1
     }
   ],
   "paperCandidateTickers": [],
   "watchCandidateTickers": [
-    "GBCO",
-    "ARAB",
+    "CPCI",
     "ETEL",
-    "ABUK",
-    "KZPC",
-    "SDTI",
-    "SNFC",
     "RUBX",
-    "SUGR",
-    "TALM",
-    "AMIA",
-    "ORWE",
-    "MOIL",
-    "ALCN",
     "AJWA",
-    "ICID",
-    "MMAT",
-    "MBSC",
-    "EFIH",
-    "FAIT"
+    "SIPC",
+    "SDTI"
   ],
   "modelStatuses": [
     {
       "strategyId": "trend_follow",
       "status": "RESEARCH_ONLY",
       "validationMetrics": {
-        "totalSignals": 228,
-        "closedTrades": 215,
+        "totalSignals": 214,
+        "closedTrades": 201,
         "cancelledTrades": 13,
-        "wins": 71,
-        "losses": 144,
-        "winRatePct": 33.02,
-        "profitFactor": 0.616,
-        "averageReturnPct": -1.321,
-        "averageR": -0.24,
+        "wins": 66,
+        "losses": 135,
+        "winRatePct": 32.84,
+        "profitFactor": 0.64,
+        "averageReturnPct": -1.227,
+        "averageR": -0.228,
         "medianR": -1.109,
-        "maxDrawdownPct": 97.483,
+        "maxDrawdownPct": 95.672,
         "drawdownMethod": "compounded_equity_peak_to_trough",
         "startingEquityIndex": 100,
-        "endingEquityIndex": 3.9882,
-        "legacyAdditiveDrawdownPct": 338.219,
+        "endingEquityIndex": 5.9407,
+        "legacyAdditiveDrawdownPct": 283.878,
         "sameBarStopFirstCount": 1
       }
     },
@@ -85,21 +75,21 @@
       "strategyId": "breakout",
       "status": "RESEARCH_ONLY",
       "validationMetrics": {
-        "totalSignals": 54,
-        "closedTrades": 52,
+        "totalSignals": 53,
+        "closedTrades": 51,
         "cancelledTrades": 2,
-        "wins": 16,
+        "wins": 15,
         "losses": 36,
-        "winRatePct": 30.77,
-        "profitFactor": 0.761,
-        "averageReturnPct": -0.762,
-        "averageR": -0.236,
+        "winRatePct": 29.41,
+        "profitFactor": 0.726,
+        "averageReturnPct": -0.892,
+        "averageR": -0.272,
         "medianR": -1.109,
-        "maxDrawdownPct": 44.442,
+        "maxDrawdownPct": 44.44,
         "drawdownMethod": "compounded_equity_peak_to_trough",
         "startingEquityIndex": 100,
-        "endingEquityIndex": 61.3774,
-        "legacyAdditiveDrawdownPct": 54.291,
+        "endingEquityIndex": 57.9769,
+        "legacyAdditiveDrawdownPct": 54.288,
         "sameBarStopFirstCount": 1
       }
     },
@@ -107,21 +97,21 @@
       "strategyId": "pullback",
       "status": "RESEARCH_ONLY",
       "validationMetrics": {
-        "totalSignals": 89,
-        "closedTrades": 83,
+        "totalSignals": 90,
+        "closedTrades": 84,
         "cancelledTrades": 6,
         "wins": 23,
-        "losses": 60,
-        "winRatePct": 27.71,
-        "profitFactor": 0.425,
-        "averageReturnPct": -1.826,
-        "averageR": -0.379,
-        "medianR": -1.105,
-        "maxDrawdownPct": 84.994,
+        "losses": 61,
+        "winRatePct": 27.38,
+        "profitFactor": 0.341,
+        "averageReturnPct": -2.149,
+        "averageR": -0.431,
+        "medianR": -1.109,
+        "maxDrawdownPct": 86.917,
         "drawdownMethod": "compounded_equity_peak_to_trough",
         "startingEquityIndex": 100,
-        "endingEquityIndex": 19.7106,
-        "legacyAdditiveDrawdownPct": 181.596,
+        "endingEquityIndex": 14.868,
+        "legacyAdditiveDrawdownPct": 194.355,
         "sameBarStopFirstCount": 1
       }
     }
