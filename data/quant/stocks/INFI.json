@@ -1,69 +1,93 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-19T20:34:06.376Z",
+  "generatedAt": "2026-10-20T19:12:25.798Z",
   "ticker": "INFI",
   "companyNameAr": "الإسماعيلية الوطنية للصناعات الغذائية",
   "companyNameEn": "Ismailia National Co. for Food Industries",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-10-18",
+  "sessionId": "2026-10-19",
   "latest": {
-    "date": "2026-10-18",
-    "open": 128.2,
-    "high": 138,
-    "low": 124,
-    "close": 125.6,
-    "volume": 580548
+    "date": "2026-10-19",
+    "open": 125.6,
+    "high": 130.87,
+    "low": 120,
+    "close": 127.01,
+    "volume": 241832
   },
   "indicators": {
-    "close": 125.6,
-    "change1Pct": -2.028,
-    "return5Pct": -2.741,
-    "return20Pct": -13.331,
-    "return50Pct": 28.111,
-    "sma5": 122.038,
-    "sma20": 126.344,
-    "sma50": 132.029,
-    "ema9": 123.983,
-    "ema21": 127.329,
-    "rsi14": 48.751,
-    "macd": -3.281,
-    "macdSignal": -3.079,
-    "atr14": 10.782,
-    "atrPct": 8.585,
-    "averageVolume20": 140410.2,
-    "volumeRatio20": 4.135,
-    "averageTurnover20Egp": 17866098.803,
-    "volatility20Pct": 4.555,
+    "close": 127.01,
+    "change1Pct": 1.123,
+    "return5Pct": 2.593,
+    "return20Pct": -4.918,
+    "return50Pct": 23.072,
+    "sma5": 122.68,
+    "sma20": 126.015,
+    "sma50": 132.505,
+    "ema9": 124.589,
+    "ema21": 127.3,
+    "rsi14": 50.052,
+    "macd": -2.86,
+    "macdSignal": -3.034,
+    "atr14": 11.273,
+    "atrPct": 8.876,
+    "averageVolume20": 145077.3,
+    "volumeRatio20": 1.667,
+    "averageTurnover20Egp": 18410088.218,
+    "volatility20Pct": 4.254,
     "support20": 104,
-    "resistance20": 146.39,
+    "resistance20": 142.65,
     "high50": 178.99,
-    "low50": 97.25,
-    "distanceFromSupport20Pct": 20.769,
-    "relativeToResistance20Pct": -14.202,
-    "distanceFromHigh50Pct": -29.828
+    "low50": 99.02,
+    "distanceFromSupport20Pct": 22.125,
+    "relativeToResistance20Pct": -10.964,
+    "distanceFromHigh50Pct": -29.041
   },
   "technical": {
-    "score": 28,
-    "trendCode": "BEARISH",
-    "trendLabelAr": "اتجاه هابط"
+    "score": 60,
+    "trendCode": "NEUTRAL",
+    "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 59,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "الاتجاه المتوسط صاعد: لم يتحقق"
+    ],
+    "adaptive": {
+      "proximityPct": 77.4,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 13.1,
+      "minimumRequiredScore": 85,
+      "scoreGap": 26,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 26 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "الاتجاه المتوسط صاعد: لم يتحقق"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 126.248,
+      "entryHigh": 128.153,
+      "stopLoss": 120.204,
+      "target1": 139.793,
+      "target2": 145.39,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-04-06",
-    "lastSession": "2026-10-18",
+    "firstSession": "2026-04-07",
+    "lastSession": "2026-10-19",
     "averageConfidence": 72.4,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +95,6 @@
   },
   "chart": {
     "dates": [
-      "2026-04-06",
       "2026-04-07",
       "2026-04-09",
       "2026-04-15",
@@ -170,10 +193,10 @@
       "2026-10-12",
       "2026-10-13",
       "2026-10-15",
-      "2026-10-18"
+      "2026-10-18",
+      "2026-10-19"
     ],
     "open": [
-      87.81,
       88,
       87.82,
       88.09,
@@ -272,10 +295,10 @@
       123.8,
       118.72,
       117.46,
-      128.2
+      128.2,
+      125.6
     ],
     "high": [
-      91,
       89.97,
       89.35,
       88.98,
@@ -374,10 +397,10 @@
       124.41,
       120.99,
       131.8,
-      138
+      138,
+      130.87
     ],
     "low": [
-      87,
       86.2,
       87.25,
       87,
@@ -476,10 +499,10 @@
       118.11,
       106.01,
       111.25,
-      124
+      124,
+      120
     ],
     "close": [
-      88,
       86.87,
       87.88,
       87.56,
@@ -578,10 +601,10 @@
       118.72,
       113.87,
       128.2,
-      125.6
+      125.6,
+      127.01
     ],
     "volume": [
-      156106,
       52509,
       38258,
       63462,
@@ -680,7 +703,8 @@
       68020,
       75912,
       464224,
-      580548
+      580548,
+      241832
     ],
     "sma20": [
       0,
@@ -702,7 +726,6 @@
       0,
       0,
       0,
-      94.901,
       95.53,
       96.242,
       97.008,
@@ -782,7 +805,8 @@
       129.871,
       128.225,
       127.31,
-      126.344
+      126.344,
+      126.015
     ],
     "sma50": [
       0,
@@ -834,7 +858,6 @@
       0,
       0,
       0,
-      96.905,
       97.209,
       97.47,
       97.71,
@@ -884,7 +907,8 @@
       130.45,
       130.808,
       131.477,
-      132.029
+      132.029,
+      132.505
     ]
   }
 }

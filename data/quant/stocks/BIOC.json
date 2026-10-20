@@ -1,69 +1,93 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-19T20:34:06.276Z",
+  "generatedAt": "2026-10-20T19:12:25.737Z",
   "ticker": "BIOC",
   "companyNameAr": "جلاكسو سميثكلاين",
   "companyNameEn": "GlaxoSmithKline S.A.E",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-10-18",
+  "sessionId": "2026-10-19",
   "latest": {
-    "date": "2026-10-18",
-    "open": 295.5,
-    "high": 305,
-    "low": 268,
-    "close": 273.58,
-    "volume": 162113
+    "date": "2026-10-19",
+    "open": 273.58,
+    "high": 297.95,
+    "low": 257,
+    "close": 291,
+    "volume": 557258
   },
   "indicators": {
-    "close": 273.58,
-    "change1Pct": -7.418,
-    "return5Pct": -10.595,
-    "return20Pct": -5.986,
-    "return50Pct": 131.847,
-    "sma5": 294.452,
-    "sma20": 291.051,
-    "sma50": 340.999,
-    "ema9": 297.424,
-    "ema21": 303.163,
-    "rsi14": 52.138,
-    "macd": -5.21,
-    "macdSignal": -4.439,
-    "atr14": 34.542,
-    "atrPct": 12.626,
-    "averageVolume20": 213728.65,
-    "volumeRatio20": 0.758,
-    "averageTurnover20Egp": 66822406.501,
-    "volatility20Pct": 11.77,
+    "close": 291,
+    "change1Pct": 6.367,
+    "return5Pct": -3.992,
+    "return20Pct": 3.356,
+    "return50Pct": 162.873,
+    "sma5": 292.032,
+    "sma20": 291.523,
+    "sma50": 344.605,
+    "ema9": 296.139,
+    "ema21": 302.057,
+    "rsi14": 57.284,
+    "macd": -5.455,
+    "macdSignal": -4.644,
+    "atr14": 36.396,
+    "atrPct": 12.507,
+    "averageVolume20": 234638.8,
+    "volumeRatio20": 2.375,
+    "averageTurnover20Egp": 72972963.722,
+    "volatility20Pct": 11.814,
     "support20": 225.21,
     "resistance20": 379,
     "high50": 563.99,
-    "low50": 106.61,
-    "distanceFromSupport20Pct": 21.478,
-    "relativeToResistance20Pct": -27.815,
-    "distanceFromHigh50Pct": -51.492
+    "low50": 116.25,
+    "distanceFromSupport20Pct": 29.213,
+    "relativeToResistance20Pct": -23.219,
+    "distanceFromHigh50Pct": -48.403
   },
   "technical": {
-    "score": 22,
+    "score": 38,
     "trendCode": "BEARISH",
     "trendLabelAr": "اتجاه هابط"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 61.2,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "الاتجاه المتوسط صاعد: لم يتحقق"
+    ],
+    "adaptive": {
+      "proximityPct": 78.4,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 13.1,
+      "minimumRequiredScore": 85,
+      "scoreGap": 23.8,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 23.8 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "الاتجاه المتوسط صاعد: لم يتحقق"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 289.254,
+      "entryHigh": 293.619,
+      "stopLoss": 275.408,
+      "target1": 320.289,
+      "target2": 333.112,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-04-19",
-    "lastSession": "2026-10-18",
+    "firstSession": "2026-04-22",
+    "lastSession": "2026-10-19",
     "averageConfidence": 73.9,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +95,6 @@
   },
   "chart": {
     "dates": [
-      "2026-04-19",
       "2026-04-22",
       "2026-04-23",
       "2026-04-26",
@@ -170,10 +193,10 @@
       "2026-10-13",
       "2026-10-14",
       "2026-10-15",
-      "2026-10-18"
+      "2026-10-18",
+      "2026-10-19"
     ],
     "open": [
-      63.81,
       67.09,
       66.08,
       65.38,
@@ -272,10 +295,10 @@
       303.1,
       297.98,
       302.1,
-      295.5
+      295.5,
+      273.58
     ],
     "high": [
-      64.97,
       68.85,
       66.94,
       69.4,
@@ -374,10 +397,10 @@
       314.99,
       310,
       303.87,
-      305
+      305,
+      297.95
     ],
     "low": [
-      63.81,
       66,
       65.02,
       65,
@@ -476,10 +499,10 @@
       273.11,
       285,
       291.65,
-      268
+      268,
+      257
     ],
     "close": [
-      64.07,
       66.08,
       65.38,
       68.48,
@@ -578,10 +601,10 @@
       297.98,
       302.1,
       295.5,
-      273.58
+      273.58,
+      291
     ],
     "volume": [
-      22064,
       56966,
       59753,
       255372,
@@ -680,7 +703,8 @@
       254240,
       244739,
       107023,
-      162113
+      162113,
+      557258
     ],
     "sma20": [
       0,
@@ -702,7 +726,6 @@
       0,
       0,
       0,
-      70.722,
       71.125,
       71.486,
       71.911,
@@ -782,7 +805,8 @@
       291.747,
       291.602,
       291.922,
-      291.051
+      291.051,
+      291.523
     ],
     "sma50": [
       0,
@@ -834,7 +858,6 @@
       0,
       0,
       0,
-      72.753,
       73.685,
       74.744,
       76.766,
@@ -884,7 +907,8 @@
       329.166,
       333.74,
       337.888,
-      340.999
+      340.999,
+      344.605
     ]
   }
 }

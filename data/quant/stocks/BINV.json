@@ -1,77 +1,100 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-19T20:34:06.275Z",
+  "generatedAt": "2026-10-20T19:12:25.736Z",
   "ticker": "BINV",
   "companyNameAr": "بي إنفستمنتس",
   "companyNameEn": "B Investments Holding",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-10-14",
+  "sessionId": "2026-10-19",
   "latest": {
-    "date": "2026-10-14",
-    "open": 59.73,
-    "high": 60.5,
-    "low": 58.56,
-    "close": 60.12,
-    "volume": 62568
+    "date": "2026-10-19",
+    "open": 58.18,
+    "high": 58.39,
+    "low": 57.33,
+    "close": 58,
+    "volume": 289894
   },
   "indicators": {
-    "close": 60.12,
-    "change1Pct": 0.653,
-    "return5Pct": 3.193,
-    "return20Pct": 15.66,
-    "return50Pct": 25.198,
-    "sma5": 58.818,
-    "sma20": 58.854,
-    "sma50": 53.393,
-    "ema9": 58.879,
-    "ema21": 57.574,
-    "rsi14": 65.158,
-    "macd": 1.675,
-    "macdSignal": 1.893,
-    "atr14": 3.139,
-    "atrPct": 5.221,
-    "averageVolume20": 446959,
-    "volumeRatio20": 0.14,
-    "averageTurnover20Egp": 26785353.997,
-    "volatility20Pct": 4.791,
-    "support20": 50,
+    "close": 58,
+    "change1Pct": -3.526,
+    "return5Pct": -0.446,
+    "return20Pct": -6.827,
+    "return50Pct": 18.488,
+    "sma5": 58.766,
+    "sma20": 58.641,
+    "sma50": 53.574,
+    "ema9": 58.703,
+    "ema21": 57.613,
+    "rsi14": 53.774,
+    "macd": 1.501,
+    "macdSignal": 1.814,
+    "atr14": 3.202,
+    "atrPct": 5.521,
+    "averageVolume20": 363812.95,
+    "volumeRatio20": 0.797,
+    "averageTurnover20Egp": 21547909.91,
+    "volatility20Pct": 2.154,
+    "support20": 55.1,
     "resistance20": 72.99,
     "high50": 72.99,
     "low50": 46.25,
-    "distanceFromSupport20Pct": 20.24,
-    "relativeToResistance20Pct": -17.633,
-    "distanceFromHigh50Pct": -17.633
+    "distanceFromSupport20Pct": 5.263,
+    "relativeToResistance20Pct": -20.537,
+    "distanceFromHigh50Pct": -20.537
   },
   "technical": {
-    "score": 86,
-    "trendCode": "BULLISH",
-    "trendLabelAr": "اتجاه صاعد"
+    "score": 56,
+    "trendCode": "NEUTRAL",
+    "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 60.4,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "تحسن RSI: 63.2 → 54"
+    ],
+    "adaptive": {
+      "proximityPct": 78,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 13.1,
+      "minimumRequiredScore": 85,
+      "scoreGap": 24.6,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 24.6 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "تحسن RSI: 63.2 → 54"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 57.652,
+      "entryHigh": 58.485,
+      "stopLoss": 54.875,
+      "target1": 63.817,
+      "target2": 66.372,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-04-28",
-    "lastSession": "2026-10-14",
-    "averageConfidence": 73.5,
+    "firstSession": "2026-04-30",
+    "lastSession": "2026-10-19",
+    "averageConfidence": 73.15,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
     "eligibilityLabelAr": "مكتمل وحديث"
   },
   "chart": {
     "dates": [
-      "2026-04-28",
       "2026-04-30",
       "2026-05-03",
       "2026-05-04",
@@ -170,10 +193,10 @@
       "2026-10-11",
       "2026-10-12",
       "2026-10-13",
-      "2026-10-14"
+      "2026-10-14",
+      "2026-10-19"
     ],
     "open": [
-      39.99,
       40,
       39.94,
       39.99,
@@ -272,10 +295,10 @@
       58.26,
       57.98,
       58,
-      59.73
+      59.73,
+      58.18
     ],
     "high": [
-      40.4,
       40,
       40.3,
       41.5,
@@ -374,10 +397,10 @@
       58.98,
       59,
       62.5,
-      60.5
+      60.5,
+      58.39
     ],
     "low": [
-      39.6,
       39.8,
       38,
       39.51,
@@ -476,10 +499,10 @@
       57.61,
       57.58,
       56.01,
-      58.56
+      58.56,
+      57.33
     ],
     "close": [
-      39.78,
       39.94,
       39.99,
       40.57,
@@ -578,10 +601,10 @@
       57.98,
       58,
       59.73,
-      60.12
+      60.12,
+      58
     ],
     "volume": [
-      116705,
       63833,
       372702,
       638693,
@@ -680,7 +703,8 @@
       188119,
       517095,
       386229,
-      62568
+      62568,
+      289894
     ],
     "sma20": [
       0,
@@ -702,7 +726,6 @@
       0,
       0,
       0,
-      42.192,
       42.528,
       42.849,
       43.199,
@@ -782,7 +805,8 @@
       57.716,
       58.048,
       58.447,
-      58.854
+      58.854,
+      58.641
     ],
     "sma50": [
       0,
@@ -834,7 +858,6 @@
       0,
       0,
       0,
-      45.264,
       45.447,
       45.633,
       45.821,
@@ -884,7 +907,8 @@
       52.695,
       52.905,
       53.151,
-      53.393
+      53.393,
+      53.574
     ]
   }
 }
