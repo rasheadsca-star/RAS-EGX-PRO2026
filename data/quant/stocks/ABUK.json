@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-21T15:57:37.455Z",
+  "generatedAt": "2026-10-21T19:17:09.077Z",
   "ticker": "ABUK",
   "companyNameAr": "أبو قير للأسمدة والصناعات الكيماوية",
   "companyNameEn": "Abu Qir Fertilizers and Chemical Industries",
@@ -52,31 +52,34 @@
     "source": "V13.5",
     "status": "NEAR_TRIGGER",
     "statusLabelAr": "قريب من اكتمال الإشارة",
-    "strategyId": "pullback",
-    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
-    "recommendationScore": 84.3,
-    "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
-    "failedConditions": [],
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 64.8,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "ميل متوسط 20: -0.52"
+    ],
     "adaptive": {
-      "proximityPct": 90.2,
+      "proximityPct": 79.3,
       "strategyHealthStatus": "RESEARCH_ONLY",
-      "strategyHealthScore": 13.1,
+      "strategyHealthScore": 25.3,
       "minimumRequiredScore": 85,
-      "scoreGap": 0.7,
-      "calibratedVariantId": "wide",
+      "scoreGap": 20.2,
+      "calibratedVariantId": "balanced",
       "riskScale": 0,
       "missingRequirementsAr": [
         "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-        "تحتاج 0.7 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف."
+        "تحتاج 20.2 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "ميل متوسط 20: -0.52"
       ],
       "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
     },
     "plan": {
-      "entryLow": 87.577,
-      "entryHigh": 88.552,
-      "stopLoss": 83.221,
-      "target1": 96.782,
-      "target2": 100.657,
+      "entryLow": 94.121,
+      "entryHigh": 95.176,
+      "stopLoss": 89.443,
+      "target1": 104.019,
+      "target2": 108.183,
       "riskReward1": 1.8,
       "maximumHoldingSessions": 10
     }

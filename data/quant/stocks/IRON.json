@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-21T15:57:37.612Z",
+  "generatedAt": "2026-10-21T19:17:09.225Z",
   "ticker": "IRON",
   "companyNameAr": "الحديد والصلب",
   "companyNameEn": "Egyptian Iron and Steel Company",
@@ -49,8 +49,8 @@
     "trendLabelAr": "اتجاه هابط"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
+    "source": "V13.5",
+    "status": "CONDITIONAL_WATCH",
     "statusLabelAr": "مراقبة مشروطة",
     "strategyId": "pullback",
     "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
@@ -59,7 +59,21 @@
     "failedConditions": [
       "الاتجاه المتوسط صاعد: لم يتحقق"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 76.9,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 13.1,
+      "minimumRequiredScore": 85,
+      "scoreGap": 28.1,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 28.1 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "الاتجاه المتوسط صاعد: لم يتحقق"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 26.878,
       "entryHigh": 27.283,

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-21T15:57:37.486Z",
+  "generatedAt": "2026-10-21T19:17:09.107Z",
   "ticker": "ARAB",
   "companyNameAr": "المطورون العرب القابضة",
   "companyNameEn": "Arab Developers Holding",
@@ -50,33 +50,38 @@
   },
   "recommendation": {
     "source": "V13.5",
-    "status": "NEAR_TRIGGER",
-    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
-    "recommendationScore": 77.7,
-    "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
-    "failedConditions": [],
+    "recommendationScore": 70.5,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "نشاط الحجم الحالي: 0.52",
+      "دعم الحجم: 0.52"
+    ],
     "adaptive": {
-      "proximityPct": 87.8,
+      "proximityPct": 77.1,
       "strategyHealthStatus": "RESEARCH_ONLY",
       "strategyHealthScore": 25.3,
       "minimumRequiredScore": 85,
-      "scoreGap": 7.3,
+      "scoreGap": 14.5,
       "calibratedVariantId": "balanced",
       "riskScale": 0,
       "missingRequirementsAr": [
         "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-        "تحتاج 7.3 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف."
+        "تحتاج 14.5 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "نشاط الحجم الحالي: 0.52",
+        "دعم الحجم: 0.52"
       ],
       "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
     },
     "plan": {
-      "entryLow": 0.261,
-      "entryHigh": 0.265,
-      "stopLoss": 0.249,
-      "target1": 0.289,
-      "target2": 0.301,
+      "entryLow": 0.258,
+      "entryHigh": 0.262,
+      "stopLoss": 0.246,
+      "target1": 0.286,
+      "target2": 0.297,
       "riskReward1": 1.8,
       "maximumHoldingSessions": 10
     }
