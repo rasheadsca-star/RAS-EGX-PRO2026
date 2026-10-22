@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-22T15:53:19.006Z",
+  "generatedAt": "2026-10-22T19:12:08.985Z",
   "ticker": "MFPC",
   "companyNameAr": "موبكو",
   "companyNameEn": "Misr Fertilizer Production Company",
@@ -50,36 +50,38 @@
   },
   "recommendation": {
     "source": "V13.5",
-    "status": "NEAR_TRIGGER",
-    "statusLabelAr": "قريب من اكتمال الإشارة",
-    "strategyId": "trend_follow",
-    "strategyLabelAr": "اتجاه قوي مع سيولة",
-    "recommendationScore": 72.4,
-    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 61.3,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
     "failedConditions": [
-      "ميل متوسط 20: -1.59"
+      "الاقتراب من متوسط 20: -1.57",
+      "تحسن RSI: 58.6 → 50.4"
     ],
     "adaptive": {
-      "proximityPct": 81.9,
+      "proximityPct": 74.6,
       "strategyHealthStatus": "RESEARCH_ONLY",
-      "strategyHealthScore": 25.3,
+      "strategyHealthScore": 12.7,
       "minimumRequiredScore": 85,
-      "scoreGap": 12.6,
-      "calibratedVariantId": "balanced",
+      "scoreGap": 23.7,
+      "calibratedVariantId": "wide",
       "riskScale": 0,
       "missingRequirementsAr": [
         "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-        "تحتاج 12.6 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
-        "ميل متوسط 20: -1.59"
+        "تحتاج 23.7 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "الاقتراب من متوسط 20: -1.57",
+        "تحسن RSI: 58.6 → 50.4"
       ],
       "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
     },
     "plan": {
-      "entryLow": 47.246,
-      "entryHigh": 47.84,
-      "stopLoss": 44.928,
-      "target1": 52.25,
-      "target2": 54.342,
+      "entryLow": 44.823,
+      "entryHigh": 45.424,
+      "stopLoss": 42.642,
+      "target1": 49.591,
+      "target2": 51.576,
       "riskReward1": 1.8,
       "maximumHoldingSessions": 10
     }
