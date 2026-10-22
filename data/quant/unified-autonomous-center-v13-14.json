@@ -1,14 +1,14 @@
 {
   "schemaVersion": "13.14.0",
-  "generatedAt": "2026-10-21T15:57:38.533Z",
-  "operationalStatus": "CONFIRMED_LATEST_SESSION",
-  "operationalLabelAr": "قرار يومي مؤكد ومتابعة حية",
+  "generatedAt": "2026-10-22T11:08:58.156Z",
+  "operationalStatus": "PROVISIONAL_INTRADAY_ON_OLDER_ANALYSIS",
+  "operationalLabelAr": "قرار مؤقت على تحليل يومي أقدم",
   "analysisSession": "2026-10-21",
-  "marketDate": "2026-10-21",
+  "marketDate": "2026-10-22",
   "marketCurrent": true,
-  "analysisCurrent": true,
-  "finalizationCurrent": true,
-  "marketSessionState": "POST_CLOSE",
+  "analysisCurrent": false,
+  "finalizationCurrent": false,
+  "marketSessionState": "OPEN",
   "publicDelayedData": true,
   "liveExecutionEnabled": false,
   "automaticOrderSubmission": false,
@@ -28,8 +28,8 @@
     "ready": 0,
     "wait": 0,
     "blocked": 0,
-    "unreadAlerts": 0,
-    "discoveryWatch": 2
+    "unreadAlerts": 1,
+    "discoveryWatch": 3
   },
   "primaryCandidate": null,
   "topCandidates": [],
@@ -37,6 +37,58 @@
   "discoveryWatch": [
     {
       "unifiedRank": 1,
+      "ticker": "MENA",
+      "companyNameAr": "مينا للاستثمار السياحي والعقاري",
+      "companyNameEn": "Mena for Touristic & Real Estate Investment",
+      "sector": "غير مصنف",
+      "tier": "DISCOVERY_WATCH",
+      "tierLabelAr": "اكتشاف سوقي",
+      "currentPrice": 6.89,
+      "changePct": 0.88,
+      "turnover": 6991105.5,
+      "turnoverPaceRatio": 0,
+      "state": "MARKET_LEADER",
+      "stateLabelAr": "قائد تداول",
+      "stale": true,
+      "finalDecision": {
+        "code": "WATCH_ONLY",
+        "labelAr": "مراقبة سوقية فقط",
+        "actionable": false,
+        "reasonAr": "السهم نشط لكنه غير موجود داخل طبقات التوصية اليومية."
+      },
+      "latestAlerts": [
+        {
+          "generatedAt": "2026-10-22T11:08:58.054Z",
+          "acknowledged": false,
+          "id": "2026-10-22:MENA:stale_data:",
+          "level": "warning",
+          "type": "stale_data",
+          "ticker": "MENA",
+          "titleAr": "MENA: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 157907.4 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 157907.42788333332,
+          "price": 6.89,
+          "tier": null
+        },
+        {
+          "generatedAt": "2026-10-18T10:20:07.567Z",
+          "acknowledged": false,
+          "id": "2026-10-18:MENA:stale_data:",
+          "level": "warning",
+          "type": "stale_data",
+          "ticker": "MENA",
+          "titleAr": "MENA: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 152098.6 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 152098.5864,
+          "price": 6.89,
+          "tier": null
+        }
+      ]
+    },
+    {
+      "unifiedRank": 2,
       "ticker": "GMCI",
       "companyNameAr": "جي إم سي",
       "companyNameEn": "GMC Group For Industrial Commercial & Financial Investments",
@@ -102,7 +154,7 @@
       ]
     },
     {
-      "unifiedRank": 2,
+      "unifiedRank": 3,
       "ticker": "ELWA",
       "companyNameAr": "الوادي العالمية للاستثمار والتنمية",
       "companyNameEn": "El Wadi for International and Investment Development",
