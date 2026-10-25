@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.4.0",
-  "generatedAt": "2026-10-22T18:52:34.166Z",
+  "generatedAt": "2026-10-25T17:38:50.185Z",
   "latestMarketSession": "2026-10-22",
   "controls": {
     "noLookahead": true,
@@ -15,7 +15,7 @@
     "historyFilesRead": 199,
     "historiesAccepted": 196,
     "featuresBuilt": 196,
-    "latestAnalyses": 146
+    "latestAnalyses": 156
   },
   "blockedTickers": [
     "SAIB",
@@ -28,45 +28,51 @@
   "rejectionSummary": [
     {
       "reason": "score_below_watch_threshold",
-      "count": 137
+      "count": 145
     },
     {
       "reason": "history_not_fresh_to_latest_session",
-      "count": 50
+      "count": 39
+    },
+    {
+      "reason": "blocked_by_safety_eligibility",
+      "count": 1
     }
   ],
   "paperCandidateTickers": [],
   "watchCandidateTickers": [
     "CPCI",
     "AJWA",
+    "MMAT",
     "CCAP",
     "KZPC",
+    "MFPC",
     "AMOC",
     "SUGR",
-    "MFPC",
     "BINV",
-    "NAHO"
+    "NAHO",
+    "LCSW"
   ],
   "modelStatuses": [
     {
       "strategyId": "trend_follow",
       "status": "RESEARCH_ONLY",
       "validationMetrics": {
-        "totalSignals": 203,
-        "closedTrades": 193,
-        "cancelledTrades": 10,
-        "wins": 61,
-        "losses": 132,
-        "winRatePct": 31.61,
-        "profitFactor": 0.587,
-        "averageReturnPct": -1.456,
-        "averageR": -0.272,
+        "totalSignals": 169,
+        "closedTrades": 161,
+        "cancelledTrades": 8,
+        "wins": 44,
+        "losses": 117,
+        "winRatePct": 27.33,
+        "profitFactor": 0.461,
+        "averageReturnPct": -2.001,
+        "averageR": -0.398,
         "medianR": -1.109,
-        "maxDrawdownPct": 95.999,
+        "maxDrawdownPct": 97.112,
         "drawdownMethod": "compounded_equity_peak_to_trough",
         "startingEquityIndex": 100,
-        "endingEquityIndex": 4.2748,
-        "legacyAdditiveDrawdownPct": 288.976,
+        "endingEquityIndex": 3.0419,
+        "legacyAdditiveDrawdownPct": 327.464,
         "sameBarStopFirstCount": 1
       }
     },
@@ -74,43 +80,43 @@
       "strategyId": "breakout",
       "status": "RESEARCH_ONLY",
       "validationMetrics": {
-        "totalSignals": 46,
-        "closedTrades": 44,
+        "totalSignals": 34,
+        "closedTrades": 32,
         "cancelledTrades": 2,
-        "wins": 13,
-        "losses": 31,
-        "winRatePct": 29.55,
-        "profitFactor": 0.702,
-        "averageReturnPct": -0.945,
-        "averageR": -0.266,
+        "wins": 9,
+        "losses": 23,
+        "winRatePct": 28.13,
+        "profitFactor": 0.689,
+        "averageReturnPct": -0.957,
+        "averageR": -0.288,
         "medianR": -1.109,
-        "maxDrawdownPct": 45.841,
+        "maxDrawdownPct": 35.41,
         "drawdownMethod": "compounded_equity_peak_to_trough",
         "startingEquityIndex": 100,
-        "endingEquityIndex": 61.4087,
-        "legacyAdditiveDrawdownPct": 59.39,
-        "sameBarStopFirstCount": 1
+        "endingEquityIndex": 70.0443,
+        "legacyAdditiveDrawdownPct": 39.79,
+        "sameBarStopFirstCount": 0
       }
     },
     {
       "strategyId": "pullback",
       "status": "RESEARCH_ONLY",
       "validationMetrics": {
-        "totalSignals": 97,
-        "closedTrades": 92,
-        "cancelledTrades": 5,
-        "wins": 18,
-        "losses": 74,
-        "winRatePct": 19.57,
-        "profitFactor": 0.255,
-        "averageReturnPct": -2.722,
-        "averageR": -0.556,
+        "totalSignals": 109,
+        "closedTrades": 105,
+        "cancelledTrades": 4,
+        "wins": 26,
+        "losses": 79,
+        "winRatePct": 24.76,
+        "profitFactor": 0.388,
+        "averageReturnPct": -2.16,
+        "averageR": -0.421,
         "medianR": -1.109,
-        "maxDrawdownPct": 93.26,
+        "maxDrawdownPct": 92.306,
         "drawdownMethod": "compounded_equity_peak_to_trough",
         "startingEquityIndex": 100,
-        "endingEquityIndex": 7.2562,
-        "legacyAdditiveDrawdownPct": 258.304,
+        "endingEquityIndex": 8.9005,
+        "legacyAdditiveDrawdownPct": 246.166,
         "sameBarStopFirstCount": 1
       }
     }
