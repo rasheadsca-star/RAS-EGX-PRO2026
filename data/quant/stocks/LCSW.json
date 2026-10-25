@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-22T19:12:08.972Z",
+  "generatedAt": "2026-10-25T18:23:18.552Z",
   "ticker": "LCSW",
   "companyNameAr": "ليسيكو مصر",
   "companyNameEn": "Lecico Egypt",
@@ -12,36 +12,36 @@
     "open": 33.3,
     "high": 33.83,
     "low": 32.5,
-    "close": 33.51,
+    "close": 33.5,
     "volume": 707035
   },
   "indicators": {
-    "close": 33.51,
-    "change1Pct": 0.631,
-    "return5Pct": -1.092,
-    "return20Pct": 1.545,
-    "return50Pct": -6.994,
-    "sma5": 33.168,
-    "sma20": 33.038,
-    "sma50": 33.706,
-    "ema9": 33.362,
-    "ema21": 33.391,
-    "rsi14": 51.285,
-    "macd": -0.021,
-    "macdSignal": -0.003,
-    "atr14": 1.645,
-    "atrPct": 4.909,
-    "averageVolume20": 606102.55,
-    "volumeRatio20": 1.167,
-    "averageTurnover20Egp": 20410772.632,
-    "volatility20Pct": 3.212,
+    "close": 33.5,
+    "change1Pct": 0.601,
+    "return5Pct": -1.471,
+    "return20Pct": 3.812,
+    "return50Pct": -3.375,
+    "sma5": 33.06,
+    "sma20": 33.097,
+    "sma50": 33.682,
+    "ema9": 33.378,
+    "ema21": 33.396,
+    "rsi14": 50.06,
+    "macd": -0.015,
+    "macdSignal": -0.005,
+    "atr14": 1.568,
+    "atrPct": 4.68,
+    "averageVolume20": 618450.1,
+    "volumeRatio20": 1.143,
+    "averageTurnover20Egp": 20840248.986,
+    "volatility20Pct": 3.19,
     "support20": 28.86,
     "resistance20": 35.6,
     "high50": 37.5,
     "low50": 28.86,
-    "distanceFromSupport20Pct": 16.112,
-    "relativeToResistance20Pct": -5.871,
-    "distanceFromHigh50Pct": -10.64
+    "distanceFromSupport20Pct": 16.078,
+    "relativeToResistance20Pct": -5.899,
+    "distanceFromHigh50Pct": -10.667
   },
   "technical": {
     "score": 52,
@@ -49,20 +49,44 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 55,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "الاتجاه المتوسط صاعد: لم يتحقق"
+    ],
+    "adaptive": {
+      "proximityPct": 76.2,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 18.4,
+      "minimumRequiredScore": 85,
+      "scoreGap": 30,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 30 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "الاتجاه المتوسط صاعد: لم يتحقق"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 33.304,
+      "entryHigh": 33.745,
+      "stopLoss": 31.681,
+      "target1": 36.843,
+      "target2": 38.318,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
-    "historySessions": 102,
-    "firstSession": "2026-04-29",
+    "historySessions": 100,
+    "firstSession": "2026-05-06",
     "lastSession": "2026-10-22",
     "averageConfidence": 73.9,
     "symbolVerified": true,
@@ -71,7 +95,6 @@
   },
   "chart": {
     "dates": [
-      "2026-05-04",
       "2026-05-06",
       "2026-05-12",
       "2026-05-13",
@@ -169,11 +192,11 @@
       "2026-10-15",
       "2026-10-18",
       "2026-10-19",
+      "2026-10-20",
       "2026-10-21",
       "2026-10-22"
     ],
     "open": [
-      26.28,
       26.43,
       28.37,
       28.4,
@@ -271,11 +294,11 @@
       33.88,
       34,
       32.48,
+      32.55,
       33.47,
       33.3
     ],
     "high": [
-      27.2,
       26.85,
       28.47,
       29.29,
@@ -373,11 +396,11 @@
       34,
       34,
       32.85,
+      33.47,
       33.89,
       33.83
     ],
     "low": [
-      26.01,
       26.35,
       27.83,
       28.13,
@@ -475,11 +498,11 @@
       32.51,
       31.92,
       30.12,
+      32.1,
       33.01,
       32.5
     ],
     "close": [
-      26.66,
       26.59,
       28.4,
       28.44,
@@ -577,11 +600,11 @@
       34,
       32.48,
       32.55,
+      33.47,
       33.3,
-      33.51
+      33.5
     ],
     "volume": [
-      1476445,
       356288,
       1133389,
       1206040,
@@ -679,6 +702,7 @@
       631197,
       361096,
       329688,
+      522907,
       261638,
       707035
     ],
@@ -702,7 +726,6 @@
       0,
       0,
       0,
-      27.476,
       27.473,
       27.503,
       27.444,
@@ -781,8 +804,9 @@
       33.067,
       33.016,
       32.992,
-      33.012,
-      33.038
+      33.021,
+      33.036,
+      33.097
     ],
     "sma50": [
       0,
@@ -834,7 +858,6 @@
       0,
       0,
       0,
-      29.779,
       29.939,
       30.087,
       30.199,
@@ -883,8 +906,9 @@
       33.925,
       33.88,
       33.827,
-      33.757,
-      33.706
+      33.76,
+      33.705,
+      33.682
     ]
   }
 }
