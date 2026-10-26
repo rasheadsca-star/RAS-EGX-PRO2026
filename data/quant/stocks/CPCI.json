@@ -1,93 +1,95 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-25T18:23:18.465Z",
+  "generatedAt": "2026-10-26T20:27:21.338Z",
   "ticker": "CPCI",
   "companyNameAr": "القاهرة للأدوية",
   "companyNameEn": "Kahira Pharmaceuticals & Chemical Industries",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-10-22",
+  "sessionId": "2026-10-25",
   "latest": {
-    "date": "2026-10-22",
-    "open": 592.51,
-    "high": 595,
-    "low": 587.02,
-    "close": 590.26,
-    "volume": 4510
+    "date": "2026-10-25",
+    "open": 590.26,
+    "high": 590.26,
+    "low": 576,
+    "close": 579.75,
+    "volume": 20450
   },
   "indicators": {
-    "close": 590.26,
-    "change1Pct": -0.38,
-    "return5Pct": -2.755,
-    "return20Pct": 5.598,
-    "return50Pct": 21.089,
-    "sma5": 592.784,
-    "sma20": 587.841,
-    "sma50": 556.207,
-    "ema9": 592.672,
-    "ema21": 583.513,
-    "rsi14": 58.174,
-    "macd": 13.135,
-    "macdSignal": 16.298,
-    "atr14": 19.673,
-    "atrPct": 3.333,
-    "averageVolume20": 6478,
-    "volumeRatio20": 0.696,
-    "averageTurnover20Egp": 3800085.832,
-    "volatility20Pct": 1.357,
+    "close": 579.75,
+    "change1Pct": -1.781,
+    "return5Pct": -4.488,
+    "return20Pct": 2.924,
+    "return50Pct": 19.58,
+    "sma5": 587.336,
+    "sma20": 588.664,
+    "sma50": 558.106,
+    "ema9": 590.087,
+    "ema21": 583.171,
+    "rsi14": 39.576,
+    "macd": 11.236,
+    "macdSignal": 15.28,
+    "atr14": 18.549,
+    "atrPct": 3.199,
+    "averageVolume20": 7411.45,
+    "volumeRatio20": 2.759,
+    "averageTurnover20Egp": 4342720.121,
+    "volatility20Pct": 1.423,
     "support20": 550.2,
     "resistance20": 619.9,
     "high50": 644,
-    "low50": 483,
-    "distanceFromSupport20Pct": 7.281,
-    "relativeToResistance20Pct": -4.781,
-    "distanceFromHigh50Pct": -8.345
+    "low50": 484.82,
+    "distanceFromSupport20Pct": 5.371,
+    "relativeToResistance20Pct": -6.477,
+    "distanceFromHigh50Pct": -9.977
   },
   "technical": {
-    "score": 86,
-    "trendCode": "BULLISH",
-    "trendLabelAr": "اتجاه صاعد"
+    "score": 66,
+    "trendCode": "NEUTRAL",
+    "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
     "source": "V13.5",
-    "status": "NEAR_TRIGGER",
-    "statusLabelAr": "قريب من اكتمال الإشارة",
-    "strategyId": "trend_follow",
-    "strategyLabelAr": "اتجاه قوي مع سيولة",
-    "recommendationScore": 81,
-    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 64.2,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
     "failedConditions": [
-      "دعم الحجم: 0.7"
+      "الاقتراب من متوسط 20: -1.51",
+      "تحسن RSI: 59.3 → 51.7"
     ],
     "adaptive": {
-      "proximityPct": 85,
+      "proximityPct": 75.6,
       "strategyHealthStatus": "RESEARCH_ONLY",
-      "strategyHealthScore": 18.5,
+      "strategyHealthScore": 18.2,
       "minimumRequiredScore": 85,
-      "scoreGap": 4,
-      "calibratedVariantId": "balanced",
+      "scoreGap": 20.8,
+      "calibratedVariantId": "wide",
       "riskScale": 0,
       "missingRequirementsAr": [
         "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-        "تحتاج 4 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
-        "دعم الحجم: 0.7"
+        "تحتاج 20.8 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "الاقتراب من متوسط 20: -1.51",
+        "تحسن RSI: 59.3 → 51.7"
       ],
       "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
     },
     "plan": {
-      "entryLow": 588.111,
-      "entryHigh": 592.946,
-      "stopLoss": 566.345,
-      "target1": 634.059,
-      "target2": 653.405,
+      "entryLow": 577.633,
+      "entryHigh": 582.396,
+      "stopLoss": 547.123,
+      "target1": 639.219,
+      "target2": 665.532,
       "riskReward1": 1.8,
       "maximumHoldingSessions": 10
     }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-05-06",
-    "lastSession": "2026-10-22",
+    "firstSession": "2026-05-11",
+    "lastSession": "2026-10-25",
     "averageConfidence": 73.15,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -95,7 +97,6 @@
   },
   "chart": {
     "dates": [
-      "2026-05-06",
       "2026-05-11",
       "2026-05-12",
       "2026-05-13",
@@ -194,10 +195,10 @@
       "2026-10-18",
       "2026-10-20",
       "2026-10-21",
-      "2026-10-22"
+      "2026-10-22",
+      "2026-10-25"
     ],
     "open": [
-      346.27,
       357.5,
       351.88,
       357.04,
@@ -296,10 +297,10 @@
       606.99,
       573.86,
       586.48,
-      592.51
+      592.51,
+      590.26
     ],
     "high": [
-      353,
       360,
       370,
       365.12,
@@ -398,10 +399,10 @@
       609,
       591.97,
       593,
-      595
+      595,
+      590.26
     ],
     "low": [
-      336,
       349.01,
       351.5,
       357,
@@ -500,10 +501,10 @@
       586.63,
       565,
       580.5,
-      587.02
+      587.02,
+      576
     ],
     "close": [
-      342.64,
       351.88,
       357.04,
       357.86,
@@ -602,10 +603,10 @@
       587.68,
       586.48,
       592.51,
-      590.26
+      590.26,
+      579.75
     ],
     "volume": [
-      20259,
       19651,
       26523,
       12948,
@@ -704,7 +705,8 @@
       8263,
       4390,
       5937,
-      4510
+      4510,
+      20450
     ],
     "sma20": [
       0,
@@ -726,7 +728,6 @@
       0,
       0,
       0,
-      351.338,
       352.402,
       352.885,
       353.081,
@@ -806,7 +807,8 @@
       581.786,
       584.499,
       586.276,
-      587.841
+      587.841,
+      588.664
     ],
     "sma50": [
       0,
@@ -858,7 +860,6 @@
       0,
       0,
       0,
-      392.146,
       394.989,
       397.648,
       400.204,
@@ -908,7 +909,8 @@
       549.591,
       552.093,
       554.151,
-      556.207
+      556.207,
+      558.106
     ]
   }
 }
