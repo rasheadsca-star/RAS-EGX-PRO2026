@@ -1,77 +1,100 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-27T20:03:05.073Z",
+  "generatedAt": "2026-10-28T20:14:42.309Z",
   "ticker": "ETRS",
   "companyNameAr": "إيجيترانس",
   "companyNameEn": "Egyptian Transport & Commercial Services EGYTRANS NOSCO",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-10-25",
+  "sessionId": "2026-10-27",
   "latest": {
-    "date": "2026-10-25",
-    "open": 10.33,
-    "high": 10.59,
-    "low": 9.51,
-    "close": 9.59,
-    "volume": 1424019
+    "date": "2026-10-27",
+    "open": 10.34,
+    "high": 10.55,
+    "low": 10.3,
+    "close": 10.37,
+    "volume": 1740816
   },
   "indicators": {
-    "close": 9.59,
-    "change1Pct": -7.164,
-    "return5Pct": -8.58,
-    "return20Pct": -11.039,
-    "return50Pct": -8.84,
-    "sma5": 10.264,
-    "sma20": 10.474,
-    "sma50": 10.829,
-    "ema9": 10.318,
-    "ema21": 10.516,
-    "rsi14": 43.478,
-    "macd": -0.176,
-    "macdSignal": -0.109,
-    "atr14": 0.539,
-    "atrPct": 5.616,
-    "averageVolume20": 923150.45,
-    "volumeRatio20": 1.543,
-    "averageTurnover20Egp": 9623699.247,
-    "volatility20Pct": 3.023,
+    "close": 10.37,
+    "change1Pct": 8.133,
+    "return5Pct": -2.262,
+    "return20Pct": -2.446,
+    "return50Pct": -1.426,
+    "sma5": 10.216,
+    "sma20": 10.461,
+    "sma50": 10.826,
+    "ema9": 10.329,
+    "ema21": 10.502,
+    "rsi14": 48.571,
+    "macd": -0.164,
+    "macdSignal": -0.12,
+    "atr14": 0.576,
+    "atrPct": 5.559,
+    "averageVolume20": 976718.2,
+    "volumeRatio20": 1.782,
+    "averageTurnover20Egp": 10170493.821,
+    "volatility20Pct": 3.554,
     "support20": 9.51,
     "resistance20": 11.2,
     "high50": 11.66,
     "low50": 9.51,
-    "distanceFromSupport20Pct": 0.841,
-    "relativeToResistance20Pct": -14.375,
-    "distanceFromHigh50Pct": -17.753
+    "distanceFromSupport20Pct": 9.043,
+    "relativeToResistance20Pct": -7.411,
+    "distanceFromHigh50Pct": -11.063
   },
   "technical": {
-    "score": 22,
+    "score": 28,
     "trendCode": "BEARISH",
     "trendLabelAr": "اتجاه هابط"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 57.6,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "الاتجاه المتوسط صاعد: لم يتحقق"
+    ],
+    "adaptive": {
+      "proximityPct": 77.1,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 14.5,
+      "minimumRequiredScore": 85,
+      "scoreGap": 27.4,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 27.4 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "الاتجاه المتوسط صاعد: لم يتحقق"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 10.308,
+      "entryHigh": 10.449,
+      "stopLoss": 9.807,
+      "target1": 11.406,
+      "target2": 11.862,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-05-13",
-    "lastSession": "2026-10-25",
-    "averageConfidence": 73.65,
+    "firstSession": "2026-05-18",
+    "lastSession": "2026-10-27",
+    "averageConfidence": 73.3,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
     "eligibilityLabelAr": "مكتمل وحديث"
   },
   "chart": {
     "dates": [
-      "2026-05-13",
       "2026-05-18",
       "2026-05-19",
       "2026-05-20",
@@ -170,10 +193,10 @@
       "2026-10-19",
       "2026-10-21",
       "2026-10-22",
-      "2026-10-25"
+      "2026-10-25",
+      "2026-10-27"
     ],
     "open": [
-      7.78,
       8.03,
       7.83,
       7.83,
@@ -272,10 +295,10 @@
       10.1,
       10.69,
       10.68,
-      10.33
+      10.33,
+      10.34
     ],
     "high": [
-      7.98,
       8.07,
       7.93,
       7.88,
@@ -374,10 +397,10 @@
       10.5,
       10.77,
       10.7,
-      10.59
+      10.59,
+      10.55
     ],
     "low": [
-      7.73,
       7.8,
       7.76,
       7.51,
@@ -476,10 +499,10 @@
       9.61,
       10.41,
       10.26,
-      9.51
+      9.51,
+      10.3
     ],
     "close": [
-      7.92,
       7.83,
       7.83,
       7.51,
@@ -578,10 +601,10 @@
       10.11,
       10.68,
       10.33,
-      9.59
+      9.59,
+      10.37
     ],
     "volume": [
-      11720436,
       3110463,
       2379912,
       3270772,
@@ -680,7 +703,8 @@
       1615784,
       1013727,
       398535,
-      1424019
+      1424019,
+      1740816
     ],
     "sma20": [
       0,
@@ -702,7 +726,6 @@
       0,
       0,
       0,
-      8.665,
       8.785,
       8.904,
       9.042,
@@ -782,7 +805,8 @@
       10.598,
       10.573,
       10.533,
-      10.474
+      10.474,
+      10.461
     ],
     "sma50": [
       0,
@@ -834,7 +858,6 @@
       0,
       0,
       0,
-      9.893,
       9.945,
       10.003,
       10.063,
@@ -884,7 +907,8 @@
       10.848,
       10.852,
       10.848,
-      10.829
+      10.829,
+      10.826
     ]
   }
 }
