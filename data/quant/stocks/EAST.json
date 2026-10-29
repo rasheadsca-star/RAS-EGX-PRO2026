@@ -1,77 +1,102 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-10-28T20:14:42.280Z",
+  "generatedAt": "2026-10-29T20:15:52.370Z",
   "ticker": "EAST",
   "companyNameAr": "الشرقية - إيسترن كومباني",
   "companyNameEn": "Eastern Company",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-10-26",
+  "sessionId": "2026-10-28",
   "latest": {
-    "date": "2026-10-26",
-    "open": 29.98,
-    "high": 30.5,
-    "low": 29.05,
-    "close": 30.03,
-    "volume": 2829393
+    "date": "2026-10-28",
+    "open": 31.89,
+    "high": 32.1,
+    "low": 31.03,
+    "close": 31.8,
+    "volume": 1418227
   },
   "indicators": {
-    "close": 30.03,
-    "change1Pct": -1.476,
-    "return5Pct": 5.628,
-    "return20Pct": -1.606,
-    "return50Pct": -17.044,
-    "sma5": 29.602,
-    "sma20": 28.873,
-    "sma50": 32.308,
-    "ema9": 29.365,
-    "ema21": 29.676,
-    "rsi14": 56.092,
-    "macd": -0.712,
-    "macdSignal": -1.17,
-    "atr14": 1.163,
-    "atrPct": 3.872,
-    "averageVolume20": 1649630.3,
-    "volumeRatio20": 1.715,
-    "averageTurnover20Egp": 47994563.955,
-    "volatility20Pct": 2.509,
+    "close": 31.8,
+    "change1Pct": 5.894,
+    "return5Pct": 10.417,
+    "return20Pct": 6.355,
+    "return50Pct": -12.397,
+    "sma5": 30.202,
+    "sma20": 28.968,
+    "sma50": 32.218,
+    "ema9": 29.852,
+    "ema21": 29.869,
+    "rsi14": 63.944,
+    "macd": -0.461,
+    "macdSignal": -1.028,
+    "atr14": 1.238,
+    "atrPct": 3.893,
+    "averageVolume20": 1640901.55,
+    "volumeRatio20": 0.864,
+    "averageTurnover20Egp": 47868305.824,
+    "volatility20Pct": 2.776,
     "support20": 27.01,
-    "resistance20": 30.94,
+    "resistance20": 30.9,
     "high50": 37.1,
     "low50": 27.01,
-    "distanceFromSupport20Pct": 11.181,
-    "relativeToResistance20Pct": -2.941,
-    "distanceFromHigh50Pct": -19.057
+    "distanceFromSupport20Pct": 17.734,
+    "relativeToResistance20Pct": 2.913,
+    "distanceFromHigh50Pct": -14.286
   },
   "technical": {
-    "score": 60,
+    "score": 70,
     "trendCode": "NEUTRAL",
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "breakout",
+    "strategyLabelAr": "اختراق مؤكد",
+    "recommendationScore": 56.9,
+    "reasonAr": "أقرب نموذج حالي هو اختراق مؤكد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "اتجاه داعم للاختراق: لم يتحقق",
+      "حجم يؤكد الاختراق: 0.86"
+    ],
+    "adaptive": {
+      "proximityPct": 72.4,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 32.6,
+      "minimumRequiredScore": 85,
+      "scoreGap": 28.1,
+      "calibratedVariantId": "early",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 28.1 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "اتجاه داعم للاختراق: لم يتحقق",
+        "حجم يؤكد الاختراق: 0.86"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 31.654,
+      "entryHigh": 31.983,
+      "stopLoss": 30.068,
+      "target1": 34.968,
+      "target2": 36.368,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-05-17",
-    "lastSession": "2026-10-26",
-    "averageConfidence": 73.5,
+    "firstSession": "2026-05-18",
+    "lastSession": "2026-10-28",
+    "averageConfidence": 73.15,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
     "eligibilityLabelAr": "مكتمل وحديث"
   },
   "chart": {
     "dates": [
-      "2026-05-17",
       "2026-05-18",
       "2026-05-19",
       "2026-05-24",
@@ -170,10 +195,10 @@
       "2026-10-20",
       "2026-10-21",
       "2026-10-22",
-      "2026-10-26"
+      "2026-10-26",
+      "2026-10-28"
     ],
     "open": [
-      40.3,
       39.96,
       39.97,
       38.01,
@@ -272,10 +297,10 @@
       28.8,
       28.7,
       30,
-      29.98
+      29.98,
+      31.89
     ],
     "high": [
-      40.5,
       40.15,
       40.29,
       38.58,
@@ -374,10 +399,10 @@
       29.08,
       30.14,
       30.9,
-      30.5
+      30.5,
+      32.1
     ],
     "low": [
-      39,
       39.1,
       39.63,
       38,
@@ -476,10 +501,10 @@
       28.7,
       28.14,
       29.37,
-      29.05
+      29.05,
+      31.03
     ],
     "close": [
-      39.96,
       39.97,
       40,
       38.58,
@@ -578,10 +603,10 @@
       28.7,
       30,
       30.48,
-      30.03
+      30.03,
+      31.8
     ],
     "volume": [
-      227339,
       1763442,
       901362,
       212713,
@@ -680,7 +705,8 @@
       249545,
       3129513,
       2785643,
-      2829393
+      2829393,
+      1418227
     ],
     "sma20": [
       0,
@@ -702,7 +728,6 @@
       0,
       0,
       0,
-      38.728,
       38.68,
       38.626,
       38.57,
@@ -782,7 +807,8 @@
       29.044,
       28.957,
       28.897,
-      28.873
+      28.873,
+      28.968
     ],
     "sma50": [
       0,
@@ -834,7 +860,6 @@
       0,
       0,
       0,
-      37.755,
       37.682,
       37.608,
       37.533,
@@ -884,7 +909,8 @@
       32.689,
       32.555,
       32.431,
-      32.308
+      32.308,
+      32.218
     ]
   }
 }
