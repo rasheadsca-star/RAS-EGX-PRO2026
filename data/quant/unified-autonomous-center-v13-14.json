@@ -1,10 +1,10 @@
 {
   "schemaVersion": "13.14.0",
-  "generatedAt": "2026-10-29T12:22:28.334Z",
+  "generatedAt": "2026-11-01T12:38:33.222Z",
   "operationalStatus": "PROVISIONAL_INTRADAY_ON_OLDER_ANALYSIS",
   "operationalLabelAr": "قرار مؤقت على تحليل يومي أقدم",
   "analysisSession": "2026-10-22",
-  "marketDate": "2026-10-29",
+  "marketDate": "2026-11-01",
   "marketCurrent": true,
   "analysisCurrent": false,
   "finalizationCurrent": false,
@@ -28,13 +28,52 @@
     "ready": 0,
     "wait": 0,
     "blocked": 0,
-    "unreadAlerts": 0,
-    "discoveryWatch": 0
+    "unreadAlerts": 1,
+    "discoveryWatch": 1
   },
   "primaryCandidate": null,
   "topCandidates": [],
   "candidates": [],
-  "discoveryWatch": [],
+  "discoveryWatch": [
+    {
+      "unifiedRank": 1,
+      "ticker": "GSSC",
+      "companyNameAr": "الصوامع والتخزين",
+      "companyNameEn": "General Co. For Silos & Storage",
+      "sector": "غير مصنف",
+      "tier": "DISCOVERY_WATCH",
+      "tierLabelAr": "اكتشاف سوقي",
+      "currentPrice": 244.44,
+      "changePct": 0.11,
+      "turnover": 2295315,
+      "turnoverPaceRatio": 0,
+      "state": "MARKET_LEADER",
+      "stateLabelAr": "قائد تداول",
+      "stale": true,
+      "finalDecision": {
+        "code": "WATCH_ONLY",
+        "labelAr": "مراقبة سوقية فقط",
+        "actionable": false,
+        "reasonAr": "السهم نشط لكنه غير موجود داخل طبقات التوصية اليومية."
+      },
+      "latestAlerts": [
+        {
+          "generatedAt": "2026-11-01T12:38:33.124Z",
+          "acknowledged": false,
+          "id": "2026-11-01:GSSC:stale_data:",
+          "level": "warning",
+          "type": "stale_data",
+          "ticker": "GSSC",
+          "titleAr": "GSSC: البيانات أصبحت قديمة",
+          "detailAr": "عمر البيانات 172398 دقيقة.",
+          "actionAr": "لا تعتمد على السعر حتى يصل تحديث جديد.",
+          "currentValue": 172397.98146666668,
+          "price": 244.44,
+          "tier": null
+        }
+      ]
+    }
+  ],
   "allocationPolicy": {
     "strictRiskPct": 0.5,
     "tierARiskPct": 0.25,
