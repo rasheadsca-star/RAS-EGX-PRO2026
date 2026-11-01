@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-01T18:08:04.187Z",
+  "generatedAt": "2026-11-01T19:38:01.040Z",
   "ticker": "RAKT",
   "companyNameAr": "راكتا",
   "companyNameEn": "Rakta Paper Manufacturing Company",
@@ -49,9 +49,9 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "pullback",
     "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
     "recommendationScore": 59.7,
@@ -59,7 +59,21 @@
     "failedConditions": [
       "الاتجاه المتوسط صاعد: لم يتحقق"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 78.1,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 15.7,
+      "minimumRequiredScore": 85,
+      "scoreGap": 25.3,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 25.3 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "الاتجاه المتوسط صاعد: لم يتحقق"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 22.216,
       "entryHigh": 22.532,
