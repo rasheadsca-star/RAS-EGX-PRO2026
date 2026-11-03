@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-03T13:34:42.467Z",
+  "generatedAt": "2026-11-03T20:58:15.195Z",
   "ticker": "CANA",
   "companyNameAr": "بنك قناة السويس",
   "companyNameEn": "Suez Canal Bank",
@@ -49,8 +49,8 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
+    "source": "V13.5",
+    "status": "CONDITIONAL_WATCH",
     "statusLabelAr": "مراقبة مشروطة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
@@ -61,7 +61,23 @@
       "ميل متوسط 20: -0.91",
       "دعم الحجم: 0.37"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 68.6,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 15.8,
+      "minimumRequiredScore": 85,
+      "scoreGap": 26.9,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 26.9 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "نشاط الحجم الحالي: 0.37",
+        "ميل متوسط 20: -0.91",
+        "دعم الحجم: 0.37"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 45.048,
       "entryHigh": 45.728,

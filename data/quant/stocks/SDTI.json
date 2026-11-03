@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-03T13:34:42.669Z",
+  "generatedAt": "2026-11-03T20:58:15.309Z",
   "ticker": "SDTI",
   "companyNameAr": "شرم دريمز",
   "companyNameEn": "SHARM DREAMS Co. for Touristic Investment",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
     "recommendationScore": 74.2,
@@ -59,7 +59,21 @@
     "failedConditions": [
       "ميل متوسط 20: -0.58"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 82.7,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 15.8,
+      "minimumRequiredScore": 85,
+      "scoreGap": 10.8,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 10.8 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "ميل متوسط 20: -0.58"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 85.611,
       "entryHigh": 86.644,

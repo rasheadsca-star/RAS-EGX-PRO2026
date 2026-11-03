@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-03T13:34:42.582Z",
+  "generatedAt": "2026-11-03T20:58:15.259Z",
   "ticker": "LCSW",
   "companyNameAr": "ليسيكو مصر",
   "companyNameEn": "Lecico Egypt",
@@ -50,33 +50,38 @@
   },
   "recommendation": {
     "source": "V13.5",
-    "status": "NEAR_TRIGGER",
-    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
-    "recommendationScore": 78.8,
-    "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
-    "failedConditions": [],
+    "recommendationScore": 72.3,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "نشاط الحجم الحالي: 0.19",
+      "دعم الحجم: 0.19"
+    ],
     "adaptive": {
-      "proximityPct": 88.4,
+      "proximityPct": 77.9,
       "strategyHealthStatus": "RESEARCH_ONLY",
-      "strategyHealthScore": 16.8,
+      "strategyHealthScore": 15.8,
       "minimumRequiredScore": 85,
-      "scoreGap": 6.2,
+      "scoreGap": 12.7,
       "calibratedVariantId": "balanced",
       "riskScale": 0,
       "missingRequirementsAr": [
         "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-        "تحتاج 6.2 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف."
+        "تحتاج 12.7 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "نشاط الحجم الحالي: 0.19",
+        "دعم الحجم: 0.19"
       ],
       "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
     },
     "plan": {
-      "entryLow": 35.094,
-      "entryHigh": 35.558,
-      "stopLoss": 33.383,
-      "target1": 38.823,
-      "target2": 40.377,
+      "entryLow": 34.96,
+      "entryHigh": 35.41,
+      "stopLoss": 33.25,
+      "target1": 38.668,
+      "target2": 40.216,
       "riskReward1": 1.8,
       "maximumHoldingSessions": 10
     }

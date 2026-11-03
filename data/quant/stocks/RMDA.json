@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-03T13:34:42.655Z",
+  "generatedAt": "2026-11-03T20:58:15.301Z",
   "ticker": "RMDA",
   "companyNameAr": "راميدا",
   "companyNameEn": "Tenth of Ramadan for Pharmaceutical Industries and Diagnostic Reagents Rameda",
@@ -49,9 +49,9 @@
     "trendLabelAr": "اتجاه هابط"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "pullback",
     "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
     "recommendationScore": 60.3,
@@ -59,7 +59,21 @@
     "failedConditions": [
       "الاتجاه المتوسط صاعد: لم يتحقق"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 78.1,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 14.3,
+      "minimumRequiredScore": 85,
+      "scoreGap": 24.7,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 24.7 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "الاتجاه المتوسط صاعد: لم يتحقق"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 5.089,
       "entryHigh": 5.16,
