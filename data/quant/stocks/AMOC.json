@@ -1,77 +1,102 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-04T21:17:09.500Z",
+  "generatedAt": "2026-11-05T21:27:40.704Z",
   "ticker": "AMOC",
   "companyNameAr": "الإسكندرية للزيوت المعدنية",
   "companyNameEn": "Alexandria Mineral Oils Company",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-11-02",
+  "sessionId": "2026-11-04",
   "latest": {
-    "date": "2026-11-02",
-    "open": 14.31,
-    "high": 14.49,
-    "low": 13.15,
-    "close": 13.65,
-    "volume": 18415910
+    "date": "2026-11-04",
+    "open": 13.5,
+    "high": 13.77,
+    "low": 13.19,
+    "close": 13.33,
+    "volume": 11510197
   },
   "indicators": {
-    "close": 13.65,
-    "change1Pct": -2.5,
-    "return5Pct": 1.036,
-    "return20Pct": 4.04,
-    "return50Pct": 50,
-    "sma5": 13.338,
-    "sma20": 13.629,
-    "sma50": 12.714,
-    "ema9": 13.473,
-    "ema21": 13.398,
-    "rsi14": 41.408,
-    "macd": 0.182,
-    "macdSignal": 0.267,
-    "atr14": 0.711,
-    "atrPct": 5.207,
-    "averageVolume20": 10378391.85,
-    "volumeRatio20": 1.774,
-    "averageTurnover20Egp": 143163679.688,
-    "volatility20Pct": 3.088,
+    "close": 13.33,
+    "change1Pct": -2.344,
+    "return5Pct": 3.014,
+    "return20Pct": 0.301,
+    "return50Pct": 44.891,
+    "sma5": 13.416,
+    "sma20": 13.631,
+    "sma50": 12.797,
+    "ema9": 13.444,
+    "ema21": 13.392,
+    "rsi14": 38.596,
+    "macd": 0.158,
+    "macdSignal": 0.245,
+    "atr14": 0.708,
+    "atrPct": 5.31,
+    "averageVolume20": 10666938.1,
+    "volumeRatio20": 1.079,
+    "averageTurnover20Egp": 147021479.745,
+    "volatility20Pct": 3.127,
     "support20": 12.55,
     "resistance20": 14.74,
     "high50": 14.74,
-    "low50": 8.93,
-    "distanceFromSupport20Pct": 8.765,
-    "relativeToResistance20Pct": -7.395,
-    "distanceFromHigh50Pct": -7.395
+    "low50": 9.01,
+    "distanceFromSupport20Pct": 6.215,
+    "relativeToResistance20Pct": -9.566,
+    "distanceFromHigh50Pct": -9.566
   },
   "technical": {
-    "score": 86,
-    "trendCode": "BULLISH",
-    "trendLabelAr": "اتجاه صاعد"
+    "score": 60,
+    "trendCode": "NEUTRAL",
+    "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 58.5,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "الاقتراب من متوسط 20: -2.21",
+      "تحسن RSI: 54.3 → 50.7"
+    ],
+    "adaptive": {
+      "proximityPct": 73.7,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 13.3,
+      "minimumRequiredScore": 85,
+      "scoreGap": 26.5,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 26.5 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "الاقتراب من متوسط 20: -2.21",
+        "تحسن RSI: 54.3 → 50.7"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 13.25,
+      "entryHigh": 13.436,
+      "stopLoss": 12.609,
+      "target1": 14.664,
+      "target2": 15.251,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-04-19",
-    "lastSession": "2026-11-02",
-    "averageConfidence": 74.25,
+    "firstSession": "2026-04-21",
+    "lastSession": "2026-11-04",
+    "averageConfidence": 73.9,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
     "eligibilityLabelAr": "مكتمل وحديث"
   },
   "chart": {
     "dates": [
-      "2026-04-19",
       "2026-04-21",
       "2026-04-29",
       "2026-05-03",
@@ -170,10 +195,10 @@
       "2026-10-26",
       "2026-10-28",
       "2026-10-29",
-      "2026-11-02"
+      "2026-11-02",
+      "2026-11-04"
     ],
     "open": [
-      8.25,
       7.88,
       8.4,
       8.6,
@@ -272,10 +297,10 @@
       12.94,
       13.05,
       13.35,
-      14.31
+      14.31,
+      13.5
     ],
     "high": [
-      8.25,
       7.9,
       8.44,
       8.67,
@@ -374,10 +399,10 @@
       13.1,
       13.5,
       14.16,
-      14.49
+      14.49,
+      13.77
     ],
     "low": [
-      8.15,
       7.68,
       8.28,
       8.51,
@@ -476,10 +501,10 @@
       12.61,
       12.93,
       13.3,
-      13.15
+      13.15,
+      13.19
     ],
     "close": [
-      8.2,
       7.72,
       8.31,
       8.56,
@@ -578,10 +603,10 @@
       12.75,
       13.35,
       14,
-      13.65
+      13.65,
+      13.33
     ],
     "volume": [
-      9288763,
       12410592,
       9406856,
       7446430,
@@ -680,7 +705,8 @@
       7071766,
       6420534,
       15618314,
-      18415910
+      18415910,
+      11510197
     ],
     "sma20": [
       0,
@@ -702,7 +728,6 @@
       0,
       0,
       0,
-      8.386,
       8.392,
       8.415,
       8.413,
@@ -782,7 +807,8 @@
       13.55,
       13.548,
       13.603,
-      13.629
+      13.629,
+      13.631
     ],
     "sma50": [
       0,
@@ -834,7 +860,6 @@
       0,
       0,
       0,
-      8.149,
       8.169,
       8.197,
       8.212,
@@ -884,7 +909,8 @@
       12.407,
       12.51,
       12.623,
-      12.714
+      12.714,
+      12.797
     ]
   }
 }

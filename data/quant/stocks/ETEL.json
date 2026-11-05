@@ -1,47 +1,47 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-04T21:17:09.551Z",
+  "generatedAt": "2026-11-05T21:27:40.759Z",
   "ticker": "ETEL",
   "companyNameAr": "المصرية للاتصالات",
   "companyNameEn": "Telecom Egypt",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-11-03",
+  "sessionId": "2026-11-04",
   "latest": {
-    "date": "2026-11-03",
-    "open": 121.45,
-    "high": 124,
-    "low": 119.5,
-    "close": 122.88,
-    "volume": 972925
+    "date": "2026-11-04",
+    "open": 122.88,
+    "high": 128,
+    "low": 122.8,
+    "close": 128,
+    "volume": 1344603
   },
   "indicators": {
-    "close": 122.88,
-    "change1Pct": 1.177,
-    "return5Pct": 5.026,
-    "return20Pct": -9.647,
-    "return50Pct": 12.724,
-    "sma5": 120.874,
-    "sma20": 136.252,
-    "sma50": 126.538,
-    "ema9": 126.288,
-    "ema21": 130.481,
-    "rsi14": 30.59,
-    "macd": -2.079,
-    "macdSignal": 1.242,
-    "atr14": 7.145,
-    "atrPct": 5.815,
-    "averageVolume20": 1546648.9,
-    "volumeRatio20": 0.629,
-    "averageTurnover20Egp": 208737694.265,
-    "volatility20Pct": 5.124,
+    "close": 128,
+    "change1Pct": 4.167,
+    "return5Pct": 4.815,
+    "return20Pct": -5.002,
+    "return50Pct": 17.42,
+    "sma5": 122.05,
+    "sma20": 135.915,
+    "sma50": 126.918,
+    "ema9": 126.63,
+    "ema21": 130.256,
+    "rsi14": 37.836,
+    "macd": -1.944,
+    "macdSignal": 0.605,
+    "atr14": 7.143,
+    "atrPct": 5.58,
+    "averageVolume20": 1555517.15,
+    "volumeRatio20": 0.864,
+    "averageTurnover20Egp": 209479470.767,
+    "volatility20Pct": 5.215,
     "support20": 115,
     "resistance20": 156,
     "high50": 156,
     "low50": 107,
-    "distanceFromSupport20Pct": 6.852,
-    "relativeToResistance20Pct": -21.231,
-    "distanceFromHigh50Pct": -21.231
+    "distanceFromSupport20Pct": 11.304,
+    "relativeToResistance20Pct": -17.949,
+    "distanceFromHigh50Pct": -17.949
   },
   "technical": {
     "score": 36,
@@ -49,21 +49,45 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 63.9,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "الاقتراب من متوسط 20: -5.82"
+    ],
+    "adaptive": {
+      "proximityPct": 79.2,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 13.3,
+      "minimumRequiredScore": 85,
+      "scoreGap": 21.1,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 21.1 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "الاقتراب من متوسط 20: -5.82"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 127.232,
+      "entryHigh": 128.999,
+      "stopLoss": 121.069,
+      "target1": 140.799,
+      "target2": 146.436,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-05-04",
-    "lastSession": "2026-11-03",
+    "firstSession": "2026-05-05",
+    "lastSession": "2026-11-04",
     "averageConfidence": 72.4,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +95,6 @@
   },
   "chart": {
     "dates": [
-      "2026-05-04",
       "2026-05-05",
       "2026-05-11",
       "2026-05-12",
@@ -170,10 +193,10 @@
       "2026-10-29",
       "2026-11-01",
       "2026-11-02",
-      "2026-11-03"
+      "2026-11-03",
+      "2026-11-04"
     ],
     "open": [
-      93.5,
       93,
       99.5,
       98.89,
@@ -272,10 +295,10 @@
       122.12,
       120.1,
       117.82,
-      121.45
+      121.45,
+      122.88
     ],
     "high": [
-      94.3,
       93,
       101.89,
       99,
@@ -374,10 +397,10 @@
       124.3,
       120.49,
       123.06,
-      124
+      124,
+      128
     ],
     "low": [
-      92.61,
       91,
       97.4,
       97.5,
@@ -476,10 +499,10 @@
       120.1,
       117.51,
       116.83,
-      119.5
+      119.5,
+      122.8
     ],
     "close": [
-      93,
       92.5,
       98.89,
       98.49,
@@ -578,10 +601,10 @@
       120.1,
       117.82,
       121.45,
-      122.88
+      122.88,
+      128
     ],
     "volume": [
-      582155,
       810663,
       2218937,
       1043582,
@@ -680,7 +703,8 @@
       1587374,
       998504,
       1675159,
-      972925
+      972925,
+      1344603
     ],
     "sma20": [
       0,
@@ -702,7 +726,6 @@
       0,
       0,
       0,
-      96.182,
       96.246,
       96.249,
       95.839,
@@ -782,7 +805,8 @@
       138.394,
       137.486,
       136.908,
-      136.252
+      136.252,
+      135.915
     ],
     "sma50": [
       0,
@@ -834,7 +858,6 @@
       0,
       0,
       0,
-      97.112,
       97.432,
       97.763,
       98.005,
@@ -884,7 +907,8 @@
       125.694,
       125.978,
       126.261,
-      126.538
+      126.538,
+      126.918
     ]
   }
 }
