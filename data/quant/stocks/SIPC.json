@@ -1,77 +1,100 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-05T21:27:40.835Z",
+  "generatedAt": "2026-11-08T19:38:58.918Z",
   "ticker": "SIPC",
   "companyNameAr": "سبأ الدولية للأدوية",
   "companyNameEn": "Sabaa International Company for Pharmaceutical and Chemical Industry",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-11-03",
+  "sessionId": "2026-11-05",
   "latest": {
-    "date": "2026-11-03",
-    "open": 4.38,
-    "high": 4.59,
-    "low": 4.25,
-    "close": 4.59,
-    "volume": 3800541
+    "date": "2026-11-05",
+    "open": 4.67,
+    "high": 5.38,
+    "low": 4.67,
+    "close": 5.08,
+    "volume": 19285797
   },
   "indicators": {
-    "close": 4.59,
-    "change1Pct": 4.795,
-    "return5Pct": -8.929,
-    "return20Pct": -14.206,
-    "return50Pct": -4.969,
-    "sma5": 4.422,
-    "sma20": 5.051,
-    "sma50": 5.124,
-    "ema9": 4.745,
-    "ema21": 4.986,
-    "rsi14": 36.364,
-    "macd": -0.178,
-    "macdSignal": -0.062,
-    "atr14": 0.529,
-    "atrPct": 11.531,
-    "averageVolume20": 7759479.7,
-    "volumeRatio20": 0.49,
-    "averageTurnover20Egp": 40589583.907,
-    "volatility20Pct": 7.634,
+    "close": 5.08,
+    "change1Pct": 10.675,
+    "return5Pct": 25.432,
+    "return20Pct": -1.741,
+    "return50Pct": 8.085,
+    "sma5": 4.628,
+    "sma20": 5.046,
+    "sma50": 5.131,
+    "ema9": 4.812,
+    "ema21": 4.994,
+    "rsi14": 41.514,
+    "macd": -0.145,
+    "macdSignal": -0.078,
+    "atr14": 0.552,
+    "atrPct": 10.869,
+    "averageVolume20": 8557041.65,
+    "volumeRatio20": 2.254,
+    "averageTurnover20Egp": 44626193.102,
+    "volatility20Pct": 7.973,
     "support20": 3.73,
     "resistance20": 6.43,
     "high50": 7.28,
     "low50": 3.73,
-    "distanceFromSupport20Pct": 23.056,
-    "relativeToResistance20Pct": -28.616,
-    "distanceFromHigh50Pct": -36.951
+    "distanceFromSupport20Pct": 36.193,
+    "relativeToResistance20Pct": -20.995,
+    "distanceFromHigh50Pct": -30.22
   },
   "technical": {
-    "score": 16,
-    "trendCode": "BEARISH",
-    "trendLabelAr": "اتجاه هابط"
+    "score": 42,
+    "trendCode": "NEUTRAL",
+    "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 60.1,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "الاتجاه المتوسط صاعد: لم يتحقق"
+    ],
+    "adaptive": {
+      "proximityPct": 78,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 12.8,
+      "minimumRequiredScore": 85,
+      "scoreGap": 24.9,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 24.9 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "الاتجاه المتوسط صاعد: لم يتحقق"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 5.05,
+      "entryHigh": 5.126,
+      "stopLoss": 4.808,
+      "target1": 5.591,
+      "target2": 5.815,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-05-17",
-    "lastSession": "2026-11-03",
-    "averageConfidence": 74.25,
+    "firstSession": "2026-05-18",
+    "lastSession": "2026-11-05",
+    "averageConfidence": 73.9,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
     "eligibilityLabelAr": "مكتمل وحديث"
   },
   "chart": {
     "dates": [
-      "2026-05-17",
       "2026-05-18",
       "2026-05-19",
       "2026-05-20",
@@ -170,10 +193,10 @@
       "2026-10-28",
       "2026-11-01",
       "2026-11-02",
-      "2026-11-03"
+      "2026-11-03",
+      "2026-11-05"
     ],
     "open": [
-      3.65,
       3.64,
       3.55,
       3.56,
@@ -272,10 +295,10 @@
       4.44,
       4.7,
       4.56,
-      4.38
+      4.38,
+      4.67
     ],
     "high": [
-      3.69,
       3.66,
       3.6,
       3.64,
@@ -374,10 +397,10 @@
       4.68,
       4.71,
       4.62,
-      4.59
+      4.59,
+      5.38
     ],
     "low": [
-      3.63,
       3.55,
       3.55,
       3.45,
@@ -476,10 +499,10 @@
       4.38,
       4.47,
       4.2,
-      4.25
+      4.25,
+      4.67
     ],
     "close": [
-      3.64,
       3.55,
       3.56,
       3.46,
@@ -578,10 +601,10 @@
       4.53,
       4.56,
       4.38,
-      4.59
+      4.59,
+      5.08
     ],
     "volume": [
-      2952215,
       4391044,
       1332734,
       2354755,
@@ -680,7 +703,8 @@
       9202660,
       4921322,
       3532699,
-      3800541
+      3800541,
+      19285797
     ],
     "sma20": [
       0,
@@ -702,7 +726,6 @@
       0,
       0,
       0,
-      3.56,
       3.552,
       3.548,
       3.542,
@@ -782,7 +805,8 @@
       5.186,
       5.143,
       5.089,
-      5.051
+      5.051,
+      5.046
     ],
     "sma50": [
       0,
@@ -834,7 +858,6 @@
       0,
       0,
       0,
-      3.63,
       3.651,
       3.674,
       3.696,
@@ -884,7 +907,8 @@
       5.123,
       5.133,
       5.128,
-      5.124
+      5.124,
+      5.131
     ]
   }
 }

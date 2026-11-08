@@ -1,69 +1,93 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-05T21:27:40.727Z",
+  "generatedAt": "2026-11-08T19:38:58.812Z",
   "ticker": "CNFN",
   "companyNameAr": "كونتكت المالية القابضة",
   "companyNameEn": "Contact Financial Holding",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-11-04",
+  "sessionId": "2026-11-05",
   "latest": {
-    "date": "2026-11-04",
-    "open": 3.81,
-    "high": 3.84,
-    "low": 3.59,
-    "close": 3.84,
-    "volume": 1237772
+    "date": "2026-11-05",
+    "open": 3.84,
+    "high": 4,
+    "low": 3.84,
+    "close": 4,
+    "volume": 2482191
   },
   "indicators": {
-    "close": 3.84,
-    "change1Pct": 0.787,
-    "return5Pct": 8.782,
-    "return20Pct": -7.022,
-    "return50Pct": -22.11,
-    "sma5": 3.754,
-    "sma20": 3.977,
-    "sma50": 4.35,
-    "ema9": 3.808,
-    "ema21": 3.959,
-    "rsi14": 40,
-    "macd": -0.175,
-    "macdSignal": -0.18,
-    "atr14": 0.273,
-    "atrPct": 7.106,
-    "averageVolume20": 2391269.1,
-    "volumeRatio20": 0.518,
-    "averageTurnover20Egp": 9600696.255,
-    "volatility20Pct": 4.142,
+    "close": 4,
+    "change1Pct": 4.167,
+    "return5Pct": 8.108,
+    "return20Pct": -6.542,
+    "return50Pct": -17.695,
+    "sma5": 3.814,
+    "sma20": 3.963,
+    "sma50": 4.332,
+    "ema9": 3.847,
+    "ema21": 3.963,
+    "rsi14": 52.439,
+    "macd": -0.15,
+    "macdSignal": -0.174,
+    "atr14": 0.264,
+    "atrPct": 6.607,
+    "averageVolume20": 2399151.85,
+    "volumeRatio20": 1.035,
+    "averageTurnover20Egp": 9599683.751,
+    "volatility20Pct": 4.169,
     "support20": 3.25,
     "resistance20": 4.35,
     "high50": 4.97,
     "low50": 3.25,
-    "distanceFromSupport20Pct": 18.154,
-    "relativeToResistance20Pct": -11.724,
-    "distanceFromHigh50Pct": -22.736
+    "distanceFromSupport20Pct": 23.077,
+    "relativeToResistance20Pct": -8.046,
+    "distanceFromHigh50Pct": -19.517
   },
   "technical": {
-    "score": 28,
-    "trendCode": "BEARISH",
-    "trendLabelAr": "اتجاه هابط"
+    "score": 54,
+    "trendCode": "NEUTRAL",
+    "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 55.5,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "الاتجاه المتوسط صاعد: لم يتحقق"
+    ],
+    "adaptive": {
+      "proximityPct": 76.3,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 12.8,
+      "minimumRequiredScore": 85,
+      "scoreGap": 29.5,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 29.5 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "الاتجاه المتوسط صاعد: لم يتحقق"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 3.976,
+      "entryHigh": 4.034,
+      "stopLoss": 3.785,
+      "target1": 4.402,
+      "target2": 4.578,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-06-03",
-    "lastSession": "2026-11-04",
+    "firstSession": "2026-06-04",
+    "lastSession": "2026-11-05",
     "averageConfidence": 73.3,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +95,6 @@
   },
   "chart": {
     "dates": [
-      "2026-06-03",
       "2026-06-04",
       "2026-06-07",
       "2026-06-08",
@@ -170,10 +193,10 @@
       "2026-10-29",
       "2026-11-01",
       "2026-11-03",
-      "2026-11-04"
+      "2026-11-04",
+      "2026-11-05"
     ],
     "open": [
-      4.55,
       4.52,
       4.6,
       4.53,
@@ -272,10 +295,10 @@
       3.7,
       3.73,
       3.59,
-      3.81
+      3.81,
+      3.84
     ],
     "high": [
-      4.65,
       4.68,
       4.6,
       4.69,
@@ -374,10 +397,10 @@
       3.75,
       3.73,
       3.86,
-      3.84
+      3.84,
+      4
     ],
     "low": [
-      4.5,
       4.5,
       4.52,
       4.48,
@@ -476,10 +499,10 @@
       3.63,
       3.65,
       3.47,
-      3.59
+      3.59,
+      3.84
     ],
     "close": [
-      4.52,
       4.6,
       4.53,
       4.6,
@@ -578,10 +601,10 @@
       3.73,
       3.69,
       3.81,
-      3.84
+      3.84,
+      4
     ],
     "volume": [
-      1679468,
       2592944,
       2357020,
       8504867,
@@ -680,7 +703,8 @@
       2261109,
       747204,
       2419914,
-      1237772
+      1237772,
+      2482191
     ],
     "sma20": [
       0,
@@ -702,7 +726,6 @@
       0,
       0,
       0,
-      4.636,
       4.65,
       4.661,
       4.676,
@@ -782,7 +805,8 @@
       4.015,
       4.002,
       3.991,
-      3.977
+      3.977,
+      3.963
     ],
     "sma50": [
       0,
@@ -834,7 +858,6 @@
       0,
       0,
       0,
-      4.79,
       4.797,
       4.801,
       4.808,
@@ -884,7 +907,8 @@
       4.417,
       4.393,
       4.371,
-      4.35
+      4.35,
+      4.332
     ]
   }
 }

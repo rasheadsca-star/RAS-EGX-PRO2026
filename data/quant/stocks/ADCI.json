@@ -1,69 +1,93 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-05T21:27:40.692Z",
+  "generatedAt": "2026-11-08T19:38:58.778Z",
   "ticker": "ADCI",
   "companyNameAr": "العربية للأدوية",
   "companyNameEn": "The Arab Drug Company",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-11-04",
+  "sessionId": "2026-11-05",
   "latest": {
-    "date": "2026-11-04",
-    "open": 254.6,
-    "high": 265.5,
-    "low": 254.01,
-    "close": 256.43,
-    "volume": 9071
+    "date": "2026-11-05",
+    "open": 256.43,
+    "high": 264.98,
+    "low": 256.43,
+    "close": 260.46,
+    "volume": 9832
   },
   "indicators": {
-    "close": 256.43,
-    "change1Pct": 0.719,
-    "return5Pct": 10.084,
-    "return20Pct": -2.331,
-    "return50Pct": -15.936,
-    "sma5": 256.192,
-    "sma20": 261.627,
-    "sma50": 277.987,
-    "ema9": 255.606,
-    "ema21": 261.284,
-    "rsi14": 41.767,
-    "macd": -6.391,
-    "macdSignal": -6.559,
-    "atr14": 17.123,
-    "atrPct": 6.677,
-    "averageVolume20": 6956.2,
-    "volumeRatio20": 1.304,
-    "averageTurnover20Egp": 1810525.215,
-    "volatility20Pct": 3.625,
+    "close": 260.46,
+    "change1Pct": 1.572,
+    "return5Pct": 0.081,
+    "return20Pct": -4.243,
+    "return50Pct": -15.937,
+    "sma5": 256.234,
+    "sma20": 261.049,
+    "sma50": 276.999,
+    "ema9": 256.577,
+    "ema21": 261.209,
+    "rsi14": 45.516,
+    "macd": -5.634,
+    "macdSignal": -6.374,
+    "atr14": 17.241,
+    "atrPct": 6.619,
+    "averageVolume20": 6939.3,
+    "volumeRatio20": 1.417,
+    "averageTurnover20Egp": 1800255.346,
+    "volatility20Pct": 3.549,
     "support20": 221,
     "resistance20": 280,
-    "high50": 326,
+    "high50": 319.99,
     "low50": 221,
-    "distanceFromSupport20Pct": 16.032,
-    "relativeToResistance20Pct": -8.418,
-    "distanceFromHigh50Pct": -21.34
+    "distanceFromSupport20Pct": 17.855,
+    "relativeToResistance20Pct": -6.979,
+    "distanceFromHigh50Pct": -18.604
   },
   "technical": {
-    "score": 34,
+    "score": 40,
     "trendCode": "BEARISH",
     "trendLabelAr": "اتجاه هابط"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 61.6,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "الاتجاه المتوسط صاعد: لم يتحقق"
+    ],
+    "adaptive": {
+      "proximityPct": 78.5,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 12.8,
+      "minimumRequiredScore": 85,
+      "scoreGap": 23.4,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 23.4 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "الاتجاه المتوسط صاعد: لم يتحقق"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 258.897,
+      "entryHigh": 262.638,
+      "stopLoss": 246.425,
+      "target1": 286.584,
+      "target2": 298.058,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-05-20",
-    "lastSession": "2026-11-04",
+    "firstSession": "2026-05-21",
+    "lastSession": "2026-11-05",
     "averageConfidence": 73.15,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +95,6 @@
   },
   "chart": {
     "dates": [
-      "2026-05-20",
       "2026-05-21",
       "2026-05-25",
       "2026-05-26",
@@ -170,10 +193,10 @@
       "2026-11-01",
       "2026-11-02",
       "2026-11-03",
-      "2026-11-04"
+      "2026-11-04",
+      "2026-11-05"
     ],
     "open": [
-      209.62,
       208.3,
       214.77,
       214.98,
@@ -272,10 +295,10 @@
       271.18,
       258.12,
       251.56,
-      254.6
+      254.6,
+      256.43
     ],
     "high": [
-      215.9,
       212,
       218.9,
       214.98,
@@ -374,10 +397,10 @@
       280,
       269.98,
       255.8,
-      265.5
+      265.5,
+      264.98
     ],
     "low": [
-      208.05,
       206.51,
       214.25,
       214.98,
@@ -476,10 +499,10 @@
       244,
       250,
       250,
-      254.01
+      254.01,
+      256.43
     ],
     "close": [
-      208.3,
       208.06,
       214.98,
       214.98,
@@ -578,10 +601,10 @@
       258.12,
       251.56,
       254.6,
-      256.43
+      256.43,
+      260.46
     ],
     "volume": [
-      9134,
       12343,
       15689,
       0,
@@ -680,7 +703,8 @@
       19926,
       7708,
       1571,
-      9071
+      9071,
+      9832
     ],
     "sma20": [
       0,
@@ -702,7 +726,6 @@
       0,
       0,
       0,
-      220.668,
       222.182,
       223.967,
       225.241,
@@ -782,7 +805,8 @@
       263.712,
       262.777,
       261.932,
-      261.627
+      261.627,
+      261.049
     ],
     "sma50": [
       0,
@@ -834,7 +858,6 @@
       0,
       0,
       0,
-      241.017,
       243.047,
       245.083,
       246.766,
@@ -884,7 +907,8 @@
       280.926,
       280.235,
       278.959,
-      277.987
+      277.987,
+      276.999
     ]
   }
 }
