@@ -1,47 +1,47 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-08T19:38:58.844Z",
+  "generatedAt": "2026-11-09T23:46:06.837Z",
   "ticker": "ETEL",
   "companyNameAr": "المصرية للاتصالات",
   "companyNameEn": "Telecom Egypt",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-11-04",
+  "sessionId": "2026-11-08",
   "latest": {
-    "date": "2026-11-04",
-    "open": 122.88,
-    "high": 128,
-    "low": 122.8,
-    "close": 128,
-    "volume": 1344603
+    "date": "2026-11-08",
+    "open": 128.55,
+    "high": 131,
+    "low": 126,
+    "close": 129.7,
+    "volume": 653279
   },
   "indicators": {
-    "close": 128,
-    "change1Pct": 4.167,
-    "return5Pct": 4.815,
-    "return20Pct": -5.002,
-    "return50Pct": 17.42,
-    "sma5": 122.05,
-    "sma20": 135.915,
-    "sma50": 126.918,
-    "ema9": 126.63,
-    "ema21": 130.256,
-    "rsi14": 37.836,
-    "macd": -1.944,
-    "macdSignal": 0.605,
-    "atr14": 7.143,
-    "atrPct": 5.58,
-    "averageVolume20": 1555517.15,
-    "volumeRatio20": 0.864,
-    "averageTurnover20Egp": 209479470.767,
-    "volatility20Pct": 5.215,
+    "close": 129.7,
+    "change1Pct": 1.328,
+    "return5Pct": 7.993,
+    "return20Pct": -3.209,
+    "return50Pct": 18.98,
+    "sma5": 123.97,
+    "sma20": 135.7,
+    "sma50": 127.332,
+    "ema9": 127.244,
+    "ema21": 130.206,
+    "rsi14": 35,
+    "macd": -1.684,
+    "macdSignal": 0.143,
+    "atr14": 7.079,
+    "atrPct": 5.458,
+    "averageVolume20": 1439728.95,
+    "volumeRatio20": 0.454,
+    "averageTurnover20Egp": 193823396.884,
+    "volatility20Pct": 5.223,
     "support20": 115,
     "resistance20": 156,
     "high50": 156,
     "low50": 107,
-    "distanceFromSupport20Pct": 11.304,
-    "relativeToResistance20Pct": -17.949,
-    "distanceFromHigh50Pct": -17.949
+    "distanceFromSupport20Pct": 12.783,
+    "relativeToResistance20Pct": -16.859,
+    "distanceFromHigh50Pct": -16.859
   },
   "technical": {
     "score": 36,
@@ -49,29 +49,56 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 62.4,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "نشاط الحجم الحالي: 0.45",
+      "الاقتراب من متوسط 20: -4.42",
+      "سيولة كافية: 0.45"
+    ],
+    "adaptive": {
+      "proximityPct": 71.1,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 12.7,
+      "minimumRequiredScore": 85,
+      "scoreGap": 22.6,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 22.6 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "نشاط الحجم الحالي: 0.45",
+        "الاقتراب من متوسط 20: -4.42",
+        "سيولة كافية: 0.45"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 128.922,
+      "entryHigh": 130.681,
+      "stopLoss": 122.662,
+      "target1": 142.652,
+      "target2": 148.363,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-05-05",
-    "lastSession": "2026-11-04",
-    "averageConfidence": 72.75,
+    "firstSession": "2026-05-11",
+    "lastSession": "2026-11-08",
+    "averageConfidence": 72.4,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
     "eligibilityLabelAr": "مكتمل وحديث"
   },
   "chart": {
     "dates": [
-      "2026-05-05",
       "2026-05-11",
       "2026-05-12",
       "2026-05-13",
@@ -170,10 +197,10 @@
       "2026-11-01",
       "2026-11-02",
       "2026-11-03",
-      "2026-11-04"
+      "2026-11-04",
+      "2026-11-08"
     ],
     "open": [
-      93,
       99.5,
       98.89,
       98.49,
@@ -272,10 +299,10 @@
       120.1,
       117.82,
       121.45,
-      122.88
+      122.88,
+      128.55
     ],
     "high": [
-      93,
       101.89,
       99,
       98.98,
@@ -374,10 +401,10 @@
       120.49,
       123.06,
       124,
-      128
+      128,
+      131
     ],
     "low": [
-      91,
       97.4,
       97.5,
       96.36,
@@ -476,10 +503,10 @@
       117.51,
       116.83,
       119.5,
-      122.8
+      122.8,
+      126
     ],
     "close": [
-      92.5,
       98.89,
       98.49,
       96.6,
@@ -578,10 +605,10 @@
       117.82,
       121.45,
       122.88,
-      128
+      128,
+      129.7
     ],
     "volume": [
-      810663,
       2218937,
       1043582,
       931933,
@@ -680,7 +707,8 @@
       998504,
       1675159,
       972925,
-      1344603
+      1344603,
+      653279
     ],
     "sma20": [
       0,
@@ -702,7 +730,6 @@
       0,
       0,
       0,
-      96.246,
       96.249,
       95.839,
       95.565,
@@ -782,7 +809,8 @@
       137.486,
       136.908,
       136.252,
-      135.915
+      135.915,
+      135.7
     ],
     "sma50": [
       0,
@@ -834,7 +862,6 @@
       0,
       0,
       0,
-      97.432,
       97.763,
       98.005,
       98.205,
@@ -884,7 +911,8 @@
       125.978,
       126.261,
       126.538,
-      126.918
+      126.918,
+      127.332
     ]
   }
 }

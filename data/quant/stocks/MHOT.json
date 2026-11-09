@@ -1,69 +1,93 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-08T19:38:58.878Z",
+  "generatedAt": "2026-11-09T23:46:06.883Z",
   "ticker": "MHOT",
   "companyNameAr": "مصر للفنادق",
   "companyNameEn": "Misr Hotels Company",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-11-05",
+  "sessionId": "2026-11-08",
   "latest": {
-    "date": "2026-11-05",
-    "open": 16.07,
-    "high": 16.19,
-    "low": 15.61,
-    "close": 15.7,
-    "volume": 86967
+    "date": "2026-11-08",
+    "open": 15.7,
+    "high": 16.7,
+    "low": 15.56,
+    "close": 15.93,
+    "volume": 1174617
   },
   "indicators": {
-    "close": 15.7,
-    "change1Pct": -2.302,
-    "return5Pct": 9.255,
-    "return20Pct": -8.986,
-    "return50Pct": -6.714,
-    "sma5": 15.122,
-    "sma20": 15.771,
-    "sma50": 17.198,
-    "ema9": 15.225,
-    "ema21": 15.766,
-    "rsi14": 38.137,
-    "macd": -0.689,
-    "macdSignal": -0.803,
-    "atr14": 1.107,
-    "atrPct": 7.052,
-    "averageVolume20": 381664.95,
-    "volumeRatio20": 0.228,
-    "averageTurnover20Egp": 6164324.27,
-    "volatility20Pct": 4.679,
+    "close": 15.93,
+    "change1Pct": 1.465,
+    "return5Pct": 13.542,
+    "return20Pct": -5.404,
+    "return50Pct": -5.348,
+    "sma5": 15.502,
+    "sma20": 15.725,
+    "sma50": 17.18,
+    "ema9": 15.366,
+    "ema21": 15.781,
+    "rsi14": 49.924,
+    "macd": -0.589,
+    "macdSignal": -0.76,
+    "atr14": 1.038,
+    "atrPct": 6.515,
+    "averageVolume20": 413315.5,
+    "volumeRatio20": 2.842,
+    "averageTurnover20Egp": 6643874.458,
+    "volatility20Pct": 4.671,
     "support20": 13,
     "resistance20": 17.9,
     "high50": 21.4,
     "low50": 13,
-    "distanceFromSupport20Pct": 20.769,
-    "relativeToResistance20Pct": -12.291,
-    "distanceFromHigh50Pct": -26.636
+    "distanceFromSupport20Pct": 22.538,
+    "relativeToResistance20Pct": -11.006,
+    "distanceFromHigh50Pct": -25.561
   },
   "technical": {
-    "score": 28,
-    "trendCode": "BEARISH",
-    "trendLabelAr": "اتجاه هابط"
+    "score": 60,
+    "trendCode": "NEUTRAL",
+    "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 56,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "الاتجاه المتوسط صاعد: لم يتحقق"
+    ],
+    "adaptive": {
+      "proximityPct": 76.5,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 12.7,
+      "minimumRequiredScore": 85,
+      "scoreGap": 29,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 29 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "الاتجاه المتوسط صاعد: لم يتحقق"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 15.834,
+      "entryHigh": 16.073,
+      "stopLoss": 15.076,
+      "target1": 17.533,
+      "target2": 18.235,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-05-12",
-    "lastSession": "2026-11-05",
+    "firstSession": "2026-05-14",
+    "lastSession": "2026-11-08",
     "averageConfidence": 73.15,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +95,6 @@
   },
   "chart": {
     "dates": [
-      "2026-05-12",
       "2026-05-14",
       "2026-05-17",
       "2026-05-18",
@@ -170,10 +193,10 @@
       "2026-11-02",
       "2026-11-03",
       "2026-11-04",
-      "2026-11-05"
+      "2026-11-05",
+      "2026-11-08"
     ],
     "open": [
-      26.93,
       27.42,
       27.31,
       27.25,
@@ -272,10 +295,10 @@
       14.99,
       14.84,
       14.97,
-      16.07
+      16.07,
+      15.7
     ],
     "high": [
-      27.18,
       27.74,
       27.85,
       27.49,
@@ -374,10 +397,10 @@
       15.16,
       15.15,
       16.49,
-      16.19
+      16.19,
+      16.7
     ],
     "low": [
-      26.92,
       27.23,
       27.1,
       27.02,
@@ -476,10 +499,10 @@
       14.65,
       14.7,
       14.81,
-      15.61
+      15.61,
+      15.56
     ],
     "close": [
-      26.98,
       27.31,
       27.25,
       27.1,
@@ -578,10 +601,10 @@
       14.84,
       14.97,
       16.07,
-      15.7
+      15.7,
+      15.93
     ],
     "volume": [
-      39303,
       40641,
       115690,
       66488,
@@ -680,7 +703,8 @@
       152971,
       401745,
       336056,
-      86967
+      86967,
+      1174617
     ],
     "sma20": [
       0,
@@ -702,7 +726,6 @@
       0,
       0,
       0,
-      29.775,
       30.047,
       30.448,
       30.836,
@@ -782,7 +805,8 @@
       16.102,
       15.908,
       15.848,
-      15.771
+      15.771,
+      15.725
     ],
     "sma50": [
       0,
@@ -834,7 +858,6 @@
       0,
       0,
       0,
-      23.671,
       23.468,
       23.258,
       23.098,
@@ -884,7 +907,8 @@
       17.274,
       17.236,
       17.221,
-      17.198
+      17.198,
+      17.18
     ]
   }
 }

@@ -1,69 +1,93 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-08T19:38:58.916Z",
+  "generatedAt": "2026-11-09T23:46:06.935Z",
   "ticker": "SEIG",
   "companyNameAr": "السعودية المصرية للاستثمار والتمويل",
   "companyNameEn": "Saudi Egyptian Investment & Finance",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-11-05",
+  "sessionId": "2026-11-08",
   "latest": {
-    "date": "2026-11-05",
-    "open": 254.57,
-    "high": 260,
-    "low": 239.05,
-    "close": 240.49,
-    "volume": 32167
+    "date": "2026-11-08",
+    "open": 240.49,
+    "high": 244.59,
+    "low": 230.1,
+    "close": 232,
+    "volume": 31025
   },
   "indicators": {
-    "close": 240.49,
-    "change1Pct": -5.531,
-    "return5Pct": 59.709,
-    "return20Pct": 13.289,
-    "return50Pct": -13.505,
-    "sma5": 220.59,
-    "sma20": 207.647,
-    "sma50": 232.306,
-    "ema9": 213.924,
-    "ema21": 211.143,
-    "rsi14": 56.796,
-    "macd": -2.788,
-    "macdSignal": -11.441,
-    "atr14": 28.834,
-    "atrPct": 11.99,
-    "averageVolume20": 23028.2,
-    "volumeRatio20": 1.397,
-    "averageTurnover20Egp": 5440962.048,
-    "volatility20Pct": 11.971,
+    "close": 232,
+    "change1Pct": -3.53,
+    "return5Pct": 49.35,
+    "return20Pct": -2.196,
+    "return50Pct": -14.709,
+    "sma5": 235.922,
+    "sma20": 207.386,
+    "sma50": 231.506,
+    "ema9": 217.539,
+    "ema21": 213.039,
+    "rsi14": 57.841,
+    "macd": -0.871,
+    "macdSignal": -9.325,
+    "atr14": 26.591,
+    "atrPct": 11.462,
+    "averageVolume20": 24297.45,
+    "volumeRatio20": 1.277,
+    "averageTurnover20Egp": 5733958.826,
+    "volatility20Pct": 11.762,
     "support20": 142,
     "resistance20": 280,
-    "high50": 285,
+    "high50": 280,
     "low50": 142,
-    "distanceFromSupport20Pct": 69.359,
-    "relativeToResistance20Pct": -14.111,
-    "distanceFromHigh50Pct": -15.618
+    "distanceFromSupport20Pct": 63.38,
+    "relativeToResistance20Pct": -17.143,
+    "distanceFromHigh50Pct": -17.143
   },
   "technical": {
-    "score": 84,
+    "score": 74,
     "trendCode": "NEUTRAL",
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 56.9,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "ترتيب الاتجاه: 232 > 207.386 > 231.506"
+    ],
+    "adaptive": {
+      "proximityPct": 76.4,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 18.1,
+      "minimumRequiredScore": 85,
+      "scoreGap": 28.1,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 28.1 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "ترتيب الاتجاه: 232 > 207.386 > 231.506"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 230.608,
+      "entryHigh": 234.088,
+      "stopLoss": 219.569,
+      "target1": 255.351,
+      "target2": 265.574,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-05-13",
-    "lastSession": "2026-11-05",
+    "firstSession": "2026-05-14",
+    "lastSession": "2026-11-08",
     "averageConfidence": 72.4,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +95,6 @@
   },
   "chart": {
     "dates": [
-      "2026-05-13",
       "2026-05-14",
       "2026-05-18",
       "2026-05-20",
@@ -170,10 +193,10 @@
       "2026-10-29",
       "2026-11-03",
       "2026-11-04",
-      "2026-11-05"
+      "2026-11-05",
+      "2026-11-08"
     ],
     "open": [
-      185.33,
       184.14,
       184.81,
       181.59,
@@ -272,10 +295,10 @@
       155.34,
       247.5,
       266.15,
-      254.57
+      254.57,
+      240.49
     ],
     "high": [
-      187.95,
       185.99,
       190.99,
       185.78,
@@ -374,10 +397,10 @@
       186.4,
       280,
       268,
-      260
+      260,
+      244.59
     ],
     "low": [
-      184,
       179,
       181.01,
       173.35,
@@ -476,10 +499,10 @@
       149.57,
       246,
       231,
-      239.05
+      239.05,
+      230.1
     ],
     "close": [
-      184.14,
       180.03,
       181.15,
       175,
@@ -578,10 +601,10 @@
       186.4,
       266.15,
       254.57,
-      240.49
+      240.49,
+      232
     ],
     "volume": [
-      14205,
       31686,
       24985,
       11681,
@@ -680,7 +703,8 @@
       31879,
       166521,
       69090,
-      32167
+      32167,
+      31025
     ],
     "sma20": [
       0,
@@ -702,7 +726,6 @@
       0,
       0,
       0,
-      183.654,
       183.617,
       183.811,
       184.281,
@@ -782,7 +805,8 @@
       201.854,
       204.408,
       206.236,
-      207.647
+      207.647,
+      207.386
     ],
     "sma50": [
       0,
@@ -834,7 +858,6 @@
       0,
       0,
       0,
-      219.441,
       221.198,
       223.032,
       224.739,
@@ -884,7 +907,8 @@
       233.685,
       233.487,
       233.057,
-      232.306
+      232.306,
+      231.506
     ]
   }
 }

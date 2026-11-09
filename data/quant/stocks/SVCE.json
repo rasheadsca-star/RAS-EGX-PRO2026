@@ -1,69 +1,93 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-08T19:38:58.927Z",
+  "generatedAt": "2026-11-09T23:46:06.945Z",
   "ticker": "SVCE",
   "companyNameAr": "جنوب الوادي للأسمنت",
   "companyNameEn": "South Valley Cement Company",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-11-05",
+  "sessionId": "2026-11-08",
   "latest": {
-    "date": "2026-11-05",
+    "date": "2026-11-08",
     "open": 8.84,
-    "high": 9.03,
-    "low": 8.73,
-    "close": 8.84,
-    "volume": 5279217
+    "high": 9.17,
+    "low": 8.56,
+    "close": 9.17,
+    "volume": 10078179
   },
   "indicators": {
-    "close": 8.84,
-    "change1Pct": 4.615,
-    "return5Pct": 5.238,
-    "return20Pct": -8.866,
-    "return50Pct": -18.899,
-    "sma5": 8.558,
-    "sma20": 9.157,
-    "sma50": 10.496,
-    "ema9": 8.685,
-    "ema21": 9.196,
-    "rsi14": 42.217,
-    "macd": -0.575,
-    "macdSignal": -0.589,
-    "atr14": 0.655,
-    "atrPct": 7.41,
-    "averageVolume20": 5390387.45,
-    "volumeRatio20": 0.979,
-    "averageTurnover20Egp": 50144597.163,
-    "volatility20Pct": 4.59,
+    "close": 9.17,
+    "change1Pct": 3.733,
+    "return5Pct": 5.402,
+    "return20Pct": -3.979,
+    "return50Pct": -15.872,
+    "sma5": 8.652,
+    "sma20": 9.138,
+    "sma50": 10.462,
+    "ema9": 8.782,
+    "ema21": 9.194,
+    "rsi14": 48.073,
+    "macd": -0.503,
+    "macdSignal": -0.571,
+    "atr14": 0.632,
+    "atrPct": 6.894,
+    "averageVolume20": 5670846.1,
+    "volumeRatio20": 1.777,
+    "averageTurnover20Egp": 52631491.869,
+    "volatility20Pct": 4.665,
     "support20": 7.3,
     "resistance20": 10.87,
     "high50": 13.39,
     "low50": 7.3,
-    "distanceFromSupport20Pct": 21.096,
-    "relativeToResistance20Pct": -18.675,
-    "distanceFromHigh50Pct": -33.981
+    "distanceFromSupport20Pct": 25.616,
+    "relativeToResistance20Pct": -15.639,
+    "distanceFromHigh50Pct": -31.516
   },
   "technical": {
-    "score": 28,
-    "trendCode": "BEARISH",
-    "trendLabelAr": "اتجاه هابط"
+    "score": 60,
+    "trendCode": "NEUTRAL",
+    "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 60.3,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "الاتجاه المتوسط صاعد: لم يتحقق"
+    ],
+    "adaptive": {
+      "proximityPct": 78,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 12.7,
+      "minimumRequiredScore": 85,
+      "scoreGap": 24.7,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 24.7 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "الاتجاه المتوسط صاعد: لم يتحقق"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 9.115,
+      "entryHigh": 9.252,
+      "stopLoss": 8.679,
+      "target1": 10.093,
+      "target2": 10.497,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-05-24",
-    "lastSession": "2026-11-05",
+    "firstSession": "2026-05-25",
+    "lastSession": "2026-11-08",
     "averageConfidence": 73.15,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +95,6 @@
   },
   "chart": {
     "dates": [
-      "2026-05-24",
       "2026-05-25",
       "2026-05-26",
       "2026-05-27",
@@ -170,10 +193,10 @@
       "2026-11-01",
       "2026-11-02",
       "2026-11-03",
-      "2026-11-05"
+      "2026-11-05",
+      "2026-11-08"
     ],
     "open": [
-      9.19,
       9.31,
       9.2,
       9.2,
@@ -272,10 +295,10 @@
       8.7,
       8.5,
       8.3,
+      8.84,
       8.84
     ],
     "high": [
-      9.4,
       9.4,
       9.2,
       9.2,
@@ -374,10 +397,10 @@
       8.75,
       8.7,
       8.49,
-      9.03
+      9.03,
+      9.17
     ],
     "low": [
-      9.19,
       9.2,
       9.2,
       9.2,
@@ -476,10 +499,10 @@
       8.48,
       7.97,
       8.16,
-      8.73
+      8.73,
+      8.56
     ],
     "close": [
-      9.31,
       9.2,
       9.2,
       9.2,
@@ -578,10 +601,10 @@
       8.5,
       8.3,
       8.45,
-      8.84
+      8.84,
+      9.17
     ],
     "volume": [
-      4566911,
       6329090,
       0,
       0,
@@ -680,7 +703,8 @@
       4968575,
       2941427,
       2999944,
-      5279217
+      5279217,
+      10078179
     ],
     "sma20": [
       0,
@@ -702,7 +726,6 @@
       0,
       0,
       0,
-      9.068,
       9.045,
       9.028,
       9.054,
@@ -782,7 +805,8 @@
       9.369,
       9.272,
       9.2,
-      9.157
+      9.157,
+      9.138
     ],
     "sma50": [
       0,
@@ -834,7 +858,6 @@
       0,
       0,
       0,
-      9.303,
       9.335,
       9.369,
       9.401,
@@ -884,7 +907,8 @@
       10.643,
       10.584,
       10.538,
-      10.496
+      10.496,
+      10.462
     ]
   }
 }
