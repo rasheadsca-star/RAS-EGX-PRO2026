@@ -1,69 +1,93 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-09T23:46:06.776Z",
+  "generatedAt": "2026-11-10T21:16:42.846Z",
   "ticker": "CEFM",
   "companyNameAr": "مطاحن مصر الوسطى",
   "companyNameEn": "Middle Egypt Flour Mills",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-11-08",
+  "sessionId": "2026-11-09",
   "latest": {
-    "date": "2026-11-08",
-    "open": 118.66,
-    "high": 121.2,
-    "low": 116,
-    "close": 119.06,
-    "volume": 14787
+    "date": "2026-11-09",
+    "open": 119.06,
+    "high": 127.8,
+    "low": 118.58,
+    "close": 123.84,
+    "volume": 20191
   },
   "indicators": {
-    "close": 119.06,
-    "change1Pct": 0.337,
-    "return5Pct": 2.753,
-    "return20Pct": -10.414,
-    "return50Pct": -13.063,
-    "sma5": 115.574,
-    "sma20": 125.037,
-    "sma50": 135.716,
-    "ema9": 118.191,
-    "ema21": 124.182,
-    "rsi14": 38.58,
-    "macd": -6.081,
-    "macdSignal": -5.415,
-    "atr14": 10.437,
-    "atrPct": 8.766,
-    "averageVolume20": 19388.85,
-    "volumeRatio20": 0.763,
-    "averageTurnover20Egp": 2385895.938,
-    "volatility20Pct": 5.405,
+    "close": 123.84,
+    "change1Pct": 4.015,
+    "return5Pct": 4.798,
+    "return20Pct": -1.831,
+    "return50Pct": -9.573,
+    "sma5": 116.708,
+    "sma20": 124.921,
+    "sma50": 135.454,
+    "ema9": 119.321,
+    "ema21": 124.151,
+    "rsi14": 42.653,
+    "macd": -5.307,
+    "macdSignal": -5.393,
+    "atr14": 10.9,
+    "atrPct": 8.802,
+    "averageVolume20": 19409.85,
+    "volumeRatio20": 1.04,
+    "averageTurnover20Egp": 2386213.022,
+    "volatility20Pct": 5.375,
     "support20": 102.2,
     "resistance20": 144.9,
     "high50": 168,
     "low50": 102.2,
-    "distanceFromSupport20Pct": 16.497,
-    "relativeToResistance20Pct": -17.833,
-    "distanceFromHigh50Pct": -29.131
+    "distanceFromSupport20Pct": 21.174,
+    "relativeToResistance20Pct": -14.534,
+    "distanceFromHigh50Pct": -26.286
   },
   "technical": {
-    "score": 16,
+    "score": 28,
     "trendCode": "BEARISH",
     "trendLabelAr": "اتجاه هابط"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 55.2,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "الاتجاه المتوسط صاعد: لم يتحقق"
+    ],
+    "adaptive": {
+      "proximityPct": 76.2,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 13,
+      "minimumRequiredScore": 85,
+      "scoreGap": 29.8,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 29.8 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "الاتجاه المتوسط صاعد: لم يتحقق"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 123.097,
+      "entryHigh": 124.955,
+      "stopLoss": 117.204,
+      "target1": 136.304,
+      "target2": 141.761,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-05-11",
-    "lastSession": "2026-11-08",
+    "firstSession": "2026-05-12",
+    "lastSession": "2026-11-09",
     "averageConfidence": 73.15,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +95,6 @@
   },
   "chart": {
     "dates": [
-      "2026-05-11",
       "2026-05-12",
       "2026-05-14",
       "2026-05-18",
@@ -170,10 +193,10 @@
       "2026-11-01",
       "2026-11-02",
       "2026-11-05",
-      "2026-11-08"
+      "2026-11-08",
+      "2026-11-09"
     ],
     "open": [
-      112.54,
       111.17,
       110.83,
       114.01,
@@ -272,10 +295,10 @@
       118.17,
       113.4,
       117.95,
-      118.66
+      118.66,
+      119.06
     ],
     "high": [
-      117,
       112.99,
       114.97,
       116,
@@ -374,10 +397,10 @@
       120,
       115.98,
       119.43,
-      121.2
+      121.2,
+      127.8
     ],
     "low": [
-      110.01,
       108.03,
       108.1,
       110.01,
@@ -476,10 +499,10 @@
       112.11,
       106,
       117,
-      116
+      116,
+      118.58
     ],
     "close": [
-      111.17,
       109.44,
       112.31,
       110.25,
@@ -578,10 +601,10 @@
       113.4,
       108.58,
       118.66,
-      119.06
+      119.06,
+      123.84
     ],
     "volume": [
-      35307,
       28231,
       61036,
       55439,
@@ -680,7 +703,8 @@
       30242,
       9441,
       17226,
-      14787
+      14787,
+      20191
     ],
     "sma20": [
       0,
@@ -702,7 +726,6 @@
       0,
       0,
       0,
-      107.13,
       106.756,
       106.386,
       105.873,
@@ -782,7 +805,8 @@
       128.503,
       126.756,
       125.729,
-      125.037
+      125.037,
+      124.921
     ],
     "sma50": [
       0,
@@ -834,7 +858,6 @@
       0,
       0,
       0,
-      110.762,
       111.278,
       111.828,
       112.289,
@@ -884,7 +907,8 @@
       137.106,
       136.501,
       136.074,
-      135.716
+      135.716,
+      135.454
     ]
   }
 }
