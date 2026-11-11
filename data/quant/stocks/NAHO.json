@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-11T13:30:26.566Z",
+  "generatedAt": "2026-11-11T21:54:41.521Z",
   "ticker": "NAHO",
   "companyNameAr": "نعيم القابضة",
   "companyNameEn": "Naeem Holding Company",
@@ -49,8 +49,8 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
+    "source": "V13.5",
+    "status": "CONDITIONAL_WATCH",
     "statusLabelAr": "مراقبة مشروطة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
@@ -63,7 +63,25 @@
       "دعم الحجم: 0.14",
       "مساحة حتى المقاومة: 0"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 60.8,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 15.7,
+      "minimumRequiredScore": 85,
+      "scoreGap": 26.9,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 26.9 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "متوسط قيمة التداول: 34052",
+        "نشاط الحجم الحالي: 0.14",
+        "منطقة RSI: 70.4",
+        "دعم الحجم: 0.14",
+        "مساحة حتى المقاومة: 0"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 0.13,
       "entryHigh": 0.13,

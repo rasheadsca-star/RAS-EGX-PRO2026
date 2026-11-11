@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-11T13:30:26.609Z",
+  "generatedAt": "2026-11-11T21:54:41.569Z",
   "ticker": "SDTI",
   "companyNameAr": "شرم دريمز",
   "companyNameEn": "SHARM DREAMS Co. for Touristic Investment",
@@ -50,33 +50,36 @@
   },
   "recommendation": {
     "source": "V13.5",
-    "status": "NEAR_TRIGGER",
-    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
     "strategyId": "trend_follow",
     "strategyLabelAr": "اتجاه قوي مع سيولة",
-    "recommendationScore": 76.2,
-    "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
-    "failedConditions": [],
+    "recommendationScore": 57.7,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "دعم الحجم: 0.72"
+    ],
     "adaptive": {
-      "proximityPct": 87.5,
+      "proximityPct": 76.9,
       "strategyHealthStatus": "RESEARCH_ONLY",
-      "strategyHealthScore": 15.6,
+      "strategyHealthScore": 15.7,
       "minimumRequiredScore": 85,
-      "scoreGap": 8.8,
+      "scoreGap": 27.3,
       "calibratedVariantId": "balanced",
       "riskScale": 0,
       "missingRequirementsAr": [
         "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-        "تحتاج 8.8 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف."
+        "تحتاج 27.3 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "دعم الحجم: 0.72"
       ],
       "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
     },
     "plan": {
-      "entryLow": 86.57,
-      "entryHigh": 87.538,
-      "stopLoss": 82.266,
-      "target1": 95.672,
-      "target2": 99.502,
+      "entryLow": 86.918,
+      "entryHigh": 87.844,
+      "stopLoss": 82.749,
+      "target1": 95.721,
+      "target2": 99.427,
       "riskReward1": 1.8,
       "maximumHoldingSessions": 10
     }

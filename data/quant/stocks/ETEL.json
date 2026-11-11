@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-11T13:30:26.499Z",
+  "generatedAt": "2026-11-11T21:54:41.448Z",
   "ticker": "ETEL",
   "companyNameAr": "المصرية للاتصالات",
   "companyNameEn": "Telecom Egypt",
@@ -49,9 +49,9 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "pullback",
     "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
     "recommendationScore": 66.1,
@@ -59,7 +59,21 @@
     "failedConditions": [
       "القوة النسبية: -10.1"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 80,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 13.1,
+      "minimumRequiredScore": 85,
+      "scoreGap": 18.9,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 18.9 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "القوة النسبية: -10.1"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 134.339,
       "entryHigh": 136.119,
