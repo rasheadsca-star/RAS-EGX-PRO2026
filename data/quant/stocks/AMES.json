@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-12T14:34:22.332Z",
+  "generatedAt": "2026-11-12T21:49:46.414Z",
   "ticker": "AMES",
   "companyNameAr": "مركز الإسكندرية الطبي",
   "companyNameEn": "Alexandria New Medical Center",
@@ -49,9 +49,9 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": "V13.4",
-    "status": "WATCH_CONDITIONAL",
-    "statusLabelAr": "مراقبة مشروطة",
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
     "strategyId": "breakout",
     "strategyLabelAr": "اختراق مؤكد",
     "recommendationScore": 65.7,
@@ -59,7 +59,21 @@
     "failedConditions": [
       "اتجاه داعم للاختراق: لم يتحقق"
     ],
-    "adaptive": null,
+    "adaptive": {
+      "proximityPct": 79.7,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 19.5,
+      "minimumRequiredScore": 85,
+      "scoreGap": 19.3,
+      "calibratedVariantId": "early",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 19.3 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "اتجاه داعم للاختراق: لم يتحقق"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
     "plan": {
       "entryLow": 51.151,
       "entryHigh": 51.923,

@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-12T14:34:22.377Z",
+  "generatedAt": "2026-11-12T21:49:46.450Z",
   "ticker": "CPCI",
   "companyNameAr": "القاهرة للأدوية",
   "companyNameEn": "Kahira Pharmaceuticals & Chemical Industries",
@@ -50,33 +50,36 @@
   },
   "recommendation": {
     "source": "V13.5",
-    "status": "NEAR_TRIGGER",
-    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
     "strategyId": "pullback",
     "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
-    "recommendationScore": 66.8,
-    "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية.",
-    "failedConditions": [],
+    "recommendationScore": 58.8,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "تحسن RSI: 58.4 → 56.1"
+    ],
     "adaptive": {
-      "proximityPct": 84,
+      "proximityPct": 77.5,
       "strategyHealthStatus": "RESEARCH_ONLY",
-      "strategyHealthScore": 13.1,
+      "strategyHealthScore": 12.7,
       "minimumRequiredScore": 85,
-      "scoreGap": 18.2,
+      "scoreGap": 26.2,
       "calibratedVariantId": "wide",
       "riskScale": 0,
       "missingRequirementsAr": [
         "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
-        "تحتاج 18.2 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف."
+        "تحتاج 26.2 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "تحسن RSI: 58.4 → 56.1"
       ],
       "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
     },
     "plan": {
-      "entryLow": 596.524,
-      "entryHigh": 600.542,
-      "stopLoss": 578.436,
-      "target1": 634.708,
-      "target2": 650.786,
+      "entryLow": 593.928,
+      "entryHigh": 597.736,
+      "stopLoss": 561.753,
+      "target1": 657.173,
+      "target2": 684.435,
       "riskReward1": 1.8,
       "maximumHoldingSessions": 10
     }
