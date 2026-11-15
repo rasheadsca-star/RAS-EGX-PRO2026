@@ -1,69 +1,97 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-12T21:49:46.478Z",
+  "generatedAt": "2026-11-15T20:22:52.077Z",
   "ticker": "ELNA",
   "companyNameAr": "النصر لتصنيع الحاصلات الزراعية",
   "companyNameEn": "El Nasr Manufacturing Agricultural Crops",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-11-09",
+  "sessionId": "2026-11-12",
   "latest": {
-    "date": "2026-11-09",
-    "open": 41.29,
-    "high": 42.97,
-    "low": 40.01,
-    "close": 42.96,
-    "volume": 17388
+    "date": "2026-11-12",
+    "open": 43.4,
+    "high": 43.4,
+    "low": 42.3,
+    "close": 43.4,
+    "volume": 4700
   },
   "indicators": {
-    "close": 42.96,
-    "change1Pct": 4.045,
-    "return5Pct": 8.321,
-    "return20Pct": 20.201,
-    "return50Pct": 11.353,
-    "sma5": 40.926,
-    "sma20": 37.321,
-    "sma50": 37.287,
-    "ema9": 39.942,
-    "ema21": 38.332,
-    "rsi14": 96.071,
-    "macd": 1.271,
-    "macdSignal": 0.536,
-    "atr14": 2.041,
-    "atrPct": 4.752,
-    "averageVolume20": 13846.8,
-    "volumeRatio20": 1.256,
-    "averageTurnover20Egp": 527859.281,
-    "volatility20Pct": 1.958,
+    "close": 43.4,
+    "change1Pct": 0,
+    "return5Pct": 5.11,
+    "return20Pct": 23.225,
+    "return50Pct": 12.087,
+    "sma5": 42.89,
+    "sma20": 38.496,
+    "sma50": 37.557,
+    "ema9": 41.629,
+    "ema21": 39.592,
+    "rsi14": 96.267,
+    "macd": 1.772,
+    "macdSignal": 1.086,
+    "atr14": 2.032,
+    "atrPct": 4.682,
+    "averageVolume20": 14364.15,
+    "volumeRatio20": 0.327,
+    "averageTurnover20Egp": 556034.006,
+    "volatility20Pct": 1.879,
     "support20": 33.46,
-    "resistance20": 41.48,
-    "high50": 42.97,
+    "resistance20": 44.2,
+    "high50": 44.2,
     "low50": 33.46,
-    "distanceFromSupport20Pct": 28.392,
-    "relativeToResistance20Pct": 3.568,
-    "distanceFromHigh50Pct": -0.023
+    "distanceFromSupport20Pct": 29.707,
+    "relativeToResistance20Pct": -1.81,
+    "distanceFromHigh50Pct": -1.81
   },
   "technical": {
-    "score": 96,
+    "score": 84,
     "trendCode": "BULLISH",
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 68.6,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "نشاط الحجم الحالي: 0.31",
+      "منطقة RSI: 86.3",
+      "دعم الحجم: 0.31"
+    ],
+    "adaptive": {
+      "proximityPct": 72.6,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 14.2,
+      "minimumRequiredScore": 85,
+      "scoreGap": 16.4,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 16.4 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "نشاط الحجم الحالي: 0.31",
+        "منطقة RSI: 86.3",
+        "دعم الحجم: 0.31"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 43.184,
+      "entryHigh": 43.67,
+      "stopLoss": 41.038,
+      "target1": 47.726,
+      "target2": 49.637,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-04-29",
-    "lastSession": "2026-11-09",
+    "firstSession": "2026-05-05",
+    "lastSession": "2026-11-12",
     "averageConfidence": 74.25,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,9 +99,6 @@
   },
   "chart": {
     "dates": [
-      "2026-04-29",
-      "2026-04-30",
-      "2026-05-04",
       "2026-05-05",
       "2026-05-06",
       "2026-05-10",
@@ -170,12 +195,12 @@
       "2026-11-04",
       "2026-11-05",
       "2026-11-08",
-      "2026-11-09"
+      "2026-11-09",
+      "2026-11-10",
+      "2026-11-11",
+      "2026-11-12"
     ],
     "open": [
-      37.02,
-      37.13,
-      39.27,
       40.4,
       40.4,
       39.15,
@@ -272,12 +297,12 @@
       39.68,
       39.41,
       41.29,
-      41.29
+      41.29,
+      42.96,
+      43.4,
+      43.4
     ],
     "high": [
-      37.49,
-      37.64,
-      41.17,
       40.5,
       40.88,
       40.25,
@@ -374,12 +399,12 @@
       40.1,
       41.38,
       41.33,
-      42.97
+      42.97,
+      44.2,
+      44,
+      43.4
     ],
     "low": [
-      37,
-      37.01,
-      38.24,
       38.67,
       39,
       39.13,
@@ -476,12 +501,12 @@
       38.6,
       38.7,
       40,
-      40.01
+      40.01,
+      42,
+      42.16,
+      42.3
     ],
     "close": [
-      37.13,
-      37.42,
-      40.4,
       40.4,
       39.15,
       39.32,
@@ -578,12 +603,12 @@
       39.41,
       41.29,
       41.29,
-      42.96
+      42.96,
+      43.4,
+      43.4,
+      43.4
     ],
     "volume": [
-      11492,
-      8376,
-      12173,
       7214,
       9767,
       10949,
@@ -680,7 +705,10 @@
       9673,
       22432,
       4623,
-      17388
+      17388,
+      16629,
+      3219,
+      4700
     ],
     "sma20": [
       0,
@@ -702,9 +730,6 @@
       0,
       0,
       0,
-      39.601,
-      39.659,
-      39.765,
       39.722,
       39.679,
       39.784,
@@ -782,7 +807,10 @@
       36.469,
       36.682,
       36.96,
-      37.321
+      37.321,
+      37.704,
+      38.087,
+      38.496
     ],
     "sma50": [
       0,
@@ -834,9 +862,6 @@
       0,
       0,
       0,
-      38.978,
-      39.015,
-      39.046,
       39.013,
       38.955,
       38.92,
@@ -884,7 +909,10 @@
       37.1,
       37.15,
       37.2,
-      37.287
+      37.287,
+      37.376,
+      37.464,
+      37.557
     ]
   }
 }

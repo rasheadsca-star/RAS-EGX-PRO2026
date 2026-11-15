@@ -1,6 +1,6 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-12T21:49:46.584Z",
+  "generatedAt": "2026-11-15T20:22:52.173Z",
   "ticker": "SEIGA",
   "companyNameAr": "السعودية المصرية للاستثمار والتمويل",
   "companyNameEn": "Saudi Egyptian Investment & Finance",
@@ -9,60 +9,92 @@
   "sessionId": "2026-11-12",
   "latest": {
     "date": "2026-11-12",
-    "open": 5.41,
-    "high": 5.41,
-    "low": 5.41,
-    "close": 5.41,
-    "volume": 157
+    "open": 63.29,
+    "high": 63.29,
+    "low": 63.29,
+    "close": 63.29,
+    "volume": 0
   },
   "indicators": {
-    "close": 5.41,
+    "close": 63.29,
     "change1Pct": 0,
-    "return5Pct": -91.452,
-    "return20Pct": -91.452,
-    "return50Pct": -91.452,
-    "sma5": 40.138,
-    "sma20": 57.502,
-    "sma50": 59.817,
-    "ema9": 42.399,
-    "ema21": 52.711,
-    "rsi14": 0,
-    "macd": -7.668,
-    "macdSignal": -1.853,
-    "atr14": 4.134,
-    "atrPct": 76.419,
-    "averageVolume20": 15.7,
-    "volumeRatio20": 10,
-    "averageTurnover20Egp": 84.937,
-    "volatility20Pct": 19.932,
-    "support20": 5.41,
+    "return5Pct": 0,
+    "return20Pct": 0,
+    "return50Pct": 0,
+    "sma5": 63.29,
+    "sma20": 63.29,
+    "sma50": 62.132,
+    "ema9": 63.246,
+    "ema21": 62.804,
+    "rsi14": 100,
+    "macd": 0.489,
+    "macdSignal": 0.515,
+    "atr14": 0,
+    "atrPct": 0,
+    "averageVolume20": 0,
+    "volumeRatio20": 0,
+    "averageTurnover20Egp": 0,
+    "volatility20Pct": 0,
+    "support20": 63.29,
     "resistance20": 63.29,
     "high50": 63.29,
     "low50": 5.41,
     "distanceFromSupport20Pct": 0,
-    "relativeToResistance20Pct": -91.452,
-    "distanceFromHigh50Pct": -91.452
+    "relativeToResistance20Pct": 0,
+    "distanceFromHigh50Pct": 0
   },
   "technical": {
-    "score": 22,
-    "trendCode": "BEARISH",
-    "trendLabelAr": "اتجاه هابط"
+    "score": 42,
+    "trendCode": "NEUTRAL",
+    "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 70.5,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "متوسط قيمة التداول: 0",
+      "جلسات حجم تداول صالحة: 0",
+      "نشاط الحجم الحالي: 0",
+      "تحسن RSI: 51.9 → 51.9",
+      "سيولة كافية: 0"
+    ],
+    "adaptive": {
+      "proximityPct": 66.7,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 13.3,
+      "minimumRequiredScore": 85,
+      "scoreGap": 14.5,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 14.5 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "متوسط قيمة التداول: 0",
+        "جلسات حجم تداول صالحة: 0",
+        "نشاط الحجم الحالي: 0",
+        "تحسن RSI: 51.9 → 51.9",
+        "سيولة كافية: 0"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 63.128,
+      "entryHigh": 63.492,
+      "stopLoss": 61.492,
+      "target1": 66.583,
+      "target2": 68.038,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
-    "historySessions": 102,
-    "firstSession": "2026-06-23",
+    "historySessions": 100,
+    "firstSession": "2026-06-28",
     "lastSession": "2026-11-12",
     "averageConfidence": 73.9,
     "symbolVerified": true,
@@ -71,7 +103,6 @@
   },
   "chart": {
     "dates": [
-      "2026-06-25",
       "2026-06-28",
       "2026-06-29",
       "2026-06-30",
@@ -169,6 +200,7 @@
       "2026-11-05",
       "2026-11-08",
       "2026-11-09",
+      "2026-11-10",
       "2026-11-11",
       "2026-11-12"
     ],
@@ -247,7 +279,6 @@
       63.29,
       63.29,
       63.29,
-      63.29,
       5.41,
       63.29,
       63.29,
@@ -271,8 +302,9 @@
       63.29,
       63.29,
       63.29,
-      5.41,
-      5.41
+      63.29,
+      63.29,
+      63.29
     ],
     "high": [
       63.29,
@@ -349,7 +381,6 @@
       63.29,
       63.29,
       63.29,
-      63.29,
       5.41,
       63.29,
       63.29,
@@ -373,8 +404,9 @@
       63.29,
       63.29,
       63.29,
-      5.41,
-      5.41
+      63.29,
+      63.29,
+      63.29
     ],
     "low": [
       63.29,
@@ -451,7 +483,6 @@
       63.29,
       63.29,
       63.29,
-      63.29,
       5.41,
       63.29,
       63.29,
@@ -475,8 +506,9 @@
       63.29,
       63.29,
       63.29,
-      5.41,
-      5.41
+      63.29,
+      63.29,
+      63.29
     ],
     "close": [
       63.29,
@@ -553,7 +585,6 @@
       63.29,
       63.29,
       63.29,
-      63.29,
       5.41,
       63.29,
       63.29,
@@ -577,8 +608,9 @@
       63.29,
       63.29,
       63.29,
-      5.41,
-      5.41
+      63.29,
+      63.29,
+      63.29
     ],
     "volume": [
       0,
@@ -655,7 +687,6 @@
       0,
       0,
       0,
-      0,
       157,
       0,
       0,
@@ -679,8 +710,9 @@
       0,
       0,
       0,
-      157,
-      157
+      0,
+      0,
+      0
     ],
     "sma20": [
       0,
@@ -757,7 +789,6 @@
       63.29,
       63.29,
       63.29,
-      63.29,
       60.396,
       60.396,
       60.396,
@@ -781,8 +812,9 @@
       63.29,
       63.29,
       63.29,
-      60.396,
-      57.502
+      63.29,
+      63.29,
+      63.29
     ],
     "sma50": [
       0,
@@ -859,7 +891,6 @@
       63.29,
       63.29,
       63.29,
-      63.29,
       62.132,
       62.132,
       62.132,
@@ -883,8 +914,9 @@
       62.132,
       62.132,
       62.132,
-      60.975,
-      59.817
+      62.132,
+      62.132,
+      62.132
     ]
   }
 }

@@ -1,69 +1,93 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-12T21:49:46.570Z",
+  "generatedAt": "2026-11-15T20:22:52.162Z",
   "ticker": "RAKT",
   "companyNameAr": "راكتا",
   "companyNameEn": "Rakta Paper Manufacturing Company",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-11-11",
+  "sessionId": "2026-11-12",
   "latest": {
-    "date": "2026-11-11",
-    "open": 22.33,
-    "high": 22.69,
+    "date": "2026-11-12",
+    "open": 22.47,
+    "high": 22.95,
     "low": 21.4,
     "close": 22.47,
-    "volume": 19150
+    "volume": 12650
   },
   "indicators": {
     "close": 22.47,
-    "change1Pct": 0.537,
+    "change1Pct": 0,
     "return5Pct": 0.537,
-    "return20Pct": -1.318,
+    "return20Pct": -3.23,
     "return50Pct": 0.989,
-    "sma5": 22.374,
-    "sma20": 22.472,
-    "sma50": 22.303,
-    "ema9": 22.351,
-    "ema21": 22.337,
-    "rsi14": 55.467,
-    "macd": 0.007,
-    "macdSignal": -0.004,
-    "atr14": 1.219,
-    "atrPct": 5.426,
-    "averageVolume20": 12229.8,
-    "volumeRatio20": 1.566,
-    "averageTurnover20Egp": 276147.235,
-    "volatility20Pct": 2.743,
+    "sma5": 22.394,
+    "sma20": 22.357,
+    "sma50": 22.309,
+    "ema9": 22.376,
+    "ema21": 22.35,
+    "rsi14": 39.427,
+    "macd": 0.017,
+    "macdSignal": 0,
+    "atr14": 1.301,
+    "atrPct": 5.789,
+    "averageVolume20": 11775.3,
+    "volumeRatio20": 1.074,
+    "averageTurnover20Egp": 263985.52,
+    "volatility20Pct": 2.43,
     "support20": 20.4,
-    "resistance20": 25.08,
+    "resistance20": 23.85,
     "high50": 25.08,
     "low50": 20.26,
     "distanceFromSupport20Pct": 10.147,
-    "relativeToResistance20Pct": -10.407,
+    "relativeToResistance20Pct": -5.786,
     "distanceFromHigh50Pct": -10.407
   },
   "technical": {
-    "score": 74,
-    "trendCode": "NEUTRAL",
-    "trendLabelAr": "محايد / متذبذب"
+    "score": 82,
+    "trendCode": "BULLISH",
+    "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 68.5,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "تحسن RSI: 52.1 → 52.1"
+    ],
+    "adaptive": {
+      "proximityPct": 81.2,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 13.3,
+      "minimumRequiredScore": 85,
+      "scoreGap": 16.5,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 16.5 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "تحسن RSI: 52.1 → 52.1"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 22.335,
+      "entryHigh": 22.656,
+      "stopLoss": 21.258,
+      "target1": 24.723,
+      "target2": 25.712,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
-    "historySessions": 101,
-    "firstSession": "2026-05-28",
-    "lastSession": "2026-11-11",
+    "historySessions": 100,
+    "firstSession": "2026-06-03",
+    "lastSession": "2026-11-12",
     "averageConfidence": 75,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,8 +95,6 @@
   },
   "chart": {
     "dates": [
-      "2026-06-01",
-      "2026-06-02",
       "2026-06-03",
       "2026-06-04",
       "2026-06-07",
@@ -170,11 +192,11 @@
       "2026-11-05",
       "2026-11-08",
       "2026-11-09",
-      "2026-11-11"
+      "2026-11-10",
+      "2026-11-11",
+      "2026-11-12"
     ],
     "open": [
-      23.08,
-      23.08,
       23.08,
       23.79,
       23.79,
@@ -272,11 +294,11 @@
       22.35,
       22.35,
       22.35,
-      22.33
+      22.35,
+      22.33,
+      22.47
     ],
     "high": [
-      23.78,
-      23.89,
       24.1,
       24.07,
       23.97,
@@ -374,11 +396,11 @@
       22.39,
       22.38,
       22.74,
-      22.69
+      23,
+      22.69,
+      22.95
     ],
     "low": [
-      22.61,
-      22.9,
       23.01,
       23.53,
       23,
@@ -476,11 +498,11 @@
       21.53,
       21.6,
       21.81,
+      21.36,
+      21.4,
       21.4
     ],
     "close": [
-      23.08,
-      23.08,
       23.79,
       23.79,
       23.79,
@@ -578,11 +600,11 @@
       22.35,
       22.35,
       22.35,
+      22.33,
+      22.47,
       22.47
     ],
     "volume": [
-      814,
-      10168,
       16373,
       9127,
       4762,
@@ -680,7 +702,9 @@
       5182,
       4085,
       5766,
-      19150
+      16830,
+      19150,
+      12650
     ],
     "sma20": [
       0,
@@ -702,8 +726,6 @@
       0,
       0,
       0,
-      23.058,
-      23.041,
       23.005,
       22.97,
       22.906,
@@ -782,7 +804,9 @@
       22.403,
       22.454,
       22.487,
-      22.472
+      22.465,
+      22.394,
+      22.357
     ],
     "sma50": [
       0,
@@ -834,8 +858,6 @@
       0,
       0,
       0,
-      22.801,
-      22.784,
       22.768,
       22.737,
       22.706,
@@ -884,7 +906,9 @@
       22.301,
       22.296,
       22.298,
-      22.303
+      22.3,
+      22.304,
+      22.309
     ]
   }
 }
