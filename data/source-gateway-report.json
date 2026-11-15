@@ -1,22 +1,22 @@
 {
   "ok": true,
   "engine": "v9_8_7_data_gateway",
-  "generatedAt": "2026-11-12T14:33:28.639Z",
+  "generatedAt": "2026-11-15T13:23:59.099Z",
   "mode": "multi_source_gateway",
-  "status": "accepted_full",
-  "level": "ok",
-  "accepted": true,
+  "status": "degraded_last_good",
+  "level": "warn",
+  "accepted": false,
   "selectedSource": "mubasher_symbol_pages_precise_enriched",
   "selectedUrl": "244 symbols + analysis tools enrichment",
   "marketRows": 213,
   "expectedUniverse": 224,
   "coveragePct": 95.1,
-  "fallbackUsed": false,
-  "lastGoodSnapshotUsed": false,
+  "fallbackUsed": true,
+  "lastGoodSnapshotUsed": true,
   "lastGoodAt": "2026-11-12T14:33:28.639Z",
-  "lastGoodAgeMinutes": 0,
+  "lastGoodAgeMinutes": 4250.7,
   "fetchExit": 0,
-  "message": "Full gateway acceptance",
+  "message": "Current source fetch was rejected; last good snapshot restored.",
   "sources": [
     {
       "name": "configured_json",
@@ -28,58 +28,58 @@
     {
       "name": "mubasher_symbol_pages",
       "url": "244 symbols",
-      "ok": true,
-      "rows": 213,
-      "message": "Parsed 213/244"
+      "ok": false,
+      "rows": 0,
+      "message": "Parsed 0/244"
     },
     {
       "name": "mubasher_symbol_pages",
       "url": "244 symbols",
-      "ok": true,
-      "rows": 213,
-      "message": "Parsed 213/244 symbol pages"
+      "ok": false,
+      "rows": 0,
+      "message": "Parsed 0/244 symbol pages"
     },
     {
       "name": "mubasher_liquidity_monitor",
       "url": "https://www.mubasher.info/analysis-tools/liquidity-monitor/EGX",
       "ok": false,
       "rows": 0,
-      "message": "Angular template detected; inline rows 0"
+      "message": "Parsed inline rows 0"
     },
     {
       "name": "mubasher_volume_monitor",
       "url": "https://www.mubasher.info/analysis-tools/volume-monitor/EGX",
       "ok": false,
       "rows": 0,
-      "message": "Angular template detected; inline rows 0"
+      "message": "Parsed inline rows 0"
     },
     {
       "name": "mubasher_support_resistance",
       "url": "https://www.mubasher.info/analysis-tools/stocks-support-resistance/EGX",
       "ok": false,
       "rows": 0,
-      "message": "Angular template detected; inline rows 0"
+      "message": "Parsed inline rows 0"
     },
     {
       "name": "mubasher_liquidity_monitor",
       "url": "https://english.mubasher.info/analysis-tools/liquidity-monitor/EGX",
       "ok": false,
       "rows": 0,
-      "message": "Angular template detected; inline rows 0"
+      "message": "Parsed inline rows 0"
     },
     {
       "name": "mubasher_volume_monitor",
       "url": "https://english.mubasher.info/analysis-tools/volume-monitor/EGX",
       "ok": false,
       "rows": 0,
-      "message": "Angular template detected; inline rows 0"
+      "message": "Parsed inline rows 0"
     },
     {
       "name": "mubasher_support_resistance",
       "url": "https://english.mubasher.info/analysis-tools/stocks-support-resistance/EGX",
       "ok": false,
       "rows": 0,
-      "message": "Angular template detected; inline rows 0"
+      "message": "Parsed inline rows 0"
     },
     {
       "name": "mubasher_analysis_api_html",
@@ -107,399 +107,161 @@
       "url": "https://www.mubasher.info/api/analysis-tools/liquidity-monitor/EGX",
       "ok": false,
       "rows": 0,
-      "error": "HTTP 404"
+      "error": "HTTP 401"
     },
     {
       "name": "mubasher_analysis_api",
       "url": "https://www.mubasher.info/api/analysis-tools/volume-monitor/EGX",
       "ok": false,
       "rows": 0,
-      "error": "HTTP 404"
+      "error": "HTTP 401"
     },
     {
       "name": "mubasher_analysis_api",
       "url": "https://www.mubasher.info/api/analysis-tools/stocks-support-resistance/EGX",
       "ok": false,
       "rows": 0,
-      "error": "HTTP 404"
+      "error": "HTTP 401"
     },
     {
       "name": "mubasher_analysis_api",
       "url": "https://www.mubasher.info/api/v1/analysis-tools/liquidity-monitor/EGX",
       "ok": false,
       "rows": 0,
-      "error": "HTTP 404"
+      "message": "JSON parsed 0 rows"
     },
     {
       "name": "mubasher_analysis_api",
       "url": "https://www.mubasher.info/api/v1/analysis-tools/volume-monitor/EGX",
       "ok": false,
       "rows": 0,
-      "error": "HTTP 404"
+      "message": "JSON parsed 0 rows"
     },
     {
       "name": "mubasher_analysis_api",
       "url": "https://www.mubasher.info/api/v1/analysis-tools/stocks-support-resistance/EGX",
       "ok": false,
       "rows": 0,
-      "error": "HTTP 404"
+      "message": "JSON parsed 0 rows"
     },
     {
       "name": "mubasher_analysis_api",
       "url": "https://www.mubasher.info/api/markets/EGX/liquidity-monitor",
       "ok": false,
       "rows": 0,
-      "error": "HTTP 404"
+      "error": "HTTP 401"
     },
     {
       "name": "mubasher_analysis_api",
       "url": "https://www.mubasher.info/api/markets/EGX/volume-monitor",
       "ok": false,
       "rows": 0,
-      "error": "HTTP 404"
+      "error": "HTTP 401"
     },
     {
       "name": "mubasher_analysis_api",
       "url": "https://www.mubasher.info/api/markets/EGX/support-resistance",
       "ok": false,
       "rows": 0,
-      "error": "HTTP 404"
+      "error": "HTTP 401"
     },
     {
       "name": "mubasher_analysis_api",
       "url": "https://www.mubasher.info/api/markets/EGX/stocks-support-resistance",
       "ok": false,
       "rows": 0,
-      "error": "HTTP 404"
-    },
-    {
-      "name": "mubasher_analysis_api",
-      "url": "https://www.mubasher.info/api/1",
-      "ok": false,
-      "rows": 0,
-      "error": "HTTP 500"
-    },
-    {
-      "name": "mubasher_analysis_api",
-      "url": "https://www.mubasher.info/api/1/companySearch?query=",
-      "ok": false,
-      "rows": 0,
-      "error": "HTTP 500"
+      "error": "HTTP 401"
     },
     {
       "name": "mubasher_analysis_api_html",
-      "url": "https://www.mubasher.info/change-country?to=ae&url=/analysis-tools/liquidity-monitor/EGX",
+      "url": "https://english.mubasher.info/analysis-tools/liquidity-monitor/EGX",
       "ok": false,
       "rows": 0,
       "message": "HTML parsed 0 rows"
     },
     {
       "name": "mubasher_analysis_api_html",
-      "url": "https://www.mubasher.info/change-country?to=bh&url=/analysis-tools/liquidity-monitor/EGX",
+      "url": "https://english.mubasher.info/analysis-tools/volume-monitor/EGX",
       "ok": false,
       "rows": 0,
       "message": "HTML parsed 0 rows"
     },
     {
       "name": "mubasher_analysis_api_html",
-      "url": "https://www.mubasher.info/change-country?to=om&url=/analysis-tools/liquidity-monitor/EGX",
-      "ok": false,
-      "rows": 0,
-      "message": "HTML parsed 0 rows"
-    },
-    {
-      "name": "mubasher_analysis_api_html",
-      "url": "https://www.mubasher.info/change-country?to=qa&url=/analysis-tools/liquidity-monitor/EGX",
-      "ok": false,
-      "rows": 0,
-      "message": "HTML parsed 0 rows"
-    },
-    {
-      "name": "mubasher_analysis_api_html",
-      "url": "https://www.mubasher.info/change-country?to=kw&url=/analysis-tools/liquidity-monitor/EGX",
-      "ok": false,
-      "rows": 0,
-      "message": "HTML parsed 0 rows"
-    },
-    {
-      "name": "mubasher_analysis_api_html",
-      "url": "https://www.mubasher.info/change-country?to=eg&url=/analysis-tools/liquidity-monitor/EGX",
-      "ok": false,
-      "rows": 0,
-      "message": "HTML parsed 0 rows"
-    },
-    {
-      "name": "mubasher_analysis_api_html",
-      "url": "https://www.mubasher.info/change-country?to=jo&url=/analysis-tools/liquidity-monitor/EGX",
-      "ok": false,
-      "rows": 0,
-      "message": "HTML parsed 0 rows"
-    },
-    {
-      "name": "mubasher_analysis_api_html",
-      "url": "https://www.mubasher.info/change-country?to=ma&url=/analysis-tools/liquidity-monitor/EGX",
-      "ok": false,
-      "rows": 0,
-      "message": "HTML parsed 0 rows"
-    },
-    {
-      "name": "mubasher_analysis_api_html",
-      "url": "https://www.mubasher.info/change-country?to=ps&url=/analysis-tools/liquidity-monitor/EGX",
-      "ok": false,
-      "rows": 0,
-      "message": "HTML parsed 0 rows"
-    },
-    {
-      "name": "mubasher_analysis_api_html",
-      "url": "https://www.mubasher.info/change-country?to=iq&url=/analysis-tools/liquidity-monitor/EGX",
-      "ok": false,
-      "rows": 0,
-      "message": "HTML parsed 0 rows"
-    },
-    {
-      "name": "mubasher_analysis_api_html",
-      "url": "https://www.mubasher.info/countries/sa/ipos/capital-increase",
-      "ok": false,
-      "rows": 0,
-      "message": "HTML parsed 0 rows"
-    },
-    {
-      "name": "mubasher_analysis_api_html",
-      "url": "https://www.mubasher.info/analysis-tools/most-active-winners/EGX",
-      "ok": false,
-      "rows": 0,
-      "message": "HTML parsed 0 rows"
-    },
-    {
-      "name": "mubasher_analysis_api_html",
-      "url": "https://www.mubasher.info/analysis-tools/financial-ratios/EGX",
-      "ok": false,
-      "rows": 0,
-      "message": "HTML parsed 0 rows"
-    },
-    {
-      "name": "mubasher_analysis_api_html",
-      "url": "https://www.mubasher.info/analysis-tools/performance-comparison",
-      "ok": false,
-      "rows": 0,
-      "message": "HTML parsed 0 rows"
-    },
-    {
-      "name": "mubasher_analysis_api_html",
-      "url": "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js",
-      "ok": false,
-      "rows": 0,
-      "message": "HTML parsed 0 rows"
-    },
-    {
-      "name": "mubasher_analysis_api_html",
-      "url": "https://www.mubasher.info/analysis-tools/liquidity-monitor/EGX/",
+      "url": "https://english.mubasher.info/analysis-tools/stocks-support-resistance/EGX",
       "ok": false,
       "rows": 0,
       "message": "HTML parsed 0 rows"
     },
     {
       "name": "mubasher_analysis_api",
-      "url": "https://api.tadawuly.gfm.support/api/v1",
+      "url": "https://english.mubasher.info/api/analysis-tools/liquidity-monitor/EGX",
       "ok": false,
       "rows": 0,
-      "error": "HTTP 403"
+      "error": "HTTP 401"
     },
     {
       "name": "mubasher_analysis_api",
-      "url": "https://api-community.mubasher.info/api/v1",
+      "url": "https://english.mubasher.info/api/analysis-tools/volume-monitor/EGX",
       "ok": false,
       "rows": 0,
-      "error": "HTTP 403"
-    },
-    {
-      "name": "mubasher_analysis_api_html",
-      "url": "https://tg1.modoro360.com/api/adserver/spt?AV_TAGID=63a96fe1544f57173a0eb754&AV_PUBLISHERID=6249b6a9972942139549ac37></script>",
-      "ok": false,
-      "rows": 0,
-      "message": "HTML parsed 0 rows"
-    },
-    {
-      "name": "mubasher_analysis_api_html",
-      "url": "https://static.teads.tv/static/dvv-217-support-horizontal-layout-on-video-flavor/media/format/v3/teads-format.min.js",
-      "ok": false,
-      "rows": 0,
-      "message": "HTML parsed 0 rows"
+      "error": "HTTP 401"
     },
     {
       "name": "mubasher_analysis_api",
-      "url": "http://vimeo.com/api/v2/video/",
+      "url": "https://english.mubasher.info/api/analysis-tools/stocks-support-resistance/EGX",
       "ok": false,
       "rows": 0,
-      "error": "HTTP 404"
-    },
-    {
-      "name": "mubasher_analysis_api_html",
-      "url": "https://www.google.com/recaptcha/api.js",
-      "ok": false,
-      "rows": 0,
-      "message": "HTML parsed 0 rows"
-    },
-    {
-      "name": "mubasher_analysis_api_html",
-      "url": "https://www.google.com/recaptcha/api.js?onload=",
-      "ok": false,
-      "rows": 0,
-      "message": "HTML parsed 0 rows"
+      "error": "HTTP 401"
     },
     {
       "name": "mubasher_analysis_api",
-      "url": "https://www.mubasher.info/api/1/account/profile",
+      "url": "https://english.mubasher.info/api/v1/analysis-tools/liquidity-monitor/EGX",
       "ok": false,
       "rows": 0,
-      "error": "HTTP 500"
+      "message": "JSON parsed 0 rows"
     },
     {
       "name": "mubasher_analysis_api",
-      "url": "https://www.mubasher.info/api/1/news/addHit",
+      "url": "https://english.mubasher.info/api/v1/analysis-tools/volume-monitor/EGX",
       "ok": false,
       "rows": 0,
-      "error": "HTTP 500"
-    },
-    {
-      "name": "mubasher_analysis_api_html",
-      "url": "https://www.mubasher.info/change-country?to=ae&url=/analysis-tools/volume-monitor/EGX",
-      "ok": false,
-      "rows": 0,
-      "message": "HTML parsed 0 rows"
+      "message": "JSON parsed 0 rows"
     },
     {
       "name": "mubasher_analysis_api",
-      "url": "https://www.mubasher.info/change-country?to=bh&url=/analysis-tools/volume-monitor/EGX",
+      "url": "https://english.mubasher.info/api/v1/analysis-tools/stocks-support-resistance/EGX",
       "ok": false,
       "rows": 0,
-      "error": "HTTP 429"
+      "message": "JSON parsed 0 rows"
     },
     {
       "name": "mubasher_analysis_api",
-      "url": "https://www.mubasher.info/change-country?to=om&url=/analysis-tools/volume-monitor/EGX",
+      "url": "https://english.mubasher.info/api/markets/EGX/liquidity-monitor",
       "ok": false,
       "rows": 0,
-      "error": "HTTP 429"
+      "error": "HTTP 401"
     },
     {
       "name": "mubasher_analysis_api",
-      "url": "https://www.mubasher.info/change-country?to=qa&url=/analysis-tools/volume-monitor/EGX",
+      "url": "https://english.mubasher.info/api/markets/EGX/volume-monitor",
       "ok": false,
       "rows": 0,
-      "error": "HTTP 429"
+      "error": "HTTP 401"
     },
     {
       "name": "mubasher_analysis_api",
-      "url": "https://www.mubasher.info/change-country?to=kw&url=/analysis-tools/volume-monitor/EGX",
+      "url": "https://english.mubasher.info/api/markets/EGX/support-resistance",
       "ok": false,
       "rows": 0,
-      "error": "HTTP 429"
+      "error": "HTTP 401"
     },
     {
       "name": "mubasher_analysis_api",
-      "url": "https://www.mubasher.info/change-country?to=eg&url=/analysis-tools/volume-monitor/EGX",
+      "url": "https://english.mubasher.info/api/markets/EGX/stocks-support-resistance",
       "ok": false,
       "rows": 0,
-      "error": "HTTP 429"
-    },
-    {
-      "name": "mubasher_analysis_api",
-      "url": "https://www.mubasher.info/change-country?to=jo&url=/analysis-tools/volume-monitor/EGX",
-      "ok": false,
-      "rows": 0,
-      "error": "HTTP 429"
-    },
-    {
-      "name": "mubasher_analysis_api",
-      "url": "https://www.mubasher.info/change-country?to=ma&url=/analysis-tools/volume-monitor/EGX",
-      "ok": false,
-      "rows": 0,
-      "error": "HTTP 429"
-    },
-    {
-      "name": "mubasher_analysis_api",
-      "url": "https://www.mubasher.info/change-country?to=ps&url=/analysis-tools/volume-monitor/EGX",
-      "ok": false,
-      "rows": 0,
-      "error": "HTTP 429"
-    },
-    {
-      "name": "mubasher_analysis_api",
-      "url": "https://www.mubasher.info/change-country?to=iq&url=/analysis-tools/volume-monitor/EGX",
-      "ok": false,
-      "rows": 0,
-      "error": "HTTP 429"
-    },
-    {
-      "name": "mubasher_analysis_api",
-      "url": "https://www.mubasher.info/> --> <!-- VOLUME MONITOR SECOND MPU FOR MOBILE --> <div class=",
-      "ok": false,
-      "rows": 0,
-      "error": "HTTP 404"
-    },
-    {
-      "name": "mubasher_analysis_api_html",
-      "url": "https://www.mubasher.info/analysis-tools/volume-monitor/EGX/",
-      "ok": false,
-      "rows": 0,
-      "message": "HTML parsed 0 rows"
-    },
-    {
-      "name": "mubasher_analysis_api",
-      "url": "https://www.mubasher.info/change-country?to=ae&url=/analysis-tools/stocks-support-resistance/EGX",
-      "ok": false,
-      "rows": 0,
-      "error": "HTTP 429"
-    },
-    {
-      "name": "mubasher_analysis_api",
-      "url": "https://www.mubasher.info/change-country?to=bh&url=/analysis-tools/stocks-support-resistance/EGX",
-      "ok": false,
-      "rows": 0,
-      "error": "HTTP 429"
-    },
-    {
-      "name": "mubasher_analysis_api",
-      "url": "https://www.mubasher.info/change-country?to=om&url=/analysis-tools/stocks-support-resistance/EGX",
-      "ok": false,
-      "rows": 0,
-      "error": "HTTP 429"
-    },
-    {
-      "name": "mubasher_analysis_api",
-      "url": "https://www.mubasher.info/change-country?to=qa&url=/analysis-tools/stocks-support-resistance/EGX",
-      "ok": false,
-      "rows": 0,
-      "error": "HTTP 429"
-    },
-    {
-      "name": "mubasher_analysis_api",
-      "url": "https://www.mubasher.info/change-country?to=kw&url=/analysis-tools/stocks-support-resistance/EGX",
-      "ok": false,
-      "rows": 0,
-      "error": "HTTP 429"
-    },
-    {
-      "name": "mubasher_analysis_api",
-      "url": "https://www.mubasher.info/change-country?to=eg&url=/analysis-tools/stocks-support-resistance/EGX",
-      "ok": false,
-      "rows": 0,
-      "error": "HTTP 429"
-    },
-    {
-      "name": "mubasher_analysis_api",
-      "url": "https://www.mubasher.info/change-country?to=jo&url=/analysis-tools/stocks-support-resistance/EGX",
-      "ok": false,
-      "rows": 0,
-      "error": "HTTP 429"
-    },
-    {
-      "name": "mubasher_analysis_api",
-      "url": "https://www.mubasher.info/change-country?to=ma&url=/analysis-tools/stocks-support-resistance/EGX",
-      "ok": false,
-      "rows": 0,
-      "error": "HTTP 429"
+      "error": "HTTP 401"
     },
     {
       "name": "mubasher_analysis_tools",
@@ -509,6 +271,6 @@
       "message": "Combined 0 rows from tools/API discovery"
     }
   ],
-  "fetchStdout": "Accepted mubasher_symbol_pages_precise_enriched: 213/224 rows\n",
-  "fetchStderr": ""
+  "fetchStdout": "",
+  "fetchStderr": "Mubasher analysis tools and symbol pages did not produce enough valid rows. Existing repository data preserved; freshness is not guaranteed.\n"
 }
