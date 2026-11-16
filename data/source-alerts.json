@@ -1,15 +1,15 @@
 {
   "ok": true,
-  "generatedAt": "2026-11-15T13:23:59.099Z",
-  "consecutiveFailures": 1,
+  "generatedAt": "2026-11-16T14:40:00.683Z",
+  "consecutiveFailures": 2,
   "recovered": false,
   "alerts": [
     {
-      "level": "warning",
-      "type": "source_degraded",
-      "title": "تم استخدام وضع Degraded",
-      "text": "المصدر الحالي لم ينجح بما يكفي",
-      "action": "راجع بوابة البيانات"
+      "level": "critical",
+      "type": "source_failure",
+      "title": "فشل جلب المصدر الخارجي أكثر من مرة",
+      "text": "Consecutive failures: 2",
+      "action": "راجع مصدر مباشر أو EGX_MARKET_JSON_URL"
     }
   ],
   "lastGatewayStatus": "degraded_last_good",
