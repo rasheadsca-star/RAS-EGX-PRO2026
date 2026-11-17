@@ -1,47 +1,47 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-16T23:44:08.009Z",
+  "generatedAt": "2026-11-17T22:51:53.461Z",
   "ticker": "DOMT",
   "companyNameAr": "دومتي",
   "companyNameEn": "Arabian Food Industries DOMTY",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-11-12",
+  "sessionId": "2026-11-16",
   "latest": {
-    "date": "2026-11-12",
-    "open": 25.2,
-    "high": 25.98,
-    "low": 24.75,
-    "close": 25.34,
-    "volume": 57028
+    "date": "2026-11-16",
+    "open": 26,
+    "high": 26.5,
+    "low": 24.8,
+    "close": 25.02,
+    "volume": 251949
   },
   "indicators": {
-    "close": 25.34,
-    "change1Pct": 0.556,
-    "return5Pct": 7.968,
-    "return20Pct": 7.968,
-    "return50Pct": -9.11,
-    "sma5": 24.904,
-    "sma20": 23.301,
-    "sma50": 25.216,
-    "ema9": 24.291,
-    "ema21": 23.952,
-    "rsi14": 63.064,
-    "macd": 0.013,
-    "macdSignal": -0.465,
-    "atr14": 1.209,
-    "atrPct": 4.769,
-    "averageVolume20": 95061.7,
-    "volumeRatio20": 0.6,
-    "averageTurnover20Egp": 2247311.167,
-    "volatility20Pct": 3.221,
+    "close": 25.02,
+    "change1Pct": -1.263,
+    "return5Pct": 4.38,
+    "return20Pct": 7.706,
+    "return50Pct": -13.065,
+    "sma5": 25.114,
+    "sma20": 23.391,
+    "sma50": 25.141,
+    "ema9": 24.437,
+    "ema21": 24.049,
+    "rsi14": 59.977,
+    "macd": 0.089,
+    "macdSignal": -0.354,
+    "atr14": 1.283,
+    "atrPct": 5.127,
+    "averageVolume20": 100734.8,
+    "volumeRatio20": 2.501,
+    "averageTurnover20Egp": 2401646.716,
+    "volatility20Pct": 3.227,
     "support20": 20.27,
-    "resistance20": 25.3,
+    "resistance20": 25.98,
     "high50": 29.47,
     "low50": 20.27,
-    "distanceFromSupport20Pct": 25.012,
-    "relativeToResistance20Pct": 0.158,
-    "distanceFromHigh50Pct": -14.014
+    "distanceFromSupport20Pct": 23.434,
+    "relativeToResistance20Pct": -3.695,
+    "distanceFromHigh50Pct": -15.1
   },
   "technical": {
     "score": 84,
@@ -49,21 +49,45 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 57.2,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "ترتيب الاتجاه: 25.02 > 23.391 > 25.141"
+    ],
+    "adaptive": {
+      "proximityPct": 76.6,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 14.2,
+      "minimumRequiredScore": 85,
+      "scoreGap": 27.8,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 27.8 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "ترتيب الاتجاه: 25.02 > 23.391 > 25.141"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 24.886,
+      "entryHigh": 25.188,
+      "stopLoss": 23.66,
+      "target1": 27.515,
+      "target2": 28.617,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-06-09",
-    "lastSession": "2026-11-12",
+    "firstSession": "2026-06-10",
+    "lastSession": "2026-11-16",
     "averageConfidence": 73.15,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +95,6 @@
   },
   "chart": {
     "dates": [
-      "2026-06-09",
       "2026-06-10",
       "2026-06-11",
       "2026-06-15",
@@ -170,10 +193,10 @@
       "2026-11-09",
       "2026-11-10",
       "2026-11-11",
-      "2026-11-12"
+      "2026-11-12",
+      "2026-11-16"
     ],
     "open": [
-      24.47,
       24.68,
       24.05,
       24.33,
@@ -272,10 +295,10 @@
       23.97,
       25.14,
       24.87,
-      25.2
+      25.2,
+      26
     ],
     "high": [
-      25.25,
       25.05,
       24.42,
       24.7,
@@ -374,10 +397,10 @@
       25.3,
       25.27,
       25.28,
-      25.98
+      25.98,
+      26.5
     ],
     "low": [
-      24.42,
       24.03,
       23.7,
       24.23,
@@ -476,10 +499,10 @@
       23.3,
       24.3,
       24.57,
-      24.75
+      24.75,
+      24.8
     ],
     "close": [
-      24.68,
       24.05,
       23.91,
       24.35,
@@ -578,10 +601,10 @@
       25.14,
       24.87,
       25.2,
-      25.34
+      25.34,
+      25.02
     ],
     "volume": [
-      112984,
       207722,
       80858,
       23624,
@@ -680,7 +703,8 @@
       271107,
       146183,
       226748,
-      57028
+      57028,
+      251949
     ],
     "sma20": [
       0,
@@ -702,7 +726,6 @@
       0,
       0,
       0,
-      26.06,
       26.172,
       26.322,
       26.451,
@@ -782,7 +805,8 @@
       23.101,
       23.145,
       23.208,
-      23.301
+      23.301,
+      23.391
     ],
     "sma50": [
       0,
@@ -834,7 +858,6 @@
       0,
       0,
       0,
-      27.106,
       27.188,
       27.283,
       27.372,
@@ -884,7 +907,8 @@
       25.39,
       25.324,
       25.267,
-      25.216
+      25.216,
+      25.141
     ]
   }
 }
