@@ -1,69 +1,93 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-17T22:51:53.583Z",
+  "generatedAt": "2026-11-18T22:34:34.897Z",
   "ticker": "TALM",
   "companyNameAr": "تعليم لخدمات الإدارة",
   "companyNameEn": "Taaleem Management Services Company",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-11-16",
+  "sessionId": "2026-11-17",
   "latest": {
-    "date": "2026-11-16",
-    "open": 20.71,
-    "high": 20.71,
-    "low": 20.02,
-    "close": 20.1,
-    "volume": 625382
+    "date": "2026-11-17",
+    "open": 20.1,
+    "high": 20.44,
+    "low": 19.15,
+    "close": 20.41,
+    "volume": 1699372
   },
   "indicators": {
-    "close": 20.1,
-    "change1Pct": -2.475,
-    "return5Pct": -1.567,
-    "return20Pct": -7.416,
-    "return50Pct": 2.03,
-    "sma5": 20.638,
-    "sma20": 20.328,
-    "sma50": 19.924,
-    "ema9": 20.269,
-    "ema21": 20.221,
-    "rsi14": 42.424,
-    "macd": 0.063,
-    "macdSignal": 0.039,
-    "atr14": 1.12,
-    "atrPct": 5.572,
-    "averageVolume20": 1098631.75,
-    "volumeRatio20": 0.569,
-    "averageTurnover20Egp": 22511150.992,
-    "volatility20Pct": 2.459,
+    "close": 20.41,
+    "change1Pct": 1.542,
+    "return5Pct": -2.856,
+    "return20Pct": -5.988,
+    "return50Pct": 5.206,
+    "sma5": 20.518,
+    "sma20": 20.263,
+    "sma50": 19.944,
+    "ema9": 20.297,
+    "ema21": 20.238,
+    "rsi14": 52.941,
+    "macd": 0.072,
+    "macdSignal": 0.045,
+    "atr14": 1.014,
+    "atrPct": 4.97,
+    "averageVolume20": 1142422.35,
+    "volumeRatio20": 1.488,
+    "averageTurnover20Egp": 23351385.738,
+    "volatility20Pct": 2.492,
     "support20": 18.25,
     "resistance20": 22.1,
     "high50": 23.5,
     "low50": 17.11,
-    "distanceFromSupport20Pct": 10.137,
-    "relativeToResistance20Pct": -9.05,
-    "distanceFromHigh50Pct": -14.468
+    "distanceFromSupport20Pct": 11.836,
+    "relativeToResistance20Pct": -7.647,
+    "distanceFromHigh50Pct": -13.149
   },
   "technical": {
-    "score": 62,
-    "trendCode": "NEUTRAL",
-    "trendLabelAr": "محايد / متذبذب"
+    "score": 94,
+    "trendCode": "BULLISH",
+    "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 68.7,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "القوة النسبية: -5.87"
+    ],
+    "adaptive": {
+      "proximityPct": 81,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 12.6,
+      "minimumRequiredScore": 85,
+      "scoreGap": 16.3,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 16.3 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "القوة النسبية: -5.87"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 20.288,
+      "entryHigh": 20.577,
+      "stopLoss": 19.308,
+      "target1": 22.455,
+      "target2": 23.354,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-05-28",
-    "lastSession": "2026-11-16",
+    "firstSession": "2026-06-01",
+    "lastSession": "2026-11-17",
     "averageConfidence": 73.3,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +95,6 @@
   },
   "chart": {
     "dates": [
-      "2026-05-28",
       "2026-06-01",
       "2026-06-02",
       "2026-06-04",
@@ -170,10 +193,10 @@
       "2026-11-10",
       "2026-11-11",
       "2026-11-12",
-      "2026-11-16"
+      "2026-11-16",
+      "2026-11-17"
     ],
     "open": [
-      15.52,
       15.52,
       15.75,
       16.1,
@@ -272,10 +295,10 @@
       21.01,
       20.81,
       20.66,
-      20.71
+      20.71,
+      20.1
     ],
     "high": [
-      15.52,
       15.87,
       15.97,
       16.24,
@@ -374,10 +397,10 @@
       21.5,
       20.96,
       20.8,
-      20.71
+      20.71,
+      20.44
     ],
     "low": [
-      15.52,
       15.5,
       15.61,
       15.96,
@@ -476,10 +499,10 @@
       20.61,
       20.53,
       20.55,
-      20.02
+      20.02,
+      19.15
     ],
     "close": [
-      15.52,
       15.75,
       15.81,
       16,
@@ -578,10 +601,10 @@
       20.81,
       20.66,
       20.61,
-      20.1
+      20.1,
+      20.41
     ],
     "volume": [
-      0,
       297771,
       368987,
       1505301,
@@ -680,7 +703,8 @@
       961779,
       413070,
       460304,
-      625382
+      625382,
+      1699372
     ],
     "sma20": [
       0,
@@ -702,7 +726,6 @@
       0,
       0,
       0,
-      15.914,
       15.925,
       15.921,
       15.9,
@@ -782,7 +805,8 @@
       20.531,
       20.469,
       20.408,
-      20.328
+      20.328,
+      20.263
     ],
     "sma50": [
       0,
@@ -834,7 +858,6 @@
       0,
       0,
       0,
-      16.593,
       16.67,
       16.748,
       16.82,
@@ -884,7 +907,8 @@
       19.887,
       19.901,
       19.916,
-      19.924
+      19.924,
+      19.944
     ]
   }
 }

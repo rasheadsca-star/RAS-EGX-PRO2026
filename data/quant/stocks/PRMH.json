@@ -1,69 +1,93 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-17T22:51:53.560Z",
+  "generatedAt": "2026-11-18T22:34:34.865Z",
   "ticker": "PRMH",
   "companyNameAr": "برايم القابضة",
   "companyNameEn": "Prime Holding",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-11-16",
+  "sessionId": "2026-11-17",
   "latest": {
-    "date": "2026-11-16",
-    "open": 2.29,
-    "high": 2.3,
-    "low": 2.1,
-    "close": 2.16,
-    "volume": 1803402
+    "date": "2026-11-17",
+    "open": 2.16,
+    "high": 2.4,
+    "low": 2.12,
+    "close": 2.31,
+    "volume": 11174593
   },
   "indicators": {
-    "close": 2.16,
-    "change1Pct": -8.861,
-    "return5Pct": 11.34,
-    "return20Pct": 3.349,
-    "return50Pct": -12.195,
-    "sma5": 2.24,
-    "sma20": 1.994,
-    "sma50": 2.313,
-    "ema9": 2.143,
-    "ema21": 2.107,
-    "rsi14": 56.25,
-    "macd": -0.011,
-    "macdSignal": -0.079,
-    "atr14": 0.19,
-    "atrPct": 8.796,
-    "averageVolume20": 2717347.45,
-    "volumeRatio20": 0.664,
-    "averageTurnover20Egp": 5678378.892,
-    "volatility20Pct": 6.761,
+    "close": 2.31,
+    "change1Pct": 6.944,
+    "return5Pct": 15.5,
+    "return20Pct": 24.194,
+    "return50Pct": -6.098,
+    "sma5": 2.302,
+    "sma20": 2.017,
+    "sma50": 2.31,
+    "ema9": 2.176,
+    "ema21": 2.125,
+    "rsi14": 63.043,
+    "macd": 0.005,
+    "macdSignal": -0.062,
+    "atr14": 0.199,
+    "atrPct": 8.596,
+    "averageVolume20": 3170523.4,
+    "volumeRatio20": 3.525,
+    "averageTurnover20Egp": 6772714.502,
+    "volatility20Pct": 6.368,
     "support20": 1.7,
     "resistance20": 2.66,
     "high50": 2.87,
     "low50": 1.7,
-    "distanceFromSupport20Pct": 27.059,
-    "relativeToResistance20Pct": -18.797,
-    "distanceFromHigh50Pct": -24.739
+    "distanceFromSupport20Pct": 35.882,
+    "relativeToResistance20Pct": -13.158,
+    "distanceFromHigh50Pct": -19.512
   },
   "technical": {
-    "score": 78,
+    "score": 84,
     "trendCode": "NEUTRAL",
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 61.9,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "ترتيب الاتجاه: 2.31 > 2.017 > 2.31"
+    ],
+    "adaptive": {
+      "proximityPct": 78.1,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 14.3,
+      "minimumRequiredScore": 85,
+      "scoreGap": 23.1,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 23.1 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "ترتيب الاتجاه: 2.31 > 2.017 > 2.31"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 2.296,
+      "entryHigh": 2.331,
+      "stopLoss": 2.186,
+      "target1": 2.542,
+      "target2": 2.644,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-06-07",
-    "lastSession": "2026-11-16",
+    "firstSession": "2026-06-08",
+    "lastSession": "2026-11-17",
     "averageConfidence": 72.55,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +95,6 @@
   },
   "chart": {
     "dates": [
-      "2026-06-07",
       "2026-06-08",
       "2026-06-09",
       "2026-06-10",
@@ -170,10 +193,10 @@
       "2026-11-10",
       "2026-11-11",
       "2026-11-12",
-      "2026-11-16"
+      "2026-11-16",
+      "2026-11-17"
     ],
     "open": [
-      2.84,
       2.79,
       2.82,
       2.77,
@@ -272,10 +295,10 @@
       2.24,
       2.3,
       2.37,
-      2.29
+      2.29,
+      2.16
     ],
     "high": [
-      2.94,
       2.86,
       2.9,
       2.81,
@@ -374,10 +397,10 @@
       2.36,
       2.43,
       2.66,
-      2.3
+      2.3,
+      2.4
     ],
     "low": [
-      2.75,
       2.72,
       2.77,
       2.64,
@@ -476,10 +499,10 @@
       2.21,
       2.23,
       2.31,
-      2.1
+      2.1,
+      2.12
     ],
     "close": [
-      2.79,
       2.82,
       2.77,
       2.64,
@@ -578,10 +601,10 @@
       2.3,
       2.37,
       2.37,
-      2.16
+      2.16,
+      2.31
     ],
     "volume": [
-      7349170,
       8805152,
       5802660,
       4804085,
@@ -680,7 +703,8 @@
       4822114,
       7121921,
       8527059,
-      1803402
+      1803402,
+      11174593
     ],
     "sma20": [
       0,
@@ -702,7 +726,6 @@
       0,
       0,
       0,
-      2.672,
       2.66,
       2.648,
       2.647,
@@ -782,7 +805,8 @@
       1.974,
       1.981,
       1.991,
-      1.994
+      1.994,
+      2.017
     ],
     "sma50": [
       0,
@@ -834,7 +858,6 @@
       0,
       0,
       0,
-      2.658,
       2.652,
       2.647,
       2.645,
@@ -884,7 +907,8 @@
       2.317,
       2.317,
       2.319,
-      2.313
+      2.313,
+      2.31
     ]
   }
 }

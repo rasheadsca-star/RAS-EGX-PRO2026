@@ -1,77 +1,104 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-17T22:51:53.416Z",
+  "generatedAt": "2026-11-18T22:34:34.662Z",
   "ticker": "AJWA",
   "companyNameAr": "أجواء للصناعات الغذائية",
   "companyNameEn": "AJWA For Food Industries Egypt",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-11-12",
+  "sessionId": "2026-11-17",
   "latest": {
-    "date": "2026-11-12",
-    "open": 266.98,
-    "high": 274.44,
-    "low": 266.4,
-    "close": 270.97,
-    "volume": 199420
+    "date": "2026-11-17",
+    "open": 262.81,
+    "high": 269.97,
+    "low": 232,
+    "close": 258.56,
+    "volume": 63909
   },
   "indicators": {
-    "close": 270.97,
-    "change1Pct": 1.494,
-    "return5Pct": 23.393,
-    "return20Pct": 27.816,
-    "return50Pct": 50.539,
-    "sma5": 258.054,
-    "sma20": 224.27,
-    "sma50": 199.908,
-    "ema9": 245.665,
-    "ema21": 226.881,
-    "rsi14": 74.535,
-    "macd": 17.128,
-    "macdSignal": 11.194,
-    "atr14": 15.54,
-    "atrPct": 5.735,
-    "averageVolume20": 127307.2,
-    "volumeRatio20": 1.566,
-    "averageTurnover20Egp": 29392047.625,
-    "volatility20Pct": 4.753,
+    "close": 258.56,
+    "change1Pct": -4.58,
+    "return5Pct": 15.837,
+    "return20Pct": 23.76,
+    "return50Pct": 43.485,
+    "sma5": 265.124,
+    "sma20": 226.752,
+    "sma50": 201.475,
+    "ema9": 248.244,
+    "ema21": 229.76,
+    "rsi14": 70.536,
+    "macd": 17.397,
+    "macdSignal": 12.436,
+    "atr14": 17.474,
+    "atrPct": 6.758,
+    "averageVolume20": 120612.9,
+    "volumeRatio20": 0.53,
+    "averageTurnover20Egp": 28152096.62,
+    "volatility20Pct": 4.892,
     "support20": 190.2,
-    "resistance20": 273.8,
+    "resistance20": 274.44,
     "high50": 274.44,
     "low50": 175.15,
-    "distanceFromSupport20Pct": 42.466,
-    "relativeToResistance20Pct": -1.034,
-    "distanceFromHigh50Pct": -1.264
+    "distanceFromSupport20Pct": 35.941,
+    "relativeToResistance20Pct": -5.786,
+    "distanceFromHigh50Pct": -5.786
   },
   "technical": {
-    "score": 98,
+    "score": 92,
     "trendCode": "BULLISH",
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 71.7,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "نشاط الحجم الحالي: 0.53",
+      "منطقة RSI: 70.4",
+      "دعم الحجم: 0.53"
+    ],
+    "adaptive": {
+      "proximityPct": 73.5,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 14.3,
+      "minimumRequiredScore": 85,
+      "scoreGap": 13.3,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 13.3 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "نشاط الحجم الحالي: 0.53",
+        "منطقة RSI: 70.4",
+        "دعم الحجم: 0.53"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 257.009,
+      "entryHigh": 260.799,
+      "stopLoss": 244.664,
+      "target1": 284.535,
+      "target2": 295.927,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-06-09",
-    "lastSession": "2026-11-12",
-    "averageConfidence": 73.65,
+    "firstSession": "2026-06-10",
+    "lastSession": "2026-11-17",
+    "averageConfidence": 73.3,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
     "eligibilityLabelAr": "مكتمل وحديث"
   },
   "chart": {
     "dates": [
-      "2026-06-09",
       "2026-06-10",
       "2026-06-11",
       "2026-06-14",
@@ -170,10 +197,10 @@
       "2026-11-09",
       "2026-11-10",
       "2026-11-11",
-      "2026-11-12"
+      "2026-11-12",
+      "2026-11-17"
     ],
     "open": [
-      135,
       150.56,
       148.09,
       152,
@@ -272,10 +299,10 @@
       258,
       262.1,
       267.01,
-      266.98
+      266.98,
+      262.81
     ],
     "high": [
-      154,
       153.9,
       152,
       161.99,
@@ -374,10 +401,10 @@
       263.8,
       273.8,
       272,
-      274.44
+      274.44,
+      269.97
     ],
     "low": [
-      135,
       147,
       144,
       150.51,
@@ -476,10 +503,10 @@
       206.4,
       260.7,
       263.1,
-      266.4
+      266.4,
+      232
     ],
     "close": [
-      150.56,
       148.09,
       152,
       158.73,
@@ -578,10 +605,10 @@
       262.1,
       267.01,
       266.98,
-      270.97
+      270.97,
+      258.56
     ],
     "volume": [
-      1070975,
       194356,
       118002,
       285237,
@@ -680,7 +707,8 @@
       263206,
       214428,
       111605,
-      199420
+      199420,
+      63909
     ],
     "sma20": [
       0,
@@ -702,7 +730,6 @@
       0,
       0,
       0,
-      172.925,
       174.413,
       175.859,
       177.108,
@@ -782,7 +809,8 @@
       214.407,
       217.95,
       221.321,
-      224.27
+      224.27,
+      226.752
     ],
     "sma50": [
       0,
@@ -834,7 +862,6 @@
       0,
       0,
       0,
-      180.091,
       180.684,
       181.324,
       181.884,
@@ -884,7 +911,8 @@
       194.682,
       196.386,
       198.089,
-      199.908
+      199.908,
+      201.475
     ]
   }
 }
