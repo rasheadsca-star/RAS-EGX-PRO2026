@@ -1,39 +1,39 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-24T23:52:22.330Z",
+  "generatedAt": "2026-11-25T23:35:57.389Z",
   "ticker": "ELNA",
   "companyNameAr": "النصر لتصنيع الحاصلات الزراعية",
   "companyNameEn": "El Nasr Manufacturing Agricultural Crops",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-11-17",
+  "sessionId": "2026-11-24",
   "latest": {
-    "date": "2026-11-17",
+    "date": "2026-11-24",
     "open": 41.28,
-    "high": 41.3,
-    "low": 39.22,
+    "high": 41.28,
+    "low": 41.28,
     "close": 41.28,
-    "volume": 7059
+    "volume": 0
   },
   "indicators": {
     "close": 41.28,
-    "change1Pct": -4.885,
-    "return5Pct": -0.024,
+    "change1Pct": 0,
+    "return5Pct": -3.911,
     "return20Pct": 17.206,
-    "return50Pct": 9.963,
-    "sma5": 42.888,
-    "sma20": 38.799,
-    "sma50": 37.632,
-    "ema9": 41.56,
-    "ema21": 39.746,
-    "rsi14": 77.646,
-    "macd": 1.669,
-    "macdSignal": 1.203,
-    "atr14": 2.331,
-    "atrPct": 5.646,
-    "averageVolume20": 14497.3,
-    "volumeRatio20": 0.487,
-    "averageTurnover20Egp": 562862.425,
+    "return50Pct": 10.492,
+    "sma5": 42.552,
+    "sma20": 39.102,
+    "sma50": 37.711,
+    "ema9": 41.504,
+    "ema21": 39.885,
+    "rsi14": 73.37,
+    "macd": 1.568,
+    "macdSignal": 1.276,
+    "atr14": 2.19,
+    "atrPct": 5.305,
+    "averageVolume20": 14092.35,
+    "volumeRatio20": 0,
+    "averageTurnover20Egp": 548600.086,
     "volatility20Pct": 2.277,
     "support20": 33.46,
     "resistance20": 44.2,
@@ -49,21 +49,47 @@
     "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 71.9,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "نشاط الحجم الحالي: 0",
+      "دعم الحجم: 0"
+    ],
+    "adaptive": {
+      "proximityPct": 77.8,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 13.7,
+      "minimumRequiredScore": 85,
+      "scoreGap": 13.1,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 13.1 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "نشاط الحجم الحالي: 0",
+        "دعم الحجم: 0"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 41.06,
+      "entryHigh": 41.554,
+      "stopLoss": 39.035,
+      "target1": 45.397,
+      "target2": 47.214,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-05-06",
-    "lastSession": "2026-11-17",
+    "firstSession": "2026-05-10",
+    "lastSession": "2026-11-24",
     "averageConfidence": 74.25,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +97,6 @@
   },
   "chart": {
     "dates": [
-      "2026-05-06",
       "2026-05-10",
       "2026-05-11",
       "2026-05-13",
@@ -170,10 +195,10 @@
       "2026-11-10",
       "2026-11-11",
       "2026-11-12",
-      "2026-11-17"
+      "2026-11-17",
+      "2026-11-24"
     ],
     "open": [
-      40.4,
       39.15,
       39.32,
       40.84,
@@ -272,10 +297,10 @@
       42.96,
       43.4,
       43.4,
+      41.28,
       41.28
     ],
     "high": [
-      40.88,
       40.25,
       39.69,
       42.79,
@@ -374,10 +399,10 @@
       44.2,
       44,
       43.4,
-      41.3
+      41.3,
+      41.28
     ],
     "low": [
-      39,
       39.13,
       38.82,
       40.5,
@@ -476,10 +501,10 @@
       42,
       42.16,
       42.3,
-      39.22
+      39.22,
+      41.28
     ],
     "close": [
-      39.15,
       39.32,
       38.93,
       41.86,
@@ -578,10 +603,10 @@
       43.4,
       43.4,
       43.4,
+      41.28,
       41.28
     ],
     "volume": [
-      9767,
       10949,
       13815,
       8022,
@@ -680,7 +705,8 @@
       16629,
       3219,
       4700,
-      7059
+      7059,
+      0
     ],
     "sma20": [
       0,
@@ -702,7 +728,6 @@
       0,
       0,
       0,
-      39.679,
       39.784,
       39.787,
       39.728,
@@ -782,7 +807,8 @@
       37.704,
       38.087,
       38.496,
-      38.799
+      38.799,
+      39.102
     ],
     "sma50": [
       0,
@@ -834,7 +860,6 @@
       0,
       0,
       0,
-      38.955,
       38.92,
       38.88,
       38.85,
@@ -884,7 +909,8 @@
       37.376,
       37.464,
       37.557,
-      37.632
+      37.632,
+      37.711
     ]
   }
 }

@@ -1,47 +1,47 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-24T23:52:22.246Z",
+  "generatedAt": "2026-11-25T23:35:57.340Z",
   "ticker": "AIFI",
   "companyNameAr": "",
   "companyNameEn": "50], 1 Atlas For Investment and Food Industries",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-11-23",
+  "sessionId": "2026-11-24",
   "latest": {
-    "date": "2026-11-23",
-    "open": 2.4,
-    "high": 2.49,
-    "low": 2.39,
-    "close": 2.45,
-    "volume": 7528918
+    "date": "2026-11-24",
+    "open": 2.45,
+    "high": 2.57,
+    "low": 2.45,
+    "close": 2.46,
+    "volume": 12146640
   },
   "indicators": {
-    "close": 2.45,
-    "change1Pct": -3.543,
-    "return5Pct": 1.24,
-    "return20Pct": 11.364,
-    "return50Pct": -1.21,
-    "sma5": 2.508,
-    "sma20": 2.139,
+    "close": 2.46,
+    "change1Pct": 0.408,
+    "return5Pct": -1.205,
+    "return20Pct": 28.796,
+    "return50Pct": 1.235,
+    "sma5": 2.502,
+    "sma20": 2.167,
     "sma50": 2.239,
-    "ema9": 2.385,
-    "ema21": 2.257,
-    "rsi14": 77.064,
-    "macd": 0.098,
-    "macdSignal": 0.037,
+    "ema9": 2.4,
+    "ema21": 2.275,
+    "rsi14": 76.852,
+    "macd": 0.1,
+    "macdSignal": 0.049,
     "atr14": 0.136,
-    "atrPct": 5.539,
-    "averageVolume20": 11438902.5,
-    "volumeRatio20": 0.658,
-    "averageTurnover20Egp": 26251950.92,
-    "volatility20Pct": 5.095,
-    "support20": 1.61,
+    "atrPct": 5.517,
+    "averageVolume20": 11728498.9,
+    "volumeRatio20": 1.036,
+    "averageTurnover20Egp": 27139112.644,
+    "volatility20Pct": 3.988,
+    "support20": 1.7,
     "resistance20": 2.62,
     "high50": 2.62,
     "low50": 1.61,
-    "distanceFromSupport20Pct": 52.174,
-    "relativeToResistance20Pct": -6.489,
-    "distanceFromHigh50Pct": -6.489
+    "distanceFromSupport20Pct": 44.706,
+    "relativeToResistance20Pct": -6.107,
+    "distanceFromHigh50Pct": -6.107
   },
   "technical": {
     "score": 72,
@@ -49,21 +49,45 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 59.2,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "ترتيب الاتجاه: 2.46 > 2.167 > 2.239"
+    ],
+    "adaptive": {
+      "proximityPct": 77.3,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 13.7,
+      "minimumRequiredScore": 85,
+      "scoreGap": 25.8,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 25.8 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "ترتيب الاتجاه: 2.46 > 2.167 > 2.239"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 2.445,
+      "entryHigh": 2.48,
+      "stopLoss": 2.327,
+      "target1": 2.707,
+      "target2": 2.815,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-06-21",
-    "lastSession": "2026-11-23",
+    "firstSession": "2026-06-22",
+    "lastSession": "2026-11-24",
     "averageConfidence": 73.5,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +95,6 @@
   },
   "chart": {
     "dates": [
-      "2026-06-21",
       "2026-06-22",
       "2026-06-23",
       "2026-06-24",
@@ -170,10 +193,10 @@
       "2026-11-17",
       "2026-11-18",
       "2026-11-19",
-      "2026-11-23"
+      "2026-11-23",
+      "2026-11-24"
     ],
     "open": [
-      1.98,
       2.03,
       2.01,
       2,
@@ -272,10 +295,10 @@
       2.49,
       2.55,
       2.51,
-      2.4
+      2.4,
+      2.45
     ],
     "high": [
-      2.06,
       2.03,
       2.01,
       2,
@@ -374,10 +397,10 @@
       2.62,
       2.56,
       2.57,
-      2.49
+      2.49,
+      2.57
     ],
     "low": [
-      1.98,
       2.03,
       1.95,
       1.96,
@@ -476,10 +499,10 @@
       2.47,
       2.49,
       2.51,
-      2.39
+      2.39,
+      2.45
     ],
     "close": [
-      2.03,
       2.03,
       2,
       2,
@@ -578,10 +601,10 @@
       2.55,
       2.51,
       2.54,
-      2.45
+      2.45,
+      2.46
     ],
     "volume": [
-      10965022,
       0,
       6993846,
       8437303,
@@ -680,7 +703,8 @@
       43780083,
       9832821,
       13799270,
-      7528918
+      7528918,
+      12146640
     ],
     "sma20": [
       0,
@@ -702,7 +726,6 @@
       0,
       0,
       0,
-      2.066,
       2.071,
       2.08,
       2.093,
@@ -782,7 +805,8 @@
       2.078,
       2.103,
       2.126,
-      2.139
+      2.139,
+      2.167
     ],
     "sma50": [
       0,
@@ -834,7 +858,6 @@
       0,
       0,
       0,
-      2.172,
       2.18,
       2.191,
       2.201,
@@ -883,6 +906,7 @@
       2.233,
       2.236,
       2.237,
+      2.239,
       2.239,
       2.239
     ]
