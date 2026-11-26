@@ -1,52 +1,119 @@
 {
   "schemaVersion": "13.4.0",
-  "generatedAt": "2026-11-25T23:22:11.471Z",
-  "sessionId": "2026-11-24",
+  "generatedAt": "2026-11-26T22:59:18.083Z",
+  "sessionId": "2026-11-25",
   "liveExecutionEnabled": false,
   "status": "WATCH_ONLY",
   "statusLabelAr": "مراقبة فقط",
   "marketRegime": {
-    "code": "HIGH_VOLATILITY",
-    "labelAr": "تذبذب مرتفع",
+    "code": "BEARISH",
+    "labelAr": "اتجاه سوق هابط",
     "basedOn": "equal-weight market breadth proxy from stored daily histories",
     "symbolsMeasured": 196,
-    "aboveSma20Pct": 46.43,
-    "aboveSma50Pct": 17.35,
-    "advancersPct": 20.41,
-    "medianReturn20Pct": -4.557,
-    "medianAtrPct": 5.501
+    "aboveSma20Pct": 38.27,
+    "aboveSma50Pct": 17.86,
+    "advancersPct": 25,
+    "medianReturn20Pct": -4.803,
+    "medianAtrPct": 5.495
   },
   "counts": {
     "symbolsAnalyzed": 196,
-    "latestEligibleAnalyses": 155,
+    "latestEligibleAnalyses": 171,
     "paperCandidates": 0,
-    "watchCandidates": 6,
-    "blockedOrRejected": 190
+    "watchCandidates": 9,
+    "blockedOrRejected": 187
   },
   "paperCandidates": [],
   "watchCandidates": [
     {
-      "ticker": "BIOC",
-      "companyNameAr": "جلاكسو سميثكلاين",
-      "companyNameEn": "GlaxoSmithKline S.A.E",
+      "ticker": "ETRS",
+      "companyNameAr": "إيجيترانس",
+      "companyNameEn": "Egyptian Transport & Commercial Services EGYTRANS NOSCO",
       "sector": null,
-      "signalDate": "2026-11-24",
+      "signalDate": "2026-11-25",
       "status": "WATCH_CONDITIONAL",
       "statusLabelAr": "مراقبة مشروطة",
       "strategyId": "trend_follow",
       "strategyLabelAr": "اتجاه قوي مع سيولة",
       "variantId": "balanced",
-      "recommendationScore": 73.3,
-      "rawSignalScore": 83.5,
+      "recommendationScore": 86.7,
+      "rawSignalScore": 95,
       "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "HIGH_VOLATILITY",
-      "price": 387,
+      "marketRegime": "BEARISH",
+      "price": 11.15,
       "plan": {
-        "entryLow": 384.678,
-        "entryHigh": 390.483,
-        "stopLoss": 366.2636,
-        "target1": 425.951,
-        "target2": 443.0045,
+        "entryLow": 11.0989,
+        "entryHigh": 11.2139,
+        "stopLoss": 10.5812,
+        "target1": 12.1917,
+        "target2": 12.6519,
+        "riskPct": 5.156,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": 3.914,
+        "return20Pct": 16.267,
+        "relativeStrength20Pct": 9.46,
+        "rsi14": 56.59,
+        "atrPct": 3.819,
+        "volumeRatio20": 1.758,
+        "averageTurnover20Egp": 18568195,
+        "sma20": 10.8435,
+        "sma50": 10.7356,
+        "support20": 9.51,
+        "resistance20": 11.58
+      },
+      "dataQuality": {
+        "historySessions": 100,
+        "historyConfidence": 73.3,
+        "eligibilityStatus": "complete_recent",
+        "latestHistorySession": "2026-11-25"
+      },
+      "passedConditions": [
+        "اكتمال المؤشرات",
+        "متوسط قيمة التداول",
+        "جلسات حجم تداول صالحة",
+        "نشاط الحجم الحالي",
+        "توفر قياس المخاطرة",
+        "القوة النسبية",
+        "ترتيب الاتجاه",
+        "ميل متوسط 20",
+        "منطقة RSI",
+        "دعم الحجم",
+        "مساحة حتى المقاومة"
+      ],
+      "failedConditions": [],
+      "reasonAr": "الإشارة الفنية متحققة، لكنها بقيت للمراقبة بسبب حالة النموذج أو السوق أو الأهلية."
+    },
+    {
+      "ticker": "INFI",
+      "companyNameAr": "الإسماعيلية الوطنية للصناعات الغذائية",
+      "companyNameEn": "Ismailia National Co. for Food Industries",
+      "sector": null,
+      "signalDate": "2026-11-25",
+      "status": "WATCH_CONDITIONAL",
+      "statusLabelAr": "مراقبة مشروطة",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "variantId": "balanced",
+      "recommendationScore": 79.5,
+      "rawSignalScore": 88,
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "marketRegime": "BEARISH",
+      "price": 148.28,
+      "plan": {
+        "entryLow": 147.3903,
+        "entryHigh": 149.6145,
+        "stopLoss": 140.3348,
+        "target1": 163.2042,
+        "target2": 169.7383,
         "riskPct": 5.5,
         "riskReward1": 1.8,
         "validEntrySessions": 1,
@@ -58,23 +125,23 @@
         ]
       },
       "indicators": {
-        "return5Pct": -8.078,
-        "return20Pct": 41.458,
-        "relativeStrength20Pct": 30.238,
-        "rsi14": 58.19,
-        "atrPct": 9.071,
-        "volumeRatio20": 0,
-        "averageTurnover20Egp": 188406808,
-        "sma20": 334.2295,
-        "sma50": 314.8138,
-        "support20": 212.05,
-        "resistance20": 447
+        "return5Pct": -5.854,
+        "return20Pct": 16.747,
+        "relativeStrength20Pct": 9.94,
+        "rsi14": 57.78,
+        "atrPct": 7.494,
+        "volumeRatio20": 0.473,
+        "averageTurnover20Egp": 68480541,
+        "sma20": 134.1015,
+        "sma50": 133.447,
+        "support20": 93.44,
+        "resistance20": 178.25
       },
       "dataQuality": {
         "historySessions": 100,
-        "historyConfidence": 73.9,
+        "historyConfidence": 72.4,
         "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-11-24"
+        "latestHistorySession": "2026-11-25"
       },
       "passedConditions": [
         "اكتمال المؤشرات",
@@ -88,34 +155,34 @@
         "مساحة حتى المقاومة"
       ],
       "failedConditions": [
-        "نشاط الحجم الحالي: 0",
-        "دعم الحجم: 0"
+        "نشاط الحجم الحالي: 0.47",
+        "دعم الحجم: 0.47"
       ],
       "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل."
     },
     {
-      "ticker": "ELNA",
-      "companyNameAr": "النصر لتصنيع الحاصلات الزراعية",
-      "companyNameEn": "El Nasr Manufacturing Agricultural Crops",
+      "ticker": "EAST",
+      "companyNameAr": "الشرقية - إيسترن كومباني",
+      "companyNameEn": "Eastern Company",
       "sector": null,
-      "signalDate": "2026-11-24",
+      "signalDate": "2026-11-25",
       "status": "WATCH_CONDITIONAL",
       "statusLabelAr": "مراقبة مشروطة",
       "strategyId": "trend_follow",
       "strategyLabelAr": "اتجاه قوي مع سيولة",
       "variantId": "balanced",
-      "recommendationScore": 71.9,
-      "rawSignalScore": 82.1,
+      "recommendationScore": 79.1,
+      "rawSignalScore": 87.5,
       "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "HIGH_VOLATILITY",
-      "price": 41.28,
+      "marketRegime": "BEARISH",
+      "price": 33.03,
       "plan": {
-        "entryLow": 41.0605,
-        "entryHigh": 41.5544,
-        "stopLoss": 39.0355,
-        "target1": 45.3969,
-        "target2": 47.2144,
-        "riskPct": 5.5,
+        "entryLow": 32.884,
+        "entryHigh": 33.2125,
+        "stopLoss": 31.4051,
+        "target1": 36.0059,
+        "target2": 37.3204,
+        "riskPct": 4.972,
         "riskReward1": 1.8,
         "validEntrySessions": 1,
         "maximumHoldingSessions": 10,
@@ -126,23 +193,23 @@
         ]
       },
       "indicators": {
-        "return5Pct": -3.911,
-        "return20Pct": 17.206,
-        "relativeStrength20Pct": 5.986,
-        "rsi14": 63.56,
-        "atrPct": 4.431,
-        "volumeRatio20": 0,
-        "averageTurnover20Egp": 609556,
-        "sma20": 39.1015,
-        "sma50": 37.7106,
-        "support20": 33.46,
-        "resistance20": 44.2
+        "return5Pct": -4.399,
+        "return20Pct": 18.941,
+        "relativeStrength20Pct": 12.134,
+        "rsi14": 56.71,
+        "atrPct": 3.683,
+        "volumeRatio20": 0.511,
+        "averageTurnover20Egp": 56140220,
+        "sma20": 31.846,
+        "sma50": 31.5984,
+        "support20": 27.02,
+        "resistance20": 35.1
       },
       "dataQuality": {
         "historySessions": 100,
-        "historyConfidence": 74.25,
+        "historyConfidence": 73.15,
         "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-11-24"
+        "latestHistorySession": "2026-11-25"
       },
       "passedConditions": [
         "اكتمال المؤشرات",
@@ -156,8 +223,8 @@
         "مساحة حتى المقاومة"
       ],
       "failedConditions": [
-        "نشاط الحجم الحالي: 0",
-        "دعم الحجم: 0"
+        "نشاط الحجم الحالي: 0.51",
+        "دعم الحجم: 0.51"
       ],
       "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل."
     },
@@ -166,23 +233,23 @@
       "companyNameAr": "أجواء للصناعات الغذائية",
       "companyNameEn": "AJWA For Food Industries Egypt",
       "sector": null,
-      "signalDate": "2026-11-24",
+      "signalDate": "2026-11-25",
       "status": "WATCH_CONDITIONAL",
       "statusLabelAr": "مراقبة مشروطة",
       "strategyId": "trend_follow",
       "strategyLabelAr": "اتجاه قوي مع سيولة",
       "variantId": "balanced",
-      "recommendationScore": 71.6,
-      "rawSignalScore": 81.9,
+      "recommendationScore": 76.4,
+      "rawSignalScore": 84.7,
       "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "HIGH_VOLATILITY",
-      "price": 262.7,
+      "marketRegime": "BEARISH",
+      "price": 266.01,
       "plan": {
-        "entryLow": 261.1238,
-        "entryHigh": 265.0643,
-        "stopLoss": 248.6239,
-        "target1": 289.1404,
-        "target2": 300.7165,
+        "entryLow": 264.4139,
+        "entryHigh": 268.3416,
+        "stopLoss": 251.727,
+        "target1": 292.7492,
+        "target2": 304.4698,
         "riskPct": 5.5,
         "riskReward1": 1.8,
         "validEntrySessions": 1,
@@ -194,15 +261,15 @@
         ]
       },
       "indicators": {
-        "return5Pct": 1.601,
-        "return20Pct": 18.95,
-        "relativeStrength20Pct": 7.73,
-        "rsi14": 63.89,
-        "atrPct": 6.115,
-        "volumeRatio20": 0,
-        "averageTurnover20Egp": 44230139,
-        "sma20": 238.2575,
-        "sma50": 210.329,
+        "return5Pct": -0.468,
+        "return20Pct": 24.17,
+        "relativeStrength20Pct": 17.363,
+        "rsi14": 65.16,
+        "atrPct": 5.843,
+        "volumeRatio20": 0.378,
+        "averageTurnover20Egp": 43737392,
+        "sma20": 240.8465,
+        "sma50": 212.0702,
         "support20": 190.2,
         "resistance20": 294
       },
@@ -210,7 +277,7 @@
         "historySessions": 100,
         "historyConfidence": 73.3,
         "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-11-24"
+        "latestHistorySession": "2026-11-25"
       },
       "passedConditions": [
         "اكتمال المؤشرات",
@@ -224,8 +291,76 @@
         "مساحة حتى المقاومة"
       ],
       "failedConditions": [
-        "نشاط الحجم الحالي: 0",
-        "دعم الحجم: 0"
+        "نشاط الحجم الحالي: 0.38",
+        "دعم الحجم: 0.38"
+      ],
+      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل."
+    },
+    {
+      "ticker": "BIOC",
+      "companyNameAr": "جلاكسو سميثكلاين",
+      "companyNameEn": "GlaxoSmithKline S.A.E",
+      "sector": null,
+      "signalDate": "2026-11-25",
+      "status": "WATCH_CONDITIONAL",
+      "statusLabelAr": "مراقبة مشروطة",
+      "strategyId": "trend_follow",
+      "strategyLabelAr": "اتجاه قوي مع سيولة",
+      "variantId": "balanced",
+      "recommendationScore": 76.3,
+      "rawSignalScore": 84.5,
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "marketRegime": "BEARISH",
+      "price": 370.01,
+      "plan": {
+        "entryLow": 367.7899,
+        "entryHigh": 373.3401,
+        "stopLoss": 350.1839,
+        "target1": 407.251,
+        "target2": 423.5558,
+        "riskPct": 5.5,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": -5.174,
+        "return20Pct": 27.151,
+        "relativeStrength20Pct": 20.344,
+        "rsi14": 54.57,
+        "atrPct": 9.194,
+        "volumeRatio20": 0.389,
+        "averageTurnover20Egp": 183561915,
+        "sma20": 338.18,
+        "sma50": 313.9536,
+        "support20": 212.05,
+        "resistance20": 447
+      },
+      "dataQuality": {
+        "historySessions": 100,
+        "historyConfidence": 73.9,
+        "eligibilityStatus": "complete_recent",
+        "latestHistorySession": "2026-11-25"
+      },
+      "passedConditions": [
+        "اكتمال المؤشرات",
+        "متوسط قيمة التداول",
+        "جلسات حجم تداول صالحة",
+        "توفر قياس المخاطرة",
+        "القوة النسبية",
+        "ترتيب الاتجاه",
+        "ميل متوسط 20",
+        "منطقة RSI",
+        "مساحة حتى المقاومة"
+      ],
+      "failedConditions": [
+        "نشاط الحجم الحالي: 0.39",
+        "دعم الحجم: 0.39"
       ],
       "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل."
     },
@@ -234,23 +369,23 @@
       "companyNameAr": "ليسيكو مصر",
       "companyNameEn": "Lecico Egypt",
       "sector": null,
-      "signalDate": "2026-11-24",
+      "signalDate": "2026-11-25",
       "status": "WATCH_CONDITIONAL",
       "statusLabelAr": "مراقبة مشروطة",
       "strategyId": "trend_follow",
       "strategyLabelAr": "اتجاه قوي مع سيولة",
       "variantId": "balanced",
-      "recommendationScore": 68.7,
-      "rawSignalScore": 78.9,
+      "recommendationScore": 69.4,
+      "rawSignalScore": 77.6,
       "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "HIGH_VOLATILITY",
-      "price": 40.44,
+      "marketRegime": "BEARISH",
+      "price": 41.39,
       "plan": {
-        "entryLow": 40.2309,
-        "entryHigh": 40.7013,
-        "stopLoss": 38.2405,
-        "target1": 44.4723,
-        "target2": 46.2528,
+        "entryLow": 41.1868,
+        "entryHigh": 41.644,
+        "stopLoss": 39.1376,
+        "target1": 45.5155,
+        "target2": 47.3378,
         "riskPct": 5.5,
         "riskReward1": 1.8,
         "validEntrySessions": 1,
@@ -262,23 +397,23 @@
         ]
       },
       "indicators": {
-        "return5Pct": -2.201,
-        "return20Pct": 24.24,
-        "relativeStrength20Pct": 13.02,
-        "rsi14": 65.66,
-        "atrPct": 4.308,
-        "volumeRatio20": 0,
-        "averageTurnover20Egp": 21998926,
-        "sma20": 37.518,
-        "sma50": 35.0438,
-        "support20": 30.12,
+        "return5Pct": 2.349,
+        "return20Pct": 23.663,
+        "relativeStrength20Pct": 16.856,
+        "rsi14": 68.66,
+        "atrPct": 4.092,
+        "volumeRatio20": 0.593,
+        "averageTurnover20Egp": 21828699,
+        "sma20": 37.914,
+        "sma50": 35.1756,
+        "support20": 32.1,
         "resistance20": 42.14
       },
       "dataQuality": {
         "historySessions": 100,
         "historyConfidence": 73.9,
         "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-11-24"
+        "latestHistorySession": "2026-11-25"
       },
       "passedConditions": [
         "اكتمال المؤشرات",
@@ -292,33 +427,33 @@
         "مساحة حتى المقاومة"
       ],
       "failedConditions": [
-        "نشاط الحجم الحالي: 0",
-        "دعم الحجم: 0"
+        "نشاط الحجم الحالي: 0.59",
+        "دعم الحجم: 0.59"
       ],
       "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل."
     },
     {
-      "ticker": "AIFI",
-      "companyNameAr": null,
-      "companyNameEn": "50], 1 Atlas For Investment and Food Industries",
+      "ticker": "ZEOT",
+      "companyNameAr": "الزيوت المستخلصة",
+      "companyNameEn": "Extracted Oil & Derivatives",
       "sector": null,
-      "signalDate": "2026-11-24",
+      "signalDate": "2026-11-25",
       "status": "WATCH_CONDITIONAL",
       "statusLabelAr": "مراقبة مشروطة",
       "strategyId": "trend_follow",
       "strategyLabelAr": "اتجاه قوي مع سيولة",
       "variantId": "balanced",
-      "recommendationScore": 59.2,
-      "rawSignalScore": 69.5,
+      "recommendationScore": 63.7,
+      "rawSignalScore": 72.2,
       "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "HIGH_VOLATILITY",
-      "price": 2.46,
+      "marketRegime": "BEARISH",
+      "price": 13.31,
       "plan": {
-        "entryLow": 2.4452,
-        "entryHigh": 2.4803,
-        "stopLoss": 2.3273,
-        "target1": 2.7066,
-        "target2": 2.8149,
+        "entryLow": 13.2301,
+        "entryHigh": 13.4298,
+        "stopLoss": 12.5968,
+        "target1": 14.6496,
+        "target2": 15.2361,
         "riskPct": 5.5,
         "riskReward1": 1.8,
         "validEntrySessions": 1,
@@ -330,23 +465,23 @@
         ]
       },
       "indicators": {
-        "return5Pct": -1.205,
-        "return20Pct": 28.796,
-        "relativeStrength20Pct": 17.576,
-        "rsi14": 61.03,
-        "atrPct": 5.498,
-        "volumeRatio20": 1.036,
-        "averageTurnover20Egp": 27139113,
-        "sma20": 2.1665,
-        "sma50": 2.2392,
-        "support20": 1.61,
-        "resistance20": 2.62
+        "return5Pct": 20.018,
+        "return20Pct": 25.448,
+        "relativeStrength20Pct": 18.641,
+        "rsi14": 62.13,
+        "atrPct": 7.488,
+        "volumeRatio20": 5.172,
+        "averageTurnover20Egp": 14358985,
+        "sma20": 11.13,
+        "sma50": 12.059,
+        "support20": 8,
+        "resistance20": 13.9
       },
       "dataQuality": {
         "historySessions": 100,
-        "historyConfidence": 73.5,
+        "historyConfidence": 72.55,
         "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-11-24"
+        "latestHistorySession": "2026-11-25"
       },
       "passedConditions": [
         "اكتمال المؤشرات",
@@ -361,32 +496,101 @@
         "مساحة حتى المقاومة"
       ],
       "failedConditions": [
-        "ترتيب الاتجاه: 2.46 > 2.167 > 2.239"
+        "ترتيب الاتجاه: 13.31 > 11.13 > 12.059"
       ],
       "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل."
     },
     {
-      "ticker": "MENA",
-      "companyNameAr": "مينا للاستثمار السياحي والعقاري",
-      "companyNameEn": "Mena for Touristic & Real Estate Investment",
+      "ticker": "SDTI",
+      "companyNameAr": "شرم دريمز",
+      "companyNameEn": "SHARM DREAMS Co. for Touristic Investment",
       "sector": null,
-      "signalDate": "2026-11-24",
+      "signalDate": "2026-11-25",
       "status": "WATCH_CONDITIONAL",
       "statusLabelAr": "مراقبة مشروطة",
-      "strategyId": "trend_follow",
-      "strategyLabelAr": "اتجاه قوي مع سيولة",
-      "variantId": "balanced",
-      "recommendationScore": 56.6,
-      "rawSignalScore": 67,
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "variantId": "wide",
+      "recommendationScore": 61.6,
+      "rawSignalScore": 69.8,
       "strategyValidationStatus": "RESEARCH_ONLY",
-      "marketRegime": "HIGH_VOLATILITY",
-      "price": 6.65,
+      "marketRegime": "BEARISH",
+      "price": 83.58,
       "plan": {
-        "entryLow": 6.6101,
-        "entryHigh": 6.7099,
-        "stopLoss": 6.2937,
-        "target1": 7.3193,
-        "target2": 7.6124,
+        "entryLow": 83.1837,
+        "entryHigh": 84.0754,
+        "stopLoss": 79.1685,
+        "target1": 91.6593,
+        "target2": 95.2281,
+        "riskPct": 5.334,
+        "riskReward1": 1.8,
+        "validEntrySessions": 1,
+        "maximumHoldingSessions": 10,
+        "cancelConditionsAr": [
+          "إلغاء الإشارة إذا افتتحت الجلسة التالية أعلى من الحد الأعلى للدخول بأكثر من 3%.",
+          "إلغاء الإشارة إذا كسر السعر وقف الخسارة قبل تنفيذ الدخول.",
+          "الإشارة صالحة لجلسة دخول واحدة فقط."
+        ]
+      },
+      "indicators": {
+        "return5Pct": -3.498,
+        "return20Pct": -0.405,
+        "relativeStrength20Pct": -7.212,
+        "rsi14": 49.01,
+        "atrPct": 3.951,
+        "volumeRatio20": 0.17,
+        "averageTurnover20Egp": 18390765,
+        "sma20": 84.3635,
+        "sma50": 82.3936,
+        "support20": 75.01,
+        "resistance20": 90.99
+      },
+      "dataQuality": {
+        "historySessions": 100,
+        "historyConfidence": 73.9,
+        "eligibilityStatus": "complete_recent",
+        "latestHistorySession": "2026-11-25"
+      },
+      "passedConditions": [
+        "اكتمال المؤشرات",
+        "متوسط قيمة التداول",
+        "جلسات حجم تداول صالحة",
+        "توفر قياس المخاطرة",
+        "الاتجاه المتوسط صاعد",
+        "الاقتراب من متوسط 20",
+        "اختبار منطقة الدعم",
+        "RSI مناسب للارتداد",
+        "تحسن RSI"
+      ],
+      "failedConditions": [
+        "نشاط الحجم الحالي: 0.17",
+        "القوة النسبية: -7.21",
+        "سيولة كافية: 0.17"
+      ],
+      "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل."
+    },
+    {
+      "ticker": "RAKT",
+      "companyNameAr": "راكتا",
+      "companyNameEn": "Rakta Paper Manufacturing Company",
+      "sector": null,
+      "signalDate": "2026-11-25",
+      "status": "WATCH_CONDITIONAL",
+      "statusLabelAr": "مراقبة مشروطة",
+      "strategyId": "pullback",
+      "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+      "variantId": "wide",
+      "recommendationScore": 57.3,
+      "rawSignalScore": 65.3,
+      "strategyValidationStatus": "RESEARCH_ONLY",
+      "marketRegime": "BEARISH",
+      "price": 22.47,
+      "plan": {
+        "entryLow": 22.3352,
+        "entryHigh": 22.6492,
+        "stopLoss": 21.2551,
+        "target1": 24.7189,
+        "target2": 25.7085,
         "riskPct": 5.5,
         "riskReward1": 1.8,
         "validEntrySessions": 1,
@@ -398,23 +602,23 @@
         ]
       },
       "indicators": {
-        "return5Pct": 11.577,
-        "return20Pct": 16.667,
-        "relativeStrength20Pct": 5.447,
-        "rsi14": 57.06,
-        "atrPct": 7.795,
-        "volumeRatio20": 1.049,
-        "averageTurnover20Egp": 8059244,
-        "sma20": 6.041,
-        "sma50": 6.3336,
-        "support20": 5.45,
-        "resistance20": 7.9
+        "return5Pct": 0,
+        "return20Pct": -2.559,
+        "relativeStrength20Pct": -9.365,
+        "rsi14": 52.14,
+        "atrPct": 5.315,
+        "volumeRatio20": 1.381,
+        "averageTurnover20Egp": 213655,
+        "sma20": 22.372,
+        "sma50": 22.3304,
+        "support20": 20.4,
+        "resistance20": 23.16
       },
       "dataQuality": {
         "historySessions": 100,
-        "historyConfidence": 73.15,
+        "historyConfidence": 75,
         "eligibilityStatus": "complete_recent",
-        "latestHistorySession": "2026-11-24"
+        "latestHistorySession": "2026-11-25"
       },
       "passedConditions": [
         "اكتمال المؤشرات",
@@ -422,16 +626,17 @@
         "جلسات حجم تداول صالحة",
         "نشاط الحجم الحالي",
         "توفر قياس المخاطرة",
-        "القوة النسبية",
-        "ميل متوسط 20",
-        "منطقة RSI",
-        "دعم الحجم",
-        "مساحة حتى المقاومة"
+        "الاتجاه المتوسط صاعد",
+        "الاقتراب من متوسط 20",
+        "اختبار منطقة الدعم",
+        "RSI مناسب للارتداد",
+        "سيولة كافية"
       ],
       "failedConditions": [
-        "ترتيب الاتجاه: 6.65 > 6.041 > 6.334"
+        "القوة النسبية: -9.37",
+        "تحسن RSI: 52.1 → 52.1"
       ],
-      "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل."
+      "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل."
     }
   ],
   "executionRules": {
