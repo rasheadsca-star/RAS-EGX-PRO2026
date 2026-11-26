@@ -1,47 +1,47 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-25T23:35:57.477Z",
+  "generatedAt": "2026-11-26T23:48:47.174Z",
   "ticker": "ZEOT",
   "companyNameAr": "الزيوت المستخلصة",
   "companyNameEn": "Extracted Oil & Derivatives",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-11-24",
+  "sessionId": "2026-11-25",
   "latest": {
-    "date": "2026-11-24",
-    "open": 12.36,
-    "high": 12.36,
-    "low": 12.36,
-    "close": 12.36,
-    "volume": 0
+    "date": "2026-11-25",
+    "open": 12.59,
+    "high": 13.98,
+    "low": 12.5,
+    "close": 13.31,
+    "volume": 6155780
   },
   "indicators": {
-    "close": 12.36,
-    "change1Pct": 0,
-    "return5Pct": 4.569,
-    "return20Pct": 21.773,
-    "return50Pct": -11.461,
-    "sma5": 11.856,
-    "sma20": 10.995,
-    "sma50": 12.067,
-    "ema9": 11.765,
-    "ema21": 11.483,
-    "rsi14": 67.869,
-    "macd": 0.115,
-    "macdSignal": -0.147,
-    "atr14": 0.845,
-    "atrPct": 6.837,
-    "averageVolume20": 873478.4,
-    "volumeRatio20": 0,
-    "averageTurnover20Egp": 10081050.031,
-    "volatility20Pct": 6.672,
+    "close": 13.31,
+    "change1Pct": 7.686,
+    "return5Pct": 20.018,
+    "return20Pct": 25.448,
+    "return50Pct": -2.847,
+    "sma5": 12.3,
+    "sma20": 11.13,
+    "sma50": 12.059,
+    "ema9": 12.074,
+    "ema21": 11.649,
+    "rsi14": 71.581,
+    "macd": 0.241,
+    "macdSignal": -0.069,
+    "atr14": 0.936,
+    "atrPct": 7.036,
+    "averageVolume20": 1130684.35,
+    "volumeRatio20": 5.444,
+    "averageTurnover20Egp": 13641035.46,
+    "volatility20Pct": 6.785,
     "support20": 8,
     "resistance20": 13.9,
     "high50": 14.68,
     "low50": 8,
-    "distanceFromSupport20Pct": 54.5,
-    "relativeToResistance20Pct": -11.079,
-    "distanceFromHigh50Pct": -15.804
+    "distanceFromSupport20Pct": 66.375,
+    "relativeToResistance20Pct": -4.245,
+    "distanceFromHigh50Pct": -9.332
   },
   "technical": {
     "score": 78,
@@ -49,21 +49,45 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 63.7,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "ترتيب الاتجاه: 13.31 > 11.13 > 12.059"
+    ],
+    "adaptive": {
+      "proximityPct": 78.8,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 14.1,
+      "minimumRequiredScore": 85,
+      "scoreGap": 21.3,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 21.3 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "ترتيب الاتجاه: 13.31 > 11.13 > 12.059"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 13.23,
+      "entryHigh": 13.43,
+      "stopLoss": 12.597,
+      "target1": 14.65,
+      "target2": 15.236,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-06-08",
-    "lastSession": "2026-11-24",
+    "firstSession": "2026-06-10",
+    "lastSession": "2026-11-25",
     "averageConfidence": 72.55,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +95,6 @@
   },
   "chart": {
     "dates": [
-      "2026-06-08",
       "2026-06-10",
       "2026-06-11",
       "2026-06-17",
@@ -170,10 +193,10 @@
       "2026-11-18",
       "2026-11-22",
       "2026-11-23",
-      "2026-11-24"
+      "2026-11-24",
+      "2026-11-25"
     ],
     "open": [
-      9.26,
       9.22,
       8.69,
       11.28,
@@ -272,10 +295,10 @@
       11.09,
       12.92,
       12.5,
-      12.36
+      12.36,
+      12.59
     ],
     "high": [
-      9.35,
       9.29,
       9.2,
       11.28,
@@ -374,10 +397,10 @@
       11.3,
       13.9,
       13.1,
-      12.36
+      12.36,
+      13.98
     ],
     "low": [
-      9.1,
       8.41,
       8.69,
       11.28,
@@ -476,10 +499,10 @@
       10.77,
       12.25,
       12.17,
-      12.36
+      12.36,
+      12.5
     ],
     "close": [
-      9.16,
       8.69,
       8.99,
       11.28,
@@ -578,10 +601,10 @@
       10.97,
       12.5,
       12.36,
-      12.36
+      12.36,
+      13.31
     ],
     "volume": [
-      367240,
       554721,
       1090129,
       0,
@@ -680,7 +703,8 @@
       253645,
       5267542,
       2559751,
-      0
+      0,
+      6155780
     ],
     "sma20": [
       0,
@@ -702,7 +726,6 @@
       0,
       0,
       0,
-      10.908,
       11.039,
       11.188,
       11.318,
@@ -782,7 +805,8 @@
       10.717,
       10.833,
       10.884,
-      10.995
+      10.995,
+      11.13
     ],
     "sma50": [
       0,
@@ -834,7 +858,6 @@
       0,
       0,
       0,
-      12.008,
       12.098,
       12.2,
       12.306,
@@ -884,7 +907,8 @@
       12.149,
       12.131,
       12.099,
-      12.067
+      12.067,
+      12.059
     ]
   }
 }

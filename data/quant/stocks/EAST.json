@@ -1,69 +1,95 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-25T23:35:57.377Z",
+  "generatedAt": "2026-11-26T23:48:46.993Z",
   "ticker": "EAST",
   "companyNameAr": "الشرقية - إيسترن كومباني",
   "companyNameEn": "Eastern Company",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-11-24",
+  "sessionId": "2026-11-25",
   "latest": {
-    "date": "2026-11-24",
-    "open": 33.21,
-    "high": 33.21,
-    "low": 33.21,
-    "close": 33.21,
-    "volume": 0
+    "date": "2026-11-25",
+    "open": 33.8,
+    "high": 34.32,
+    "low": 33.03,
+    "close": 33.03,
+    "volume": 888438
   },
   "indicators": {
-    "close": 33.21,
-    "change1Pct": 0,
-    "return5Pct": -1.161,
-    "return20Pct": 20.37,
-    "return50Pct": -5.304,
-    "sma5": 33.826,
-    "sma20": 31.583,
-    "sma50": 31.661,
-    "ema9": 33.184,
-    "ema21": 32.172,
-    "rsi14": 67.814,
-    "macd": 0.864,
-    "macdSignal": 0.578,
-    "atr14": 1.38,
-    "atrPct": 4.155,
-    "averageVolume20": 1650696.8,
-    "volumeRatio20": 0,
-    "averageTurnover20Egp": 53049713.857,
-    "volatility20Pct": 2.563,
+    "close": 33.03,
+    "change1Pct": -0.542,
+    "return5Pct": -4.399,
+    "return20Pct": 18.941,
+    "return50Pct": -8.681,
+    "sma5": 33.522,
+    "sma20": 31.846,
+    "sma50": 31.598,
+    "ema9": 33.153,
+    "ema21": 32.25,
+    "rsi14": 64.638,
+    "macd": 0.812,
+    "macdSignal": 0.624,
+    "atr14": 1.363,
+    "atrPct": 4.126,
+    "averageVolume20": 1652491.4,
+    "volumeRatio20": 0.538,
+    "averageTurnover20Egp": 53333209.048,
+    "volatility20Pct": 2.584,
     "support20": 27.02,
     "resistance20": 35.1,
     "high50": 36.48,
     "low50": 27.01,
-    "distanceFromSupport20Pct": 22.909,
-    "relativeToResistance20Pct": -5.385,
-    "distanceFromHigh50Pct": -8.964
+    "distanceFromSupport20Pct": 22.243,
+    "relativeToResistance20Pct": -5.897,
+    "distanceFromHigh50Pct": -9.457
   },
   "technical": {
-    "score": 78,
-    "trendCode": "NEUTRAL",
-    "trendLabelAr": "محايد / متذبذب"
+    "score": 98,
+    "trendCode": "BULLISH",
+    "trendLabelAr": "اتجاه صاعد"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "NEAR_TRIGGER",
+    "statusLabelAr": "قريب من اكتمال الإشارة",
+    "strategyId": "trend_follow",
+    "strategyLabelAr": "اتجاه قوي مع سيولة",
+    "recommendationScore": 79.1,
+    "reasonAr": "أقرب نموذج حالي هو اتجاه قوي مع سيولة، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "نشاط الحجم الحالي: 0.51",
+      "دعم الحجم: 0.51"
+    ],
+    "adaptive": {
+      "proximityPct": 80.2,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 14.1,
+      "minimumRequiredScore": 85,
+      "scoreGap": 5.9,
+      "calibratedVariantId": "balanced",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 5.9 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "نشاط الحجم الحالي: 0.51",
+        "دعم الحجم: 0.51"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 32.884,
+      "entryHigh": 33.212,
+      "stopLoss": 31.405,
+      "target1": 36.006,
+      "target2": 37.32,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-06-07",
-    "lastSession": "2026-11-24",
+    "firstSession": "2026-06-08",
+    "lastSession": "2026-11-25",
     "averageConfidence": 73.15,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
@@ -71,7 +97,6 @@
   },
   "chart": {
     "dates": [
-      "2026-06-07",
       "2026-06-08",
       "2026-06-09",
       "2026-06-11",
@@ -170,10 +195,10 @@
       "2026-11-18",
       "2026-11-19",
       "2026-11-23",
-      "2026-11-24"
+      "2026-11-24",
+      "2026-11-25"
     ],
     "open": [
-      38.61,
       38.87,
       39.85,
       38.6,
@@ -272,10 +297,10 @@
       34.09,
       34.08,
       32.6,
-      33.21
+      33.21,
+      33.8
     ],
     "high": [
-      39.45,
       39.9,
       39.9,
       38.77,
@@ -374,10 +399,10 @@
       34.5,
       34.3,
       33.51,
-      33.21
+      33.21,
+      34.32
     ],
     "low": [
-      38,
       38.24,
       38.9,
       37.79,
@@ -476,10 +501,10 @@
       33.61,
       33.65,
       32.5,
-      33.21
+      33.21,
+      33.03
     ],
     "close": [
-      38.87,
       39.85,
       39.74,
       38.11,
@@ -578,10 +603,10 @@
       34.08,
       34.08,
       33.21,
-      33.21
+      33.21,
+      33.03
     ],
     "volume": [
-      506063,
       2506443,
       292692,
       695767,
@@ -680,7 +705,8 @@
       1310021,
       578275,
       672179,
-      0
+      0,
+      888438
     ],
     "sma20": [
       0,
@@ -702,7 +728,6 @@
       0,
       0,
       0,
-      38.315,
       38.195,
       38.02,
       37.844,
@@ -782,7 +807,8 @@
       30.71,
       31.009,
       31.302,
-      31.583
+      31.583,
+      31.846
     ],
     "sma50": [
       0,
@@ -834,7 +860,6 @@
       0,
       0,
       0,
-      37.127,
       37.073,
       36.992,
       36.917,
@@ -884,7 +909,8 @@
       31.759,
       31.737,
       31.698,
-      31.661
+      31.661,
+      31.598
     ]
   }
 }

@@ -1,47 +1,47 @@
 {
   "schemaVersion": "13.7.0",
-  "generatedAt": "2026-11-25T23:35:57.460Z",
+  "generatedAt": "2026-11-26T23:48:47.145Z",
   "ticker": "SDTI",
   "companyNameAr": "شرم دريمز",
   "companyNameEn": "SHARM DREAMS Co. for Touristic Investment",
   "sector": "غير مصنف",
   "active": true,
-  "sessionId": "2026-11-19",
+  "sessionId": "2026-11-25",
   "latest": {
-    "date": "2026-11-19",
-    "open": 82.55,
-    "high": 85.24,
-    "low": 82.26,
-    "close": 83,
-    "volume": 194481
+    "date": "2026-11-25",
+    "open": 85.01,
+    "high": 85.88,
+    "low": 83.16,
+    "close": 83.58,
+    "volume": 36906
   },
   "indicators": {
-    "close": 83,
-    "change1Pct": 0.545,
-    "return5Pct": -4.718,
-    "return20Pct": -0.12,
-    "return50Pct": 17.564,
-    "sma5": 84.51,
-    "sma20": 84.381,
-    "sma50": 82.131,
-    "ema9": 84.694,
-    "ema21": 84.422,
-    "rsi14": 56.997,
-    "macd": 0.772,
-    "macdSignal": 1.297,
-    "atr14": 3.481,
-    "atrPct": 4.194,
-    "averageVolume20": 223291.85,
-    "volumeRatio20": 0.871,
-    "averageTurnover20Egp": 18941332.471,
-    "volatility20Pct": 1.947,
+    "close": 83.58,
+    "change1Pct": 0.699,
+    "return5Pct": -3.498,
+    "return20Pct": -0.405,
+    "return50Pct": 18.604,
+    "sma5": 83.904,
+    "sma20": 84.364,
+    "sma50": 82.394,
+    "ema9": 84.471,
+    "ema21": 84.345,
+    "rsi14": 51.751,
+    "macd": 0.62,
+    "macdSignal": 1.161,
+    "atr14": 3.009,
+    "atrPct": 3.6,
+    "averageVolume20": 216738.7,
+    "volumeRatio20": 0.17,
+    "averageTurnover20Egp": 18390764.741,
+    "volatility20Pct": 1.941,
     "support20": 75.01,
     "resistance20": 90.99,
     "high50": 94.9,
     "low50": 70,
-    "distanceFromSupport20Pct": 10.652,
-    "relativeToResistance20Pct": -8.781,
-    "distanceFromHigh50Pct": -12.54
+    "distanceFromSupport20Pct": 11.425,
+    "relativeToResistance20Pct": -8.144,
+    "distanceFromHigh50Pct": -11.928
   },
   "technical": {
     "score": 56,
@@ -49,29 +49,56 @@
     "trendLabelAr": "محايد / متذبذب"
   },
   "recommendation": {
-    "source": null,
-    "status": "NO_CURRENT_SIGNAL",
-    "statusLabelAr": "لا توجد إشارة حالية",
-    "strategyId": null,
-    "strategyLabelAr": null,
-    "recommendationScore": null,
-    "reasonAr": "لا توجد توصية كمية نشطة لهذا السهم في أحدث جلسة.",
-    "failedConditions": [],
-    "adaptive": null,
-    "plan": {}
+    "source": "V13.5",
+    "status": "CONDITIONAL_WATCH",
+    "statusLabelAr": "مراقبة مشروطة",
+    "strategyId": "pullback",
+    "strategyLabelAr": "ارتداد من دعم داخل اتجاه صاعد",
+    "recommendationScore": 61.6,
+    "reasonAr": "أقرب نموذج حالي هو ارتداد من دعم داخل اتجاه صاعد، لكن بعض الشروط لم تكتمل.",
+    "failedConditions": [
+      "نشاط الحجم الحالي: 0.17",
+      "القوة النسبية: -7.21",
+      "سيولة كافية: 0.17"
+    ],
+    "adaptive": {
+      "proximityPct": 71.1,
+      "strategyHealthStatus": "RESEARCH_ONLY",
+      "strategyHealthScore": 11.7,
+      "minimumRequiredScore": 85,
+      "scoreGap": 23.4,
+      "calibratedVariantId": "wide",
+      "riskScale": 0,
+      "missingRequirementsAr": [
+        "لم تثبت الاستراتيجية أفضلية كافية خارج فترة التدريب حتى الآن.",
+        "تحتاج 23.4 نقطة إضافية لتجاوز حد الاستراتيجية المتكيف.",
+        "نشاط الحجم الحالي: 0.17",
+        "القوة النسبية: -7.21",
+        "سيولة كافية: 0.17"
+      ],
+      "automaticConversionRuleAr": "يتحول تلقائيًا إلى إشارة ورقية فقط عند اكتمال شروط V13.4 وبقاء الاستراتيجية نشطة وتجاوز الدرجة المتكيفة."
+    },
+    "plan": {
+      "entryLow": 83.184,
+      "entryHigh": 84.075,
+      "stopLoss": 79.168,
+      "target1": 91.659,
+      "target2": 95.228,
+      "riskReward1": 1.8,
+      "maximumHoldingSessions": 10
+    }
   },
   "dataQuality": {
     "historySessions": 100,
-    "firstSession": "2026-06-18",
-    "lastSession": "2026-11-19",
-    "averageConfidence": 74.25,
+    "firstSession": "2026-06-21",
+    "lastSession": "2026-11-25",
+    "averageConfidence": 73.9,
     "symbolVerified": true,
     "eligibilityStatus": "complete_recent",
     "eligibilityLabelAr": "مكتمل وحديث"
   },
   "chart": {
     "dates": [
-      "2026-06-18",
       "2026-06-21",
       "2026-06-22",
       "2026-06-23",
@@ -170,10 +197,10 @@
       "2026-11-12",
       "2026-11-17",
       "2026-11-18",
-      "2026-11-19"
+      "2026-11-19",
+      "2026-11-25"
     ],
     "open": [
-      46.94,
       47.98,
       47.8,
       47.25,
@@ -272,10 +299,10 @@
       86.61,
       84.45,
       84.94,
-      82.55
+      82.55,
+      85.01
     ],
     "high": [
-      46.94,
       49.5,
       47.8,
       47.85,
@@ -374,10 +401,10 @@
       87.8,
       86,
       85.45,
-      85.24
+      85.24,
+      85.88
     ],
     "low": [
-      46.94,
       47.6,
       47.8,
       46.11,
@@ -476,10 +503,10 @@
       85.45,
       82.5,
       82.55,
-      82.26
+      82.26,
+      83.16
     ],
     "close": [
-      46.94,
       47.8,
       47.8,
       46.55,
@@ -578,10 +605,10 @@
       85.45,
       84.94,
       82.55,
-      83
+      83,
+      83.58
     ],
     "volume": [
-      0,
       366198,
       0,
       100496,
@@ -680,7 +707,8 @@
       192102,
       117261,
       120687,
-      194481
+      194481,
+      36906
     ],
     "sma20": [
       0,
@@ -702,7 +730,6 @@
       0,
       0,
       0,
-      46.879,
       46.932,
       46.985,
       47.239,
@@ -782,7 +809,8 @@
       84.484,
       84.431,
       84.385,
-      84.381
+      84.381,
+      84.364
     ],
     "sma50": [
       0,
@@ -834,7 +862,6 @@
       0,
       0,
       0,
-      57.94,
       58.411,
       58.919,
       59.477,
@@ -884,7 +911,8 @@
       81.287,
       81.606,
       81.883,
-      82.131
+      82.131,
+      82.394
     ]
   }
 }
